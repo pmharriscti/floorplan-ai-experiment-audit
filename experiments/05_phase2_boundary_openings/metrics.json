@@ -1,0 +1,74 @@
+{
+  "experiment_id": "05_phase2_boundary_openings",
+  "evidence_status": "VERIFIED",
+  "primary_split": "validation",
+  "primary_metrics": {
+    "wall_iou": 0.7708163311811328,
+    "wall_dice": 0.8705773914644204,
+    "boundary_f1_2px": 0.9347893344704645,
+    "centerline_cldice": 0.38908625787638323,
+    "junction_f1_5px": 0.5278302922503402,
+    "door_object_f1": 0.7796991077953163
+  },
+  "selected_thresholds": {
+    "wall_region": 0.05,
+    "centerline": 0.95,
+    "junction": 0.9,
+    "junction_nms_radius": 2,
+    "wall_boundary": 0.95,
+    "door_opening": 0.85,
+    "door_min_component_area": 1
+  },
+  "validation": {
+    "region_micro": {
+      "iou": 0.7708163311811328,
+      "dice": 0.8705773914644204,
+      "precision": 0.8773016347024283,
+      "recall": 0.8639554426235612,
+      "specificity": 0.9914491086774553,
+      "pixel_accuracy": 0.9830230617523193
+    },
+    "centerline_summary": {
+      "centerline_skeleton_cldice_mean": 0.38908625787638323,
+      "centerline_skeleton_pixel_f1_mean": 0.389086156153129,
+      "centerline_skeleton_tolerance_f1_2px_mean": 0.9509487492643629,
+      "sample_count": 400
+    },
+    "junction_summary": {
+      "junction_f1_3px_mean": 0.4986115223667146,
+      "junction_f1_5px_mean": 0.5278302922503402,
+      "junction_f1_8px_mean": 0.5323969600302556,
+      "junction_precision_5px_mean": 0.9427492090044842,
+      "junction_recall_5px_mean": 0.3875470491254978,
+      "sample_count": 400
+    },
+    "boundary_summary": {
+      "boundary_f1_1px_mean": 0.8066106911731248,
+      "boundary_f1_2px_mean": 0.9347893344704645,
+      "boundary_f1_3px_mean": 0.9622432775453373,
+      "boundary_precision_2px_mean": 0.926691660796941,
+      "boundary_recall_2px_mean": 0.9449634243302332,
+      "sample_count": 400
+    },
+    "door_opening_summary": {
+      "door_opening_object_f1_mean": 0.7796991077953163,
+      "door_object_f1_iou_0_25_mean": 0.7796991077953163,
+      "door_object_f1_iou_0_5_mean": 0.5762363478145387,
+      "door_object_f1_center_distance_mean": 0.8106307699809343,
+      "door_opening_object_precision_mean": 0.7477593261517697,
+      "door_opening_object_recall_mean": 0.8385464402748741,
+      "sample_count": 400
+    },
+    "phase2_structural_score": 0.6757521275016246,
+    "phase1_compatible_structural_score": 0.6198494033500891
+  },
+  "training_history_not_scoreboard_primary": {
+    "val_door_opening_object_f1_peak_observed": 0.8194901582399987
+  },
+  "phase1_comparison": {
+    "wall_region_iou_delta": -0.05004927229517453,
+    "junction_f1_5px_delta": -0.2415549205790718,
+    "phase1_compatible_structural_score_delta": -0.14096779852795083
+  }
+}
+

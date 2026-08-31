@@ -1,0 +1,54 @@
+{
+  "experiment_id": "05_phase2_boundary_openings",
+  "evidence_status": "VERIFIED",
+  "created_utc": "2026-08-12T15:36:50Z",
+  "source_run_directory": "/mnt/e/AI_Team/mitunet/phase2_wall_boundary_door_openings/experiments/mitunet_phase2_wall_boundary_door_openings_20260810_200219_UTC",
+  "source_files": [
+    "/mnt/e/AI_Team/mitunet/phase2_wall_boundary_door_openings/experiments/mitunet_phase2_wall_boundary_door_openings_20260810_200219_UTC/reports/FINAL_REPORT.md",
+    "/mnt/e/AI_Team/mitunet/phase2_wall_boundary_door_openings/experiments/mitunet_phase2_wall_boundary_door_openings_20260810_200219_UTC/reports/evaluate_summary.json",
+    "/mnt/e/AI_Team/mitunet/phase2_wall_boundary_door_openings/experiments/mitunet_phase2_wall_boundary_door_openings_20260810_200219_UTC/reports/summary.json",
+    "/mnt/e/AI_Team/mitunet/phase2_wall_boundary_door_openings/experiments/mitunet_phase2_wall_boundary_door_openings_20260810_200219_UTC/proof/summary.json",
+    "/mnt/e/AI_Team/mitunet/phase2_wall_boundary_door_openings/experiments/mitunet_phase2_wall_boundary_door_openings_20260810_200219_UTC/metrics/final_metrics.csv",
+    "/mnt/e/AI_Team/mitunet/phase2_wall_boundary_door_openings/experiments/mitunet_phase2_wall_boundary_door_openings_20260810_200219_UTC/metrics/phase1_comparison.csv",
+    "/mnt/e/AI_Team/mitunet/phase2_wall_boundary_door_openings/experiments/mitunet_phase2_wall_boundary_door_openings_20260810_200219_UTC/metrics/training_history.csv",
+    "/mnt/e/AI_Team/mitunet/phase2_wall_boundary_door_openings/experiments/mitunet_phase2_wall_boundary_door_openings_20260810_200219_UTC/checkpoint_manifest.json",
+    "/mnt/e/AI_Team/mitunet/phase2_wall_boundary_door_openings/experiments/mitunet_phase2_wall_boundary_door_openings_20260810_200219_UTC/dvc_status.json",
+    "/mnt/e/AI_Team/mitunet/phase2_wall_boundary_door_openings/experiments/mitunet_phase2_wall_boundary_door_openings_20260810_200219_UTC/mlflow_status.json",
+    "/mnt/e/AI_Team/mitunet/phase2_wall_boundary_door_openings/mlflow_artifacts/51a1595dd21d4449b0d90794e50220e7/artifacts/registration/mitunet_phase2_wall_boundary_door_openings.yaml"
+  ],
+  "parent_checkpoint": {
+    "experiment_id": "04_phase1_wall_structure",
+    "path": "/mnt/e/AI_Team/mitunet/phase1_wall_structure/experiments/mitunet_phase1_wall_region_centerline_junctions_20260807_163622_UTC/checkpoints/best_structural_score.pth"
+  },
+  "checkpoint": {
+    "selected_path": "/mnt/e/AI_Team/mitunet/phase2_wall_boundary_door_openings/experiments/mitunet_phase2_wall_boundary_door_openings_20260810_200219_UTC/checkpoints/best_phase2_structural_score.pth",
+    "sha256": null,
+    "sha256_status": "deferred in checkpoint_manifest.json",
+    "size_bytes": 773736645
+  },
+  "code": {
+    "git_commit": "459778bd07b1a0b8a60413a2e681bbd4ff7bd829"
+  },
+  "tracking": {
+    "mlflow": {
+      "run_id": "51a1595dd21d4449b0d90794e50220e7",
+      "tracking_uri": "sqlite:////mnt/e/AI_Team/mitunet/phase2_wall_boundary_door_openings/mlflow/mlflow.db"
+    },
+    "dvc": {
+      "available": true,
+      "reason": "DVC detected/configured and pipeline parsing passes; Phase 2 targets are recorded for indexing/push from the manifest.",
+      "cache_dir": "/mnt/e/AI_Team/mitunet/phase2_wall_boundary_door_openings/dvc_cache",
+      "remote_name": "phase2_ai_team",
+      "remote_url": "/mnt/e/AI_Team/mitunet/phase2_wall_boundary_door_openings/dvc_remote",
+      "targets_count": 18,
+      "pipeline_parse_check": "passed",
+      "full_status_scan": "deferred"
+    }
+  },
+  "large_artifacts_committed": false,
+  "notes": [
+    "Checkpoint files are present in the source run directory but are intentionally excluded from this audit repository.",
+    "Final selected-checkpoint door object F1 is 0.7796991077953163. Training history contains a higher validation-history value of 0.8194901582399987."
+  ]
+}
+

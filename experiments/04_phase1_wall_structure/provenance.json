@@ -1,0 +1,45 @@
+{
+  "experiment_id": "04_phase1_wall_structure",
+  "evidence_status": "VERIFIED",
+  "created_utc": "2026-08-11T18:51:12Z",
+  "source_run_directory": "/mnt/e/AI_Team/mitunet/phase1_wall_structure/experiments/mitunet_phase1_wall_region_centerline_junctions_20260807_163622_UTC",
+  "source_files": [
+    "/mnt/e/AI_Team/mitunet/phase1_wall_structure/experiments/mitunet_phase1_wall_region_centerline_junctions_20260807_163622_UTC/reports/FINAL_REPORT.md",
+    "/mnt/e/AI_Team/mitunet/phase1_wall_structure/experiments/mitunet_phase1_wall_region_centerline_junctions_20260807_163622_UTC/metrics/evaluation_summary.json",
+    "/mnt/e/AI_Team/mitunet/phase1_wall_structure/experiments/mitunet_phase1_wall_region_centerline_junctions_20260807_163622_UTC/reports/summary.json",
+    "/mnt/e/AI_Team/mitunet/phase1_wall_structure/experiments/mitunet_phase1_wall_region_centerline_junctions_20260807_163622_UTC/proof/full_training.json",
+    "/mnt/e/AI_Team/mitunet/phase1_wall_structure/experiments/mitunet_phase1_wall_region_centerline_junctions_20260807_163622_UTC/checkpoint_manifest.json",
+    "/mnt/e/AI_Team/mitunet/phase1_wall_structure/experiments/mitunet_phase1_wall_region_centerline_junctions_20260807_163622_UTC/dvc_status.json",
+    "/mnt/e/AI_Team/mitunet/phase1_wall_structure/experiments/mitunet_phase1_wall_region_centerline_junctions_20260807_163622_UTC/mlflow_status.json",
+    "/mnt/e/AI_Team/mitunet/phase1_wall_structure/mlflow_artifacts/0fd6aad240984843b3318b81ca6e94de/artifacts/mitunet_phase1_wall_region_centerline_junctions.yaml"
+  ],
+  "checkpoint": {
+    "selected_path": "/mnt/e/AI_Team/mitunet/phase1_wall_structure/experiments/mitunet_phase1_wall_region_centerline_junctions_20260807_163622_UTC/checkpoints/best_structural_score.pth",
+    "sha256": null,
+    "sha256_status": "deferred in checkpoint_manifest.json",
+    "size_bytes": 772772295
+  },
+  "code": {
+    "git_commit": "459778bd07b1a0b8a60413a2e681bbd4ff7bd829"
+  },
+  "tracking": {
+    "mlflow": {
+      "run_id": "0fd6aad240984843b3318b81ca6e94de",
+      "tracking_uri": "sqlite:////mnt/e/AI_Team/mitunet/phase1_wall_structure/mlflow_tracking/mlflow.db"
+    },
+    "dvc": {
+      "available": false,
+      "reason": "DVC is not installed in this Python environment; targets are recorded for later DVC indexing.",
+      "cache_dir": "/mnt/e/AI_Team/mitunet/phase1_wall_structure/dvc_cache",
+      "remote_name": "phase1_ai_team",
+      "remote_url": "/mnt/e/AI_Team/mitunet/phase1_wall_structure/dvc_remote",
+      "targets_count": 10
+    }
+  },
+  "large_artifacts_committed": false,
+  "notes": [
+    "Checkpoint files are present in the source run directory but are intentionally excluded from this audit repository.",
+    "Historical Phase 1 boundary and door metrics were not located in inspected artifacts."
+  ]
+}
+

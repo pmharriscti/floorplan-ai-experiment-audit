@@ -1,0 +1,84 @@
+experiment_id: 04_phase1_wall_structure
+name: Phase 1 wall structure
+evidence_status: VERIFIED
+source_run_directory: /mnt/e/AI_Team/mitunet/phase1_wall_structure/experiments/mitunet_phase1_wall_region_centerline_junctions_20260807_163622_UTC
+task:
+  mode: multitask_wall_structure
+  targets:
+    - wall_region
+    - centerline
+    - junction
+  target_notes:
+    wall_region: baseline wall mask logic
+    centerline: 8-connectivity, raw width 1, training dilation radius 1
+    junction: corners, T junctions, cross junctions, multibranch junctions; endpoints excluded
+data:
+  dataset: CubiCasa5K
+  dataset_version: 4
+  split_counts:
+    train: 4200
+    validation: 400
+    test: 400
+  input_size: 512
+  resize_mode: letterbox
+  augmentation: true
+  subtract_openings: false
+model:
+  architecture: MitUNet
+  encoder_name: mit_b4
+  decoder_attention_type: scse
+  shared_decoder: true
+  outputs:
+    wall_region: 1
+    centerline: 1
+    junction: 1
+loss:
+  wall_region:
+    type: asymmetric_tversky
+    alpha: 0.6
+    beta: 0.4
+  centerline:
+    type: bce_plus_soft_cldice
+    bce_weight: 0.5
+    soft_cldice_weight: 0.5
+    soft_cldice_iterations: 10
+    max_pos_weight: 20
+  junction:
+    type: sigmoid_focal
+    alpha: 0.75
+    gamma: 2
+    max_pos_weight: 20
+  task_weights:
+    wall_region: 0.60
+    centerline: 0.30
+    junction: 0.10
+training:
+  epochs_configured: 30
+  epochs_completed: 30
+  best_structural_epoch: 28
+  best_region_iou_epoch: 28
+  batch_size: 4
+  effective_batch_size: 4
+  optimizer: adam
+  learning_rate: 0.0001
+  weight_decay: 0.0
+  seed: 42
+  amp: true
+  early_stopping_metric: val_structural_score
+  early_stopping_patience: 8
+  scheduler_patience: 3
+selection:
+  structural_score_weights:
+    wall_region: 0.55
+    centerline: 0.30
+    junction: 0.15
+thresholds:
+  wall_region: 0.05
+  centerline: 0.95
+  junction: 0.85
+  junction_nms_radius: 3
+unknowns:
+  checkpoint_sha256: UNKNOWN
+  boundary_f1_2px: UNKNOWN
+  door_object_f1: UNKNOWN
+

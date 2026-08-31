@@ -1,0 +1,90 @@
+experiment_id: 05_phase2_boundary_openings
+name: Phase 2 boundary and door/openings
+evidence_status: VERIFIED
+source_run_directory: /mnt/e/AI_Team/mitunet/phase2_wall_boundary_door_openings/experiments/mitunet_phase2_wall_boundary_door_openings_20260810_200219_UTC
+task:
+  mode: multitask_wall_structure_phase2
+  parent_phase: 04_phase1_wall_structure
+  targets:
+    - wall_region
+    - centerline
+    - junction
+    - wall_boundary
+    - door_opening
+  target_notes:
+    wall_boundary: one-pixel inner contour from Phase 1 wall-region masks
+    door_opening: top-level Door polygons; Panel, swing, and door-leaf symbols excluded
+data:
+  dataset: CubiCasa5K
+  dataset_version: 4
+  split_counts:
+    train: 4200
+    validation: 400
+    test: 400
+  input_size: 512
+  resize_mode: letterbox
+  augmentation: true
+  subtract_openings: false
+model:
+  architecture: MitUNet
+  encoder_name: mit_b4
+  decoder_attention_type: scse
+  inherited_heads:
+    - wall_region
+    - centerline
+    - junction
+  added_heads:
+    - wall_boundary
+    - door_opening
+loss:
+  inherits_phase1: true
+  wall_boundary:
+    type: bce_plus_dice
+    bce_weight: 0.5
+    dice_weight: 0.5
+    max_pos_weight: 15
+  door_opening:
+    type: focal_plus_dice
+    focal_weight: 0.5
+    dice_weight: 0.5
+    alpha: 0.75
+    gamma: 2
+    max_pos_weight: 20
+  phase2_allocation:
+    core: 0.80
+    boundary: 0.10
+    door: 0.10
+training:
+  total_epochs_configured: 30
+  epochs_completed: 12
+  warmup_epochs: 2
+  best_phase2_epoch: 4
+  batch_size: 4
+  effective_batch_size: 4
+  optimizer: adam
+  weight_decay: 0.0
+  inherited_learning_rate: 0.00005
+  new_head_learning_rate: 0.0001
+  seed: 42
+  amp: true
+  early_stopping_metric: val_phase2_structural_score
+  early_stopping_patience: 8
+  scheduler_patience: 3
+selection:
+  phase2_score_weights:
+    wall_region: 0.40
+    centerline: 0.20
+    junction: 0.15
+    boundary: 0.10
+    door: 0.15
+thresholds:
+  wall_region: 0.05
+  centerline: 0.95
+  junction: 0.9
+  junction_nms_radius: 2
+  wall_boundary: 0.95
+  door_opening: 0.85
+  door_min_component_area: 1
+unknowns:
+  checkpoint_sha256: UNKNOWN
+
