@@ -1,0 +1,41 @@
+{
+  "experiment_id": "03_deeplabv3",
+  "evidence_status": "VERIFIED",
+  "primary_split": "validation",
+  "primary_metrics": {
+    "wall_iou": 0.7702792714789161,
+    "wall_dice": 0.8702347520969547,
+    "boundary_f1_2px": null,
+    "centerline_cldice": null,
+    "junction_f1_5px": null,
+    "door_object_f1": null
+  },
+  "best_epoch": 11,
+  "epochs_completed": 15,
+  "selected_thresholds": {
+    "wall": 0.5
+  },
+  "test_at_selected_threshold": {
+    "micro": {
+      "iou": 0.7723460788233382,
+      "dice": 0.8715522188940653
+    },
+    "macro": {
+      "iou": 0.758346672278799,
+      "dice": 0.8579650004036972
+    },
+    "binary_mask_boundary_f1_2px": 0.9155031738588051
+  },
+  "comparison_to_mitunet_baseline": {
+    "best_validation_iou_delta": -0.04770036382314513,
+    "best_validation_dice_delta": -0.02964291365715277,
+    "test_micro_iou_delta_at_selected_threshold": -0.052087768537904644,
+    "test_micro_dice_delta_at_selected_threshold": -0.03221729684218011
+  },
+  "sample_counts": {
+    "train": 4200,
+    "validation": 400,
+    "test": 400
+  }
+}
+

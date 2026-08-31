@@ -1,0 +1,34 @@
+{
+  "experiment_id": "03_deeplabv3",
+  "evidence_status": "VERIFIED",
+  "created_utc": null,
+  "source_run_directory": "/mnt/e/AI_Team/mitunet/experiments/cubicasa5k_deeplabv3_resnet50/deeplabv3_resnet50_wall_512_imagenet_aux_seed42_20260805T154529Z",
+  "source_files": [
+    "/mnt/e/AI_Team/mitunet/experiments/cubicasa5k_deeplabv3_resnet50/deeplabv3_resnet50_wall_512_imagenet_aux_seed42_20260805T154529Z/summary.json",
+    "/mnt/e/AI_Team/mitunet/experiments/cubicasa5k_deeplabv3_resnet50/deeplabv3_resnet50_wall_512_imagenet_aux_seed42_20260805T154529Z/metrics.json",
+    "/mnt/e/AI_Team/mitunet/experiments/cubicasa5k_deeplabv3_resnet50/deeplabv3_resnet50_wall_512_imagenet_aux_seed42_20260805T154529Z/config.yaml",
+    "/mnt/e/AI_Team/mitunet/experiments/cubicasa5k_deeplabv3_resnet50/deeplabv3_resnet50_wall_512_imagenet_aux_seed42_20260805T154529Z/comparison_to_mitunet_baseline.json",
+    "/mnt/e/AI_Team/mitunet/experiments/cubicasa5k_deeplabv3_resnet50/deeplabv3_resnet50_wall_512_imagenet_aux_seed42_20260805T154529Z/best_model.pth.metadata.json",
+    "/mnt/e/AI_Team/mitunet/experiments/cubicasa5k_deeplabv3_resnet50/deeplabv3_resnet50_wall_512_imagenet_aux_seed42_20260805T154529Z/git_state.json"
+  ],
+  "checkpoint": {
+    "path": "/mnt/e/AI_Team/mitunet/experiments/cubicasa5k_deeplabv3_resnet50/deeplabv3_resnet50_wall_512_imagenet_aux_seed42_20260805T154529Z/best_model.pth",
+    "sha256": "c1da3cccf9d06c1e7f0023ee04797493452c8bd031de5bd0125d9cb4230d11d8"
+  },
+  "code": {
+    "git_commit": "459778bd07b1a0b8a60413a2e681bbd4ff7bd829"
+  },
+  "tracking": {
+    "mlflow": {
+      "logged": true,
+      "run_id": "fc31697d33b745b9863b7faccc532672"
+    },
+    "dvc": null
+  },
+  "large_artifacts_committed": false,
+  "notes": [
+    "Source comparison artifact reports DeepLabV3 underperformed the MitUNet baseline.",
+    "The binary mask boundary F1 in metrics.json is retained as auxiliary detail, not as a dedicated boundary-head result."
+  ]
+}
+

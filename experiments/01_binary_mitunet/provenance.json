@@ -1,0 +1,34 @@
+{
+  "experiment_id": "01_binary_mitunet",
+  "evidence_status": "VERIFIED",
+  "created_utc": null,
+  "source_run_directory": "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu",
+  "source_files": [
+    "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu/metrics.json",
+    "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu/config.yaml",
+    "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu/parameters.json",
+    "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu/threshold_search.csv",
+    "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu/test_metrics.json",
+    "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu/validation_metrics.json",
+    "/mnt/e/AI_Team/mitunet/experiments/cubicasa5k_deeplabv3_resnet50/deeplabv3_resnet50_wall_512_imagenet_aux_seed42_20260805T154529Z/comparison_to_mitunet_baseline.json"
+  ],
+  "checkpoint": {
+    "path": "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu/best_model.pth",
+    "sha256": "fb9665056aa06057a571f247882ba5d32abde297215f2ae94d210759f540b72f",
+    "sha256_source": "DeepLabV3 comparison_to_mitunet_baseline.json"
+  },
+  "code": {
+    "git_commit": null,
+    "git_commit_status": "UNKNOWN"
+  },
+  "tracking": {
+    "mlflow": null,
+    "dvc": null
+  },
+  "large_artifacts_committed": false,
+  "notes": [
+    "Baseline checkpoint SHA-256 was located in a downstream comparator artifact, not in the baseline folder itself.",
+    "Source git commit and DVC hash were not located in inspected baseline artifacts."
+  ]
+}
+

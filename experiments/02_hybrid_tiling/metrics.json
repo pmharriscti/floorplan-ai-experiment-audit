@@ -1,0 +1,59 @@
+{
+  "experiment_id": "02_hybrid_tiling",
+  "evidence_status": "VERIFIED",
+  "primary_split": "validation",
+  "primary_metrics": {
+    "wall_iou": 0.8261317505223036,
+    "wall_dice": 0.9047887703458596,
+    "boundary_f1_2px": null,
+    "centerline_cldice": null,
+    "junction_f1_5px": null,
+    "door_object_f1": null
+  },
+  "selected_thresholds": {
+    "wall": 0.5
+  },
+  "locked_selection": {
+    "split": "validation",
+    "crop_size": 1024,
+    "overlap": 0.5,
+    "blending": "gaussian",
+    "global_weight": 1.0,
+    "patch_weight": 0.0,
+    "test_used_for_selection": false
+  },
+  "validation_locked_metrics": {
+    "hybrid": {
+      "iou": 0.8261317505223036,
+      "dice": 0.9047887703458596,
+      "boundary_iou": 0.5809357985569126,
+      "precision": 0.9217920828045066,
+      "recall": 0.8884013804535676,
+      "pixel_accuracy": 0.9876464009284973
+    },
+    "patch_only_reference": {
+      "iou": 0.7878285533606909,
+      "dice": 0.8813245004726671
+    }
+  },
+  "test_locked_metrics": {
+    "hybrid": {
+      "iou": 0.8310196912892222,
+      "dice": 0.9077124568814448
+    },
+    "global": {
+      "iou": 0.8310137169501033,
+      "dice": 0.9077088929014825
+    },
+    "patch_only": {
+      "iou": 0.7849613993724979,
+      "dice": 0.8795275905108655
+    }
+  },
+  "sample_counts": {
+    "train": 4200,
+    "validation": 400,
+    "test": 400
+  }
+}
+

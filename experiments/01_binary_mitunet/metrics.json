@@ -1,0 +1,58 @@
+{
+  "experiment_id": "01_binary_mitunet",
+  "evidence_status": "VERIFIED",
+  "primary_split": "validation",
+  "primary_metrics": {
+    "wall_iou": 0.8179796353020612,
+    "wall_dice": 0.8998776657541074,
+    "boundary_f1_2px": null,
+    "centerline_cldice": null,
+    "junction_f1_5px": null,
+    "door_object_f1": null
+  },
+  "best_epoch": 29,
+  "selected_thresholds": {
+    "wall": 0.1
+  },
+  "validation_threshold_search_best": {
+    "threshold": 0.1,
+    "micro_dice": 0.9004022456862498,
+    "micro_iou": 0.8188469303015113,
+    "macro_dice_mean": 0.8964274224394038,
+    "macro_iou_mean": 0.8162217862984508
+  },
+  "test_at_selected_threshold": {
+    "threshold": 0.1,
+    "micro": {
+      "iou": 0.8244338473612428,
+      "dice": 0.9037695157362454,
+      "precision": 0.9119561234429491,
+      "recall": 0.8957285822678411,
+      "pixel_accuracy": 0.9871013069152832
+    },
+    "macro": {
+      "iou_mean": 0.8155475025584127,
+      "dice_mean": 0.8962284263373335
+    },
+    "bootstrap_ci": {
+      "macro_iou": {
+        "low": 0.8078889986630112,
+        "high": 0.8230395589206728,
+        "n_bootstrap": 2000,
+        "seed": 123
+      },
+      "macro_dice": {
+        "low": 0.8912875730920891,
+        "high": 0.9010721087719074,
+        "n_bootstrap": 2000,
+        "seed": 123
+      }
+    }
+  },
+  "sample_counts": {
+    "train": 4200,
+    "validation": 400,
+    "test": 400
+  }
+}
+

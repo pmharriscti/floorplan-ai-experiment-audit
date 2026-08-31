@@ -1,0 +1,38 @@
+experiment_id: 02_hybrid_tiling
+name: Hybrid tiling / 1024 global-patch sweep
+evidence_status: VERIFIED
+source_report_directory: /home/pmharris/dev/mitunet/reports/binary_wall_hybrid_global_patch/20260723T021006Z
+source_manifest_directory: /mnt/e/AI_Team/mitunet/experiments/binary_wall_hybrid_global_patch/20260723T021043Z
+task:
+  mode: binary_wall_segmentation
+  target: wall_region
+  hypothesis: improve high-resolution inference with global and patch-tiled fusion
+data:
+  dataset: CubiCasa5K
+  split_counts:
+    train: 4200
+    validation: 400
+    test: 400
+  input_size: 1024
+model:
+  architecture: MitUNet
+  encoder_name: mit_b4
+  decoder_attention_type: scse
+  output_channels: 1
+selection:
+  split: validation
+  test_used_for_selection: false
+  crop_size: 1024
+  overlap: 0.5
+  blending: gaussian
+  global_weight: 1.0
+  patch_weight: 0.0
+  threshold: 0.5
+checkpoint:
+  path: /home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu_1024/best_model.pth
+  sha256: 42cad015bf894e6afe11011424b7ed88c49a1512f81593f14df5b228d65a3910
+  threshold_in_checkpoint: 0.1
+unknowns:
+  git_commit: UNKNOWN
+  dvc_hash: UNKNOWN
+

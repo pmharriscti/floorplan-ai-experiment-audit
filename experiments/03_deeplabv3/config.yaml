@@ -1,0 +1,46 @@
+experiment_id: 03_deeplabv3
+name: DeepLabV3-ResNet50 comparator
+evidence_status: VERIFIED
+source_run_directory: /mnt/e/AI_Team/mitunet/experiments/cubicasa5k_deeplabv3_resnet50/deeplabv3_resnet50_wall_512_imagenet_aux_seed42_20260805T154529Z
+task:
+  mode: binary_wall_segmentation
+  target: wall_region
+data:
+  dataset: CubiCasa5K
+  dataset_version: 4
+  split_counts:
+    train: 4200
+    validation: 400
+    test: 400
+  image_size: 512
+  resize_mode: letterbox
+model:
+  architecture: DeepLabV3-ResNet50
+  implementation: torchvision
+  backbone_weights: IMAGENET1K_V2
+  aux_loss: true
+  output_channels: 1
+  parameter_count: 41993794
+training:
+  epochs_configured: 15
+  epochs_completed: 15
+  best_epoch: 11
+  batch_size: 4
+  effective_batch_size: 4
+  optimizer: adam
+  learning_rate: 0.0001
+  weight_decay: 0.0
+  loss: asymmetric_tversky
+  tversky_alpha: 0.6
+  tversky_beta: 0.4
+  aux_loss_weight: 0.4
+  seed: 42
+  amp: true
+  early_stopping_metric: val_iou
+  early_stopping_patience: 8
+  scheduler_patience: 3
+thresholds:
+  selected_threshold: 0.5
+unknowns:
+  dvc_hash: UNKNOWN
+
