@@ -1,0 +1,53 @@
+# Python and local tooling
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Local logs and generated reports
+*.log
+tmp/
+temp/
+
+# Large ML artifacts: keep these referenced in provenance, not committed.
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.onnx
+*.h5
+*.pkl
+*.joblib
+*.npy
+*.npz
+checkpoints/
+mlruns/
+mlflow/
+dvc_cache/
+.dvc/cache/
+
+# Raw datasets and generated prediction outputs
+data/
+datasets/
+raw/
+cache/
+outputs/
+predictions/
+artifacts/
+
+# Large image/media artifacts
+*.png
+*.jpg
+*.jpeg
+*.bmp
+*.tif
+*.tiff
+*.webp
+*.gif
+*.mp4
+*.mov
+*.avi
+
