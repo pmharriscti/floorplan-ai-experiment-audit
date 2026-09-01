@@ -1,0 +1,72 @@
+experiment_id: 06_binary_mitunet_1024
+name: Binary MitUNet 1024 px global
+evidence_status: VERIFIED
+source_run_directory: /home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu_1024
+task:
+  mode: binary_wall_segmentation
+  target: wall_region
+  target_source: native CubiCasa5K SVG Wall polygons
+  subtract_openings: false
+data:
+  dataset: CubiCasa5K
+  dataset_version: 4
+  split_counts:
+    train: 4200
+    validation: 400
+    test: 400
+  input_size: 1024
+  resize_mode: letterbox
+  image_file: F1_scaled.png
+model:
+  architecture: MitUNet
+  implementation: segmentation_models_pytorch
+  encoder_name: mit_b4
+  encoder_weights: imagenet
+  decoder_attention_type: scse
+  output_channels: 1
+  output_activation: raw_logits
+training:
+  epochs_configured: 30
+  epochs_completed: 30
+  best_epoch: 28
+  physical_batch_size: 1
+  gradient_accumulation_steps: 4
+  effective_batch_size: 4
+  optimizer: adam
+  learning_rate: 0.0001
+  weight_decay: 0.0
+  loss: asymmetric_tversky
+  tversky_alpha: 0.6
+  tversky_beta: 0.4
+  seed: 42
+  amp: true
+  num_workers: 4
+  early_stopping_metric: val_iou
+  early_stopping_patience: 8
+  scheduler_patience: 3
+thresholds:
+  configured_threshold: 0.5
+  selected_validation_threshold: 0.1
+checkpoint:
+  path: /home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu_1024/best_model.pth
+  sha256: 42cad015bf894e6afe11011424b7ed88c49a1512f81593f14df5b228d65a3910
+  sha256_source: /home/pmharris/dev/mitunet/reports/binary_wall_hybrid_global_patch/20260723T021006Z/setup_report.json
+source_resolution:
+  total_image_count: 5000
+  count_with_either_dimension_above_512: 4999
+  percentage_with_useful_detail_above_512: 0.9998
+  count_with_either_dimension_at_or_above_1024: 4610
+  percentage_with_useful_detail_at_or_above_1024: 0.922
+  count_with_both_dimensions_at_or_above_1024: 2971
+  percentage_with_both_dimensions_at_or_above_1024: 0.5942
+environment:
+  python_executable: /home/pmharris/dev/mitunet/.venv/bin/python
+  torch_version: 2.12.0+cu130
+  cuda_available: true
+  selected_device: cuda
+  gpu_model: NVIDIA RTX PRO 3000 Blackwell Generation Laptop GPU
+code:
+  git_commit: ade0aa6ba01c72f02a32a33a605c36b54b264a7a
+  git_state: dirty_at_run_capture
+unknowns:
+  dvc_hash: UNKNOWN

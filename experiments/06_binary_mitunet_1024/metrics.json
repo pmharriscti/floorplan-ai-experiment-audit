@@ -1,0 +1,102 @@
+{
+  "experiment_id": "06_binary_mitunet_1024",
+  "evidence_status": "VERIFIED",
+  "primary_split": "validation",
+  "primary_metrics": {
+    "wall_iou": 0.8259883607445844,
+    "wall_dice": 0.904702766459881,
+    "boundary_f1_2px": null,
+    "centerline_cldice": null,
+    "junction_f1_5px": null,
+    "door_object_f1": null
+  },
+  "best_epoch": 28,
+  "epochs_completed": 30,
+  "selected_thresholds": {
+    "wall": 0.1
+  },
+  "validation_threshold_search_best": {
+    "threshold": 0.1,
+    "micro_dice": 0.9051800394940649,
+    "micro_iou": 0.8267843774749646,
+    "macro_dice_mean": 0.9027040052261955,
+    "macro_iou_mean": 0.8263063078027737
+  },
+  "validation_at_selected_threshold": {
+    "threshold": 0.1,
+    "micro": {
+      "iou": 0.8267843774749646,
+      "dice": 0.9051800394940649,
+      "precision": 0.9193587223243415,
+      "recall": 0.8914320518789806,
+      "pixel_accuracy": 0.9876605343818664
+    },
+    "macro": {
+      "iou_mean": 0.8263063078027737,
+      "dice_mean": 0.9027040052261955
+    },
+    "bootstrap_ci": {
+      "macro_iou": {
+        "low": 0.8184745776068345,
+        "high": 0.8340714041663749,
+        "n_bootstrap": 2000,
+        "seed": 123
+      },
+      "macro_dice": {
+        "low": 0.897411898736141,
+        "high": 0.9076998243132318,
+        "n_bootstrap": 2000,
+        "seed": 123
+      }
+    }
+  },
+  "test_at_selected_threshold": {
+    "threshold": 0.1,
+    "micro": {
+      "iou": 0.8317579184170079,
+      "dice": 0.9081526658673402,
+      "precision": 0.9222609942046261,
+      "recall": 0.8944694794557474,
+      "pixel_accuracy": 0.987761242389679
+    },
+    "macro": {
+      "iou_mean": 0.8262473101448796,
+      "dice_mean": 0.9026878137415733
+    },
+    "bootstrap_ci": {
+      "macro_iou": {
+        "low": 0.818519925753679,
+        "high": 0.8335477495623413,
+        "n_bootstrap": 2000,
+        "seed": 123
+      },
+      "macro_dice": {
+        "low": 0.8977013769265049,
+        "high": 0.9072977109662561,
+        "n_bootstrap": 2000,
+        "seed": 123
+      }
+    }
+  },
+  "comparison_to_512_baseline": {
+    "baseline_experiment_id": "01_binary_mitunet",
+    "validation_wall_iou_delta": 0.008008725442523248,
+    "validation_wall_dice_delta": 0.004825100705773561,
+    "test_micro_iou_delta_at_selected_threshold": 0.0073240710557651,
+    "test_micro_dice_delta_at_selected_threshold": 0.004383150131094799
+  },
+  "source_resolution_summary": {
+    "total_image_count": 5000,
+    "count_with_either_dimension_above_512": 4999,
+    "percentage_with_useful_detail_above_512": 0.9998,
+    "count_with_either_dimension_at_or_above_1024": 4610,
+    "percentage_with_useful_detail_at_or_above_1024": 0.922,
+    "count_with_both_dimensions_at_or_above_1024": 2971,
+    "percentage_with_both_dimensions_at_or_above_1024": 0.5942
+  },
+  "sample_counts": {
+    "train": 4200,
+    "validation": 400,
+    "test": 400
+  }
+}

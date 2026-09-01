@@ -55,6 +55,9 @@ artifacts/
 !experiments/**/qa/**/*.png
 !experiments/**/qa/**/*.jpg
 !experiments/**/qa/**/*.jpeg
+!experiments/**/plots/**/*.png
+!experiments/**/plots/**/*.jpg
+!experiments/**/plots/**/*.jpeg
 !docs/visual_comparisons/**/*.png
 !docs/visual_comparisons/**/*.jpg
 !docs/visual_comparisons/**/*.jpeg

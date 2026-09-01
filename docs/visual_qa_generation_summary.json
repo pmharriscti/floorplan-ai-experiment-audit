@@ -30,6 +30,12 @@
       "experiment_id": "05_phase2_boundary_openings",
       "qa_root": "experiments/05_phase2_boundary_openings/qa",
       "sample_count": 3
+    },
+    {
+      "contact_sheet": "experiments/06_binary_mitunet_1024/qa/contact_sheet.png",
+      "experiment_id": "06_binary_mitunet_1024",
+      "qa_root": "experiments/06_binary_mitunet_1024/qa",
+      "sample_count": 3
     }
   ],
   "no_training_performed": true,
@@ -50,5 +56,5 @@
       "sample_id": "high_quality_architectural/5559"
     }
   ],
-  "visual_qa_scope": "five_current_experiments"
+  "visual_qa_scope": "six_audited_experiments"
 }

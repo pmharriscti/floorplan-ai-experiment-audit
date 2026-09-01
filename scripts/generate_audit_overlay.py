@@ -205,6 +205,29 @@ BINARY_EXPERIMENTS = [
         provenance_note="Prediction mask regenerated for audit by inference from the verified DeepLabV3 checkpoint.",
         checkpoint_sha256="c1da3cccf9d06c1e7f0023ee04797493452c8bd031de5bd0125d9cb4230d11d8",
     ),
+    BinaryExperiment(
+        experiment_id="06_binary_mitunet_1024",
+        name="Binary MitUNet 1024 px global",
+        audit_dir=AUDIT_ROOT / "experiments/06_binary_mitunet_1024",
+        source_run_dir=MITUNET_ROOT / "experiments/cubicasa5k_mitunet/full_gpu_1024",
+        manifest_csv=MITUNET_ROOT / "experiments/cubicasa5k_mitunet/full_gpu_1024/val_manifest.csv",
+        checkpoint_path=MITUNET_ROOT / "experiments/cubicasa5k_mitunet/full_gpu_1024/best_model.pth",
+        metrics_csv=MITUNET_ROOT / "experiments/cubicasa5k_mitunet/full_gpu_1024/per_image_validation_metrics.csv",
+        historical_overlay_dir=MITUNET_ROOT / "experiments/cubicasa5k_mitunet/full_gpu_1024/validation_prediction_overlays",
+        image_size=1024,
+        threshold=0.1,
+        provenance_note=(
+            "Prediction mask regenerated for audit by inference from the verified 1024 px global MitUNet "
+            "checkpoint at the run-selected threshold."
+        ),
+        checkpoint_sha256="42cad015bf894e6afe11011424b7ed88c49a1512f81593f14df5b228d65a3910",
+        extra_source_files=(
+            MITUNET_ROOT / "experiments/cubicasa5k_mitunet/full_gpu_1024/summary.json",
+            MITUNET_ROOT / "experiments/cubicasa5k_mitunet/full_gpu_1024/metrics.json",
+            MITUNET_ROOT / "experiments/cubicasa5k_mitunet/full_gpu_1024/threshold_search.csv",
+            MITUNET_ROOT / "experiments/cubicasa5k_mitunet/full_gpu_1024/run_config_resolved.yaml",
+        ),
+    ),
 ]
 
 PHASE1_EXPERIMENT = StructuralExperiment(
@@ -1056,15 +1079,16 @@ def generate_phase2(exp: StructuralExperiment) -> dict[str, Any]:
 
 def write_shared_comparison(summary: dict[str, Any]) -> None:
     out = AUDIT_ROOT / "docs/visual_comparisons/shared_validation_samples.md"
+    experiments = sorted(item["experiment_id"] for item in summary["experiments"])
+    experiment_labels = [experiment.split("_", 1)[0] for experiment in experiments]
     lines = [
         "# Shared Validation Samples",
         "",
-        "The visual QA pass uses the same three validation sample identities across all five experiments.",
+        "The visual QA pass uses the same three validation sample identities across all audited experiments.",
         "",
-        "| Sample | Role | 01 | 02 | 03 | 04 | 05 |",
-        "| --- | --- | --- | --- | --- | --- | --- |",
+        "| " + " | ".join(["Sample", "Role", *experiment_labels]) + " |",
+        "| " + " | ".join(["---", "---", *(["---"] * len(experiment_labels))]) + " |",
     ]
-    experiments = [item["experiment_id"] for item in summary["experiments"]]
     for sample in SAMPLES:
         sid = safe_id(sample["sample_id"])
         links = [f"[metadata](../../experiments/{exp}/qa/{sid}/metadata.json)" for exp in experiments]
@@ -1072,7 +1096,7 @@ def write_shared_comparison(summary: dict[str, Any]) -> None:
     lines.extend(
         [
             "",
-            "Direct visual comparison should account for task differences: experiments 01-03 are binary wall-region models, Phase 1 adds centerline and junction heads, and Phase 2 adds wall-boundary and door-opening heads.",
+            "Direct visual comparison should account for task differences: experiments 01, 03, and 06 are standalone binary wall-region models, experiment 02 is the hybrid/global-patch evaluation using the 1024 checkpoint, Phase 1 adds centerline and junction heads, and Phase 2 adds wall-boundary and door-opening heads.",
             "",
         ]
     )
@@ -1083,7 +1107,7 @@ def write_shared_comparison(summary: dict[str, Any]) -> None:
 def main() -> None:
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     summary: dict[str, Any] = {
-        "visual_qa_scope": "five_current_experiments",
+        "visual_qa_scope": "six_audited_experiments",
         "samples": SAMPLES,
         "device": str(device),
         "experiments": [],
@@ -1093,6 +1117,7 @@ def main() -> None:
         summary["experiments"].append(generate_binary_experiment(exp, device))
     summary["experiments"].append(generate_phase1(PHASE1_EXPERIMENT, device))
     summary["experiments"].append(generate_phase2(PHASE2_EXPERIMENT))
+    summary["experiments"].sort(key=lambda item: item["experiment_id"])
     write_json(AUDIT_ROOT / "docs/visual_qa_generation_summary.json", summary)
     write_shared_comparison(summary)
     print(json.dumps(summary, indent=2, sort_keys=True))

@@ -1,0 +1,97 @@
+{
+  "experiment_id": "06_binary_mitunet_1024",
+  "evidence_status": "VERIFIED",
+  "created_utc": "2026-09-01",
+  "source_run_directory": "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu_1024",
+  "source_files": [
+    "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu_1024/run_config_resolved.yaml",
+    "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu_1024/command.txt",
+    "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu_1024/run.log",
+    "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu_1024/history.csv",
+    "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu_1024/summary.json",
+    "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu_1024/metrics.json",
+    "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu_1024/validation_metrics.json",
+    "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu_1024/test_metrics.json",
+    "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu_1024/threshold_search.csv",
+    "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu_1024/source_resolution_audit.csv",
+    "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu_1024/source_resolution_audit.json",
+    "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu_1024/train_manifest.csv",
+    "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu_1024/val_manifest.csv",
+    "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu_1024/test_manifest.csv",
+    "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu_1024/manifest_checksums.json",
+    "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu_1024/environment.txt",
+    "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu_1024/environment.json",
+    "/home/pmharris/dev/mitunet/reports/training_runs/full_gpu_1024/summary.md",
+    "/home/pmharris/dev/mitunet/reports/training_runs/full_gpu_1024/training_log.csv",
+    "/home/pmharris/dev/mitunet/reports/binary_wall_hybrid_global_patch/20260723T021006Z/setup_report.json"
+  ],
+  "checkpoint": {
+    "path": "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu_1024/best_model.pth",
+    "sha256": "42cad015bf894e6afe11011424b7ed88c49a1512f81593f14df5b228d65a3910",
+    "sha256_source": "/home/pmharris/dev/mitunet/reports/binary_wall_hybrid_global_patch/20260723T021006Z/setup_report.json"
+  },
+  "last_checkpoint": {
+    "path": "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu_1024/last_model.pth",
+    "sha256": null,
+    "sha256_status": "not_hashed_for_audit"
+  },
+  "manifests": {
+    "train": {
+      "path": "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu_1024/train_manifest.csv",
+      "sample_count": 4200,
+      "sha256": "aa446f9a9a4903b71b7f0f7123c4816c2e56d04c5494f87ee0fc8840d3740d73"
+    },
+    "validation": {
+      "path": "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu_1024/val_manifest.csv",
+      "sample_count": 400,
+      "sha256": "416fc867fc234200a9848005fecee9067d63e0e5364797f377e83285559896af"
+    },
+    "test": {
+      "path": "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu_1024/test_manifest.csv",
+      "sample_count": 400,
+      "sha256": "e8f95a9161d95710a23927fc0cd55d7cd5521df4387588015b950e0d7c82b45d"
+    }
+  },
+  "code": {
+    "git_commit": "ade0aa6ba01c72f02a32a33a605c36b54b264a7a",
+    "git_state": "dirty_at_run_capture",
+    "changed_files_from_git_state_json": [
+      "M .gitignore",
+      "?? README_CUBICASA_TRAINING.md",
+      "?? configs/",
+      "?? mitunet_cubicasa/",
+      "?? mitunet_findings_summary.md",
+      "?? reports/",
+      "?? requirements-cubicasa.txt",
+      "?? run_cubicasa_training.sh",
+      "?? runs/",
+      "?? scripts/",
+      "?? tests/",
+      "?? train_mlstructfp.py"
+    ]
+  },
+  "tracking": {
+    "mlflow": null,
+    "dvc": {
+      "status": "UNKNOWN"
+    }
+  },
+  "visual_evidence": {
+    "qa_root": "experiments/06_binary_mitunet_1024/qa",
+    "plots_root": "experiments/06_binary_mitunet_1024/plots",
+    "validation_samples": [
+      "high_quality_architectural/333",
+      "high_quality_architectural/3015",
+      "high_quality_architectural/5559"
+    ],
+    "prediction_masks": "regenerated_from_verified_checkpoint_at_threshold_0.1",
+    "historical_validation_overlays": "copied_from_source_run",
+    "training_plots": "copied_from_source_run"
+  },
+  "large_artifacts_committed": false,
+  "notes": [
+    "This entry documents the standalone 1024 px global MitUNet training run, not the later hybrid fusion sweep.",
+    "The hybrid sweep reused this checkpoint and selected a global-only fusion setting.",
+    "Best checkpoint SHA-256 was verified from the later hybrid setup report."
+  ]
+}

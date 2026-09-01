@@ -2,11 +2,11 @@
 
 This repository is the initial evidence-backed audit index for the floor-plan segmentation and structure experiments. It records only small, inspectable metadata: Markdown summaries, CSV, YAML, and JSON. Checkpoints, datasets, caches, prediction dumps, and raw outputs remain in their original artifact locations and are not committed here.
 
-Audit date: 2026-08-31.
+Audit date: 2026-08-31. Updated 2026-09-01 with the standalone 1024 px MitUNet run.
 
 ## Scope
 
-The current audit covers five experiments:
+The current audit covers six experiments:
 
 | ID | Experiment | Status | Read next |
 | --- | --- | --- | --- |
@@ -15,14 +15,15 @@ The current audit covers five experiments:
 | 03 | DeepLabV3-ResNet50 comparator | completed | [experiments/03_deeplabv3/README.md](experiments/03_deeplabv3/README.md) |
 | 04 | Phase 1 wall structure | completed | [experiments/04_phase1_wall_structure/README.md](experiments/04_phase1_wall_structure/README.md) |
 | 05 | Phase 2 boundary and door/openings | completed | [experiments/05_phase2_boundary_openings/README.md](experiments/05_phase2_boundary_openings/README.md) |
+| 06 | Binary MitUNet 1024 px global | completed | [experiments/06_binary_mitunet_1024/README.md](experiments/06_binary_mitunet_1024/README.md) |
 
 The top-level scorecard is [EXPERIMENT_SCOREBOARD.csv](EXPERIMENT_SCOREBOARD.csv), and the source/evidence index is [EXPERIMENT_INDEX.md](EXPERIMENT_INDEX.md).
 
 ## Visual Evidence
 
-Curated visual QA evidence is included for all five experiments under each experiment's `qa/` directory. Every QA set uses the same three validation sample identities: `high_quality_architectural/333`, `high_quality_architectural/3015`, and `high_quality_architectural/5559`.
+Curated visual QA evidence is included for all six experiments under each experiment's `qa/` directory. Every QA set uses the same three validation sample identities: `high_quality_architectural/333`, `high_quality_architectural/3015`, and `high_quality_architectural/5559`.
 
-Each sample folder includes a review source image, ground-truth mask(s), prediction mask(s), error overlay(s), and `metadata.json` with source paths and provenance. Experiments 01-04 use regenerated inference from verified checkpoints; Phase 2 prediction masks are derived from saved historical validation probability maps.
+Each sample folder includes a review source image, ground-truth mask(s), prediction mask(s), error overlay(s), and `metadata.json` with source paths and provenance. Experiments 01-04 and 06 use regenerated inference from verified checkpoints; Phase 2 prediction masks are derived from saved historical validation probability maps.
 
 Start at [docs/visual_comparisons/shared_validation_samples.md](docs/visual_comparisons/shared_validation_samples.md) for the shared-sample index and [docs/visual_qa_generation_summary.json](docs/visual_qa_generation_summary.json) for the generation summary. Overlay colors are green for true positive, red for false positive, and blue for false negative.
 
@@ -38,13 +39,15 @@ The hybrid tiling experiment verified the strongest wall-region score in this au
 
 DeepLabV3-ResNet50 completed as an architecture comparator and underperformed the MitUNet baseline. Verified best validation IoU/Dice were `0.7702792714789161` and `0.8702347520969547`.
 
+The standalone 1024 px Binary MitUNet run improved over the 512 px baseline, with best validation IoU/Dice `0.8259883607445844` and `0.904702766459881`; test micro IoU/Dice at threshold `0.10` were `0.8317579184170079` and `0.9081526658673402`.
+
 Phase 1 added wall-region, centerline, and junction heads. Verified validation wall-region IoU/Dice were `0.8208656034763073` and `0.9016212969360846`, centerline clDice was `0.6464444601388634`, junction F1@5 px was `0.769385212829412`, and structural score was `0.7608172018780399`.
 
 Phase 2 added wall-boundary and door-opening heads from the Phase 1 checkpoint. It verified strong final boundary F1@2 px `0.9347893344704645` and door object F1 `0.7796991077953163`, but degraded Phase 1-compatible structural score by `-0.14096779852795083` and wall IoU by `-0.05004927229517453`.
 
 ## Open Evidence Gaps
 
-The exact baseline source git commit and DVC hash were not located in the inspected baseline artifacts. Several Phase 1 historical values mentioned in task context were not found in the Phase 1 run reports and are therefore not recorded as verified. Phase 1 and Phase 2 checkpoint SHA-256 hashes are deferred in their manifests, so this repository records checkpoint paths and sizes but not hashes.
+The exact baseline source git commit and DVC hash were not located in the inspected baseline artifacts. The standalone 1024 px run records a source git commit, but its captured git state was dirty. Several Phase 1 historical values mentioned in task context were not found in the Phase 1 run reports and are therefore not recorded as verified. Phase 1 and Phase 2 checkpoint SHA-256 hashes are deferred in their manifests, so this repository records checkpoint paths and sizes but not hashes.
 
 ## Method Notes
 
