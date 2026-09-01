@@ -1,0 +1,54 @@
+{
+  "device": "cpu",
+  "experiments": [
+    {
+      "contact_sheet": "experiments/01_binary_mitunet/qa/contact_sheet.png",
+      "experiment_id": "01_binary_mitunet",
+      "qa_root": "experiments/01_binary_mitunet/qa",
+      "sample_count": 3
+    },
+    {
+      "contact_sheet": "experiments/02_hybrid_tiling/qa/contact_sheet.png",
+      "experiment_id": "02_hybrid_tiling",
+      "qa_root": "experiments/02_hybrid_tiling/qa",
+      "sample_count": 3
+    },
+    {
+      "contact_sheet": "experiments/03_deeplabv3/qa/contact_sheet.png",
+      "experiment_id": "03_deeplabv3",
+      "qa_root": "experiments/03_deeplabv3/qa",
+      "sample_count": 3
+    },
+    {
+      "contact_sheet": "experiments/04_phase1_wall_structure/qa/contact_sheet.png",
+      "experiment_id": "04_phase1_wall_structure",
+      "qa_root": "experiments/04_phase1_wall_structure/qa",
+      "sample_count": 3
+    },
+    {
+      "contact_sheet": "experiments/05_phase2_boundary_openings/qa/contact_sheet.png",
+      "experiment_id": "05_phase2_boundary_openings",
+      "qa_root": "experiments/05_phase2_boundary_openings/qa",
+      "sample_count": 3
+    }
+  ],
+  "no_training_performed": true,
+  "samples": [
+    {
+      "reason": "Shared validation sample with solid wall-region performance across the inspected runs.",
+      "role": "typical_clean_validation_case",
+      "sample_id": "high_quality_architectural/333"
+    },
+    {
+      "reason": "Shared validation sample where the 1024 px global model shows a clear wall-region gain.",
+      "role": "strong_high_resolution_case",
+      "sample_id": "high_quality_architectural/3015"
+    },
+    {
+      "reason": "Shared validation sample with visibly lower wall-region and structural metrics.",
+      "role": "difficult_failure_case",
+      "sample_id": "high_quality_architectural/5559"
+    }
+  ],
+  "visual_qa_scope": "five_current_experiments"
+}

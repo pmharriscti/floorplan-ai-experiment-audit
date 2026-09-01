@@ -1,0 +1,162 @@
+{
+  "assets": {
+    "ground_truth_wall_mask": "ground_truth_wall_mask.png",
+    "historical_validation_overlay": {
+      "audit_path": "experiments/02_hybrid_tiling/qa/high_quality_architectural__3015/historical_validation_overlay.jpg",
+      "audit_sha256": "2a96f9d68f83601ca7074595eb5ee91a067ba7f43a30d801149f0c9620979c84",
+      "source_path": "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu_1024/validation_prediction_overlays/003_high_quality_architectural__3015.jpg",
+      "source_sha256": "2a96f9d68f83601ca7074595eb5ee91a067ba7f43a30d801149f0c9620979c84",
+      "status": "VERIFIED"
+    },
+    "overlay_wall_errors": "overlay_wall_errors.png",
+    "prediction_wall_mask": "prediction_wall_mask.png",
+    "source": "source.png"
+  },
+  "checkpoint": {
+    "path": "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu_1024/best_model.pth",
+    "sha256": "42cad015bf894e6afe11011424b7ed88c49a1512f81593f14df5b228d65a3910"
+  },
+  "experiment_id": "02_hybrid_tiling",
+  "experiment_name": "Hybrid tiling / 1024 global-patch sweep",
+  "extra_source_files": {
+    "experiment_manifest.json": {
+      "exists": true,
+      "path": "/mnt/e/AI_Team/mitunet/experiments/binary_wall_hybrid_global_patch/20260723T021043Z/experiment_manifest.json",
+      "sha256": "b441aa0e54b8a4c740424cbea9fc97e3cb356cbba5bcb0e76e929fd1ef648aaf",
+      "sha256_status": null
+    },
+    "locked_validation_selection.json": {
+      "exists": true,
+      "path": "/home/pmharris/dev/mitunet/reports/binary_wall_hybrid_global_patch/20260723T021006Z/locked_validation_selection.json",
+      "sha256": "e2e82359564263d786c7f04c3019f7313295816b91b0ba4c47679f18a95f7abc",
+      "sha256_status": null
+    },
+    "val_crop1024_overlap0.5_gaussian_gw1_summary.json": {
+      "exists": true,
+      "path": "/home/pmharris/dev/mitunet/reports/binary_wall_hybrid_global_patch/20260723T021006Z/val_crop1024_overlap0.5_gaussian_gw1_summary.json",
+      "sha256": "94641f993d9bf5e5e900ef133db47ccb0831b2c6b5582746931cf2e189b8e138",
+      "sha256_status": null
+    }
+  },
+  "generation": {
+    "historical_directories_modified": false,
+    "mask_resize_policy": "Nearest-neighbor mask handling inherited from the validation dataset transform.",
+    "no_training_performed": true,
+    "overlay_palette": {
+      "false_negative": "blue",
+      "false_positive": "red",
+      "true_positive": "green"
+    },
+    "script": "scripts/generate_audit_overlay.py",
+    "source_image_policy": "Letterboxed validation image regenerated from the source manifest and saved as a review copy."
+  },
+  "image_size": 1024,
+  "manifest_row": {
+    "annotation_path": "/home/pmharris/dev/cubicasa5k_data/data/datasets/qmarva/cubicasa5k/versions/4/cubicasa5k/cubicasa5k/high_quality_architectural/3015/model.svg",
+    "image_path": "/home/pmharris/dev/cubicasa5k_data/data/datasets/qmarva/cubicasa5k/versions/4/cubicasa5k/cubicasa5k/high_quality_architectural/3015/F1_scaled.png",
+    "mask_path": "artifacts/cubicasa5k_wall_cache/masks/high_quality_architectural__3015.png",
+    "original_height": "1949",
+    "original_width": "3269",
+    "sample_id": "high_quality_architectural/3015",
+    "split": "val",
+    "wall_fraction": "0.08116813557587556",
+    "wall_pixels": "517145"
+  },
+  "mask_integrity": {
+    "ground_truth_wall_mask": {
+      "positive_fraction": 0.04784965515136719,
+      "positive_pixels": 50174,
+      "shape": [
+        1024,
+        1024
+      ],
+      "unique_values": [
+        0,
+        1
+      ]
+    },
+    "prediction_wall_mask": {
+      "positive_fraction": 0.04851722717285156,
+      "positive_pixels": 50874,
+      "shape": [
+        1024,
+        1024
+      ],
+      "unique_values": [
+        0,
+        1
+      ]
+    }
+  },
+  "per_image_metrics_from_source_csv": {
+    "blending": "gaussian",
+    "boundary_iou": 0.7925318720137678,
+    "crop_size": 1024,
+    "dice": 0.9510124101894187,
+    "effective_patch_batch_size": 8,
+    "false_negative_rate": 0.04237254354845139,
+    "false_positive_rate": 0.002828519974919922,
+    "global_weight": 1.0,
+    "iou": 0.9066002490660025,
+    "method": "hybrid",
+    "overlap": 0.5,
+    "patch_count": 18,
+    "pixel_accuracy": 0.9952793121337891,
+    "precision": 0.9444881270640038,
+    "recall": 0.9576274564515486,
+    "sample_id": "high_quality_architectural/3015",
+    "seam_error_rate": 0.008482336927473437,
+    "seam_iou": 0.905884911143179,
+    "specificity": 0.99717148002508
+  },
+  "per_image_metrics_recomputed_from_saved_masks": {
+    "dice": 0.9509540020584277,
+    "fn": 2128,
+    "fp": 2828,
+    "iou": 0.9064940945624693,
+    "precision": 0.9444116837677399,
+    "recall": 0.9575875951688125,
+    "tn": 995574,
+    "tp": 48046
+  },
+  "prediction_provenance": "Prediction mask regenerated from the verified 1024 px global checkpoint. This represents the locked hybrid selection because the selected fusion used global_weight=1.0 and patch_weight=0.0.",
+  "sample_id": "high_quality_architectural/3015",
+  "sample_role": "strong_high_resolution_case",
+  "selection_reason": "Shared validation sample where the 1024 px global model shows a clear wall-region gain.",
+  "source_files": {
+    "checkpoint": {
+      "exists": true,
+      "path": "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu_1024/best_model.pth",
+      "sha256": null,
+      "sha256_status": "skipped_large_artifact"
+    },
+    "manifest_csv": {
+      "exists": true,
+      "path": "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu_1024/val_manifest.csv",
+      "sha256": "416fc867fc234200a9848005fecee9067d63e0e5364797f377e83285559896af",
+      "sha256_status": null
+    },
+    "metrics_csv": {
+      "exists": true,
+      "path": "/home/pmharris/dev/mitunet/reports/binary_wall_hybrid_global_patch/20260723T021006Z/val_fusion_weights_per_image_metrics.csv",
+      "sha256": "cc245bf5682bacc5fe79cf033029844f3bbd23c4ea4af7b4f94f5b0f5d2ec00a",
+      "sha256_status": null
+    },
+    "source_image": {
+      "exists": true,
+      "path": "/home/pmharris/dev/cubicasa5k_data/data/datasets/qmarva/cubicasa5k/versions/4/cubicasa5k/cubicasa5k/high_quality_architectural/3015/F1_scaled.png",
+      "sha256": "fc68294b5d4a018b647d6ce260743a4889fe104e45efdfa52378045f7d6ace9e",
+      "sha256_status": null
+    },
+    "source_wall_mask": {
+      "exists": true,
+      "path": "artifacts/cubicasa5k_wall_cache/masks/high_quality_architectural__3015.png",
+      "sha256": "f3e27e5d8472b87d42373cd23d1817f947dcc6cefb1731ae9287ff06facbb60d",
+      "sha256_status": null
+    }
+  },
+  "source_run_directory": "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu_1024",
+  "split": "val",
+  "threshold": 0.5,
+  "visual_evidence_status": "VERIFIED"
+}

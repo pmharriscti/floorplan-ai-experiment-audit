@@ -1,0 +1,326 @@
+{
+  "assets": {
+    "ground_truth_centerline_mask": "ground_truth_centerline_mask.png",
+    "ground_truth_junction_mask": "ground_truth_junction_mask.png",
+    "ground_truth_wall_region_mask": "ground_truth_wall_region_mask.png",
+    "historical_target_qa": {
+      "audit_path": "experiments/04_phase1_wall_structure/qa/high_quality_architectural__333/historical_target_qa.png",
+      "audit_sha256": "dc5ed8754b6edb14421b276d265bc1b3ab8f68f526e5c87a01e1ca50e1a042d0",
+      "source_path": "/mnt/e/AI_Team/mitunet/phase1_wall_structure/experiments/mitunet_phase1_wall_region_centerline_junctions_20260807_163622_UTC/overlays/target_qa/random_val/high_quality_architectural__333.png",
+      "source_sha256": "dc5ed8754b6edb14421b276d265bc1b3ab8f68f526e5c87a01e1ca50e1a042d0",
+      "status": "VERIFIED"
+    },
+    "overlay_centerline_errors": "overlay_centerline_errors.png",
+    "overlay_junction_errors": "overlay_junction_errors.png",
+    "overlay_wall_region_errors": "overlay_wall_region_errors.png",
+    "prediction_centerline_mask": "prediction_centerline_mask.png",
+    "prediction_junction_mask": "prediction_junction_mask.png",
+    "prediction_wall_region_mask": "prediction_wall_region_mask.png",
+    "source": "source.png"
+  },
+  "checkpoint": {
+    "path": "/mnt/e/AI_Team/mitunet/phase1_wall_structure/experiments/mitunet_phase1_wall_region_centerline_junctions_20260807_163622_UTC/checkpoints/best_structural_score.pth",
+    "sha256": null,
+    "sha256_status": "deferred_in_source_checkpoint_manifest"
+  },
+  "experiment_id": "04_phase1_wall_structure",
+  "experiment_name": "Phase 1 wall structure",
+  "generation": {
+    "historical_directories_modified": false,
+    "mask_resize_policy": "Nearest-neighbor mask handling inherited from the Phase 1 validation dataset transform.",
+    "no_training_performed": true,
+    "overlay_palette": {
+      "false_negative": "blue",
+      "false_positive": "red",
+      "true_positive": "green"
+    },
+    "script": "scripts/generate_audit_overlay.py",
+    "source_image_policy": "Letterboxed validation image regenerated from the source manifest and saved as a review copy."
+  },
+  "image_size": 512,
+  "junction_visualization": {
+    "point_render_radius_px": 4,
+    "predicted_point_count": 17,
+    "source_metric_policy": "Historical junction metrics use point matching; saved masks render those points for visual inspection.",
+    "target_point_count": 19
+  },
+  "manifest_row": {
+    "annotation_path": "/home/pmharris/dev/cubicasa5k_data/data/datasets/qmarva/cubicasa5k/versions/4/cubicasa5k/cubicasa5k/high_quality_architectural/333/model.svg",
+    "centerline_component_count": "1",
+    "centerline_length_estimate": "1726.0",
+    "centerline_pixels": "1726",
+    "centerline_training_mask_path": "/mnt/e/AI_Team/mitunet/phase1_wall_structure/cache/centerline/training/val/high_quality_architectural__333.png",
+    "centerline_training_sha256": "649b08a1f40eff12ed40ad1add611b0fd1bd249bb62d1f2dcf89519bfad60230",
+    "image_path": "/home/pmharris/dev/cubicasa5k_data/data/datasets/qmarva/cubicasa5k/versions/4/cubicasa5k/cubicasa5k/high_quality_architectural/333/F1_scaled.png",
+    "input_height": "512",
+    "input_width": "512",
+    "junction_count": "19",
+    "junction_mask_path": "/mnt/e/AI_Team/mitunet/phase1_wall_structure/cache/junctions/mask/val/high_quality_architectural__333.png",
+    "junction_mask_sha256": "ba5d866add06431a9aa81ee4cdcb12895b47cc272491f77415d340c833ae03e7",
+    "junction_metadata_path": "/mnt/e/AI_Team/mitunet/phase1_wall_structure/cache/junctions/metadata/val/high_quality_architectural__333.json",
+    "junction_subtype_counts_json": "{\"corner\": 10, \"cross_junction\": 6, \"t_junction\": 3}",
+    "letterbox_pad_bottom": "136",
+    "letterbox_pad_left": "0",
+    "letterbox_pad_right": "0",
+    "letterbox_pad_top": "136",
+    "letterbox_scale": "0.38817285822592873",
+    "mask_path": "artifacts/cubicasa5k_wall_cache/masks/high_quality_architectural__333.png",
+    "original_height": "619",
+    "original_width": "1319",
+    "raw_centerline_mask_path": "/mnt/e/AI_Team/mitunet/phase1_wall_structure/cache/centerline/raw/val/high_quality_architectural__333.png",
+    "raw_centerline_sha256": "8116edf63f7a4ed6089a65608b64df26091fb2a29e48d85e118d02ec9c953d70",
+    "sample_id": "high_quality_architectural/333",
+    "source_annotation_sha256": "050597e8128d6b39425620bd8f196c7a9bde3a50bab841eaa643a90dcdd151d7",
+    "source_image_sha256": "ac6be65c391069f75307a9b90c66240a0e94c9e75cadfd161ca14001bd6a88cc",
+    "source_wall_mask_path": "artifacts/cubicasa5k_wall_cache/masks/high_quality_architectural__333.png",
+    "source_wall_mask_sha256": "c1c644f81cd2eeed688d0388a6b88bc39dd89ce596e3a64b7a128fb0a4c5e099",
+    "split": "val",
+    "target_generation_config_hash": "6109e349016ea21dfbf78d4725306e0eb5959634ab9618e1ca4335793b2fdbe0",
+    "target_generation_version": "cubicasa-wall-structure-phase1-v1",
+    "wall_region_mask_path": "/mnt/e/AI_Team/mitunet/phase1_wall_structure/cache/wall_region/val/high_quality_architectural__333.png",
+    "wall_region_pixels": "14197",
+    "wall_region_sha256": "aa7fcb880bd3f17493f9ffbdd00d3e520dde63f7607c6368b4958aaa85e8f10b"
+  },
+  "mask_integrity": {
+    "ground_truth_centerline_mask": {
+      "positive_fraction": 0.00658416748046875,
+      "positive_pixels": 1726,
+      "shape": [
+        512,
+        512
+      ],
+      "unique_values": [
+        0,
+        1
+      ]
+    },
+    "ground_truth_junction_mask": {
+      "positive_fraction": 0.004322052001953125,
+      "positive_pixels": 1133,
+      "shape": [
+        512,
+        512
+      ],
+      "unique_values": [
+        0,
+        1
+      ]
+    },
+    "ground_truth_wall_region_mask": {
+      "positive_fraction": 0.054157257080078125,
+      "positive_pixels": 14197,
+      "shape": [
+        512,
+        512
+      ],
+      "unique_values": [
+        0,
+        1
+      ]
+    },
+    "prediction_centerline_mask": {
+      "positive_fraction": 0.023044586181640625,
+      "positive_pixels": 6041,
+      "shape": [
+        512,
+        512
+      ],
+      "unique_values": [
+        0,
+        1
+      ]
+    },
+    "prediction_junction_mask": {
+      "positive_fraction": 0.003955841064453125,
+      "positive_pixels": 1037,
+      "shape": [
+        512,
+        512
+      ],
+      "unique_values": [
+        0,
+        1
+      ]
+    },
+    "prediction_wall_region_mask": {
+      "positive_fraction": 0.0544891357421875,
+      "positive_pixels": 14284,
+      "shape": [
+        512,
+        512
+      ],
+      "unique_values": [
+        0,
+        1
+      ]
+    }
+  },
+  "per_image_metrics_from_source_csvs": {
+    "centerline": {
+      "centerline_length_ratio": 3.5,
+      "cldice": 0.5435961542783455,
+      "connected_component_count_error": 0,
+      "ground_truth_centerline_length": 1726,
+      "ground_truth_component_count": 1,
+      "pixel_f1": 0.4418694476631904,
+      "pixel_fn": 10,
+      "pixel_fp": 4325,
+      "pixel_precision": 0.28405893064062243,
+      "pixel_recall": 0.9942062572421785,
+      "pixel_tn": 256093,
+      "pixel_tp": 1716,
+      "predicted_centerline_length": 6041,
+      "predicted_component_count": 1,
+      "sample_id": "high_quality_architectural/333",
+      "tolerance_f1_1px": 0.8448226407878382,
+      "tolerance_f1_2px": 0.9728810677548245,
+      "tolerance_f1_3px": 0.9999172253952489,
+      "tolerance_precision_1px": 0.7313358715444462,
+      "tolerance_precision_2px": 0.9471941731501407,
+      "tolerance_precision_3px": 0.9998344644926337,
+      "tolerance_recall_1px": 1.0,
+      "tolerance_recall_2px": 1.0,
+      "tolerance_recall_3px": 1.0
+    },
+    "graph": {
+      "centerline_connected_component_error": 0,
+      "gap_count_error_2px": 0,
+      "graph_edge_coverage": 1.0005793742757823,
+      "ground_truth_graph_edge_count": 1707,
+      "ground_truth_graph_node_count": 19,
+      "junction_supported_branch_recall": 0.8947368421052632,
+      "near_gap_endpoint_count": 1,
+      "predicted_graph_edge_count": 1687,
+      "predicted_graph_node_count": 40,
+      "sample_id": "high_quality_architectural/333",
+      "short_disconnected_fragment_count": 0
+    },
+    "junction": {
+      "false_negative_junction_count_3px": 2,
+      "false_negative_junction_count_5px": 2,
+      "false_negative_junction_count_8px": 2,
+      "false_positive_junction_count_3px": 1,
+      "false_positive_junction_count_5px": 1,
+      "false_positive_junction_count_8px": 1,
+      "ground_truth_junction_count": 19,
+      "ground_truth_subtype_counts": "{'corner': 10, 'cross_junction': 6, 't_junction': 3}",
+      "junction_count_mae": 1,
+      "junction_f1_3px": 0.918918918918919,
+      "junction_f1_5px": 0.918918918918919,
+      "junction_f1_8px": 0.918918918918919,
+      "junction_precision_3px": 0.9444444444444444,
+      "junction_precision_5px": 0.9444444444444444,
+      "junction_precision_8px": 0.9444444444444444,
+      "junction_recall_3px": 0.8947368421052632,
+      "junction_recall_5px": 0.8947368421052632,
+      "junction_recall_8px": 0.8947368421052632,
+      "mean_localization_error_5px": 1.1046630437861673,
+      "median_localization_error_5px": 1.4142135623730951,
+      "predicted_junction_count": 18,
+      "sample_id": "high_quality_architectural/333",
+      "subtype_metrics": "[{'subtype': 'corner', 'ground_truth_count': 10, 'matched_count': 9, 'recall_5px': 0.9}, {'subtype': 'cross_junction', 'ground_truth_count': 6, 'matched_count': 5, 'recall_5px': 0.8333333333333334}, {'subtype': 't_junction', 'ground_truth_count': 3, 'matched_count': 3, 'recall_5px': 1.0}]"
+    }
+  },
+  "per_image_metrics_recomputed_from_saved_masks": {
+    "centerline_pixel": {
+      "dice": 0.4418694476631904,
+      "fn": 10,
+      "fp": 4325,
+      "iou": 0.28358948934060485,
+      "precision": 0.28405893064062243,
+      "recall": 0.9942062572421785,
+      "tn": 256093,
+      "tp": 1716
+    },
+    "junction_rendered_points": {
+      "dice": 0.784331797235023,
+      "fn": 282,
+      "fp": 186,
+      "iou": 0.645185746777862,
+      "precision": 0.8206364513018322,
+      "recall": 0.7511032656663724,
+      "tn": 260825,
+      "tp": 851
+    },
+    "wall_region": {
+      "dice": 0.8849408377514835,
+      "fn": 1595,
+      "fp": 1682,
+      "iou": 0.7936268026953839,
+      "precision": 0.8822458695043405,
+      "recall": 0.8876523209128689,
+      "tn": 246265,
+      "tp": 12602
+    }
+  },
+  "prediction_provenance": "Predictions regenerated for audit by inference from the verified Phase 1 structural checkpoint.",
+  "primary_overlay": "overlay_wall_region_errors.png",
+  "sample_id": "high_quality_architectural/333",
+  "sample_role": "typical_clean_validation_case",
+  "selection_reason": "Shared validation sample with solid wall-region performance across the inspected runs.",
+  "source_files": {
+    "centerline_training_mask": {
+      "exists": true,
+      "path": "/mnt/e/AI_Team/mitunet/phase1_wall_structure/cache/centerline/training/val/high_quality_architectural__333.png",
+      "sha256": "649b08a1f40eff12ed40ad1add611b0fd1bd249bb62d1f2dcf89519bfad60230",
+      "sha256_status": null
+    },
+    "checkpoint": {
+      "exists": true,
+      "path": "/mnt/e/AI_Team/mitunet/phase1_wall_structure/experiments/mitunet_phase1_wall_region_centerline_junctions_20260807_163622_UTC/checkpoints/best_structural_score.pth",
+      "sha256": null,
+      "sha256_status": "skipped_large_artifact"
+    },
+    "junction_mask": {
+      "exists": true,
+      "path": "/mnt/e/AI_Team/mitunet/phase1_wall_structure/cache/junctions/mask/val/high_quality_architectural__333.png",
+      "sha256": "ba5d866add06431a9aa81ee4cdcb12895b47cc272491f77415d340c833ae03e7",
+      "sha256_status": null
+    },
+    "junction_metadata": {
+      "exists": true,
+      "path": "/mnt/e/AI_Team/mitunet/phase1_wall_structure/cache/junctions/metadata/val/high_quality_architectural__333.json",
+      "sha256": "262f5fd82c2d1205008a1512cb69d0185b710861695b81fee648c2249194e1c0",
+      "sha256_status": null
+    },
+    "manifest_csv": {
+      "exists": true,
+      "path": "/mnt/e/AI_Team/mitunet/phase1_wall_structure/experiments/mitunet_phase1_wall_region_centerline_junctions_20260807_163622_UTC/metrics/label_statistics.csv",
+      "sha256": "4af25e4017e8f6e4d4da583b4f86b2245648f89c2890e40cfd220a7545a2f09f",
+      "sha256_status": null
+    },
+    "raw_centerline_mask": {
+      "exists": true,
+      "path": "/mnt/e/AI_Team/mitunet/phase1_wall_structure/cache/centerline/raw/val/high_quality_architectural__333.png",
+      "sha256": "8116edf63f7a4ed6089a65608b64df26091fb2a29e48d85e118d02ec9c953d70",
+      "sha256_status": null
+    },
+    "source_image": {
+      "exists": true,
+      "path": "/home/pmharris/dev/cubicasa5k_data/data/datasets/qmarva/cubicasa5k/versions/4/cubicasa5k/cubicasa5k/high_quality_architectural/333/F1_scaled.png",
+      "sha256": "ac6be65c391069f75307a9b90c66240a0e94c9e75cadfd161ca14001bd6a88cc",
+      "sha256_status": null
+    },
+    "source_wall_mask": {
+      "exists": true,
+      "path": "artifacts/cubicasa5k_wall_cache/masks/high_quality_architectural__333.png",
+      "sha256": "c1c644f81cd2eeed688d0388a6b88bc39dd89ce596e3a64b7a128fb0a4c5e099",
+      "sha256_status": null
+    },
+    "wall_region_mask": {
+      "exists": true,
+      "path": "/mnt/e/AI_Team/mitunet/phase1_wall_structure/cache/wall_region/val/high_quality_architectural__333.png",
+      "sha256": "aa7fcb880bd3f17493f9ffbdd00d3e520dde63f7607c6368b4958aaa85e8f10b",
+      "sha256_status": null
+    }
+  },
+  "source_run_directory": "/mnt/e/AI_Team/mitunet/phase1_wall_structure/experiments/mitunet_phase1_wall_region_centerline_junctions_20260807_163622_UTC",
+  "split": "val",
+  "thresholds": {
+    "centerline": 0.95,
+    "junction": 0.85,
+    "junction_nms_radius": 3,
+    "wall_region": 0.05
+  },
+  "visual_evidence_status": "VERIFIED"
+}

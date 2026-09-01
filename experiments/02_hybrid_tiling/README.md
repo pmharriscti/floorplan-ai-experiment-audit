@@ -34,6 +34,12 @@ Test hybrid IoU for the locked crop/blending/fusion: `0.8310196912892222`
 
 Test hybrid Dice for the locked crop/blending/fusion: `0.9077124568814448`
 
+## Visual QA
+
+Curated validation visual evidence is in [qa/README.md](qa/README.md). It includes three shared samples with `source.png`, ground-truth wall mask, regenerated prediction mask, error overlay, copied historical 1024 px validation overlay, and per-sample metadata.
+
+The prediction masks were regenerated from the verified 1024 px global checkpoint at threshold `0.5`. This represents the locked hybrid selection because the selected fusion records `global_weight=1.0` and `patch_weight=0.0`.
+
 ## Interpretation
 
 This is a positive high-resolution result, but not positive evidence for patch-fusion improvement. The selected fusion gave the patch stream zero weight, so final selected performance is effectively the high-resolution global model.
@@ -43,4 +49,3 @@ This is a positive high-resolution result, but not positive evidence for patch-f
 The source git commit and DVC hash were not located in the inspected hybrid artifacts.
 
 See [config.yaml](config.yaml), [metrics.json](metrics.json), and [provenance.json](provenance.json).
-

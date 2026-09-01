@@ -1,0 +1,171 @@
+{
+  "assets": {
+    "ground_truth_wall_mask": "ground_truth_wall_mask.png",
+    "historical_validation_overlay": {
+      "audit_path": "experiments/03_deeplabv3/qa/high_quality_architectural__333/historical_validation_overlay.jpg",
+      "audit_sha256": "c6312e8f0b79ac18c6a490b0a74540b8b3c605a74f2526dc157c0ec70a4fa3a7",
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/cubicasa5k_deeplabv3_resnet50/deeplabv3_resnet50_wall_512_imagenet_aux_seed42_20260805T154529Z/validation_prediction_overlays/000_high_quality_architectural__333.jpg",
+      "source_sha256": "c6312e8f0b79ac18c6a490b0a74540b8b3c605a74f2526dc157c0ec70a4fa3a7",
+      "status": "VERIFIED"
+    },
+    "overlay_wall_errors": "overlay_wall_errors.png",
+    "prediction_wall_mask": "prediction_wall_mask.png",
+    "source": "source.png"
+  },
+  "checkpoint": {
+    "path": "/mnt/e/AI_Team/mitunet/experiments/cubicasa5k_deeplabv3_resnet50/deeplabv3_resnet50_wall_512_imagenet_aux_seed42_20260805T154529Z/best_model.pth",
+    "sha256": "c1da3cccf9d06c1e7f0023ee04797493452c8bd031de5bd0125d9cb4230d11d8"
+  },
+  "experiment_id": "03_deeplabv3",
+  "experiment_name": "DeepLabV3-ResNet50 comparator",
+  "extra_source_files": {},
+  "generation": {
+    "historical_directories_modified": false,
+    "mask_resize_policy": "Nearest-neighbor mask handling inherited from the validation dataset transform.",
+    "no_training_performed": true,
+    "overlay_palette": {
+      "false_negative": "blue",
+      "false_positive": "red",
+      "true_positive": "green"
+    },
+    "script": "scripts/generate_audit_overlay.py",
+    "source_image_policy": "Letterboxed validation image regenerated from the source manifest and saved as a review copy."
+  },
+  "image_size": 512,
+  "manifest_row": {
+    "annotation_path": "/home/pmharris/dev/cubicasa5k_data/data/datasets/qmarva/cubicasa5k/versions/4/cubicasa5k/cubicasa5k/high_quality_architectural/333/model.svg",
+    "image_path": "/home/pmharris/dev/cubicasa5k_data/data/datasets/qmarva/cubicasa5k/versions/4/cubicasa5k/cubicasa5k/high_quality_architectural/333/F1_scaled.png",
+    "mask_path": "artifacts/cubicasa5k_wall_cache/masks/high_quality_architectural__333.png",
+    "original_height": "619",
+    "original_width": "1319",
+    "sample_id": "high_quality_architectural/333",
+    "split": "val",
+    "wall_fraction": "0.112930072593792",
+    "wall_pixels": "92203"
+  },
+  "mask_integrity": {
+    "ground_truth_wall_mask": {
+      "positive_fraction": 0.054157257080078125,
+      "positive_pixels": 14197,
+      "shape": [
+        512,
+        512
+      ],
+      "unique_values": [
+        0,
+        1
+      ]
+    },
+    "prediction_wall_mask": {
+      "positive_fraction": 0.051944732666015625,
+      "positive_pixels": 13617,
+      "shape": [
+        512,
+        512
+      ],
+      "unique_values": [
+        0,
+        1
+      ]
+    }
+  },
+  "per_image_metrics_from_source_csv": {
+    "both_empty": false,
+    "boundary_f1_1px": 0.7716492380525328,
+    "boundary_f1_2px": 0.9528737695421298,
+    "boundary_f1_3px": 0.9703050697568708,
+    "boundary_iou_1px": 0.512772210082134,
+    "boundary_iou_2px": 0.6778378378378378,
+    "boundary_iou_3px": 0.7709702124229111,
+    "boundary_precision_1px": 0.7795346062052506,
+    "boundary_precision_2px": 0.9671837708830548,
+    "boundary_precision_3px": 0.9829952267303103,
+    "boundary_recall_1px": 0.7639218009478673,
+    "boundary_recall_2px": 0.9389810426540285,
+    "boundary_recall_3px": 0.9579383886255924,
+    "component_count_error": 2,
+    "dice": 0.867371145136942,
+    "fn": 2131,
+    "fp": 1559,
+    "ground_truth_component_count": 1,
+    "iou": 0.7658035034272658,
+    "matched_component_precision": 1.0,
+    "matched_component_recall": 1.0,
+    "matched_ground_truth_components": 1,
+    "matched_prediction_components": 3,
+    "pixel_accuracy": 0.9859237670898438,
+    "positive_fraction": 0.054157257080078125,
+    "positive_image_detected_component": true,
+    "positive_pixels": 14197,
+    "precision": 0.8855779816513761,
+    "pred_boundary_pixels_1px": 3352,
+    "pred_boundary_pixels_2px": 3352,
+    "pred_boundary_pixels_3px": 3352,
+    "predicted_component_count": 3,
+    "predicted_positive_pixels": 13625,
+    "predicted_wall_pixels": 13625,
+    "prediction_empty": false,
+    "recall": 0.8498978657462845,
+    "sample_id": "high_quality_architectural/333",
+    "specificity": 0.9937123659491747,
+    "target_boundary_pixels_1px": 3376,
+    "target_boundary_pixels_2px": 3376,
+    "target_boundary_pixels_3px": 3376,
+    "target_empty": false,
+    "threshold": 0.5,
+    "tn": 246388,
+    "tp": 12066,
+    "wall_fraction": 0.054157257080078125,
+    "wall_pixels": 14197
+  },
+  "per_image_metrics_recomputed_from_saved_masks": {
+    "dice": 0.8669734665995542,
+    "fn": 2140,
+    "fp": 1560,
+    "iou": 0.7651837278669797,
+    "precision": 0.8854373209958141,
+    "recall": 0.8492639289990843,
+    "tn": 246387,
+    "tp": 12057
+  },
+  "prediction_provenance": "Prediction mask regenerated for audit by inference from the verified DeepLabV3 checkpoint.",
+  "sample_id": "high_quality_architectural/333",
+  "sample_role": "typical_clean_validation_case",
+  "selection_reason": "Shared validation sample with solid wall-region performance across the inspected runs.",
+  "source_files": {
+    "checkpoint": {
+      "exists": true,
+      "path": "/mnt/e/AI_Team/mitunet/experiments/cubicasa5k_deeplabv3_resnet50/deeplabv3_resnet50_wall_512_imagenet_aux_seed42_20260805T154529Z/best_model.pth",
+      "sha256": null,
+      "sha256_status": "skipped_large_artifact"
+    },
+    "manifest_csv": {
+      "exists": true,
+      "path": "/mnt/e/AI_Team/mitunet/experiments/cubicasa5k_deeplabv3_resnet50/deeplabv3_resnet50_wall_512_imagenet_aux_seed42_20260805T154529Z/val_manifest.csv",
+      "sha256": "416fc867fc234200a9848005fecee9067d63e0e5364797f377e83285559896af",
+      "sha256_status": null
+    },
+    "metrics_csv": {
+      "exists": true,
+      "path": "/mnt/e/AI_Team/mitunet/experiments/cubicasa5k_deeplabv3_resnet50/deeplabv3_resnet50_wall_512_imagenet_aux_seed42_20260805T154529Z/per_image_validation_metrics.csv",
+      "sha256": "9c4465b634586e2369594fe1c5ec25d9b390028159a21650ab3c23e1f95f4ad1",
+      "sha256_status": null
+    },
+    "source_image": {
+      "exists": true,
+      "path": "/home/pmharris/dev/cubicasa5k_data/data/datasets/qmarva/cubicasa5k/versions/4/cubicasa5k/cubicasa5k/high_quality_architectural/333/F1_scaled.png",
+      "sha256": "ac6be65c391069f75307a9b90c66240a0e94c9e75cadfd161ca14001bd6a88cc",
+      "sha256_status": null
+    },
+    "source_wall_mask": {
+      "exists": true,
+      "path": "artifacts/cubicasa5k_wall_cache/masks/high_quality_architectural__333.png",
+      "sha256": "c1c644f81cd2eeed688d0388a6b88bc39dd89ce596e3a64b7a128fb0a4c5e099",
+      "sha256_status": null
+    }
+  },
+  "source_run_directory": "/mnt/e/AI_Team/mitunet/experiments/cubicasa5k_deeplabv3_resnet50/deeplabv3_resnet50_wall_512_imagenet_aux_seed42_20260805T154529Z",
+  "split": "val",
+  "threshold": 0.5,
+  "visual_evidence_status": "VERIFIED"
+}

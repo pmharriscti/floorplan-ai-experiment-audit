@@ -1,0 +1,458 @@
+{
+  "assets": {
+    "ground_truth_centerline_mask": "ground_truth_centerline_mask.png",
+    "ground_truth_door_opening_mask": "ground_truth_door_opening_mask.png",
+    "ground_truth_junction_mask": "ground_truth_junction_mask.png",
+    "ground_truth_wall_boundary_mask": "ground_truth_wall_boundary_mask.png",
+    "ground_truth_wall_region_mask": "ground_truth_wall_region_mask.png",
+    "historical_target_qa": {
+      "audit_path": "experiments/05_phase2_boundary_openings/qa/high_quality_architectural__3015/historical_target_qa.NOT_YET_AVAILABLE.txt",
+      "status": "NOT_YET_AVAILABLE"
+    },
+    "overlay_centerline_errors": "overlay_centerline_errors.png",
+    "overlay_door_opening_errors": "overlay_door_opening_errors.png",
+    "overlay_junction_errors": "overlay_junction_errors.png",
+    "overlay_wall_boundary_errors": "overlay_wall_boundary_errors.png",
+    "overlay_wall_region_errors": "overlay_wall_region_errors.png",
+    "prediction_centerline_mask": "prediction_centerline_mask.png",
+    "prediction_door_opening_mask": "prediction_door_opening_mask.png",
+    "prediction_junction_mask": "prediction_junction_mask.png",
+    "prediction_wall_boundary_mask": "prediction_wall_boundary_mask.png",
+    "prediction_wall_region_mask": "prediction_wall_region_mask.png",
+    "source": "source.png"
+  },
+  "checkpoint": {
+    "path": "/mnt/e/AI_Team/mitunet/phase2_wall_boundary_door_openings/experiments/mitunet_phase2_wall_boundary_door_openings_20260810_200219_UTC/checkpoints/best_phase2_structural_score.pth",
+    "sha256": null,
+    "sha256_status": "deferred_in_source_checkpoint_manifest"
+  },
+  "experiment_id": "05_phase2_boundary_openings",
+  "experiment_name": "Phase 2 boundary and door/openings",
+  "generation": {
+    "historical_directories_modified": false,
+    "mask_resize_policy": "Nearest-neighbor mask handling inherited from the Phase 2 validation dataset transform.",
+    "no_training_performed": true,
+    "overlay_palette": {
+      "false_negative": "blue",
+      "false_positive": "red",
+      "true_positive": "green"
+    },
+    "script": "scripts/generate_audit_overlay.py",
+    "source_image_policy": "Letterboxed validation image regenerated from the source manifest and saved as a review copy."
+  },
+  "image_size": 512,
+  "junction_visualization": {
+    "point_render_radius_px": 4,
+    "predicted_point_count": 19,
+    "source_metric_policy": "Historical junction metrics use point matching; saved masks render those points for visual inspection.",
+    "target_point_count": 42
+  },
+  "manifest_row": {
+    "annotation_path": "/home/pmharris/dev/cubicasa5k_data/data/datasets/qmarva/cubicasa5k/versions/4/cubicasa5k/cubicasa5k/high_quality_architectural/3015/model.svg",
+    "boundary_component_count": "5",
+    "boundary_contained_in_wall": "True",
+    "boundary_training_outside_wall_pixels": "4812",
+    "centerline_component_count": "3",
+    "centerline_length_estimate": "2464.0",
+    "centerline_pixels": "2464",
+    "centerline_training_mask_path": "/mnt/e/AI_Team/mitunet/phase1_wall_structure/cache/centerline/training/val/high_quality_architectural__3015.png",
+    "centerline_training_sha256": "e1dcd31cb628ae1722905705e71a25ed0457721147c968454610786474e5adf5",
+    "dilated_boundary_pixels": "13165",
+    "door_boundary_mean_distance": "0.9619565217391305",
+    "door_centerline_mean_distance": "1.4048913043478262",
+    "door_opening_component_count": "15",
+    "door_opening_metadata_path": "/mnt/e/AI_Team/mitunet/phase2_wall_boundary_door_openings/cache/door_opening/metadata/val/high_quality_architectural__3015.json",
+    "door_opening_metadata_sha256": "c25a192c50ece75b248b18d4ba037609f9b054c7d2ea600f584a0b29e5bdf0fc",
+    "door_opening_pixels": "1104",
+    "door_opening_raw_mask_path": "/mnt/e/AI_Team/mitunet/phase2_wall_boundary_door_openings/cache/door_opening/raw/val/high_quality_architectural__3015.png",
+    "door_opening_raw_sha256": "263f9aa68327555fc73c7ef46fd4ae404095c15a407228bde69cc5fead41e0ca",
+    "door_opening_training_mask_path": "/mnt/e/AI_Team/mitunet/phase2_wall_boundary_door_openings/cache/door_opening/training/val/high_quality_architectural__3015.png",
+    "door_opening_training_pixels": "1761",
+    "door_opening_training_sha256": "70e8212bc6597340e343c5045584e23ea5844f17cd3f7e2bd8eb44ad55113865",
+    "door_parser_warning_count": "0",
+    "door_wall_overlap_pixels": "1104",
+    "door_wall_overlap_ratio": "1.0",
+    "image_path": "/home/pmharris/dev/cubicasa5k_data/data/datasets/qmarva/cubicasa5k/versions/4/cubicasa5k/cubicasa5k/high_quality_architectural/3015/F1_scaled.png",
+    "input_height": "512",
+    "input_width": "512",
+    "junction_count": "42",
+    "junction_mask_path": "/mnt/e/AI_Team/mitunet/phase1_wall_structure/cache/junctions/mask/val/high_quality_architectural__3015.png",
+    "junction_mask_sha256": "3a1661fb93fd83cef4dce9fb0c86f08668bc5e9ff5c37cb2e870aa9252be71ab",
+    "junction_metadata_path": "/mnt/e/AI_Team/mitunet/phase1_wall_structure/cache/junctions/metadata/val/high_quality_architectural__3015.json",
+    "junction_subtype_counts_json": "{\"corner\": 17, \"cross_junction\": 10, \"t_junction\": 15}",
+    "letterbox_pad_bottom": "104",
+    "letterbox_pad_left": "0",
+    "letterbox_pad_right": "0",
+    "letterbox_pad_top": "103",
+    "letterbox_scale": "0.1566228204343836",
+    "mask_path": "artifacts/cubicasa5k_wall_cache/masks/high_quality_architectural__3015.png",
+    "original_height": "1949",
+    "original_width": "3269",
+    "phase2_metadata_path": "/mnt/e/AI_Team/mitunet/phase2_wall_boundary_door_openings/cache/metadata/val/high_quality_architectural__3015.json",
+    "phase2_metadata_sha256": "03476aa8c9c64ca8b1bbb29ccd0b761138b1edade43ee8a6a0ebd567e0374b6b",
+    "phase2_target_generation_config_hash": "dc450039d4c3702de178510a4cb51b34f3dba8dff8aa23dcb84753cd5fdbc7e8",
+    "phase2_target_generation_version": "cubicasa-wall-structure-phase2-v1",
+    "raw_boundary_pixels": "4884",
+    "raw_centerline_mask_path": "/mnt/e/AI_Team/mitunet/phase1_wall_structure/cache/centerline/raw/val/high_quality_architectural__3015.png",
+    "raw_centerline_sha256": "a205e7a78c656e780ffcd3e121c77199eabfcb25de7a5f1860b504de980915d7",
+    "sample_id": "high_quality_architectural/3015",
+    "source_annotation_sha256": "fdbb6d91721f3ac5117540c662b53b7db665e01ca3cf0f21f25a2a298b18cbc6",
+    "source_image_sha256": "fc68294b5d4a018b647d6ce260743a4889fe104e45efdfa52378045f7d6ace9e",
+    "source_wall_mask_path": "artifacts/cubicasa5k_wall_cache/masks/high_quality_architectural__3015.png",
+    "source_wall_mask_sha256": "f3e27e5d8472b87d42373cd23d1817f947dcc6cefb1731ae9287ff06facbb60d",
+    "split": "val",
+    "target_generation_config_hash": "6109e349016ea21dfbf78d4725306e0eb5959634ab9618e1ca4335793b2fdbe0",
+    "target_generation_version": "cubicasa-wall-structure-phase1-v1",
+    "wall_boundary_raw_mask_path": "/mnt/e/AI_Team/mitunet/phase2_wall_boundary_door_openings/cache/wall_boundary/raw/val/high_quality_architectural__3015.png",
+    "wall_boundary_raw_sha256": "5b256d7defd7804e7f45601d05c8186a3621b3b15f7df5dde6916075c3ac5fdf",
+    "wall_boundary_training_mask_path": "/mnt/e/AI_Team/mitunet/phase2_wall_boundary_door_openings/cache/wall_boundary/training/val/high_quality_architectural__3015.png",
+    "wall_boundary_training_sha256": "8e8e327de843798baff98faae18450016b043b26bf466e11c8587925e809e5e4",
+    "wall_region_mask_path": "/mnt/e/AI_Team/mitunet/phase1_wall_structure/cache/wall_region/val/high_quality_architectural__3015.png",
+    "wall_region_pixels": "12564",
+    "wall_region_sha256": "5fe8db39d337000b21e4f4f47bfbc42a041e8051e96878dcf6b340c2297ccc28"
+  },
+  "mask_integrity": {
+    "ground_truth_centerline_mask": {
+      "positive_fraction": 0.0093994140625,
+      "positive_pixels": 2464,
+      "shape": [
+        512,
+        512
+      ],
+      "unique_values": [
+        0,
+        1
+      ]
+    },
+    "ground_truth_door_opening_mask": {
+      "positive_fraction": 0.00421142578125,
+      "positive_pixels": 1104,
+      "shape": [
+        512,
+        512
+      ],
+      "unique_values": [
+        0,
+        1
+      ]
+    },
+    "ground_truth_junction_mask": {
+      "positive_fraction": 0.009674072265625,
+      "positive_pixels": 2536,
+      "shape": [
+        512,
+        512
+      ],
+      "unique_values": [
+        0,
+        1
+      ]
+    },
+    "ground_truth_wall_boundary_mask": {
+      "positive_fraction": 0.0186309814453125,
+      "positive_pixels": 4884,
+      "shape": [
+        512,
+        512
+      ],
+      "unique_values": [
+        0,
+        1
+      ]
+    },
+    "ground_truth_wall_region_mask": {
+      "positive_fraction": 0.0479278564453125,
+      "positive_pixels": 12564,
+      "shape": [
+        512,
+        512
+      ],
+      "unique_values": [
+        0,
+        1
+      ]
+    },
+    "prediction_centerline_mask": {
+      "positive_fraction": 0.030277252197265625,
+      "positive_pixels": 7937,
+      "shape": [
+        512,
+        512
+      ],
+      "unique_values": [
+        0,
+        1
+      ]
+    },
+    "prediction_door_opening_mask": {
+      "positive_fraction": 0.00238037109375,
+      "positive_pixels": 624,
+      "shape": [
+        512,
+        512
+      ],
+      "unique_values": [
+        0,
+        1
+      ]
+    },
+    "prediction_junction_mask": {
+      "positive_fraction": 0.004421234130859375,
+      "positive_pixels": 1159,
+      "shape": [
+        512,
+        512
+      ],
+      "unique_values": [
+        0,
+        1
+      ]
+    },
+    "prediction_wall_boundary_mask": {
+      "positive_fraction": 0.046543121337890625,
+      "positive_pixels": 12201,
+      "shape": [
+        512,
+        512
+      ],
+      "unique_values": [
+        0,
+        1
+      ]
+    },
+    "prediction_wall_region_mask": {
+      "positive_fraction": 0.046024322509765625,
+      "positive_pixels": 12065,
+      "shape": [
+        512,
+        512
+      ],
+      "unique_values": [
+        0,
+        1
+      ]
+    }
+  },
+  "per_image_metrics_from_source_csvs": {
+    "boundary": {
+      "average_symmetric_surface_distance": 0.8532650349849904,
+      "boundary_component_count_error": 17,
+      "boundary_connected_component_count": 22,
+      "boundary_f1_1px": 0.8621169107247885,
+      "boundary_f1_2px": 0.9759158425690263,
+      "boundary_f1_3px": 0.9872727453049673,
+      "boundary_ground_truth_pixel_count": 4884,
+      "boundary_precision_1px": 0.7687074829931972,
+      "boundary_precision_2px": 0.9603311203999673,
+      "boundary_precision_3px": 0.9805753626751905,
+      "boundary_predicted_pixel_count": 12201,
+      "boundary_recall_1px": 0.9813677313677314,
+      "boundary_recall_2px": 0.992014742014742,
+      "boundary_recall_3px": 0.9940622440622441,
+      "ground_truth_boundary_connected_component_count": 5,
+      "hausdorff_95": 2.0,
+      "sample_id": "high_quality_architectural/3015"
+    },
+    "combined": {
+      "boundary_f1_2px": 0.9759158425690263,
+      "centerline_skeleton_cldice": 0.39628740464336465,
+      "door_opening_object_f1": 0.3846153846153846,
+      "graph_edge_coverage": 0.976461038961039,
+      "junction_f1_5px": 0.6229508196721312,
+      "sample_id": "high_quality_architectural/3015",
+      "wall_region_dice": 0.8610174996954809,
+      "wall_region_iou": 0.7559532297162412
+    },
+    "door_opening": {
+      "door_center_localization_error": 3.314728433629636,
+      "door_false_negative_pixels": 872,
+      "door_false_positive_pixels": 392,
+      "door_mean_matched_iou_iou_0_25": 0.4365194027815761,
+      "door_mean_matched_iou_iou_0_5": 0.5441176470588235,
+      "door_median_matched_iou_iou_0_25": 0.4452054794520548,
+      "door_median_matched_iou_iou_0_5": 0.5441176470588235,
+      "door_object_count_mae": 4,
+      "door_object_f1_center_distance": 0.4615384615384615,
+      "door_object_f1_iou_0_25": 0.3846153846153846,
+      "door_object_f1_iou_0_5": 0.07692307692307691,
+      "door_object_precision_center_distance": 0.5454545454545454,
+      "door_object_precision_iou_0_25": 0.45454545454545453,
+      "door_object_precision_iou_0_5": 0.09090909090909091,
+      "door_object_recall_center_distance": 0.4,
+      "door_object_recall_iou_0_25": 0.3333333333333333,
+      "door_object_recall_iou_0_5": 0.06666666666666667,
+      "door_opening_mean_matched_object_iou": 0.4365194027815761,
+      "door_opening_median_matched_object_iou": 0.4452054794520548,
+      "door_opening_object_f1": 0.3846153846153846,
+      "door_opening_object_precision": 0.45454545454545453,
+      "door_opening_object_recall": 0.3333333333333333,
+      "door_opening_width_absolute_error": 4.2,
+      "door_pixel_dice": 0.26851851851851855,
+      "door_pixel_f1": 0.26851851851851855,
+      "door_pixel_iou": 0.15508021390374332,
+      "door_pixel_precision": 0.3717948717948718,
+      "door_pixel_recall": 0.21014492753623187,
+      "ground_truth_door_component_count": 15,
+      "predicted_door_component_count": 11,
+      "sample_id": "high_quality_architectural/3015"
+    },
+    "graph": {
+      "centerline_connected_component_error": 5,
+      "door_supported_gap_count": 1,
+      "gap_count_error_2px": 11,
+      "graph_edge_coverage": 0.976461038961039,
+      "ground_truth_graph_edge_count": 2422,
+      "ground_truth_graph_node_count": 42,
+      "junction_supported_branch_recall": 0.8571428571428571,
+      "near_gap_endpoint_count": 18,
+      "opening_aware_graph_edge_coverage": 0.893262987012987,
+      "predicted_graph_edge_count": 2405,
+      "predicted_graph_node_count": 87,
+      "sample_id": "high_quality_architectural/3015",
+      "short_disconnected_fragment_count": 3
+    }
+  },
+  "per_image_metrics_recomputed_from_saved_masks": {
+    "centerline_pixel": {
+      "dice": 0.46187866551293144,
+      "fn": 62,
+      "fp": 5535,
+      "iou": 0.30028753594199276,
+      "precision": 0.3026332367393222,
+      "recall": 0.9748376623376623,
+      "tn": 254145,
+      "tp": 2402
+    },
+    "door_opening_pixel": {
+      "dice": 0.26851851851851855,
+      "fn": 872,
+      "fp": 392,
+      "iou": 0.15508021390374332,
+      "precision": 0.3717948717948718,
+      "recall": 0.21014492753623187,
+      "tn": 260648,
+      "tp": 232
+    },
+    "junction_rendered_points": {
+      "dice": 0.5244925575101489,
+      "fn": 1567,
+      "fp": 190,
+      "iou": 0.35546588407923696,
+      "precision": 0.8360655737704918,
+      "recall": 0.38209779179810727,
+      "tn": 259418,
+      "tp": 969
+    },
+    "wall_boundary": {
+      "dice": 0.4896693005560433,
+      "fn": 701,
+      "fp": 8018,
+      "iou": 0.324213300263525,
+      "precision": 0.3428407507581346,
+      "recall": 0.8564701064701065,
+      "tn": 249242,
+      "tp": 4183
+    },
+    "wall_region": {
+      "dice": 0.8610174996954809,
+      "fn": 1961,
+      "fp": 1462,
+      "iou": 0.7559532297162412,
+      "precision": 0.87882304185661,
+      "recall": 0.8439191340337472,
+      "tn": 248118,
+      "tp": 10603
+    }
+  },
+  "prediction_provenance": "Prediction masks derived from the historical saved Phase 2 validation probability map.",
+  "primary_overlay": "overlay_wall_boundary_errors.png",
+  "probability_map": {
+    "dtype_on_disk": "float16",
+    "keys": [
+      "centerline",
+      "door_opening",
+      "junction",
+      "wall_boundary",
+      "wall_region"
+    ],
+    "path": "/mnt/e/AI_Team/mitunet/phase2_wall_boundary_door_openings/experiments/mitunet_phase2_wall_boundary_door_openings_20260810_200219_UTC/probability_maps/val/high_quality_architectural__3015.npz",
+    "sha256": "286d5f210c078d5664ba573cf9c40d7aa7658e322daf00ed6b86e7f9c280f703"
+  },
+  "sample_id": "high_quality_architectural/3015",
+  "sample_role": "strong_high_resolution_case",
+  "selection_reason": "Shared validation sample where the 1024 px global model shows a clear wall-region gain.",
+  "source_files": {
+    "door_opening_metadata": {
+      "exists": true,
+      "path": "/mnt/e/AI_Team/mitunet/phase2_wall_boundary_door_openings/cache/door_opening/metadata/val/high_quality_architectural__3015.json",
+      "sha256": "c25a192c50ece75b248b18d4ba037609f9b054c7d2ea600f584a0b29e5bdf0fc",
+      "sha256_status": null
+    },
+    "door_opening_raw_mask": {
+      "exists": true,
+      "path": "/mnt/e/AI_Team/mitunet/phase2_wall_boundary_door_openings/cache/door_opening/raw/val/high_quality_architectural__3015.png",
+      "sha256": "263f9aa68327555fc73c7ef46fd4ae404095c15a407228bde69cc5fead41e0ca",
+      "sha256_status": null
+    },
+    "junction_mask": {
+      "exists": true,
+      "path": "/mnt/e/AI_Team/mitunet/phase1_wall_structure/cache/junctions/mask/val/high_quality_architectural__3015.png",
+      "sha256": "3a1661fb93fd83cef4dce9fb0c86f08668bc5e9ff5c37cb2e870aa9252be71ab",
+      "sha256_status": null
+    },
+    "manifest_csv": {
+      "exists": true,
+      "path": "/mnt/e/AI_Team/mitunet/phase2_wall_boundary_door_openings/experiments/mitunet_phase2_wall_boundary_door_openings_20260810_200219_UTC/metrics/label_statistics.csv",
+      "sha256": "8e6597c9444ae7d5f757ca28466517ebf2663f1f250eabbb53c3f39c2a3f1549",
+      "sha256_status": null
+    },
+    "probability_map": {
+      "exists": true,
+      "path": "/mnt/e/AI_Team/mitunet/phase2_wall_boundary_door_openings/experiments/mitunet_phase2_wall_boundary_door_openings_20260810_200219_UTC/probability_maps/val/high_quality_architectural__3015.npz",
+      "sha256": "286d5f210c078d5664ba573cf9c40d7aa7658e322daf00ed6b86e7f9c280f703",
+      "sha256_status": null
+    },
+    "raw_centerline_mask": {
+      "exists": true,
+      "path": "/mnt/e/AI_Team/mitunet/phase1_wall_structure/cache/centerline/raw/val/high_quality_architectural__3015.png",
+      "sha256": "a205e7a78c656e780ffcd3e121c77199eabfcb25de7a5f1860b504de980915d7",
+      "sha256_status": null
+    },
+    "source_image": {
+      "exists": true,
+      "path": "/home/pmharris/dev/cubicasa5k_data/data/datasets/qmarva/cubicasa5k/versions/4/cubicasa5k/cubicasa5k/high_quality_architectural/3015/F1_scaled.png",
+      "sha256": "fc68294b5d4a018b647d6ce260743a4889fe104e45efdfa52378045f7d6ace9e",
+      "sha256_status": null
+    },
+    "source_wall_mask": {
+      "exists": true,
+      "path": "artifacts/cubicasa5k_wall_cache/masks/high_quality_architectural__3015.png",
+      "sha256": "f3e27e5d8472b87d42373cd23d1817f947dcc6cefb1731ae9287ff06facbb60d",
+      "sha256_status": null
+    },
+    "wall_boundary_raw_mask": {
+      "exists": true,
+      "path": "/mnt/e/AI_Team/mitunet/phase2_wall_boundary_door_openings/cache/wall_boundary/raw/val/high_quality_architectural__3015.png",
+      "sha256": "5b256d7defd7804e7f45601d05c8186a3621b3b15f7df5dde6916075c3ac5fdf",
+      "sha256_status": null
+    },
+    "wall_region_mask": {
+      "exists": true,
+      "path": "/mnt/e/AI_Team/mitunet/phase1_wall_structure/cache/wall_region/val/high_quality_architectural__3015.png",
+      "sha256": "5fe8db39d337000b21e4f4f47bfbc42a041e8051e96878dcf6b340c2297ccc28",
+      "sha256_status": null
+    }
+  },
+  "source_run_directory": "/mnt/e/AI_Team/mitunet/phase2_wall_boundary_door_openings/experiments/mitunet_phase2_wall_boundary_door_openings_20260810_200219_UTC",
+  "split": "val",
+  "thresholds": {
+    "centerline": 0.95,
+    "door_min_component_area": 1,
+    "door_opening": 0.85,
+    "junction": 0.9,
+    "junction_nms_radius": 2,
+    "wall_boundary": 0.95,
+    "wall_region": 0.05
+  },
+  "visual_evidence_status": "VERIFIED"
+}

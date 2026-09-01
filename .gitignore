@@ -51,3 +51,10 @@ artifacts/
 *.mov
 *.avi
 
+# Curated audit QA evidence is intentionally small and reviewable.
+!experiments/**/qa/**/*.png
+!experiments/**/qa/**/*.jpg
+!experiments/**/qa/**/*.jpeg
+!docs/visual_comparisons/**/*.png
+!docs/visual_comparisons/**/*.jpg
+!docs/visual_comparisons/**/*.jpeg

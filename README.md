@@ -18,6 +18,14 @@ The current audit covers five experiments:
 
 The top-level scorecard is [EXPERIMENT_SCOREBOARD.csv](EXPERIMENT_SCOREBOARD.csv), and the source/evidence index is [EXPERIMENT_INDEX.md](EXPERIMENT_INDEX.md).
 
+## Visual Evidence
+
+Curated visual QA evidence is included for all five experiments under each experiment's `qa/` directory. Every QA set uses the same three validation sample identities: `high_quality_architectural/333`, `high_quality_architectural/3015`, and `high_quality_architectural/5559`.
+
+Each sample folder includes a review source image, ground-truth mask(s), prediction mask(s), error overlay(s), and `metadata.json` with source paths and provenance. Experiments 01-04 use regenerated inference from verified checkpoints; Phase 2 prediction masks are derived from saved historical validation probability maps.
+
+Start at [docs/visual_comparisons/shared_validation_samples.md](docs/visual_comparisons/shared_validation_samples.md) for the shared-sample index and [docs/visual_qa_generation_summary.json](docs/visual_qa_generation_summary.json) for the generation summary. Overlay colors are green for true positive, red for false positive, and blue for false negative.
+
 ## Evidence Policy
 
 No metric is included unless it was located in a source artifact. Missing or ambiguous values are recorded as `UNKNOWN` in CSV/Markdown and as `null` in JSON. Historical values that were mentioned in planning notes but were not found in the inspected artifacts are not promoted to verified metrics.
@@ -41,4 +49,3 @@ The exact baseline source git commit and DVC hash were not located in the inspec
 ## Method Notes
 
 See [docs/methodology.md](docs/methodology.md), [docs/metrics_definitions.md](docs/metrics_definitions.md), and [docs/reproducibility.md](docs/reproducibility.md) for audit rules, metric definitions, and the current reproducibility handoff.
-

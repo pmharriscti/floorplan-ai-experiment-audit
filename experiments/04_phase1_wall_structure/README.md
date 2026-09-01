@@ -41,6 +41,12 @@ Validation graph edge coverage: `0.9554306800116725`
 
 Validation structural score: `0.7608172018780399`
 
+## Visual QA
+
+Curated validation visual evidence is in [qa/README.md](qa/README.md). It includes three shared samples with source images, wall-region masks, centerline masks, junction-point masks, error overlays, copied historical target QA composites, and per-sample metadata.
+
+The prediction masks were regenerated from `best_structural_score.pth` using the verified Phase 1 thresholds. This QA evidence covers only Phase 1 heads: wall-region, centerline, and junction.
+
 ## Interpretation
 
 This is a positive structural expansion. It preserved strong wall-region performance while adding measurable centerline, junction, and graph-connectivity metrics. It should not be treated as evidence for boundary or door/opening quality because those heads were not part of Phase 1.
@@ -50,4 +56,3 @@ This is a positive structural expansion. It preserved strong wall-region perform
 The Phase 1 checkpoint manifest defers SHA-256 hashing for large checkpoints. Boundary F1 and door object F1 values mentioned in historical notes were not found in the inspected Phase 1 artifacts.
 
 See [config.yaml](config.yaml), [metrics.json](metrics.json), and [provenance.json](provenance.json).
-

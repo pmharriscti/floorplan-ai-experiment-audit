@@ -35,6 +35,12 @@ Test micro Dice at selected threshold: `0.8715522188940653`
 
 The comparison artifact reports negative deltas versus the MitUNet baseline: validation IoU `-0.04770036382314513`, validation Dice `-0.02964291365715277`, test micro IoU `-0.052087768537904644`, and test micro Dice `-0.03221729684218011`.
 
+## Visual QA
+
+Curated validation visual evidence is in [qa/README.md](qa/README.md). It includes three shared samples with `source.png`, ground-truth wall mask, regenerated prediction mask, error overlay, copied historical validation overlay, and per-sample metadata.
+
+The prediction masks were regenerated from the verified DeepLabV3 checkpoint at selected threshold `0.5`; no model training was run.
+
 ## Interpretation
 
 This was a completed negative comparator: useful evidence that the tested DeepLabV3-ResNet50 setup did not outperform the MitUNet baseline.
@@ -44,4 +50,3 @@ This was a completed negative comparator: useful evidence that the tested DeepLa
 DVC hash/status was not located in the inspected DeepLabV3 artifacts.
 
 See [config.yaml](config.yaml), [metrics.json](metrics.json), and [provenance.json](provenance.json).
-

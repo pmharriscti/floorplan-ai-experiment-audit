@@ -48,6 +48,12 @@ Final Phase 2 structural score: `0.6757521275016246`
 
 Final Phase 1-compatible structural score: `0.6198494033500891`
 
+## Visual QA
+
+Curated validation visual evidence is in [qa/README.md](qa/README.md). It includes three shared samples with source images, wall-region, centerline, junction, wall-boundary, and door-opening masks, plus error overlays and per-sample metadata.
+
+The prediction masks were derived from saved historical `probability_maps/val/*.npz` files using the verified Phase 2 thresholds. Historical target QA composites were copied where exact sample files existed; unavailable exact composites are marked `NOT_YET_AVAILABLE` in the sample folders and metadata.
+
 ## Interpretation
 
 This result is mixed. Boundary and door/opening heads produced strong final metrics, but inherited Phase 1 structural quality regressed. The comparison CSV records wall IoU delta `-0.05004927229517453`, junction F1@5 px delta `-0.2415549205790718`, and Phase 1-compatible structural score delta `-0.14096779852795083` versus the saved Phase 1 evaluation.
@@ -59,4 +65,3 @@ The higher door value `0.8194901582399987` was found in `training_history.csv` a
 The Phase 2 checkpoint manifest defers SHA-256 hashing for large checkpoints. Gradio was recorded as not tested in the proof summary.
 
 See [config.yaml](config.yaml), [metrics.json](metrics.json), and [provenance.json](provenance.json).
-

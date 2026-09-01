@@ -34,6 +34,12 @@ Test micro IoU at threshold `0.10`: `0.8244338473612428`
 
 Test micro Dice at threshold `0.10`: `0.9037695157362454`
 
+## Visual QA
+
+Curated validation visual evidence is in [qa/README.md](qa/README.md). It includes three shared samples with `source.png`, ground-truth wall mask, regenerated prediction mask, error overlay, copied historical validation overlay, and per-sample metadata.
+
+The prediction masks were regenerated from the verified baseline checkpoint at selected threshold `0.1`; no model training was run.
+
 ## Interpretation
 
 This run is a successful baseline for binary wall segmentation. It remains the reference point for DeepLabV3 and the starting point for later structure work.
@@ -43,4 +49,3 @@ This run is a successful baseline for binary wall segmentation. It remains the r
 The source git commit and DVC hash for this baseline were not located in the inspected baseline artifacts.
 
 See [config.yaml](config.yaml), [metrics.json](metrics.json), and [provenance.json](provenance.json).
-
