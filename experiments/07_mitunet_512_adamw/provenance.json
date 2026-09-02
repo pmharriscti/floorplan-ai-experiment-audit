@@ -1,0 +1,103 @@
+{
+  "experiment_id": "07_mitunet_512_adamw",
+  "evidence_status": "VERIFIED",
+  "created_utc": "2026-09-02",
+  "source_run_directory": "/mnt/e/test/_folder/floorplan_ai/experiments/mitunet_cubicasa5k_512_adamw/20260901_134158",
+  "source_run_started_local": "2026-09-01 13:42:32",
+  "source_run_completed_local": "2026-09-01 16:46:27",
+  "source_files": [
+    "/mnt/e/test/_folder/floorplan_ai/experiments/mitunet_cubicasa5k_512_adamw/20260901_134158/EXPERIMENT_SUMMARY.md",
+    "/mnt/e/test/_folder/floorplan_ai/experiments/mitunet_cubicasa5k_512_adamw/20260901_134158/configs/resolved_config.yaml",
+    "/mnt/e/test/_folder/floorplan_ai/experiments/mitunet_cubicasa5k_512_adamw/20260901_134158/configs/source_config.yaml",
+    "/mnt/e/test/_folder/floorplan_ai/experiments/mitunet_cubicasa5k_512_adamw/20260901_134158/logs/run.log",
+    "/mnt/e/test/_folder/floorplan_ai/experiments/mitunet_cubicasa5k_512_adamw/20260901_134158/logs/training_history.csv",
+    "/mnt/e/test/_folder/floorplan_ai/experiments/mitunet_cubicasa5k_512_adamw/20260901_134158/logs/training_curves.png",
+    "/mnt/e/test/_folder/floorplan_ai/experiments/mitunet_cubicasa5k_512_adamw/20260901_134158/evaluation/adam_vs_adamw_comparison.json",
+    "/mnt/e/test/_folder/floorplan_ai/experiments/mitunet_cubicasa5k_512_adamw/20260901_134158/evaluation/metrics.json",
+    "/mnt/e/test/_folder/floorplan_ai/experiments/mitunet_cubicasa5k_512_adamw/20260901_134158/evaluation/validation_metrics.json",
+    "/mnt/e/test/_folder/floorplan_ai/experiments/mitunet_cubicasa5k_512_adamw/20260901_134158/evaluation/test_metrics.json",
+    "/mnt/e/test/_folder/floorplan_ai/experiments/mitunet_cubicasa5k_512_adamw/20260901_134158/evaluation/threshold_search.csv",
+    "/mnt/e/test/_folder/floorplan_ai/experiments/mitunet_cubicasa5k_512_adamw/20260901_134158/evaluation/representative_samples.csv",
+    "/mnt/e/test/_folder/floorplan_ai/experiments/mitunet_cubicasa5k_512_adamw/20260901_134158/evaluation/visual_comparison_index.json",
+    "/mnt/e/test/_folder/floorplan_ai/experiments/mitunet_cubicasa5k_512_adamw/20260901_134158/splits/reproducibility_gate.json",
+    "/mnt/e/test/_folder/floorplan_ai/experiments/mitunet_cubicasa5k_512_adamw/20260901_134158/label_validation/label_validation_summary.json"
+  ],
+  "checkpoint": {
+    "path": "/mnt/e/test/_folder/floorplan_ai/experiments/mitunet_cubicasa5k_512_adamw/20260901_134158/checkpoints/best_model.pth",
+    "sha256": "f29d009750da34be350b67cc6ecf6e987c8da30c53a7ce89bbae481c4f385044",
+    "size_bytes": 772152865
+  },
+  "last_checkpoint": {
+    "path": "/mnt/e/test/_folder/floorplan_ai/experiments/mitunet_cubicasa5k_512_adamw/20260901_134158/checkpoints/last_model.pth",
+    "sha256": null,
+    "sha256_status": "not_hashed_for_audit",
+    "size_bytes": 772142817
+  },
+  "manifests": {
+    "train": {
+      "path": "/mnt/e/test/_folder/floorplan_ai/experiments/mitunet_cubicasa5k_512_adamw/20260901_134158/splits/adamw_train_manifest.csv",
+      "sample_count": 4200,
+      "sha256": "cae1ec7c916218a5a17165f34c2d2af26827b6df4ab7800226a50d3c4bcde31e"
+    },
+    "validation": {
+      "path": "/mnt/e/test/_folder/floorplan_ai/experiments/mitunet_cubicasa5k_512_adamw/20260901_134158/splits/adamw_val_manifest.csv",
+      "sample_count": 400,
+      "sha256": "7a748c0f9a4aba065e027529dc441bad68f2cb61208f67f78d8f36636351e671"
+    },
+    "test": {
+      "path": "/mnt/e/test/_folder/floorplan_ai/experiments/mitunet_cubicasa5k_512_adamw/20260901_134158/splits/adamw_test_manifest.csv",
+      "sample_count": 400,
+      "sha256": "3c91c47396a9eb97e413f01b65ed47ee0f2a59f73a42fb33182a1d120e6bda9e"
+    }
+  },
+  "reproducibility_gate": {
+    "path": "/mnt/e/test/_folder/floorplan_ai/experiments/mitunet_cubicasa5k_512_adamw/20260901_134158/splits/reproducibility_gate.json",
+    "passed": true
+  },
+  "label_validation": {
+    "path": "/mnt/e/test/_folder/floorplan_ai/experiments/mitunet_cubicasa5k_512_adamw/20260901_134158/label_validation/label_validation_summary.json",
+    "passed": true,
+    "valid_samples": 5000,
+    "invalid_samples": 0
+  },
+  "code": {
+    "experiment_harness": {
+      "path": "/home/pmharris/dev/mitunet_adam_w",
+      "git_status": "not_a_git_repository",
+      "source_file_sha256": {
+        "experiment_support.py": "d52bec0b2e691fe63f8e2c3093b04e73cab3d95d072bcb8f9074b83bc375292f",
+        "scripts/train_adamw.py": "8a98fcd896d98d83400c4ec416be8f4e743615461fd0a8eefa7eb5548ff95254",
+        "configs/adamw.yaml": "db6d8c6c2d47375899a232105b2e2e06e18319f1cd3c29e3b80f8620d9362cfe"
+      }
+    },
+    "protected_core": {
+      "path": "/home/pmharris/dev/mitunet_core_cubicasa",
+      "git_commit": "0775f80a4cad366866990419aed18ea7434676f8",
+      "git_status": "clean",
+      "source_file_sha256": {
+        "mitunet_cubicasa/model.py": "c0c60db9767541d84c88d2120aa946d6ca6d1332475a362428cb8c99720a1d69",
+        "scripts/train_mitunet_cubicasa.py": "dbe715394bd9a47fb271c7f1434e9822085566c0eafaa7c4ed43596dd0b98c59"
+      }
+    }
+  },
+  "tracking": {
+    "mlflow": null,
+    "dvc": {
+      "status": "UNKNOWN"
+    }
+  },
+  "visual_evidence": {
+    "qa_root": "experiments/07_mitunet_512_adamw/qa",
+    "plots_root": "experiments/07_mitunet_512_adamw/plots",
+    "comparison_doc": "docs/visual_comparisons/adamw_optimizer_samples.md",
+    "summary_json": "docs/visual_comparisons/adamw_optimizer_visual_summary.json",
+    "source": "historical_saved_images",
+    "sample_count": 6
+  },
+  "large_artifacts_committed": false,
+  "notes": [
+    "The provided source artifacts verify image_size 512 even though the user request text referred to 1024.",
+    "This is an AdamW zero-weight-decay comparator against the canonical Adam baseline.",
+    "The aggregate test metrics regressed versus the Adam control."
+  ]
+}

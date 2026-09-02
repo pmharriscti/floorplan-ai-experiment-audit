@@ -1,0 +1,122 @@
+{
+  "experiment_id": "07_mitunet_512_adamw",
+  "evidence_status": "VERIFIED",
+  "primary_split": "test",
+  "primary_metrics": {
+    "wall_iou": 0.8206001227094942,
+    "wall_dice": 0.9014611308366193,
+    "boundary_f1_2px": null,
+    "centerline_cldice": null,
+    "junction_f1_5px": null,
+    "door_object_f1": null
+  },
+  "best_epoch": 30,
+  "best_validation_metrics_from_training": {
+    "wall_iou": 0.8142022203773948,
+    "wall_dice": 0.8975870619406721,
+    "threshold": 0.5
+  },
+  "selected_thresholds": {
+    "wall": 0.1
+  },
+  "validation_at_selected_threshold": {
+    "threshold": 0.1,
+    "micro": {
+      "iou": 0.8149944315748996,
+      "dice": 0.8980682446146305,
+      "precision": 0.9127427849428444,
+      "recall": 0.8838580952956776,
+      "pixel_accuracy": 0.9867398643493652
+    },
+    "macro": {
+      "iou_mean": 0.8122735660321205,
+      "dice_mean": 0.8938973853781687
+    },
+    "bootstrap_ci": {
+      "macro_iou": {
+        "low": 0.8037868988454574,
+        "high": 0.8200471554362063,
+        "n_bootstrap": 2000,
+        "seed": 123
+      },
+      "macro_dice": {
+        "low": 0.8882589629921017,
+        "high": 0.8989824607727701,
+        "n_bootstrap": 2000,
+        "seed": 123
+      }
+    }
+  },
+  "test_at_selected_threshold": {
+    "threshold": 0.1,
+    "micro": {
+      "iou": 0.8206001227094942,
+      "dice": 0.9014611308366193,
+      "precision": 0.9124989705438273,
+      "recall": 0.8906871331420948,
+      "pixel_accuracy": 0.9868325996398926
+    },
+    "macro": {
+      "iou_mean": 0.81319840751541,
+      "dice_mean": 0.8947714819238738
+    },
+    "bootstrap_ci": {
+      "macro_iou": {
+        "low": 0.8055143600940521,
+        "high": 0.8207613490588275,
+        "n_bootstrap": 2000,
+        "seed": 123
+      },
+      "macro_dice": {
+        "low": 0.8897271579483659,
+        "high": 0.8996108733558357,
+        "n_bootstrap": 2000,
+        "seed": 123
+      }
+    }
+  },
+  "control_comparison": {
+    "control_experiment_id": "01_binary_mitunet",
+    "control_optimizer": "Adam",
+    "experiment_optimizer": "AdamW",
+    "held_constant": "Everything else.",
+    "test_micro_delta_adamw_minus_adam": {
+      "iou": -0.0038337246517485823,
+      "dice": -0.002308384899626148,
+      "pixel_accuracy": -0.0002687072753906339,
+      "precision": 0.0005428471008782632,
+      "recall": -0.005041449125746333,
+      "specificity": 0.00007743923357350635
+    },
+    "test_macro_delta_adamw_minus_adam": {
+      "iou_mean": -0.0023490950430027357,
+      "dice_mean": -0.001456944413459671
+    },
+    "control_test_micro": {
+      "iou": 0.8244338473612428,
+      "dice": 0.9037695157362454,
+      "precision": 0.9119561234429491,
+      "recall": 0.8957285822678411,
+      "pixel_accuracy": 0.9871013069152832
+    }
+  },
+  "reproducibility_gate": {
+    "passed": true,
+    "cross_split_overlap": {
+      "train_validation": [],
+      "train_test": [],
+      "validation_test": []
+    },
+    "split_counts": {
+      "train": 4200,
+      "validation": 400,
+      "test": 400
+    }
+  },
+  "label_validation": {
+    "passed": true,
+    "total_samples": 5000,
+    "valid_samples": 5000,
+    "invalid_samples": 0
+  }
+}

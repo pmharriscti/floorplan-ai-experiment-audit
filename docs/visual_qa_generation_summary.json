@@ -56,5 +56,5 @@
       "sample_id": "high_quality_architectural/5559"
     }
   ],
-  "visual_qa_scope": "six_audited_experiments"
+  "visual_qa_scope": "core_binary_structural_six_experiments"
 }

@@ -1,0 +1,178 @@
+{
+  "assets": {
+    "adam_prediction_wall_mask": {
+      "audit_path": "experiments/07_mitunet_512_adamw/qa/high_quality_architectural__9422/adam_prediction_wall_mask.png",
+      "audit_sha256": "762a9c3ee04770d4f22618cdbfcf99684b0f8b1dca0cc525ba0b63a829596cb6",
+      "source_path": "/mnt/e/test/_folder/floorplan_ai/experiments/mitunet_cubicasa5k_512_adamw/20260901_134158/predictions/high_quality_architectural__9422/adam_prediction.png",
+      "source_sha256": "762a9c3ee04770d4f22618cdbfcf99684b0f8b1dca0cc525ba0b63a829596cb6"
+    },
+    "adamw_prediction_overlay": {
+      "audit_path": "experiments/07_mitunet_512_adamw/qa/high_quality_architectural__9422/adamw_prediction_overlay.png",
+      "audit_sha256": "b8a262d9de8608fafa1d2aee4820ee7a779fc57f3a3792bc2c6501c4b0be31f2",
+      "source_path": "/mnt/e/test/_folder/floorplan_ai/experiments/mitunet_cubicasa5k_512_adamw/20260901_134158/predictions/high_quality_architectural__9422/adamw_prediction_overlay.png",
+      "source_sha256": "b8a262d9de8608fafa1d2aee4820ee7a779fc57f3a3792bc2c6501c4b0be31f2"
+    },
+    "adamw_prediction_wall_mask": {
+      "audit_path": "experiments/07_mitunet_512_adamw/qa/high_quality_architectural__9422/adamw_prediction_wall_mask.png",
+      "audit_sha256": "ac5e14424e24172cb8a588bcb2fab2397797080e4deb0a8badd55f14270dc5f5",
+      "source_path": "/mnt/e/test/_folder/floorplan_ai/experiments/mitunet_cubicasa5k_512_adamw/20260901_134158/predictions/high_quality_architectural__9422/adamw_prediction.png",
+      "source_sha256": "ac5e14424e24172cb8a588bcb2fab2397797080e4deb0a8badd55f14270dc5f5"
+    },
+    "comparison_adam_vs_adamw": {
+      "audit_path": "experiments/07_mitunet_512_adamw/qa/high_quality_architectural__9422/comparison_adam_vs_adamw.png",
+      "audit_sha256": "b6f32014e99dee53acc4e8bba957ab4d57e8d3c85d149546d58baf67d12b7ff3",
+      "source_path": "/mnt/e/test/_folder/floorplan_ai/experiments/mitunet_cubicasa5k_512_adamw/20260901_134158/overlays/adam_vs_adamw/false_positive_heavy__high_quality_architectural__9422.png",
+      "source_sha256": "b6f32014e99dee53acc4e8bba957ab4d57e8d3c85d149546d58baf67d12b7ff3"
+    },
+    "ground_truth_wall_mask": {
+      "audit_path": "experiments/07_mitunet_512_adamw/qa/high_quality_architectural__9422/ground_truth_wall_mask.png",
+      "audit_sha256": "fa8a5fad4922370562e7149b24aeb65a31878cb65db273ee6a49fc3ea5dca304",
+      "source_path": "/mnt/e/test/_folder/floorplan_ai/experiments/mitunet_cubicasa5k_512_adamw/20260901_134158/predictions/high_quality_architectural__9422/target.png",
+      "source_sha256": "fa8a5fad4922370562e7149b24aeb65a31878cb65db273ee6a49fc3ea5dca304"
+    },
+    "ground_truth_wall_overlay": {
+      "audit_path": "experiments/07_mitunet_512_adamw/qa/high_quality_architectural__9422/ground_truth_wall_overlay.png",
+      "audit_sha256": "807ad40d674772f44d5b679cc92cb97da267f1f5f0cfd9f411240f19ae8d2afa",
+      "source_path": "/mnt/e/test/_folder/floorplan_ai/experiments/mitunet_cubicasa5k_512_adamw/20260901_134158/predictions/high_quality_architectural__9422/target_overlay.png",
+      "source_sha256": "807ad40d674772f44d5b679cc92cb97da267f1f5f0cfd9f411240f19ae8d2afa"
+    },
+    "source": {
+      "audit_path": "experiments/07_mitunet_512_adamw/qa/high_quality_architectural__9422/source.png",
+      "audit_sha256": "4d5e1f9f6f5e1b93890bb365be45d0dccf6259cfff47a2da4412173db0f0b564",
+      "source_path": "/mnt/e/test/_folder/floorplan_ai/experiments/mitunet_cubicasa5k_512_adamw/20260901_134158/predictions/high_quality_architectural__9422/original.png",
+      "source_sha256": "4d5e1f9f6f5e1b93890bb365be45d0dccf6259cfff47a2da4412173db0f0b564"
+    }
+  },
+  "experiment_id": "07_mitunet_512_adamw",
+  "experiment_name": "MitUNet 512 AdamW optimizer comparator",
+  "generation": {
+    "historical_directories_modified": false,
+    "mask_policy": "Historical 512 px target and prediction PNGs copied from the AdamW run.",
+    "no_inference_performed": true,
+    "no_training_performed": true,
+    "script": "scripts/generate_adamw_audit_visuals.py",
+    "source_image_policy": "Historical 512 px evaluation copy from the AdamW run."
+  },
+  "image_size": 512,
+  "manifest_row": {
+    "annotation_path": "/home/pmharris/dev/cubicasa5k_data/data/datasets/qmarva/cubicasa5k/versions/4/cubicasa5k/cubicasa5k/high_quality_architectural/9422/model.svg",
+    "image_path": "/home/pmharris/dev/cubicasa5k_data/data/datasets/qmarva/cubicasa5k/versions/4/cubicasa5k/cubicasa5k/high_quality_architectural/9422/F1_scaled.png",
+    "mask_path": "/home/pmharris/dev/mitunet/artifacts/cubicasa5k_wall_cache/masks/high_quality_architectural__9422.png",
+    "original_height": "735",
+    "original_width": "768",
+    "sample_id": "high_quality_architectural/9422",
+    "split": "test",
+    "wall_fraction": "0.13039788832199548",
+    "wall_pixels": "73607"
+  },
+  "mask_integrity": {
+    "adam_prediction_wall_mask": {
+      "mode": "L",
+      "positive_fraction": 0.159881591796875,
+      "positive_pixels": 41912,
+      "shape": [
+        512,
+        512
+      ],
+      "unique_values": [
+        0,
+        255
+      ]
+    },
+    "adamw_prediction_wall_mask": {
+      "mode": "L",
+      "positive_fraction": 0.15955734252929688,
+      "positive_pixels": 41827,
+      "shape": [
+        512,
+        512
+      ],
+      "unique_values": [
+        0,
+        255
+      ]
+    },
+    "ground_truth_wall_mask": {
+      "mode": "L",
+      "positive_fraction": 0.1251373291015625,
+      "positive_pixels": 32804,
+      "shape": [
+        512,
+        512
+      ],
+      "unique_values": [
+        0,
+        255
+      ]
+    }
+  },
+  "per_image_adamw_metrics_from_source_csv": {
+    "both_empty": false,
+    "dice": 0.8472082646621377,
+    "fn": 1190,
+    "fp": 10213,
+    "iou": 0.7349187530511193,
+    "pixel_accuracy": 0.9565010070800781,
+    "precision": 0.7558275754895163,
+    "prediction_empty": false,
+    "recall": 0.963723936105353,
+    "sample_id": "high_quality_architectural/9422",
+    "specificity": 0.9554678643062702,
+    "target_empty": false,
+    "threshold": 0.1,
+    "tn": 219127,
+    "tp": 31614
+  },
+  "prediction_provenance": "Copied from historical Adam-vs-AdamW evaluation artifacts; no inference was run during audit packaging.",
+  "sample_id": "high_quality_architectural/9422",
+  "sample_role": "false_positive_heavy",
+  "source_files": {
+    "best_checkpoint": {
+      "exists": true,
+      "path": "/mnt/e/test/_folder/floorplan_ai/experiments/mitunet_cubicasa5k_512_adamw/20260901_134158/checkpoints/best_model.pth",
+      "sha256": null,
+      "sha256_status": "skipped_large_artifact"
+    },
+    "per_image_test_metrics_csv": {
+      "exists": true,
+      "path": "/mnt/e/test/_folder/floorplan_ai/experiments/mitunet_cubicasa5k_512_adamw/20260901_134158/evaluation/per_image_test_metrics.csv",
+      "sha256": "014bacbe590bc53e331f15c0e249e771622ced2bcfd17a4fe13880348dde0b1b",
+      "sha256_status": null
+    },
+    "representative_samples_csv": {
+      "exists": true,
+      "path": "/mnt/e/test/_folder/floorplan_ai/experiments/mitunet_cubicasa5k_512_adamw/20260901_134158/evaluation/representative_samples.csv",
+      "sha256": "c201762146d33b5f8c0beef190730dda66d002b64f54fdbcd9248fe11d2b5807",
+      "sha256_status": null
+    },
+    "test_manifest_csv": {
+      "exists": true,
+      "path": "/mnt/e/test/_folder/floorplan_ai/experiments/mitunet_cubicasa5k_512_adamw/20260901_134158/test_manifest.csv",
+      "sha256": "3c91c47396a9eb97e413f01b65ed47ee0f2a59f73a42fb33182a1d120e6bda9e",
+      "sha256_status": null
+    },
+    "visual_comparison_index": {
+      "exists": true,
+      "path": "/mnt/e/test/_folder/floorplan_ai/experiments/mitunet_cubicasa5k_512_adamw/20260901_134158/evaluation/visual_comparison_index.json",
+      "sha256": "48a2c3cac7fcd8313c497c8d1fe6e92587e006b29a70fbaafb5a2b302da834a7",
+      "sha256_status": null
+    }
+  },
+  "source_run_directory": "/mnt/e/test/_folder/floorplan_ai/experiments/mitunet_cubicasa5k_512_adamw/20260901_134158",
+  "split": "test",
+  "thresholds": {
+    "adam_control_wall": 0.1,
+    "adamw_experiment_wall": 0.1
+  },
+  "visual_comparison_metrics": {
+    "adam_dice": 0.8614754537180791,
+    "adam_iou": 0.7566595349493335,
+    "adam_threshold": 0.1,
+    "adamw_dice": 0.8472082646621377,
+    "adamw_iou": 0.7349187530511193,
+    "adamw_threshold": 0.1,
+    "category": "false_positive_heavy",
+    "sample_id": "high_quality_architectural/9422"
+  },
+  "visual_evidence_status": "VERIFIED"
+}

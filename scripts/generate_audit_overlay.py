@@ -1107,7 +1107,7 @@ def write_shared_comparison(summary: dict[str, Any]) -> None:
 def main() -> None:
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     summary: dict[str, Any] = {
-        "visual_qa_scope": "six_audited_experiments",
+        "visual_qa_scope": "core_binary_structural_six_experiments",
         "samples": SAMPLES,
         "device": str(device),
         "experiments": [],

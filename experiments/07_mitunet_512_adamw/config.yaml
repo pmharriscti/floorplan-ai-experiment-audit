@@ -1,0 +1,74 @@
+experiment_id: 07_mitunet_512_adamw
+name: MitUNet 512 AdamW optimizer comparator
+evidence_status: VERIFIED
+source_run_directory: /mnt/e/test/_folder/floorplan_ai/experiments/mitunet_cubicasa5k_512_adamw/20260901_134158
+source_request_note: The user request said mitunet 1024 but the provided artifact path and resolved config verify image_size 512.
+task:
+  mode: binary_wall_segmentation
+  target: wall_region
+  target_source: native CubiCasa5K SVG Wall polygons
+  subtract_openings: false
+  hypothesis: replace Adam with AdamW while holding all other audited settings constant
+data:
+  dataset: CubiCasa5K
+  dataset_version: 4
+  split_counts:
+    train: 4200
+    validation: 400
+    test: 400
+  split_membership: exact_historical_baseline_membership
+  input_size: 512
+  resize_mode: letterbox
+  image_file: F1_scaled.png
+model:
+  architecture: MitUNet
+  implementation: mitunet_core_cubicasa
+  encoder_name: mit_b4
+  encoder_weights: imagenet
+  decoder_attention_type: scse
+  output_channels: 1
+  output_activation: raw_logits
+  model_parameter_count: 64248664
+  model_state_tensor_count: 64250658
+training:
+  epochs_configured: 30
+  epochs_completed: 30
+  best_epoch: 30
+  batch_size: 4
+  effective_batch_size: 4
+  optimizer: adamw
+  learning_rate: 0.0001
+  weight_decay: 0.0
+  loss: asymmetric_tversky
+  tversky_alpha: 0.6
+  tversky_beta: 0.4
+  seed: 42
+  amp: true
+  num_workers: 4
+  early_stopping_metric: val_iou
+  early_stopping_patience: 8
+  scheduler_patience: 3
+thresholds:
+  configured_threshold: 0.5
+  selected_validation_threshold: 0.1
+optimizer_resolved:
+  class: torch.optim.AdamW
+  lr: 0.0001
+  betas:
+  - 0.9
+  - 0.999
+  eps: 1.0e-08
+  weight_decay: 0.0
+  decoupled_weight_decay: true
+checkpoint:
+  path: /mnt/e/test/_folder/floorplan_ai/experiments/mitunet_cubicasa5k_512_adamw/20260901_134158/checkpoints/best_model.pth
+  sha256: f29d009750da34be350b67cc6ecf6e987c8da30c53a7ce89bbae481c4f385044
+  size_bytes: 772152865
+code:
+  harness_path: /home/pmharris/dev/mitunet_adam_w
+  harness_git_status: not_a_git_repository
+  protected_core_path: /home/pmharris/dev/mitunet_core_cubicasa
+  protected_core_git_commit: 0775f80a4cad366866990419aed18ea7434676f8
+  protected_core_git_status: clean
+unknowns:
+  dvc_hash: UNKNOWN

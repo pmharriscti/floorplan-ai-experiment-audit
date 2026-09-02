@@ -1,0 +1,79 @@
+{
+  "contact_sheet": "experiments/07_mitunet_512_adamw/qa/contact_sheet.png",
+  "experiment_id": "07_mitunet_512_adamw",
+  "no_inference_performed": true,
+  "no_training_performed": true,
+  "plots_root": "experiments/07_mitunet_512_adamw/plots",
+  "qa_root": "experiments/07_mitunet_512_adamw/qa",
+  "sample_count": 6,
+  "samples": [
+    {
+      "adam_dice": 0.9769199758113284,
+      "adam_iou": 0.9548812924834992,
+      "adam_threshold": 0.1,
+      "adamw_dice": 0.9806170083214938,
+      "adamw_iou": 0.9619711299153808,
+      "adamw_threshold": 0.1,
+      "category": "clean_strongest",
+      "sample_id": "high_quality_architectural/7696"
+    },
+    {
+      "adam_dice": 0.7272388059701492,
+      "adam_iou": 0.5713866901201994,
+      "adam_threshold": 0.1,
+      "adamw_dice": 0.6844795122388595,
+      "adamw_iou": 0.5203107960741549,
+      "adamw_threshold": 0.1,
+      "category": "difficult_worst",
+      "sample_id": "high_quality_architectural/9543"
+    },
+    {
+      "adam_dice": 0.8614754537180791,
+      "adam_iou": 0.7566595349493335,
+      "adam_threshold": 0.1,
+      "adamw_dice": 0.8472082646621377,
+      "adamw_iou": 0.7349187530511193,
+      "adamw_threshold": 0.1,
+      "category": "false_positive_heavy",
+      "sample_id": "high_quality_architectural/9422"
+    },
+    {
+      "adam_dice": 0.7851195882531032,
+      "adam_iou": 0.6462525699333375,
+      "adam_threshold": 0.1,
+      "adamw_dice": 0.7684926184926185,
+      "adamw_iou": 0.6240259945108678,
+      "adamw_threshold": 0.1,
+      "category": "false_negative_heavy",
+      "sample_id": "high_quality_architectural/7715"
+    },
+    {
+      "adam_dice": 0.7278665577977371,
+      "adam_iou": 0.5721621125985696,
+      "adam_threshold": 0.1,
+      "adamw_dice": 0.7496513249651325,
+      "adamw_iou": 0.5995538204127161,
+      "adamw_threshold": 0.1,
+      "category": "sparse_target",
+      "sample_id": "high_quality_architectural/3527"
+    },
+    {
+      "adam_dice": 0.9467732289457946,
+      "adam_iou": 0.8989262853603138,
+      "adam_threshold": 0.1,
+      "adamw_dice": 0.9122012465808708,
+      "adamw_iou": 0.8385753740879673,
+      "adamw_threshold": 0.1,
+      "category": "dense_target",
+      "sample_id": "high_quality_architectural/5617"
+    }
+  ],
+  "source_run_directory": "/mnt/e/test/_folder/floorplan_ai/experiments/mitunet_cubicasa5k_512_adamw/20260901_134158",
+  "training_plot": {
+    "audit_path": "experiments/07_mitunet_512_adamw/plots/training_curves.png",
+    "audit_sha256": "539523967a3f8b206a58cc307cbce36dff94aea326839b0e54b7956e127cf09f",
+    "source_path": "/mnt/e/test/_folder/floorplan_ai/experiments/mitunet_cubicasa5k_512_adamw/20260901_134158/logs/training_curves.png",
+    "source_sha256": "539523967a3f8b206a58cc307cbce36dff94aea326839b0e54b7956e127cf09f"
+  },
+  "visual_qa_scope": "adamw_optimizer_comparison"
+}
