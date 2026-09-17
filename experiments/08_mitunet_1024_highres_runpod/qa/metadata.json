@@ -1,0 +1,49 @@
+{
+  "experiment_id": "08_mitunet_1024_highres_runpod",
+  "source_directory": "/mnt/e/AI_Team/mitunet/fast1024_final_results/overlays",
+  "artifact_type": "historical_validation_composite",
+  "epoch": 3,
+  "checkpoint_selection": "best_validation_iou",
+  "panels": [
+    "input",
+    "ground_truth_wall_mask",
+    "prediction_wall_mask",
+    "tp_fp_fn_overlay"
+  ],
+  "overlay_colors": {
+    "true_positive": "green",
+    "false_positive": "red",
+    "false_negative": "blue"
+  },
+  "generation": "copied_without_new_inference",
+  "images": [
+    {
+      "file": "epoch_003_01.png",
+      "sample": "high_quality_architectural/333",
+      "width": 2048,
+      "height": 536,
+      "sha256": "ab6160fc22747bc9f5570d3d924bb8d2aab8ce0cc90b14c7c103aa5b0e1add7b"
+    },
+    {
+      "file": "epoch_003_02.png",
+      "sample": "high_quality_architectural/1654",
+      "width": 2048,
+      "height": 536,
+      "sha256": "f389004189d9a46e19046ac5011a4cff0feefd3f93c3555f6109c826950c4a69"
+    },
+    {
+      "file": "epoch_003_03.png",
+      "sample": "high_quality_architectural/5559",
+      "width": 2048,
+      "height": 536,
+      "sha256": "83f7243185d759be28d4637ded3c52e30247ab7b768e496c701519361d14f0ba"
+    },
+    {
+      "file": "epoch_003_04.png",
+      "sample": "high_quality_architectural/3015",
+      "width": 2048,
+      "height": 536,
+      "sha256": "09920fda56dc800aaccb9fbd60aaa63fc10d908848bdd4cf8d8e65de4f255983"
+    }
+  ]
+}

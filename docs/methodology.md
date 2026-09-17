@@ -35,4 +35,6 @@ Outcome categories are short audit labels, not new scientific claims:
 - `negative_comparator`: a completed comparator that underperformed the baseline.
 - `positive_structural_expansion`: a completed expansion that introduced new validated structure metrics.
 - `mixed_phase2_expansion`: a completed expansion with both improvements and regressions.
-
+- `negative_optimizer_comparator`: a completed optimizer substitution that underperformed its control.
+- `positive_high_resolution_baseline`: a completed higher-resolution whole-plan run that improved over its baseline.
+- `negative_high_resolution_crop_treatment`: a completed high-resolution crop treatment that underperformed its supplied whole-plan control, with formulation caveats.

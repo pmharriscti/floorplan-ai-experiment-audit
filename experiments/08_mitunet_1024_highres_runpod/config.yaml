@@ -1,0 +1,80 @@
+experiment_id: 08_mitunet_1024_highres_runpod
+name: MitUNet 1024 high-resolution crop treatment on RunPod
+evidence_status: VERIFIED
+source_run_directory: /mnt/e/AI_Team/mitunet/fast1024_final_results
+task:
+  mode: binary_wall_segmentation
+  target: wall_region
+  treatment: native_1024_crop_training
+  comparison: 512_whole_plan_control
+data:
+  dataset: CubiCasa5K
+  train_samples_per_epoch: 4200
+  validation_samples: 400
+  staged_file_count: 9202
+  staged_size_gib: 2.05
+  training:
+    input_size: 1024
+    presentation: native_resolution_crop
+    crop_schedule: first_10_frozen_treatment_schedules
+  validation:
+    input_size: 512
+    presentation: whole_plan
+    resize_mode: letterbox
+model:
+  architecture: MitUNet
+  encoder_name: mit_b4
+  encoder_weights: imagenet
+  strict_pretrained: true
+  output_channels: 1
+training:
+  epochs_planned: 10
+  epochs_completed: 10
+  best_epoch: 3
+  batches_per_epoch: 1050
+  physical_batch_size: 4
+  gradient_accumulation_steps: 1
+  effective_batch_size: 4
+  optimizer: adam
+  learning_rate: 0.0001
+  weight_decay: 0.0
+  betas: [0.9, 0.999]
+  loss: asymmetric_tversky
+  tversky_alpha: 0.6
+  tversky_beta: 0.4
+  seed: 42
+  amp: true
+  num_workers: 2
+  checkpoint_frequency: once_per_completed_epoch
+  scheduler:
+    name: reduce_lr_on_plateau
+    monitor: validation_micro_iou
+    factor: 0.5
+    patience: 3
+thresholds:
+  wall: 0.1
+  postprocessing: none
+infrastructure:
+  provider: RunPod
+  gpu: NVIDIA A100 80GB PCIe
+  torch_version: 2.8.0+cu128
+  cuda_version: "12.8"
+  hot_training_storage: pod_local_container_storage
+  persistent_storage: RunPod Network Volume
+  peak_reserved_bytes: 44589645824
+  peak_reserved_gib: 41.527432441711426
+checkpoint:
+  best_path: /mnt/e/AI_Team/mitunet/fast1024_final_results/checkpoints/epoch_003.pth
+  best_sha256: fe7899f0f6103c89c243e9dd5902d05db735a1174fbc8adcddf2be45810841ca
+  last_path: /mnt/e/AI_Team/mitunet/fast1024_final_results/checkpoints/epoch_010.pth
+  last_sha256: c7d2952a62ff158ed0b75b55d02c329c90c2a8e28f4141fab4a855e9f84f86b5
+code:
+  origin_commit: 6e55b50ab1cf8be9a40eb82efbb8a22b28c8f3c7
+  cloud_runtime_repair_commit_reported: 10907a7f6dafcad62a024f12c69b4383586f009d
+  cloud_runtime_repair_commit_local_status: not_present
+  exact_fast1024_runner_local_status: unavailable
+limitations:
+  - Training used native 1024 crops while validation used 512 whole-plan letterboxes.
+  - No test inference was run.
+  - The original paired 30-epoch study remains incomplete.
+  - Bitwise hardware-migration equivalence is not claimed.

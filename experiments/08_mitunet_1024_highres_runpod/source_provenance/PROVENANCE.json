@@ -1,0 +1,142 @@
+{
+  "identity": "de9ad10a91430a1f2156983fe617ccd55f7b030e718f41d3aa2a10b5921cc6b2",
+  "protocol": "fast1024-10ep-v1",
+  "config": {
+    "study": "uniform_1024_fresh_matched",
+    "seed": 42,
+    "epochs": 10,
+    "batch_size": 4,
+    "gradient_accumulation": 1,
+    "amp": true,
+    "performance_early_stopping": false,
+    "model": {
+      "encoder": "mit_b4",
+      "output_channels": 1,
+      "encoder_weights": "imagenet",
+      "strict_pretrained": true
+    },
+    "optimizer": {
+      "name": "Adam",
+      "lr": 0.0001,
+      "weight_decay": 0.0,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "amsgrad": false
+    },
+    "loss": {
+      "name": "AsymmetricTverskyLoss",
+      "alpha": 0.6,
+      "beta": 0.4,
+      "gamma": 1.0,
+      "eps": 1e-07
+    },
+    "scheduler": {
+      "name": "ReduceLROnPlateau",
+      "monitor": "validation_micro_iou",
+      "mode": "max",
+      "factor": 0.5,
+      "patience": 3,
+      "threshold": 0.0001,
+      "threshold_mode": "rel",
+      "cooldown": 0,
+      "min_lr": 0,
+      "eps": 1e-08,
+      "step_timing": "after_validation"
+    },
+    "validation": {
+      "size": 512,
+      "resize_mode": "letterbox",
+      "threshold": 0.1,
+      "postprocessing": "none",
+      "metric": "micro_iou",
+      "empty_iou": 1.0
+    },
+    "checkpoint_selection": "strict_greater_validation_micro_iou_keep_earliest_tie",
+    "augmentation": {
+      "source": "frozen_build_transform_train_prefix",
+      "version": "paired-prefix-v1"
+    },
+    "normalization": "ImageNet",
+    "padding": {
+      "placement": "center",
+      "image": [
+        255,
+        255,
+        255
+      ],
+      "target": 0,
+      "contributes_to_loss": true
+    },
+    "sampler_version": "plan-balanced-uniform-v1",
+    "reproduction_tolerance": 0.0001,
+    "numerical_equivalence": {
+      "atol": 1e-06,
+      "rtol": 1e-06
+    },
+    "bootstrap": {
+      "resamples": 10000,
+      "seed": 123,
+      "tie_tolerance": 1e-12
+    },
+    "decision_thresholds": [
+      -0.01,
+      -0.005,
+      0.005,
+      0.01
+    ],
+    "run_test_inference": false,
+    "run_additional_seeds": false,
+    "run_experiment_b": false
+  },
+  "inputs": "9903d8a746f468f8683604c3984f0f3a17f765d3722612751c2cd66ce4082f48",
+  "source_code": {
+    "io_utils.py": "5a1330bf871d882a804a26e12e1a4c4676725ea4769b93e84afae7444a21d040",
+    "prepare.py": "dc2ee7542bb3bbe9ac670a4e07c878c902bbd5223b3a67fd58ea3b6191fe4040",
+    "source/mitunet_cubicasa/__init__.py": "31b32906f8c9e8e981c61ed525dcaae996b90b27ae1778f4646a3037987f7cd2",
+    "source/mitunet_cubicasa/cubicasa_parser.py": "2af70d0e456c992928edba87f077c8387c9f16f189a4514da15d2bdd3617f9d4",
+    "source/mitunet_cubicasa/dataset.py": "5e7009bdf79defbd703fe36585db8396b0334dc1e272c30851d2233b7aff9a8f",
+    "source/mitunet_cubicasa/engine.py": "13bff6c7c7f375581748770461eff9cd64ac9e96755a54daa27fa9d5eb956439",
+    "source/mitunet_cubicasa/losses.py": "6e792b8c6934f5252ba2aa1356413ecf1416b1f5da571048d0fde2e2b13b5faf",
+    "source/mitunet_cubicasa/metrics.py": "1b5bc26b625cf1f34c3d53ea09ee74b9eb9c7edc652c397ff869d5d11a7e4e0c",
+    "source/mitunet_cubicasa/model.py": "8d0a4f41daf34a8ca6bbf7ebf005266b0cca005d176568d59ef363d113e8ef8c",
+    "source/mitunet_cubicasa/models/__init__.py": "06a5889e2fdd5795dae6c61967868858a80f4034e1be9c3c2366bcd5f165f3df",
+    "source/mitunet_cubicasa/models/deeplabv3_resnet50.py": "35310ddb66f9530fc22934830f7ec16ee940cde3fa740f7acef0c77d055cd5e4",
+    "source/mitunet_cubicasa/models/plain_unet.py": "b6821c1edf36326d710fc01f273fe2c89a57b75f2a9df1cb4ef3956a063bbf4d",
+    "source/mitunet_cubicasa/ontology.py": "a4038342d1ef4ad8c309b9313edfb8aaa8f2c73ccf10f26c7544d67a4b259d9d",
+    "source/mitunet_cubicasa/transforms.py": "6b1c0f2233c4fde76010bb2e870bef131a6898df3180f3518b7ac12c563298cf",
+    "source/mitunet_cubicasa/utils.py": "e873292cedf9defc6aca9f0961dbc82ae5f0bea6630cd3ba04116371c0c37ea6",
+    "source/study/__init__.py": "8ef02dd9f083650b9ab4ce1c58ae5174809ce2b91324afd430006f391a19fa0f",
+    "source/study/core.py": "11fc00a9b4ff2ae765566686606a7c48fc7885e95c7abe39464500383a695eaa",
+    "train.py": "4faa7ba5a8b3663fd3addfa1549c12669b91be78acad267db674783f245924bd"
+  },
+  "packages": {
+    "torch": "2.8.0+cu128",
+    "torchvision": "0.23.0+cu128",
+    "segmentation-models-pytorch": "0.5.0",
+    "albumentations": "2.0.8",
+    "numpy": "2.4.5",
+    "pillow": "12.2.0",
+    "pandas": "2.3.3",
+    "timm": "1.0.27",
+    "opencv-python-headless": "4.10.0.84",
+    "scipy": "1.17.1",
+    "pyarrow": "24.0.0"
+  },
+  "initialization": "eee73a60c6af023e2ae69c97d880cd6b6f9196a29a2ef93c3f914183f89dd5e1",
+  "workers": 2,
+  "validation": "512 letterbox; AMP; sigmoid outside autocast; threshold .1; micro counts",
+  "purpose": "Exploratory 1024 treatment only; original 30-epoch study remains incomplete.",
+  "changes": [
+    "10 epoch cap",
+    "local inputs/environment",
+    "epoch-only checkpoints",
+    "progress logging",
+    "CPU thread/loader settings",
+    "micro validation retained; component/boundary statistics omitted"
+  ],
+  "origin_source_commit": "6e55b50ab1cf8be9a40eb82efbb8a22b28c8f3c7 (scientific modules preserved by later runtime repair)",
+  "not_claimed": "Bitwise hardware-migration equivalence; completed paired 30-epoch comparison; trained test-set performance"
+}

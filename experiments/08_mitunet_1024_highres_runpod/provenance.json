@@ -1,0 +1,107 @@
+{
+  "experiment_id": "08_mitunet_1024_highres_runpod",
+  "evidence_status": "VERIFIED",
+  "created_utc": "2026-09-17",
+  "source_run_directory": "/mnt/e/AI_Team/mitunet/fast1024_final_results",
+  "source_repository": "/home/pmharris/dev/mitunet_uniform_1024_crop",
+  "run_identity": "de9ad10a91430a1f2156983fe617ccd55f7b030e718f41d3aa2a10b5921cc6b2",
+  "protocol": "fast1024-10ep-v1",
+  "source_files": [
+    "/mnt/e/AI_Team/mitunet/fast1024_final_results/summary.json",
+    "/mnt/e/AI_Team/mitunet/fast1024_final_results/history.json",
+    "/mnt/e/AI_Team/mitunet/fast1024_final_results/history.csv",
+    "/mnt/e/AI_Team/mitunet/fast1024_final_results/PROVENANCE.json",
+    "/mnt/e/AI_Team/mitunet/fast1024_final_results/launch.log",
+    "/mnt/e/AI_Team/mitunet/fast1024_final_results/local_environment.txt",
+    "/mnt/e/AI_Team/mitunet/fast1024_final_results/CHECKPOINT_SHA256SUMS"
+  ],
+  "source_file_sha256": {
+    "summary.json": "de5659c0f295f7c0505ee0e9aae1cd0edefad8d6cc0c1acfae71dabef7dec172",
+    "history.json": "6b6589143311d183290dd5784f46d5d1e1224560f547409ddd92f5df31fe59a6",
+    "history.csv": "675157626fd6a64a041ef4109231f9930067a4633f1ee4bfcf55b8e0d8487494",
+    "PROVENANCE.json": "7c71aa69b3c36eab69904d81411c6688036c2ecd831530e3e6b4fe5138bb1638",
+    "launch.log": "b34521939c51280e0414f3d35cd3a28dd7fe5216ad750b1282ec7ddaa1c43103",
+    "local_environment.txt": "ee52d42b572613a1ba8416ede6742d7417a80d2d5d31f8f12f79b506b2b3d306",
+    "CHECKPOINT_SHA256SUMS": "69c8b3d1f0eac59ca4af5a1c8f608d8b0f448a0aa1620f677247477a8b02c2c7"
+  },
+  "audit_copy_transforms": {
+    "results/history.csv": {
+      "transformation": "CRLF_to_LF_line_endings_only",
+      "source_sha256": "675157626fd6a64a041ef4109231f9930067a4633f1ee4bfcf55b8e0d8487494",
+      "audit_copy_sha256": "2706d720c092939374f9418079da5ca992e9818a953fea9fd345d554564a44c0"
+    }
+  },
+  "checkpoints": {
+    "treatment_best": {
+      "path": "/mnt/e/AI_Team/mitunet/fast1024_final_results/checkpoints/epoch_003.pth",
+      "size_bytes": 772185801,
+      "sha256": "fe7899f0f6103c89c243e9dd5902d05db735a1174fbc8adcddf2be45810841ca"
+    },
+    "treatment_last": {
+      "path": "/mnt/e/AI_Team/mitunet/fast1024_final_results/checkpoints/epoch_010.pth",
+      "size_bytes": 772186953,
+      "sha256": "c7d2952a62ff158ed0b75b55d02c329c90c2a8e28f4141fab4a855e9f84f86b5"
+    },
+    "control_best": {
+      "path": "/mnt/e/AI_Team/mitunet/fast1024_final_results/control/epoch_008.pth",
+      "size_bytes": 772186889,
+      "sha256": "d2d1a2a92fc1182e1f8144fd15dfef21a9a6d88fe7afa41963d78e0e82971359"
+    },
+    "control_resume": {
+      "path": "/mnt/e/AI_Team/mitunet/fast1024_final_results/control/resume.pth",
+      "size_bytes": 772175997,
+      "sha256": "8924fa8626f984df8bf4166b21d2da9515e1e59d61416e18385fa93a6d0cec81"
+    }
+  },
+  "code": {
+    "origin_source_commit": "6e55b50ab1cf8be9a40eb82efbb8a22b28c8f3c7",
+    "origin_source_commit_local_status": "present",
+    "cloud_runtime_repair_commit": "10907a7f6dafcad62a024f12c69b4383586f009d",
+    "cloud_runtime_repair_commit_source": "user_supplied_summary",
+    "cloud_runtime_repair_commit_local_status": "not_present",
+    "scientific_module_hash_audit": {
+      "listed_modules": 15,
+      "local_exact_matches": 15,
+      "mismatches": 0
+    },
+    "runner": {
+      "cloud_package": "/workspace/fast1024.zip",
+      "runtime_directory": "/root/fast1024",
+      "local_status": "unavailable_in_supplied_paths",
+      "missing_exact_files": [
+        "run.sh",
+        "io_utils.py",
+        "prepare.py",
+        "train.py",
+        "README.md"
+      ],
+      "hashes_retained_in": "source_provenance/PROVENANCE.json"
+    }
+  },
+  "visual_evidence": {
+    "qa_root": "experiments/08_mitunet_1024_highres_runpod/qa",
+    "source": "/mnt/e/AI_Team/mitunet/fast1024_final_results/overlays",
+    "generation": "copied_historical_best_epoch_composites_no_new_inference",
+    "epoch": 3,
+    "samples": [
+      "high_quality_architectural/333",
+      "high_quality_architectural/1654",
+      "high_quality_architectural/5559",
+      "high_quality_architectural/3015"
+    ],
+    "sha256": {
+      "epoch_003_01.png": "ab6160fc22747bc9f5570d3d924bb8d2aab8ce0cc90b14c7c103aa5b0e1add7b",
+      "epoch_003_02.png": "f389004189d9a46e19046ac5011a4cff0feefd3f93c3555f6109c826950c4a69",
+      "epoch_003_03.png": "83f7243185d759be28d4637ded3c52e30247ab7b768e496c701519361d14f0ba",
+      "epoch_003_04.png": "09920fda56dc800aaccb9fbd60aaa63fc10d908848bdd4cf8d8e65de4f255983"
+    }
+  },
+  "reproducibility_limits": [
+    "Training used native 1024 crops while validation used 512 whole-plan letterboxes.",
+    "No test inference was run.",
+    "The original paired 30-epoch study remains incomplete.",
+    "The launch log records CUDA deterministic-operation warnings because CUBLAS_WORKSPACE_CONFIG was not set.",
+    "Bitwise hardware-migration equivalence is not claimed."
+  ],
+  "large_artifacts_committed": false
+}

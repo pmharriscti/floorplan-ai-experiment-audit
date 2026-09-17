@@ -1,0 +1,71 @@
+{
+  "experiment_id": "08_mitunet_1024_highres_runpod",
+  "evidence_status": "VERIFIED",
+  "status": "COMPLETE",
+  "primary_split": "validation",
+  "primary_metrics": {
+    "wall_iou": 0.43214381550960096,
+    "wall_dice": 0.6034922063407869,
+    "boundary_f1_2px": null,
+    "centerline_cldice": null,
+    "junction_f1_5px": null,
+    "door_object_f1": null
+  },
+  "best_epoch": 3,
+  "epochs_planned": 10,
+  "epochs_completed": 10,
+  "selected_thresholds": {
+    "wall": 0.1
+  },
+  "best_validation": {
+    "epoch": 3,
+    "iou": 0.43214381550960096,
+    "dice": 0.6034922063407869,
+    "precision": 0.5905856781496122,
+    "recall": 0.6169754507591669,
+    "specificity": 0.9697323845545477,
+    "pixel_accuracy": 0.9464187049865722,
+    "train_loss": 0.13157424290974934
+  },
+  "final_validation": {
+    "epoch": 10,
+    "iou": 0.3817684301247201,
+    "dice": 0.552579465273007,
+    "precision": 0.48242456879497936,
+    "recall": 0.6466105274276551,
+    "specificity": 0.9509072669821917,
+    "pixel_accuracy": 0.9307963180541993,
+    "train_loss": 0.10670356153022675
+  },
+  "test_metrics": null,
+  "test_metrics_status": "not_run",
+  "runtime": {
+    "train_seconds": 5050.845218637987,
+    "validation_seconds": 177.35718936499325,
+    "combined_train_validation_seconds": 5228.2024080029805,
+    "train_minutes": 84.18075364396645,
+    "validation_minutes": 2.9559531560832206,
+    "combined_train_validation_minutes": 87.13670680004968,
+    "successful_updates": 10497,
+    "skipped_updates": 3,
+    "peak_reserved_bytes": 44589645824
+  },
+  "comparison_to_512_control": {
+    "evidence_source": "user_supplied_github_summary",
+    "control_epochs_completed": 9,
+    "control_best_epoch": 8,
+    "control_best_validation_iou_rounded": 0.801067,
+    "control_best_validation_dice_rounded": 0.889547,
+    "treatment_minus_control_iou_approximate": -0.36892318449039905,
+    "treatment_minus_control_dice_approximate": -0.2860547936592131,
+    "controlled_resolution_only_comparison": false
+  },
+  "sample_counts": {
+    "train_per_epoch": 4200,
+    "validation": 400
+  },
+  "history_artifacts": {
+    "json": "results/history.json",
+    "csv": "results/history.csv"
+  }
+}

@@ -11,10 +11,11 @@ This index points to the source artifacts used for the initial audit. Paths are 
 | 05 | [experiments/05_phase2_boundary_openings](experiments/05_phase2_boundary_openings/README.md) | `/mnt/e/AI_Team/mitunet/phase2_wall_boundary_door_openings/experiments/mitunet_phase2_wall_boundary_door_openings_20260810_200219_UTC` | `reports/FINAL_REPORT.md`, `reports/evaluate_summary.json`, `metrics/final_metrics.csv`, `metrics/phase1_comparison.csv`, `metrics/training_history.csv`, `checkpoint_manifest.json`, MLflow artifact config |
 | 06 | [experiments/06_binary_mitunet_1024](experiments/06_binary_mitunet_1024/README.md) | `/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu_1024` | `run_config_resolved.yaml`, `command.txt`, `run.log`, `history.csv`, `summary.json`, `metrics.json`, `validation_metrics.json`, `test_metrics.json`, `threshold_search.csv`, `source_resolution_audit.*`, manifests, environment files |
 | 07 | [experiments/07_mitunet_512_adamw](experiments/07_mitunet_512_adamw/README.md) | `/mnt/e/test/_folder/floorplan_ai/experiments/mitunet_cubicasa5k_512_adamw/20260901_134158`; `/home/pmharris/dev/mitunet_adam_w`; `/home/pmharris/dev/mitunet_core_cubicasa` | `EXPERIMENT_SUMMARY.md`, `resolved_config.yaml`, `adam_vs_adamw_comparison.json`, `test_metrics.json`, `validation_metrics.json`, `threshold_search.csv`, `training_history.csv`, `reproducibility_gate.json`, `label_validation_summary.json`, visual comparison artifacts |
+| 08 | [experiments/08_mitunet_1024_highres_runpod](experiments/08_mitunet_1024_highres_runpod/README.md) | `/mnt/e/AI_Team/mitunet/fast1024_final_results`; `/home/pmharris/dev/mitunet_uniform_1024_crop` | `summary.json`, `history.json`, `history.csv`, `PROVENANCE.json`, `launch.log`, `local_environment.txt`, `CHECKPOINT_SHA256SUMS`, best-epoch overlays |
 
 ## Evidence Confidence
 
-All seven rows in the scoreboard are marked `VERIFIED` because the reported primary metrics and configurations were located in source artifacts. Some fields inside each row remain `UNKNOWN` because the source artifacts did not contain them or explicitly deferred them.
+All eight rows in the scoreboard are marked `VERIFIED` because the reported primary metrics and configurations were located in source artifacts. Some fields inside each row remain `UNKNOWN` because the source artifacts did not contain them or explicitly deferred them.
 
 ## Notable Missing Items
 
@@ -23,6 +24,8 @@ All seven rows in the scoreboard are marked `VERIFIED` because the reported prim
 - The standalone 1024 px run recorded git commit `ade0aa6ba01c72f02a32a33a605c36b54b264a7a`, but the captured git state included uncommitted and untracked files.
 - The AdamW harness directory `/home/pmharris/dev/mitunet_adam_w` is not a Git repository; file SHA-256 values are recorded instead.
 - The AdamW user request referred to 1024, but the provided source artifacts verify a 512 px run.
+- The exact Fast1024 cloud runner package was not found in the supplied local paths. Its file hashes are preserved, and all provenance-listed scientific modules match the local source repository.
+- The RunPod treatment changed both training resolution and spatial context, and it did not run test inference.
 - Phase 1 and Phase 2 checkpoint SHA-256 hashes were deferred by their checkpoint manifests.
 - Historical Phase 1 boundary and door metrics were not found in the inspected Phase 1 artifacts; Phase 1 did not include boundary or door heads.
 - Phase 2 final report verifies door object F1 `0.7796991077953163`; the higher `0.8194901582399987` value was found in `training_history.csv` as a validation-history peak, not as the final selected-checkpoint evaluation.

@@ -5,6 +5,7 @@ This repository is an audit index, not a runnable copy of the experiment workspa
 ## Artifact Roots
 
 - Local source repository: `/home/pmharris/dev/mitunet`
+- RunPod crop-treatment source repository: `/home/pmharris/dev/mitunet_uniform_1024_crop`
 - Windows-backed archive root: `/mnt/e/AI_Team`
 - CubiCasa5K v4 paths appear in source configs and manifests under `/home/pmharris/dev/cubicasa5k_data/...`
 
@@ -16,6 +17,7 @@ This repository is an audit index, not a runnable copy of the experiment workspa
 4. Use the audited `config.yaml` files as compact configuration summaries, then compare against the original source YAML before rerunning.
 5. Keep generated checkpoints and outputs outside this audit repo.
 6. Recompute metrics with the selected thresholds recorded in each experiment folder.
+7. For experiment 08, restore the exact `fast1024.zip` runner from RunPod and verify its files against the preserved provenance hashes before claiming an exact rerun.
 
 ## DVC And MLflow Status
 
@@ -28,4 +30,3 @@ The `.gitignore` blocks common checkpoint, dataset, cache, media, and generated-
 ## Recommended Next Build
 
 The next build should add a small validation script that reads `EXPERIMENT_SCOREBOARD.csv` and every experiment `metrics.json`/`provenance.json`, verifies schema consistency, checks links, and confirms no forbidden artifact extensions are staged.
-

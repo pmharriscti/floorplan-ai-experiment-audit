@@ -1,0 +1,203 @@
+{
+  "status": "COMPLETE",
+  "epochs_completed": 10,
+  "planned_epochs": 10,
+  "identity": "de9ad10a91430a1f2156983fe617ccd55f7b030e718f41d3aa2a10b5921cc6b2",
+  "best_epoch": 3,
+  "best_iou": 0.43214381550960096,
+  "best_checkpoint": "checkpoints/epoch_003.pth",
+  "last_checkpoint": "checkpoints/epoch_010.pth",
+  "history": [
+    {
+      "epoch": 1,
+      "validation": {
+        "dice": 0.5960847859200228,
+        "iou": 0.42458745367372697,
+        "precision": 0.5846745604748108,
+        "recall": 0.6079492285099446,
+        "specificity": 0.9694386981055355,
+        "pixel_accuracy": 0.9455478858947753
+      },
+      "train_loss": 0.3390928027743385,
+      "train_seconds": 519.0714084490028,
+      "validation_seconds": 16.451076976023614,
+      "lr_used": 0.0001,
+      "lr_next": 0.0001,
+      "successful_updates": 1050,
+      "skipped_updates": 0,
+      "peak_reserved_bytes": 44581257216
+    },
+    {
+      "epoch": 2,
+      "validation": {
+        "dice": 0.5203923106715385,
+        "iou": 0.3517096554882903,
+        "precision": 0.4243632696394331,
+        "recall": 0.6725932394819013,
+        "specificity": 0.9354355564570381,
+        "pixel_accuracy": 0.9180643272399902
+      },
+      "train_loss": 0.14188137326921735,
+      "train_seconds": 505.92727991900756,
+      "validation_seconds": 17.06533344500349,
+      "lr_used": 0.0001,
+      "lr_next": 0.0001,
+      "successful_updates": 2100,
+      "skipped_updates": 0,
+      "peak_reserved_bytes": 44589645824
+    },
+    {
+      "epoch": 3,
+      "validation": {
+        "dice": 0.6034922063407869,
+        "iou": 0.43214381550960096,
+        "precision": 0.5905856781496122,
+        "recall": 0.6169754507591669,
+        "specificity": 0.9697323845545477,
+        "pixel_accuracy": 0.9464187049865722
+      },
+      "train_loss": 0.13157424290974934,
+      "train_seconds": 510.27541532798205,
+      "validation_seconds": 21.45368431098177,
+      "lr_used": 0.0001,
+      "lr_next": 0.0001,
+      "successful_updates": 3150,
+      "skipped_updates": 0,
+      "peak_reserved_bytes": 44589645824
+    },
+    {
+      "epoch": 4,
+      "validation": {
+        "dice": 0.5734150551364242,
+        "iou": 0.401949464839796,
+        "precision": 0.5064151020175272,
+        "recall": 0.6608466830812156,
+        "specificity": 0.9544187602573898,
+        "pixel_accuracy": 0.9350166034698486
+      },
+      "train_loss": 0.1267391542025975,
+      "train_seconds": 505.89438642401365,
+      "validation_seconds": 16.731516209983965,
+      "lr_used": 0.0001,
+      "lr_next": 0.0001,
+      "successful_updates": 4200,
+      "skipped_updates": 0,
+      "peak_reserved_bytes": 44589645824
+    },
+    {
+      "epoch": 5,
+      "validation": {
+        "dice": 0.5948954826054906,
+        "iou": 0.42338165968507996,
+        "precision": 0.596531719277006,
+        "recall": 0.5932681975015697,
+        "specificity": 0.9716040025460042,
+        "pixel_accuracy": 0.946599817276001
+      },
+      "train_loss": 0.12241287865809032,
+      "train_seconds": 498.31808365299366,
+      "validation_seconds": 16.916437993990257,
+      "lr_used": 0.0001,
+      "lr_next": 0.0001,
+      "successful_updates": 5249,
+      "skipped_updates": 1,
+      "peak_reserved_bytes": 44589645824
+    },
+    {
+      "epoch": 6,
+      "validation": {
+        "dice": 0.586878071235796,
+        "iou": 0.4153060392665689,
+        "precision": 0.6109928040837188,
+        "recall": 0.5645945883936161,
+        "specificity": 0.9745616783359546,
+        "pixel_accuracy": 0.947466983795166
+      },
+      "train_loss": 0.12178856115965617,
+      "train_seconds": 503.38277524799923,
+      "validation_seconds": 20.93849331801175,
+      "lr_used": 0.0001,
+      "lr_next": 0.0001,
+      "successful_updates": 6299,
+      "skipped_updates": 1,
+      "peak_reserved_bytes": 44589645824
+    },
+    {
+      "epoch": 7,
+      "validation": {
+        "dice": 0.6017157038525582,
+        "iou": 0.4303242949308718,
+        "precision": 0.5923449202335471,
+        "recall": 0.6113877412669583,
+        "specificity": 0.9702240847008058,
+        "pixel_accuracy": 0.946508617401123
+      },
+      "train_loss": 0.11801538380838576,
+      "train_seconds": 501.3994537219987,
+      "validation_seconds": 17.518388230004348,
+      "lr_used": 0.0001,
+      "lr_next": 5e-05,
+      "successful_updates": 7349,
+      "skipped_updates": 1,
+      "peak_reserved_bytes": 44589645824
+    },
+    {
+      "epoch": 8,
+      "validation": {
+        "dice": 0.5665129791353399,
+        "iou": 0.39519923856277883,
+        "precision": 0.48645140373879026,
+        "recall": 0.6781199102861156,
+        "specificity": 0.9493384135778965,
+        "pixel_accuracy": 0.9314136028289794
+      },
+      "train_loss": 0.11189956821146466,
+      "train_seconds": 502.0141156819882,
+      "validation_seconds": 16.74273833699408,
+      "lr_used": 5e-05,
+      "lr_next": 5e-05,
+      "successful_updates": 8398,
+      "skipped_updates": 2,
+      "peak_reserved_bytes": 44589645824
+    },
+    {
+      "epoch": 9,
+      "validation": {
+        "dice": 0.5875338134349866,
+        "iou": 0.4159630998769706,
+        "precision": 0.5572390613787093,
+        "recall": 0.6213119392972413,
+        "specificity": 0.9650644447224049,
+        "pixel_accuracy": 0.9423458671569824
+      },
+      "train_loss": 0.11016816506783167,
+      "train_seconds": 504.1616279039881,
+      "validation_seconds": 16.327651045983657,
+      "lr_used": 5e-05,
+      "lr_next": 5e-05,
+      "successful_updates": 9447,
+      "skipped_updates": 3,
+      "peak_reserved_bytes": 44589645824
+    },
+    {
+      "epoch": 10,
+      "validation": {
+        "dice": 0.552579465273007,
+        "iou": 0.3817684301247201,
+        "precision": 0.48242456879497936,
+        "recall": 0.6466105274276551,
+        "specificity": 0.9509072669821917,
+        "pixel_accuracy": 0.9307963180541993
+      },
+      "train_loss": 0.10670356153022675,
+      "train_seconds": 500.4006723090133,
+      "validation_seconds": 17.211869498016313,
+      "lr_used": 5e-05,
+      "lr_next": 5e-05,
+      "successful_updates": 10497,
+      "skipped_updates": 3,
+      "peak_reserved_bytes": 44589645824
+    }
+  ],
+  "comparison": "Separate exploratory treatment; compare epochs 1-9 against control."
+}
