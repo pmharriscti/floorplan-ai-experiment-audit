@@ -35,6 +35,33 @@ validate schemas, links, hashes, images, file policy, and Git diff
 commit and publish the audit entry
 ```
 
+## GitHub Destination and Publishing
+
+The GitHub repository page is named **Floor Plan AI Experiment Audit**.
+
+- Repository: `pmharriscti/floorplan-ai-experiment-audit`
+- Repository URL: [https://github.com/pmharriscti/floorplan-ai-experiment-audit](https://github.com/pmharriscti/floorplan-ai-experiment-audit)
+- Direct runbook URL: [audit_creation_workflow.md on GitHub](https://github.com/pmharriscti/floorplan-ai-experiment-audit/blob/main/docs/audit_creation_workflow.md)
+- Published branch: `main`
+- Git remote: `origin`
+
+This is a standard GitHub repository page, not a separately deployed GitHub Pages website. The repository currently has no `gh-pages` branch, Pages workflow, `CNAME`, or Jekyll configuration.
+
+### How a Local Audit Becomes a GitHub Update
+
+1. Audit files are created or updated in the local repository at `/home/pmharris/dev/floorplan-ai-experiment-audit`.
+2. The structured data, links, images, hashes, file sizes, and Git diff are validated.
+3. Only the intended audit files are staged with `git add`.
+4. The staged changes are saved as a local commit with a descriptive message.
+5. `git push origin main` sends that commit to the GitHub repository.
+6. GitHub advances `origin/main` to the new commit and renders the tracked files from that revision.
+
+The root [README](../README.md) is the landing content shown on the repository's main GitHub page. Updating it changes the overview visitors see first. The experiment READMEs, this runbook, normalized JSON/YAML/CSV files, and curated PNG/JPEG files become browsable through their repository paths and links.
+
+The push does not upload external experiment directories, datasets, or checkpoints. Those remain at the locations recorded in provenance. Only files tracked by this audit repository are published. Earlier versions remain recoverable through Git commit history.
+
+If a GitHub Pages site is added later, it will require a separate Pages configuration and may have a different URL. That deployment is not part of the current audit workflow.
+
 ## Repository Contract
 
 Every experiment receives the same four core files:

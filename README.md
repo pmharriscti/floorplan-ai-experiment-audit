@@ -2,6 +2,8 @@
 
 This repository is the initial evidence-backed audit index for the floor-plan segmentation and structure experiments. It records small, inspectable metadata and a curated set of review images. Checkpoints, datasets, caches, prediction dumps, and bulk raw outputs remain in their original artifact locations and are not committed here.
 
+GitHub repository: [pmharriscti/floorplan-ai-experiment-audit](https://github.com/pmharriscti/floorplan-ai-experiment-audit)
+
 Audit date: 2026-08-31. Updated 2026-09-17 with the RunPod 1024 high-resolution crop treatment.
 
 ## Scope
