@@ -1,0 +1,16 @@
+{
+ "model": "baseline checkpoint via Phase 5 init (eval mode, no updates)",
+ "split": "train",
+ "batches": 300,
+ "batch_size": 4,
+ "loss": "structural_wall AsymmetricTversky(0.6,0.4)",
+ "results": {
+  "none": 0.09697871615489324,
+  "hflip": 0.1532636747757594,
+  "vflip": 0.14859859103957812,
+  "rot90_k1": 0.16015807499488194,
+  "rot180": 0.20467699612180393,
+  "brightcontrast": 0.09969707881410916,
+  "transpose": 0.1085731848080953
+ }
+}

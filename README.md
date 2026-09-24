@@ -4,11 +4,11 @@ This repository is the initial evidence-backed audit index for the floor-plan se
 
 GitHub repository: [pmharriscti/floorplan-ai-experiment-audit](https://github.com/pmharriscti/floorplan-ai-experiment-audit)
 
-Audit date: 2026-08-31. Updated 2026-09-17 with the RunPod 1024 high-resolution crop treatment.
+Audit date: 2026-08-31. Updated 2026-09-17 with the RunPod 1024 high-resolution crop treatment, and 2026-09-24 with the Phase 5 hierarchical multi-head expansion.
 
 ## Scope
 
-The current audit covers eight experiments:
+The current audit covers nine experiments:
 
 | ID | Experiment | Status | Read next |
 | --- | --- | --- | --- |
@@ -20,14 +20,15 @@ The current audit covers eight experiments:
 | 06 | Binary MitUNet 1024 px global | completed | [experiments/06_binary_mitunet_1024/README.md](experiments/06_binary_mitunet_1024/README.md) |
 | 07 | MitUNet 512 AdamW optimizer comparator | completed | [experiments/07_mitunet_512_adamw/README.md](experiments/07_mitunet_512_adamw/README.md) |
 | 08 | MitUNet 1024 high-resolution crop treatment on RunPod | completed | [experiments/08_mitunet_1024_highres_runpod/README.md](experiments/08_mitunet_1024_highres_runpod/README.md) |
+| 09 | Phase 5 hierarchical multi-head MitUNet 512 | completed | [experiments/09_phase5_hierarchical_multihead_512/README.md](experiments/09_phase5_hierarchical_multihead_512/README.md) |
 
 The top-level scorecard is [EXPERIMENT_SCOREBOARD.csv](EXPERIMENT_SCOREBOARD.csv), and the source/evidence index is [EXPERIMENT_INDEX.md](EXPERIMENT_INDEX.md).
 
 ## Visual Evidence
 
-Curated visual QA evidence is included under each experiment's `qa/` directory. Experiments 01-06 use the same three validation sample identities: `high_quality_architectural/333`, `high_quality_architectural/3015`, and `high_quality_architectural/5559`. Experiment 07 uses its own six representative Adam-vs-AdamW test samples selected by the source evaluation artifacts. Experiment 08 includes four historical composites from its best RunPod checkpoint.
+Curated visual QA evidence is included under each experiment's `qa/` directory. Experiments 01-06 and 09 use the same three validation sample identities: `high_quality_architectural/333`, `high_quality_architectural/3015`, and `high_quality_architectural/5559`. Experiment 07 uses its own six representative Adam-vs-AdamW test samples selected by the source evaluation artifacts. Experiment 08 includes four historical composites from its best RunPod checkpoint.
 
-For experiments organized into sample folders, each folder includes a review source image, ground-truth mask(s), prediction mask(s), error overlay(s), and `metadata.json` with source paths and provenance. Experiments 01-04 and 06 use regenerated inference from verified checkpoints; Phase 2 prediction masks are derived from saved historical validation probability maps. Experiment 08 preserves the source run's four-panel composites directly.
+For experiments organized into sample folders, each folder includes a review source image, ground-truth mask(s), prediction mask(s), error overlay(s), and `metadata.json` with source paths and provenance. Experiments 01-04 and 06 use regenerated inference from verified checkpoints; Phase 2 prediction masks are derived from saved historical validation probability maps. Experiment 08 preserves the source run's four-panel composites directly. Experiment 09 decodes its eight heads from the source run's saved thresholded prediction bitmasks.
 
 Start at [docs/visual_comparisons/shared_validation_samples.md](docs/visual_comparisons/shared_validation_samples.md) for the shared-sample index, [docs/visual_comparisons/adamw_optimizer_samples.md](docs/visual_comparisons/adamw_optimizer_samples.md) for the AdamW comparator, and [docs/visual_comparisons/runpod_1024_highres_samples.md](docs/visual_comparisons/runpod_1024_highres_samples.md) for the RunPod crop treatment. Overlay colors are green for true positive, red for false positive, and blue for false negative.
 
@@ -53,9 +54,11 @@ Phase 1 added wall-region, centerline, and junction heads. Verified validation w
 
 Phase 2 added wall-boundary and door-opening heads from the Phase 1 checkpoint. It verified strong final boundary F1@2 px `0.9347893344704645` and door object F1 `0.7796991077953163`, but degraded Phase 1-compatible structural score by `-0.14096779852795083` and wall IoU by `-0.05004927229517453`.
 
+Phase 5 extended the 512 px binary baseline into an eight-head hierarchical model (shared MiT-B4 encoder, four task-group decoders, independent sigmoid heads) under a wall-protection gate of baseline minus `0.005` validation IoU. The audited run met the gate on all 26 joint epochs: validation structural-wall IoU `0.8163773956524429` and test `0.8201544454854268` at the selected threshold (`-0.0027` validation and `-0.0044` test versus the reproduced baseline at threshold `0.1`), with boundary F1@2 px `0.9545912416245511`, junction F1@5 px `0.7870734231563665`, door object F1 `0.8802919575908823`, window object F1 `0.8806236251106608`, endpoint F1@5 px `0.33671869601605553`, and fixtures macro IoU `0.45816277648462456`. Three earlier runs of the same design with data augmentation enabled failed the gate on every joint epoch; a wall-only ablation and one-epoch diagnostics traced that regression to fine-tuning the June 2026 baseline under geometric augmentations it was never trained with, not to the new heads, GradNorm, or BatchNorm.
+
 ## Open Evidence Gaps
 
-The exact baseline source git commit and DVC hash were not located in the inspected baseline artifacts. The standalone 1024 px run records a source git commit, but its captured git state was dirty. The AdamW harness directory is not a Git repository, though the protected core implementation is clean and commit-pinned. The exact cloud-only Fast1024 runner package was not found locally, although its hashes and matching scientific source modules are documented. Several Phase 1 historical values mentioned in task context were not found in the Phase 1 run reports and are therefore not recorded as verified. Phase 1 and Phase 2 checkpoint SHA-256 hashes are deferred in their manifests, so this repository records checkpoint paths and sizes but not hashes.
+The exact baseline source git commit and DVC hash were not located in the inspected baseline artifacts. The standalone 1024 px run records a source git commit, but its captured git state was dirty. The AdamW harness directory is not a Git repository, though the protected core implementation is clean and commit-pinned. The exact cloud-only Fast1024 runner package was not found locally, although its hashes and matching scientific source modules are documented. Several Phase 1 historical values mentioned in task context were not found in the Phase 1 run reports and are therefore not recorded as verified. Phase 1 and Phase 2 checkpoint SHA-256 hashes are deferred in their manifests, so this repository records checkpoint paths and sizes but not hashes. The Phase 5 code (modules, experiment script, configs) is untracked in the source repository, so its entry records file hashes instead of a clean commit, and its pipeline records no DVC status.
 
 ## Method Notes
 

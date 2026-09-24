@@ -38,3 +38,4 @@ Outcome categories are short audit labels, not new scientific claims:
 - `negative_optimizer_comparator`: a completed optimizer substitution that underperformed its control.
 - `positive_high_resolution_baseline`: a completed higher-resolution whole-plan run that improved over its baseline.
 - `negative_high_resolution_crop_treatment`: a completed high-resolution crop treatment that underperformed its supplied whole-plan control, with formulation caveats.
+- `positive_gated_hierarchical_expansion`: a completed multi-head expansion that met its declared wall-protection gate (baseline minus a fixed tolerance) on every eligible epoch while adding validated new-head metrics; the small residual wall regression inside the tolerance is recorded, not hidden.

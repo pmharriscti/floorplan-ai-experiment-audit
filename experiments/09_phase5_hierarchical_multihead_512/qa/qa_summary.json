@@ -1,0 +1,79 @@
+{
+  "experiment_id": "09_phase5_hierarchical_multihead_512",
+  "strategy": "saved_thresholded_masks",
+  "samples": [
+    {
+      "sample_id": "high_quality_architectural/333",
+      "role": "typical_clean_validation_case",
+      "source_primary_metrics": {
+        "structural_wall_iou": 0.8070319404115642,
+        "structural_wall_dice": 0.8932127012959793,
+        "boundary_f1_2px": 0.9521459902869688,
+        "centerline_skeleton_cldice": 0.3551565218169058,
+        "junction_f1_5px": 0.8648648648648649,
+        "endpoint_f1_5px": 0.6666666666666666,
+        "door_opening_object_f1": 1.0,
+        "window_opening_object_f1": 0.8000000000000002
+      },
+      "recomputed_pixel_iou": {
+        "structural_wall": 0.8070319404115642,
+        "wall_boundary": 0.5090431519699813,
+        "wall_centerline": 0.5667265110712149,
+        "junction": 0.492040520984081,
+        "endpoint": 0.14814814814814814,
+        "door_opening": 0.7444743935309973,
+        "window_opening": 0.732124529592884,
+        "fixtures_union": 0.8412768787408557
+      }
+    },
+    {
+      "sample_id": "high_quality_architectural/3015",
+      "role": "strong_high_resolution_case",
+      "source_primary_metrics": {
+        "structural_wall_iou": 0.8103894128384546,
+        "structural_wall_dice": 0.8952653026929379,
+        "boundary_f1_2px": 0.9641780901432846,
+        "centerline_skeleton_cldice": 0.5856939420082509,
+        "junction_f1_5px": 0.8641975308641975,
+        "endpoint_f1_5px": 0.0,
+        "door_opening_object_f1": 0.6470588235294117,
+        "window_opening_object_f1": 0.6909090909090909
+      },
+      "recomputed_pixel_iou": {
+        "structural_wall": 0.8103894128384546,
+        "wall_boundary": 0.734273758099352,
+        "wall_centerline": 0.7187896985795127,
+        "junction": 0.47913769123783034,
+        "endpoint": 0.0,
+        "door_opening": 0.5371312309257376,
+        "window_opening": 0.7800951335528723,
+        "fixtures_union": 0.2615615365386218
+      }
+    },
+    {
+      "sample_id": "high_quality_architectural/5559",
+      "role": "difficult_failure_case",
+      "source_primary_metrics": {
+        "structural_wall_iou": 0.6368362608520088,
+        "structural_wall_dice": 0.7781306854975485,
+        "boundary_f1_2px": 0.842826101646683,
+        "centerline_skeleton_cldice": 0.366122535429209,
+        "junction_f1_5px": 0.4383561643835616,
+        "endpoint_f1_5px": 0.0,
+        "door_opening_object_f1": 0.42857142857142855,
+        "window_opening_object_f1": 0.6666666666666665
+      },
+      "recomputed_pixel_iou": {
+        "structural_wall": 0.6368362608520088,
+        "wall_boundary": 0.4853146131213545,
+        "wall_centerline": 0.4217003287928605,
+        "junction": 0.1871239470517449,
+        "endpoint": 0.0,
+        "door_opening": 0.3832528180354267,
+        "window_opening": 0.43288480472595997,
+        "fixtures_union": 0.4069404279930596
+      }
+    }
+  ],
+  "contact_sheet_sha256": "b35a354e6ebfec1bde108a9838d46680c49ae08e6337b611823dc63fafe5c3bb"
+}

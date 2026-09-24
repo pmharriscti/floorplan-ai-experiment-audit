@@ -1,6 +1,6 @@
 # How Experiment Audits Are Created
 
-This document explains how a completed floor-plan AI experiment is converted into an evidence-backed entry in this repository. It describes the process used for experiments 01-08 as of 2026-09-24.
+This document explains how a completed floor-plan AI experiment is converted into an evidence-backed entry in this repository. It describes the process used for experiments 01-09 as of 2026-09-24.
 
 The central rule is simple:
 
@@ -271,6 +271,7 @@ Masks are saved with nearest-neighbor semantics and checked for binary values. S
 | Saved probability maps | 05 | Apply recorded thresholds to historical Phase 2 validation probability maps for wall, centerline, junction, boundary, and door/opening outputs. No new model inference is performed. |
 | Historical comparison copy | 07 | Copy the source run's six representative Adam-vs-AdamW test comparisons, masks, and overlays. No training or inference is performed. |
 | Historical composite copy | 08 | Copy four composites from the best RunPod epoch. Each already contains input, target, prediction, and TP/FP/FN panels. No training or inference is performed. |
+| Saved thresholded masks | 09 | Decode the source run's per-sample prediction bitmasks (one bit per head, one bit per fixture class) written by its evaluate stage at the selected thresholds, pair them with the manifest ground-truth masks, and render per-head masks and overlays. Per-image pixel metrics recomputed from the masks are checked against the run's per-image CSV. No new inference is performed. |
 
 The core visual generator is [generate_audit_overlay.py](../scripts/generate_audit_overlay.py). It uses three shared validation samples across experiments 01-06:
 
@@ -283,6 +284,8 @@ Using the same sample identities makes model and task differences easier to insp
 The AdamW copy-only workflow is implemented in [generate_adamw_audit_visuals.py](../scripts/generate_adamw_audit_visuals.py). Its six samples are source-selected roles such as strongest clean case, difficult case, false-positive-heavy case, false-negative-heavy case, sparse target, and dense target.
 
 The RunPod entry preserves the source composites directly because they are already self-contained historical evidence. Its image list and hashes are recorded in [experiment 08 QA metadata](../experiments/08_mitunet_1024_highres_runpod/qa/metadata.json).
+
+The Phase 5 saved-mask workflow is implemented in [generate_hierarchical_audit_visuals.py](../scripts/generate_hierarchical_audit_visuals.py). It uses the same three shared sample identities as experiments 01-06.
 
 ### What Visual Generation Never Does
 
@@ -389,6 +392,7 @@ The current repository performs these checks with focused shell and Python valid
 | Core visual QA for experiments 01-06 | Automated by `scripts/generate_audit_overlay.py` |
 | AdamW visual packaging | Automated by `scripts/generate_adamw_audit_visuals.py` |
 | RunPod historical-composite packaging | Manual copy with recorded hashes |
+| Phase 5 saved-mask visual packaging | Automated by `scripts/generate_hierarchical_audit_visuals.py` |
 | Normalized README/config/metrics/provenance | Manually authored from verified evidence |
 | JSON/YAML/link/image/hash validation | Scripted during each audit pass, but not yet centralized |
 | Scoreboard and index updates | Manual with cross-file validation |

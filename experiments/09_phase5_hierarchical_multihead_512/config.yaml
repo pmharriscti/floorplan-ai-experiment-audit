@@ -1,0 +1,155 @@
+experiment_id: 09_phase5_hierarchical_multihead_512
+name: Phase 5 hierarchical multi-head MitUNet 512
+evidence_status: VERIFIED
+status: completed
+source_run_directory: /mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED
+source_config: /home/pmharris/dev/mitunet/configs/experiments/mitunet_hierarchical_multihead_512_noaug.yaml   # byte-identical to the run's audit/config_snapshot.yaml
+launch_command: "scripts/run_hierarchical_multihead_experiment.py --config configs/experiments/mitunet_hierarchical_multihead_512_noaug.yaml --stage all --weighting fixed --run-tag NOAUG_FIXED"
+task:
+  mode: hierarchical_multihead_512
+  question: Can a shared-encoder, task-group-decoder, 8-head model add wall-structure, opening, and fixture outputs while keeping the binary-wall baseline within 0.005 val IoU?
+  parent_checkpoint: 01_binary_mitunet best_model.pth (structural_wall target and wall path inherited unchanged)
+  targets:
+    - structural_wall          # == baseline wall target (Phase 1 wall_region; openings NOT subtracted)
+    - wall_boundary            # Phase 2 cache, reused by reference
+    - wall_centerline          # Phase 1 cache, reused by reference
+    - junction                 # Phase 1 cache, reused by reference
+    - endpoint                 # new: disk radius 3 at centerline endpoints
+    - door_opening             # Phase 2 cache (top-level Door polygon; panel/swing/leaf excluded)
+    - window_opening           # new: top_level_window_polygon_candidate_v2, training dilation 1
+    - fixtures                 # new: 9 classes (cabinetry_storage, appliance, toilet_urinal, sink_tap, sauna_bench, fireplace, bathtub_shower_jacuzzi, chimney, other_fixture)
+  derived_outputs:
+    visible_wall: structural_wall AND NOT raw door AND NOT raw window (derived, not a trained head)
+  target_generation_version: cubicasa-hierarchical-multihead-v1
+  target_generation_config_hash: 0e8b66cffa20f7ae3539193cf5673f66386dc1f01a66749876118d52e7e6f391
+data:
+  dataset: CubiCasa5K
+  dataset_version: 4
+  split_counts:
+    train: 4200
+    validation: 400
+    test: 400
+  splits_identical_to_baseline_manifests: true
+  input_size: 512
+  resize_mode: letterbox
+  normalization: ImageNet mean/std
+  augmentation: false            # THE ONE DEVIATION from the earlier Phase 5 runs; see README "Root cause"
+  augmentation_note: "The June 2026 baseline was not trained with the repository's current geometric augmentations (h/v flip, rot90); fine-tuning under them regressed the wall by 3-5 IoU points in one epoch. Photometric jitter alone was measured as harmless but was also disabled in this run."
+  subtract_openings: false
+model:
+  architecture: HierarchicalMitUNet (MitUNet + MiT-B4 shared encoder; segmentation_models_pytorch Unet decoders with scse attention)
+  encoder_name: mit_b4
+  initialisation: baseline 01 checkpoint; wall path logit-equivalent at init (max |delta| 0.0)
+  decoder_groups:
+    wall: [structural_wall]                                    # the baseline decoder, isolated
+    geometry: [wall_boundary, wall_centerline, junction, endpoint]
+    openings: [door_opening, window_opening]
+    fixtures: [fixtures]                                       # 9-channel head
+  head_activation: independent sigmoid per head (no softmax)
+  head_kernel_size: 3
+  parameter_count: 74468332
+  added_parameters_over_baseline: 10219668
+loss:
+  structural_wall: AsymmetricTversky(alpha=0.6, beta=0.4)     # baseline loss, unchanged
+  wall_boundary: 0.5 BCE(pos_weight<=15) + 0.5 SoftDice
+  wall_centerline: 0.5 BCE(pos_weight<=20) + 0.5 SoftClDice(iters=10)
+  junction: SigmoidFocalBCE(alpha=0.75, gamma=2.0, pos_weight<=20)
+  endpoint: SigmoidFocalBCE(alpha=0.75, gamma=2.0, pos_weight<=20)
+  door_opening: 0.5 SigmoidFocalBCE + 0.5 SoftDice
+  window_opening: 0.5 SigmoidFocalBCE + 0.5 SoftDice
+  fixtures: mean over 9 classes of 0.5 SigmoidFocalBCE(per-class pos_weight) + 0.5 SoftDice
+  task_weights_fixed:
+    structural_wall: 0.40
+    wall_boundary: 0.08
+    wall_centerline: 0.12
+    junction: 0.05
+    endpoint: 0.03
+    door_opening: 0.12
+    window_opening: 0.12
+    fixtures: 0.08
+  weighting_method: fixed        # config default is gradnorm; overridden with --weighting fixed
+training:
+  total_epochs_configured: 30
+  epochs_completed: 30
+  stopped_early: false
+  warmup:
+    epochs: 4
+    trainable: new decoders and heads only (encoder and wall path frozen and held in eval mode)
+    learning_rate: 0.0001
+  joint:
+    epochs: 26
+    encoder_lr: 0.00001
+    wall_path_lr: 0.00001
+    new_path_lr: 0.0001
+    lr_warmup_epochs: 1          # linear ramp of the inherited groups over the first joint epoch
+    scheduler: ReduceLROnPlateau(mode=max, factor=0.5, patience=3) on val gated hierarchical score (never triggered)
+    early_stopping_metric: val_gated_hierarchical_score
+    early_stopping_patience: 8
+  batch_size: 4
+  effective_batch_size: 4
+  gradient_accumulation_steps: 1
+  optimizer: adam
+  weight_decay: 0.0
+  amp: true
+  seed: 42
+  steps_per_epoch: 1050
+  mean_epoch_seconds: 767.55
+  interruption: "Host reboot after epoch 15; resumed from last.pth with --resume (optimizer/scheduler/scaler/weighter/bests restored); epochs 16-30 trained after resume."
+selection:
+  rule: best val hierarchical score among epochs whose val structural_wall IoU@0.1 >= reproduced baseline - 0.005
+  wall_floor: 0.8138460992164052
+  reproduced_baseline_val_iou_at_0_1: 0.8188460992164052
+  score_weights:
+    structural_wall_iou: 0.40
+    wall_boundary_f1_2px: 0.10
+    wall_centerline_skeleton_cldice: 0.10
+    junction_f1_5px: 0.05
+    endpoint_f1_5px: 0.05
+    door_opening_object_f1: 0.10
+    window_opening_object_f1: 0.10
+    fixtures_macro_iou: 0.10
+  selected_epoch: 30
+  selected_checkpoint: best_gated_hierarchical_score.pth
+  threshold_selection: validation only; test untouched
+thresholds:
+  structural_wall: 0.05
+  wall_boundary: 0.95
+  wall_centerline: 0.95
+  junction: 0.85
+  junction_nms_radius: 3
+  endpoint: 0.8
+  endpoint_nms_radius: 3
+  door_opening: 0.95
+  window_opening: 0.9
+  opening_min_component_area: 1
+  fixtures:
+    appliance: 0.45
+    bathtub_shower_jacuzzi: 0.1
+    cabinetry_storage: 0.8
+    chimney: 0.95
+    fireplace: 0.1
+    other_fixture: 0.95
+    sauna_bench: 0.75
+    sink_tap: 0.65
+    toilet_urinal: 0.3
+checkpoint:
+  path: /mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/checkpoints/best_gated_hierarchical_score.pth
+  size_bytes: 298489547
+  sha256: c281b31974e194f216df3e2170eb5b2197d72a872713ed9176973940a95357ae
+  sha256_source: computed by the audit (2026-09-24)
+code:
+  git_commit: 459778bd07b1a0b8a60413a2e681bbd4ff7bd829
+  git_state: dirty; Phase 5 modules, script and configs untracked (file hashes in provenance.json)
+environment:
+  gpu: NVIDIA RTX PRO 3000 Blackwell Generation Laptop GPU (12.8 GB)
+  torch: 2.12.0+cu130
+  cuda: "13.0"
+  host: WSL2 (Linux 6.6.87.2-microsoft-standard-WSL2)
+  peak_gpu_memory_allocated_gb: 10.07
+tracking:
+  mlflow_run_id: 88a860218a924f6f88bf614ca2dc00fe
+  mlflow_tracking_uri: sqlite:////mnt/e/AI_Team/mitunet/mlflow/mlflow.db
+  dvc: UNKNOWN
+unknowns:
+  dvc_status: UNKNOWN
+  gradnorm_with_augmentation_off: not run

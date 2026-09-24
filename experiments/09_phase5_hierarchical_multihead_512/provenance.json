@@ -1,0 +1,278 @@
+{
+  "experiment_id": "09_phase5_hierarchical_multihead_512",
+  "evidence_status": "VERIFIED",
+  "created_utc": "2026-09-24T19:04:19Z",
+  "source_run_directory": "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED",
+  "source_repository": "/home/pmharris/dev/mitunet",
+  "config_used": {
+    "path": "/home/pmharris/dev/mitunet/configs/experiments/mitunet_hierarchical_multihead_512_noaug.yaml",
+    "sha256": "ea6dda8b54aeba62c86ea2583d1e8392630b55ce341d13ba1292e7ad69f4cc35",
+    "run_config_snapshot": "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/audit/config_snapshot.yaml",
+    "run_config_snapshot_sha256": "ea6dda8b54aeba62c86ea2583d1e8392630b55ce341d13ba1292e7ad69f4cc35",
+    "snapshot_matches_repo_config": true
+  },
+  "source_files": {
+    "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/artifacts/FINAL_REPORT.md": "e72fd7197123a3813168b39097d895c673d59925ebe7ff95ca0a6cb3c9eb7e5a",
+    "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/audit/evaluate_summary.json": "f2074c6d2c32febfc7ec1a8a15ce8f455b6042762199c54f32c033a1ed7024ab",
+    "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/audit/train_summary.json": "375c2692772830d8f7d6d7b1cdeeaec37814686d9fac76def6aba8f44803a5c9",
+    "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/audit/threshold_search.json": "198d1c07ad74e680fe3352f3ac66e5f10d75c65fcd644f8d2d2c8b63700cf6ec",
+    "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/audit/resolved_config.json": "d312261db2f774ec45d2cdb52bd63a690d7f45f0c5cdb05dff98fc508bfc33cc",
+    "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/audit/config_snapshot.yaml": "ea6dda8b54aeba62c86ea2583d1e8392630b55ce341d13ba1292e7ad69f4cc35",
+    "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/audit/reproduce-baseline_summary.json": "a41196686ccd6371ac3d01c1d88539f5db03a3daa2304a388b0f7d4d9e94f7aa",
+    "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/audit/checkpoint-proof_summary.json": "fa3356c0ec0f7813d08d1a74b7f7f1442a89240b18cf3115dc0866b8cac44edb",
+    "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/audit/label_validation.json": "f524b371a1d8f8002e8e9920b6ba083aa9a5055db02aa21db75bebd4ca78917d",
+    "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/audit/generate-targets_summary.json": "f611e0eecfbf025b0866ea3cd4954bcc7c4dc5477f2562c7ed80cdec8fe3300d",
+    "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/audit/mlflow_run.json": "e0cdacc4bf3c09f42ed30179176003ff4df3dd599d1c847c08524b9cf646ace7",
+    "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/audit/storage_audit.json": "26b57b837e033bec369fc9f5001b354a42258bfa914bc087727f4ea88e79ebfb",
+    "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/metrics/training_history.csv": "22337f625cb65b47939c51d07a27b5f85c691712bc7eb9db1d57b939b85b420c",
+    "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/metrics/per_image_val_metrics.csv": "dca212763128e6e2d475711d9ba16c4680680d0dead52327cf382dcb8ad30425",
+    "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/logs/commands_executed.txt": "10065ff8c78f9dd1db795c79e52eba96fed14453a497d71d13c8885b5265fc5a"
+  },
+  "parent_checkpoint": {
+    "experiment_id": "01_binary_mitunet",
+    "path": "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu/best_model.pth",
+    "sha256": "fb9665056aa06057a571f247882ba5d32abde297215f2ae94d210759f540b72f",
+    "matches_experiment_01_scoreboard_hash": true,
+    "baseline_trained": "2026-06-25 (predates the source repository's only git commit of 2026-07-23)"
+  },
+  "checkpoint": {
+    "selected_path": "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/checkpoints/best_gated_hierarchical_score.pth",
+    "selection": "best_gated_hierarchical_score (epoch 30, joint_finetune)",
+    "size_bytes": 298489547,
+    "sha256": "c281b31974e194f216df3e2170eb5b2197d72a872713ed9176973940a95357ae",
+    "sha256_status": "computed by the audit on 2026-09-24 (the run does not write a checkpoint manifest)",
+    "other_checkpoints_present": {
+      "best_hierarchical_score.pth": 298481543,
+      "best_structural_wall_iou.pth": 298482685,
+      "last.pth": 894984965,
+      "smoke_model.pth": 298445119
+    }
+  },
+  "data": {
+    "dataset": "CubiCasa5K v4",
+    "manifest_dir": "/mnt/e/AI_Team/mitunet/derived_data/mitunet_hierarchical_multihead_512/manifests/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED",
+    "manifests": {
+      "train": {
+        "path": "/mnt/e/AI_Team/mitunet/derived_data/mitunet_hierarchical_multihead_512/manifests/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/train_manifest.csv",
+        "rows": 4200,
+        "sha256": "85031bbe15e780ee44ed6f92205b2ced68bdc42140981a2a46bd79b30c33bde3"
+      },
+      "val": {
+        "path": "/mnt/e/AI_Team/mitunet/derived_data/mitunet_hierarchical_multihead_512/manifests/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/val_manifest.csv",
+        "rows": 400,
+        "sha256": "ea5b91ad8e455c2769f04ae9943dd9229f718657cba6a9e7b02666910877b10d"
+      },
+      "test": {
+        "path": "/mnt/e/AI_Team/mitunet/derived_data/mitunet_hierarchical_multihead_512/manifests/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/test_manifest.csv",
+        "rows": 400,
+        "sha256": "d0c853245805200dacbec2a8f957c9d2fd5bbe4b5968e83f6220afa11845b999"
+      },
+      "hierarchical": {
+        "path": "/mnt/e/AI_Team/mitunet/derived_data/mitunet_hierarchical_multihead_512/manifests/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/hierarchical_manifest.csv",
+        "rows": 5000,
+        "sha256": "e511147e761d91bc86ce24f2c32d0a9c90c3d0d7e53b2c6d1ab1fb9843cfc87e"
+      }
+    },
+    "splits_identical_to_baseline_manifests": true,
+    "structural_wall_target_identical_to_baseline": "yes (label validation: 100 samples, min IoU 1.0; audit re-check: 40 train + 20 val masks pixel-identical after letterbox)",
+    "target_generation_version": "cubicasa-hierarchical-multihead-v1",
+    "target_generation_config_hash": "0e8b66cffa20f7ae3539193cf5673f66386dc1f01a66749876118d52e7e6f391",
+    "targets_root": "/mnt/e/AI_Team/mitunet/targets/mitunet_hierarchical_multihead_512",
+    "reused_by_reference": {
+      "phase1_cache": "/mnt/e/AI_Team/mitunet/phase1_wall_structure/cache",
+      "phase2_cache": "/mnt/e/AI_Team/mitunet/phase2_wall_boundary_door_openings/cache"
+    }
+  },
+  "code": {
+    "git_commit": "459778bd07b1a0b8a60413a2e681bbd4ff7bd829",
+    "git_branch": "master",
+    "git_state": "dirty (162 entries at report time; the hierarchical modules, experiment script and configs are UNTRACKED in the source repository)",
+    "file_sha256": {
+      "configs/experiments/mitunet_hierarchical_multihead_512.yaml": "ce0d7c051b9820175379da943f91d1a48885dc76d04178897f0fe312ba4a6777",
+      "configs/experiments/mitunet_hierarchical_multihead_512_noaug.yaml": "ea6dda8b54aeba62c86ea2583d1e8392630b55ce341d13ba1292e7ad69f4cc35",
+      "configs/experiments/mitunet_hierarchical_multihead_512_wall_only_ablation.yaml": "9a93b35fa1e58dc78a029f2cd18dc5edeb390eb67ec5e0f6a5b4bb00b2140150",
+      "scripts/run_hierarchical_multihead_experiment.py": "ca04dbabc16a1e240fc279d0f98be6f89c6c8661fb9cc9525fbd57bab12f10f9",
+      "scripts/diagnose_wall_finetune_regression.py": "9349cebbc3d436a1c40b22c46b4c241cf6607ae42ea821318a3f1b2052ea9731",
+      "mitunet_cubicasa/hierarchical_model.py": "85da0f809de5c6ad0776c87763abce7b9d752dca557ad7baf00bd2659c00b8b0",
+      "mitunet_cubicasa/hierarchical_losses.py": "f1dd373a1a408357385e023c62f5d2539927a98409047aa0a8c76b6d972053ea",
+      "mitunet_cubicasa/hierarchical_dataset.py": "814c297d574d3e9cabfbf1ed2e054e0ebebd1511cfba6ec6889fe33525b6e08c",
+      "mitunet_cubicasa/hierarchical_evaluation.py": "d7b48c185c4d6b168355fda615d708153fc39d9d440b5914177af07ef90a7265",
+      "mitunet_cubicasa/hierarchical_targets.py": "166ca57d47c56b506cdd9e3e2f2be59cf7f70dbd531dbbfb54f416780432ab3a",
+      "mitunet_cubicasa/hierarchical_label_validation.py": "6954b12e90499493f3bcf0d1a9662d0d689b5d86a0ee56074cad245edbe24184",
+      "mitunet_cubicasa/gradnorm.py": "a5f2196a33f790c44847b213d306113b6cdf9aa98e368b9cfffd76141d3da334",
+      "mitunet_cubicasa/transforms.py": "6b1c0f2233c4fde76010bb2e870bef131a6898df3180f3518b7ac12c563298cf",
+      "mitunet_cubicasa/model.py": "8d0a4f41daf34a8ca6bbf7ebf005266b0cca005d176568d59ef363d113e8ef8c",
+      "mitunet_cubicasa/losses.py": "6e792b8c6934f5252ba2aa1356413ecf1416b1f5da571048d0fde2e2b13b5faf"
+    },
+    "note": "Because the Phase 5 code is not committed, the file hashes above identify the code that ran; the commit alone does not."
+  },
+  "tracking": {
+    "mlflow": {
+      "run_id": "88a860218a924f6f88bf614ca2dc00fe",
+      "tracking_uri": "sqlite:////mnt/e/AI_Team/mitunet/mlflow/mlflow.db",
+      "experiment_name": "mitunet_hierarchical_multihead_512"
+    },
+    "dvc": {
+      "status": "UNKNOWN",
+      "reason": "The run's audit stage records the storage layout only; no DVC status file is written by this pipeline."
+    }
+  },
+  "environment": {
+    "torch": "2.12.0+cu130",
+    "cuda": "13.0",
+    "gpu": "NVIDIA RTX PRO 3000 Blackwell Generation Laptop GPU",
+    "gpu_vram_total_bytes": 12820480000,
+    "host": "WSL2 Linux 6.6.87.2-microsoft-standard-WSL2",
+    "amp": true,
+    "peak_gpu_memory_allocated_gb_smoke": 10.07205376
+  },
+  "run_interruptions": [
+    {
+      "when": "after epoch 15 (2026-09-24 08:22 EDT last.pth; host rebooted 08:38 EDT)",
+      "action": "resumed 2026-09-24 08:40 EDT with --stage train --resume from last.pth (model, optimizer, scheduler, scaler, weighter and best-checkpoint state restored); epochs 16-30 trained after the resume",
+      "evidence": "logs/commands_executed.txt (second line) and training_history.csv continuity"
+    }
+  ],
+  "related_runs": {
+    "gradnorm_augmentation_on": {
+      "run_dir": "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260922_115302_UTC",
+      "status": "stopped by operator after epoch 6; no train/evaluate/report summaries",
+      "training_history_sha256": "7cd9977d9ebd29872f384ed58cdbc67337517e354ef064e4880d8e1e8ca6f9d9"
+    },
+    "fixed_control_augmentation_on": {
+      "run_dir": "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260922_132902_UTC_FIXED_CONTROL",
+      "status": "completed all 12 stages; early-stopped at epoch 12; delivered epoch-4 (warm-up) checkpoint",
+      "final_report_sha256": "bc26e493266abc1cfba345e00fd11210e414fbe82249d43d0a65216f82a9b249",
+      "training_history_sha256": "5f57b985b9a956bb013c4f6446b05f6e2d9576c22fee5879cb5f9465e34c99b7"
+    },
+    "wall_only_ablation_augmentation_on": {
+      "run_dir": "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260922_185305_UTC_WALL_ONLY_ABLATION",
+      "status": "completed (0 warm-up + 3 joint epochs); delivered no gate-passing checkpoint",
+      "final_report_sha256": "9e078a378bf8add6aabf336c91637915ef87f7523adcc1ddbede46be6e35eb62",
+      "training_history_sha256": "0a175abc70ca908d0c64798eb4bb941881e43965e5fc7624fe0361f547bb29a3",
+      "diagnostics_dir": "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260922_185305_UTC_WALL_ONLY_ABLATION/artifacts/wall_finetune_regression_diagnostics",
+      "diagnostics_files": {
+        "diag_results.json": "afe1f9e6affe180823ff69c6bc2971574ee184ab8c775019b569e00f6eb79f88",
+        "aug_loss_probe.json": "ccdc30c1a33fc36f3c6b2492d36c82c8607f495299b29e9fb1f8c490bd77557c",
+        "wall_recipe_diagnostics.py": "9349cebbc3d436a1c40b22c46b4c241cf6607ae42ea821318a3f1b2052ea9731",
+        "aug_loss_probe.py": "32c90d3f1873764a1d3487c4801e409fa73ed93f2d172e350a4fdcd7b2ffc2c5",
+        "aug_loss_probe_perop.json": "74d80fc9f1bb3949e431f96c0cae2becbf401699b4b57c6b19077b238e55aedd",
+        "aug_loss_probe_perop.py": "88e9b438825001a95bb633238e44e7db57733d8aaf92e83812e3c4fdd2493e78"
+      }
+    }
+  },
+  "copied_artifacts": {
+    "results/training_history.csv": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/metrics/training_history.csv",
+      "source_sha256": "22337f625cb65b47939c51d07a27b5f85c691712bc7eb9db1d57b939b85b420c",
+      "audit_copy_sha256": "22337f625cb65b47939c51d07a27b5f85c691712bc7eb9db1d57b939b85b420c",
+      "identical": true,
+      "transformation": "none"
+    },
+    "results/evaluate_summary.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/audit/evaluate_summary.json",
+      "source_sha256": "f2074c6d2c32febfc7ec1a8a15ce8f455b6042762199c54f32c033a1ed7024ab",
+      "audit_copy_sha256": "f2074c6d2c32febfc7ec1a8a15ce8f455b6042762199c54f32c033a1ed7024ab",
+      "identical": true,
+      "transformation": "none"
+    },
+    "results/train_summary.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/audit/train_summary.json",
+      "source_sha256": "375c2692772830d8f7d6d7b1cdeeaec37814686d9fac76def6aba8f44803a5c9",
+      "audit_copy_sha256": "375c2692772830d8f7d6d7b1cdeeaec37814686d9fac76def6aba8f44803a5c9",
+      "identical": true,
+      "transformation": "none"
+    },
+    "results/threshold_search.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/audit/threshold_search.json",
+      "source_sha256": "198d1c07ad74e680fe3352f3ac66e5f10d75c65fcd644f8d2d2c8b63700cf6ec",
+      "audit_copy_sha256": "198d1c07ad74e680fe3352f3ac66e5f10d75c65fcd644f8d2d2c8b63700cf6ec",
+      "identical": true,
+      "transformation": "none"
+    },
+    "results/source_FINAL_REPORT.md": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/artifacts/FINAL_REPORT.md",
+      "source_sha256": "e72fd7197123a3813168b39097d895c673d59925ebe7ff95ca0a6cb3c9eb7e5a",
+      "audit_copy_sha256": "e72fd7197123a3813168b39097d895c673d59925ebe7ff95ca0a6cb3c9eb7e5a",
+      "identical": true,
+      "transformation": "none"
+    },
+    "results/commands_executed.txt": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/logs/commands_executed.txt",
+      "source_sha256": "10065ff8c78f9dd1db795c79e52eba96fed14453a497d71d13c8885b5265fc5a",
+      "audit_copy_sha256": "10065ff8c78f9dd1db795c79e52eba96fed14453a497d71d13c8885b5265fc5a",
+      "identical": true,
+      "transformation": "none"
+    },
+    "results/related_runs/gradnorm_20260922_115302_training_history.csv": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260922_115302_UTC/metrics/training_history.csv",
+      "source_sha256": "7cd9977d9ebd29872f384ed58cdbc67337517e354ef064e4880d8e1e8ca6f9d9",
+      "audit_copy_sha256": "7cd9977d9ebd29872f384ed58cdbc67337517e354ef064e4880d8e1e8ca6f9d9",
+      "identical": true,
+      "transformation": "none"
+    },
+    "results/related_runs/fixed_control_20260922_132902_training_history.csv": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260922_132902_UTC_FIXED_CONTROL/metrics/training_history.csv",
+      "source_sha256": "5f57b985b9a956bb013c4f6446b05f6e2d9576c22fee5879cb5f9465e34c99b7",
+      "audit_copy_sha256": "5f57b985b9a956bb013c4f6446b05f6e2d9576c22fee5879cb5f9465e34c99b7",
+      "identical": true,
+      "transformation": "none"
+    },
+    "results/related_runs/wall_only_ablation_20260922_185305_training_history.csv": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260922_185305_UTC_WALL_ONLY_ABLATION/metrics/training_history.csv",
+      "source_sha256": "0a175abc70ca908d0c64798eb4bb941881e43965e5fc7624fe0361f547bb29a3",
+      "audit_copy_sha256": "0a175abc70ca908d0c64798eb4bb941881e43965e5fc7624fe0361f547bb29a3",
+      "identical": true,
+      "transformation": "none"
+    },
+    "results/diagnostics/diag_results.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260922_185305_UTC_WALL_ONLY_ABLATION/artifacts/wall_finetune_regression_diagnostics/diag_results.json",
+      "source_sha256": "afe1f9e6affe180823ff69c6bc2971574ee184ab8c775019b569e00f6eb79f88",
+      "audit_copy_sha256": "afe1f9e6affe180823ff69c6bc2971574ee184ab8c775019b569e00f6eb79f88",
+      "identical": true,
+      "transformation": "none"
+    },
+    "results/diagnostics/aug_loss_probe.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260922_185305_UTC_WALL_ONLY_ABLATION/artifacts/wall_finetune_regression_diagnostics/aug_loss_probe.json",
+      "source_sha256": "ccdc30c1a33fc36f3c6b2492d36c82c8607f495299b29e9fb1f8c490bd77557c",
+      "audit_copy_sha256": "ccdc30c1a33fc36f3c6b2492d36c82c8607f495299b29e9fb1f8c490bd77557c",
+      "identical": true,
+      "transformation": "none"
+    },
+    "results/diagnostics/aug_loss_probe_perop.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260922_185305_UTC_WALL_ONLY_ABLATION/artifacts/wall_finetune_regression_diagnostics/aug_loss_probe_perop.json",
+      "source_sha256": "74d80fc9f1bb3949e431f96c0cae2becbf401699b4b57c6b19077b238e55aedd",
+      "audit_copy_sha256": "74d80fc9f1bb3949e431f96c0cae2becbf401699b4b57c6b19077b238e55aedd",
+      "identical": true,
+      "transformation": "none"
+    }
+  },
+  "visual_evidence": {
+    "strategy": "saved_thresholded_masks",
+    "script": "scripts/generate_hierarchical_audit_visuals.py",
+    "source": "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/masks/val",
+    "samples": [
+      "high_quality_architectural/333",
+      "high_quality_architectural/3015",
+      "high_quality_architectural/5559"
+    ],
+    "cross_check": "per-image structural_wall IoU recomputed from the saved masks equals metrics/per_image_val_metrics.csv for all three samples",
+    "no_inference_performed": true
+  },
+  "plots": {
+    "joint_phase_wall_iou_and_score.png": {
+      "derived_from": [
+        "results/training_history.csv",
+        "results/related_runs/*_training_history.csv"
+      ],
+      "generated_by": "audit (matplotlib), 2026-09-24"
+    }
+  },
+  "large_artifacts_committed": false,
+  "missing_or_deferred": [
+    "DVC status not recorded by this pipeline.",
+    "Phase 5 code is untracked in the source repository; file hashes are recorded instead of a clean commit.",
+    "The GradNorm run was stopped manually and has no final report.",
+    "The per-op augmentation probe was regenerated on 2026-09-24 (the first copy was lost to a host reboot); the regenerated values reproduce the session-logged values exactly."
+  ]
+}

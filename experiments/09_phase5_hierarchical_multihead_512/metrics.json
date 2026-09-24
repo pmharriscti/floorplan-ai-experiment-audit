@@ -1,0 +1,860 @@
+{
+  "experiment_id": "09_phase5_hierarchical_multihead_512",
+  "evidence_status": "VERIFIED",
+  "primary_split": "validation",
+  "primary_metric_policy": "Final evaluation of the selected (best gated hierarchical score) checkpoint at validation-selected thresholds; structural_wall uses micro IoU/Dice at the validation-selected threshold 0.05. The wall-gate value at the baseline threshold 0.1 is recorded separately.",
+  "primary_metrics": {
+    "wall_iou": 0.8163773956524429,
+    "wall_dice": 0.8989072398791883,
+    "boundary_f1_2px": 0.9545912416245511,
+    "centerline_cldice": 0.49923712059981695,
+    "junction_f1_5px": 0.7870734231563665,
+    "door_object_f1": 0.8802919575908823,
+    "window_object_f1": 0.8806236251106608,
+    "endpoint_f1_5px": 0.33671869601605553,
+    "fixtures_macro_iou": 0.45816277648462456,
+    "hierarchical_score": 0.7500312363606518,
+    "visible_wall_iou_derived": 0.788995454179994
+  },
+  "selected_thresholds": {
+    "door_opening": 0.95,
+    "endpoint": 0.8,
+    "endpoint_nms_radius": 3,
+    "fixtures": {
+      "appliance": 0.45,
+      "bathtub_shower_jacuzzi": 0.1,
+      "cabinetry_storage": 0.8,
+      "chimney": 0.95,
+      "fireplace": 0.1,
+      "other_fixture": 0.95,
+      "sauna_bench": 0.75,
+      "sink_tap": 0.65,
+      "toilet_urinal": 0.3
+    },
+    "junction": 0.85,
+    "junction_nms_radius": 3,
+    "opening_min_component_area": 1,
+    "structural_wall": 0.05,
+    "wall_boundary": 0.95,
+    "wall_centerline": 0.95,
+    "window_opening": 0.9
+  },
+  "wall_protection_gate": {
+    "metric": "val structural_wall micro IoU at baseline threshold 0.1",
+    "reproduced_baseline_val_iou": 0.8188460992164052,
+    "floor_delta": -0.005,
+    "wall_floor": 0.8138460992164052,
+    "selected_checkpoint_val_iou_at_0_1": 0.8161948635674233,
+    "gate_met_checkpoint": true,
+    "replacement_requirement_met": true,
+    "joint_epochs_passing_gate": 26,
+    "joint_epochs_total": 26
+  },
+  "checkpoint_selection": {
+    "rule": "best val hierarchical score among epochs passing the wall gate",
+    "best_gated": {
+      "epoch": 30,
+      "score": 0.7445317228890463,
+      "wall_iou_at_baseline_threshold": 0.8161948635674233
+    },
+    "best_ungated_score": {
+      "epoch": 30,
+      "gate_passed": true,
+      "score": 0.7445317228890463,
+      "wall_iou_at_baseline_threshold": 0.8161948635674233
+    },
+    "best_wall_iou_epoch": {
+      "epoch": 11,
+      "score": 0.8230897318865986
+    },
+    "epochs_completed": 30,
+    "stopped_early": false,
+    "warmup_epochs": 4,
+    "joint_epochs": 26,
+    "weighting_method": "fixed",
+    "final_task_weights": {
+      "door_opening": 0.12,
+      "endpoint": 0.03,
+      "fixtures": 0.08,
+      "junction": 0.05,
+      "structural_wall": 0.4,
+      "wall_boundary": 0.08,
+      "wall_centerline": 0.12,
+      "window_opening": 0.12
+    }
+  },
+  "validation": {
+    "sample_count": 400,
+    "head_table": {
+      "door_opening": {
+        "dice": 0.7423615333707348,
+        "iou": 0.5902821463154029,
+        "pixel_accuracy": 0.9970744514465332,
+        "precision": 0.6392575246288853,
+        "primary": 0.8802919575908823,
+        "primary_name": "object_f1",
+        "recall": 0.8851199929504266,
+        "specificity": 0.9976101177368017
+      },
+      "endpoint": {
+        "dice": 0.13604499853083155,
+        "iou": 0.07298727620763427,
+        "pixel_accuracy": 0.999214859008789,
+        "precision": 0.29698524695317513,
+        "primary": 0.33671869601605553,
+        "primary_name": "f1_5px",
+        "recall": 0.08823129066506956,
+        "specificity": 0.9998535656171
+      },
+      "fixtures": {
+        "dice": 0.7529156273254534,
+        "iou": 0.6037407282321409,
+        "pixel_accuracy": 0.9976514678531223,
+        "precision": 0.7414279889594979,
+        "primary": 0.45816277648462456,
+        "primary_name": "macro_iou",
+        "recall": 0.7647648454701392,
+        "specificity": 0.9987462329483036
+      },
+      "junction": {
+        "dice": 0.5353477107600046,
+        "iou": 0.36551181102362207,
+        "pixel_accuracy": 0.9971950817108154,
+        "precision": 0.6643832124945593,
+        "primary": 0.7870734231563665,
+        "primary_name": "f1_5px",
+        "recall": 0.4482828870779977,
+        "specificity": 0.9991807973304655
+      },
+      "structural_wall": {
+        "dice": 0.8989072398791883,
+        "iou": 0.8163773956524429,
+        "pixel_accuracy": 0.9866989994049072,
+        "precision": 0.9030777485109195,
+        "primary": 0.8163773956524429,
+        "primary_name": "micro_iou",
+        "recall": 0.8947750738777359,
+        "specificity": 0.9932041711359137
+      },
+      "wall_boundary": {
+        "dice": 0.46429038488313756,
+        "iou": 0.3023295421952584,
+        "pixel_accuracy": 0.962535696029663,
+        "precision": 0.3138898256753575,
+        "primary": 0.9545912416245511,
+        "primary_name": "boundary_f1_2px",
+        "recall": 0.8914103728186615,
+        "specificity": 0.9638550976252274
+      },
+      "wall_centerline": {
+        "dice": 0.7862602833550878,
+        "iou": 0.6477997486384584,
+        "pixel_accuracy": 0.9879736614227295,
+        "precision": 0.7774996287559756,
+        "primary": 0.49923712059981695,
+        "primary_name": "skeleton_cldice",
+        "recall": 0.7952206131927011,
+        "specificity": 0.9934887153106978
+      },
+      "window_opening": {
+        "dice": 0.825730466632382,
+        "iou": 0.7031864858694908,
+        "pixel_accuracy": 0.9958214092254639,
+        "precision": 0.7441696746373408,
+        "primary": 0.8806236251106608,
+        "primary_name": "object_f1",
+        "recall": 0.9273699595477352,
+        "specificity": 0.9965600057899566
+      }
+    },
+    "structural_wall_micro_at_threshold": {
+      "0.1": {
+        "dice": 0.8987965773278638,
+        "iou": 0.8161948635674233,
+        "pixel_accuracy": 0.9867031574249268,
+        "precision": 0.9042513105154957,
+        "recall": 0.8934072589285675,
+        "specificity": 0.9933054194370944
+      },
+      "0.5": {
+        "dice": 0.8983596152708022,
+        "iou": 0.8154744758123901,
+        "pixel_accuracy": 0.9867007637023926,
+        "precision": 0.9076119652467944,
+        "recall": 0.8892940017151438,
+        "specificity": 0.9935939388018505
+      }
+    },
+    "boundary_summary": {
+      "average_symmetric_surface_distance_mean": 1.2994694509368014,
+      "boundary_component_count_error_mean": -3.4225,
+      "boundary_connected_component_count_mean": 4.3225,
+      "boundary_f1_1px_mean": 0.8683865510010704,
+      "boundary_f1_2px_mean": 0.9545912416245511,
+      "boundary_f1_3px_mean": 0.9692997456146231,
+      "boundary_ground_truth_pixel_count_mean": 4774.305,
+      "boundary_precision_1px_mean": 0.7987892193181589,
+      "boundary_precision_2px_mean": 0.9427171600440974,
+      "boundary_precision_3px_mean": 0.9659299734375079,
+      "boundary_predicted_pixel_count_mean": 13558.4675,
+      "boundary_recall_1px_mean": 0.955465045413618,
+      "boundary_recall_2px_mean": 0.9685943282593347,
+      "boundary_recall_3px_mean": 0.9739615288753791,
+      "ground_truth_boundary_connected_component_count_mean": 7.745,
+      "hausdorff_95_mean": 4.49083269477899,
+      "sample_count": 400
+    },
+    "junction_summary": {
+      "false_negative_junction_count_3px_mean": 10.41,
+      "false_negative_junction_count_5px_mean": 8.24,
+      "false_negative_junction_count_8px_mean": 7.565,
+      "false_positive_junction_count_3px_mean": 6.9175,
+      "false_positive_junction_count_5px_mean": 4.7475,
+      "false_positive_junction_count_8px_mean": 4.0725,
+      "ground_truth_junction_count_mean": 32.7825,
+      "junction_count_mae_mean": 4.9025,
+      "junction_f1_3px_mean": 0.7143760424271735,
+      "junction_f1_5px_mean": 0.7870734231563665,
+      "junction_f1_8px_mean": 0.8089409352700673,
+      "junction_point_overflow_mean": 0.0,
+      "junction_precision_3px_mean": 0.7614126369987204,
+      "junction_precision_5px_mean": 0.8416011668470281,
+      "junction_precision_8px_mean": 0.8660619658817152,
+      "junction_recall_3px_mean": 0.6844858266902384,
+      "junction_recall_5px_mean": 0.7526245995425866,
+      "junction_recall_8px_mean": 0.7729492424513179,
+      "mean_localization_error_5px_mean": 1.6200259376219543,
+      "median_localization_error_5px_mean": 1.488352154177303,
+      "predicted_junction_count_mean": 29.29,
+      "sample_count": 400
+    },
+    "endpoint_summary": {
+      "endpoint_count_mae_mean": 4.585,
+      "endpoint_f1_3px_mean": 0.271291546463316,
+      "endpoint_f1_5px_mean": 0.33671869601605553,
+      "endpoint_f1_8px_mean": 0.35229012219276357,
+      "endpoint_point_overflow_mean": 0.0,
+      "endpoint_precision_3px_mean": 0.251768431343806,
+      "endpoint_precision_5px_mean": 0.3163286465849454,
+      "endpoint_precision_8px_mean": 0.3301766848280226,
+      "endpoint_recall_3px_mean": 0.4746551924905758,
+      "endpoint_recall_5px_mean": 0.5584897220279086,
+      "endpoint_recall_8px_mean": 0.5811649517689277,
+      "false_negative_endpoint_count_3px_mean": 2.405,
+      "false_negative_endpoint_count_5px_mean": 2.0825,
+      "false_negative_endpoint_count_8px_mean": 1.9925,
+      "false_positive_endpoint_count_3px_mean": 5.905,
+      "false_positive_endpoint_count_5px_mean": 5.5825,
+      "false_positive_endpoint_count_8px_mean": 5.4925,
+      "ground_truth_endpoint_count_mean": 3.7725,
+      "mean_localization_error_5px_mean": 2.0223686412878457,
+      "median_localization_error_5px_mean": 2.010502713041902,
+      "predicted_endpoint_count_mean": 7.2725,
+      "sample_count": 400
+    },
+    "door_opening_summary": {
+      "door_center_localization_error_mean": 1.1753848868310142,
+      "door_component_overflow_mean": 0.0,
+      "door_false_negative_pixels_mean": 143.405,
+      "door_false_positive_pixels_mean": 623.51,
+      "door_mean_matched_iou_iou_0_25_mean": 0.6433137952136395,
+      "door_mean_matched_iou_iou_0_5_mean": 0.6869793691669186,
+      "door_median_matched_iou_iou_0_25_mean": 0.6413595513206042,
+      "door_median_matched_iou_iou_0_5_mean": 0.6821318976380462,
+      "door_object_count_mae_mean": 1.065,
+      "door_object_f1_center_distance_mean": 0.8764001114786653,
+      "door_object_f1_iou_0_25_mean": 0.8802919575908823,
+      "door_object_f1_iou_0_5_mean": 0.7388806072018329,
+      "door_object_precision_center_distance_mean": 0.8770048700244465,
+      "door_object_precision_iou_0_25_mean": 0.8818710136165775,
+      "door_object_precision_iou_0_5_mean": 0.7385170072392521,
+      "door_object_recall_center_distance_mean": 0.8903259689850578,
+      "door_object_recall_iou_0_25_mean": 0.8934324293597199,
+      "door_object_recall_iou_0_5_mean": 0.7515784618794431,
+      "door_opening_mean_matched_object_iou_mean": 0.6433137952136395,
+      "door_opening_median_matched_object_iou_mean": 0.6413595513206042,
+      "door_opening_object_f1_mean": 0.8802919575908823,
+      "door_opening_object_precision_mean": 0.8818710136165775,
+      "door_opening_object_recall_mean": 0.8934324293597199,
+      "door_opening_width_absolute_error_mean": 2.3631326672607518,
+      "door_pixel_dice_mean": 0.732873249303199,
+      "door_pixel_f1_mean": 0.732873249303199,
+      "door_pixel_iou_mean": 0.5921310048348413,
+      "door_pixel_precision_mean": 0.6360294887847666,
+      "door_pixel_recall_mean": 0.8883088232601841,
+      "ground_truth_door_component_count_mean": 9.53,
+      "predicted_door_component_count_mean": 9.545,
+      "sample_count": 400
+    },
+    "window_opening_summary": {
+      "ground_truth_window_component_count_mean": 7.7625,
+      "predicted_window_component_count_mean": 7.395,
+      "sample_count": 400,
+      "window_center_localization_error_mean": 2.015693658404118,
+      "window_component_overflow_mean": 0.0,
+      "window_false_negative_pixels_mean": 203.245,
+      "window_false_positive_pixels_mean": 892.1475,
+      "window_mean_matched_iou_iou_0_25_mean": 0.7240019570952125,
+      "window_mean_matched_iou_iou_0_5_mean": 0.7481264684074967,
+      "window_median_matched_iou_iou_0_25_mean": 0.7337592377727975,
+      "window_median_matched_iou_iou_0_5_mean": 0.7502345222233429,
+      "window_object_count_mae_mean": 1.2475,
+      "window_object_f1_center_distance_mean": 0.8479361498562834,
+      "window_object_f1_iou_0_25_mean": 0.8806236251106608,
+      "window_object_f1_iou_0_5_mean": 0.8174609145579749,
+      "window_object_precision_center_distance_mean": 0.8544165262314418,
+      "window_object_precision_iou_0_25_mean": 0.888668117557148,
+      "window_object_precision_iou_0_5_mean": 0.8218123865350784,
+      "window_object_recall_center_distance_mean": 0.8602366962233767,
+      "window_object_recall_iou_0_25_mean": 0.893770095286261,
+      "window_object_recall_iou_0_5_mean": 0.8305024538621208,
+      "window_opening_mean_matched_object_iou_mean": 0.7240019570952125,
+      "window_opening_median_matched_object_iou_mean": 0.7337592377727975,
+      "window_opening_object_f1_mean": 0.8806236251106608,
+      "window_opening_object_precision_mean": 0.888668117557148,
+      "window_opening_object_recall_mean": 0.893770095286261,
+      "window_opening_width_absolute_error_mean": 4.55757733794352,
+      "window_pixel_dice_mean": 0.8118161529560678,
+      "window_pixel_f1_mean": 0.8118161529560678,
+      "window_pixel_iou_mean": 0.6978431232146218,
+      "window_pixel_precision_mean": 0.732494428820322,
+      "window_pixel_recall_mean": 0.929082982930374
+    },
+    "fixtures": {
+      "macro_iou": 0.45816277648462456,
+      "macro_dice": 0.594046761937506,
+      "classes_with_support": 9,
+      "per_class": {
+        "appliance": {
+          "iou": 0.5986898448158855,
+          "dice": 0.7489756024375499,
+          "precision": 0.7678099356741548,
+          "recall": 0.7310431561719356,
+          "sample_support": 393,
+          "support_pixels": 580450
+        },
+        "bathtub_shower_jacuzzi": {
+          "iou": 0.25149146879847273,
+          "dice": 0.4019068049100226,
+          "precision": 0.38959178581000525,
+          "recall": 0.41502579451029814,
+          "sample_support": 332,
+          "support_pixels": 101572
+        },
+        "cabinetry_storage": {
+          "iou": 0.6989673261901703,
+          "dice": 0.822814324225483,
+          "precision": 0.8228260689255559,
+          "recall": 0.8228025798606838,
+          "sample_support": 395,
+          "support_pixels": 2592233
+        },
+        "chimney": {
+          "iou": 0.13277166225939363,
+          "dice": 0.23441910966340934,
+          "precision": 0.22424179476526798,
+          "recall": 0.2455641492265696,
+          "sample_support": 45,
+          "support_pixels": 8792
+        },
+        "fireplace": {
+          "iou": 0.40471384371018715,
+          "dice": 0.57622247480845,
+          "precision": 0.5807956690529615,
+          "recall": 0.571720736724009,
+          "sample_support": 131,
+          "support_pixels": 85568
+        },
+        "other_fixture": {
+          "iou": 0.1463230892128301,
+          "dice": 0.2552911837679356,
+          "precision": 0.20516667304527536,
+          "recall": 0.33782580200648665,
+          "sample_support": 82,
+          "support_pixels": 238028
+        },
+        "sauna_bench": {
+          "iou": 0.7468483076343768,
+          "dice": 0.8550808955424142,
+          "precision": 0.8684361023863032,
+          "recall": 0.8421302323767766,
+          "sample_support": 240,
+          "support_pixels": 461621
+        },
+        "sink_tap": {
+          "iou": 0.5137052300759013,
+          "dice": 0.6787387925588957,
+          "precision": 0.647132699319766,
+          "recall": 0.7135907085454817,
+          "sample_support": 390,
+          "support_pixels": 194243
+        },
+        "toilet_urinal": {
+          "iou": 0.629954215664404,
+          "dice": 0.7729716695233937,
+          "precision": 0.7708415928455834,
+          "recall": 0.7751135509590563,
+          "sample_support": 379,
+          "support_pixels": 153015
+        }
+      }
+    },
+    "visible_wall_derived": {
+      "dice": 0.8820541744100058,
+      "iou": 0.788995454179994,
+      "pixel_accuracy": 0.9881616878509522,
+      "precision": 0.8906751066511315,
+      "recall": 0.8735985280580465,
+      "specificity": 0.9942765810699427
+    },
+    "hierarchical_score": 0.7500312363606518,
+    "score_weights": {
+      "door_opening_object_f1": 0.1,
+      "endpoint_f1_5px": 0.05,
+      "fixtures_macro_iou": 0.1,
+      "junction_f1_5px": 0.05,
+      "structural_wall_iou": 0.4,
+      "wall_boundary_f1_2px": 0.1,
+      "wall_centerline_skeleton_cldice": 0.1,
+      "window_opening_object_f1": 0.1
+    }
+  },
+  "test": {
+    "sample_count": 400,
+    "head_table": {
+      "door_opening": {
+        "dice": 0.7428847485161676,
+        "iou": 0.5909440265236666,
+        "pixel_accuracy": 0.9968937015533448,
+        "precision": 0.6474275627028582,
+        "primary": 0.8751504111574657,
+        "primary_name": "object_f1",
+        "recall": 0.8713584682048813,
+        "specificity": 0.9975435588133851
+      },
+      "endpoint": {
+        "dice": 0.12736175115207374,
+        "iou": 0.06801193515641822,
+        "pixel_accuracy": 0.9991331672668458,
+        "precision": 0.2548899050839642,
+        "primary": 0.3173590605486322,
+        "primary_name": "f1_5px",
+        "recall": 0.0848893609941513,
+        "specificity": 0.9998149446518924
+      },
+      "fixtures": {
+        "dice": 0.7397815722903288,
+        "iou": 0.5870264678122605,
+        "pixel_accuracy": 0.9975060547722711,
+        "precision": 0.729258386289756,
+        "primary": 0.45617858244392373,
+        "primary_name": "macro_iou",
+        "recall": 0.7506129036093948,
+        "specificity": 0.9986776332091267
+      },
+      "junction": {
+        "dice": 0.53244883928879,
+        "iou": 0.36281449910799213,
+        "pixel_accuracy": 0.9970230007171631,
+        "precision": 0.6571927190981325,
+        "primary": 0.7667439205020895,
+        "primary_name": "f1_5px",
+        "recall": 0.4475062312747048,
+        "specificity": 0.9991124292925904
+      },
+      "structural_wall": {
+        "dice": 0.9011921461057063,
+        "iou": 0.8201544454854268,
+        "pixel_accuracy": 0.9866835880279541,
+        "precision": 0.9043598313393564,
+        "primary": 0.8201544454854268,
+        "primary_name": "micro_iou",
+        "recall": 0.8980465742064869,
+        "specificity": 0.9931120507148733
+      },
+      "wall_boundary": {
+        "dice": 0.46617548542073356,
+        "iou": 0.3039301308524249,
+        "pixel_accuracy": 0.9618433856964111,
+        "precision": 0.3151496860483219,
+        "primary": 0.9539204213294288,
+        "primary_name": "boundary_f1_2px",
+        "recall": 0.8951473234598468,
+        "specificity": 0.9631082844012868
+      },
+      "wall_centerline": {
+        "dice": 0.7900654688924258,
+        "iou": 0.6529819990914714,
+        "pixel_accuracy": 0.9879065132141114,
+        "precision": 0.7802086667763112,
+        "primary": 0.5035053752780867,
+        "primary_name": "skeleton_cldice",
+        "recall": 0.8001745104134496,
+        "specificity": 0.9934017235127768
+      },
+      "window_opening": {
+        "dice": 0.8226118590116432,
+        "iou": 0.6986751695333903,
+        "pixel_accuracy": 0.9955208587646485,
+        "precision": 0.7425510878977765,
+        "primary": 0.8557445328184917,
+        "primary_name": "object_f1",
+        "recall": 0.9220230324150508,
+        "specificity": 0.9963581711810013
+      }
+    },
+    "structural_wall_micro_at_threshold": {
+      "0.1": {
+        "dice": 0.901102821354336,
+        "iou": 0.8200064927502136,
+        "pixel_accuracy": 0.9866911220550537,
+        "precision": 0.9056113717099485,
+        "recall": 0.8966389398952419,
+        "specificity": 0.9932222208357054
+      },
+      "0.5": {
+        "dice": 0.9006848045273603,
+        "iou": 0.8193144315995012,
+        "pixel_accuracy": 0.986691255569458,
+        "precision": 0.9090814535899788,
+        "recall": 0.8924418457060173,
+        "specificity": 0.9935267612848429
+      }
+    },
+    "fixtures": {
+      "macro_iou": 0.45617858244392373,
+      "macro_dice": 0.5892627127076975,
+      "per_class": {
+        "appliance": {
+          "iou": 0.5964282098471788,
+          "dice": 0.7472032956674864,
+          "sample_support": 391
+        },
+        "bathtub_shower_jacuzzi": {
+          "iou": 0.28318961340955334,
+          "dice": 0.44138389284042345,
+          "sample_support": 339
+        },
+        "cabinetry_storage": {
+          "iou": 0.6902984925997575,
+          "dice": 0.8167770315384313,
+          "sample_support": 394
+        },
+        "chimney": {
+          "iou": 0.08914945095849619,
+          "dice": 0.1637047163362953,
+          "sample_support": 39
+        },
+        "fireplace": {
+          "iou": 0.435765833022272,
+          "dice": 0.6070151872955348,
+          "sample_support": 126
+        },
+        "other_fixture": {
+          "iou": 0.1233874488058294,
+          "dice": 0.2196703353540069,
+          "sample_support": 76
+        },
+        "sauna_bench": {
+          "iou": 0.7276974030188088,
+          "dice": 0.8423898788610804,
+          "sample_support": 261
+        },
+        "sink_tap": {
+          "iou": 0.5265317773362199,
+          "dice": 0.6898405721432301,
+          "sample_support": 389
+        },
+        "toilet_urinal": {
+          "iou": 0.6331590129971971,
+          "dice": 0.7753795043327893,
+          "sample_support": 384
+        }
+      }
+    },
+    "visible_wall_derived": {
+      "dice": 0.8848503780778822,
+      "iou": 0.793481305721754,
+      "pixel_accuracy": 0.9882796382904053,
+      "precision": 0.8906331341035945,
+      "recall": 0.8791422308751977,
+      "specificity": 0.9941717147275515
+    },
+    "hierarchical_score": 0.7467168595494466,
+    "boundary_f1_2px_mean": 0.9539204213294288,
+    "junction_f1_5px_mean": 0.7667439205020895,
+    "endpoint_f1_5px_mean": 0.3173590605486322,
+    "door_opening_object_f1_mean": 0.8751504111574657
+  },
+  "baseline_comparison": {
+    "source": "evaluate_summary.json baseline_comparison + delta_vs_reproduced_baseline",
+    "rows": {
+      "baseline_historical": {
+        "main_change": "none",
+        "test_dice": 0.90377,
+        "test_iou": 0.824434,
+        "threshold": 0.1,
+        "val_dice": 0.900402,
+        "val_iou": 0.818847
+      },
+      "baseline_reproduced_same_code": {
+        "main_change": "none (same checkpoint, this evaluator)",
+        "test_dice": 0.9037690489618984,
+        "test_iou": 0.8244330705186285,
+        "threshold": 0.1,
+        "val_dice": 0.9004017432471942,
+        "val_iou": 0.8188460992164052
+      },
+      "hierarchical_at_baseline_threshold": {
+        "main_change": "hierarchical multi-head (structural_wall head)",
+        "test_dice": 0.901102821354336,
+        "test_iou": 0.8200064927502136,
+        "threshold": 0.1,
+        "val_dice": 0.8987965773278638,
+        "val_iou": 0.8161948635674233
+      },
+      "hierarchical_at_selected_threshold": {
+        "main_change": "hierarchical multi-head (structural_wall head, validation-selected threshold)",
+        "test_dice": 0.9011921461057063,
+        "test_iou": 0.8201544454854268,
+        "threshold": 0.05,
+        "val_dice": 0.8989072398791883,
+        "val_iou": 0.8163773956524429
+      }
+    },
+    "delta_vs_reproduced_baseline_at_threshold_0_1": {
+      "test_iou": -0.004426577768414819,
+      "val_iou": -0.0026512356489818423
+    },
+    "reproduction_check": {
+      "within_tolerance": true,
+      "tolerance_abs_iou": 0.003,
+      "deltas": {
+        "test@0.10": {
+          "abs_delta_iou": 7.768426143472951e-07,
+          "historical_dice": 0.9037695157362454,
+          "historical_iou": 0.8244338473612428,
+          "reproduced_dice": 0.9037690489618984,
+          "reproduced_iou": 0.8244330705186285
+        },
+        "test@0.50": {
+          "abs_delta_iou": 1.37927470111876e-07,
+          "historical_dice": 0.9032839283924962,
+          "historical_iou": 0.8236260521545145,
+          "reproduced_dice": 0.9032838454438651,
+          "reproduced_iou": 0.8236259142270443
+        },
+        "val@0.10": {
+          "abs_delta_iou": 8.310851061787972e-07,
+          "historical_dice": 0.9004022456862498,
+          "historical_iou": 0.8188469303015113,
+          "reproduced_dice": 0.9004017432471942,
+          "reproduced_iou": 0.8188460992164052
+        }
+      }
+    },
+    "wall_logit_equivalence_at_init_max_abs_diff": null
+  },
+  "prior_phase_comparison": {
+    "note": "Same 400 validation samples; Phase 2 boundary and door targets are reused by reference; junction F1@5px uses the same point-matching metric family. Phase 1 reports hard clDice of the thresholded centerline (cldice_mean) while Phase 2/5 report skeleton clDice, so the centerline delta is NOT a like-for-like comparison and is omitted.",
+    "boundary_f1_2px": {
+      "phase2_05": 0.9347893344704645,
+      "phase5_09": 0.9545912416245511,
+      "delta": 0.019801907154086584
+    },
+    "door_object_f1": {
+      "phase2_05": 0.7796991077953163,
+      "phase5_09": 0.8802919575908823,
+      "delta": 0.10059284979556604
+    },
+    "junction_f1_5px": {
+      "phase1_04": 0.769385212829412,
+      "phase5_09": 0.7870734231563665,
+      "delta": 0.017688210326954557
+    },
+    "wall_region_iou": {
+      "phase1_04_wall_region_iou": 0.8208656034763073,
+      "phase5_09_structural_wall_iou": 0.8163773956524429
+    }
+  },
+  "training_history_not_scoreboard_primary": {
+    "val_structural_wall_iou_peak_at_0_1": {
+      "epoch": 11,
+      "value": 0.8230897318865986
+    },
+    "final_epoch_train_loss": 0.05879905650658267,
+    "mean_epoch_seconds": 767.5510885397593,
+    "training_seconds": 12222.89671087265,
+    "steps_per_epoch": 1050
+  },
+  "threshold_sweeps_note": {
+    "wall_boundary": {
+      "grid": [
+        "0.3",
+        "0.5",
+        "0.7",
+        "0.8",
+        "0.9",
+        "0.95"
+      ],
+      "values": {
+        "0.3": 0.9423775936540477,
+        "0.5": 0.9460466143018579,
+        "0.7": 0.9489747014539196,
+        "0.8": 0.9506151432768465,
+        "0.9": 0.9528531424201861,
+        "0.95": 0.9545912416245511
+      },
+      "observation": "Monotonically increasing up to the top of the grid (0.95); the sweep did not bracket a maximum."
+    }
+  },
+  "related_runs_same_design_augmentation_on": {
+    "note": "Three earlier runs of the same configuration with data.augmentation=true failed the wall gate on every joint epoch; they are recorded here as negative evidence and root-cause context, not as scoreboard rows.",
+    "gradnorm_20260922_115302_UTC": {
+      "weighting": "gradnorm",
+      "epochs_completed": 6,
+      "termination": "stopped by operator after epoch 6",
+      "joint_val_wall_iou_at_0_1": {
+        "5": 0.78134356288644,
+        "6": 0.7754659160744802
+      },
+      "gradnorm_final_task_weights_epoch_6": {
+        "train_structural_wall": 0.9051028490066528,
+        "train_wall_boundary": 0.38417214155197144,
+        "train_wall_centerline": 0.43782371282577515,
+        "train_junction": 2.853012800216675,
+        "train_endpoint": 2.4436163902282715,
+        "train_door_opening": 0.5902451872825623,
+        "train_window_opening": 0.38512611389160156,
+        "train_fixtures": 0.0008999617421068251
+      }
+    },
+    "fixed_control_20260922_132902_UTC": {
+      "weighting": "fixed",
+      "epochs_completed": 12,
+      "termination": "early stopping after 8 non-improving gated epochs",
+      "joint_val_wall_iou_at_0_1": {
+        "5": 0.775671736026343,
+        "6": 0.7797497927500189,
+        "7": 0.7848686127518942,
+        "8": 0.7831410603204024,
+        "9": 0.7682063942716753,
+        "10": 0.7817416850457232,
+        "11": 0.7809861479383391,
+        "12": 0.7714984105311525
+      },
+      "delivered_checkpoint_epoch": 4,
+      "delivered_val_hierarchical_score": 0.6987531980104139
+    },
+    "wall_only_ablation_20260922_185305_UTC": {
+      "weighting": "fixed with all new-head weights 0.0",
+      "warmup_epochs": 0,
+      "joint_epochs": 3,
+      "joint_val_wall_iou_at_0_1": {
+        "1": 0.7675972451949221,
+        "2": 0.7872034651318364,
+        "3": 0.7613575704781275
+      }
+    }
+  },
+  "root_cause_diagnostics": {
+    "source": "WALL_ONLY_ABLATION artifacts/wall_finetune_regression_diagnostics (one epoch from baseline init, val structural_wall micro IoU @0.1 before/after)",
+    "one_epoch_treatments": [
+      {
+        "mode": "bn_only",
+        "augmentation": true,
+        "lr_scale": 1.0,
+        "val_wall_iou_before": 0.8188460992164052,
+        "val_wall_iou_after": 0.8187351037288216,
+        "delta_iou": -0.00011099548758353173,
+        "train_wall_loss_mean": 0.1456580893908228
+      },
+      {
+        "mode": "train_bn_frozen",
+        "augmentation": true,
+        "lr_scale": 1.0,
+        "val_wall_iou_before": 0.8188460992164052,
+        "val_wall_iou_after": 0.7789289932380693,
+        "delta_iou": -0.039917105978335865,
+        "train_wall_loss_mean": 0.13455075498138155
+      },
+      {
+        "mode": "train_plain",
+        "augmentation": true,
+        "lr_scale": 1.0,
+        "val_wall_iou_before": 0.8188460992164052,
+        "val_wall_iou_after": 0.7847447098750695,
+        "delta_iou": -0.034101389341335664,
+        "train_wall_loss_mean": 0.13511243127641223
+      },
+      {
+        "mode": "train_encoder_frozen",
+        "augmentation": true,
+        "lr_scale": 1.0,
+        "val_wall_iou_before": 0.8188460992164052,
+        "val_wall_iou_after": 0.7871642554229101,
+        "delta_iou": -0.031681843793495035,
+        "train_wall_loss_mean": 0.13697851931764965
+      },
+      {
+        "mode": "train_wallpath_frozen",
+        "augmentation": true,
+        "lr_scale": 1.0,
+        "val_wall_iou_before": 0.8188460992164052,
+        "val_wall_iou_after": 0.7780017098299914,
+        "delta_iou": -0.04084438938641377,
+        "train_wall_loss_mean": 0.13629220611992338
+      },
+      {
+        "mode": "train_plain@lr_x0.1",
+        "augmentation": true,
+        "lr_scale": 0.1,
+        "val_wall_iou_before": 0.8188460992164052,
+        "val_wall_iou_after": 0.8028228263894651,
+        "delta_iou": -0.01602327282694005,
+        "train_wall_loss_mean": 0.13997632358755385
+      },
+      {
+        "mode": "train_plain@noaug",
+        "augmentation": false,
+        "lr_scale": 1.0,
+        "val_wall_iou_before": 0.8188460992164052,
+        "val_wall_iou_after": 0.8219998901432567,
+        "delta_iou": 0.0031537909268515296,
+        "train_wall_loss_mean": 0.08598944313469387
+      }
+    ],
+    "baseline_model_train_loss_probe": {
+      "val_no_augmentation": 0.1012247483432293,
+      "train_no_augmentation": 0.08603996245633988,
+      "train_current_augmentation_set": 0.14216979804493132,
+      "baseline_logged_final_train_loss": 0.0909,
+      "baseline_logged_val_loss": 0.1012,
+      "per_op_note": "The per-op fields inside aug_loss_probe.json are INVALID (all four ops report the same value because the DataLoader's persistent workers did not pick up the swapped transform); the corrected per-op probe is aug_loss_probe_perop.json."
+    },
+    "conclusion": "The joint-phase wall regression is caused by fine-tuning the 2026-06-25 baseline under geometric augmentations (flips, 90-degree rotations) it was not trained with. It is not caused by the new heads, GradNorm, BatchNorm statistics, the encoder or decoder specifically, or the learning rate.",
+    "baseline_model_train_loss_probe_per_op": {
+      "source": "aug_loss_probe_perop.json (baseline model, eval mode, first 300 train batches, each op forced with p=1.0)",
+      "results": {
+        "none": 0.09697871615489324,
+        "hflip": 0.1532636747757594,
+        "vflip": 0.14859859103957812,
+        "rot90_k1": 0.16015807499488194,
+        "rot180": 0.20467699612180393,
+        "brightcontrast": 0.09969707881410916,
+        "transpose": 0.1085731848080953
+      },
+      "reading": "Every geometric op (flips, 90/180-degree rotations, transpose) raises the baseline's training loss by 12-110% relative to no augmentation; brightness/contrast jitter changes it by about 2%. The baseline was therefore not trained under geometric augmentation."
+    }
+  },
+  "label_validation": {
+    "status": "PASS",
+    "passed": true,
+    "critical_failures": [],
+    "analysed_sample_count": 5000,
+    "structural_wall_identical_to_baseline_target": true,
+    "door_opening_identical_to_symbol_fraction": 0.9389755902360944,
+    "window_opening_identical_to_symbol_fraction": 0.7972266881028939,
+    "note": "A high identical-to-symbol fraction means the candidate_v2 opening definition coincides with the symbol footprint for this parser; the source report says this must be read before treating openings as corridor targets."
+  }
+}

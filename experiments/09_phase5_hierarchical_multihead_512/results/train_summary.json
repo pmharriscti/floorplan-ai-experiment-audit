@@ -1,0 +1,459 @@
+{
+  "amp": true,
+  "architecture": {
+    "activation_contract": "independent_sigmoid_heads",
+    "checkpoint_loading": {
+      "copied_decoder_groups": [
+        "geometry",
+        "openings",
+        "fixtures"
+      ],
+      "missing_keys_only_new_paths": true,
+      "unexpected_keys": []
+    },
+    "decoder_attention_type": "scse",
+    "decoder_groups": {
+      "fixtures": [
+        "fixtures"
+      ],
+      "geometry": [
+        "wall_boundary",
+        "wall_centerline",
+        "junction",
+        "endpoint"
+      ],
+      "openings": [
+        "door_opening",
+        "window_opening"
+      ],
+      "wall": [
+        "structural_wall"
+      ]
+    },
+    "derived_outputs": {
+      "visible_wall": "structural_wall AND NOT door_opening AND NOT window_opening"
+    },
+    "encoder_name": "mit_b4",
+    "encoder_weights_loaded": "imagenet",
+    "encoder_weights_requested": "imagenet",
+    "fixture_classes": [
+      "cabinetry_storage",
+      "appliance",
+      "toilet_urinal",
+      "sink_tap",
+      "sauna_bench",
+      "fireplace",
+      "bathtub_shower_jacuzzi",
+      "chimney",
+      "other_fixture"
+    ],
+    "head_kernel_size": 3,
+    "in_channels": 3,
+    "library": "segmentation_models_pytorch",
+    "model_counts": {
+      "buffer_count": 7976,
+      "parameter_count": 74468332,
+      "state_entry_count": 1328,
+      "trainable_parameter_count": 74468332
+    },
+    "multihead_output": true,
+    "name": "HierarchicalMitUNet",
+    "new_decoder_init": "copy_baseline",
+    "output": "named_raw_logits",
+    "outputs": {
+      "door_opening": {
+        "activation": "sigmoid",
+        "channels": 1,
+        "decoder_group": "openings",
+        "key": "door_opening_logits",
+        "stage": "stage2_wall_interruptions"
+      },
+      "endpoint": {
+        "activation": "sigmoid",
+        "channels": 1,
+        "decoder_group": "geometry",
+        "key": "endpoint_logits",
+        "stage": "stage1_structural_geometry"
+      },
+      "fixtures": {
+        "activation": "sigmoid",
+        "channels": 9,
+        "decoder_group": "fixtures",
+        "key": "fixtures_logits",
+        "stage": "stage3_symbols_fixtures"
+      },
+      "junction": {
+        "activation": "sigmoid",
+        "channels": 1,
+        "decoder_group": "geometry",
+        "key": "junction_logits",
+        "stage": "stage1_structural_geometry"
+      },
+      "structural_wall": {
+        "activation": "sigmoid",
+        "channels": 1,
+        "decoder_group": "wall",
+        "key": "structural_wall_logits",
+        "stage": "stage1_structural_geometry"
+      },
+      "wall_boundary": {
+        "activation": "sigmoid",
+        "channels": 1,
+        "decoder_group": "geometry",
+        "key": "wall_boundary_logits",
+        "stage": "stage1_structural_geometry"
+      },
+      "wall_centerline": {
+        "activation": "sigmoid",
+        "channels": 1,
+        "decoder_group": "geometry",
+        "key": "wall_centerline_logits",
+        "stage": "stage1_structural_geometry"
+      },
+      "window_opening": {
+        "activation": "sigmoid",
+        "channels": 1,
+        "decoder_group": "openings",
+        "key": "window_opening_logits",
+        "stage": "stage2_wall_interruptions"
+      }
+    },
+    "parameter_counts_by_component": {
+      "decoder.fixtures": 3405831,
+      "decoder.geometry": 3405831,
+      "decoder.openings": 3405831,
+      "decoder.wall": 3405831,
+      "encoder": 60842688,
+      "head.door_opening": 145,
+      "head.endpoint": 145,
+      "head.fixtures": 1305,
+      "head.junction": 145,
+      "head.structural_wall": 145,
+      "head.wall_boundary": 145,
+      "head.wall_centerline": 145,
+      "head.window_opening": 145
+    },
+    "shared_decoder": false,
+    "shared_encoder": true,
+    "source_architecture": {
+      "classes": 1,
+      "decoder_attention_type": "scse",
+      "encoder_name": "mit_b4",
+      "encoder_weights_loaded": "imagenet",
+      "encoder_weights_requested": "imagenet",
+      "in_channels": 3,
+      "library": "segmentation_models_pytorch",
+      "name": "MitUNet",
+      "output": "raw_logits",
+      "uses_segformer_encoder_transplant": true
+    },
+    "source_checkpoint": "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu/best_model.pth",
+    "task_mode": "hierarchical_multihead_512",
+    "uses_segformer_encoder_transplant": true,
+    "wall_path_source": "baseline encoder/decoder/segmentation_head weights loaded under decoders.wall / heads.structural_wall"
+  },
+  "bests": {
+    "gated": {
+      "epoch": 30,
+      "score": 0.7445317228890463,
+      "wall_iou_at_baseline_threshold": 0.8161948635674233
+    },
+    "score": {
+      "epoch": 30,
+      "gate_passed": true,
+      "score": 0.7445317228890463,
+      "wall_iou_at_baseline_threshold": 0.8161948635674233
+    },
+    "wall": {
+      "epoch": 11,
+      "score": 0.8230897318865986
+    }
+  },
+  "checkpoints": {
+    "best_gated_hierarchical_score.pth": "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/checkpoints/best_gated_hierarchical_score.pth",
+    "best_hierarchical_score.pth": "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/checkpoints/best_hierarchical_score.pth",
+    "best_structural_wall_iou.pth": "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/checkpoints/best_structural_wall_iou.pth",
+    "last.pth": "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/checkpoints/last.pth",
+    "smoke_model.pth": "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/checkpoints/smoke_model.pth"
+  },
+  "device": {
+    "cuda_available": true,
+    "cuda_version": "13.0",
+    "gpu_model": "NVIDIA RTX PRO 3000 Blackwell Generation Laptop GPU",
+    "gpu_vram_available_bytes": 11561598976,
+    "gpu_vram_total_bytes": 12820480000,
+    "mps_available": false,
+    "selected_device": "cuda",
+    "torch_version": "2.12.0+cu130"
+  },
+  "early_stopping": {
+    "epochs_without_improvement": 0,
+    "metric": "val_gated_hierarchical_score",
+    "patience": 8
+  },
+  "environment": {
+    "cwd": "/home/pmharris/dev/mitunet",
+    "device": {
+      "cuda_available": true,
+      "cuda_version": "13.0",
+      "gpu_model": "NVIDIA RTX PRO 3000 Blackwell Generation Laptop GPU",
+      "gpu_vram_available_bytes": 11561598976,
+      "gpu_vram_total_bytes": 12820480000,
+      "mps_available": false,
+      "selected_device": "cuda",
+      "torch_version": "2.12.0+cu130"
+    },
+    "packages": {
+      "Pillow": "12.2.0",
+      "albumentations": "2.0.8",
+      "numpy": "2.4.5",
+      "opencv-python-headless": "4.10.0.84",
+      "pandas": "2.3.3",
+      "pyyaml": "6.0.3",
+      "scikit-image": "0.26.0",
+      "segmentation-models-pytorch": "0.5.0",
+      "svgpathtools": "1.7.2",
+      "torch": "2.12.0",
+      "torchvision": "0.27.0"
+    },
+    "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "python_executable": "/home/pmharris/dev/mitunet/.venv/bin/python"
+  },
+  "epochs_completed": 30,
+  "epochs_configured": 30,
+  "final_task_weights": {
+    "door_opening": 0.12,
+    "endpoint": 0.03,
+    "fixtures": 0.08,
+    "junction": 0.05,
+    "structural_wall": 0.4,
+    "wall_boundary": 0.08,
+    "wall_centerline": 0.12,
+    "window_opening": 0.12
+  },
+  "history_csv": "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/metrics/training_history.csv",
+  "joint_epochs": 26,
+  "limit": null,
+  "load_report": {
+    "added_parameter_count": 10219668,
+    "baseline_model_counts": {
+      "buffer_count": 1994,
+      "parameter_count": 64248664,
+      "state_entry_count": 954,
+      "trainable_parameter_count": 64248664
+    },
+    "decoder_groups_initialised_from_baseline_decoder": [
+      "geometry",
+      "openings",
+      "fixtures"
+    ],
+    "hierarchical_model_counts": {
+      "buffer_count": 7976,
+      "parameter_count": 74468332,
+      "state_entry_count": 1328,
+      "trainable_parameter_count": 74468332
+    },
+    "loaded_key_count": 954,
+    "loaded_parameter_count": 64250658,
+    "missing_key_prefixes": [
+      "decoders.fixtures",
+      "decoders.geometry",
+      "decoders.openings",
+      "heads.door_opening",
+      "heads.endpoint",
+      "heads.fixtures",
+      "heads.junction",
+      "heads.wall_boundary",
+      "heads.wall_centerline",
+      "heads.window_opening"
+    ],
+    "missing_keys_count": 344,
+    "missing_keys_only_new_paths": true,
+    "new_decoder_init": "copy_baseline",
+    "parameter_counts_by_component": {
+      "decoder.fixtures": 3405831,
+      "decoder.geometry": 3405831,
+      "decoder.openings": 3405831,
+      "decoder.wall": 3405831,
+      "encoder": 60842688,
+      "head.door_opening": 145,
+      "head.endpoint": 145,
+      "head.fixtures": 1305,
+      "head.junction": 145,
+      "head.structural_wall": 145,
+      "head.wall_boundary": 145,
+      "head.wall_centerline": 145,
+      "head.window_opening": 145
+    },
+    "randomly_initialised_heads": [
+      "wall_boundary",
+      "wall_centerline",
+      "junction",
+      "endpoint",
+      "door_opening",
+      "window_opening",
+      "fixtures"
+    ],
+    "source_checkpoint": "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu/best_model.pth",
+    "source_checkpoint_epoch": 29,
+    "source_checkpoint_sha256_after": "fb9665056aa06057a571f247882ba5d32abde297215f2ae94d210759f540b72f",
+    "source_checkpoint_sha256_before": "fb9665056aa06057a571f247882ba5d32abde297215f2ae94d210759f540b72f",
+    "source_checkpoint_threshold": 0.1,
+    "source_checkpoint_unchanged": true,
+    "unexpected_keys": [],
+    "unexplained_missing_keys": [],
+    "wall_path_mapping": "baseline encoder.* -> encoder.*, decoder.* -> decoders.wall.*, segmentation_head.* -> heads.structural_wall.*"
+  },
+  "loss_report": {
+    "boundary_pos_weight": {
+      "cap": 15.0,
+      "capped_pos_weight": 15.0,
+      "negative_pixels": 1043344650,
+      "positive_pixels": 57660150,
+      "uncapped_pos_weight": 18.094726600607178
+    },
+    "centerline_pos_weight": {
+      "cap": 20.0,
+      "capped_pos_weight": 20.0,
+      "negative_pixels": 1070429753,
+      "positive_pixels": 30575047,
+      "uncapped_pos_weight": 35.00991357429475
+    },
+    "door_pos_weight": {
+      "cap": 20.0,
+      "capped_pos_weight": 20.0,
+      "negative_pixels": 1093139693,
+      "positive_pixels": 7865107,
+      "uncapped_pos_weight": 138.98599129039187
+    },
+    "endpoint_pos_weight": {
+      "cap": 20.0,
+      "capped_pos_weight": 20.0,
+      "negative_pixels": 1100247995,
+      "positive_pixels": 756805,
+      "uncapped_pos_weight": 1453.8064560884243
+    },
+    "fixture_pos_weights": {
+      "appliance": {
+        "cap": 20.0,
+        "capped_pos_weight": 20.0,
+        "negative_pixels": 1095057431,
+        "positive_pixels": 5947369,
+        "uncapped_pos_weight": 184.12468286396893
+      },
+      "bathtub_shower_jacuzzi": {
+        "cap": 20.0,
+        "capped_pos_weight": 20.0,
+        "negative_pixels": 1100003987,
+        "positive_pixels": 1000813,
+        "uncapped_pos_weight": 1099.1104102364777
+      },
+      "cabinetry_storage": {
+        "cap": 20.0,
+        "capped_pos_weight": 20.0,
+        "negative_pixels": 1074376526,
+        "positive_pixels": 26628274,
+        "uncapped_pos_weight": 40.34720860991591
+      },
+      "chimney": {
+        "cap": 20.0,
+        "capped_pos_weight": 20.0,
+        "negative_pixels": 1100941247,
+        "positive_pixels": 63553,
+        "uncapped_pos_weight": 17323.19870029739
+      },
+      "fireplace": {
+        "cap": 20.0,
+        "capped_pos_weight": 20.0,
+        "negative_pixels": 1100286428,
+        "positive_pixels": 718372,
+        "uncapped_pos_weight": 1531.6387999532276
+      },
+      "other_fixture": {
+        "cap": 20.0,
+        "capped_pos_weight": 20.0,
+        "negative_pixels": 1098310918,
+        "positive_pixels": 2693882,
+        "uncapped_pos_weight": 407.70565228915
+      },
+      "sauna_bench": {
+        "cap": 20.0,
+        "capped_pos_weight": 20.0,
+        "negative_pixels": 1095938271,
+        "positive_pixels": 5066529,
+        "uncapped_pos_weight": 216.30948347478125
+      },
+      "sink_tap": {
+        "cap": 20.0,
+        "capped_pos_weight": 20.0,
+        "negative_pixels": 1098847302,
+        "positive_pixels": 2157498,
+        "uncapped_pos_weight": 509.3155599680741
+      },
+      "toilet_urinal": {
+        "cap": 20.0,
+        "capped_pos_weight": 20.0,
+        "negative_pixels": 1099421167,
+        "positive_pixels": 1583633,
+        "uncapped_pos_weight": 694.2398693384137
+      }
+    },
+    "initial_task_weights": {
+      "door_opening": 0.12,
+      "endpoint": 0.03,
+      "fixtures": 0.08,
+      "junction": 0.05,
+      "structural_wall": 0.4,
+      "wall_boundary": 0.08,
+      "wall_centerline": 0.12,
+      "window_opening": 0.12
+    },
+    "junction_pos_weight": {
+      "cap": 20.0,
+      "capped_pos_weight": 20.0,
+      "negative_pixels": 1096952981,
+      "positive_pixels": 4051819,
+      "uncapped_pos_weight": 270.7309929194764
+    },
+    "loss_definitions": {
+      "door_opening": "0.5 SigmoidFocalBCE(pos_weight=20.0) + 0.5 SoftDice",
+      "endpoint": "SigmoidFocalBCE(alpha=0.75, gamma=2.0, pos_weight=20.0)",
+      "fixtures": "mean over 9 classes of 0.5 SigmoidFocalBCE(per-class pos_weight) + 0.5 SoftDice",
+      "junction": "SigmoidFocalBCE(alpha=0.75, gamma=2.0, pos_weight=20.0)",
+      "structural_wall": "AsymmetricTverskyLoss(alpha=0.6, beta=0.4) [baseline loss]",
+      "wall_boundary": "0.5 BCEWithLogits(pos_weight=15.0) + 0.5 SoftDice",
+      "wall_centerline": "0.5 BCEWithLogits(pos_weight=20.0) + 0.5 SoftClDice(iters=10)",
+      "window_opening": "0.5 SigmoidFocalBCE(pos_weight=20.0) + 0.5 SoftDice"
+    },
+    "window_pos_weight": {
+      "cap": 20.0,
+      "capped_pos_weight": 20.0,
+      "negative_pixels": 1086124375,
+      "positive_pixels": 14880425,
+      "uncapped_pos_weight": 72.99014477073068
+    }
+  },
+  "mean_epoch_seconds": 767.5510885397593,
+  "mlflow": {
+    "active": true,
+    "failure": null,
+    "run_id": "88a860218a924f6f88bf614ca2dc00fe",
+    "tracking_uri": "sqlite:////mnt/e/AI_Team/mitunet/mlflow/mlflow.db"
+  },
+  "passed": true,
+  "reference_val_wall_iou": 0.8188460992164052,
+  "replacement_requirement": {
+    "met_by_any_epoch": true,
+    "rule": "val structural_wall micro-IoU at threshold 0.1 >= reproduced baseline 0.818846 + (-0.005)",
+    "selected_checkpoint": "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/checkpoints/best_gated_hierarchical_score.pth"
+  },
+  "stage": "train",
+  "steps_per_epoch": 1050,
+  "stopped_early": false,
+  "timestamp_utc": "2026-09-24T16:09:01.410961+00:00",
+  "training_seconds": 12222.89671087265,
+  "wall_floor": 0.8138460992164052,
+  "warmup_epochs": 4,
+  "weighting_method": "fixed"
+}

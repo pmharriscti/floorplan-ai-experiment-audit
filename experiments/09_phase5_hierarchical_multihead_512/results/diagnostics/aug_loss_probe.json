@@ -1,0 +1,11 @@
+{
+ "val_noaug": 0.1012247483432293,
+ "train_noaug": 0.08603996245633988,
+ "train_aug_all": 0.14216979804493132,
+ "train_hflip_p1": 0.1532636747757594,
+ "train_vflip_p1": 0.1532636747757594,
+ "train_rot90_p1": 0.1532636747757594,
+ "train_brightcontrast_p1": 0.1532636747757594,
+ "baseline_logged_train_loss_epoch30": 0.0909,
+ "baseline_logged_val_loss_epoch29": 0.1012
+}
