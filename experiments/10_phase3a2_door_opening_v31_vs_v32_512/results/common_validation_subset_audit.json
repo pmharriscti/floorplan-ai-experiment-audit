@@ -1,0 +1,20 @@
+{
+  "common_validation_plan_count": 398,
+  "duplicate_validation_ids": [],
+  "excluded_plan_count": 2,
+  "excluded_sample_ids": [
+    "high_quality_architectural/5981",
+    "high_quality_architectural/8690"
+  ],
+  "non_validation_rows": 0,
+  "original_validation_plan_count": 400,
+  "source_reference_hashes": {
+    "common": "5b8e71dfd971c7377fd4855d409444ca96ae2f878bda016870fe4aaa04496775",
+    "v31": "6518167556fa1fc7ce799333b925726695687c911d5506090b369e843906d8af",
+    "v32": "d66080479b7a6437257ff5f103ae1b801819e9ac86af84e81a29728bcf8ddf2b"
+  },
+  "status": "PASS",
+  "test_manifest_or_content_accessed": false,
+  "train_validation_overlap": [],
+  "unexplained_exclusions": []
+}

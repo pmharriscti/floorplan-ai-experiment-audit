@@ -1,0 +1,344 @@
+{
+  "experiment_id": "10_phase3a2_door_opening_v31_vs_v32_512",
+  "evidence_status": "VERIFIED",
+  "scientific_label": "EXPLORATORY - NOT HUMAN-GOLD VALIDATED",
+  "created_utc": "2026-09-24T21:02:33Z",
+  "source_run_directory": "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC",
+  "source_preparation_run": "/mnt/e/AI_Team/mitunet/phase3a2_door_opening_512_ablation/phase3a2_v31_vs_v32_door_opening_512_20260903_152401_UTC",
+  "source_exploratory_override_run": "/mnt/e/AI_Team/mitunet/phase3a2_door_opening_512_ablation/phase3a2_v31_vs_v32_door_opening_512_exploratory_20260903_205410_UTC",
+  "target_repair_lineage_runs": {
+    "phase_3A_candidate_v3": "/mnt/e/AI_Team/mitunet/phase3a_opening_source_class_repair/experiments/mitunet_phase3a_opening_source_class_repair_20260812_224352_UTC",
+    "phase_3A_1_candidate_v3_1": "/mnt/e/AI_Team/mitunet/phase3a1_opening_rule_repair/experiments/mitunet_phase3a1_opening_rule_repair_20260824_144755_UTC",
+    "phase_3A_2_candidate_v3_2": "/mnt/e/AI_Team/mitunet/phase3a2_opening_axis_repair/experiments/mitunet_phase3a2_opening_axis_repair_20260826_142837_UTC"
+  },
+  "source_repositories": {
+    "probe_project": "/home/pmharris/dev/mitunet_phase3a2_shared_init_probe",
+    "experiment_source_project": "/home/pmharris/dev/mitunet_phase3a2_512",
+    "legacy_generator_snapshot": "/home/pmharris/dev/mitunet_phase3a2_512/vendor/legacy_phase3a"
+  },
+  "source_files": {
+    "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/full/A_candidate_v3_1/training_history.csv": "09f8a15a109a7006e2fac82e907f10635c9921784690558ec5355e29b5500fde",
+    "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/full/B_candidate_v3_2/training_history.csv": "8bb53525b3847ac043908124da7cfdb6d3958dc1781cb0cbb4799ee77b864134",
+    "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/full/A_candidate_v3_1/training_status.json": "91fd1b921f34abda9d54047b65962442802fbc9157ab2f1d303f473dd1b0e57f",
+    "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/full/B_candidate_v3_2/training_status.json": "efce0edfb999f3008ee323d709bc3ba08c3c2aee11ed1d1abb70c0554a77a5e4",
+    "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/full/A_candidate_v3_1/reset_before_training.json": "313183e00d4fc3891aede0a3ae6ef689f2b6f580f5ac16bba1ecf35a0113c103",
+    "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/full/B_candidate_v3_2/reset_before_training.json": "fbaa6bb297a94a5808c8863e6a32165efad2638dac5e56405d3a199811c1c47f",
+    "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/evaluation/arm_comparison.csv": "6e0cf0007412d3702feaebe14c5fc3b9d51a15d171b08b8ce3a8e3ed77547c52",
+    "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/evaluation/threshold_sweep.csv": "67568e537b7678e270583a2803f9c7d9f9b3f20ad675b89b7f780931cbb4b5e8",
+    "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/PHASE3A2_SHARED_INIT_PROBE_REPORT.md": "5c3bc38f7c4422718163425fa7c3f604178dbc279d812055be25fc7bdbe10fcf",
+    "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/phase3a2_shared_init_probe_report.json": "13c20695f9ce4f6837420dc5b0ede03a8d2af3bd538fb7b45627dd3c65800721",
+    "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/diagnostics/probe/changed_instance_metrics.json": "6a0debd919b187b3cd84e32d1db6820200ca949f3eadf1d30d44a6f6240cc5d2",
+    "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/diagnostics/probe/vanished_instance_metrics.json": "a7265119caa605625f7da42eed9bc5f2087acab2825042e17dc5d4403c112366",
+    "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/audits/common_validation_subset_audit.json": "2168f355784d2faa1961f13f5df22742af693cfa91bebe32f851c6735ae094ac",
+    "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/audits/common_validation_exclusions.csv": "7db7dfc6bbcdf96d2f89ed27a4952419186cfd1dcba5a025942e0efd86cd050f",
+    "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/audits/config_difference.json": "5761b6344a2dc1d970915c400bcfbb40222e6e492c42e3e4ba9745d8749cb69f",
+    "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/shared_initialization/shared_initialization_verification.json": "c8941093421bad2a68d8eb3da1e296e8ce7a0c7753d6777aebb9a4b4cf6ab134",
+    "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/shared_initialization/initialization.json": "fc204131ffeb3bb00483236f368f5beb973463145079cc4e317ec22f8cc6a37f",
+    "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/preflight/preflight.json": "fbafb151366a6a7ec2dd7d9090e08ff351fffcec162d1ae3bb890806ba633077",
+    "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/data_order/data_order_hashes.json": "301c09e2be076524e9fcf1ae047132f4c0d864b7d3813e699be6352d2bce3e26",
+    "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/full_run.log": "80a965d203f9fe6c3f08e4b29571d8d100369907fbfcbc04e2f090c964a75562",
+    "/mnt/e/AI_Team/mitunet/phase3a2_door_opening_512_ablation/phase3a2_v31_vs_v32_door_opening_512_20260903_152401_UTC/targets/candidate_v3_1_manifest.csv": "404f225983740ff0c69d1a95c6adcc536e4b59f6ffb564731a56aa95dca61734",
+    "/mnt/e/AI_Team/mitunet/phase3a2_door_opening_512_ablation/phase3a2_v31_vs_v32_door_opening_512_20260903_152401_UTC/targets/candidate_v3_2_manifest.csv": "62a533fc43365ffc7af66afe73f459d02325adcadb29b83887ffd4e19c65be51",
+    "/mnt/e/AI_Team/mitunet/phase3a2_door_opening_512_ablation/phase3a2_v31_vs_v32_door_opening_512_20260903_152401_UTC/label_validation/PIXEL_PRESERVATION_REPORT.md": "ec0bf219ef7c97631632bac2b2bfa94d05e45a77a2008728d94025c1da7d6aa3",
+    "/mnt/e/AI_Team/mitunet/phase3a2_door_opening_512_ablation/phase3a2_v31_vs_v32_door_opening_512_20260903_152401_UTC/label_validation/RESIZE_SURVIVABILITY_REPORT.md": "997e3a7f2bced16a4fee5f6ca325f325bef7b295841b504205b2115fd3cef08c",
+    "/mnt/e/AI_Team/mitunet/phase3a2_door_opening_512_ablation/phase3a2_v31_vs_v32_door_opening_512_20260903_152401_UTC/gold_validation/GOLD_VALIDATION_REPORT.md": "2d15c9b7e2d283efdaee66e5ddd1583c80aca8d7b1534a8df6c03195f5c88d8f",
+    "/mnt/e/AI_Team/mitunet/phase3a2_door_opening_512_ablation/phase3a2_v31_vs_v32_door_opening_512_20260903_152401_UTC/gold_validation/gold_hashes.json": "fd2a317561649f941046ca5fca1201d740abe801c92eebdd23eff8240a027ad8",
+    "/mnt/e/AI_Team/mitunet/phase3a2_door_opening_512_ablation/phase3a2_v31_vs_v32_door_opening_512_20260903_152401_UTC/artifact_integrity_audit.json": "ad96d2ece3754e652d76744fec4db23a017bef1f5516a21b4a688cef79a1a92a",
+    "/mnt/e/AI_Team/mitunet/phase3a2_door_opening_512_ablation/phase3a2_v31_vs_v32_door_opening_512_20260903_152401_UTC/phase3a2_v31_vs_v32_512_report.json": "1b52db14ffd32f830971d6d605ba1be46e3e9782c3e3e984ed4991208f97a12a",
+    "/mnt/e/AI_Team/mitunet/phase3a_opening_source_class_repair/experiments/mitunet_phase3a_opening_source_class_repair_20260812_224352_UTC/reports/FINAL_REPORT.md": "a5e85c29ef86ce1d7fc58666a9014414b650b18b939edbbda9e32df1aa0ecda1",
+    "/mnt/e/AI_Team/mitunet/phase3a_opening_source_class_repair/experiments/mitunet_phase3a_opening_source_class_repair_20260812_224352_UTC/review/review_gate_status.json": "9492923895ae4fb06ed8fa1dc1455da3ad677571985355c5748a0619cf59e551",
+    "/mnt/e/AI_Team/mitunet/phase3a1_opening_rule_repair/experiments/mitunet_phase3a1_opening_rule_repair_20260824_144755_UTC/reports/FINAL_REPAIR_REPORT.md": "c0084efd8a5471c10a5ca2bb6635eb946ab2f7862a5b8d9465a538d7d70b805e",
+    "/mnt/e/AI_Team/mitunet/phase3a1_opening_rule_repair/experiments/mitunet_phase3a1_opening_rule_repair_20260824_144755_UTC/reports/WARNING_CLUSTER_ANALYSIS.md": "b3021d097870263c8fc0919e0d0b1691d515cc5b4af4798e1e4455df6e5be4cf",
+    "/mnt/e/AI_Team/mitunet/phase3a2_opening_axis_repair/experiments/mitunet_phase3a2_opening_axis_repair_20260826_142837_UTC/reports/FINAL_PHASE3A2_REPORT.md": "ce8896e374f90489d2a5f27029b1846bb1e633b87c8aabe226261c7e8bd96497",
+    "/mnt/e/AI_Team/mitunet/phase3a2_opening_axis_repair/experiments/mitunet_phase3a2_opening_axis_repair_20260826_142837_UTC/reports/FAMILY_A_AXIS_AUDIT.md": "2c886f3f32b49177c23ef00823f3d976559b01eb28d61ea1e548c9967d1e1cc0",
+    "/mnt/e/AI_Team/mitunet/phase3a2_opening_axis_repair/experiments/mitunet_phase3a2_opening_axis_repair_20260826_142837_UTC/review/superseding_human_findings_v3_1.csv": "210a01c442ecbd959d7c6bd59629caa551fddf5053adb674ab3589f7f5511003"
+  },
+  "audit_copies": {
+    "results/changed_instance_metrics.json": "6a0debd919b187b3cd84e32d1db6820200ca949f3eadf1d30d44a6f6240cc5d2",
+    "results/common_validation_exclusions.csv": "7db7dfc6bbcdf96d2f89ed27a4952419186cfd1dcba5a025942e0efd86cd050f",
+    "results/common_validation_subset_audit.json": "2168f355784d2faa1961f13f5df22742af693cfa91bebe32f851c6735ae094ac",
+    "results/config_difference.json": "5761b6344a2dc1d970915c400bcfbb40222e6e492c42e3e4ba9745d8749cb69f",
+    "results/full_training_history_A_candidate_v3_1.csv": "09f8a15a109a7006e2fac82e907f10635c9921784690558ec5355e29b5500fde",
+    "results/full_training_history_B_candidate_v3_2.csv": "8bb53525b3847ac043908124da7cfdb6d3958dc1781cb0cbb4799ee77b864134",
+    "results/full_training_status_A_candidate_v3_1.json": "91fd1b921f34abda9d54047b65962442802fbc9157ab2f1d303f473dd1b0e57f",
+    "results/full_training_status_B_candidate_v3_2.json": "efce0edfb999f3008ee323d709bc3ba08c3c2aee11ed1d1abb70c0554a77a5e4",
+    "results/label_repair_lineage/gold_validation_report.md": "2d15c9b7e2d283efdaee66e5ddd1583c80aca8d7b1534a8df6c03195f5c88d8f",
+    "results/label_repair_lineage/phase3a1_FINAL_REPAIR_REPORT.md": "c0084efd8a5471c10a5ca2bb6635eb946ab2f7862a5b8d9465a538d7d70b805e",
+    "results/label_repair_lineage/phase3a1_WARNING_CLUSTER_ANALYSIS.md": "b3021d097870263c8fc0919e0d0b1691d515cc5b4af4798e1e4455df6e5be4cf",
+    "results/label_repair_lineage/phase3a2_FAMILY_A_AXIS_AUDIT.md": "2c886f3f32b49177c23ef00823f3d976559b01eb28d61ea1e548c9967d1e1cc0",
+    "results/label_repair_lineage/phase3a2_FINAL_PHASE3A2_REPORT.md": "ce8896e374f90489d2a5f27029b1846bb1e633b87c8aabe226261c7e8bd96497",
+    "results/label_repair_lineage/phase3a_FINAL_REPORT.md": "a5e85c29ef86ce1d7fc58666a9014414b650b18b939edbbda9e32df1aa0ecda1",
+    "results/label_repair_lineage/pixel_preservation_report.md": "ec0bf219ef7c97631632bac2b2bfa94d05e45a77a2008728d94025c1da7d6aa3",
+    "results/label_repair_lineage/resize_survivability_report.md": "997e3a7f2bced16a4fee5f6ca325f325bef7b295841b504205b2115fd3cef08c",
+    "results/label_repair_lineage/superseding_human_findings_v3_1.csv": "210a01c442ecbd959d7c6bd59629caa551fddf5053adb674ab3589f7f5511003",
+    "results/probe_arm_comparison.csv": "6e0cf0007412d3702feaebe14c5fc3b9d51a15d171b08b8ce3a8e3ed77547c52",
+    "results/probe_threshold_sweep.csv": "67568e537b7678e270583a2803f9c7d9f9b3f20ad675b89b7f780931cbb4b5e8",
+    "results/shared_initialization_verification.json": "c8941093421bad2a68d8eb3da1e296e8ce7a0c7753d6777aebb9a4b4cf6ab134",
+    "results/source_PHASE3A2_SHARED_INIT_PROBE_REPORT.md": "5c3bc38f7c4422718163425fa7c3f604178dbc279d812055be25fc7bdbe10fcf",
+    "results/vanished_instance_metrics.json": "a7265119caa605625f7da42eed9bc5f2087acab2825042e17dc5d4403c112366"
+  },
+  "audit_copies_verified_identical_to_source": true,
+  "checkpoints": {
+    "committed": false,
+    "policy": "checkpoints remain in external storage and are referenced by path, size and SHA-256",
+    "sha256_status": "computed by the audit on 2026-09-24; all four match the values recorded by each arm's training_status.json",
+    "epoch_verified_by": "torch.load(mmap=True) metadata read by the audit on 2026-09-24",
+    "items": {
+      "full/A_candidate_v3_1/best_checkpoint.pt": {
+        "epoch": 30,
+        "size_bytes": 772164229,
+        "sha256": "0ac081c478d1e80eae1d74388fd3948f53a2d67b4d40f79555e28d411f9f20ad"
+      },
+      "full/A_candidate_v3_1/last_checkpoint.pt": {
+        "epoch": 30,
+        "size_bytes": 772206021,
+        "sha256": "38b9ba9acc39a92226f4b060ff10f6f36670f7593df1bd0ea7e8599e21c5cd70"
+      },
+      "full/A_candidate_v3_1/best_checkpoint.previous.pt": {
+        "epoch": 25,
+        "size_bytes": 772206021,
+        "sha256": "1a343a0f1f32f3cc9739ce6938cb0d656ae13dc879b0bfc0d5c31b0615fd3460",
+        "note": "rotation backup of an earlier best; not used"
+      },
+      "full/B_candidate_v3_2/best_checkpoint.pt": {
+        "epoch": 28,
+        "size_bytes": 772206021,
+        "sha256": "7d9c17ab8724c8679625b0ca9e1ade61a989f5dd47982278e877033ad687a8f2"
+      },
+      "full/B_candidate_v3_2/last_checkpoint.pt": {
+        "epoch": 30,
+        "size_bytes": 772206021,
+        "sha256": "4056c6c552baa47ee6120706c9c7abb2829e5c20a79e382834def3fddc01bf6e"
+      }
+    },
+    "shared_initialization": {
+      "path": "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/shared_initialization/initial_state.pt",
+      "file_sha256": "bb1acecbc8a3f2c9c222be3012f3d26eb4c19dc333bd736f2d3b8cd119a85194",
+      "model_tensor_sha256": "5fc4586ad6a2c537a2cac8da457eb4de4a9d1dfd1c9d07c582f343a47a4ee54a",
+      "arm_A_loaded_state_sha256": "5fc4586ad6a2c537a2cac8da457eb4de4a9d1dfd1c9d07c582f343a47a4ee54a",
+      "arm_B_loaded_state_sha256": "5fc4586ad6a2c537a2cac8da457eb4de4a9d1dfd1c9d07c582f343a47a4ee54a"
+    }
+  },
+  "data": {
+    "dataset": "CubiCasa5K v4",
+    "dataset_root": "/home/pmharris/dev/cubicasa5k_data",
+    "split_counts": {
+      "train": 4200,
+      "validation": 400,
+      "test": 400
+    },
+    "split_ordered_sha256": {
+      "train": "102304f85cdcc386a645d9881c1661e796c8e2fcb556a87ee9127815277a204d",
+      "validation": "13ad0418944b42ede6ede44d16378e625a924ae3d3b500b4cdad10a7d14606fc",
+      "test": "449e565f4056965ca2bbbbfd7982e5d5617564e7166f67c7bafd977e593d9f7c"
+    },
+    "split_recovery_status": "EXACT_BASELINE_SPLITS_RECOVERED",
+    "target_manifest_sha256": {
+      "candidate_v3_1": "404f225983740ff0c69d1a95c6adcc536e4b59f6ffb564731a56aa95dca61734",
+      "candidate_v3_2": "62a533fc43365ffc7af66afe73f459d02325adcadb29b83887ffd4e19c65be51"
+    },
+    "target_integrity_audit": "PASS (18400 mask files, 9200 manifest records, binary {0,1}, 512x512)",
+    "test_targets_materialized": false,
+    "test_source_content_accessed": false
+  },
+  "code": {
+    "probe_project_git": {
+      "commit": null,
+      "branch": "master",
+      "state": "repository has ZERO commits; all source files untracked; the run report records 'Git HEAD: None'"
+    },
+    "experiment_source_project_git": {
+      "commit": "0775f80a4cad366866990419aed18ea7434676f8",
+      "state": "dirty; phase3a2_512 package, scripts and vendor snapshot untracked"
+    },
+    "legacy_generator_snapshot_sha256": "f6dc3136e89d12da5a774601cd21af9aea5d361fbec202c4931c58b3721b934f",
+    "candidate_config_sha256": {
+      "A_candidate_v3_1": "7ef6571be16df325f3f52a5d4ea3bc03047b1961fd62d64814e198e406f012af",
+      "B_candidate_v3_2": "0dfd1ee78cf87384f0f63bedca62d14329c63475c40c9e578d4364105267a31a"
+    }
+  },
+  "visual_evidence": {
+    "strategy": "historical copy; no training and no inference were performed by this audit",
+    "label_repair_overlays": {
+      "source_directory": "/mnt/e/AI_Team/mitunet/phase3a2_opening_axis_repair/experiments/mitunet_phase3a2_opening_axis_repair_20260826_142837_UTC/overlays/family_a_three_way",
+      "content": "three-way source-evidence / candidate_v3.1 / candidate_v3.2 comparison panels produced by the Phase 3A.2 repair run",
+      "selection": "the one differing validation plan (8690) plus four representative training plans, including the two instances a human reviewer later marked as v3.1 failures"
+    },
+    "model_diagnostics": {
+      "source_directory": "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/diagnostics/probe",
+      "content": "the changed validation instance (8690/door_0005) and the vanished validation instance (5981/door_0007) with both arms' 5-epoch predictions"
+    },
+    "shared_samples": {
+      "source_directory": "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/diagnostics/probe/representative_common_overlays",
+      "content": "both arms' 5-epoch door-opening predictions on the three sample identities shared with experiments 01-06 and 09",
+      "sample_ids": [
+        "high_quality_architectural/333",
+        "high_quality_architectural/3015",
+        "high_quality_architectural/5559"
+      ]
+    },
+    "files": {
+      "qa/diagnostics/changed_instance_8690_door_0005.png": {
+        "size": [
+          1536,
+          2192
+        ],
+        "mode": "RGB",
+        "sha256": "35b6632a07e3a47c29a520abd832ed0d229b479cd79243b7f6655486c58f8362",
+        "bytes": 298057
+      },
+      "qa/diagnostics/vanished_instance_5981_door_0007.png": {
+        "size": [
+          1536,
+          1096
+        ],
+        "mode": "RGB",
+        "sha256": "caa7fc47e0afe6052d3a3ca9b87a41587cf35121440b5b2560e269751d00a4a9",
+        "bytes": 83866
+      },
+      "qa/label_repair/high_quality_architectural__10543__door_0003.png": {
+        "size": [
+          1320,
+          1078
+        ],
+        "mode": "RGB",
+        "sha256": "7bde651c793fdb03d877495b1643eea621e96770d5a5b1a92ccd5015dbf72ed8",
+        "bytes": 188192
+      },
+      "qa/label_repair/high_quality_architectural__10620__door_0005.png": {
+        "size": [
+          1320,
+          1078
+        ],
+        "mode": "RGB",
+        "sha256": "d5d195d1fa527ccedd4e3a1bb9a2cb099dc52aa696dd977ccc2ead720c6c48d4",
+        "bytes": 153790
+      },
+      "qa/label_repair/high_quality_architectural__11709__door_0012.png": {
+        "size": [
+          1320,
+          1078
+        ],
+        "mode": "RGB",
+        "sha256": "3b93f75bbf92fd0290b7f89d123a3e1758408f631e56ab0b955148d831024637",
+        "bytes": 181150
+      },
+      "qa/label_repair/high_quality_architectural__13827__door_0004.png": {
+        "size": [
+          1320,
+          1078
+        ],
+        "mode": "RGB",
+        "sha256": "39a86390fdb8fc6d7c6d1f9f641bdaf1a67cfeced5af64d811ee2fa9bdaa9ef2",
+        "bytes": 163582
+      },
+      "qa/label_repair/high_quality_architectural__8690__door_0005.png": {
+        "size": [
+          1320,
+          1078
+        ],
+        "mode": "RGB",
+        "sha256": "10f50ec756ea801e4d7df51757d24949b05365ea6be97666febe1aed6f3783c3",
+        "bytes": 224042
+      },
+      "qa/shared_samples/A_candidate_v3_1__high_quality_architectural__3015.png": {
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGB",
+        "sha256": "60404606f315a4cdecd0c0d8fef13cd42c7c0c080a7dd55ca5533ace0a9f793e",
+        "bytes": 140521
+      },
+      "qa/shared_samples/A_candidate_v3_1__high_quality_architectural__333.png": {
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGB",
+        "sha256": "79c00bf3cdce51bfb960d82e02e8fe172c098a4edbc9d4c088dad866ca259911",
+        "bytes": 194879
+      },
+      "qa/shared_samples/A_candidate_v3_1__high_quality_architectural__5559.png": {
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGB",
+        "sha256": "45add3f4591589769805cdb61e87f571aa999feb23cbda2614f28bdfb5dbf0d2",
+        "bytes": 151184
+      },
+      "qa/shared_samples/B_candidate_v3_2__high_quality_architectural__3015.png": {
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGB",
+        "sha256": "775943a7d9d279308ef71592f2927c6945f9118cbe2b9fbdfc67707053eb675a",
+        "bytes": 140565
+      },
+      "qa/shared_samples/B_candidate_v3_2__high_quality_architectural__333.png": {
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGB",
+        "sha256": "5271ebe22601ae5e745e5f66a689a3a8088ba2f265e23266fc5a8dd3df3f76fb",
+        "bytes": 194883
+      },
+      "qa/shared_samples/B_candidate_v3_2__high_quality_architectural__5559.png": {
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGB",
+        "sha256": "40c168a87836e4a7fee393158b5eadaa0be5ac071778543bd066075c2b93febe",
+        "bytes": 151130
+      }
+    },
+    "overlay_palette": "as produced by the source runs; see each source report (this audit did not re-render overlays)"
+  },
+  "tracking": {
+    "mlflow": null,
+    "mlflow_note": "this project writes no MLflow run, unlike phase1/phase2",
+    "dvc": "UNKNOWN"
+  },
+  "human_review_status": {
+    "phase_3A_gate": {
+      "total_rows": 105000,
+      "critical_pending": 20000,
+      "reviewed_rows": 0,
+      "pending_class_review_rows": 153,
+      "human_review_gate_passed": false
+    },
+    "phase_3A_1": {
+      "focused_re_review_opening_rows": 105,
+      "plan_rows": 81,
+      "decisions_recorded": 16
+    },
+    "phase_3A_2": {
+      "family_a_re_review_rows": 44,
+      "decisions_recorded": 7,
+      "note": "most recorded as Skipped / Cannot determine as of 2026-09-18"
+    },
+    "ablation_gold_queue": {
+      "queue_rows": 49,
+      "resolved": 0,
+      "status": "BLOCKED_PENDING_VALIDATION_GOLD_REVIEW",
+      "gold_manifest_frozen": false,
+      "gold_hashes_sha256": "fd2a317561649f941046ca5fca1201d740abe801c92eebdd23eff8240a027ad8"
+    }
+  },
+  "missing_artifacts_and_limits": [
+    "The full 30-epoch evaluation stage was never run: no threshold sweep, per-plan metrics, macro/instance/boundary metrics or paired bootstrap exist for the full phase.",
+    "The source run's own master report still records 'Full 30-epoch run executed: false'; its evaluation/ directory and both top-level reports date from the probe (2026-09-04).",
+    "Validation labels are provisional. The 49-row human gold review is 0 resolved, so no result here can support target promotion or production approval.",
+    "Test split was never accessed; no test metrics exist.",
+    "The built-in paired bootstrap covers macro Dice and macro IoU only; micro Dice, micro IoU and opening-instance F1 have no confidence intervals in any phase.",
+    "The probe project has no git commits, so no code commit identifies the full run; file-level identity rests on the source project's dirty tree and the vendored generator snapshot hash.",
+    "Arm A's full run was relaunched with --resume after training had already finished, to repair its best checkpoint and write the final status. Its recorded completed_at_utc (2026-09-19T01:57:26Z) is the finalize time, not the end of training; the 30 epochs ran earlier (elapsed_seconds 13526.7).",
+    "The two arms' ReduceLROnPlateau schedules diverged: arm A received a second LR reduction at epoch 29 that arm B did not.",
+    "No MLflow run and no DVC status are recorded by this project."
+  ],
+  "large_artifacts_committed": false
+}

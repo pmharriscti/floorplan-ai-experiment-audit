@@ -1,0 +1,4 @@
+sample_id,source_instance_id,target_name,prior_saved_decision,superseding_decision,reason,reviewer,reviewed_at_utc
+high_quality_architectural/10543,door_0003,door_opening,Critical issue,Critical issue,candidate_v3.1 added foreground at the wrong location/orientation rather than at the true source doorway.,pmharris,2026-08-26T17:19:43Z
+high_quality_architectural/10620,door_0005,door_opening,Critical issue,Critical issue,source SVG shows an exterior door in the bottom horizontal wall; candidate_v3.1 adds a vertical segment.,pmharris,2026-08-26T17:19:43Z
+high_quality_architectural/11709,door_0013,door_opening,Critical issue,Critical issue,candidate_v3.1 adds foreground that does not correspond to an architectural opening in the source floorplan.,pmharris,2026-08-26T17:19:43Z

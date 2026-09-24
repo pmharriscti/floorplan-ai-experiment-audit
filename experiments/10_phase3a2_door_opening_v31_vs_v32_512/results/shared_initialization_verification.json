@@ -1,0 +1,31 @@
+{
+  "both_arms_loaded_same_physical_file": true,
+  "comparisons": {
+    "grad_scaler_state": true,
+    "grad_scaler_state_hash": true,
+    "initial_state_sha256": true,
+    "model_tensor_hash": true,
+    "optimizer_parameter_groups": true,
+    "optimizer_state_entry_count": true,
+    "optimizer_state_hash": true,
+    "parameter_count": true,
+    "parameter_names": true,
+    "parameter_shapes": true,
+    "rng_state_hash": true,
+    "scheduler_state": true,
+    "scheduler_state_hash": true,
+    "starting_learning_rate": true
+  },
+  "manifest_matches": {
+    "grad_scaler_state_hash": true,
+    "model_tensor_hash": true,
+    "optimizer_state_hash": true,
+    "rng_state_hash": true,
+    "scheduler_state_hash": true
+  },
+  "model_tensor_hash": "5fc4586ad6a2c537a2cac8da457eb4de4a9d1dfd1c9d07c582f343a47a4ee54a",
+  "physical_initialization_file_count": 1,
+  "shared_initialization_sha256": "bb1acecbc8a3f2c9c222be3012f3d26eb4c19dc333bd736f2d3b8cd119a85194",
+  "status": "SHARED_INITIALIZATION_PASS",
+  "test_data_accessed": false
+}

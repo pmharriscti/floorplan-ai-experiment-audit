@@ -1,0 +1,117 @@
+{
+  "arm": "B_candidate_v3_2",
+  "best": {
+    "common_val_dice_at_0_5": 0.8066504533142688,
+    "common_val_iou_at_0_5": 0.6759548830890035,
+    "common_val_loss": 0.1911806437238377,
+    "epoch": 28
+  },
+  "best_checkpoint": {
+    "path": "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/full/B_candidate_v3_2/best_checkpoint.pt",
+    "previous_path": "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/full/B_candidate_v3_2/best_checkpoint.previous.pt",
+    "previous_sha256": "ab80d8eb92b8602df83068f7d8e98230cc11a2ab499e355e938a5efd95a41474",
+    "reload": {
+      "latest_error": "",
+      "path": "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/full/B_candidate_v3_2/best_checkpoint.pt",
+      "sha256": "7d9c17ab8724c8679625b0ca9e1ade61a989f5dd47982278e877033ad687a8f2",
+      "source": "latest"
+    },
+    "sha256": "7d9c17ab8724c8679625b0ca9e1ade61a989f5dd47982278e877033ad687a8f2"
+  },
+  "common_validation_sample_count": 398,
+  "completed_at_utc": "2026-09-19T05:32:28.359860+00:00",
+  "completed_epochs": 30,
+  "completion_status": "FULL_ARM_COMPLETE",
+  "determinism_notes": [
+    "Some operations in PyTorch/SMP/Albumentations may remain nondeterministic depending on device kernels."
+  ],
+  "early_stopped": false,
+  "elapsed_seconds": 12948.654799632,
+  "environment": {
+    "cwd": "/home/pmharris/dev/mitunet_phase3a2_shared_init_probe",
+    "device": {
+      "cuda_available": true,
+      "cuda_version": "13.0",
+      "gpu_model": "NVIDIA RTX PRO 3000 Blackwell Generation Laptop GPU",
+      "gpu_vram_available_bytes": 11561598976,
+      "gpu_vram_total_bytes": 12820480000,
+      "mps_available": false,
+      "selected_device": "cuda",
+      "torch_version": "2.12.0+cu130"
+    },
+    "packages": {
+      "Pillow": "12.2.0",
+      "albumentations": "2.0.8",
+      "numpy": "2.4.5",
+      "opencv-python-headless": "4.10.0.84",
+      "pyyaml": "6.0.3",
+      "scikit-image": "0.26.0",
+      "segmentation-models-pytorch": "0.5.0",
+      "svgpathtools": "1.7.2",
+      "torch": "2.12.0",
+      "torchvision": "0.27.0"
+    },
+    "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "python_executable": "/home/pmharris/dev/mitunet/.venv/bin/python"
+  },
+  "epoch_order_hashes": {
+    "1": "641ab19820121466512db0f0da646af17f53d9ceb918a4e3fe0ed9e9d586822c",
+    "10": "0bc1e03ac9e709e8f30e182108f720c8bc8a748de75495e8f5b38383c81122c5",
+    "11": "b669fa49d4eb8343a09fb87af3de63fff938230fd64828204b52d0c4b2583bb1",
+    "12": "60b5d9eaa61b715f34454cfe33a1be009ab2987c688e3f212287354a714f40fc",
+    "13": "05b1e19e560510a6bb5cbe4a7c7d65f4cb7e31135efddaf4c8cd8f8e7c0b9774",
+    "14": "68c42cc29b84f58880a09572d0ebb1ef96831de27560584db1d64c12c2361aa5",
+    "15": "adfa57f0c765ea152061b8e203ff2928e8348396447453087f2f2ac5870ebd79",
+    "16": "b5b91f3bc52205fabcc68ff1406d84177578a06afb8fc3575f98953b5555fd08",
+    "17": "587968cbb58eddf310a9f1750f243bec0e0f27b9534a009a3b96f64905490010",
+    "18": "dfc95ce094b2464661ca6412ad048b6af675648c16ee8e5101001f436e77d79f",
+    "19": "0fa3ea6451c11e68487cce23f592bbfc48c77d6ef06b4018733304bb6a67cef4",
+    "2": "834ee1764de564549856ebd2f095eaa2b19303daa507ca6da6f322e740a60b5c",
+    "20": "8064654742294efb9d46df598d81136ffe410e45e6b8b151a3f8c13bf5a92e6d",
+    "21": "aff18495a209ee316721478a0d6b99f243bf7e2748be0df39443eeccdbcd54f0",
+    "22": "3ebeac39d4d54ee5349b667da9c916391959ad1e8a91f043d3b338d5b63ca6aa",
+    "23": "75f551fb053adf8a38985f967043ffea091276e70716c994e8edac8a9ecd773d",
+    "24": "103dbc92d80fa03abf60169048eee193f12cc11a734290d12ac6f3d5c65d0d40",
+    "25": "5879e38a57f44564f8c6dc72615f594ea8e2b92931bdf21d0dd2e04244135cc7",
+    "26": "0220053816e54dad58defa4db4a167196c6a40f949881f6e8b90d00b0e33e5c7",
+    "27": "ed1cf17dbe8206f019034ec9c6e53e1a3cd09dd9cd5587c06cca90334fc2270f",
+    "28": "34aca3789135778fc93da60ac56f9fb3583d2146ed8142b2cb0c6f3d07c3d18f",
+    "29": "1a1354718979b4f5ca7f5c475891b234b5d9858acb31f6d00a9ef2f68e77051d",
+    "3": "f9f16784c2bdc26f8a9ecc7477012ccbab3f040ecbfff5f82d9f8fd9cc3f6814",
+    "30": "44108231e4cb8d1a72accb43d8051b5d2757bb741ca4894aba6675172f5d6153",
+    "4": "bb20bd0d357c400ac855400b8cae6d0e6c55e95368671b17440b8292c14908bc",
+    "5": "33bfa6606d41458a6770f93d10fa7a9c4fc701c7ad4362ea29c9f42ef9ae1448",
+    "6": "2e81e00450dd36e1f513393d5455ea9b792871eb2afef1322bfcbc383dcb3e72",
+    "7": "1355ff10fede2256b9db03f8d1250f232bfa2d6f49c7e525292d50fb43a55dcb",
+    "8": "c6c2d491cfcefd7fe6fd1d099e14d2477756b463cc90675ea6efafc7e6911634",
+    "9": "7c2f01c5d79f0e84c55e01af085d4077c1db26b94ba01af0bfadd2c226da86f9"
+  },
+  "last_checkpoint": {
+    "path": "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/full/B_candidate_v3_2/last_checkpoint.pt",
+    "previous_path": "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/full/B_candidate_v3_2/last_checkpoint.previous.pt",
+    "previous_sha256": "b9109b2c90400bce332d391a05d48be70844c3dd929544edbcfadb6fe3759735",
+    "reload": {
+      "latest_error": "",
+      "path": "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/full/B_candidate_v3_2/last_checkpoint.pt",
+      "sha256": "4056c6c552baa47ee6120706c9c7abb2829e5c20a79e382834def3fddc01bf6e",
+      "source": "latest"
+    },
+    "sha256": "4056c6c552baa47ee6120706c9c7abb2829e5c20a79e382834def3fddc01bf6e"
+  },
+  "maximum_epochs": 30,
+  "no_nan_inf": true,
+  "peak_gpu_memory_allocated_mb": 6129.48095703125,
+  "peak_gpu_memory_reserved_mb": 6270.0,
+  "phase": "full",
+  "shared_initialization_sha256": "bb1acecbc8a3f2c9c222be3012f3d26eb4c19dc333bd736f2d3b8cd119a85194",
+  "shared_initialization_status": "SHARED_INITIALIZATION_PASS",
+  "shared_initialization_verified": true,
+  "source_run_immutable_guard": "PASS",
+  "starting_model_tensor_hash": "5fc4586ad6a2c537a2cac8da457eb4de4a9d1dfd1c9d07c582f343a47a4ee54a",
+  "status": "PASS",
+  "target_version": "candidate_v3_2",
+  "test_manifest_or_content_accessed": false,
+  "test_source_content_accessed": false,
+  "train_sample_count": 4200
+}

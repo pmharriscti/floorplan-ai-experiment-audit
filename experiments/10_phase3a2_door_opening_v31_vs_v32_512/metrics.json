@@ -1,0 +1,208 @@
+{
+  "experiment_id": "10_phase3a2_door_opening_v31_vs_v32_512",
+  "evidence_status": "VERIFIED",
+  "scientific_label": "EXPLORATORY - NOT HUMAN-GOLD VALIDATED",
+  "primary_split": "validation",
+  "primary_metric_policy": "The 30-epoch training completed for both arms but its evaluation stage was never run, so no final selected-checkpoint evaluation exists for the full phase. The primary values below are best-epoch validation Dice/IoU read from each arm's training_history.csv at the FIXED threshold 0.5 on the 398-plan provisional common subset. They are training-history values, not threshold-selected final evaluation, and are labelled as such. The completed 5-epoch probe evaluation is recorded separately as the only threshold-selected evaluation in this experiment.",
+  "primary_metrics": {
+    "door_opening_pixel_iou_control_v3_1": 0.6816654951591425,
+    "door_opening_pixel_dice_control_v3_1": 0.810702838491235,
+    "door_opening_pixel_iou_treatment_v3_2": 0.6759548830890035,
+    "door_opening_pixel_dice_treatment_v3_2": 0.8066504533142688,
+    "wall_iou": null,
+    "wall_dice": null,
+    "boundary_f1_2px": null,
+    "centerline_cldice": null,
+    "junction_f1_5px": null,
+    "door_object_f1": null
+  },
+  "full_30_epoch_run": {
+    "status": "FULL_ARM_COMPLETE for both arms; evaluation stage NOT run",
+    "evaluated_reference": "COMMON_CONSENSUS_VALIDATION_SUBSET (398 plans, provisional)",
+    "threshold": 0.5,
+    "threshold_status": "fixed during training; NOT validation-selected",
+    "arms": {
+      "A_candidate_v3_1": {
+        "best_epoch": 30,
+        "epochs_completed": 30,
+        "early_stopped": false,
+        "common_val_dice_at_0_5": 0.810702838491235,
+        "common_val_iou_at_0_5": 0.6816654951591425,
+        "common_val_loss": 0.1912420242276024,
+        "final_train_loss": 0.16214227166913806,
+        "elapsed_seconds": 13526.746748205998,
+        "peak_gpu_memory_allocated_mb": 6129.48095703125
+      },
+      "B_candidate_v3_2": {
+        "best_epoch": 28,
+        "epochs_completed": 30,
+        "early_stopped": false,
+        "common_val_dice_at_0_5": 0.8066504533142688,
+        "common_val_iou_at_0_5": 0.6759548830890035,
+        "common_val_loss": 0.1911806437238377,
+        "final_train_loss": 0.16521558249280566,
+        "elapsed_seconds": 12829.330915057,
+        "peak_gpu_memory_allocated_mb": 6129.48095703125
+      }
+    },
+    "B_minus_A_at_best_epoch": {
+      "common_val_dice_at_0_5": -0.0040523851769662,
+      "common_val_iou_at_0_5": -0.005710612070139,
+      "common_val_loss": -6.13805037647e-05
+    },
+    "per_epoch_head_to_head": {
+      "epochs_where_A_led": 13,
+      "epochs_where_B_led": 17,
+      "mean_B_minus_A_iou_all_30_epochs": -0.012546,
+      "mean_B_minus_A_iou_last_10_epochs": 0.001089,
+      "stdev_of_per_epoch_B_minus_A_iou": 0.081015,
+      "interpretation": "The per-epoch B-A standard deviation is roughly 14x the final 0.0057 IoU gap, and B leads on more epochs than A. The final gap is not separable from training variation by these data alone."
+    },
+    "arm_B_epoch_1_collapse": {
+      "common_val_iou_at_0_5": 0.03536158041998232,
+      "common_val_dice_at_0_5": 0.06830769286540131,
+      "recovered_by_epoch": 2,
+      "note": "Same collapse as in the probe, from a byte-identical initialization and identical data order; attributed to AMP/kernel nondeterminism."
+    }
+  },
+  "five_epoch_probe": {
+    "status": "FIVE_EPOCH_PROBE_COMPLETE",
+    "role": "infrastructure and learnability gate, not a superiority claim",
+    "selected_thresholds": {
+      "A_candidate_v3_1": 0.5,
+      "B_candidate_v3_2": 0.3
+    },
+    "common_consensus_subset": {
+      "A_candidate_v3_1": {
+        "micro_dice": 0.764071775,
+        "micro_iou": 0.618216947,
+        "macro_dice": 0.755154279,
+        "macro_iou": 0.625736964,
+        "precision": 0.785415387,
+        "recall": 0.743857495,
+        "opening_instance_precision": 0.81,
+        "opening_instance_recall": 0.855106888,
+        "opening_instance_f1": 0.831942483,
+        "boundary_f1": 0.794082542,
+        "fragmentation_rate": 0.006070203,
+        "merge_rate": 0.00225,
+        "empty_prediction_rate": 0.0,
+        "validation_loss": 0.242749094
+      },
+      "B_candidate_v3_2": {
+        "micro_dice": 0.763051238,
+        "micro_iou": 0.616881847,
+        "macro_dice": 0.760142258,
+        "macro_iou": 0.631122842,
+        "precision": 0.791392325,
+        "recall": 0.736669854,
+        "opening_instance_precision": 0.816132265,
+        "opening_instance_recall": 0.859857482,
+        "opening_instance_f1": 0.837424496,
+        "boundary_f1": 0.795326897,
+        "fragmentation_rate": 0.007389813,
+        "merge_rate": 0.003256513,
+        "empty_prediction_rate": 0.0,
+        "validation_loss": 0.23466295
+      },
+      "B_minus_A": {
+        "micro_dice": -0.001020537,
+        "micro_iou": -0.0013351,
+        "macro_dice": 0.00498798,
+        "macro_iou": 0.005385878,
+        "opening_instance_f1": 0.005482013,
+        "boundary_f1": 0.001244356,
+        "recall": -0.007187642,
+        "precision": 0.005976938,
+        "validation_loss": -0.008086144
+      }
+    },
+    "paired_bootstrap": {
+      "method": "paired plan bootstrap, 2000 resamples, seed 42",
+      "metrics_covered": ["macro_dice", "macro_iou"],
+      "metrics_not_covered": ["micro_dice", "micro_iou", "opening_instance_f1"],
+      "COMMON_CONSENSUS_VALIDATION_SUBSET": {
+        "plan_count": 398,
+        "macro_dice_delta": 0.004987979778471606,
+        "macro_dice_ci95": [0.00010094944756597308, 0.00950762899987806],
+        "macro_iou_delta": 0.005385877710282746,
+        "macro_iou_ci95": [6.518135761461555e-06, 0.01125299372704522],
+        "excludes_zero": true,
+        "caution": "Both lower bounds sit essentially on zero (1.0e-04 and 6.5e-06). With only 8 of 4600 masks differing between arms, this is a marginal result at 5 epochs and it did not persist: at 30 epochs the fixed-threshold pixel metrics favour arm A."
+      },
+      "REFERENCE_V31": {
+        "plan_count": 400,
+        "macro_dice_delta": 0.005134421717161306,
+        "macro_dice_ci95": [0.0003359429170158484, 0.009903427334014512],
+        "macro_iou_delta": 0.005459734398629186,
+        "macro_iou_ci95": [-5.332801336829891e-05, 0.010991128266347822]
+      },
+      "REFERENCE_V32": {
+        "plan_count": 400,
+        "macro_dice_delta": 0.005134421717161306,
+        "macro_dice_ci95": [0.0003359429170158484, 0.009903427334014512],
+        "macro_iou_delta": 0.005459734398629186,
+        "macro_iou_ci95": [-5.332801336829891e-05, 0.010991128266347822],
+        "note": "Identical to REFERENCE_V31 because both arms predict zero positive pixels on the only plan whose targets differ."
+      }
+    },
+    "threshold_sweep_common_subset_micro_iou": {
+      "A_candidate_v3_1": {"0.1": 0.616805, "0.2": 0.617672, "0.3": 0.618043, "0.4": 0.618122, "0.5": 0.618217, "0.6": 0.617906, "0.7": 0.617521, "0.8": 0.616942, "0.9": 0.615874},
+      "B_candidate_v3_2": {"0.1": 0.616642, "0.2": 0.616748, "0.3": 0.616882, "0.4": 0.616601, "0.5": 0.616301, "0.6": 0.615946, "0.7": 0.615479, "0.8": 0.614682, "0.9": 0.613267}
+    }
+  },
+  "special_validation_plans": {
+    "high_quality_architectural/8690": {
+      "role": "the only validation plan whose candidate_v3.1 and candidate_v3.2 targets differ",
+      "source_instance_id": "door_0005",
+      "changed_pixels": 628,
+      "pixels_added_in_v3_2": 312,
+      "pixels_removed_in_v3_2": 316,
+      "mask_iou_between_versions": 0.910617705664674,
+      "probe_result": {
+        "A_candidate_v3_1_vs_v31": {"tp": 0, "fp": 0, "fn": 70, "dice": 0.0, "iou": 0.0},
+        "A_candidate_v3_1_vs_v32": {"tp": 0, "fp": 0, "fn": 70, "dice": 0.0, "iou": 0.0},
+        "B_candidate_v3_2_vs_v31": {"tp": 0, "fp": 0, "fn": 70, "dice": 0.0, "iou": 0.0},
+        "B_candidate_v3_2_vs_v32": {"tp": 0, "fp": 0, "fn": 70, "dice": 0.0, "iou": 0.0}
+      },
+      "scientific_label": "PROVISIONAL_DIAGNOSTIC_NO_WINNER",
+      "target_correctness_decision": null,
+      "consequence": "At 5 epochs both arms predicted nothing at all on the single instance that distinguishes the two label versions, so this plan contributed no discriminating signal to the comparison."
+    },
+    "high_quality_architectural/5981": {
+      "role": "512 target-survivability failure; opening vanishes in BOTH versions",
+      "source_instance_id": "door_0007",
+      "reference_v31_positive_pixels_in_roi": 20,
+      "reference_v32_positive_pixels_in_roi": 20,
+      "A_candidate_v3_1": {"predicted_positive_pixels_in_roi": 0, "max_probability_in_roi": 0.0002715587615966797},
+      "B_candidate_v3_2": {"predicted_positive_pixels_in_roi": 46, "max_probability_in_roi": 1.0},
+      "excluded_from_primary_positive_instance_metrics": true,
+      "mask_restored_or_dilated": false
+    }
+  },
+  "label_ablation_scope": {
+    "masks_differing_between_arms": 8,
+    "masks_total_per_arm": 4600,
+    "fraction_differing": 0.0017391304347826088,
+    "validation_masks_differing": 1,
+    "pixels_added_by_v3_2": 2606,
+    "pixels_removed_by_v3_2": 2266,
+    "aggregate_512_foreground_v3_1": 5846003,
+    "aggregate_512_foreground_v3_2": 5845993,
+    "family_a_instances_repaired": 10,
+    "unexpected_changes_outside_declared_repair_scope": 0
+  },
+  "comparison_to_baseline": {
+    "comparable": false,
+    "reason": "Experiment 01 is a binary WALL model (validation foreground prevalence 8.43%); this experiment predicts DOOR OPENINGS (0.4848% foreground at 512). The source design records the historical wall checkpoint as audit evidence only and states its wall IoU is not directly comparable with door-opening IoU.",
+    "shared_with_baseline": "identical 4200/400/400 splits, 512 letterbox RGB, MiT-B4 + scSE, Adam 1e-4, weight decay 0, batch 4, AMP, seed 42, Tversky alpha 0.6 beta 0.4, 30 epochs, val_iou early stopping, 0.1-0.9 threshold grid"
+  },
+  "test_metrics": null,
+  "test_status": "Test split never loaded, scored, visualized or predicted. Sealed by design.",
+  "sample_counts": {
+    "train": 4200,
+    "validation_all": 400,
+    "validation_common_subset": 398,
+    "test": 400
+  }
+}

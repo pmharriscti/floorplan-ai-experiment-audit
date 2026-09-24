@@ -1,0 +1,19 @@
+{
+  "allowed_differences": [
+    "experiment_name",
+    "output_directory",
+    "target_manifest",
+    "target_version"
+  ],
+  "config_sha256": {
+    "A_candidate_v3_1": "3a952e6a889e3a1534d5aeb832fc096954e43ffeb41482aa8355795c8b217899",
+    "B_candidate_v3_2": "0dc571012d0abdf9a39cba2746f11df891d1a879f081ed0bdc448067fd85af61"
+  },
+  "observed_differences": [
+    "experiment_name",
+    "output_directory",
+    "target_manifest",
+    "target_version"
+  ],
+  "status": "PASS"
+}

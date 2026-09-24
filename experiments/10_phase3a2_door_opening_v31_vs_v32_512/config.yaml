@@ -1,0 +1,169 @@
+experiment_id: 10_phase3a2_door_opening_v31_vs_v32_512
+name: Phase 3A.2 door-opening target ablation, candidate_v3.1 vs candidate_v3.2 (512)
+evidence_status: VERIFIED
+status: training_complete_evaluation_incomplete
+scientific_label: EXPLORATORY - NOT HUMAN-GOLD VALIDATED
+source_run_directory: /mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC
+source_preparation_run: /mnt/e/AI_Team/mitunet/phase3a2_door_opening_512_ablation/phase3a2_v31_vs_v32_door_opening_512_20260903_152401_UTC
+source_exploratory_override_run: /mnt/e/AI_Team/mitunet/phase3a2_door_opening_512_ablation/phase3a2_v31_vs_v32_door_opening_512_exploratory_20260903_205410_UTC
+launch_commands:
+  probe: "scripts/run_probe.py (per arm; 5 epochs)"
+  full: "scripts/run_full.py --arm <arm> [--resume]   # arm A was relaunched with --resume to finalize only"
+task:
+  mode: binary_door_opening
+  question: >-
+    Does training on candidate_v3.2 door-opening masks improve validation performance relative to
+    candidate_v3.1, with the target generator version as the only intended free variable?
+  control_arm: A_candidate_v3_1
+  treatment_arm: B_candidate_v3_2
+  experimental_variable: door-opening target generator version and its resulting manifest/path only
+  target: door_opening (single logit channel)
+  target_is_not: >-
+    door_symbol. The door leaf/swing symbol is evidence used to locate the opening; it is not the target.
+  note_vs_baseline: >-
+    This experiment does NOT predict walls. The 01 baseline is a binary wall model
+    (8.43% validation foreground); this target is door openings (0.4848% foreground at 512).
+    Its IoU is not comparable with any wall IoU in this repository.
+data:
+  dataset: CubiCasa5K
+  dataset_version: 4
+  split_counts:
+    train: 4200
+    validation: 400
+    test: 400
+  split_ordered_sha256:
+    train: 102304f85cdcc386a645d9881c1661e796c8e2fcb556a87ee9127815277a204d
+    validation: 13ad0418944b42ede6ede44d16378e625a924ae3d3b500b4cdad10a7d14606fc
+    test: 449e565f4056965ca2bbbbfd7982e5d5617564e7166f67c7bafd977e593d9f7c
+  splits_identical_to_baseline: true
+  input_size: 512
+  resize_mode: letterbox
+  image_interpolation: bilinear
+  mask_interpolation: nearest
+  normalization: ImageNet mean/std
+  augmentation: [horizontal_flip, vertical_flip, random_rotate_90, random_brightness_contrast]
+  test_split_accessed: false
+targets:
+  control_manifest_sha256: 404f225983740ff0c69d1a95c6adcc536e4b59f6ffb564731a56aa95dca61734
+  treatment_manifest_sha256: 62a533fc43365ffc7af66afe73f459d02325adcadb29b83887ffd4e19c65be51
+  materialized_samples_per_arm: 4600     # train + val only; test targets withheld
+  source_opening_instances: 45857
+  foreground_ratio_at_512: 0.0048480
+  masks_differing_between_arms: 8        # of 4600
+  pixels_added_by_v3_2: 2606
+  pixels_removed_by_v3_2: 2266
+  differing_plans:
+    train: [10543, 10620, 11709, 13110, 13827, 14814, 14817]
+    validation: [8690]
+  generator_flags_v3_1:
+    repair_door_opening_seed_semantics: true
+    repair_source_instance_classification_and_localization: true
+    repair_opening_host_wall_association: true
+    association_max_distance_px: 3
+    min_wall_overlap_ratio: 0.05
+    door_seed_repair_local_radius_px: 48
+    gap_association_search_radius_px: 36
+  generator_flags_v3_2: >-
+    all v3.1 flags, plus repair_door_opening_tangent_normal_semantics: true,
+    door_tangent_normal_axis_tolerance_degrees: 15.0, and an explicit Family A instance list
+model:
+  architecture: MitUNet (MiT-B4 encoder, baseline U-Net decoder, scSE attention)
+  encoder_name: mit_b4
+  encoder_initialization: imagenet
+  output_channels: 1
+  activation_training: logits
+  activation_evaluation: sigmoid
+  parameter_count: 64250658
+  shared_initialization: both arms start from one byte-identical state
+training:
+  probe_epochs: 5
+  full_epochs_configured: 30
+  full_epochs_completed: 30
+  stopped_early: false
+  optimizer: adam
+  learning_rate: 0.0001
+  weight_decay: 0.0
+  batch_size: 4
+  effective_batch_size: 4
+  amp: true
+  seed: 42
+  loss: Tversky(alpha=0.6, beta=0.4)
+  scheduler: ReduceLROnPlateau(patience=3)
+  early_stopping_metric: val_iou
+  early_stopping_patience: 8
+  steps_per_epoch: 1050
+  learning_rate_trajectory:
+    A_candidate_v3_1: 1e-4 (ep 1-23) -> 5e-5 (ep 24-28) -> 2.5e-5 (ep 29-30)
+    B_candidate_v3_2: 1e-4 (ep 1-23) -> 5e-5 (ep 24-30)
+  learning_rate_divergence_note: >-
+    The schedulers are data-dependent and diverged. Arm A received a second LR reduction at epoch 29
+    that arm B never received; arm A's best epoch (30) is two epochs after it. The final A-vs-B gap
+    is therefore not attributable to the target version alone.
+controls_verified:
+  config_difference: PASS      # only experiment_name, output_directory, target_manifest, target_version differ
+  shared_initialization: SHARED_INITIALIZATION_PASS
+  data_order_identical_per_epoch: true
+  augmentation_seeds_identical: true
+  preflight: PREFLIGHT_PASS
+  optimizer_scheduler_scaler_rng_identical_at_init: true
+  no_nan_inf: true
+  test_manifest_or_content_accessed: false
+validation_references:
+  COMMON_CONSENSUS_VALIDATION_SUBSET: 398 plans whose two masks are byte-identical and with no vanished 512 positive
+  REFERENCE_V31: all 400 validation plans scored against candidate_v3.1, applied identically to both arms
+  REFERENCE_V32: all 400 validation plans scored against candidate_v3.2, applied identically to both arms
+  excluded_plans:
+    high_quality_architectural/5981: opening vanished during verified 512 conversion (351 px both versions)
+    high_quality_architectural/8690: candidate_v3.1 and candidate_v3.2 masks differ (1339 px both versions)
+  human_gold_validated: false
+selection:
+  threshold_grid: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+  threshold_selection_rule: common-subset micro Dice, then micro IoU, then lower threshold; validation only
+  probe_selected_thresholds:
+    A_candidate_v3_1: 0.5
+    B_candidate_v3_2: 0.3
+  full_run_selected_thresholds: NOT_COMPUTED    # the full-phase evaluation stage was never run
+  full_run_checkpoint_selection: best common-subset val IoU at fixed threshold 0.5 during training
+checkpoints:
+  A_candidate_v3_1_best:
+    epoch: 30
+    sha256: 0ac081c478d1e80eae1d74388fd3948f53a2d67b4d40f79555e28d411f9f20ad
+    size_bytes: 772164229
+  A_candidate_v3_1_last:
+    epoch: 30
+    sha256: 38b9ba9acc39a92226f4b060ff10f6f36670f7593df1bd0ea7e8599e21c5cd70
+    size_bytes: 772206021
+  B_candidate_v3_2_best:
+    epoch: 28
+    sha256: 7d9c17ab8724c8679625b0ca9e1ade61a989f5dd47982278e877033ad687a8f2
+    size_bytes: 772206021
+  B_candidate_v3_2_last:
+    epoch: 30
+    sha256: 4056c6c552baa47ee6120706c9c7abb2829e5c20a79e382834def3fddc01bf6e
+    size_bytes: 772206021
+  shared_initialization:
+    file_sha256: bb1acecbc8a3f2c9c222be3012f3d26eb4c19dc333bd736f2d3b8cd119a85194
+    model_tensor_sha256: 5fc4586ad6a2c537a2cac8da457eb4de4a9d1dfd1c9d07c582f343a47a4ee54a
+  sha256_source: computed by the audit (2026-09-24); all four match the values recorded in training_status.json
+code:
+  probe_project: /home/pmharris/dev/mitunet_phase3a2_shared_init_probe
+  probe_project_git_state: "git repository on branch master with ZERO commits; all 20 source files untracked (report records 'Git HEAD: None')"
+  source_project: /home/pmharris/dev/mitunet_phase3a2_512
+  source_project_git_commit: 0775f80a4cad366866990419aed18ea7434676f8
+  source_project_git_state: dirty; phase3a2_512 package, scripts and vendor snapshot untracked
+  legacy_generator_snapshot_sha256: f6dc3136e89d12da5a774601cd21af9aea5d361fbec202c4931c58b3721b934f
+environment:
+  gpu: NVIDIA RTX PRO 3000 Blackwell Generation Laptop GPU (12227 MiB)
+  peak_gpu_memory_allocated_mb: 6129.48095703125
+  peak_gpu_memory_reserved_mb: 6270.0
+  host: WSL2 (Linux 6.6.87.2-microsoft-standard-WSL2)
+tracking:
+  mlflow: none (this project writes no MLflow run, unlike phase1/phase2)
+  dvc: UNKNOWN
+unknowns:
+  full_run_threshold_sweep: NOT_COMPUTED
+  full_run_per_plan_metrics: NOT_COMPUTED
+  full_run_macro_instance_boundary_metrics: NOT_COMPUTED
+  full_run_paired_bootstrap: NOT_COMPUTED
+  test_metrics: not run by design (test split sealed)
+  human_gold_review: 0 of 49 queue rows resolved
