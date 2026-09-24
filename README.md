@@ -57,4 +57,4 @@ The exact baseline source git commit and DVC hash were not located in the inspec
 
 ## Method Notes
 
-See [docs/methodology.md](docs/methodology.md), [docs/metrics_definitions.md](docs/metrics_definitions.md), and [docs/reproducibility.md](docs/reproducibility.md) for audit rules, metric definitions, and the current reproducibility handoff.
+See [docs/audit_creation_workflow.md](docs/audit_creation_workflow.md) for the complete audit-creation runbook. Supporting references include [docs/methodology.md](docs/methodology.md), [docs/metrics_definitions.md](docs/metrics_definitions.md), and [docs/reproducibility.md](docs/reproducibility.md).
