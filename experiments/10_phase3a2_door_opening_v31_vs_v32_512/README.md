@@ -2,11 +2,43 @@
 
 **EXPLORATORY — NOT HUMAN-GOLD VALIDATED.**
 
-This is a label experiment, not a model experiment. Both arms are the same MitUNet, from one byte-identical initialization, trained on the same plans in the same order. The only intended free variable is the door-opening target generator version: arm A trains on `candidate_v3.1` masks, arm B on `candidate_v3.2`. The question is whether the v3.2 target repair produces a better model than v3.1 on a shared validation set.
+This is a **label experiment**. The primary question is not which arm trains a better model, it is whether the `candidate_v3.2` target repair produced **more correct door-opening labels** than `candidate_v3.1`. Both arms are the same MitUNet, from one byte-identical initialization, trained on the same plans in the same order; the only intended free variable is the target generator version.
 
-Both arms completed 30 epochs, and the full-phase evaluation was executed on 2026-09-25 against the existing checkpoints — no retraining. The answer is that **candidate_v3.2 did not improve on candidate_v3.1**. On pixel metrics the two are statistically indistinguishable; on opening-instance F1 the control is ahead by a margin whose confidence interval excludes zero. The framing caveat is that the two label versions differ on only **8 of 4,600 masks** (1 of them in validation), so the experiment has very little label signal to measure.
+The label question is answered first, below, because it is the one the evidence can actually speak to. The two label versions differ on just **8 of 4,600 masks** (1 of them in validation), which makes the model-level comparison structurally underpowered — it appears later as secondary, corroborating evidence, not as the result.
 
-This experiment does **not** predict walls. Its target is door openings at `0.4848%` foreground, against the `01` baseline's wall target at `8.43%`. Its IoU is not comparable with any wall IoU in this repository, and the source design says so explicitly: the historical wall checkpoint is audit evidence only and was never used to initialize this experiment.
+**Verdict in one line: v3.2 demonstrably repaired the labels it targeted — 10 instances, 5 of 7 human-adjudicated so far, with a clean geometry audit — but that is a statement about 10 instances out of 45,857, not about the corpus.**
+
+## Label Correctness: Did v3.2 Repair the Labels?
+
+### Yes, for what it targeted
+
+**1. Human adjudication — the only evidence that is directly about labels.** Five of the seven reviewed instances were judged `Correct` / preferred `Candidate`. Two of those five, `10543/door_0003` and `10620/door_0005`, are exactly the instances where a reviewer had marked `candidate_v3.1` a `Critical issue`, with specific reasons ("added foreground at the wrong location/orientation rather than at the true source doorway"; "source SVG shows an exterior door in the bottom horizontal wall; candidate_v3.1 adds a vertical segment"). **v3.1's two worst confirmed failures were re-reviewed and passed under v3.2.** See [the review record](#v32-review-result-5-of-7-reviewed-instances-judged-correct) for the verdict history and the decision-file defect behind it.
+
+**2. Geometry audit, all 10 Family A instances.** Tangent-aligned `10`, normal-aligned `0`, ambiguous wall orientation `0`, missing jamb evidence `0`, **placed on wrong wall `0`**, placed outside an architectural opening `0`. The architectural invariant holds on every one: the opening's long axis is parallel to the host-wall tangent and its short axis to the wall normal. Measured on `10620/door_0005`: wall tangent `0.15103162146491964` degrees, wall normal `90.15103162146492`, opening long axis `0.0`, angle to tangent `0.151`, angle to normal `89.849`.
+
+**3. The derivation is now based on source geometry, not inferred raster geometry.** Exactly `10` instances in the v3.2 records carry `derivation_method: source_threshold_polygon_tangent_normal_repair` — the opening axis read from the source Door threshold polygon and its parent Wall polygon. This replaces v3.1's PCA over nearby wall pixels, synthesized rectangle, and snap-to-nearest-wall-pixel. That is the difference between reading the annotation and guessing from the raster, and it is what removed the wrong-wall failure mode.
+
+**4. One instance went from no opening at all to a correct opening.** Like-for-like on the same 42 plans, `13110/door_0006` was `review_required_no_opening_generated` under v3.1 and is generated under v3.2. This is the case v3.1's own Family A report recorded as `Unchanged: no wall component intersects or lies near the opening seed`. A reviewer confirmed the repair: "candidate_v3.2 correctly repairs door_0006. The opening is horizontal and now matches the jamb-to-jamb doorway span shown in the source SVG and opening-centered crop. candidate_v3.1 was also horizontal but overshot the true opening extent."
+
+**5. No door-opening warnings remain in v3.2's scope.** Within its 42 plans, `8` `review_required` rows remain and **all 8 are `window_opening`**. Zero door rows.
+
+**6. Integrity clean.** `0` mechanical invariant violations, `0` pixel-preservation violations, `0` unexpected changes outside the declared repair scope.
+
+**7. Weak corroboration from the models.** On the one differing validation plan, the v3.2-trained arm predicts 16 pixels that are all true positives against `candidate_v3.2` and all false positives against `candidate_v3.1`, while the v3.1-trained arm predicts nothing. This shows the v3.2 label is coherent and learnable. It is circular as evidence of correctness — each arm is scored against the labels it trained on — so it corroborates, it does not adjudicate.
+
+### No, not as a statement about the label set
+
+- **Scope is 10 instances out of 45,857 source opening instances.** v3.2 is a targeted patch applied to a configured Family A list, not a re-derivation. It says nothing about the other ~45,847.
+- **Only 7 of 44 re-review rows are adjudicated (15.9%); 37 are pending.** That includes all **34 control rows**, which exist precisely to catch regressions the repair might have introduced elsewhere. No regression check has been completed.
+- **One of v3.1's three confirmed critical failures is still unresolved.** `11709/door_0013` was marked `Critical issue` under v3.1 ("adds foreground that does not correspond to any actual architectural opening"). Under v3.2 it was reviewed and left `Skipped`, never marked `Correct`. Same for `11709/door_0014`. So of v3.1's three confirmed failures, two are confirmed fixed and one is open.
+- **The validation gold queue is 0 of 49 resolved**, so the label set used to score the ablation is not frozen or adjudicated.
+- **Phase 3A upstream is 0 of 105,000 rows reviewed**, with 153 review-required source classes pending. The taxonomy underneath all of this is unadjudicated.
+- **Families B and C were untouched by v3.2.** From Phase 3A.1, 16 warnings remain unchanged and 24 unresolved for insufficient evidence (empty or unrenderable seeds). Eight window-opening instances still generate no opening at all.
+- **A target-pipeline defect neither version fixes:** 46 unique instances vanish entirely during the 512 conversion (45 train, 1 validation). At 30 epochs **both** arms confidently predict the vanished `5981` opening — 39 and 35 pixels at maximum probability `1.0`, against a 20-pixel reference. The models recover an opening the 512 conversion destroyed. That is a defect sitting underneath both label versions and is not addressed by either.
+
+### What would settle it
+
+Adjudicate `11709/door_0013` and `door_0014` first — that closes the last known v3.1 critical failure. Then work the 34 control rows to confirm v3.2 regressed nothing it was not meant to touch. Neither needs compute.
 
 ## Source Evidence
 
@@ -146,9 +178,11 @@ All passed, and they are stronger than the baseline protocol requires:
 
 Checkpoint integrity was re-verified by this audit: all four full-run checkpoints hash to the values recorded in `training_status.json`, and their stored epoch numbers are 30 (A best), 30 (A last), 28 (B best) and 30 (B last).
 
-## Verified Metrics
+## Model Comparison (Secondary Evidence)
 
-### 30-epoch evaluation — the headline result
+Recorded for completeness. With 8 of 4,600 masks differing between the arms, this comparison is structurally underpowered and it is **not** the basis for the label verdict above.
+
+### 30-epoch evaluation
 
 Executed 2026-09-25 with `evaluate_exploratory.py --phase full` against the existing checkpoints (A epoch 30, B epoch 28). Status `PASS`, test split never touched. Both arms select threshold **`0.1`** — the same operating point the `01` wall baseline selected, and not the `0.5` used during training. The sweep declines monotonically from `0.1` to `0.9` for both arms.
 
@@ -218,13 +252,15 @@ The treatment arm places 16 pixels on this instance, and **every one of them is 
 
 ## Interpretation
 
-`candidate_v3.2` did not beat `candidate_v3.1`. With the evaluation now complete, the defensible statement is: indistinguishable on pixel quality, and measurably behind on opening-instance F1 by about `0.0076` with an interval that excludes zero. Nothing here supports promoting v3.2 on model performance.
+**On labels, the primary question.** v3.2 repaired what it set out to repair. The evidence converges from three independent directions: a human reviewer accepted 5 of the 7 instances examined, including both of v3.1's worst confirmed failures; an automated geometry audit finds the architectural invariant satisfied on all 10 repaired instances with none on the wrong wall; and the derivation itself moved from inferring geometry out of wall pixels to reading it from the source threshold and parent wall polygons, which is a categorically sounder basis. One instance that previously produced no opening at all now produces a correct one. That is a real, specific, verifiable repair.
 
-What the experiment cannot do is attribute that to the target version. The significant instance-F1 gap is measured over 398 plans whose targets are byte-identical in both arms; the arms' training data differs on 7 masks out of 4,200. Two training runs that differ that little can still differ by this much, and the arms' `ReduceLROnPlateau` schedules did diverge — arm A took a second reduction at epoch 29 that arm B never got, and arm A's best epoch is 30. The clean reading is that these are two samples from the same distribution of training outcomes, and the label version is not visibly moving that distribution.
+It is also small. Ten instances out of 45,857, on a queue that is 15.9% adjudicated, with the 34 regression-control rows entirely unreviewed and one of v3.1's three confirmed failures still open. The correct summary is that the repair works where it has been checked, and most of it has not been checked.
 
-The one place the label variable is directly visible is `8690`, and it behaves exactly as designed: the treatment model learned its own version's geometry, pixel for pixel. That is a working experiment with a real but unadjudicated signal, waiting on human review rather than on more compute.
+**On models, the secondary question.** The 30-epoch comparison does not support v3.2 and mildly favours v3.1, but it cannot carry weight in either direction. The arms' training labels differ on 7 of 4,200 masks and the common evaluation subset has byte-identical targets, so the one significant result — opening-instance F1 favouring the control — separates two training runs rather than two label versions. The learning-rate schedules also diverged. A 5-epoch probe pointed the opposite way on both pixel and instance metrics, which is itself a demonstration that run-to-run variation dominates here.
 
-The Phase 3A lineage remains the more substantive contribution. The repairs are specific and the v3.2 Family A geometry audit is clean on all 10 instances, while the human superseding findings show automated "resolved" verdicts in this pipeline were wrong 3 times out of 9. The bottleneck is adjudication: the Phase 3A gate stands at 0 of 105,000 rows reviewed, and this ablation's 49-row gold queue at 0 resolved.
+**Why the two answers differ, and which to believe.** The label evidence is per-instance and directly verifiable against source annotations; the model evidence is an aggregate over 398 plans whose labels are identical in both arms. When a label change touches 0.17% of the training set, aggregate model metrics are the wrong instrument — they are measuring training noise with a label-shaped name on it. The label-correctness evidence is the one to act on.
+
+**What remains blocked, and on what.** Not compute. The Phase 3A gate stands at 0 of 105,000 rows, this ablation's gold queue at 0 of 49, and the Family A re-review at 7 of 44. Separately, the saved Phase 3A.2 decision file is not trustworthy until the review app is fixed and the four overwritten verdicts are restored. Underneath both label versions sits an unfixed 512-conversion defect that destroys 46 openings, one of them in validation, and which both trained models can be shown to see through.
 
 ## Missing Evidence and Non-Claims
 
