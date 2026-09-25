@@ -51,17 +51,41 @@
     "/mnt/e/AI_Team/mitunet/phase3a1_opening_rule_repair/experiments/mitunet_phase3a1_opening_rule_repair_20260824_144755_UTC/reports/WARNING_CLUSTER_ANALYSIS.md": "b3021d097870263c8fc0919e0d0b1691d515cc5b4af4798e1e4455df6e5be4cf",
     "/mnt/e/AI_Team/mitunet/phase3a2_opening_axis_repair/experiments/mitunet_phase3a2_opening_axis_repair_20260826_142837_UTC/reports/FINAL_PHASE3A2_REPORT.md": "ce8896e374f90489d2a5f27029b1846bb1e633b87c8aabe226261c7e8bd96497",
     "/mnt/e/AI_Team/mitunet/phase3a2_opening_axis_repair/experiments/mitunet_phase3a2_opening_axis_repair_20260826_142837_UTC/reports/FAMILY_A_AXIS_AUDIT.md": "2c886f3f32b49177c23ef00823f3d976559b01eb28d61ea1e548c9967d1e1cc0",
-    "/mnt/e/AI_Team/mitunet/phase3a2_opening_axis_repair/experiments/mitunet_phase3a2_opening_axis_repair_20260826_142837_UTC/review/superseding_human_findings_v3_1.csv": "210a01c442ecbd959d7c6bd59629caa551fddf5053adb674ab3589f7f5511003"
+    "/mnt/e/AI_Team/mitunet/phase3a2_opening_axis_repair/experiments/mitunet_phase3a2_opening_axis_repair_20260826_142837_UTC/review/superseding_human_findings_v3_1.csv": "210a01c442ecbd959d7c6bd59629caa551fddf5053adb674ab3589f7f5511003",
+    "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/full/evaluation_summary.json": "dd0d4d010669023821e8a033ea33f26ebc36e089323e575ae8c89e9e85bdee61",
+    "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/diagnostics/full/changed_instance_metrics.json": "0005f2e15d094715ca6a44212dc9fec7347eaad8c63abade61cc2f59818510c4",
+    "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/diagnostics/full/vanished_instance_metrics.json": "cfabc2866363dc638b94b1dea4a61786cb7c7e33f96acc62f4558b55ac4be38f",
+    "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/diagnostics/full/CHANGED_VALIDATION_INSTANCE_REPORT.md": "f334ac1d29d8641d57bb4a30b9d2c1abe047e68c91686f8a2f410d19a6cd9a47",
+    "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/diagnostics/full/VANISHED_VALIDATION_INSTANCE_REPORT.md": "605e70c74330b7204c2f3964401a36ba0923f7a552ac55b9e7416fee6530ffb2",
+    "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/full/A_candidate_v3_1/evaluation/common_consensus_threshold_sweep.json": "bf437d565e1c49b5d582973a9484a72ece70eb924c5533a84b1ef031cd32ea99",
+    "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/full/A_candidate_v3_1/evaluation/selected_provisional_metrics.json": "0ab5d266fd1cb87c1a419215a9357e054eabdaa40d56270d2d08ac9557bf89db",
+    "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/full/A_candidate_v3_1/evaluation/per_plan_common_consensus_metrics.csv": "bf746a3e6cc2807b8c66b40237650ce461f760b2fbf9632da83fcf6541f112a9",
+    "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/full/A_candidate_v3_1/evaluation/per_plan_reference_v31_metrics.csv": "3c620ae9a3107712cde8a995449ec5a1fd5d210e12038f37c33d1046e4dc774b",
+    "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/full/A_candidate_v3_1/evaluation/per_plan_reference_v32_metrics.csv": "a2fb57cbf1628f66129027060bf239f228c9f487cba79efdc8b7f61248b487ee",
+    "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/full/B_candidate_v3_2/evaluation/common_consensus_threshold_sweep.json": "1f39a13f3affc39075449b711d0e2b93c8969fde929d12328ab123183014ebe4",
+    "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/full/B_candidate_v3_2/evaluation/selected_provisional_metrics.json": "a7649e87ef0ac1449f3dcfdec535f8ed7cb5fc5a9959aac400400a6e573a361f",
+    "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/full/B_candidate_v3_2/evaluation/per_plan_common_consensus_metrics.csv": "0730645a471742c4ca498693a50ddbe9d2c7213acd9c8e1726d78c39f245b495",
+    "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/full/B_candidate_v3_2/evaluation/per_plan_reference_v31_metrics.csv": "d1a4657221ab050d2b045d35cb6f986aee18fb8aff3bd84b5b4c330f45db1fe8",
+    "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/full/B_candidate_v3_2/evaluation/per_plan_reference_v32_metrics.csv": "7be36729f8a12721f814d8971b27758a21af4fb904f1fb2dbe9ee4b68f5f7f70"
   },
   "audit_copies": {
-    "results/changed_instance_metrics.json": "6a0debd919b187b3cd84e32d1db6820200ca949f3eadf1d30d44a6f6240cc5d2",
     "results/common_validation_exclusions.csv": "7db7dfc6bbcdf96d2f89ed27a4952419186cfd1dcba5a025942e0efd86cd050f",
     "results/common_validation_subset_audit.json": "2168f355784d2faa1961f13f5df22742af693cfa91bebe32f851c6735ae094ac",
     "results/config_difference.json": "5761b6344a2dc1d970915c400bcfbb40222e6e492c42e3e4ba9745d8749cb69f",
+    "results/full_CHANGED_VALIDATION_INSTANCE_REPORT.md": "f334ac1d29d8641d57bb4a30b9d2c1abe047e68c91686f8a2f410d19a6cd9a47",
+    "results/full_VANISHED_VALIDATION_INSTANCE_REPORT.md": "605e70c74330b7204c2f3964401a36ba0923f7a552ac55b9e7416fee6530ffb2",
+    "results/full_changed_instance_metrics.json": "0005f2e15d094715ca6a44212dc9fec7347eaad8c63abade61cc2f59818510c4",
+    "results/full_evaluation_summary.json": "dd0d4d010669023821e8a033ea33f26ebc36e089323e575ae8c89e9e85bdee61",
+    "results/full_selected_metrics_A_candidate_v3_1.json": "0ab5d266fd1cb87c1a419215a9357e054eabdaa40d56270d2d08ac9557bf89db",
+    "results/full_selected_metrics_B_candidate_v3_2.json": "a7649e87ef0ac1449f3dcfdec535f8ed7cb5fc5a9959aac400400a6e573a361f",
+    "results/full_supplementary_bootstrap.json": "ec49edf58609ab4beae52c64dae2f3201b44337112386f3546cb420d9c1bdfc3",
+    "results/full_threshold_sweep_A_candidate_v3_1.json": "bf437d565e1c49b5d582973a9484a72ece70eb924c5533a84b1ef031cd32ea99",
+    "results/full_threshold_sweep_B_candidate_v3_2.json": "1f39a13f3affc39075449b711d0e2b93c8969fde929d12328ab123183014ebe4",
     "results/full_training_history_A_candidate_v3_1.csv": "09f8a15a109a7006e2fac82e907f10635c9921784690558ec5355e29b5500fde",
     "results/full_training_history_B_candidate_v3_2.csv": "8bb53525b3847ac043908124da7cfdb6d3958dc1781cb0cbb4799ee77b864134",
     "results/full_training_status_A_candidate_v3_1.json": "91fd1b921f34abda9d54047b65962442802fbc9157ab2f1d303f473dd1b0e57f",
     "results/full_training_status_B_candidate_v3_2.json": "efce0edfb999f3008ee323d709bc3ba08c3c2aee11ed1d1abb70c0554a77a5e4",
+    "results/full_vanished_instance_metrics.json": "cfabc2866363dc638b94b1dea4a61786cb7c7e33f96acc62f4558b55ac4be38f",
     "results/label_repair_lineage/gold_validation_report.md": "2d15c9b7e2d283efdaee66e5ddd1583c80aca8d7b1534a8df6c03195f5c88d8f",
     "results/label_repair_lineage/phase3a1_FINAL_REPAIR_REPORT.md": "c0084efd8a5471c10a5ca2bb6635eb946ab2f7862a5b8d9465a538d7d70b805e",
     "results/label_repair_lineage/phase3a1_WARNING_CLUSTER_ANALYSIS.md": "b3021d097870263c8fc0919e0d0b1691d515cc5b4af4798e1e4455df6e5be4cf",
@@ -72,10 +96,11 @@
     "results/label_repair_lineage/resize_survivability_report.md": "997e3a7f2bced16a4fee5f6ca325f325bef7b295841b504205b2115fd3cef08c",
     "results/label_repair_lineage/superseding_human_findings_v3_1.csv": "210a01c442ecbd959d7c6bd59629caa551fddf5053adb674ab3589f7f5511003",
     "results/probe_arm_comparison.csv": "6e0cf0007412d3702feaebe14c5fc3b9d51a15d171b08b8ce3a8e3ed77547c52",
+    "results/probe_changed_instance_metrics.json": "6a0debd919b187b3cd84e32d1db6820200ca949f3eadf1d30d44a6f6240cc5d2",
     "results/probe_threshold_sweep.csv": "67568e537b7678e270583a2803f9c7d9f9b3f20ad675b89b7f780931cbb4b5e8",
+    "results/probe_vanished_instance_metrics.json": "a7265119caa605625f7da42eed9bc5f2087acab2825042e17dc5d4403c112366",
     "results/shared_initialization_verification.json": "c8941093421bad2a68d8eb3da1e296e8ce7a0c7753d6777aebb9a4b4cf6ab134",
-    "results/source_PHASE3A2_SHARED_INIT_PROBE_REPORT.md": "5c3bc38f7c4422718163425fa7c3f604178dbc279d812055be25fc7bdbe10fcf",
-    "results/vanished_instance_metrics.json": "a7265119caa605625f7da42eed9bc5f2087acab2825042e17dc5d4403c112366"
+    "results/source_PHASE3A2_SHARED_INIT_PROBE_REPORT.md": "5c3bc38f7c4422718163425fa7c3f604178dbc279d812055be25fc7bdbe10fcf"
   },
   "audit_copies_verified_identical_to_source": true,
   "checkpoints": {
@@ -166,11 +191,11 @@
     },
     "model_diagnostics": {
       "source_directory": "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/diagnostics/probe",
-      "content": "the changed validation instance (8690/door_0005) and the vanished validation instance (5981/door_0007) with both arms' 5-epoch predictions"
+      "content": "the changed validation instance (8690/door_0005) and the vanished validation instance (5981/door_0007), each at BOTH 5 epochs (probe) and 30 epochs (full), so the change between them is visible"
     },
     "shared_samples": {
       "source_directory": "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/diagnostics/probe/representative_common_overlays",
-      "content": "both arms' 5-epoch door-opening predictions on the three sample identities shared with experiments 01-06 and 09",
+      "content": "both arms' 30-epoch door-opening predictions at the validation-selected threshold 0.1 on the three sample identities shared with experiments 01-06 and 09",
       "sample_ids": [
         "high_quality_architectural/333",
         "high_quality_architectural/3015",
@@ -178,7 +203,16 @@
       ]
     },
     "files": {
-      "qa/diagnostics/changed_instance_8690_door_0005.png": {
+      "qa/diagnostics/changed_instance_8690_door_0005__full_30ep.png": {
+        "size": [
+          1536,
+          2192
+        ],
+        "mode": "RGB",
+        "sha256": "1fb3ed35cdf328f492aaee921aec352a964548a416b0936dd17ea297565726b2",
+        "bytes": 296267
+      },
+      "qa/diagnostics/changed_instance_8690_door_0005__probe_5ep.png": {
         "size": [
           1536,
           2192
@@ -187,7 +221,16 @@
         "sha256": "35b6632a07e3a47c29a520abd832ed0d229b479cd79243b7f6655486c58f8362",
         "bytes": 298057
       },
-      "qa/diagnostics/vanished_instance_5981_door_0007.png": {
+      "qa/diagnostics/vanished_instance_5981_door_0007__full_30ep.png": {
+        "size": [
+          1536,
+          1096
+        ],
+        "mode": "RGB",
+        "sha256": "435e6390b14b96015d0790647f9d7cd322273723d3d38471448550bf9daccfcc",
+        "bytes": 81177
+      },
+      "qa/diagnostics/vanished_instance_5981_door_0007__probe_5ep.png": {
         "size": [
           1536,
           1096
@@ -247,8 +290,8 @@
           512
         ],
         "mode": "RGB",
-        "sha256": "60404606f315a4cdecd0c0d8fef13cd42c7c0c080a7dd55ca5533ace0a9f793e",
-        "bytes": 140521
+        "sha256": "6ea53b28f282f80c792743bee161f03ab7edb90125dc6380643980be5c0e6031",
+        "bytes": 140406
       },
       "qa/shared_samples/A_candidate_v3_1__high_quality_architectural__333.png": {
         "size": [
@@ -256,8 +299,8 @@
           512
         ],
         "mode": "RGB",
-        "sha256": "79c00bf3cdce51bfb960d82e02e8fe172c098a4edbc9d4c088dad866ca259911",
-        "bytes": 194879
+        "sha256": "8ce0322aa5d9c6af349e18d42efbe34d560f04c6f25053fd7b5b47c3bca768a0",
+        "bytes": 194845
       },
       "qa/shared_samples/A_candidate_v3_1__high_quality_architectural__5559.png": {
         "size": [
@@ -265,8 +308,8 @@
           512
         ],
         "mode": "RGB",
-        "sha256": "45add3f4591589769805cdb61e87f571aa999feb23cbda2614f28bdfb5dbf0d2",
-        "bytes": 151184
+        "sha256": "02448b0261a967a97e18df70d508d3932262758d58d0391b013d92ad3e06f402",
+        "bytes": 151047
       },
       "qa/shared_samples/B_candidate_v3_2__high_quality_architectural__3015.png": {
         "size": [
@@ -274,8 +317,8 @@
           512
         ],
         "mode": "RGB",
-        "sha256": "775943a7d9d279308ef71592f2927c6945f9118cbe2b9fbdfc67707053eb675a",
-        "bytes": 140565
+        "sha256": "dc6f3f72ef9a60678047273597435f832687e22df3e8df9458cd19af8051f3e5",
+        "bytes": 140429
       },
       "qa/shared_samples/B_candidate_v3_2__high_quality_architectural__333.png": {
         "size": [
@@ -283,8 +326,8 @@
           512
         ],
         "mode": "RGB",
-        "sha256": "5271ebe22601ae5e745e5f66a689a3a8088ba2f265e23266fc5a8dd3df3f76fb",
-        "bytes": 194883
+        "sha256": "5cdfa9bebdef68844fdf4eefb5ec132fe7c9bfb919b7c74f577595dfb0200623",
+        "bytes": 194799
       },
       "qa/shared_samples/B_candidate_v3_2__high_quality_architectural__5559.png": {
         "size": [
@@ -292,8 +335,8 @@
           512
         ],
         "mode": "RGB",
-        "sha256": "40c168a87836e4a7fee393158b5eadaa0be5ac071778543bd066075c2b93febe",
-        "bytes": 151130
+        "sha256": "2ef68ac698302c506748fda74eca932ae952f763155c191241793dde0421219b",
+        "bytes": 151095
       }
     },
     "overlay_palette": "as produced by the source runs; see each source report (this audit did not re-render overlays)"
@@ -330,15 +373,42 @@
     }
   },
   "missing_artifacts_and_limits": [
-    "The full 30-epoch evaluation stage was never run: no threshold sweep, per-plan metrics, macro/instance/boundary metrics or paired bootstrap exist for the full phase.",
-    "The source run's own master report still records 'Full 30-epoch run executed: false'; its evaluation/ directory and both top-level reports date from the probe (2026-09-04).",
+    "The full 30-epoch evaluation was executed by the audit on 2026-09-25; before that date only training-history values existed. The source run's own master report still records 'Full 30-epoch run executed: false' and its top-level evaluation/ directory remains the probe's.",
+    "The only statistically significant arm difference (opening-instance F1, favouring the control) is measured on plans whose two targets are byte-identical, so it separates the two trained models rather than the two label versions.",
     "Validation labels are provisional. The 49-row human gold review is 0 resolved, so no result here can support target promotion or production approval.",
     "Test split was never accessed; no test metrics exist.",
-    "The built-in paired bootstrap covers macro Dice and macro IoU only; micro Dice, micro IoU and opening-instance F1 have no confidence intervals in any phase.",
     "The probe project has no git commits, so no code commit identifies the full run; file-level identity rests on the source project's dirty tree and the vendored generator snapshot hash.",
     "Arm A's full run was relaunched with --resume after training had already finished, to repair its best checkpoint and write the final status. Its recorded completed_at_utc (2026-09-19T01:57:26Z) is the finalize time, not the end of training; the 30 epochs ran earlier (elapsed_seconds 13526.7).",
     "The two arms' ReduceLROnPlateau schedules diverged: arm A received a second LR reduction at epoch 29 that arm B did not.",
     "No MLflow run and no DVC status are recorded by this project."
   ],
-  "large_artifacts_committed": false
+  "large_artifacts_committed": false,
+  "full_phase_evaluation": {
+    "executed_utc": "2026-09-25T13:22:25Z",
+    "evaluator": "/home/pmharris/dev/mitunet_phase3a2_512/scripts/evaluate_exploratory.py",
+    "arguments": "--run-dir <run> --phase full --num-workers 4",
+    "status": "PASS",
+    "performed_by": "the audit, on the existing 30-epoch checkpoints; no retraining",
+    "checkpoints_scored": {
+      "A_candidate_v3_1": "best_checkpoint.pt epoch 30",
+      "B_candidate_v3_2": "best_checkpoint.pt epoch 28"
+    },
+    "selected_thresholds": {
+      "A_candidate_v3_1": 0.1,
+      "B_candidate_v3_2": 0.1
+    },
+    "probe_artifacts_modified": false,
+    "test_source_content_accessed": false,
+    "supplementary_bootstrap": {
+      "file": "results/full_supplementary_bootstrap.json",
+      "reason": "the run's built-in paired_bootstrap covers macro Dice and macro IoU only",
+      "added_metrics": [
+        "micro_dice",
+        "micro_iou",
+        "opening_instance_f1"
+      ],
+      "method": "paired plan bootstrap, 2000 resamples, seed 42, aggregating tp/fp/fn and component counts within each resample",
+      "formula_validation": "the same aggregation reproduces the evaluator's reported micro Dice, micro IoU, instance precision, recall and F1 exactly for both arms"
+    }
+  }
 }

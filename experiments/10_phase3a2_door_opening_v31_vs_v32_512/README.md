@@ -4,7 +4,7 @@
 
 This is a label experiment, not a model experiment. Both arms are the same MitUNet, from one byte-identical initialization, trained on the same plans in the same order. The only intended free variable is the door-opening target generator version: arm A trains on `candidate_v3.1` masks, arm B on `candidate_v3.2`. The question is whether the v3.2 target repair produces a better model than v3.1 on a shared validation set.
 
-Two things frame everything below. First, the two label versions differ on **8 of 4,600 masks** (1 of them in validation), so the experiment has very little to measure. Second, the 30-epoch training completed for both arms but **its evaluation stage was never run**, so no threshold-selected final evaluation, per-plan metrics or confidence intervals exist for the full phase.
+Both arms completed 30 epochs, and the full-phase evaluation was executed on 2026-09-25 against the existing checkpoints — no retraining. The answer is that **candidate_v3.2 did not improve on candidate_v3.1**. On pixel metrics the two are statistically indistinguishable; on opening-instance F1 the control is ahead by a margin whose confidence interval excludes zero. The framing caveat is that the two label versions differ on only **8 of 4,600 masks** (1 of them in validation), so the experiment has very little label signal to measure.
 
 This experiment does **not** predict walls. Its target is door openings at `0.4848%` foreground, against the `01` baseline's wall target at `8.43%`. Its IoU is not comparable with any wall IoU in this repository, and the source design says so explicitly: the historical wall checkpoint is audit evidence only and was never used to initialize this experiment.
 
@@ -59,42 +59,65 @@ Checkpoint integrity was re-verified by this audit: all four full-run checkpoint
 
 ## Verified Metrics
 
-### 30-epoch run — training history only
+### 30-epoch evaluation — the headline result
 
-No evaluation stage was run, so these are best-epoch values read from `training_history.csv` at the **fixed** threshold `0.5` (not validation-selected) on the 398-plan provisional common subset.
+Executed 2026-09-25 with `evaluate_exploratory.py --phase full` against the existing checkpoints (A epoch 30, B epoch 28). Status `PASS`, test split never touched. Both arms select threshold **`0.1`** — the same operating point the `01` wall baseline selected, and not the `0.5` used during training. The sweep declines monotonically from `0.1` to `0.9` for both arms.
 
-| | A (`candidate_v3.1`) | B (`candidate_v3.2`) | B − A |
+Common 398-plan subset, each arm at its selected threshold:
+
+| Metric | A (`candidate_v3.1`) | B (`candidate_v3.2`) | B − A |
 | --- | ---: | ---: | ---: |
-| Best epoch | 30 | 28 | |
-| Dice @ 0.5 | `0.810702838491235` | `0.8066504533142688` | `-0.0040523851769662` |
-| IoU @ 0.5 | `0.6816654951591425` | `0.6759548830890035` | `-0.005710612070139` |
-| Validation loss | `0.1912420242276024` | `0.1911806437238377` | `-0.0000613805037647` |
-| Wall-clock | 3.76 h | 3.56 h | |
+| micro Dice | `0.811210840` | `0.807523663` | `-0.003687177` |
+| micro IoU | `0.682384116` | `0.677182128` | `-0.005201988` |
+| macro Dice | `0.803946173` | `0.801972066` | `-0.001974107` |
+| macro IoU | `0.688315583` | `0.685842789` | `-0.002472794` |
+| precision | `0.840109879` | `0.847648341` | `+0.007538462` |
+| recall | `0.784233885` | `0.771026015` | `-0.013207870` |
+| opening-instance precision | `0.906537007` | `0.891992551` | `-0.014544456` |
+| opening-instance recall | `0.885721826` | `0.884930061` | `-0.000791766` |
+| **opening-instance F1** | **`0.896008544`** | **`0.888447271`** | **`-0.007561273`** |
+| boundary F1 | `0.849638093` | `0.847837266` | `-0.001800827` |
+| fragmentation rate | `0.004222750` | `0.005542359` | `+0.001319609` |
+| merge rate | `0.000810373` | `0.002128226` | `+0.001317853` |
+| validation loss | `0.191241787` | `0.191180605` | `-0.000061182` |
+| empty-prediction rate | `0.000000000` | `0.000000000` | `0.000000000` |
 
-Arm A finishes ahead on Dice and IoU; the arms are tied on loss to five decimal places. Neither arm early-stopped and arm A was still improving at the 30-epoch cap.
+The control leads on every aggregate quality metric except precision and validation loss. The treatment is more precise but less complete, and it fragments and merges more.
 
-The per-epoch record does not support reading that gap as an effect. **B led on 17 of 30 epochs, A on 13.** Mean `B − A` IoU over the last ten epochs is `+0.001089`, i.e. B is marginally ahead late in training while A happens to be ahead at its single best epoch. The standard deviation of the per-epoch `B − A` IoU is `0.081015`, roughly 14 times the final `0.0057` gap.
+### Significance
 
-Arm B's first epoch collapsed to IoU `0.0354` and recovered fully by epoch 2, from a byte-identical initialization and identical data order — the same behaviour seen in the probe, attributable to AMP/kernel nondeterminism.
+Paired plan bootstrap, 2,000 resamples, seed 42. The run's built-in bootstrap covers macro Dice and macro IoU; the audit added micro Dice, micro IoU and opening-instance F1 in [results/full_supplementary_bootstrap.json](results/full_supplementary_bootstrap.json), using an aggregation that reproduces the evaluator's own reported values exactly.
 
-### 5-epoch probe — the only completed evaluation
+| Metric (common subset) | B − A | 95% CI | Excludes zero |
+| --- | ---: | --- | --- |
+| macro Dice | `-0.001974107` | `[-0.005968093, +0.001871868]` | no |
+| macro IoU | `-0.002472794` | `[-0.007683295, +0.002519650]` | no |
+| micro Dice | `-0.003687177` | `[-0.007528662, +0.000244651]` | no |
+| micro IoU | `-0.005201988` | `[-0.010508753, +0.000346231]` | no |
+| **opening-instance F1** | `-0.007561273` | `[-0.013241644, -0.001232924]` | **yes** |
 
-`FIVE_EPOCH_PROBE_COMPLETE`. Selected thresholds A `0.5`, B `0.3`. The arms split the metric set almost evenly: B is ahead on macro Dice (`+0.004988`), macro IoU (`+0.005386`), opening-instance F1 (`+0.005482`), precision and validation loss; A is ahead on micro Dice (`+0.001021`), micro IoU (`+0.001335`), recall, fragmentation and merge rate. Neither arm produced empty predictions.
+**On pixel metrics the two arms are statistically indistinguishable.** All four Dice/IoU intervals straddle zero, on all three references. The opening-instance F1 interval excludes zero on all three references (common subset, REFERENCE_V31 `[-0.013967, -0.001831]`, REFERENCE_V32 `[-0.013549, -0.001621]`), favouring the control.
 
-Paired plan bootstrap, 2,000 resamples, seed 42, on the 398-plan common subset:
+That significance must be read carefully. The common subset contains only plans whose two targets are byte-identical, and the arms' training labels differ on 7 of 4,200 training masks. A significant difference measured there separates the two trained **models**, not the two **label versions**. The diverged learning-rate schedules are a second confounder.
 
-| Metric | B − A delta | 95% CI |
-| --- | ---: | --- |
-| macro Dice | `0.004987979778471606` | `[0.00010094944756597308, 0.00950762899987806]` |
-| macro IoU | `0.005385877710282746` | `[0.000006518135761461555, 0.01125299372704522]` |
+This also reverses the probe. At 5 epochs the treatment held a marginal macro-metric advantage (macro Dice `+0.004988`, macro IoU `+0.005386`, intervals barely excluding zero) and a better instance F1 (`0.837424` vs `0.831942`). At 30 epochs both signs flip and the instance-F1 advantage belongs to the control. A 5-epoch probe did not predict the 30-epoch outcome here.
 
-Both intervals exclude zero, but their lower bounds sit essentially **on** zero (`1.0e-04` and `6.5e-06`). The bootstrap covers macro Dice and macro IoU only — micro metrics and instance F1 have no intervals in any phase. This marginal 5-epoch advantage for v3.2 did not persist: at 30 epochs the fixed-threshold pixel metrics favour v3.1.
+### 5-epoch probe
 
-### The two plans that actually distinguish the label versions
+`FIVE_EPOCH_PROBE_COMPLETE`, selected thresholds A `0.5`, B `0.3`. Retained in [metrics.json](metrics.json) as the infrastructure and learnability gate it was designed to be. Its numbers should not be quoted as the experiment's result.
 
-`high_quality_architectural/8690` is the **only** validation plan whose v3.1 and v3.2 targets differ (628 changed pixels, inter-version mask IoU `0.911`). At 5 epochs **both arms predicted zero positive pixels on it**, against both references — 70 false negatives, 0 true positives, Dice `0.0` for every combination. The source diagnostic labels it `PROVISIONAL_DIAGNOSTIC_NO_WINNER` with `target_correctness_decision: null`. The single instance that carries the experimental variable into validation contributed no discriminating signal at all.
+### The two plans that carry the label difference
 
-`high_quality_architectural/5981` is a 512 target-survivability failure: the opening vanishes during the verified 512 conversion in **both** versions (20 reference positive pixels in the ROI each). Arm A predicts nothing there (max probability `0.00027`); arm B predicts 46 pixels (max probability `1.0`). It is excluded from primary positive-instance metrics and was neither dilated nor restored.
+`high_quality_architectural/8690` is the **only** validation plan whose v3.1 and v3.2 targets differ. At 30 epochs, at threshold `0.1`:
+
+| Arm | vs candidate_v3.1 | vs candidate_v3.2 |
+| --- | --- | --- |
+| A (`candidate_v3.1`) | 0 TP, 0 FP, 70 FN — Dice `0.0` | 0 TP, 0 FP, 70 FN — Dice `0.0` |
+| B (`candidate_v3.2`) | 0 TP, **16 FP**, 70 FN — Dice `0.0` | **16 TP**, 0 FP, 54 FN — Dice `0.372093`, IoU `0.228571` |
+
+The treatment arm places 16 pixels on this instance, and **every one of them is a true positive against its own label version and a false positive against the other**, while the control arm still predicts nothing there. The label difference is learnable and the model followed its training labels exactly where the two versions disagree. It does **not** establish which version is correct — each arm is scored against the labels it was trained on. The source diagnostic still records `PROVISIONAL_DIAGNOSTIC_NO_WINNER` with `target_correctness_decision: null`. Only the human gold review can settle it.
+
+`high_quality_architectural/5981` is the 512 survivability failure, where the opening vanishes from the target in **both** versions (20 reference pixels in the ROI). At 5 epochs arm A predicted nothing there. At 30 epochs **both arms predict it confidently** — 39 and 35 pixels, maximum probability `1.0` each. The models recover an opening the 512 target pipeline lost. That is evidence about the target pipeline, not about either label version. The plan stays excluded from primary positive-instance metrics and was neither dilated nor restored.
 
 ## Visual QA
 
@@ -106,19 +129,19 @@ Both intervals exclude zero, but their lower bounds sit essentially **on** zero 
 
 ## Interpretation
 
-This is an inconclusive label-version ablation. It is recorded as evidence of process, not as a result that ranks the two target versions.
+`candidate_v3.2` did not beat `candidate_v3.1`. With the evaluation now complete, the defensible statement is: indistinguishable on pixel quality, and measurably behind on opening-instance F1 by about `0.0076` with an interval that excludes zero. Nothing here supports promoting v3.2 on model performance.
 
-The design is unusually well controlled — shared initialization down to the RNG state, per-epoch data-order hashes, a frozen threshold rule, and a sealed test split. The problem is not the protocol, it is the effect size. With 8 of 4,600 masks differing, 1 of them in validation, and that one instance predicted as empty by both arms, the experiment cannot separate the target version from ordinary training variation. The 5-epoch probe gives v3.2 a marginal macro-metric edge whose confidence intervals touch zero; the 30-epoch run reverses the sign on the fixed-threshold pixel metrics. Neither observation survives the per-epoch variance.
+What the experiment cannot do is attribute that to the target version. The significant instance-F1 gap is measured over 398 plans whose targets are byte-identical in both arms; the arms' training data differs on 7 masks out of 4,200. Two training runs that differ that little can still differ by this much, and the arms' `ReduceLROnPlateau` schedules did diverge — arm A took a second reduction at epoch 29 that arm B never got, and arm A's best epoch is 30. The clean reading is that these are two samples from the same distribution of training outcomes, and the label version is not visibly moving that distribution.
 
-A confounder compounds this: the two `ReduceLROnPlateau` schedules diverged. Both dropped `1e-4` → `5e-5` at epoch 24, but arm A received a second reduction to `2.5e-5` at epoch 29 that arm B never got, and A's best epoch is 30 — two epochs later, including its largest late-run jump. That is legitimate scheduler behaviour responding to each arm's own validation curve, not a protocol break, but the final A-vs-B gap cannot be attributed to the target version alone.
+The one place the label variable is directly visible is `8690`, and it behaves exactly as designed: the treatment model learned its own version's geometry, pixel for pixel. That is a working experiment with a real but unadjudicated signal, waiting on human review rather than on more compute.
 
-The Phase 3A lineage is the more useful finding here. The repairs are real and specific, the v3.2 Family A geometry audit is clean on all 10 instances, and the human superseding findings demonstrate that automated "resolved" verdicts in this pipeline were wrong 3 times out of 9. What the lineage has not yet produced is adjudicated labels: the Phase 3A gate stands at 0 of 105,000 rows reviewed, and this ablation's own 49-row gold queue at 0 resolved.
+The Phase 3A lineage remains the more substantive contribution. The repairs are specific and the v3.2 Family A geometry audit is clean on all 10 instances, while the human superseding findings show automated "resolved" verdicts in this pipeline were wrong 3 times out of 9. The bottleneck is adjudication: the Phase 3A gate stands at 0 of 105,000 rows reviewed, and this ablation's 49-row gold queue at 0 resolved.
 
 ## Missing Evidence and Non-Claims
 
-- **The full-run evaluation does not exist.** No threshold sweep, per-plan metrics, macro/instance/boundary metrics or paired bootstrap for the 30-epoch checkpoints. The source run's master report still records `Full 30-epoch run executed: false`, and its `evaluation/` directory dates from the probe.
-- The full-run figures above are training-history values at a fixed threshold, not a threshold-selected final evaluation. They are not interchangeable with the selected-checkpoint evaluations reported for experiments 01-09.
-- Validation labels are provisional. The 49-row gold review is 0 resolved, so nothing here can promote `candidate_v3.2`, authorize production, or establish which of the two versions is correct on `8690`.
+- The full-run evaluation was executed by the audit on 2026-09-25, after the entry was first published. The source run's own master report still records `Full 30-epoch run executed: false`, and its top-level `evaluation/` directory is still the probe's; the full-phase artifacts live under `full/` and `diagnostics/full/`.
+- The significant opening-instance F1 difference separates the two trained models, not the two label versions: it is measured on plans with byte-identical targets, from arms whose training labels differ on 7 of 4,200 masks, with diverged learning-rate schedules.
+- Validation labels are provisional. The 49-row gold review is 0 resolved, so nothing here can promote either version, authorize production, or establish which version is correct on `8690` — where each arm is scored against the labels it was trained on.
 - No test metrics. The test split was never loaded, scored, visualized or predicted, by design.
 - The probe project is a git repository with **zero commits**; the run report records `Git HEAD: None`. No code commit identifies the full run.
 - Arm A was relaunched with `--resume` after its 30 epochs had already finished, to repair its best checkpoint and write the final status. Its recorded `completed_at_utc` is the finalize time, not the end of training.

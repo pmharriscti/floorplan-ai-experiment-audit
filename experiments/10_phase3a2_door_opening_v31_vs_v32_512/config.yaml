@@ -1,7 +1,7 @@
 experiment_id: 10_phase3a2_door_opening_v31_vs_v32_512
 name: Phase 3A.2 door-opening target ablation, candidate_v3.1 vs candidate_v3.2 (512)
 evidence_status: VERIFIED
-status: training_complete_evaluation_incomplete
+status: completed
 scientific_label: EXPLORATORY - NOT HUMAN-GOLD VALIDATED
 source_run_directory: /mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC
 source_preparation_run: /mnt/e/AI_Team/mitunet/phase3a2_door_opening_512_ablation/phase3a2_v31_vs_v32_door_opening_512_20260903_152401_UTC
@@ -122,8 +122,14 @@ selection:
   probe_selected_thresholds:
     A_candidate_v3_1: 0.5
     B_candidate_v3_2: 0.3
-  full_run_selected_thresholds: NOT_COMPUTED    # the full-phase evaluation stage was never run
-  full_run_checkpoint_selection: best common-subset val IoU at fixed threshold 0.5 during training
+  full_run_selected_thresholds:
+    A_candidate_v3_1: 0.1
+    B_candidate_v3_2: 0.1
+  full_run_threshold_note: >-
+    Selected on validation only, 2026-09-25, by the frozen rule. Both arms select 0.1, the same operating
+    point the 01 wall baseline selected. The sweep declines monotonically from 0.1 to 0.9 for both arms,
+    so the fixed 0.5 used during training was near but not at the optimum.
+  full_run_checkpoint_selection: best common-subset val IoU at fixed threshold 0.5 during training (A epoch 30, B epoch 28)
 checkpoints:
   A_candidate_v3_1_best:
     epoch: 30
@@ -160,10 +166,19 @@ environment:
 tracking:
   mlflow: none (this project writes no MLflow run, unlike phase1/phase2)
   dvc: UNKNOWN
+evaluation:
+  full_phase_executed_utc: '2026-09-25'
+  evaluator: /home/pmharris/dev/mitunet_phase3a2_512/scripts/evaluate_exploratory.py --phase full
+  status: PASS
+  references_scored: [COMMON_CONSENSUS_VALIDATION_SUBSET, REFERENCE_V31, REFERENCE_V32]
+  both_arms_scored_against_all_references: true
+  paired_bootstrap: 2000 resamples, seed 42 (built-in covers macro Dice/IoU; the audit added micro Dice, micro IoU and opening-instance F1)
+  test_source_content_accessed: false
 unknowns:
-  full_run_threshold_sweep: NOT_COMPUTED
-  full_run_per_plan_metrics: NOT_COMPUTED
-  full_run_macro_instance_boundary_metrics: NOT_COMPUTED
-  full_run_paired_bootstrap: NOT_COMPUTED
   test_metrics: not run by design (test split sealed)
   human_gold_review: 0 of 49 queue rows resolved
+  causal_attribution: >-
+    The only statistically significant difference (opening-instance F1, favouring the control) is measured on
+    plans whose targets are byte-identical in both versions, with the arms' training labels differing on 7 of
+    4200 masks, and with diverged learning-rate schedules. It separates the two trained models, not the two
+    label versions.

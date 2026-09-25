@@ -20,14 +20,21 @@ All five panels are `1320x1078` RGB.
 
 ## 2. Model diagnostics on the two special validation plans
 
-Source: `.../phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/diagnostics/probe`. Predictions are from the **5-epoch probe** checkpoints at each arm's selected threshold (A `0.5`, B `0.3`).
+Source: `.../diagnostics/{probe,full}`. Each instance is shown at **both** 5 epochs and 30 epochs, because the two differ in a way that matters.
 
-- [changed_instance_8690_door_0005.png](diagnostics/changed_instance_8690_door_0005.png) (`1536x2192`) — both arms against both label versions on the only differing validation plan. Both arms predict **zero** positive pixels here (70 FN, 0 TP, Dice `0.0` in all four combinations). The source labels this `PROVISIONAL_DIAGNOSTIC_NO_WINNER` with `target_correctness_decision: null`; no version is declared correct.
-- [vanished_instance_5981_door_0007.png](diagnostics/vanished_instance_5981_door_0007.png) (`1536x1096`) — the 512 target-survivability failure. The opening vanishes in both versions (20 reference positive pixels in the ROI each). Arm A predicts nothing in the ROI (max probability `0.00027`); arm B predicts 46 pixels (max probability `1.0`). Excluded from primary positive-instance metrics; neither dilated nor restored.
+**Changed instance `8690 / door_0005`** — the only validation plan whose two label versions disagree.
+
+- [changed_instance_8690_door_0005__probe_5ep.png](diagnostics/changed_instance_8690_door_0005__probe_5ep.png) — at 5 epochs **both** arms predict nothing here (0 TP, 70 FN, Dice `0.0` against both references).
+- [changed_instance_8690_door_0005__full_30ep.png](diagnostics/changed_instance_8690_door_0005__full_30ep.png) — at 30 epochs, threshold `0.1`, the control still predicts nothing, while the treatment predicts 16 pixels that are **16 TP against candidate_v3.2 and 16 FP against candidate_v3.1** (Dice `0.372093` vs its own version, `0.0` vs the other). The treatment model learned its own label version's geometry exactly. This does not say which version is correct; each arm is scored against the labels it trained on, and the source still records `PROVISIONAL_DIAGNOSTIC_NO_WINNER`.
+
+**Vanished instance `5981 / door_0007`** — the 512 target-survivability failure, where the opening disappears from the target in both versions (20 reference pixels in the ROI).
+
+- [vanished_instance_5981_door_0007__probe_5ep.png](diagnostics/vanished_instance_5981_door_0007__probe_5ep.png) — at 5 epochs arm A predicts 0 pixels in the ROI, arm B predicts 46.
+- [vanished_instance_5981_door_0007__full_30ep.png](diagnostics/vanished_instance_5981_door_0007__full_30ep.png) — at 30 epochs **both** arms predict it confidently (39 and 35 pixels, maximum probability `1.0` each). The models recover an opening the 512 target pipeline lost. Excluded from primary positive-instance metrics; neither dilated nor restored.
 
 ## 3. Shared validation samples
 
-Both arms on the three sample identities used by experiments 01-06 and 09, so door-opening behaviour can be compared against the wall and structural entries on the same plans. Source: `.../diagnostics/probe/representative_common_overlays/<arm>`. All `512x512` RGB, 5-epoch probe checkpoints at each arm's selected threshold.
+Both arms on the three sample identities used by experiments 01-06 and 09, so door-opening behaviour can be compared against the wall and structural entries on the same plans. Source: `.../diagnostics/full/representative_common_overlays/<arm>`. All `512x512` RGB, **30-epoch** checkpoints at the validation-selected threshold `0.1`.
 
 | Sample | A (`candidate_v3.1`) | B (`candidate_v3.2`) |
 | --- | --- | --- |
@@ -43,4 +50,4 @@ Every file above was opened and verified by the audit; recorded dimensions, mode
 
 ## What is not here
 
-There is no visual QA from the **30-epoch** checkpoints. That run's evaluation stage was never executed, so it produced no prediction masks or overlays. Everything in sections 2 and 3 is 5-epoch probe output.
+No test-split imagery: the test split was never loaded, scored, visualized or predicted. Section 1 is label evidence with no model involved; sections 2 and 3 are model outputs at the epochs stated.

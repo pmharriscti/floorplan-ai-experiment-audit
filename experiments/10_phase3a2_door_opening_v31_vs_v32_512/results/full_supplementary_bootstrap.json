@@ -1,0 +1,113 @@
+{
+  "method": "paired plan bootstrap over the same validation plans for both arms; micro metrics aggregate tp/fp/fn within each resample, instance metrics aggregate matched/predicted/reference components within each resample",
+  "bootstrap_samples": 2000,
+  "seed": 42,
+  "supplements": "the run's built-in paired_bootstrap covers macro_dice and macro_iou only",
+  "computed_utc": "2026-09-25T13:20:16Z",
+  "phase": "full",
+  "selected_thresholds": {
+    "A_candidate_v3_1": 0.1,
+    "B_candidate_v3_2": 0.1
+  },
+  "references": {
+    "COMMON_CONSENSUS_VALIDATION_SUBSET": {
+      "plan_count": 398,
+      "micro_dice": {
+        "arm_A": 0.8112108398240278,
+        "arm_B": 0.8075236629635095,
+        "B_minus_A_delta": -0.0036871768605182265,
+        "ci95": [
+          -0.007528662178990333,
+          0.0002446508107344525
+        ],
+        "excludes_zero": false
+      },
+      "micro_iou": {
+        "arm_A": 0.6823841157030294,
+        "arm_B": 0.6771821275467362,
+        "B_minus_A_delta": -0.005201988156293136,
+        "ci95": [
+          -0.010508752635153948,
+          0.0003462314070053611
+        ],
+        "excludes_zero": false
+      },
+      "opening_instance_f1": {
+        "arm_A": 0.8960085435856361,
+        "arm_B": 0.8884472708002119,
+        "B_minus_A_delta": -0.007561272785424178,
+        "ci95": [
+          -0.013241644137519446,
+          -0.0012329239949875825
+        ],
+        "excludes_zero": true
+      }
+    },
+    "REFERENCE_V31": {
+      "plan_count": 400,
+      "micro_dice": {
+        "arm_A": 0.8113544773216462,
+        "arm_B": 0.8077186872097799,
+        "B_minus_A_delta": -0.0036357901118663216,
+        "ci95": [
+          -0.007327132502423559,
+          0.00033989683814494094
+        ],
+        "excludes_zero": false
+      },
+      "micro_iou": {
+        "arm_A": 0.6825874172254783,
+        "arm_B": 0.6774564681547572,
+        "B_minus_A_delta": -0.005130949070721091,
+        "ci95": [
+          -0.01029303330081541,
+          0.0004855536707158536
+        ],
+        "excludes_zero": false
+      },
+      "opening_instance_f1": {
+        "arm_A": 0.8961125116093936,
+        "arm_B": 0.8883622959452343,
+        "B_minus_A_delta": -0.007750215664159343,
+        "ci95": [
+          -0.013966830687190998,
+          -0.0018311477060714084
+        ],
+        "excludes_zero": true
+      }
+    },
+    "REFERENCE_V32": {
+      "plan_count": 400,
+      "micro_dice": {
+        "arm_A": 0.8113544773216462,
+        "arm_B": 0.8077522978660384,
+        "B_minus_A_delta": -0.0036021794556078124,
+        "ci95": [
+          -0.007304819753679534,
+          0.00034971188476359756
+        ],
+        "excludes_zero": false
+      },
+      "micro_iou": {
+        "arm_A": 0.6825874172254783,
+        "arm_B": 0.6775037573318627,
+        "B_minus_A_delta": -0.0050836598936155886,
+        "ci95": [
+          -0.010247909380819268,
+          0.0004905309297584282
+        ],
+        "excludes_zero": false
+      },
+      "opening_instance_f1": {
+        "arm_A": 0.8961125116093936,
+        "arm_B": 0.8886255924170616,
+        "B_minus_A_delta": -0.00748691919233202,
+        "ci95": [
+          -0.013548753153871116,
+          -0.0016207696082179098
+        ],
+        "excludes_zero": true
+      }
+    }
+  }
+}

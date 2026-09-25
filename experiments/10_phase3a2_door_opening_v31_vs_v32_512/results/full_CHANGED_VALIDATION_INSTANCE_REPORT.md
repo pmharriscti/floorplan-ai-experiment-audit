@@ -1,0 +1,9 @@
+# Changed Validation Instance Diagnostic
+
+**PROVISIONAL — NOT HUMAN-GOLD VALIDATED.**
+
+This diagnostic compares both model predictions with candidate_v3.1 and candidate_v3.2 for `high_quality_architectural/8690 / door_0005`. The evidence panel includes the source SVG-derived instance, host wall, and jamb evidence. No target version is declared correct.
+
+Composite: `/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/diagnostics/full/changed_instance_high_quality_architectural__8690_door_0005.png`
+
+Metrics: `{"arms": {"A_candidate_v3_1": {"metrics_against_v31": {"dice": 0.0, "f1": 0.0, "false_negative_rate": 1.0, "false_positive_rate": 0.0, "fn": 70, "fp": 0, "iou": 0.0, "pixel_accuracy": 0.9805501528202278, "precision": 0.0, "recall": 0.0, "specificity": 1.0, "tn": 3529, "tp": 0}, "metrics_against_v32": {"dice": 0.0, "f1": 0.0, "false_negative_rate": 1.0, "false_positive_rate": 0.0, "fn": 70, "fp": 0, "iou": 0.0, "pixel_accuracy": 0.9805501528202278, "precision": 0.0, "recall": 0.0, "specificity": 1.0, "tn": 3529, "tp": 0}, "selected_common_threshold": 0.1}, "B_candidate_v3_2": {"metrics_against_v31": {"dice": 0.0, "f1": 0.0, "false_negative_rate": 1.0, "false_positive_rate": 0.004533862283933126, "fn": 70, "fp": 16, "iou": 0.0, "pixel_accuracy": 0.9761044734648513, "precision": 0.0, "recall": 0.0, "specificity": 0.9954661377160668, "tn": 3513, "tp": 0}, "metrics_against_v32": {"dice": 0.37209302325581395, "f1": 0.3720930232558139, "false_negative_rate": 0.7714285714285715, "false_positive_rate": 0.0, "fn": 54, "fp": 0, "iou": 0.22857142857142856, "pixel_accuracy": 0.9849958321756044, "precision": 1.0, "recall": 0.22857142857142856, "specificity": 1.0, "tn": 3529, "tp": 16}, "selected_common_threshold": 0.1}}, "sample_id": "high_quality_architectural/8690", "scientific_label": "PROVISIONAL_DIAGNOSTIC_NO_WINNER", "source_instance_id": "door_0005", "target_correctness_decision": null}`
