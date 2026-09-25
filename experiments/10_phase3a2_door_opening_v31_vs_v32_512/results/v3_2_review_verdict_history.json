@@ -1,0 +1,178 @@
+{
+  "purpose": "Reconstructed Phase 3A.2 verdict history from the review app's audit log, because the saved decision CSV retains only the final state and that state is not what the reviewer recorded.",
+  "source_audit_log": "/mnt/e/AI_Team/mitunet/phase3a2_opening_axis_repair/experiments/mitunet_phase3a2_opening_axis_repair_20260826_142837_UTC/review/human_review_audit_log_v3_2.jsonl",
+  "source_decision_csv": "/mnt/e/AI_Team/mitunet/phase3a2_opening_axis_repair/experiments/mitunet_phase3a2_opening_axis_repair_20260826_142837_UTC/review/opening_human_decisions_v3_2.csv",
+  "reviewed_instances": 7,
+  "queue_rows": 44,
+  "progress_percent": 15.9,
+  "ever_marked_correct": [
+    "high_quality_architectural/10543/door_0003",
+    "high_quality_architectural/10620/door_0005",
+    "high_quality_architectural/11709/door_0012",
+    "high_quality_architectural/13110/door_0006",
+    "high_quality_architectural/13827/door_0004"
+  ],
+  "ever_marked_correct_count": 5,
+  "still_correct_in_saved_file": [
+    "high_quality_architectural/13827/door_0004"
+  ],
+  "reverted_to_skipped": [
+    "high_quality_architectural/10543/door_0003",
+    "high_quality_architectural/10620/door_0005",
+    "high_quality_architectural/11709/door_0012",
+    "high_quality_architectural/13110/door_0006"
+  ],
+  "reverted_count": 4,
+  "current_saved_state": {
+    "high_quality_architectural/10543/door_0003": {
+      "review_decision": "Skipped",
+      "preferred_version": "Cannot determine",
+      "has_notes": false
+    },
+    "high_quality_architectural/10620/door_0005": {
+      "review_decision": "Skipped",
+      "preferred_version": "Cannot determine",
+      "has_notes": false
+    },
+    "high_quality_architectural/11709/door_0012": {
+      "review_decision": "Skipped",
+      "preferred_version": "Cannot determine",
+      "has_notes": true
+    },
+    "high_quality_architectural/11709/door_0013": {
+      "review_decision": "Skipped",
+      "preferred_version": "Cannot determine",
+      "has_notes": false
+    },
+    "high_quality_architectural/11709/door_0014": {
+      "review_decision": "Skipped",
+      "preferred_version": "Cannot determine",
+      "has_notes": false
+    },
+    "high_quality_architectural/13110/door_0006": {
+      "review_decision": "Skipped",
+      "preferred_version": "Cannot determine",
+      "has_notes": true
+    },
+    "high_quality_architectural/13827/door_0004": {
+      "review_decision": "Correct",
+      "preferred_version": "Candidate",
+      "has_notes": true
+    }
+  },
+  "verdict_history": {
+    "high_quality_architectural/10543/door_0003": [
+      {
+        "timestamp_utc": "2026-08-27T13:49:59Z",
+        "from": null,
+        "to": "Correct",
+        "preferred_from": null,
+        "preferred_to": "Candidate",
+        "session_id": "677a60abddf649ce8f0196d1cd916451",
+        "reviewer": "pmharris"
+      },
+      {
+        "timestamp_utc": "2026-09-02T17:32:55Z",
+        "from": "Correct",
+        "to": "Skipped",
+        "preferred_from": "Candidate",
+        "preferred_to": "Cannot determine",
+        "session_id": "edd2e062777642fcb5861e59f23306bb",
+        "reviewer": "pmharris"
+      }
+    ],
+    "high_quality_architectural/10620/door_0005": [
+      {
+        "timestamp_utc": "2026-08-27T13:50:21Z",
+        "from": null,
+        "to": "Correct",
+        "preferred_from": null,
+        "preferred_to": "Candidate",
+        "session_id": "677a60abddf649ce8f0196d1cd916451",
+        "reviewer": "pmharris"
+      },
+      {
+        "timestamp_utc": "2026-09-02T17:33:05Z",
+        "from": "Correct",
+        "to": "Skipped",
+        "preferred_from": "Candidate",
+        "preferred_to": "Cannot determine",
+        "session_id": "edd2e062777642fcb5861e59f23306bb",
+        "reviewer": "pmharris"
+      }
+    ],
+    "high_quality_architectural/11709/door_0012": [
+      {
+        "timestamp_utc": "2026-08-27T13:50:55Z",
+        "from": null,
+        "to": "Correct",
+        "preferred_from": null,
+        "preferred_to": "Candidate",
+        "session_id": "677a60abddf649ce8f0196d1cd916451",
+        "reviewer": "pmharris"
+      },
+      {
+        "timestamp_utc": "2026-09-08T17:17:22Z",
+        "from": "Correct",
+        "to": "Skipped",
+        "preferred_from": "Candidate",
+        "preferred_to": "Cannot determine",
+        "session_id": "63a2c4c307fe4ff0bf7e49e326e2e589",
+        "reviewer": "pmharris"
+      }
+    ],
+    "high_quality_architectural/11709/door_0013": [
+      {
+        "timestamp_utc": "2026-09-02T17:41:56Z",
+        "from": null,
+        "to": "Skipped",
+        "preferred_from": null,
+        "preferred_to": "Cannot determine",
+        "session_id": "edd2e062777642fcb5861e59f23306bb",
+        "reviewer": "pmharris"
+      }
+    ],
+    "high_quality_architectural/11709/door_0014": [
+      {
+        "timestamp_utc": "2026-09-02T17:41:39Z",
+        "from": null,
+        "to": "Skipped",
+        "preferred_from": null,
+        "preferred_to": "Cannot determine",
+        "session_id": "edd2e062777642fcb5861e59f23306bb",
+        "reviewer": "pmharris"
+      }
+    ],
+    "high_quality_architectural/13110/door_0006": [
+      {
+        "timestamp_utc": "2026-09-02T18:12:46Z",
+        "from": null,
+        "to": "Correct",
+        "preferred_from": null,
+        "preferred_to": "Candidate",
+        "session_id": "edd2e062777642fcb5861e59f23306bb",
+        "reviewer": "pmharris"
+      },
+      {
+        "timestamp_utc": "2026-09-08T17:19:36Z",
+        "from": "Correct",
+        "to": "Skipped",
+        "preferred_from": "Candidate",
+        "preferred_to": "Cannot determine",
+        "session_id": "63a2c4c307fe4ff0bf7e49e326e2e589",
+        "reviewer": "pmharris"
+      }
+    ],
+    "high_quality_architectural/13827/door_0004": [
+      {
+        "timestamp_utc": "2026-09-02T18:36:45Z",
+        "from": null,
+        "to": "Correct",
+        "preferred_from": null,
+        "preferred_to": "Candidate",
+        "session_id": "edd2e062777642fcb5861e59f23306bb",
+        "reviewer": "pmharris"
+      }
+    ]
+  }
+}

@@ -66,7 +66,8 @@
     "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/full/B_candidate_v3_2/evaluation/selected_provisional_metrics.json": "a7649e87ef0ac1449f3dcfdec535f8ed7cb5fc5a9959aac400400a6e573a361f",
     "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/full/B_candidate_v3_2/evaluation/per_plan_common_consensus_metrics.csv": "0730645a471742c4ca498693a50ddbe9d2c7213acd9c8e1726d78c39f245b495",
     "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/full/B_candidate_v3_2/evaluation/per_plan_reference_v31_metrics.csv": "d1a4657221ab050d2b045d35cb6f986aee18fb8aff3bd84b5b4c330f45db1fe8",
-    "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/full/B_candidate_v3_2/evaluation/per_plan_reference_v32_metrics.csv": "7be36729f8a12721f814d8971b27758a21af4fb904f1fb2dbe9ee4b68f5f7f70"
+    "/mnt/e/AI_Team/mitunet/phase3a2_shared_init_probe/phase3a2_v31_vs_v32_shared_init_probe_20260904_152111_UTC/full/B_candidate_v3_2/evaluation/per_plan_reference_v32_metrics.csv": "7be36729f8a12721f814d8971b27758a21af4fb904f1fb2dbe9ee4b68f5f7f70",
+    "/mnt/e/AI_Team/mitunet/phase3a2_opening_axis_repair/experiments/mitunet_phase3a2_opening_axis_repair_20260826_142837_UTC/review/human_review_audit_log_v3_2.jsonl": "61abeadbfcbd3378efa7772ec638ea4eff611a6f654abd5797bf34d426a7b008"
   },
   "audit_copies": {
     "results/common_validation_exclusions.csv": "7db7dfc6bbcdf96d2f89ed27a4952419186cfd1dcba5a025942e0efd86cd050f",
@@ -100,7 +101,8 @@
     "results/probe_threshold_sweep.csv": "67568e537b7678e270583a2803f9c7d9f9b3f20ad675b89b7f780931cbb4b5e8",
     "results/probe_vanished_instance_metrics.json": "a7265119caa605625f7da42eed9bc5f2087acab2825042e17dc5d4403c112366",
     "results/shared_initialization_verification.json": "c8941093421bad2a68d8eb3da1e296e8ce7a0c7753d6777aebb9a4b4cf6ab134",
-    "results/source_PHASE3A2_SHARED_INIT_PROBE_REPORT.md": "5c3bc38f7c4422718163425fa7c3f604178dbc279d812055be25fc7bdbe10fcf"
+    "results/source_PHASE3A2_SHARED_INIT_PROBE_REPORT.md": "5c3bc38f7c4422718163425fa7c3f604178dbc279d812055be25fc7bdbe10fcf",
+    "results/v3_2_review_verdict_history.json": "9296fe9206de2ed1fc54f3d830a7763e91bb32b2d97a3c110477a682add37c16"
   },
   "audit_copies_verified_identical_to_source": true,
   "checkpoints": {
@@ -412,15 +414,52 @@
           "seed/wall axis mismatch": 5
         }
       },
-      "instances_noted_as_repaired_by_v3_2": [
-        "high_quality_architectural/11709 door_0012",
-        "high_quality_architectural/13110 door_0006",
-        "high_quality_architectural/13827 door_0004"
+      "queue_rows": 44,
+      "progress_percent": 15.9,
+      "pending": 37,
+      "authoritative_source": "the review app's audit log (human_review_audit_log_v3_2.jsonl); the saved decision CSV retains only a final state that is NOT what the reviewer recorded",
+      "ever_marked_correct": [
+        "high_quality_architectural/10543/door_0003",
+        "high_quality_architectural/10620/door_0005",
+        "high_quality_architectural/11709/door_0012",
+        "high_quality_architectural/13110/door_0006",
+        "high_quality_architectural/13827/door_0004"
       ],
-      "formally_accepted": [
-        "high_quality_architectural/13827 door_0004 (Correct / preferred Candidate)"
+      "ever_marked_correct_count": 5,
+      "still_correct_in_saved_csv": [
+        "high_quality_architectural/13827/door_0004"
       ],
-      "note": "11709/door_0012 and 13110/door_0006 carry affirmative reviewer notes but were filed as Skipped / Cannot determine, so they are not resolutions"
+      "reverted_to_skipped": [
+        "high_quality_architectural/10543/door_0003",
+        "high_quality_architectural/10620/door_0005",
+        "high_quality_architectural/11709/door_0012",
+        "high_quality_architectural/13110/door_0006"
+      ],
+      "reverted_count": 4,
+      "never_marked_correct": [
+        "high_quality_architectural/11709/door_0013",
+        "high_quality_architectural/11709/door_0014"
+      ],
+      "saved_csv_breakdown": {
+        "Skipped": 6,
+        "Correct": 1
+      },
+      "true_breakdown_per_audit_log": {
+        "Correct": 5,
+        "Skipped": 2
+      },
+      "significance": "v3.2 was judged to correctly detect openings earlier versions could not on 5 of the 7 instances reviewed. Two of the five (10543/door_0003, 10620/door_0005) are exactly the instances where human review had marked candidate_v3.1 a Critical issue, so v3.2 fixed v3.1's two worst confirmed failures. A third (13110/door_0006) is the instance the v3.1 Family A repair had left Unchanged.",
+      "data_integrity_defect": {
+        "summary": "Four Correct/Candidate verdicts were overwritten with the form defaults Skipped/Cannot determine during later revisit sessions on 2026-09-02 and 2026-09-08.",
+        "evidence": [
+          "the overwritten values are exactly the widget defaults",
+          "affirmative reviewer notes survived the overwrite on 11709/door_0012 and 13110/door_0006, which is incoherent with a deliberate Skipped",
+          "every session rewrites sidecar.severity '' -> 'None' on each visited record, so revisiting re-saves the row"
+        ],
+        "consequence": "opening_human_decisions_v3_2.csv cannot be used as the review record; any gate counting resolved rows from it will under-count",
+        "affects_model_metrics": false
+      },
+      "reconstruction_file": "results/v3_2_review_verdict_history.json"
     },
     "superseded_v3_1_findings": {
       "count": 3,
@@ -442,6 +481,7 @@
   "missing_artifacts_and_limits": [
     "The full 30-epoch evaluation was executed by the audit on 2026-09-25; before that date only training-history values existed. The source run's own master report still records 'Full 30-epoch run executed: false' and its top-level evaluation/ directory remains the probe's.",
     "The only statistically significant arm difference (opening-instance F1, favouring the control) is measured on plans whose two targets are byte-identical, so it separates the two trained models rather than the two label versions.",
+    "The Phase 3A.2 saved decision CSV is unreliable: four Correct/Candidate verdicts were overwritten with form defaults during later revisit sessions. The audit log is the authoritative review record and the reconstruction is in results/v3_2_review_verdict_history.json.",
     "Validation labels are provisional. The 49-row human gold review is 0 resolved, so no result here can support target promotion or production approval.",
     "Test split was never accessed; no test metrics exist.",
     "The probe project has no git commits, so no code commit identifies the full run; file-level identity rests on the source project's dirty tree and the vendored generator snapshot hash.",
