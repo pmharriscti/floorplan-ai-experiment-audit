@@ -853,15 +853,39 @@
         "Cannot determine": 6,
         "Candidate": 1
       },
-      "re_review_queue_rows": 44,
-      "queue_status": {
-        "reviewed": 7,
-        "pending": 37,
-        "human_review_status": {
-          "skipped": 6,
-          "correct": 1,
-          "pending": 37
-        }
+      "queue_rows": 44,
+      "progress_percent": 15.9,
+      "pending": 37,
+      "never_marked_correct": [
+        "high_quality_architectural/11709/door_0013",
+        "high_quality_architectural/11709/door_0014"
+      ],
+      "saved_csv_breakdown": {
+        "Correct": 5,
+        "Skipped": 2
+      },
+      "significance": "v3.2 was judged to correctly detect openings earlier versions could not on 5 of the 7 instances reviewed. Two of the five (10543/door_0003, 10620/door_0005) are exactly the instances where human review had marked candidate_v3.1 a Critical issue, so v3.2 fixed v3.1's two worst confirmed failures. A third (13110/door_0006) is the instance the v3.1 Family A repair had left Unchanged.",
+      "reconstruction_file": "results/v3_2_review_verdict_history.json",
+      "state": "RESTORED 2026-09-25",
+      "manifest_human_review_status": {
+        "correct": 5,
+        "skipped": 2,
+        "pending": 37
+      },
+      "judged_correct": [
+        "high_quality_architectural/10543/door_0003",
+        "high_quality_architectural/10620/door_0005",
+        "high_quality_architectural/11709/door_0012",
+        "high_quality_architectural/13110/door_0006",
+        "high_quality_architectural/13827/door_0004"
+      ],
+      "judged_correct_count": 5,
+      "data_integrity_incident": {
+        "summary": "Four Correct/Candidate verdicts were destroyed between 2026-09-02 and 2026-09-08 by a defect in the review app's Skip button, which saved the widget defaults unconditionally.",
+        "detected": "2026-09-25, from the app's own audit log",
+        "restored": "2026-09-25, written back through the app's persistence layer with backups and new audit-log entries",
+        "tool_fixed": "scripts/gradio_phase3a_target_review.py skip_opening now refuses to overwrite a saved decision; covered by tests/test_phase3a_review_skip_guard.py",
+        "affects_model_metrics": false
       },
       "queue_composition": {
         "family_A_repair_rows": 10,
@@ -870,53 +894,7 @@
           "door-symbol geometry used as opening seed": 5,
           "seed/wall axis mismatch": 5
         }
-      },
-      "queue_rows": 44,
-      "progress_percent": 15.9,
-      "pending": 37,
-      "authoritative_source": "the review app's audit log (human_review_audit_log_v3_2.jsonl); the saved decision CSV retains only a final state that is NOT what the reviewer recorded",
-      "ever_marked_correct": [
-        "high_quality_architectural/10543/door_0003",
-        "high_quality_architectural/10620/door_0005",
-        "high_quality_architectural/11709/door_0012",
-        "high_quality_architectural/13110/door_0006",
-        "high_quality_architectural/13827/door_0004"
-      ],
-      "ever_marked_correct_count": 5,
-      "still_correct_in_saved_csv": [
-        "high_quality_architectural/13827/door_0004"
-      ],
-      "reverted_to_skipped": [
-        "high_quality_architectural/10543/door_0003",
-        "high_quality_architectural/10620/door_0005",
-        "high_quality_architectural/11709/door_0012",
-        "high_quality_architectural/13110/door_0006"
-      ],
-      "reverted_count": 4,
-      "never_marked_correct": [
-        "high_quality_architectural/11709/door_0013",
-        "high_quality_architectural/11709/door_0014"
-      ],
-      "saved_csv_breakdown": {
-        "Skipped": 6,
-        "Correct": 1
-      },
-      "true_breakdown_per_audit_log": {
-        "Correct": 5,
-        "Skipped": 2
-      },
-      "significance": "v3.2 was judged to correctly detect openings earlier versions could not on 5 of the 7 instances reviewed. Two of the five (10543/door_0003, 10620/door_0005) are exactly the instances where human review had marked candidate_v3.1 a Critical issue, so v3.2 fixed v3.1's two worst confirmed failures. A third (13110/door_0006) is the instance the v3.1 Family A repair had left Unchanged.",
-      "data_integrity_defect": {
-        "summary": "Four Correct/Candidate verdicts were overwritten with the form defaults Skipped/Cannot determine during later revisit sessions on 2026-09-02 and 2026-09-08.",
-        "evidence": [
-          "the overwritten values are exactly the widget defaults",
-          "affirmative reviewer notes survived the overwrite on 11709/door_0012 and 13110/door_0006, which is incoherent with a deliberate Skipped",
-          "every session rewrites sidecar.severity '' -> 'None' on each visited record, so revisiting re-saves the row"
-        ],
-        "consequence": "opening_human_decisions_v3_2.csv cannot be used as the review record; any gate counting resolved rows from it will under-count",
-        "affects_model_metrics": false
-      },
-      "reconstruction_file": "results/v3_2_review_verdict_history.json"
+      }
     },
     "superseded_v3_1_findings": {
       "count": 3,

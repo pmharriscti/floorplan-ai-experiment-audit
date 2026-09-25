@@ -12,7 +12,7 @@ The label question is answered first, below, because it is the one the evidence 
 
 ### Yes, for what it targeted
 
-**1. Human adjudication — the only evidence that is directly about labels.** Five of the seven reviewed instances were judged `Correct` / preferred `Candidate`. Two of those five, `10543/door_0003` and `10620/door_0005`, are exactly the instances where a reviewer had marked `candidate_v3.1` a `Critical issue`, with specific reasons ("added foreground at the wrong location/orientation rather than at the true source doorway"; "source SVG shows an exterior door in the bottom horizontal wall; candidate_v3.1 adds a vertical segment"). **v3.1's two worst confirmed failures were re-reviewed and passed under v3.2.** See [the review record](#v32-review-result-5-of-7-reviewed-instances-judged-correct) for the verdict history and the decision-file defect behind it.
+**1. Human adjudication — the only evidence that is directly about labels.** Five of the seven reviewed instances were judged `Correct` / preferred `Candidate`. Two of those five, `10543/door_0003` and `10620/door_0005`, are exactly the instances where a reviewer had marked `candidate_v3.1` a `Critical issue`, with specific reasons ("added foreground at the wrong location/orientation rather than at the true source doorway"; "source SVG shows an exterior door in the bottom horizontal wall; candidate_v3.1 adds a vertical segment"). **v3.1's two worst confirmed failures were re-reviewed and passed under v3.2.** See [the review record](#v32-review-result-5-of-7-reviewed-instances-judged-correct) for the per-instance verdicts, and the [data-integrity incident](#data-integrity-incident-and-restoration) for the defect that briefly destroyed four of them.
 
 **2. Geometry audit, all 10 Family A instances.** Tangent-aligned `10`, normal-aligned `0`, ambiguous wall orientation `0`, missing jamb evidence `0`, **placed on wrong wall `0`**, placed outside an architectural opening `0`. The architectural invariant holds on every one: the opening's long axis is parallel to the host-wall tangent and its short axis to the wall normal. Measured on `10620/door_0005`: wall tangent `0.15103162146491964` degrees, wall normal `90.15103162146492`, opening long axis `0.0`, angle to tangent `0.151`, angle to normal `89.849`.
 
@@ -132,35 +132,33 @@ Counts below are parsed CSV rows, not line counts; the notes fields contain embe
 
 ### v3.2 review result: 5 of 7 reviewed instances judged Correct
 
-**The saved decision file under-reports this review, and the review app's audit log proves it.** The reviewer recorded `Correct` / preferred `Candidate` on **five** instances. Four of those were later overwritten with `Skipped` / `Cannot determine`; only one survives in `opening_human_decisions_v3_2.csv`. The full reconstruction is in [results/v3_2_review_verdict_history.json](results/v3_2_review_verdict_history.json).
+Of the 7 instances adjudicated so far, **5 were judged `Correct` / preferred `Candidate`**:
 
-| Instance | Marked `Correct` at | Later overwritten | State in saved file |
-| --- | --- | --- | --- |
-| `10543/door_0003` | 2026-08-27T13:49:59Z | 2026-09-02T17:32:55Z | `Skipped` |
-| `10620/door_0005` | 2026-08-27T13:50:21Z | 2026-09-02T17:33:05Z | `Skipped` |
-| `11709/door_0012` | 2026-08-27T13:50:55Z | 2026-09-08T17:17:22Z | `Skipped` |
-| `13110/door_0006` | 2026-09-02T18:12:46Z | 2026-09-08T17:19:36Z | `Skipped` |
-| `13827/door_0004` | 2026-09-02T18:36:45Z | — | **`Correct`** |
+| Instance | Verdict | Note recorded |
+| --- | --- | --- |
+| `10543/door_0003` | **`Correct`** | — (v3.1 here was `Critical issue`) |
+| `10620/door_0005` | **`Correct`** | — (v3.1 here was `Critical issue`) |
+| `11709/door_0012` | **`Correct`** | "v3.2 correctly repairs door_0012. The opening is now generated vertically between the two identified doorway jambs. candidate_v3.1 used incorrect horizontal geometry, while v3.2 matches the architectural doorway shown in the source instance." |
+| `11709/door_0013` | `Skipped` | — (v3.1 here was `Critical issue`; **still unresolved**) |
+| `11709/door_0014` | `Skipped` | — |
+| `13110/door_0006` | **`Correct`** | "v3.2 correctly repairs door_0006. The opening is horizontal and now matches the jamb-to-jamb doorway span shown in the source SVG and opening-centered crop. candidate_v3.1 was also horizontal but overshot the true opening extent." |
+| `13827/door_0004` | **`Correct`** | "v3.2 correctly repairs door_0004. The doorway opening is horizontal in the opening-centered crop and source SVG evidence. v3.2 matches the jamb-to-jamb opening axis, while earlier versions were aligned incorrectly to the wall-edge interpretation." |
 
-The remaining two reviewed rows, `11709/door_0013` and `11709/door_0014`, were set directly to `Skipped` on 2026-09-02 and were never marked `Correct`.
+Two of the five, `10543/door_0003` and `10620/door_0005`, are exactly the instances where human review had marked `candidate_v3.1` a `Critical issue`. A third, `13110/door_0006`, is the instance the v3.1 Family A repair had left `Unchanged: no wall component intersects or lies near the opening seed`.
 
-**So v3.2 was judged to correctly detect openings that earlier versions could not, on 5 of the 7 instances reviewed so far.** Two of those five — `10543/door_0003` and `10620/door_0005` — are precisely the instances where human review had marked `candidate_v3.1` a `Critical issue`. The v3.2 repair therefore fixed v3.1's two worst confirmed failures. A third, `13110/door_0006`, is the one instance the v3.1 Family A repair had left `Unchanged: no wall component intersects or lies near the opening seed` — v3.2 generated a correct jamb-to-jamb opening where v3.1 produced nothing usable.
+### Data-integrity incident and restoration
 
-Reviewer notes on three of the five:
+Four of those five verdicts were **destroyed and later restored**. Between 2026-09-02 and 2026-09-08 the saved decision file silently lost `10543/door_0003`, `10620/door_0005`, `11709/door_0012` and `13110/door_0006`, each reverting from `Correct` / `Candidate` to `Skipped` / `Cannot determine`. Only `13827/door_0004` survived, so the file reported 1 `Correct` where the reviewer had recorded 5.
 
-- `11709/door_0012` — "candidate_v3.2 correctly repairs door_0012. The opening is now generated vertically between the two identified doorway jambs. candidate_v3.1 used incorrect horizontal geometry, while v3.2 matches the architectural doorway shown in the source instance."
-- `13110/door_0006` — "candidate_v3.2 correctly repairs door_0006. The opening is horizontal and now matches the jamb-to-jamb doorway span shown in the source SVG and opening-centered crop. candidate_v3.1 was also horizontal but overshot the true opening extent."
-- `13827/door_0004` — "candidate_v3.2 correctly repairs door_0004. The doorway opening is horizontal in the opening-centered crop and source SVG evidence. v3.2 matches the jamb-to-jamb opening axis, while earlier versions were aligned incorrectly to the wall-edge interpretation."
+**Cause.** `ReviewController.skip_opening` in `scripts/gradio_phase3a_target_review.py` called `save_opening(..., "Skipped", [], "Cannot determine", "None", ...)` unconditionally. The button was labelled only `Skip`, so it read as navigation; pressing it while paging back through already-reviewed records overwrote the stored verdict with the widget defaults. Reviewer notes survived because the Skip path passes the pre-filled notes textbox through, which is why affirmative notes were left sitting on `Skipped` decisions.
 
-### Decision-file regression in the review app
+**Detection.** The app's own audit log records every verdict transition with a timestamp, so the original `Correct` saves and the later reversions are both on record. That log, not the decision CSV, is what made the loss visible.
 
-The four reversions are a data-integrity defect, not reviewer intent. Three things establish that:
+**Restoration.** On 2026-09-25 the four verdicts were written back through the app's persistence layer, which created backups and appended new audit-log entries for the change. The decision file now reads 5 `Correct` / 2 `Skipped` and the re-review manifest reads `correct: 5, skipped: 2, pending: 37`. Full history in [results/v3_2_review_verdict_history.json](results/v3_2_review_verdict_history.json).
 
-1. The overwritten values are exactly the form widget defaults, `Skipped` and `Cannot determine`.
-2. The affirmative reviewer notes **survived** the overwrite on `11709/door_0012` and `13110/door_0006`. A note reading "candidate_v3.2 correctly repairs door_0012" sitting on a `Skipped` decision is not a coherent human judgement.
-3. Every session in the log rewrites `sidecar.severity: '' -> 'None'` on each record it visits, so revisiting an already-reviewed row re-saves it. The reversions occur inside those revisit sessions, on 2026-09-02 and 2026-09-08.
+**Fix.** `skip_opening` now refuses to overwrite an existing decision: it advances without writing and reports `Skip refused: … is already saved as '<decision>'`. The button is relabelled `Skip (undecided only)`. Covered by `tests/test_phase3a_review_skip_guard.py` (4 cases; the existing review suite still passes, 16 tests).
 
-The practical consequence: **`opening_human_decisions_v3_2.csv` cannot be used as the review record.** Until the app is fixed and the four verdicts restored, the audit log is the authoritative source for Phase 3A.2 review state, and any gate that counts resolved rows from the CSV will under-count. This does not change the ablation's model metrics, which never depended on these decisions.
+No model metric in this entry depended on these decisions.
 
 ## Verified Controls
 
