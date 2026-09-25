@@ -705,5 +705,197 @@
     "full-run per-plan metrics",
     "full-run macro/instance/boundary metrics",
     "full-run paired bootstrap (macro, plus supplementary micro and instance F1)"
-  ]
+  ],
+  "label_repair_lineage": {
+    "candidate_v3": {
+      "phase": "3A",
+      "defect": "door/window symbol conflated with opening; openings not constrained to a wall",
+      "repair": [
+        "symbol masks from visual outlines/strokes, opening masks derived separately",
+        "openings derived only after host-wall association, then clipped to structural-wall support",
+        "full source-class inventory"
+      ],
+      "evidence": {
+        "samples": 5000,
+        "source_element_rows": 1957806,
+        "raw_source_classes": 318,
+        "review_required_classes": 153,
+        "geometry_failures": 2542,
+        "pilot_mechanical_violations": 0,
+        "pilot_semantic_violations": 0,
+        "pilot_pixel_preservation_violations": 0,
+        "unexplained_symbol_opening_equality": 0
+      },
+      "verdict": "blocked at human review"
+    },
+    "candidate_v3_1": {
+      "phase": "3A.1",
+      "defect": "84 warnings across 32 plans (43 door, 41 window) in three families",
+      "families": {
+        "A_seed_semantics": {
+          "defect": "door leaf/swing symbol geometry used as the opening seed, giving an axis perpendicular to the host wall",
+          "flag": "repair_door_opening_seed_semantics",
+          "cluster_rows": 10
+        },
+        "B_source_instances": {
+          "defect": "false, malformed or border-collapsed source instances; edge-touching bboxes collapsing to one raster row or column",
+          "flag": "repair_source_instance_classification_and_localization",
+          "cluster_rows": 45
+        },
+        "C_wall_association": {
+          "defect": "genuine openings rejected because association required direct wall-foreground overlap and failed in wall gaps",
+          "flag": "repair_opening_host_wall_association",
+          "cluster_rows": 5
+        }
+      },
+      "underlying_counts": {
+        "empty_seeds": 24,
+        "border_collapsed_bboxes": 44,
+        "seed_wall_orientation_mismatches": 58,
+        "plausible_seeds_rejected_by_association": 5
+      },
+      "outcome": {
+        "resolved": 42,
+        "excluded_false_instances": 2,
+        "unchanged": 16,
+        "insufficient_evidence": 24,
+        "mechanical_violations": 0,
+        "pixel_preservation_violations": 0,
+        "border_collapsed_bboxes_after": 35
+      },
+      "verdict": "blocked at human review"
+    },
+    "candidate_v3_2": {
+      "phase": "3A.2",
+      "defect": "the v3.1 Family A repair itself: it inferred wall orientation by PCA over nearby wall pixels, synthesized a rectangle from the old seed span, and snapped its centre to the nearest wall pixel, which near corners, stacked doors and borders can select a nearby or perpendicular wall",
+      "ruled_out": [
+        "a global 90-degree tangent/normal inversion",
+        "any row/column or width/height parser bug in the generator"
+      ],
+      "separate_bug_found": "flat-vs-nested bbox parsing in the REVIEW UI, which had been hiding bbox values from the reviewer",
+      "repair": "use the source Door threshold polygon and its parent Wall polygon as tangent/normal evidence, so the opening's long axis is the wall tangent and its short axis the wall normal, jamb to jamb",
+      "flags": {
+        "repair_door_opening_tangent_normal_semantics": true,
+        "door_tangent_normal_axis_tolerance_degrees": 15.0
+      },
+      "scope": "a configured list of Family A instances only",
+      "outcome": {
+        "family_a_instances_audited": 10,
+        "tangent_aligned": 10,
+        "normal_aligned": 0,
+        "ambiguous_wall_orientation": 0,
+        "missing_jamb_evidence": 0,
+        "placed_on_wrong_wall": 0,
+        "placed_outside_architectural_opening": 0,
+        "stale_legacy_orientation_rows": 10,
+        "tangent_normal_naming_ambiguity_rows": 10,
+        "actual_geometric_disagreement_rows": 0,
+        "mechanical_violations": 0,
+        "pixel_preservation_violations": 0
+      },
+      "verdict": "blocked at human review"
+    },
+    "net_effect_on_arms": {
+      "family_a_instances": 10,
+      "plans_spanned": 8,
+      "clusters": {
+        "door-symbol geometry used as opening seed": 5,
+        "seed/wall axis mismatch": 5
+      },
+      "note": "these 8 plans are exactly the 8 masks that differ between arm A and arm B"
+    }
+  },
+  "human_review_status": {
+    "counting_note": "All decision counts are parsed CSV rows. The notes fields contain embedded newlines, so a line count overstates them (for example opening_human_decisions_v3_1.csv is 17 lines but 4 rows).",
+    "phase_3A_candidate_v3": {
+      "decisions_recorded": 21,
+      "distinct_instances": 21,
+      "breakdown": {
+        "Critical issue": 16,
+        "Ambiguous": 3,
+        "Needs generator repair": 2
+      },
+      "preferred_version": {
+        "Cannot determine": 21
+      },
+      "class_review_gate": {
+        "total_rows": 105000,
+        "critical_pending": 20000,
+        "reviewed_rows": 0,
+        "pending_class_review_rows": 153,
+        "human_review_gate_passed": false,
+        "note": "the class-review gate is a separate, larger queue from the 21 opening-level decisions above"
+      }
+    },
+    "phase_3A_1_candidate_v3_1": {
+      "decisions_recorded": 4,
+      "distinct_instances": 4,
+      "breakdown": {
+        "Critical issue": 3,
+        "Correct": 1
+      },
+      "preferred_version": {
+        "Neither acceptable": 3,
+        "Candidate": 1
+      },
+      "focused_re_review_queue_rows": 105,
+      "plan_rows": 81,
+      "correction": "a previous version of this entry recorded 16 decisions here; that was a line count of a CSV whose notes contain newlines, and the parsed row count is 4"
+    },
+    "phase_3A_2_candidate_v3_2": {
+      "decisions_recorded": 7,
+      "distinct_instances": 7,
+      "breakdown": {
+        "Skipped": 6,
+        "Correct": 1
+      },
+      "preferred_version": {
+        "Cannot determine": 6,
+        "Candidate": 1
+      },
+      "re_review_queue_rows": 44,
+      "queue_status": {
+        "reviewed": 7,
+        "pending": 37,
+        "human_review_status": {
+          "skipped": 6,
+          "correct": 1,
+          "pending": 37
+        }
+      },
+      "queue_composition": {
+        "family_A_repair_rows": 10,
+        "control_rows": 34,
+        "family_A_clusters": {
+          "door-symbol geometry used as opening seed": 5,
+          "seed/wall axis mismatch": 5
+        }
+      },
+      "instances_noted_as_repaired_by_v3_2": [
+        "high_quality_architectural/11709 door_0012",
+        "high_quality_architectural/13110 door_0006",
+        "high_quality_architectural/13827 door_0004"
+      ],
+      "formally_accepted": [
+        "high_quality_architectural/13827 door_0004 (Correct / preferred Candidate)"
+      ],
+      "note": "11709/door_0012 and 13110/door_0006 carry affirmative reviewer notes but were filed as Skipped / Cannot determine, so they are not resolutions"
+    },
+    "superseded_v3_1_findings": {
+      "count": 3,
+      "instances": [
+        "high_quality_architectural/10543 door_0003",
+        "high_quality_architectural/10620 door_0005",
+        "high_quality_architectural/11709 door_0013"
+      ],
+      "effect": "each was reported by the v3.1 automation as 'Resolved: valid opening generated correctly' and marked Critical issue by a human reviewer"
+    },
+    "ablation_gold_queue": {
+      "queue_rows": 49,
+      "resolved": 0,
+      "status": "BLOCKED_PENDING_VALIDATION_GOLD_REVIEW",
+      "gold_manifest_frozen": false,
+      "gold_hashes_sha256": "fd2a317561649f941046ca5fca1201d740abe801c92eebdd23eff8240a027ad8"
+    }
+  }
 }

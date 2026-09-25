@@ -25,21 +25,88 @@ Primary evidence files:
 - `diagnostics/probe/changed_instance_metrics.json`, `diagnostics/probe/vanished_instance_metrics.json`
 - Target-repair lineage reports from the three Phase 3A runs, copied under [results/label_repair_lineage/](results/label_repair_lineage/)
 
-## The Target Repair Being Tested
+## Label Repairs by Version
 
-`candidate_v3.2` differs from `candidate_v3.1` by one generator flag, `repair_door_opening_tangent_normal_semantics`, plus a 15-degree axis tolerance and an explicit instance list. The lineage:
+The experimental variable is a chain of three target-generation repairs. Each one fixed a specific, named defect in how a door *opening* is derived from the CubiCasa5K SVG. The governing semantic throughout is that **a door opening is not a door symbol**: the leaf, swing arc and panel paths are evidence for locating the opening, never the target itself.
 
-| Phase | Version | What changed | Result |
+### Baseline problem: `candidate_v2`
+
+Openings were rasterized more or less directly from source polygons. Two consequences: the door/window *symbol* footprint and the *opening* target were conflated, and an opening could be painted anywhere the polygon fell, including off any wall.
+
+### Phase 3A → `candidate_v3` — source-class and symbol/opening separation
+
+**Defect.** Symbol and opening were the same thing, and openings were not constrained to lie on a wall.
+
+**Repair.**
+1. **Symbol/opening split.** Door and window *symbol* masks are drawn from visual outlines and strokes. Opening masks are derived separately. Neither is a copy of the other.
+2. **Wall association first.** An opening is derived only *after* it is associated with a host structural wall, then **clipped to structural-wall support**, so opening pixels cannot exist off-wall.
+3. **Source taxonomy inventory.** All 5,000 samples and 1,957,806 source element rows were inventoried: **318 distinct raw source classes**, of which **153 were marked review-required**, plus 2,542 geometry failures.
+
+**Outcome.** 0 pilot mechanical violations, 0 semantic violations, 0 pixel-preservation violations, 0 unexplained symbol/opening equality cases. `candidate_v2` left untouched. Verdict `blocked` at human review.
+
+### Phase 3A.1 → `candidate_v3.1` — opening-rule repairs (three families)
+
+**Defect.** `candidate_v3` still produced 84 warnings over 32 plans (43 door, 41 window). Clustering them gave three root causes.
+
+| Family | Defect | Repair | Flag |
 | --- | --- | --- | --- |
-| 3A | `candidate_v3` | Separated door/window **symbol** from **opening**; derived openings only after wall association and clipped them to structural-wall support. Inventoried 318 raw source classes over 5,000 samples, 153 needing review. | `blocked` at human review |
-| 3A.1 | `candidate_v3.1` | Clustered 84 warnings across 32 plans into three families — A: door leaf/swing symbol geometry used as the opening seed; B: false, malformed or border-collapsed source instances; C: genuine openings rejected because association demanded direct wall overlap and failed in wall gaps. 42 resolved, 2 excluded, 16 unchanged, 24 insufficient evidence. | `blocked` at human review |
-| 3A.2 | `candidate_v3.2` | Re-repaired Family A. v3.1 had inferred wall orientation by PCA over nearby wall pixels, synthesized a rectangle and snapped it to the nearest wall — which near corners, stacked doors and borders can select a nearby or perpendicular wall. v3.2 instead takes the source Door threshold polygon and its parent Wall polygon as the tangent/normal evidence. 10 instances, 10 tangent-aligned, 0 normal-aligned, 0 placed on the wrong wall. | `blocked` at human review |
+| **A — seed semantics** | The door **leaf/swing symbol** geometry was used as the opening seed, so the opening inherited the symbol's axis and ran perpendicular to its host wall | Re-derive the seed so the opening follows the wall rather than the symbol | `repair_door_opening_seed_semantics` |
+| **B — source instances** | False, malformed or **border-collapsed** instances entered the pipeline; a bbox touching the image edge collapsed to a single raster row or column | Classify and re-localize source instances; exclude confirmed false ones | `repair_source_instance_classification_and_localization` |
+| **C — wall association** | Association demanded direct overlap with wall foreground, so a genuine opening sitting in a **wall gap** — exactly where a doorway is — was rejected | Gap-aware association with a search radius and a relaxed overlap ratio | `repair_opening_host_wall_association` |
 
-The audit explicitly ruled out a global 90-degree tangent/normal inversion and any row/column parser bug in the generator. The defect was host-wall inference and provenance. A separate flat-vs-nested bbox parsing bug existed in the review UI and had been hiding bbox values from the reviewer.
+Supporting parameters: `association_max_distance_px: 3`, `min_wall_overlap_ratio: 0.05`, `door_seed_repair_min_wall_overlap_ratio: 0.02`, `door_seed_repair_local_radius_px: 48`, `gap_association_search_radius_px: 36`.
 
-**Human review overturned v3.1's own verdicts.** [results/label_repair_lineage/superseding_human_findings_v3_1.csv](results/label_repair_lineage/superseding_human_findings_v3_1.csv) records three instances v3.1 reported as "Resolved: valid opening generated correctly" that a reviewer marked `Critical issue`: `10543/door_0003` ("added foreground at the wrong location/orientation rather than at the true source doorway"), `10620/door_0005` ("source SVG shows an exterior door in the bottom horizontal wall; candidate_v3.1 adds a vertical segment") and `11709/door_0013` ("adds foreground that does not correspond to an architectural opening"). That is the justification for v3.2, and it is why "resolved by the repair path" is not treated as evidence of correctness in this pipeline.
+Warning counts behind the families: 24 empty seeds, 44 border-collapsed bboxes, 58 seed/wall orientation mismatches, 5 plausible seeds rejected by association.
 
-The 10 repaired Family A instances span exactly 8 plans, and those are exactly the 8 masks that differ between the two arms.
+**Outcome.** 42 warnings resolved, 2 excluded as false source instances, 16 unchanged, 24 unresolved for insufficient evidence (empty or unrenderable seeds). 0 mechanical and 0 pixel-preservation violations. Border-collapsed bboxes fell from 44 to 35. Verdict `blocked` at human review.
+
+### Phase 3A.2 → `candidate_v3.2` — opening-axis repair
+
+**Defect — in v3.1's own Family A repair.** v3.1 never confirmed that the opening was supported by actual doorway jambs. Instead it:
+
+1. inferred a local wall orientation by **PCA over nearby wall pixels**,
+2. synthesized a **rectangle** from the old seed span, and
+3. **snapped that rectangle's centre to the nearest wall pixel**.
+
+Near corners, stacked doors and image borders, step 3 can select a *nearby or perpendicular* wall. The result looks like a clean opening but sits on the wrong wall. Human review confirmed this on real cases.
+
+Two hypotheses were explicitly **ruled out**: it was not a global 90-degree tangent/normal inversion, and there was no row/column or width/height parser bug in the generator. A flat-vs-nested bbox parsing bug did exist, but in the **review UI**, where it had been hiding bbox values from the reviewer.
+
+**Repair.** Take the geometry from the source, not from the raster. v3.2 uses the **source Door threshold polygon and its parent Wall polygon** as the tangent/normal evidence, so the opening's long axis is the host wall's tangent and its short axis the wall normal, jamb to jamb. Mechanism: PCA/SVD for polygon tangent estimation, modulo-180 axis comparison, tangent/normal decomposition, and boolean mask set operations for per-instance pixel provenance. Gated by `repair_door_opening_tangent_normal_semantics` with `door_tangent_normal_axis_tolerance_degrees: 15.0`, applied only to a configured list of Family A instances.
+
+**Outcome.** 10 Family A instances audited: **10 tangent-aligned, 0 normal-aligned, 0 ambiguous orientation, 0 missing jamb evidence, 0 placed on the wrong wall, 0 placed outside an architectural opening.** 0 mechanical and 0 pixel-preservation violations. The legacy `wall_orientation` field was found stale on all 10 and ambiguously named on all 44 queue rows, but with **0 actual geometric disagreement** — the field was mislabelled, not wrong. Verdict `blocked` at human review.
+
+### Net effect on the two arms
+
+The 10 repaired Family A instances split evenly between the two warning clusters — 5 `door-symbol geometry used as opening seed` and 5 `seed/wall axis mismatch` — and span exactly **8 plans**, which are exactly the 8 masks that differ between arm A and arm B. All 10 sit in the re-review queue as `repair_family: A`; the other 34 rows are untouched controls carried along for regression review.
+
+In the queue metadata those 10 rows are the ones marked `association_confidence: low`, `legacy_orientation_is_stale: True` and `actual_geometric_disagreement: True`, and they carry `derivation_method: review_required_no_opening_generated` — the earlier derivation flagged them rather than emitting a usable opening. The 34 control rows carry `explicit_source_opening_polygon_clipped_to_associated_structural_wall` with `association_confidence: high`.
+
+### What human review has actually said
+
+Counts below are parsed CSV rows, not line counts; the notes fields contain embedded newlines, so `wc -l` overstates them.
+
+| Phase | Decisions recorded | Breakdown |
+| --- | ---: | --- |
+| 3A (`candidate_v3`) | 21 | 16 `Critical issue`, 3 `Ambiguous`, 2 `Needs generator repair`; preferred version `Cannot determine` on all 21 |
+| 3A.1 (`candidate_v3.1`) | 4 | 3 `Critical issue` (preferred `Neither acceptable`), 1 `Correct` (preferred `Candidate`) |
+| 3A.2 (`candidate_v3.2`) | 7 | 6 `Skipped`, 1 `Correct` (preferred `Candidate`) |
+
+The v3.2 re-review queue stands at **7 of 44 rows reviewed, 37 pending** (`human_review_status`: 6 `skipped`, 1 `correct`, 37 `pending`).
+
+**v3.1's automated verdicts were overturned.** [results/label_repair_lineage/superseding_human_findings_v3_1.csv](results/label_repair_lineage/superseding_human_findings_v3_1.csv) records three instances v3.1 reported as "Resolved: valid opening generated correctly" that a reviewer marked `Critical issue`:
+
+- `10543/door_0003` — "candidate_v3.1 added foreground at the wrong location/orientation rather than at the true source doorway"
+- `10620/door_0005` — "source SVG shows an exterior door in the bottom horizontal wall; candidate_v3.1 adds a vertical segment"
+- `11709/door_0013` — "adds foreground that does not correspond to an architectural opening in the source floorplan"
+
+**Where v3.2 was judged to have fixed what earlier versions could not.** Three of the seven reviewed v3.2 instances carry explicit reviewer notes to that effect:
+
+- `11709/door_0012` — "candidate_v3.2 correctly repairs door_0012. The opening is now generated vertically between the two identified doorway jambs. candidate_v3.1 used incorrect horizontal geometry, while v3.2 matches the architectural doorway shown in the source instance."
+- `13110/door_0006` — "candidate_v3.2 correctly repairs door_0006. The opening is horizontal and now matches the jamb-to-jamb doorway span shown in the source SVG and opening-centered crop. candidate_v3.1 was also horizontal but overshot the true opening extent." This is also the one instance the v3.1 Family A repair had left `Unchanged: no wall component intersects or lies near the opening seed`.
+- `13827/door_0004` — "candidate_v3.2 correctly repairs door_0004. The doorway opening is horizontal in the opening-centered crop and source SVG evidence. v3.2 matches the jamb-to-jamb opening axis, while earlier versions were aligned incorrectly to the wall-edge interpretation." This is the single formal `Correct` / preferred `Candidate` verdict in the v3.2 queue.
+
+Only `13827/door_0004` was filed as a formal `Correct`. The other two were filed as `Skipped` / `Cannot determine` despite the affirmative notes, so they do not count as resolutions and the queue remains blocked.
 
 ## Verified Controls
 
