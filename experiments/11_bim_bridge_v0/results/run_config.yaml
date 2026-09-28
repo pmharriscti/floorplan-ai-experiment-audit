@@ -1,0 +1,82 @@
+# bim_bridge_v0 experiment configuration (example config for contract 0.2)
+experiment_id: bim_bridge_v0
+
+storage:
+  # storage_requirement.md: experiment outputs live on E:, never under /home, /root, /tmp or C:
+  run_root: /mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0
+
+ifc:
+  schema: IFC4
+  schema_basis: "Prototype choice. No receiving BIM application or accepted IFC schema is documented in the inspected repositories."
+  target_application: null
+  target_compatibility: UNVERIFIED
+  opening_body_overcut_m: 0.01      # exporter modelling parameter, not a physical dimension
+
+tolerances:
+  implementation:                   # numerical tolerances of the bridge's own checks
+    length_m: 1.0e-4
+    volume_relative: 1.0e-4
+    direction: 1.0e-9
+    min_wall_length_m: 0.05
+    max_wall_length_m: 500.0
+    max_wall_thickness_m: 2.0
+    max_wall_height_m: 30.0
+    aperture_fit_m: 1.0e-9
+  business_acceptance: null         # NOT DEFINED. No acceptance tolerance has been agreed with the PM or a BIM user.
+
+# Vertical dimensions cannot come from a plan drawing. This profile is an explicit set of preview-only
+# assumptions. Every value taken from it is recorded per object as origin=assumed_for_preview.
+preview_profile:
+  name: preview_vertical_defaults_v0
+  storey_elevation_m: 0.0
+  wall_base_elevation_m: 0.0
+  wall_height_m: 2.7                # same default the existing floorplan3d GLB exporter uses
+  apertures:
+    door_opening: {bottom_elevation_m: 0.0, height_m: 2.1}
+
+candidate_rules:
+  # The bridge measures wall thickness on the predicted mask itself. When the vectorizer's thickness
+  # disagrees with that measurement by more than this many pixels, the measured value replaces it and
+  # the replacement is recorded as an edit by actor_type=automated_rule.
+  thickness_disagreement_px: 2.0
+  thickness_sample_margin_px: 6     # skip this many pixels at each wall end (junction regions)
+  min_axis_support_ratio: 0.9       # share of centreline samples that must lie on predicted wall pixels
+  aperture_host_band_px: 4.0        # a predicted aperture component belongs to a wall if its centroid lies this close to the wall body
+  min_aperture_component_px: 20
+
+real_input:
+  upstream_experiment: mitunet_hierarchical_multihead_512
+  upstream_run_dir: /mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED
+  manifest_dir: /mnt/e/AI_Team/mitunet/derived_data/mitunet_hierarchical_multihead_512/manifests/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED
+  upstream_source_repo: /home/pmharris/dev/mitunet
+  split: val
+  sample_id: high_quality_architectural/333
+  document_id: CubiCasa5K v4 high_quality_architectural/333 (F1_scaled.png)
+  page: 1
+  mask_encoding:
+    heads_file: "masks/{split}/{sample}__heads.png"
+    dtype: uint8
+    bits: {structural_wall: 0, wall_boundary: 1, wall_centerline: 2, junction: 3, endpoint: 4, door_opening: 5, window_opening: 6, visible_wall: 7}
+    verified_against: ["masks/README.md", "mitunet_cubicasa/hierarchical_evaluation.py BINARY_MASK_BITS and _save_prediction_masks"]
+  wall_head: structural_wall
+  aperture_head: door_opening
+  vectorizer:
+    repo: /home/pmharris/dev/synth_gen_door_window/floorplan-synth
+    module: floorplan_synth.vectorization.postprocess.postprocess_wall_mask
+    config: configs/wall_postprocess.yaml
+    opencv_pin: "4.13.0.92"         # the version floorplan-synth locks; its Hough code fails on OpenCV 5
+  selection:
+    upstream_wall_ids: [wall_002, wall_003, wall_004, wall_012]
+    max_apertures: 1
+    reason: "Bathroom and alcove partitions of the apartment: four straight walls meeting at one junction, one predicted door aperture. wall_013 and its predicted door lie in the same block and are left out to keep the first region to one aperture."
+  scale_estimate:
+    # There is NO dimension string and NO scale bar on this drawing. The only quantitative text is the
+    # apartment area label. The estimate below is an agent-derived preview assumption, not evidence that
+    # supports a dimensional claim. It stays ASSUMED_FOR_PREVIEW until a human confirms a scale.
+    kind: area_label_estimate
+    area_label_text: "1 H+K+S 39.5 M2"
+    area_m2: 39.5
+    outer_wall_ids: {left: wall_009, right: wall_014, top: wall_002, bottom: wall_006}
+    uncertainty_note: "Not a measurement. It assumes the label gives the area between the inner faces of the four outer walls, including internal partitions. If the label excludes partitions or the sauna, lengths change by a few percent. Wall faces come from a thresholded mask and are uncertain by about one pixel."
+    derived_by_actor_type: agent
+    derived_by: "Claude (AI assistant) read the area label from the source image; the bridge computed the pixel area from predicted wall candidates"

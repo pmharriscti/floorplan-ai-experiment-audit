@@ -1,0 +1,2154 @@
+{
+  "report_version": "bim_bridge.validation_report/0.2",
+  "objective": "The meaningful result today is not \u2018we generated a 3D picture.\u2019 It is \u2018we can turn reviewed prediction-derived geometry into identifiable IFC building elements, preserve uncertainty, and inspect the result.\u2019 That is a concrete step toward the PM\u2019s BIM goal\u2014and it creates a stable destination for the ML improvements that follow.",
+  "bridge": {
+    "name": "bim_bridge_v0",
+    "version": "0.2.0",
+    "contract_version": "bim_bridge.building_model/0.2",
+    "ifcopenshell": "0.8.5",
+    "python": "3.12.3"
+  },
+  "model": {
+    "experiment_id": "bim_bridge_v0",
+    "run_id": "bim_bridge_v0_20260928_183649_UTC",
+    "model_id": "cubicasa-high-quality-architectural-333-val-region-01",
+    "track": "REVIEWED_PREDICTION_BRIDGE",
+    "description": "CANDIDATE, UNREVIEWED, PREVIEW ONLY: 4 straight walls and 1 aperture(s) derived from saved Phase 5 predictions of high_quality_architectural/333 (val split).",
+    "generated_utc": "2026-09-28T18:37:01Z",
+    "units": {
+      "length": "metre",
+      "angle": "radian"
+    },
+    "scale": {
+      "status": "ASSUMED_FOR_PREVIEW",
+      "metres_per_source_px": 0.010720102950656141,
+      "evidence": {
+        "kind": "area_label_estimate",
+        "description": "Area label '1 H+K+S 39.5 M2' read from the source image, divided by the pixel area between the inner faces of the four predicted outer walls.",
+        "source": "/home/pmharris/dev/cubicasa5k_data/data/datasets/qmarva/cubicasa5k/versions/4/cubicasa5k/cubicasa5k/high_quality_architectural/333/F1_scaled.png",
+        "derived_by_actor_type": "agent",
+        "derived_by": "Claude (AI assistant) read the area label from the source image; the bridge computed the pixel area from predicted wall candidates",
+        "human_confirmed": false,
+        "uncertainty_note": "Not a measurement. It assumes the label gives the area between the inner faces of the four outer walls, including internal partitions. If the label excludes partitions or the sauna, lengths change by a few percent. Wall faces come from a thresholded mask and are uncertain by about one pixel.",
+        "derivation": {
+          "area_m2": 39.5,
+          "outer_wall_ids": {
+            "left": "wall_009",
+            "right": "wall_014",
+            "top": "wall_002",
+            "bottom": "wall_006"
+          },
+          "inner_faces_candidate_px": {
+            "x_min": 114.375,
+            "x_max": 468.75,
+            "y_min": 164.54166666666666,
+            "y_max": 310.6875
+          },
+          "inner_area_candidate_px2": 51790.4296875,
+          "metres_per_candidate_px": 0.027616827718584862,
+          "letterbox_scale": 0.38817285822592873,
+          "metres_per_source_px": 0.010720102950656141
+        }
+      },
+      "dimensional_claims_permitted": false,
+      "note": "NO documented scale evidence exists for this drawing: it has no dimension string and no scale bar. The value is an estimate from the apartment area label, used only so the preview has a plausible size. Metric export of real geometry is BLOCKED until a human supplies or confirms a scale."
+    },
+    "status": {
+      "geometry_status": "CANDIDATE_UNREVIEWED",
+      "permitted_use": "preview_only_not_for_engineering_or_inspection",
+      "publication_status": "not_published"
+    },
+    "ifc": {
+      "schema": "IFC4",
+      "schema_basis": "Prototype choice. No receiving BIM application or accepted IFC schema is documented in the inspected repositories.",
+      "target_application": null,
+      "target_compatibility": "UNVERIFIED"
+    },
+    "coordinate_system": {
+      "handedness": "right_handed",
+      "x_axis": "source image +x (to the right of the drawing)",
+      "y_axis": "source image -y (towards the top of the drawing)",
+      "z_axis": "up",
+      "origin": "bottom-left corner of the region of interest, in letterbox space",
+      "wall_axis_convention": "centreline"
+    },
+    "transforms": {
+      "candidate_space": "letterbox_512",
+      "original_size_px": [
+        1319,
+        619
+      ],
+      "letterbox": {
+        "size": 512,
+        "scale": 0.38817285822592873,
+        "pad_left": 0.0,
+        "pad_top": 136.0
+      },
+      "crop": null,
+      "rotation_deg": 0.0,
+      "roi_origin_candidate_px": [
+        228.0,
+        256.0
+      ],
+      "y_axis": "candidate y points down; model y points up",
+      "metres_per_candidate_px": 0.027616827718584862,
+      "order": [
+        "letterbox (original px -> candidate px)",
+        "roi_translation",
+        "rotation",
+        "y_flip",
+        "scale_to_metres"
+      ]
+    },
+    "source": {
+      "document_id": "CubiCasa5K v4 high_quality_architectural/333 (F1_scaled.png)",
+      "page": 1,
+      "sample_id": "high_quality_architectural/333",
+      "split": "val",
+      "roi": {
+        "space": "letterbox_512",
+        "x_min": 228,
+        "y_min": 143,
+        "x_max": 490,
+        "y_max": 256
+      },
+      "source_image": {
+        "path": "/home/pmharris/dev/cubicasa5k_data/data/datasets/qmarva/cubicasa5k/versions/4/cubicasa5k/cubicasa5k/high_quality_architectural/333/F1_scaled.png",
+        "sha256": "ac6be65c391069f75307a9b90c66240a0e94c9e75cadfd161ca14001bd6a88cc",
+        "width_px": 1319,
+        "height_px": 619
+      },
+      "prediction_artifacts": [
+        {
+          "role": "predicted_structural_wall",
+          "path": "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/masks/val/high_quality_architectural__333__heads.png",
+          "sha256": "4da6f6eb69c64ef721a30e7f81f74843348db831d3608b331fcc2dbd03f1f355",
+          "artifact_kind": "thresholded_mask",
+          "encoding": "uint8 bitmask PNG, 512x512 letterbox space; bit 0 = structural_wall",
+          "head": "structural_wall",
+          "bit": 0,
+          "threshold": 0.05,
+          "threshold_policy": "validation-selected by the upstream run (audit/evaluate_summary.json thresholds); not chosen or changed by this experiment",
+          "is_probability_map": false
+        },
+        {
+          "role": "predicted_door_opening",
+          "path": "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/masks/val/high_quality_architectural__333__heads.png",
+          "sha256": "4da6f6eb69c64ef721a30e7f81f74843348db831d3608b331fcc2dbd03f1f355",
+          "artifact_kind": "thresholded_mask",
+          "encoding": "uint8 bitmask PNG, 512x512 letterbox space; bit 5 = door_opening",
+          "head": "door_opening",
+          "bit": 5,
+          "threshold": 0.95,
+          "threshold_policy": "validation-selected by the upstream run (audit/evaluate_summary.json thresholds); not chosen or changed by this experiment",
+          "is_probability_map": false
+        }
+      ],
+      "upstream_model": {
+        "name": "HierarchicalMitUNet (MiT-B4), Phase 5 NOAUG_FIXED",
+        "run_id": "mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED",
+        "run_dir": "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED",
+        "checkpoint_path": "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/checkpoints/best_gated_hierarchical_score.pth",
+        "checkpoint_sha256": "c281b31974e194f216df3e2170eb5b2197d72a872713ed9176973940a95357ae",
+        "checkpoint_epoch": 30,
+        "config_path": "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/audit/config_snapshot.yaml",
+        "config_sha256": "ea6dda8b54aeba62c86ea2583d1e8392630b55ce341d13ba1292e7ad69f4cc35",
+        "threshold_source": "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/audit/evaluate_summary.json"
+      },
+      "geometry_extraction": {
+        "tool": "floorplan-synth wall vectorizer (postprocess_wall_mask), run unmodified",
+        "repo": "/home/pmharris/dev/synth_gen_door_window/floorplan-synth",
+        "module": "floorplan_synth.vectorization.postprocess.postprocess_wall_mask",
+        "config_path": "/home/pmharris/dev/synth_gen_door_window/floorplan-synth/configs/wall_postprocess.yaml",
+        "config_sha256": "c39950253898dd0d28c05308c8a19baf9c336c98d4129ae5512296e75005c5e5",
+        "opencv_version": "4.13.0",
+        "opencv_pin_reason": "floorplan-synth locks OpenCV 4.13; its Hough line code fails on OpenCV 5",
+        "upstream_wall_count": 14,
+        "upstream_qa_passed": true,
+        "source_files_sha256": {
+          "src/floorplan_synth/vectorization/__init__.py": "93cfefa140f96782f28b57038cdb2923f05d2ea497a06027ec95fb2cd00f1370",
+          "src/floorplan_synth/vectorization/intersections.py": "f103d4f759c1b7a4d83e1c143bfd00784b59b6afb97416a183b4f624dcb9c32b",
+          "src/floorplan_synth/vectorization/io.py": "cd529755193296c8040fa646957abf7b369f7e89a77df8127f180d82c1b19262",
+          "src/floorplan_synth/vectorization/line_extraction.py": "f4fe48fce6a58970123326e46b50c6526e517599b3776327716ec8733a21b150",
+          "src/floorplan_synth/vectorization/line_snapping.py": "c6886685cb2c008d9c9da49d5371389b1d7aa441b8a07c5dc703a2675c42dec3",
+          "src/floorplan_synth/vectorization/mask_cleanup.py": "be51ab1daf45db17285b72350f4388df2c67bbd4751c425b4119066fde638e7d",
+          "src/floorplan_synth/vectorization/postprocess.py": "4cbe6f7a027d00bc6a37c48aa3ce9d4e0efcaf3ac9d5dee6821e12bbec74188a",
+          "src/floorplan_synth/vectorization/qa.py": "0569afed2f1bdfd10f83f58493c2a6cff715674466604d304669aff67683b246",
+          "src/floorplan_synth/vectorization/room_closure.py": "74b4f0899246afd8f57e01960b53209e02dca537a1f4282adad10a50edb9c131",
+          "src/floorplan_synth/vectorization/skeleton.py": "2575877491d6d66f1214db6e4c49023a2337939854175ac705053ce642da79e0",
+          "src/floorplan_synth/vectorization/visualize.py": "84882c3209f02b8b7c28ca9c2420a1dbc92198dddd520fba554fb4781d82984d",
+          "src/floorplan_synth/vectorization/wall_geometry.py": "b88f96db1083d673bda46d7d09fe91b0e59934a9131a7835502cb7012bbf3b0b"
+        },
+        "repo_is_git": false,
+        "candidate_geometry_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/candidate_geometry.json",
+        "candidate_geometry_sha256": "fcfd4a7061ed1d7fafc68a4985ca461fb15cba1812e933f6ec394c96dcfa7780",
+        "vectorizer_output_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/vectorizer_output/wall_geometry.json",
+        "vectorizer_output_sha256": "5fe575ee31c816258b3868e763884bf90cf634a87b5cab6a56946a6bf776e08e",
+        "vectorizer_confidence_note": "The vectorizer writes confidence=1.0 for every wall. It is a hard-coded default, not a model score, and is not used."
+      },
+      "notes": [
+        "Checkpoint hash: computed from the checkpoint file during candidate preparation.",
+        "Manifest: /mnt/e/AI_Team/mitunet/derived_data/mitunet_hierarchical_multihead_512/manifests/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/val_manifest.csv (sha256 ea5b91ad8e455c2769f04ae9943dd9229f718657cba6a9e7b02666910877b10d).",
+        "Bit layout verified against the upstream masks/README.md and the writer _save_prediction_masks in mitunet_cubicasa/hierarchical_evaluation.py.",
+        "No annotation SVG and no ground-truth mask was read to construct this geometry.",
+        "The upstream structural_wall head predicts walls with openings NOT subtracted, so a wall runs through its doors; the door_opening head proposes the aperture."
+      ]
+    },
+    "tolerances": {
+      "implementation": {
+        "length_m": 0.0001,
+        "volume_relative": 0.0001,
+        "direction": 1e-09,
+        "min_wall_length_m": 0.05,
+        "max_wall_length_m": 500.0,
+        "max_wall_thickness_m": 2.0,
+        "max_wall_height_m": 30.0,
+        "aperture_fit_m": 1e-09
+      },
+      "business_acceptance": null
+    }
+  },
+  "paths": {
+    "candidate_geometry": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/candidate_geometry.json",
+    "source_building_model": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/building_model.json",
+    "building_model": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/export_preview/building_model.json",
+    "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/export_preview/cubicasa-high-quality-architectural-333-val-region-01__PREVIEW_CANDIDATE_UNREVIEWED.ifc",
+    "guid_map": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/export_preview/guid_map.json",
+    "report_json": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/export_preview/validation_report.json",
+    "report_markdown": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/export_preview/validation_report.md"
+  },
+  "result": {
+    "technical_checks": "PASS",
+    "ifc_written": true,
+    "checks_total": 144,
+    "by_status": {
+      "PASS": 138,
+      "WARN": 6
+    },
+    "by_group": {
+      "input": {
+        "PASS": 60,
+        "WARN": 6
+      },
+      "ifc_reopen": {
+        "PASS": 2
+      },
+      "ifc_schema": {
+        "PASS": 2
+      },
+      "ifc_structure": {
+        "PASS": 15
+      },
+      "ifc_identity": {
+        "PASS": 9
+      },
+      "ifc_provenance": {
+        "PASS": 21
+      },
+      "geometry": {
+        "PASS": 29
+      }
+    },
+    "failed": [],
+    "warnings": [
+      {
+        "group": "input",
+        "name": "scale_evidence",
+        "status": "WARN",
+        "detail": "Plan scale is ASSUMED_FOR_PREVIEW: every plan dimension is preview-only and no dimensional claim is permitted.",
+        "data": {}
+      },
+      {
+        "group": "input",
+        "name": "human_review[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002]",
+        "status": "WARN",
+        "detail": "CANDIDATE_UNREVIEWED: no human has reviewed this object. Agent and automated adjustments are not a review.",
+        "data": {}
+      },
+      {
+        "group": "input",
+        "name": "human_review[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003]",
+        "status": "WARN",
+        "detail": "CANDIDATE_UNREVIEWED: no human has reviewed this object. Agent and automated adjustments are not a review.",
+        "data": {}
+      },
+      {
+        "group": "input",
+        "name": "human_review[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004]",
+        "status": "WARN",
+        "detail": "CANDIDATE_UNREVIEWED: no human has reviewed this object. Agent and automated adjustments are not a review.",
+        "data": {}
+      },
+      {
+        "group": "input",
+        "name": "human_review[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012]",
+        "status": "WARN",
+        "detail": "CANDIDATE_UNREVIEWED: no human has reviewed this object. Agent and automated adjustments are not a review.",
+        "data": {}
+      },
+      {
+        "group": "input",
+        "name": "human_review[opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02]",
+        "status": "WARN",
+        "detail": "CANDIDATE_UNREVIEWED: no human has reviewed this object. Agent and automated adjustments are not a review.",
+        "data": {}
+      }
+    ],
+    "note": "A technical PASS means the file matches its input and passes schema and geometry checks. It is not a reviewed prediction bridge and not downstream acceptance."
+  },
+  "counts": {
+    "walls_exported_of_requested": [
+      4,
+      4
+    ],
+    "apertures_exported_of_requested": [
+      1,
+      1
+    ],
+    "apertures_with_valid_host": [
+      1,
+      1
+    ],
+    "walls_tracing_to_prediction_evidence": [
+      4,
+      4
+    ],
+    "attributes_by_origin": {
+      "predicted_by_model": 0,
+      "derived_from_geometry": 10,
+      "manually_entered": 0,
+      "assumed_for_preview": 11,
+      "unknown": 0,
+      "synthetic_fixture": 0
+    },
+    "attributes_total": 21,
+    "attributes_assumed_for_preview": [
+      11,
+      21
+    ],
+    "objects_human_reviewed": [
+      0,
+      5
+    ],
+    "objects_with_semantic_score": [
+      0,
+      5
+    ],
+    "edits_by_actor_type": {
+      "human": 0,
+      "agent": 0,
+      "automated_rule": 1
+    },
+    "edits_total": 1,
+    "unresolved_geometry_diagnostics": [],
+    "correction_time_measured": null,
+    "correction_time_note": "No human correction took place, so no correction time was captured."
+  },
+  "objects": [
+    {
+      "object_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002",
+      "kind": "wall",
+      "name": "Candidate wall wall_002 (horizontal)",
+      "host_wall_id": null,
+      "predicted_class": null,
+      "centreline_length_m": 5.689067,
+      "fields": {
+        "axis": {
+          "value": [
+            [
+              1.049439,
+              2.650065
+            ],
+            [
+              6.738506,
+              2.650065
+            ]
+          ],
+          "origin": "derived_from_geometry",
+          "basis": "Centreline proposed by the vectorizer from the predicted wall mask (upstream object wall_002). Converted at 0.027617 m per letterbox_512 px (scale status ASSUMED_FOR_PREVIEW)."
+        },
+        "thickness": {
+          "value": 0.248551,
+          "origin": "derived_from_geometry",
+          "basis": "Vectorizer thickness 9.0 px, consistent with 9.0 px measured on the predicted structural_wall mask. Converted at 0.027617 m per letterbox_512 px (scale status ASSUMED_FOR_PREVIEW)."
+        },
+        "height": {
+          "value": 2.7,
+          "origin": "assumed_for_preview",
+          "basis": "Wall height from configuration profile 'preview_vertical_defaults_v0'. A plan drawing carries no vertical information; this is an assumption, not a measurement."
+        },
+        "base_elevation": {
+          "value": 0.0,
+          "origin": "assumed_for_preview",
+          "basis": "Wall base elevation from configuration profile 'preview_vertical_defaults_v0'. A plan drawing carries no vertical information; this is an assumption, not a measurement."
+        }
+      },
+      "confidence": {
+        "semantic_score": null,
+        "score_source": null,
+        "score_aggregation": null,
+        "availability": "UNAVAILABLE",
+        "unavailable_reason": "The only persisted prediction is a thresholded mask. The upstream run saved no probability maps (save_probability_maps: false), and no score can be derived from binary pixels.",
+        "calibration_status": "NOT_CALIBRATED"
+      },
+      "review": {
+        "state": "CANDIDATE_UNREVIEWED",
+        "reviewer": null,
+        "reviewer_role": null,
+        "reviewed_utc": null,
+        "decision_notes": null,
+        "review_record_path": null,
+        "review_record_sha256": null
+      },
+      "edits": [],
+      "geometry_checks": [
+        {
+          "name": "axis_lies_on_predicted_wall",
+          "status": "PASS",
+          "detail": "207 of 207 centreline samples lie on predicted structural_wall pixels.",
+          "measured": 1.0,
+          "threshold": 0.9
+        },
+        {
+          "name": "thickness_matches_predicted_mask",
+          "status": "PASS",
+          "detail": "Thickness in use 9.0 px; predicted-mask median 9.0 px; vectorizer proposed 9.0 px.",
+          "measured": 9.0,
+          "threshold": 2.0
+        },
+        {
+          "name": "centreline_offset_from_predicted_wall",
+          "status": "PASS",
+          "detail": "Median offset between the axis and the middle of the predicted wall: 0.0 px.",
+          "measured": 0.0,
+          "threshold": 2.0
+        }
+      ],
+      "assumptions": [
+        "Plan scale is ASSUMED_FOR_PREVIEW; length, position and thickness in metres are preview values, not dimensions of the building.",
+        "Height 2.7 m and base elevation 0.0 m are preview assumptions from profile 'preview_vertical_defaults_v0'.",
+        "Modelled as a straight constant-thickness prism centred on its centreline; joins with neighbouring walls are not resolved."
+      ],
+      "source_refs": [
+        {
+          "kind": "prediction_mask_region",
+          "artifact_role": "predicted_structural_wall",
+          "path": "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/masks/val/high_quality_architectural__333__heads.png",
+          "sha256": "4da6f6eb69c64ef721a30e7f81f74843348db831d3608b331fcc2dbd03f1f355",
+          "upstream_object_id": null,
+          "region_candidate_px": [
+            261.5,
+            155.54166666666666,
+            476.5,
+            164.54166666666666
+          ],
+          "pixel_support": {
+            "axis_support_ratio": 1.0,
+            "axis_samples": 207,
+            "measured_thickness_px_median": 9.0
+          }
+        },
+        {
+          "kind": "vectorizer_output",
+          "artifact_role": "wall_geometry.json",
+          "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/vectorizer_output/wall_geometry.json",
+          "sha256": "5fe575ee31c816258b3868e763884bf90cf634a87b5cab6a56946a6bf776e08e",
+          "upstream_object_id": "wall_002",
+          "region_candidate_px": null,
+          "pixel_support": null
+        }
+      ],
+      "candidate_original": {
+        "axis_px": {
+          "start": [
+            266.0,
+            160.04166666666666
+          ],
+          "end": [
+            472.0,
+            160.04166666666666
+          ]
+        },
+        "thickness_px": 9.0,
+        "orientation": "horizontal",
+        "source": "vectorizer output, unedited"
+      }
+    },
+    {
+      "object_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003",
+      "kind": "wall",
+      "name": "Candidate wall wall_003 (horizontal)",
+      "host_wall_id": null,
+      "predicted_class": null,
+      "centreline_length_m": 4.6948609999999995,
+      "fields": {
+        "axis": {
+          "value": [
+            [
+              2.112687,
+              0.980397
+            ],
+            [
+              6.807548,
+              0.980397
+            ]
+          ],
+          "origin": "derived_from_geometry",
+          "basis": "Centreline proposed by the vectorizer from the predicted wall mask (upstream object wall_003). Converted at 0.027617 m per letterbox_512 px (scale status ASSUMED_FOR_PREVIEW)."
+        },
+        "thickness": {
+          "value": 0.165701,
+          "origin": "derived_from_geometry",
+          "basis": "Vectorizer thickness 6.0 px, consistent with 6.0 px measured on the predicted structural_wall mask. Converted at 0.027617 m per letterbox_512 px (scale status ASSUMED_FOR_PREVIEW)."
+        },
+        "height": {
+          "value": 2.7,
+          "origin": "assumed_for_preview",
+          "basis": "Wall height from configuration profile 'preview_vertical_defaults_v0'. A plan drawing carries no vertical information; this is an assumption, not a measurement."
+        },
+        "base_elevation": {
+          "value": 0.0,
+          "origin": "assumed_for_preview",
+          "basis": "Wall base elevation from configuration profile 'preview_vertical_defaults_v0'. A plan drawing carries no vertical information; this is an assumption, not a measurement."
+        }
+      },
+      "confidence": {
+        "semantic_score": null,
+        "score_source": null,
+        "score_aggregation": null,
+        "availability": "UNAVAILABLE",
+        "unavailable_reason": "The only persisted prediction is a thresholded mask. The upstream run saved no probability maps (save_probability_maps: false), and no score can be derived from binary pixels.",
+        "calibration_status": "NOT_CALIBRATED"
+      },
+      "review": {
+        "state": "CANDIDATE_UNREVIEWED",
+        "reviewer": null,
+        "reviewer_role": null,
+        "reviewed_utc": null,
+        "decision_notes": null,
+        "review_record_path": null,
+        "review_record_sha256": null
+      },
+      "edits": [],
+      "geometry_checks": [
+        {
+          "name": "axis_lies_on_predicted_wall",
+          "status": "PASS",
+          "detail": "171 of 171 centreline samples lie on predicted structural_wall pixels.",
+          "measured": 1.0,
+          "threshold": 0.9
+        },
+        {
+          "name": "thickness_matches_predicted_mask",
+          "status": "PASS",
+          "detail": "Thickness in use 6.0 px; predicted-mask median 6.0 px; vectorizer proposed 6.0 px.",
+          "measured": 6.0,
+          "threshold": 2.0
+        },
+        {
+          "name": "centreline_offset_from_predicted_wall",
+          "status": "PASS",
+          "detail": "Median offset between the axis and the middle of the predicted wall: -0.5 px.",
+          "measured": -0.5,
+          "threshold": 2.0
+        }
+      ],
+      "assumptions": [
+        "Plan scale is ASSUMED_FOR_PREVIEW; length, position and thickness in metres are preview values, not dimensions of the building.",
+        "Height 2.7 m and base elevation 0.0 m are preview assumptions from profile 'preview_vertical_defaults_v0'.",
+        "Modelled as a straight constant-thickness prism centred on its centreline; joins with neighbouring walls are not resolved."
+      ],
+      "source_refs": [
+        {
+          "kind": "prediction_mask_region",
+          "artifact_role": "predicted_structural_wall",
+          "path": "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/masks/val/high_quality_architectural__333__heads.png",
+          "sha256": "4da6f6eb69c64ef721a30e7f81f74843348db831d3608b331fcc2dbd03f1f355",
+          "upstream_object_id": null,
+          "region_candidate_px": [
+            301.5,
+            217.5,
+            477.5,
+            223.5
+          ],
+          "pixel_support": {
+            "axis_support_ratio": 1.0,
+            "axis_samples": 171,
+            "measured_thickness_px_median": 6.0
+          }
+        },
+        {
+          "kind": "vectorizer_output",
+          "artifact_role": "wall_geometry.json",
+          "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/vectorizer_output/wall_geometry.json",
+          "sha256": "5fe575ee31c816258b3868e763884bf90cf634a87b5cab6a56946a6bf776e08e",
+          "upstream_object_id": "wall_003",
+          "region_candidate_px": null,
+          "pixel_support": null
+        }
+      ],
+      "candidate_original": {
+        "axis_px": {
+          "start": [
+            304.5,
+            220.5
+          ],
+          "end": [
+            474.5,
+            220.5
+          ]
+        },
+        "thickness_px": 6.0,
+        "orientation": "horizontal",
+        "source": "vectorizer output, unedited"
+      }
+    },
+    {
+      "object_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004",
+      "kind": "wall",
+      "name": "Candidate wall wall_004 (horizontal)",
+      "host_wall_id": null,
+      "predicted_class": null,
+      "centreline_length_m": 1.7261062294844431,
+      "fields": {
+        "axis": {
+          "value": [
+            [
+              0.386636,
+              0.386636
+            ],
+            [
+              2.112687,
+              0.400444
+            ]
+          ],
+          "origin": "derived_from_geometry",
+          "basis": "Centreline proposed by the vectorizer from the predicted wall mask (upstream object wall_004). Converted at 0.027617 m per letterbox_512 px (scale status ASSUMED_FOR_PREVIEW)."
+        },
+        "thickness": {
+          "value": 0.110467,
+          "origin": "derived_from_geometry",
+          "basis": "Vectorizer thickness 4.0 px, consistent with 4.0 px measured on the predicted structural_wall mask. Converted at 0.027617 m per letterbox_512 px (scale status ASSUMED_FOR_PREVIEW)."
+        },
+        "height": {
+          "value": 2.7,
+          "origin": "assumed_for_preview",
+          "basis": "Wall height from configuration profile 'preview_vertical_defaults_v0'. A plan drawing carries no vertical information; this is an assumption, not a measurement."
+        },
+        "base_elevation": {
+          "value": 0.0,
+          "origin": "assumed_for_preview",
+          "basis": "Wall base elevation from configuration profile 'preview_vertical_defaults_v0'. A plan drawing carries no vertical information; this is an assumption, not a measurement."
+        }
+      },
+      "confidence": {
+        "semantic_score": null,
+        "score_source": null,
+        "score_aggregation": null,
+        "availability": "UNAVAILABLE",
+        "unavailable_reason": "The only persisted prediction is a thresholded mask. The upstream run saved no probability maps (save_probability_maps: false), and no score can be derived from binary pixels.",
+        "calibration_status": "NOT_CALIBRATED"
+      },
+      "review": {
+        "state": "CANDIDATE_UNREVIEWED",
+        "reviewer": null,
+        "reviewer_role": null,
+        "reviewed_utc": null,
+        "decision_notes": null,
+        "review_record_path": null,
+        "review_record_sha256": null
+      },
+      "edits": [],
+      "geometry_checks": [
+        {
+          "name": "axis_lies_on_predicted_wall",
+          "status": "PASS",
+          "detail": "63 of 63 centreline samples lie on predicted structural_wall pixels.",
+          "measured": 1.0,
+          "threshold": 0.9
+        },
+        {
+          "name": "thickness_matches_predicted_mask",
+          "status": "PASS",
+          "detail": "Thickness in use 4.0 px; predicted-mask median 4.0 px; vectorizer proposed 4.0 px.",
+          "measured": 4.0,
+          "threshold": 2.0
+        },
+        {
+          "name": "centreline_offset_from_predicted_wall",
+          "status": "PASS",
+          "detail": "Median offset between the axis and the middle of the predicted wall: 0.5 px.",
+          "measured": 0.5,
+          "threshold": 2.0
+        }
+      ],
+      "assumptions": [
+        "Plan scale is ASSUMED_FOR_PREVIEW; length, position and thickness in metres are preview values, not dimensions of the building.",
+        "Height 2.7 m and base elevation 0.0 m are preview assumptions from profile 'preview_vertical_defaults_v0'.",
+        "Modelled as a straight constant-thickness prism centred on its centreline; joins with neighbouring walls are not resolved."
+      ],
+      "source_refs": [
+        {
+          "kind": "prediction_mask_region",
+          "artifact_role": "predicted_structural_wall",
+          "path": "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/masks/val/high_quality_architectural__333__heads.png",
+          "sha256": "4da6f6eb69c64ef721a30e7f81f74843348db831d3608b331fcc2dbd03f1f355",
+          "upstream_object_id": null,
+          "region_candidate_px": [
+            240.0,
+            239.5,
+            306.5,
+            244.0
+          ],
+          "pixel_support": {
+            "axis_support_ratio": 1.0,
+            "axis_samples": 63,
+            "measured_thickness_px_median": 4.0
+          }
+        },
+        {
+          "kind": "vectorizer_output",
+          "artifact_role": "wall_geometry.json",
+          "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/vectorizer_output/wall_geometry.json",
+          "sha256": "5fe575ee31c816258b3868e763884bf90cf634a87b5cab6a56946a6bf776e08e",
+          "upstream_object_id": "wall_004",
+          "region_candidate_px": null,
+          "pixel_support": null
+        }
+      ],
+      "candidate_original": {
+        "axis_px": {
+          "start": [
+            242.0,
+            242.0
+          ],
+          "end": [
+            304.5,
+            241.5
+          ]
+        },
+        "thickness_px": 4.0,
+        "orientation": "horizontal",
+        "source": "vectorizer output, unedited"
+      }
+    },
+    {
+      "object_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012",
+      "kind": "wall",
+      "name": "Candidate wall wall_012 (vertical)",
+      "host_wall_id": null,
+      "predicted_class": null,
+      "centreline_length_m": 2.2496210000000003,
+      "fields": {
+        "axis": {
+          "value": [
+            [
+              2.112687,
+              0.400444
+            ],
+            [
+              2.112687,
+              2.650065
+            ]
+          ],
+          "origin": "derived_from_geometry",
+          "basis": "Centreline proposed by the vectorizer from the predicted wall mask (upstream object wall_012). Converted at 0.027617 m per letterbox_512 px (scale status ASSUMED_FOR_PREVIEW)."
+        },
+        "thickness": {
+          "value": 0.110467,
+          "origin": "derived_from_geometry",
+          "basis": "Median perpendicular run 4.0 px on the predicted structural_wall mask; the vectorizer value 40.0 px was replaced by an automated rule. Converted at 0.027617 m per letterbox_512 px (scale status ASSUMED_FOR_PREVIEW)."
+        },
+        "height": {
+          "value": 2.7,
+          "origin": "assumed_for_preview",
+          "basis": "Wall height from configuration profile 'preview_vertical_defaults_v0'. A plan drawing carries no vertical information; this is an assumption, not a measurement."
+        },
+        "base_elevation": {
+          "value": 0.0,
+          "origin": "assumed_for_preview",
+          "basis": "Wall base elevation from configuration profile 'preview_vertical_defaults_v0'. A plan drawing carries no vertical information; this is an assumption, not a measurement."
+        }
+      },
+      "confidence": {
+        "semantic_score": null,
+        "score_source": null,
+        "score_aggregation": null,
+        "availability": "UNAVAILABLE",
+        "unavailable_reason": "The only persisted prediction is a thresholded mask. The upstream run saved no probability maps (save_probability_maps: false), and no score can be derived from binary pixels.",
+        "calibration_status": "NOT_CALIBRATED"
+      },
+      "review": {
+        "state": "CANDIDATE_UNREVIEWED",
+        "reviewer": null,
+        "reviewer_role": null,
+        "reviewed_utc": null,
+        "decision_notes": null,
+        "review_record_path": null,
+        "review_record_sha256": null
+      },
+      "edits": [
+        {
+          "field": "thickness",
+          "before": {
+            "thickness_px": 40.0
+          },
+          "after": {
+            "thickness_px": 4.0
+          },
+          "reason": "Vectorizer thickness 40.0 px disagrees with the predicted mask by more than 2.0 px; the median perpendicular run on the predicted structural_wall mask is 4.0 px.",
+          "actor_type": "automated_rule",
+          "actor": "bim_bridge candidates.thickness_from_predicted_mask rule 0.2",
+          "timestamp_utc": "2026-09-28T18:37:01Z",
+          "evidence": "candidate_geometry.json diagnostics for wall_012: 70 perpendicular samples, p10-p90 [4.0, 4.0] px"
+        }
+      ],
+      "geometry_checks": [
+        {
+          "name": "axis_lies_on_predicted_wall",
+          "status": "PASS",
+          "detail": "82 of 82 centreline samples lie on predicted structural_wall pixels.",
+          "measured": 1.0,
+          "threshold": 0.9
+        },
+        {
+          "name": "thickness_matches_predicted_mask",
+          "status": "PASS",
+          "detail": "Thickness in use 4.0 px; predicted-mask median 4.0 px; vectorizer proposed 40.0 px.",
+          "measured": 4.0,
+          "threshold": 2.0
+        },
+        {
+          "name": "centreline_offset_from_predicted_wall",
+          "status": "PASS",
+          "detail": "Median offset between the axis and the middle of the predicted wall: 0.5 px.",
+          "measured": 0.5,
+          "threshold": 2.0
+        }
+      ],
+      "assumptions": [
+        "Plan scale is ASSUMED_FOR_PREVIEW; length, position and thickness in metres are preview values, not dimensions of the building.",
+        "Height 2.7 m and base elevation 0.0 m are preview assumptions from profile 'preview_vertical_defaults_v0'.",
+        "Modelled as a straight constant-thickness prism centred on its centreline; joins with neighbouring walls are not resolved."
+      ],
+      "source_refs": [
+        {
+          "kind": "prediction_mask_region",
+          "artifact_role": "predicted_structural_wall",
+          "path": "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/masks/val/high_quality_architectural__333__heads.png",
+          "sha256": "4da6f6eb69c64ef721a30e7f81f74843348db831d3608b331fcc2dbd03f1f355",
+          "upstream_object_id": null,
+          "region_candidate_px": [
+            302.5,
+            158.04166666666666,
+            306.5,
+            243.5
+          ],
+          "pixel_support": {
+            "axis_support_ratio": 1.0,
+            "axis_samples": 82,
+            "measured_thickness_px_median": 4.0
+          }
+        },
+        {
+          "kind": "vectorizer_output",
+          "artifact_role": "wall_geometry.json",
+          "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/vectorizer_output/wall_geometry.json",
+          "sha256": "5fe575ee31c816258b3868e763884bf90cf634a87b5cab6a56946a6bf776e08e",
+          "upstream_object_id": "wall_012",
+          "region_candidate_px": null,
+          "pixel_support": null
+        }
+      ],
+      "candidate_original": {
+        "axis_px": {
+          "start": [
+            304.5,
+            241.5
+          ],
+          "end": [
+            304.5,
+            160.04166666666666
+          ]
+        },
+        "thickness_px": 40.0,
+        "orientation": "vertical",
+        "source": "vectorizer output, unedited"
+      }
+    },
+    {
+      "object_id": "opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02",
+      "kind": "aperture",
+      "name": "Candidate aperture (door_opening component 2) in wall_003",
+      "host_wall_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003",
+      "predicted_class": "door_opening",
+      "centreline_length_m": null,
+      "fields": {
+        "offset_along_host": {
+          "value": 0.110467,
+          "origin": "derived_from_geometry",
+          "basis": "Extent of the predicted door_opening component projected on the host centreline. Converted at 0.027617 m per letterbox_512 px (scale status ASSUMED_FOR_PREVIEW)."
+        },
+        "width": {
+          "value": 0.773271,
+          "origin": "derived_from_geometry",
+          "basis": "Extent of the predicted door_opening component projected on the host centreline. Converted at 0.027617 m per letterbox_512 px (scale status ASSUMED_FOR_PREVIEW)."
+        },
+        "bottom_elevation": {
+          "value": 0.0,
+          "origin": "assumed_for_preview",
+          "basis": "Aperture bottom elevation from configuration profile 'preview_vertical_defaults_v0'. A plan drawing carries no vertical information; this is an assumption, not a measurement."
+        },
+        "height": {
+          "value": 2.1,
+          "origin": "assumed_for_preview",
+          "basis": "Aperture height from configuration profile 'preview_vertical_defaults_v0'. A plan drawing carries no vertical information; this is an assumption, not a measurement."
+        }
+      },
+      "confidence": {
+        "semantic_score": null,
+        "score_source": null,
+        "score_aggregation": null,
+        "availability": "UNAVAILABLE",
+        "unavailable_reason": "The only persisted prediction is a thresholded mask. The upstream run saved no probability maps (save_probability_maps: false), and no score can be derived from binary pixels.",
+        "calibration_status": "NOT_CALIBRATED"
+      },
+      "review": {
+        "state": "CANDIDATE_UNREVIEWED",
+        "reviewer": null,
+        "reviewer_role": null,
+        "reviewed_utc": null,
+        "decision_notes": null,
+        "review_record_path": null,
+        "review_record_sha256": null
+      },
+      "edits": [],
+      "geometry_checks": [
+        {
+          "name": "aperture_lies_in_host_band",
+          "status": "PASS",
+          "detail": "Component centroid is 0.00 px from the host axis.",
+          "measured": 0.0,
+          "threshold": 7.0
+        },
+        {
+          "name": "aperture_overlaps_predicted_wall",
+          "status": "PASS",
+          "detail": "84% of the predicted door_opening pixels are also predicted structural_wall pixels.",
+          "measured": 0.8392857142857143,
+          "threshold": 0.5
+        }
+      ],
+      "assumptions": [
+        "Plan scale is ASSUMED_FOR_PREVIEW; offset and width in metres are preview values, not dimensions of the building.",
+        "Bottom elevation 0.0 m and height 2.1 m are preview assumptions from profile 'preview_vertical_defaults_v0'.",
+        "Modelled as an aperture (void) only. The model head that proposed it is 'door_opening'; no door or window element is created or asserted."
+      ],
+      "source_refs": [
+        {
+          "kind": "prediction_mask_region",
+          "artifact_role": "predicted_door_opening",
+          "path": "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/masks/val/high_quality_architectural__333__heads.png",
+          "sha256": "4da6f6eb69c64ef721a30e7f81f74843348db831d3608b331fcc2dbd03f1f355",
+          "upstream_object_id": null,
+          "region_candidate_px": [
+            309.0,
+            218.0,
+            336.0,
+            223.0
+          ],
+          "pixel_support": {
+            "pixel_count": 168,
+            "overlap_with_predicted_wall": 0.8392857142857143
+          }
+        }
+      ],
+      "candidate_original": {
+        "along_host_px": [
+          4.0,
+          32.0
+        ],
+        "component": {
+          "component_id": 2,
+          "pixel_count": 168,
+          "bbox_px": [
+            309,
+            218,
+            336,
+            223
+          ],
+          "centroid_px": [
+            322.5,
+            220.5
+          ]
+        },
+        "source": "connected component of the predicted door_opening mask, projected on the host axis"
+      }
+    }
+  ],
+  "guid_map": {
+    "created": [
+      "project:cubicasa-high-quality-architectural-333-val-region-01",
+      "site:cubicasa-high-quality-architectural-333-val-region-01",
+      "building:cubicasa-high-quality-architectural-333-val-region-01",
+      "storey:cubicasa-high-quality-architectural-333-val-region-01:level-0",
+      "rel:aggregates:project:cubicasa-high-quality-architectural-333-val-region-01",
+      "rel:aggregates:site:cubicasa-high-quality-architectural-333-val-region-01",
+      "rel:aggregates:building:cubicasa-high-quality-architectural-333-val-region-01",
+      "pset:building:cubicasa-high-quality-architectural-333-val-region-01:AutoAutoCAD_ModelProvenance",
+      "rel:pset:building:cubicasa-high-quality-architectural-333-val-region-01:AutoAutoCAD_ModelProvenance",
+      "pset:storey:cubicasa-high-quality-architectural-333-val-region-01:level-0:AutoAutoCAD_Provenance",
+      "rel:pset:storey:cubicasa-high-quality-architectural-333-val-region-01:level-0:AutoAutoCAD_Provenance",
+      "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002",
+      "pset:wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002:AutoAutoCAD_Provenance",
+      "rel:pset:wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002:AutoAutoCAD_Provenance",
+      "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003",
+      "pset:wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003:AutoAutoCAD_Provenance",
+      "rel:pset:wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003:AutoAutoCAD_Provenance",
+      "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004",
+      "pset:wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004:AutoAutoCAD_Provenance",
+      "rel:pset:wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004:AutoAutoCAD_Provenance",
+      "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012",
+      "pset:wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012:AutoAutoCAD_Provenance",
+      "rel:pset:wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012:AutoAutoCAD_Provenance",
+      "rel:contained:storey:cubicasa-high-quality-architectural-333-val-region-01:level-0",
+      "opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02",
+      "rel:voids:opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02",
+      "pset:opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02:AutoAutoCAD_Provenance",
+      "rel:pset:opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02:AutoAutoCAD_Provenance"
+    ],
+    "reused": [],
+    "retired": []
+  },
+  "export": {
+    "ifc_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/export_preview/cubicasa-high-quality-architectural-333-val-region-01__PREVIEW_CANDIDATE_UNREVIEWED.ifc",
+    "schema": "IFC4",
+    "timestamp": "2026-09-28T18:37:01Z",
+    "entity_count": 470,
+    "guids_created": [
+      "project:cubicasa-high-quality-architectural-333-val-region-01",
+      "site:cubicasa-high-quality-architectural-333-val-region-01",
+      "building:cubicasa-high-quality-architectural-333-val-region-01",
+      "storey:cubicasa-high-quality-architectural-333-val-region-01:level-0",
+      "rel:aggregates:project:cubicasa-high-quality-architectural-333-val-region-01",
+      "rel:aggregates:site:cubicasa-high-quality-architectural-333-val-region-01",
+      "rel:aggregates:building:cubicasa-high-quality-architectural-333-val-region-01",
+      "pset:building:cubicasa-high-quality-architectural-333-val-region-01:AutoAutoCAD_ModelProvenance",
+      "rel:pset:building:cubicasa-high-quality-architectural-333-val-region-01:AutoAutoCAD_ModelProvenance",
+      "pset:storey:cubicasa-high-quality-architectural-333-val-region-01:level-0:AutoAutoCAD_Provenance",
+      "rel:pset:storey:cubicasa-high-quality-architectural-333-val-region-01:level-0:AutoAutoCAD_Provenance",
+      "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002",
+      "pset:wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002:AutoAutoCAD_Provenance",
+      "rel:pset:wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002:AutoAutoCAD_Provenance",
+      "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003",
+      "pset:wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003:AutoAutoCAD_Provenance",
+      "rel:pset:wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003:AutoAutoCAD_Provenance",
+      "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004",
+      "pset:wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004:AutoAutoCAD_Provenance",
+      "rel:pset:wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004:AutoAutoCAD_Provenance",
+      "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012",
+      "pset:wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012:AutoAutoCAD_Provenance",
+      "rel:pset:wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012:AutoAutoCAD_Provenance",
+      "rel:contained:storey:cubicasa-high-quality-architectural-333-val-region-01:level-0",
+      "opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02",
+      "rel:voids:opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02",
+      "pset:opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02:AutoAutoCAD_Provenance",
+      "rel:pset:opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02:AutoAutoCAD_Provenance"
+    ],
+    "guids_reused": [],
+    "guids_retired": [],
+    "walls": 4,
+    "openings": 1,
+    "opening_overcut_m": 0.01,
+    "ifc_sha256": "e4def87979953d853790d3c3f63ddde4d4b39f3a7c7a8df7eecb492713dcd09e",
+    "repeat_export_byte_identical": true
+  },
+  "checks": [
+    {
+      "group": "input",
+      "name": "no_unevidenced_fields",
+      "status": "PASS",
+      "detail": "No material, fire-rating, load-bearing, equipment, inspection or overall-confidence fields.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "all_numbers_finite",
+      "status": "PASS",
+      "detail": "No NaN or infinite numbers.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "json_schema",
+      "status": "PASS",
+      "detail": "Conforms to building_model schema 0.2.",
+      "data": {
+        "error_count": 0
+      }
+    },
+    {
+      "group": "input",
+      "name": "unique_object_ids",
+      "status": "PASS",
+      "detail": "9 object IDs, all unique.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "required_dimensions_present",
+      "status": "PASS",
+      "detail": "Every dimension needed for export has a value.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "unknown_origin_means_null",
+      "status": "PASS",
+      "detail": "origin=unknown is used exactly where the value is null.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "origins_match_track",
+      "status": "PASS",
+      "detail": "Attribute origins are consistent with track REVIEWED_PREDICTION_BRIDGE.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "real_lineage_fields_present",
+      "status": "PASS",
+      "detail": "Sample, split, source image, prediction artifacts, upstream model, extraction record and transforms are all recorded.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "scale_status_valid",
+      "status": "PASS",
+      "detail": "Scale status ASSUMED_FOR_PREVIEW.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "evidenced_scale_is_documented",
+      "status": "PASS",
+      "detail": "Scale is not claimed as evidenced.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "dimensional_claims_follow_scale",
+      "status": "PASS",
+      "detail": "dimensional_claims_permitted=False with scale status ASSUMED_FOR_PREVIEW.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "geometry_status_follows_review",
+      "status": "PASS",
+      "detail": "geometry_status=CANDIDATE_UNREVIEWED; object review states ['CANDIDATE_UNREVIEWED'] require CANDIDATE_UNREVIEWED.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "permitted_use_follows_status",
+      "status": "PASS",
+      "detail": "permitted_use=preview_only_not_for_engineering_or_inspection; review and scale status require preview_only_not_for_engineering_or_inspection.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "scale_evidence",
+      "status": "WARN",
+      "detail": "Plan scale is ASSUMED_FOR_PREVIEW: every plan dimension is preview-only and no dimensional claim is permitted.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "no_confidence_from_thresholded_masks",
+      "status": "PASS",
+      "detail": "No semantic score is claimed from thresholded masks.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "walls_trace_to_prediction_evidence",
+      "status": "PASS",
+      "detail": "Every wall references a region of a prediction mask with pixel support.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "candidate_original_preserved",
+      "status": "PASS",
+      "detail": "The originally proposed geometry is preserved for every object.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "scale_matches_transform",
+      "status": "PASS",
+      "detail": "scale.metres_per_source_px 0.010720103 equals metres_per_candidate_px x letterbox scale 0.010720103.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "metric_values_match_transform",
+      "status": "PASS",
+      "detail": "Every plan dimension equals its candidate-space source converted exactly once.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "wall_length[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002]",
+      "status": "PASS",
+      "detail": "Centreline length 5.6891 m (allowed 0.05..500.0).",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "wall_thickness[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002]",
+      "status": "PASS",
+      "detail": "Thickness 0.2486 m (allowed 0..2.0).",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "wall_height[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002]",
+      "status": "PASS",
+      "detail": "Height 2.7000 m (allowed 0..30.0).",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "wall_storey[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002]",
+      "status": "PASS",
+      "detail": "Assigned to storey 'storey:cubicasa-high-quality-architectural-333-val-region-01:level-0'.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "candidate_geometry_checks[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002]",
+      "status": "PASS",
+      "detail": "No failed geometry diagnostics are recorded on this object.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "manual_values_have_edit_records[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002]",
+      "status": "PASS",
+      "detail": "Every manually entered value has a recorded edit.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "unreviewed_has_no_reviewer[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002]",
+      "status": "PASS",
+      "detail": "Unreviewed candidate names no reviewer and no review date.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "no_human_edits_without_review[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002]",
+      "status": "PASS",
+      "detail": "No human edit is recorded on an unreviewed object.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "human_review[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002]",
+      "status": "WARN",
+      "detail": "CANDIDATE_UNREVIEWED: no human has reviewed this object. Agent and automated adjustments are not a review.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "wall_length[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003]",
+      "status": "PASS",
+      "detail": "Centreline length 4.6949 m (allowed 0.05..500.0).",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "wall_thickness[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003]",
+      "status": "PASS",
+      "detail": "Thickness 0.1657 m (allowed 0..2.0).",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "wall_height[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003]",
+      "status": "PASS",
+      "detail": "Height 2.7000 m (allowed 0..30.0).",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "wall_storey[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003]",
+      "status": "PASS",
+      "detail": "Assigned to storey 'storey:cubicasa-high-quality-architectural-333-val-region-01:level-0'.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "candidate_geometry_checks[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003]",
+      "status": "PASS",
+      "detail": "No failed geometry diagnostics are recorded on this object.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "manual_values_have_edit_records[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003]",
+      "status": "PASS",
+      "detail": "Every manually entered value has a recorded edit.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "unreviewed_has_no_reviewer[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003]",
+      "status": "PASS",
+      "detail": "Unreviewed candidate names no reviewer and no review date.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "no_human_edits_without_review[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003]",
+      "status": "PASS",
+      "detail": "No human edit is recorded on an unreviewed object.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "human_review[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003]",
+      "status": "WARN",
+      "detail": "CANDIDATE_UNREVIEWED: no human has reviewed this object. Agent and automated adjustments are not a review.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "wall_length[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004]",
+      "status": "PASS",
+      "detail": "Centreline length 1.7261 m (allowed 0.05..500.0).",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "wall_thickness[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004]",
+      "status": "PASS",
+      "detail": "Thickness 0.1105 m (allowed 0..2.0).",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "wall_height[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004]",
+      "status": "PASS",
+      "detail": "Height 2.7000 m (allowed 0..30.0).",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "wall_storey[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004]",
+      "status": "PASS",
+      "detail": "Assigned to storey 'storey:cubicasa-high-quality-architectural-333-val-region-01:level-0'.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "candidate_geometry_checks[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004]",
+      "status": "PASS",
+      "detail": "No failed geometry diagnostics are recorded on this object.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "manual_values_have_edit_records[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004]",
+      "status": "PASS",
+      "detail": "Every manually entered value has a recorded edit.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "unreviewed_has_no_reviewer[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004]",
+      "status": "PASS",
+      "detail": "Unreviewed candidate names no reviewer and no review date.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "no_human_edits_without_review[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004]",
+      "status": "PASS",
+      "detail": "No human edit is recorded on an unreviewed object.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "human_review[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004]",
+      "status": "WARN",
+      "detail": "CANDIDATE_UNREVIEWED: no human has reviewed this object. Agent and automated adjustments are not a review.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "wall_length[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012]",
+      "status": "PASS",
+      "detail": "Centreline length 2.2496 m (allowed 0.05..500.0).",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "wall_thickness[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012]",
+      "status": "PASS",
+      "detail": "Thickness 0.1105 m (allowed 0..2.0).",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "wall_height[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012]",
+      "status": "PASS",
+      "detail": "Height 2.7000 m (allowed 0..30.0).",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "wall_storey[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012]",
+      "status": "PASS",
+      "detail": "Assigned to storey 'storey:cubicasa-high-quality-architectural-333-val-region-01:level-0'.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "candidate_geometry_checks[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012]",
+      "status": "PASS",
+      "detail": "No failed geometry diagnostics are recorded on this object.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "manual_values_have_edit_records[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012]",
+      "status": "PASS",
+      "detail": "Every manually entered value has a recorded edit.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "unreviewed_has_no_reviewer[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012]",
+      "status": "PASS",
+      "detail": "Unreviewed candidate names no reviewer and no review date.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "no_human_edits_without_review[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012]",
+      "status": "PASS",
+      "detail": "No human edit is recorded on an unreviewed object.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "human_review[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012]",
+      "status": "WARN",
+      "detail": "CANDIDATE_UNREVIEWED: no human has reviewed this object. Agent and automated adjustments are not a review.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "no_duplicate_wall_geometry",
+      "status": "PASS",
+      "detail": "No two walls share a centreline.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "aperture_host_resolves[opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02]",
+      "status": "PASS",
+      "detail": "Host wall 'wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003' found.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "aperture_size[opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02]",
+      "status": "PASS",
+      "detail": "Width 0.7733 m, height 2.1000 m.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "aperture_within_host_length[opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02]",
+      "status": "PASS",
+      "detail": "Spans 0.1105..0.8837 m along a 4.6949 m host.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "aperture_within_host_height[opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02]",
+      "status": "PASS",
+      "detail": "Spans 0.0000..2.1000 m above the wall base in a 2.7000 m high host.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "candidate_geometry_checks[opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02]",
+      "status": "PASS",
+      "detail": "No failed geometry diagnostics are recorded on this object.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "manual_values_have_edit_records[opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02]",
+      "status": "PASS",
+      "detail": "Every manually entered value has a recorded edit.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "unreviewed_has_no_reviewer[opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02]",
+      "status": "PASS",
+      "detail": "Unreviewed candidate names no reviewer and no review date.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "no_human_edits_without_review[opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02]",
+      "status": "PASS",
+      "detail": "No human edit is recorded on an unreviewed object.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "human_review[opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02]",
+      "status": "WARN",
+      "detail": "CANDIDATE_UNREVIEWED: no human has reviewed this object. Agent and automated adjustments are not a review.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "apertures_do_not_overlap[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003]",
+      "status": "PASS",
+      "detail": "Apertures in this wall do not overlap.",
+      "data": {}
+    },
+    {
+      "group": "ifc_reopen",
+      "name": "file_exists",
+      "status": "PASS",
+      "detail": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/export_preview/cubicasa-high-quality-architectural-333-val-region-01__PREVIEW_CANDIDATE_UNREVIEWED.ifc (55811 bytes)",
+      "data": {}
+    },
+    {
+      "group": "ifc_reopen",
+      "name": "reopens",
+      "status": "PASS",
+      "detail": "Reopened with IfcOpenShell 0.8.5; 470 entities.",
+      "data": {}
+    },
+    {
+      "group": "ifc_schema",
+      "name": "schema_identifier",
+      "status": "PASS",
+      "detail": "File schema is 'IFC4' (expected 'IFC4').",
+      "data": {}
+    },
+    {
+      "group": "ifc_schema",
+      "name": "schema_and_express_rules",
+      "status": "PASS",
+      "detail": "ifcopenshell.validate reports no attribute-type, cardinality, inverse or EXPRESS WHERE-rule violations.",
+      "data": {
+        "statement_count": 0
+      }
+    },
+    {
+      "group": "ifc_structure",
+      "name": "exactly_one_IfcProject",
+      "status": "PASS",
+      "detail": "1 IfcProject instance(s).",
+      "data": {}
+    },
+    {
+      "group": "ifc_structure",
+      "name": "exactly_one_IfcSite",
+      "status": "PASS",
+      "detail": "1 IfcSite instance(s).",
+      "data": {}
+    },
+    {
+      "group": "ifc_structure",
+      "name": "exactly_one_IfcBuilding",
+      "status": "PASS",
+      "detail": "1 IfcBuilding instance(s).",
+      "data": {}
+    },
+    {
+      "group": "ifc_structure",
+      "name": "exactly_one_IfcBuildingStorey",
+      "status": "PASS",
+      "detail": "1 IfcBuildingStorey instance(s).",
+      "data": {}
+    },
+    {
+      "group": "ifc_structure",
+      "name": "spatial_chain",
+      "status": "PASS",
+      "detail": "Project > Site > Building > Storey are linked by IfcRelAggregates.",
+      "data": {}
+    },
+    {
+      "group": "ifc_structure",
+      "name": "length_unit_is_metre",
+      "status": "PASS",
+      "detail": "Length unit METRE, prefix None, scale to metres 1.",
+      "data": {}
+    },
+    {
+      "group": "ifc_structure",
+      "name": "storey_elevation",
+      "status": "PASS",
+      "detail": "Storey elevation 0.0 m.",
+      "data": {}
+    },
+    {
+      "group": "ifc_structure",
+      "name": "wall_count",
+      "status": "PASS",
+      "detail": "4 IfcWall (input has 4).",
+      "data": {}
+    },
+    {
+      "group": "ifc_structure",
+      "name": "opening_count",
+      "status": "PASS",
+      "detail": "1 IfcOpeningElement (input has 1).",
+      "data": {}
+    },
+    {
+      "group": "ifc_structure",
+      "name": "objects_identified_by_tag",
+      "status": "PASS",
+      "detail": "Every input object is present, identified by Tag = object_id.",
+      "data": {}
+    },
+    {
+      "group": "ifc_structure",
+      "name": "walls_contained_in_storey",
+      "status": "PASS",
+      "detail": "Every wall is contained in the storey.",
+      "data": {}
+    },
+    {
+      "group": "ifc_structure",
+      "name": "aperture_hosted[opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02]",
+      "status": "PASS",
+      "detail": "IfcRelVoidsElement links it to host 'wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003' (expected 'wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003').",
+      "data": {}
+    },
+    {
+      "group": "ifc_structure",
+      "name": "no_unevidenced_entities",
+      "status": "PASS",
+      "detail": "No material or classification entities were written.",
+      "data": {}
+    },
+    {
+      "group": "ifc_structure",
+      "name": "no_standard_psets_claimed",
+      "status": "PASS",
+      "detail": "No buildingSMART Pset_/Qto_ sets were written; only application-specific sets.",
+      "data": {}
+    },
+    {
+      "group": "ifc_structure",
+      "name": "no_unevidenced_properties",
+      "status": "PASS",
+      "detail": "No material / fire / load-bearing / inspection properties were written.",
+      "data": {}
+    },
+    {
+      "group": "ifc_identity",
+      "name": "global_ids_unique",
+      "status": "PASS",
+      "detail": "28 rooted entities, 28 distinct GlobalIds.",
+      "data": {}
+    },
+    {
+      "group": "ifc_identity",
+      "name": "global_ids_well_formed",
+      "status": "PASS",
+      "detail": "Every GlobalId is a valid 22-character IFC GUID.",
+      "data": {}
+    },
+    {
+      "group": "ifc_identity",
+      "name": "guid_map_matches_file",
+      "status": "PASS",
+      "detail": "All 28 active GUID-map entries resolve to an entity of the recorded class, and every GlobalId in the file is in the map.",
+      "data": {}
+    },
+    {
+      "group": "ifc_identity",
+      "name": "object_guid[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002]",
+      "status": "PASS",
+      "detail": "GlobalId 1XkaxwpSjJ8Qnf5B_jRxg1 matches the GUID map.",
+      "data": {}
+    },
+    {
+      "group": "ifc_identity",
+      "name": "object_guid[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003]",
+      "status": "PASS",
+      "detail": "GlobalId 3d2OAZpCHGUAZ91g4AXd7s matches the GUID map.",
+      "data": {}
+    },
+    {
+      "group": "ifc_identity",
+      "name": "object_guid[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004]",
+      "status": "PASS",
+      "detail": "GlobalId 1b$tabjrHGbPd9xW5BjLOQ matches the GUID map.",
+      "data": {}
+    },
+    {
+      "group": "ifc_identity",
+      "name": "object_guid[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012]",
+      "status": "PASS",
+      "detail": "GlobalId 11mnaExH9O2vr$qGRs3ceQ matches the GUID map.",
+      "data": {}
+    },
+    {
+      "group": "ifc_identity",
+      "name": "object_guid[opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02]",
+      "status": "PASS",
+      "detail": "GlobalId 1Y$u78JbXJIggJrkmIA5ew matches the GUID map.",
+      "data": {}
+    },
+    {
+      "group": "ifc_provenance",
+      "name": "model_pset_present",
+      "status": "PASS",
+      "detail": "AutoAutoCAD_ModelProvenance is attached to the building.",
+      "data": {}
+    },
+    {
+      "group": "ifc_provenance",
+      "name": "model_pset_values",
+      "status": "PASS",
+      "detail": "Model provenance values match the input.",
+      "data": {}
+    },
+    {
+      "group": "ifc_provenance",
+      "name": "pset_present[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002]",
+      "status": "PASS",
+      "detail": "AutoAutoCAD_Provenance is attached.",
+      "data": {}
+    },
+    {
+      "group": "ifc_provenance",
+      "name": "pset_complete[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002]",
+      "status": "PASS",
+      "detail": "All 38 required properties exist.",
+      "data": {}
+    },
+    {
+      "group": "ifc_provenance",
+      "name": "pset_values[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002]",
+      "status": "PASS",
+      "detail": "Provenance, uncertainty and review values match the input (a null score stays null).",
+      "data": {}
+    },
+    {
+      "group": "ifc_provenance",
+      "name": "prediction_evidence_in_ifc[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002]",
+      "status": "PASS",
+      "detail": "The wall's property set names the prediction mask region and the hash of the prediction artifact it came from.",
+      "data": {}
+    },
+    {
+      "group": "ifc_provenance",
+      "name": "pset_present[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003]",
+      "status": "PASS",
+      "detail": "AutoAutoCAD_Provenance is attached.",
+      "data": {}
+    },
+    {
+      "group": "ifc_provenance",
+      "name": "pset_complete[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003]",
+      "status": "PASS",
+      "detail": "All 38 required properties exist.",
+      "data": {}
+    },
+    {
+      "group": "ifc_provenance",
+      "name": "pset_values[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003]",
+      "status": "PASS",
+      "detail": "Provenance, uncertainty and review values match the input (a null score stays null).",
+      "data": {}
+    },
+    {
+      "group": "ifc_provenance",
+      "name": "prediction_evidence_in_ifc[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003]",
+      "status": "PASS",
+      "detail": "The wall's property set names the prediction mask region and the hash of the prediction artifact it came from.",
+      "data": {}
+    },
+    {
+      "group": "ifc_provenance",
+      "name": "pset_present[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004]",
+      "status": "PASS",
+      "detail": "AutoAutoCAD_Provenance is attached.",
+      "data": {}
+    },
+    {
+      "group": "ifc_provenance",
+      "name": "pset_complete[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004]",
+      "status": "PASS",
+      "detail": "All 38 required properties exist.",
+      "data": {}
+    },
+    {
+      "group": "ifc_provenance",
+      "name": "pset_values[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004]",
+      "status": "PASS",
+      "detail": "Provenance, uncertainty and review values match the input (a null score stays null).",
+      "data": {}
+    },
+    {
+      "group": "ifc_provenance",
+      "name": "prediction_evidence_in_ifc[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004]",
+      "status": "PASS",
+      "detail": "The wall's property set names the prediction mask region and the hash of the prediction artifact it came from.",
+      "data": {}
+    },
+    {
+      "group": "ifc_provenance",
+      "name": "pset_present[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012]",
+      "status": "PASS",
+      "detail": "AutoAutoCAD_Provenance is attached.",
+      "data": {}
+    },
+    {
+      "group": "ifc_provenance",
+      "name": "pset_complete[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012]",
+      "status": "PASS",
+      "detail": "All 38 required properties exist.",
+      "data": {}
+    },
+    {
+      "group": "ifc_provenance",
+      "name": "pset_values[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012]",
+      "status": "PASS",
+      "detail": "Provenance, uncertainty and review values match the input (a null score stays null).",
+      "data": {}
+    },
+    {
+      "group": "ifc_provenance",
+      "name": "prediction_evidence_in_ifc[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012]",
+      "status": "PASS",
+      "detail": "The wall's property set names the prediction mask region and the hash of the prediction artifact it came from.",
+      "data": {}
+    },
+    {
+      "group": "ifc_provenance",
+      "name": "pset_present[opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02]",
+      "status": "PASS",
+      "detail": "AutoAutoCAD_Provenance is attached.",
+      "data": {}
+    },
+    {
+      "group": "ifc_provenance",
+      "name": "pset_complete[opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02]",
+      "status": "PASS",
+      "detail": "All 37 required properties exist.",
+      "data": {}
+    },
+    {
+      "group": "ifc_provenance",
+      "name": "pset_values[opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02]",
+      "status": "PASS",
+      "detail": "Provenance, uncertainty and review values match the input (a null score stays null).",
+      "data": {}
+    },
+    {
+      "group": "geometry",
+      "name": "wall_placement[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002]",
+      "status": "PASS",
+      "detail": "World placement origin [1.049439, 2.650065, 0.0] and axis [1.0, 0.0, 0.0] match the input start point, base elevation (applied once) and direction.",
+      "data": {}
+    },
+    {
+      "group": "geometry",
+      "name": "wall_geometry_builds[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002]",
+      "status": "PASS",
+      "detail": "Geometry kernel produced 8 vertices, 12 triangles.",
+      "data": {}
+    },
+    {
+      "group": "geometry",
+      "name": "wall_length[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002]",
+      "status": "PASS",
+      "detail": "Extent along axis 0.00000..5.68907 m (expected 0..5.68907).",
+      "data": {
+        "measured": 5.689067,
+        "expected": 5.689067
+      }
+    },
+    {
+      "group": "geometry",
+      "name": "wall_thickness[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002]",
+      "status": "PASS",
+      "detail": "Extent across axis -0.12428..0.12428 m (expected \u00b10.12428; centred on the centreline).",
+      "data": {
+        "measured": 0.24855099999999997,
+        "expected": 0.248551
+      }
+    },
+    {
+      "group": "geometry",
+      "name": "wall_vertical_extent[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002]",
+      "status": "PASS",
+      "detail": "z 0.00000..2.70000 m (expected 0.00000..2.70000).",
+      "data": {
+        "measured": 2.7,
+        "expected": 2.7
+      }
+    },
+    {
+      "group": "geometry",
+      "name": "wall_gross_volume[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002]",
+      "status": "PASS",
+      "detail": "Gross volume 3.817863 m3 (expected length x thickness x height = 3.817863).",
+      "data": {
+        "measured": 3.8178628881758967,
+        "expected": 3.8178628881759002
+      }
+    },
+    {
+      "group": "geometry",
+      "name": "wall_placement[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003]",
+      "status": "PASS",
+      "detail": "World placement origin [2.112687, 0.980397, 0.0] and axis [1.0, 0.0, 0.0] match the input start point, base elevation (applied once) and direction.",
+      "data": {}
+    },
+    {
+      "group": "geometry",
+      "name": "wall_geometry_builds[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003]",
+      "status": "PASS",
+      "detail": "Geometry kernel produced 8 vertices, 12 triangles.",
+      "data": {}
+    },
+    {
+      "group": "geometry",
+      "name": "wall_length[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003]",
+      "status": "PASS",
+      "detail": "Extent along axis 0.00000..4.69486 m (expected 0..4.69486).",
+      "data": {
+        "measured": 4.6948609999999995,
+        "expected": 4.6948609999999995
+      }
+    },
+    {
+      "group": "geometry",
+      "name": "wall_thickness[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003]",
+      "status": "PASS",
+      "detail": "Extent across axis -0.08285..0.08285 m (expected \u00b10.08285; centred on the centreline).",
+      "data": {
+        "measured": 0.16570099999999988,
+        "expected": 0.165701
+      }
+    },
+    {
+      "group": "geometry",
+      "name": "wall_vertical_extent[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003]",
+      "status": "PASS",
+      "detail": "z 0.00000..2.70000 m (expected 0.00000..2.70000).",
+      "data": {
+        "measured": 2.7,
+        "expected": 2.7
+      }
+    },
+    {
+      "group": "geometry",
+      "name": "wall_gross_volume[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003]",
+      "status": "PASS",
+      "detail": "Gross volume 2.100447 m3 (expected length x thickness x height = 2.100447).",
+      "data": {
+        "measured": 2.1004465389147,
+        "expected": 2.1004465389147
+      }
+    },
+    {
+      "group": "geometry",
+      "name": "wall_net_volume_after_voids[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003]",
+      "status": "PASS",
+      "detail": "Net volume with 1 aperture(s) subtracted 1.831370 m3 (expected 1.831370).",
+      "data": {
+        "measured": 1.831369805175597,
+        "expected": 1.8313698051755998
+      }
+    },
+    {
+      "group": "geometry",
+      "name": "void_removes_intended_volume[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003]",
+      "status": "PASS",
+      "detail": "The void removed 0.269077 m3 of wall (expected width x wall thickness x height = 0.269077).",
+      "data": {
+        "measured": 0.2690767337391027,
+        "expected": 0.2690767337391
+      }
+    },
+    {
+      "group": "geometry",
+      "name": "wall_placement[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004]",
+      "status": "PASS",
+      "detail": "World placement origin [0.386636, 0.386636, 0.0] and axis [0.999968, 0.008, 0.0] match the input start point, base elevation (applied once) and direction.",
+      "data": {}
+    },
+    {
+      "group": "geometry",
+      "name": "wall_geometry_builds[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004]",
+      "status": "PASS",
+      "detail": "Geometry kernel produced 8 vertices, 12 triangles.",
+      "data": {}
+    },
+    {
+      "group": "geometry",
+      "name": "wall_length[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004]",
+      "status": "PASS",
+      "detail": "Extent along axis -0.00000..1.72611 m (expected 0..1.72611).",
+      "data": {
+        "measured": 1.7261062294844431,
+        "expected": 1.7261062294844431
+      }
+    },
+    {
+      "group": "geometry",
+      "name": "wall_thickness[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004]",
+      "status": "PASS",
+      "detail": "Extent across axis -0.05523..0.05523 m (expected \u00b10.05523; centred on the centreline).",
+      "data": {
+        "measured": 0.11046700000000004,
+        "expected": 0.110467
+      }
+    },
+    {
+      "group": "geometry",
+      "name": "wall_vertical_extent[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004]",
+      "status": "PASS",
+      "detail": "z 0.00000..2.70000 m (expected 0.00000..2.70000).",
+      "data": {
+        "measured": 2.7,
+        "expected": 2.7
+      }
+    },
+    {
+      "group": "geometry",
+      "name": "wall_gross_volume[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004]",
+      "status": "PASS",
+      "detail": "Gross volume 0.514830 m3 (expected length x thickness x height = 0.514830).",
+      "data": {
+        "measured": 0.5148299975016369,
+        "expected": 0.5148299975016366
+      }
+    },
+    {
+      "group": "geometry",
+      "name": "wall_placement[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012]",
+      "status": "PASS",
+      "detail": "World placement origin [2.112687, 0.400444, 0.0] and axis [0.0, 1.0, 0.0] match the input start point, base elevation (applied once) and direction.",
+      "data": {}
+    },
+    {
+      "group": "geometry",
+      "name": "wall_geometry_builds[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012]",
+      "status": "PASS",
+      "detail": "Geometry kernel produced 8 vertices, 12 triangles.",
+      "data": {}
+    },
+    {
+      "group": "geometry",
+      "name": "wall_length[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012]",
+      "status": "PASS",
+      "detail": "Extent along axis 0.00000..2.24962 m (expected 0..2.24962).",
+      "data": {
+        "measured": 2.2496210000000003,
+        "expected": 2.2496210000000003
+      }
+    },
+    {
+      "group": "geometry",
+      "name": "wall_thickness[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012]",
+      "status": "PASS",
+      "detail": "Extent across axis -0.05523..0.05523 m (expected \u00b10.05523; centred on the centreline).",
+      "data": {
+        "measured": 0.11046699999999987,
+        "expected": 0.110467
+      }
+    },
+    {
+      "group": "geometry",
+      "name": "wall_vertical_extent[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012]",
+      "status": "PASS",
+      "detail": "z 0.00000..2.70000 m (expected 0.00000..2.70000).",
+      "data": {
+        "measured": 2.7,
+        "expected": 2.7
+      }
+    },
+    {
+      "group": "geometry",
+      "name": "wall_gross_volume[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012]",
+      "status": "PASS",
+      "detail": "Gross volume 0.670974 m3 (expected length x thickness x height = 0.670974).",
+      "data": {
+        "measured": 0.6709739841188999,
+        "expected": 0.6709739841189001
+      }
+    },
+    {
+      "group": "geometry",
+      "name": "aperture_position_and_width[opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02]",
+      "status": "PASS",
+      "detail": "Along host 0.11047..0.88374 m (expected 0.11047..0.88374).",
+      "data": {}
+    },
+    {
+      "group": "geometry",
+      "name": "aperture_passes_through_wall[opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02]",
+      "status": "PASS",
+      "detail": "Across host -0.09285..0.09285 m; covers the full 0.16570 m thickness plus the 0.01 m exporter overcut per face.",
+      "data": {}
+    },
+    {
+      "group": "geometry",
+      "name": "aperture_vertical_extent[opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02]",
+      "status": "PASS",
+      "detail": "z 0.00000..2.10000 m (expected 0.00000..2.10000).",
+      "data": {}
+    },
+    {
+      "group": "ifc_identity",
+      "name": "repeat_export_reuses_guids",
+      "status": "PASS",
+      "detail": "Repeat export created 0 new GlobalIds, reused 28, byte-identical: True.",
+      "data": {}
+    }
+  ],
+  "not_modelled": [
+    "materials and material layers",
+    "fire ratings",
+    "load-bearing or external status",
+    "equipment data",
+    "inspection or construction status",
+    "wall joins and corner clean-up",
+    "doors and windows as IfcDoor / IfcWindow (only the aperture void is modelled)",
+    "spaces and rooms",
+    "georeferencing",
+    "curved, tapered or sloped walls",
+    "classification references"
+  ],
+  "not_established": [
+    "segmentation accuracy, wall IoU or any training comparison",
+    "dimensional accuracy of the geometry (no reference geometry was used, so accuracy is unknown, not zero error)",
+    "acceptance by any BIM viewer or authoring tool",
+    "conformance to a model view definition or an IDS",
+    "fitness for engineering, inspection or construction use"
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "experiment_id": "bim_bridge_v0",
+  "run_id": "bim_bridge_v0_20260928_183649_UTC",
+  "stage": "prepare_candidates",
+  "status": "PASS",
+  "written_utc": "2026-09-28T18:37:06Z",
+  "track": "REVIEWED_PREDICTION_BRIDGE",
+  "geometry_status": "CANDIDATE_UNREVIEWED",
+  "scale_status": "ASSUMED_FOR_PREVIEW",
+  "requested": {
+    "walls": 4,
+    "openings": 1
+  },
+  "prepared": {
+    "walls": 4,
+    "openings": 1
+  },
+  "input_checks": {
+    "PASS": 60,
+    "FAIL": 0,
+    "WARN": 6,
+    "INFO": 0
+  },
+  "failed": [],
+  "edits_recorded": [
+    {
+      "object_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012",
+      "field": "thickness",
+      "before": {
+        "thickness_px": 40.0
+      },
+      "after": {
+        "thickness_px": 4.0
+      },
+      "reason": "Vectorizer thickness 40.0 px disagrees with the predicted mask by more than 2.0 px; the median perpendicular run on the predicted structural_wall mask is 4.0 px.",
+      "actor_type": "automated_rule",
+      "actor": "bim_bridge candidates.thickness_from_predicted_mask rule 0.2",
+      "timestamp_utc": "2026-09-28T18:37:01Z",
+      "evidence": "candidate_geometry.json diagnostics for wall_012: 70 perpendicular samples, p10-p90 [4.0, 4.0] px"
+    }
+  ],
+  "apertures_in_roi_not_exported": [
+    {
+      "component_id": 1,
+      "pixel_count": 159,
+      "bbox_px": [
+        413,
+        193,
+        419,
+        216
+      ],
+      "centroid_px": [
+        415.92452830188677,
+        205.0566037735849
+      ],
+      "reason": "no selected wall hosts this component"
+    }
+  ],
+  "new_inference_run": false,
+  "ground_truth_or_annotation_read": false,
+  "paths": {
+    "candidate_geometry": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/candidate_geometry.json",
+    "candidate_geometry_sha256": "fcfd4a7061ed1d7fafc68a4985ca461fb15cba1812e933f6ec394c96dcfa7780",
+    "building_model": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/building_model.json",
+    "review_record_template": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/review_record_TEMPLATE.json",
+    "review_overlay": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/review_overlay_candidates_on_source.png",
+    "vectorizer_output": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/vectorizer_output/wall_geometry.json"
+  }
+}

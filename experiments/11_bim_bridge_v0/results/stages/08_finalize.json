@@ -1,0 +1,54 @@
+{
+  "experiment_id": "bim_bridge_v0",
+  "run_id": "bim_bridge_v0_20260928_183649_UTC",
+  "stage": "finalize",
+  "status": "PASS",
+  "written_utc": "2026-09-28T18:37:46Z",
+  "milestones": {
+    "technical_exporter": {
+      "status": "PASS",
+      "meaning": "The exporter turns a valid building_model.json into a checked IFC4 file. Shown on synthetic geometry."
+    },
+    "reviewed_prediction_bridge": {
+      "status": "PARTIAL",
+      "meaning": "Reviewed prediction-derived geometry becomes identifiable IFC elements with evidenced dimensions.",
+      "blocked_gates": [
+        "G2",
+        "G6"
+      ]
+    },
+    "downstream_application_acceptance": {
+      "status": "NOT_RUN",
+      "meaning": "A person opened the file in the target application or a viewer and recorded the result."
+    }
+  },
+  "gates": {
+    "SYNTHETIC_EXPORT_SMOKE": {
+      "G1": "PASS",
+      "G2": "PASS",
+      "G3": "PASS",
+      "G4": "PASS",
+      "G5": "PASS",
+      "G6": "NOT_RUN",
+      "G7": "NOT_RUN"
+    },
+    "REVIEWED_PREDICTION_BRIDGE": {
+      "G1": "PASS",
+      "G2": "BLOCKED",
+      "G3": "PASS",
+      "G4": "PASS",
+      "G5": "PASS",
+      "G6": "BLOCKED",
+      "G7": "NOT_RUN"
+    }
+  },
+  "next_actions": [
+    "G6: a human reviewer fills in `/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/review_record_TEMPLATE.json` (one decision per object) and runs `bim-bridge apply-review`. This is one person and about 5 objects.",
+    "G2: a human supplies or confirms a plan scale with its evidence in the same review record (`scale_confirmation`), for example from a dimensioned version of the drawing or a known room dimension.",
+    "G7: a person opens the IFC in the target application or a viewer and records the result, following `/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/VIEWER_INSPECTION_STEPS.md`. Name the target BIM application first."
+  ],
+  "paths": {
+    "final_report": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/FINAL_REPORT.md",
+    "pm_summary": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/PM_SUMMARY.md"
+  }
+}

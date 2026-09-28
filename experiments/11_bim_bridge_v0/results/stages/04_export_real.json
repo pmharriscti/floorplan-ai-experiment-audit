@@ -1,0 +1,19 @@
+{
+  "experiment_id": "bim_bridge_v0",
+  "run_id": "bim_bridge_v0_20260928_183649_UTC",
+  "stage": "export_real",
+  "status": "BLOCKED",
+  "written_utc": "2026-09-28T18:37:06Z",
+  "track": "REVIEWED_PREDICTION_BRIDGE",
+  "metric_export": {
+    "status": "BLOCKED",
+    "blockers": [
+      "No documented, human-confirmed plan scale (scale status ASSUMED_FOR_PREVIEW).",
+      "No recorded human review (geometry status CANDIDATE_UNREVIEWED)."
+    ]
+  },
+  "preview_export": {
+    "status": "NOT_RUN",
+    "reason": "Preview export was not requested (--preview)."
+  }
+}

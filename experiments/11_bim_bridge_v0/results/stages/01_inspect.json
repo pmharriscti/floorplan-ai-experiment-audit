@@ -1,0 +1,17 @@
+{
+  "experiment_id": "bim_bridge_v0",
+  "run_id": "bim_bridge_v0_20260928_183649_UTC",
+  "stage": "inspect",
+  "status": "PASS",
+  "written_utc": "2026-09-28T18:36:56Z",
+  "selected_input_verified": true,
+  "next_unused_audit_experiment_number": 11,
+  "checkpoint_matches_audit_entry_09": true,
+  "source_image_hash_matches_manifest": true,
+  "probability_maps_available": false,
+  "viewer_available": false,
+  "paths": {
+    "inventory_markdown": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/inputs/INPUT_INVENTORY.md",
+    "inventory_json": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/inputs/input_inventory.json"
+  }
+}

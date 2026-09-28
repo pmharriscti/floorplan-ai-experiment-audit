@@ -4,11 +4,11 @@ This repository is the initial evidence-backed audit index for the floor-plan se
 
 GitHub repository: [pmharriscti/floorplan-ai-experiment-audit](https://github.com/pmharriscti/floorplan-ai-experiment-audit)
 
-Audit date: 2026-08-31. Updated 2026-09-17 with the RunPod 1024 high-resolution crop treatment, 2026-09-24 with the Phase 5 hierarchical multi-head expansion and the Phase 3A.2 door-opening target ablation, and 2026-09-25 with that ablation's completed 30-epoch evaluation.
+Audit date: 2026-08-31. Updated 2026-09-17 with the RunPod 1024 high-resolution crop treatment, 2026-09-24 with the Phase 5 hierarchical multi-head expansion and the Phase 3A.2 door-opening target ablation, and 2026-09-25 with that ablation's completed 30-epoch evaluation. Updated 2026-09-28 with the bim_bridge_v0 downstream IFC bridge.
 
 ## Scope
 
-The current audit covers ten experiments:
+The current audit covers eleven experiments:
 
 | ID | Experiment | Status | Read next |
 | --- | --- | --- | --- |
@@ -22,6 +22,7 @@ The current audit covers ten experiments:
 | 08 | MitUNet 1024 high-resolution crop treatment on RunPod | completed | [experiments/08_mitunet_1024_highres_runpod/README.md](experiments/08_mitunet_1024_highres_runpod/README.md) |
 | 09 | Phase 5 hierarchical multi-head MitUNet 512 | completed | [experiments/09_phase5_hierarchical_multihead_512/README.md](experiments/09_phase5_hierarchical_multihead_512/README.md) |
 | 10 | Phase 3A.2 door-opening target ablation, candidate_v3.1 vs candidate_v3.2 (512) | completed | [experiments/10_phase3a2_door_opening_v31_vs_v32_512/README.md](experiments/10_phase3a2_door_opening_v31_vs_v32_512/README.md) |
+| 11 | bim_bridge_v0 downstream IFC bridge (integration, not a segmentation experiment) | completed | [experiments/11_bim_bridge_v0/README.md](experiments/11_bim_bridge_v0/README.md) |
 
 The top-level scorecard is [EXPERIMENT_SCOREBOARD.csv](EXPERIMENT_SCOREBOARD.csv), and the source/evidence index is [EXPERIMENT_INDEX.md](EXPERIMENT_INDEX.md).
 
@@ -61,9 +62,17 @@ Experiment 10 is the repository's first target-version (label) ablation, and its
 
 The paired model comparison is recorded as secondary evidence. Its target is door openings at `0.4848%` foreground, not walls, so it is not comparable with the wall experiments above. Both arms completed 30 epochs and the full-phase evaluation ran on 2026-09-25 against those checkpoints; both select threshold `0.1`. The control scores micro Dice/IoU `0.811210840` / `0.682384116` and opening-instance F1 `0.896008544`, the treatment `0.807523663` / `0.677182128` and `0.888447271`. A paired bootstrap (2,000 resamples, seed 42) puts every macro and micro Dice/IoU interval across zero; only the opening-instance F1 interval excludes zero (`-0.007561273`, CI `[-0.013241644, -0.001232924]`), favouring the control. That significance separates the two trained models rather than the two label versions — it is measured on plans whose targets are byte-identical, the arms' training labels differ on 7 of 4,200 masks, and the learning-rate schedules diverged. The 5-epoch probe pointed the other way on both pixel and instance metrics. When a label change touches 0.17% of the training set, aggregate model metrics measure run-to-run variation, which is why the label evidence leads here. The entry also explains the Phase 3A lineage version by version: `candidate_v3` split the door/window symbol from the opening and clipped openings to structural-wall support; `candidate_v3.1` fixed three warning families; and `candidate_v3.2` re-repaired Family A after v3.1's own fix was found to synthesize a rectangle and snap it to the nearest wall, sometimes the wrong one.
 
+## Downstream Integration
+
+Experiment 11, `bim_bridge_v0`, is a downstream integration experiment. It trains and evaluates no model, and its results are not comparable with the segmentation results above. Its pixel-metric scoreboard columns are `UNKNOWN`.
+
+> The meaningful result today is not ‘we generated a 3D picture.’ It is ‘we can turn reviewed prediction-derived geometry into identifiable IFC building elements, preserve uncertainty, and inspect the result.’ That is a concrete step toward the PM’s BIM goal—and it creates a stable destination for the ML improvements that follow.
+
+The exporter passed on synthetic geometry (130 of 130 checks). From one saved Phase 5 prediction of `high_quality_architectural/333`, the bridge produced 4 individually identifiable `IfcWall` objects and 1 hosted `IfcOpeningElement`, each carrying its provenance, assumptions and review state inside the IFC. **The reviewed-prediction milestone remains partial and was not demonstrated**: 0 of 5 objects were reviewed by a person, the drawing has no scale evidence so the metric export is blocked and only a preview was written, semantic confidence is null for 5 of 5 objects, and no viewer or target application has opened the file.
+
 ## Open Evidence Gaps
 
-The exact baseline source git commit and DVC hash were not located in the inspected baseline artifacts. The standalone 1024 px run records a source git commit, but its captured git state was dirty. The AdamW harness directory is not a Git repository, though the protected core implementation is clean and commit-pinned. The exact cloud-only Fast1024 runner package was not found locally, although its hashes and matching scientific source modules are documented. Several Phase 1 historical values mentioned in task context were not found in the Phase 1 run reports and are therefore not recorded as verified. Phase 1 and Phase 2 checkpoint SHA-256 hashes are deferred in their manifests, so this repository records checkpoint paths and sizes but not hashes. The Phase 5 code (modules, experiment script, configs) is untracked in the source repository, so its entry records file hashes instead of a clean commit, and its pipeline records no DVC status. Experiment 10's full-run evaluation was executed by the audit rather than by the original run, so that run's own master report still records `Full 30-epoch run executed: false`; its probe project has zero Git commits; its validation labels are unadjudicated, which is what prevents its one significant result from being attributed to the label version; and it records no MLflow run or DVC status.
+The exact baseline source git commit and DVC hash were not located in the inspected baseline artifacts. The standalone 1024 px run records a source git commit, but its captured git state was dirty. The AdamW harness directory is not a Git repository, though the protected core implementation is clean and commit-pinned. The exact cloud-only Fast1024 runner package was not found locally, although its hashes and matching scientific source modules are documented. Several Phase 1 historical values mentioned in task context were not found in the Phase 1 run reports and are therefore not recorded as verified. Phase 1 and Phase 2 checkpoint SHA-256 hashes are deferred in their manifests, so this repository records checkpoint paths and sizes but not hashes. The Phase 5 code (modules, experiment script, configs) is untracked in the source repository, so its entry records file hashes instead of a clean commit, and its pipeline records no DVC status. Experiment 10's full-run evaluation was executed by the audit rather than by the original run, so that run's own master report still records `Full 30-epoch run executed: false`; its probe project has zero Git commits; its validation labels are unadjudicated, which is what prevents its one significant result from being attributed to the label version; and it records no MLflow run or DVC status. The bim_bridge_v0 workspace is not a git repository, so its entry records a source file hash manifest; it has no human review record, no documented plan scale, no viewer inspection and no named target BIM application.
 
 ## Method Notes
 

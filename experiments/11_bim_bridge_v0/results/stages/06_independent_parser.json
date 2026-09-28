@@ -1,0 +1,27 @@
+{
+  "experiment_id": "bim_bridge_v0",
+  "run_id": "bim_bridge_v0_20260928_183649_UTC",
+  "stage": "independent_parser",
+  "status": "PASS",
+  "written_utc": "2026-09-28T18:37:11Z",
+  "is_viewer_test": false,
+  "note": "A second IFC engine parsed and tessellated the files. This is not acceptance by any viewer or BIM application.",
+  "tracks": {
+    "synthetic": {
+      "status": "PASS",
+      "passed": 23,
+      "failed": 0,
+      "web_ifc_version": "0.0.66",
+      "report": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/synthetic/independent_parser_check.json",
+      "stderr": ""
+    },
+    "real": {
+      "status": "PASS",
+      "passed": 19,
+      "failed": 0,
+      "web_ifc_version": "0.0.66",
+      "report": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/export_preview/independent_parser_check.json",
+      "stderr": ""
+    }
+  }
+}

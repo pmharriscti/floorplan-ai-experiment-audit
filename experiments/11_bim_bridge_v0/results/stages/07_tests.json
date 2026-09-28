@@ -1,0 +1,21 @@
+{
+  "experiment_id": "bim_bridge_v0",
+  "run_id": "bim_bridge_v0_20260928_183649_UTC",
+  "stage": "tests",
+  "status": "PASS",
+  "written_utc": "2026-09-28T18:37:45Z",
+  "total": 130,
+  "passed": 130,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "skips": [],
+  "expected_negative_tests": 76,
+  "expected_negative_note": "Negative tests pass when the bridge correctly refuses or flags bad input. They are included in 'passed'.",
+  "exit_code": 0,
+  "paths": {
+    "junit_xml": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/tests/pytest_junit.xml",
+    "output": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/tests/pytest_output.txt"
+  },
+  "pytest_command": "/home/pmharris/dev/bim_bridge_v0/.venv/bin/python -m pytest -q -rs --junitxml=<run>/tests/pytest_junit.xml tests"
+}

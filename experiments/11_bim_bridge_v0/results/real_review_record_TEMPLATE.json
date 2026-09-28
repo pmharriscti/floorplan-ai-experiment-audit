@@ -1,0 +1,126 @@
+{
+  "review_version": "bim_bridge.review_record/0.2",
+  "experiment_id": "bim_bridge_v0",
+  "run_id": "bim_bridge_v0_20260928_183649_UTC",
+  "model_id": "cubicasa-high-quality-architectural-333-val-region-01",
+  "candidate_geometry_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/candidate_geometry.json",
+  "candidate_geometry_sha256": "fcfd4a7061ed1d7fafc68a4985ca461fb15cba1812e933f6ec394c96dcfa7780",
+  "instructions": [
+    "This file is for a HUMAN reviewer. Do not fill it in on someone's behalf.",
+    "Compare review_overlay_candidates_on_source.png with the source image.",
+    "For every object set decision to ACCEPT, ACCEPT_WITH_EDITS or REJECT. For ACCEPT_WITH_EDITS list each edit with field, after and reason.",
+    "Editable fields: axis_px.start, axis_px.end, thickness_px (walls); offset_px, width_px (apertures). Values are in letterbox_512 pixels.",
+    "Set reviewer, reviewer_role and reviewed_utc (YYYY-MM-DDTHH:MM:SSZ). To confirm a plan scale, fill scale_confirmation with its evidence.",
+    "Then run: bim-bridge apply-review --run-dir <run> --review <this file>"
+  ],
+  "reviewer": null,
+  "reviewer_role": null,
+  "reviewed_utc": null,
+  "scale_confirmation": {
+    "confirmed": null,
+    "metres_per_source_px": null,
+    "evidence_kind": null,
+    "evidence_description": null
+  },
+  "objects": [
+    {
+      "object_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002",
+      "kind": "wall",
+      "current": {
+        "axis_px": {
+          "start": [
+            266.0,
+            160.04166666666666
+          ],
+          "end": [
+            472.0,
+            160.04166666666666
+          ]
+        },
+        "thickness_px": 9.0,
+        "thickness_source": "vectorizer",
+        "thickness_basis": "Vectorizer thickness 9.0 px, consistent with 9.0 px measured on the predicted structural_wall mask."
+      },
+      "decision": null,
+      "edits": [],
+      "notes": null
+    },
+    {
+      "object_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003",
+      "kind": "wall",
+      "current": {
+        "axis_px": {
+          "start": [
+            304.5,
+            220.5
+          ],
+          "end": [
+            474.5,
+            220.5
+          ]
+        },
+        "thickness_px": 6.0,
+        "thickness_source": "vectorizer",
+        "thickness_basis": "Vectorizer thickness 6.0 px, consistent with 6.0 px measured on the predicted structural_wall mask."
+      },
+      "decision": null,
+      "edits": [],
+      "notes": null
+    },
+    {
+      "object_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004",
+      "kind": "wall",
+      "current": {
+        "axis_px": {
+          "start": [
+            242.0,
+            242.0
+          ],
+          "end": [
+            304.5,
+            241.5
+          ]
+        },
+        "thickness_px": 4.0,
+        "thickness_source": "vectorizer",
+        "thickness_basis": "Vectorizer thickness 4.0 px, consistent with 4.0 px measured on the predicted structural_wall mask."
+      },
+      "decision": null,
+      "edits": [],
+      "notes": null
+    },
+    {
+      "object_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012",
+      "kind": "wall",
+      "current": {
+        "axis_px": {
+          "start": [
+            304.5,
+            241.5
+          ],
+          "end": [
+            304.5,
+            160.04166666666666
+          ]
+        },
+        "thickness_px": 4.0,
+        "thickness_source": "predicted-mask measurement (automated rule replaced the vectorizer value)",
+        "thickness_basis": "Median perpendicular run 4.0 px on the predicted structural_wall mask; the vectorizer value 40.0 px was replaced by an automated rule."
+      },
+      "decision": null,
+      "edits": [],
+      "notes": null
+    },
+    {
+      "object_id": "opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02",
+      "kind": "aperture",
+      "current": {
+        "offset_px": 4.0,
+        "width_px": 28.0
+      },
+      "decision": null,
+      "edits": [],
+      "notes": null
+    }
+  ]
+}

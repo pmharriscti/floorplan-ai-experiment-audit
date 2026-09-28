@@ -1,0 +1,547 @@
+{
+  "schema_version": "bim_bridge.building_model/0.2",
+  "experiment_id": "bim_bridge_v0",
+  "run_id": "bim_bridge_v0_20260928_183649_UTC",
+  "model_id": "synthetic-smoke-01",
+  "track": "SYNTHETIC_EXPORT_SMOKE",
+  "description": "SYNTHETIC exporter smoke test for bim_bridge_v0: one rectangular room, one diagonal partition and one hosted aperture on a raised storey. Not a real building and not a prediction.",
+  "generated_utc": "2026-09-28T18:36:57Z",
+  "source": {
+    "document_id": null,
+    "page": null,
+    "sample_id": null,
+    "split": null,
+    "roi": null,
+    "source_image": null,
+    "prediction_artifacts": [],
+    "upstream_model": null,
+    "geometry_extraction": null,
+    "notes": [
+      "SYNTHETIC: no source image, no prediction and no model were used."
+    ]
+  },
+  "transforms": null,
+  "units": {
+    "length": "metre",
+    "angle": "radian"
+  },
+  "scale": {
+    "status": "NOT_APPLICABLE_SYNTHETIC",
+    "metres_per_source_px": null,
+    "evidence": null,
+    "dimensional_claims_permitted": false,
+    "note": "Synthetic geometry is authored directly in metres. There is no drawing, so there is no scale and no dimensional claim about any building."
+  },
+  "coordinate_system": {
+    "handedness": "right_handed",
+    "x_axis": "arbitrary (synthetic)",
+    "y_axis": "arbitrary (synthetic)",
+    "z_axis": "up",
+    "origin": "south-west centreline corner of the synthetic room",
+    "wall_axis_convention": "centreline"
+  },
+  "storey": {
+    "object_id": "storey:synthetic-smoke-01:level-1",
+    "name": "SYNTHETIC level 1",
+    "elevation": {
+      "value": 3.0,
+      "unit": "m",
+      "origin": "synthetic_fixture",
+      "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement",
+      "source_value": null
+    }
+  },
+  "spatial": {
+    "project": {
+      "object_id": "project:synthetic-smoke-01",
+      "name": "SYNTHETIC bim_bridge_v0 exporter smoke test"
+    },
+    "site": {
+      "object_id": "site:synthetic-smoke-01",
+      "name": "SYNTHETIC site"
+    },
+    "building": {
+      "object_id": "building:synthetic-smoke-01",
+      "name": "SYNTHETIC building"
+    }
+  },
+  "ifc": {
+    "schema": "IFC4",
+    "schema_basis": "Prototype choice. No receiving BIM application or accepted IFC schema is documented in the inspected repositories.",
+    "target_application": null,
+    "target_compatibility": "UNVERIFIED"
+  },
+  "software": {
+    "bridge": "bim_bridge_v0",
+    "bridge_version": "0.2.0",
+    "ifcopenshell": "0.8.5",
+    "python": "3.12.3"
+  },
+  "status": {
+    "geometry_status": "SYNTHETIC_FIXTURE",
+    "permitted_use": "exporter_test_only",
+    "publication_status": "not_published"
+  },
+  "tolerances": {
+    "implementation": {
+      "length_m": 0.0001,
+      "volume_relative": 0.0001,
+      "direction": 1e-09,
+      "min_wall_length_m": 0.05,
+      "max_wall_length_m": 500.0,
+      "max_wall_thickness_m": 2.0,
+      "max_wall_height_m": 30.0,
+      "aperture_fit_m": 1e-09
+    },
+    "business_acceptance": null
+  },
+  "walls": [
+    {
+      "object_id": "wall:synthetic-smoke-01:south",
+      "name": "SYNTHETIC south wall",
+      "geometry_type": "straight_constant_thickness",
+      "axis": {
+        "convention": "centreline",
+        "start": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "end": {
+          "x": 6.0,
+          "y": 0.0
+        },
+        "origin": "synthetic_fixture",
+        "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement",
+        "candidate_px": null
+      },
+      "thickness": {
+        "value": 0.2,
+        "unit": "m",
+        "origin": "synthetic_fixture",
+        "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement",
+        "source_value": null
+      },
+      "height": {
+        "value": 2.7,
+        "unit": "m",
+        "origin": "synthetic_fixture",
+        "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement",
+        "source_value": null
+      },
+      "base_elevation": {
+        "value": 3.0,
+        "unit": "m",
+        "origin": "synthetic_fixture",
+        "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement",
+        "source_value": null
+      },
+      "storey_id": "storey:synthetic-smoke-01:level-1",
+      "source_refs": [
+        {
+          "kind": "synthetic_fixture",
+          "artifact_role": null,
+          "path": null,
+          "sha256": null,
+          "upstream_object_id": null,
+          "region_candidate_px": null,
+          "pixel_support": null
+        }
+      ],
+      "confidence": {
+        "semantic_score": null,
+        "score_source": null,
+        "score_aggregation": null,
+        "availability": "UNAVAILABLE",
+        "unavailable_reason": "Synthetic fixture: no model produced this object.",
+        "calibration_status": "NOT_APPLICABLE"
+      },
+      "geometry_checks": [],
+      "assumptions": [
+        "SYNTHETIC: every dimension of this wall is invented test data"
+      ],
+      "review": {
+        "state": "SYNTHETIC_NOT_APPLICABLE",
+        "reviewer": null,
+        "reviewer_role": null,
+        "reviewed_utc": null,
+        "decision_notes": "Synthetic fixture: there is nothing to review against.",
+        "review_record_path": null,
+        "review_record_sha256": null
+      },
+      "edits": [],
+      "candidate_original": null
+    },
+    {
+      "object_id": "wall:synthetic-smoke-01:east",
+      "name": "SYNTHETIC east wall",
+      "geometry_type": "straight_constant_thickness",
+      "axis": {
+        "convention": "centreline",
+        "start": {
+          "x": 6.0,
+          "y": 0.0
+        },
+        "end": {
+          "x": 6.0,
+          "y": 4.0
+        },
+        "origin": "synthetic_fixture",
+        "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement",
+        "candidate_px": null
+      },
+      "thickness": {
+        "value": 0.2,
+        "unit": "m",
+        "origin": "synthetic_fixture",
+        "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement",
+        "source_value": null
+      },
+      "height": {
+        "value": 2.7,
+        "unit": "m",
+        "origin": "synthetic_fixture",
+        "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement",
+        "source_value": null
+      },
+      "base_elevation": {
+        "value": 3.0,
+        "unit": "m",
+        "origin": "synthetic_fixture",
+        "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement",
+        "source_value": null
+      },
+      "storey_id": "storey:synthetic-smoke-01:level-1",
+      "source_refs": [
+        {
+          "kind": "synthetic_fixture",
+          "artifact_role": null,
+          "path": null,
+          "sha256": null,
+          "upstream_object_id": null,
+          "region_candidate_px": null,
+          "pixel_support": null
+        }
+      ],
+      "confidence": {
+        "semantic_score": null,
+        "score_source": null,
+        "score_aggregation": null,
+        "availability": "UNAVAILABLE",
+        "unavailable_reason": "Synthetic fixture: no model produced this object.",
+        "calibration_status": "NOT_APPLICABLE"
+      },
+      "geometry_checks": [],
+      "assumptions": [
+        "SYNTHETIC: every dimension of this wall is invented test data"
+      ],
+      "review": {
+        "state": "SYNTHETIC_NOT_APPLICABLE",
+        "reviewer": null,
+        "reviewer_role": null,
+        "reviewed_utc": null,
+        "decision_notes": "Synthetic fixture: there is nothing to review against.",
+        "review_record_path": null,
+        "review_record_sha256": null
+      },
+      "edits": [],
+      "candidate_original": null
+    },
+    {
+      "object_id": "wall:synthetic-smoke-01:north",
+      "name": "SYNTHETIC north wall",
+      "geometry_type": "straight_constant_thickness",
+      "axis": {
+        "convention": "centreline",
+        "start": {
+          "x": 6.0,
+          "y": 4.0
+        },
+        "end": {
+          "x": 0.0,
+          "y": 4.0
+        },
+        "origin": "synthetic_fixture",
+        "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement",
+        "candidate_px": null
+      },
+      "thickness": {
+        "value": 0.2,
+        "unit": "m",
+        "origin": "synthetic_fixture",
+        "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement",
+        "source_value": null
+      },
+      "height": {
+        "value": 2.7,
+        "unit": "m",
+        "origin": "synthetic_fixture",
+        "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement",
+        "source_value": null
+      },
+      "base_elevation": {
+        "value": 3.0,
+        "unit": "m",
+        "origin": "synthetic_fixture",
+        "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement",
+        "source_value": null
+      },
+      "storey_id": "storey:synthetic-smoke-01:level-1",
+      "source_refs": [
+        {
+          "kind": "synthetic_fixture",
+          "artifact_role": null,
+          "path": null,
+          "sha256": null,
+          "upstream_object_id": null,
+          "region_candidate_px": null,
+          "pixel_support": null
+        }
+      ],
+      "confidence": {
+        "semantic_score": null,
+        "score_source": null,
+        "score_aggregation": null,
+        "availability": "UNAVAILABLE",
+        "unavailable_reason": "Synthetic fixture: no model produced this object.",
+        "calibration_status": "NOT_APPLICABLE"
+      },
+      "geometry_checks": [],
+      "assumptions": [
+        "SYNTHETIC: every dimension of this wall is invented test data"
+      ],
+      "review": {
+        "state": "SYNTHETIC_NOT_APPLICABLE",
+        "reviewer": null,
+        "reviewer_role": null,
+        "reviewed_utc": null,
+        "decision_notes": "Synthetic fixture: there is nothing to review against.",
+        "review_record_path": null,
+        "review_record_sha256": null
+      },
+      "edits": [],
+      "candidate_original": null
+    },
+    {
+      "object_id": "wall:synthetic-smoke-01:west",
+      "name": "SYNTHETIC west wall",
+      "geometry_type": "straight_constant_thickness",
+      "axis": {
+        "convention": "centreline",
+        "start": {
+          "x": 0.0,
+          "y": 4.0
+        },
+        "end": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "origin": "synthetic_fixture",
+        "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement",
+        "candidate_px": null
+      },
+      "thickness": {
+        "value": 0.2,
+        "unit": "m",
+        "origin": "synthetic_fixture",
+        "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement",
+        "source_value": null
+      },
+      "height": {
+        "value": 2.7,
+        "unit": "m",
+        "origin": "synthetic_fixture",
+        "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement",
+        "source_value": null
+      },
+      "base_elevation": {
+        "value": 3.0,
+        "unit": "m",
+        "origin": "synthetic_fixture",
+        "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement",
+        "source_value": null
+      },
+      "storey_id": "storey:synthetic-smoke-01:level-1",
+      "source_refs": [
+        {
+          "kind": "synthetic_fixture",
+          "artifact_role": null,
+          "path": null,
+          "sha256": null,
+          "upstream_object_id": null,
+          "region_candidate_px": null,
+          "pixel_support": null
+        }
+      ],
+      "confidence": {
+        "semantic_score": null,
+        "score_source": null,
+        "score_aggregation": null,
+        "availability": "UNAVAILABLE",
+        "unavailable_reason": "Synthetic fixture: no model produced this object.",
+        "calibration_status": "NOT_APPLICABLE"
+      },
+      "geometry_checks": [],
+      "assumptions": [
+        "SYNTHETIC: every dimension of this wall is invented test data"
+      ],
+      "review": {
+        "state": "SYNTHETIC_NOT_APPLICABLE",
+        "reviewer": null,
+        "reviewer_role": null,
+        "reviewed_utc": null,
+        "decision_notes": "Synthetic fixture: there is nothing to review against.",
+        "review_record_path": null,
+        "review_record_sha256": null
+      },
+      "edits": [],
+      "candidate_original": null
+    },
+    {
+      "object_id": "wall:synthetic-smoke-01:diagonal",
+      "name": "SYNTHETIC diagonal partition",
+      "geometry_type": "straight_constant_thickness",
+      "axis": {
+        "convention": "centreline",
+        "start": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "end": {
+          "x": 4.0,
+          "y": 3.0
+        },
+        "origin": "synthetic_fixture",
+        "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement",
+        "candidate_px": null
+      },
+      "thickness": {
+        "value": 0.1,
+        "unit": "m",
+        "origin": "synthetic_fixture",
+        "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement",
+        "source_value": null
+      },
+      "height": {
+        "value": 2.4,
+        "unit": "m",
+        "origin": "synthetic_fixture",
+        "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement",
+        "source_value": null
+      },
+      "base_elevation": {
+        "value": 3.1,
+        "unit": "m",
+        "origin": "synthetic_fixture",
+        "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement",
+        "source_value": null
+      },
+      "storey_id": "storey:synthetic-smoke-01:level-1",
+      "source_refs": [
+        {
+          "kind": "synthetic_fixture",
+          "artifact_role": null,
+          "path": null,
+          "sha256": null,
+          "upstream_object_id": null,
+          "region_candidate_px": null,
+          "pixel_support": null
+        }
+      ],
+      "confidence": {
+        "semantic_score": null,
+        "score_source": null,
+        "score_aggregation": null,
+        "availability": "UNAVAILABLE",
+        "unavailable_reason": "Synthetic fixture: no model produced this object.",
+        "calibration_status": "NOT_APPLICABLE"
+      },
+      "geometry_checks": [],
+      "assumptions": [
+        "SYNTHETIC: every dimension of this wall is invented test data"
+      ],
+      "review": {
+        "state": "SYNTHETIC_NOT_APPLICABLE",
+        "reviewer": null,
+        "reviewer_role": null,
+        "reviewed_utc": null,
+        "decision_notes": "Synthetic fixture: there is nothing to review against.",
+        "review_record_path": null,
+        "review_record_sha256": null
+      },
+      "edits": [],
+      "candidate_original": null
+    }
+  ],
+  "openings": [
+    {
+      "object_id": "opening:synthetic-smoke-01:south-01",
+      "name": "SYNTHETIC aperture in south wall",
+      "geometry_type": "rectangular_through_wall",
+      "element_kind": "aperture",
+      "predicted_class": null,
+      "host_wall_id": "wall:synthetic-smoke-01:south",
+      "offset_along_host": {
+        "value": 2.0,
+        "unit": "m",
+        "origin": "synthetic_fixture",
+        "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement",
+        "source_value": null
+      },
+      "width": {
+        "value": 0.9,
+        "unit": "m",
+        "origin": "synthetic_fixture",
+        "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement",
+        "source_value": null
+      },
+      "bottom_elevation": {
+        "value": 0.0,
+        "unit": "m",
+        "origin": "synthetic_fixture",
+        "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement",
+        "source_value": null
+      },
+      "height": {
+        "value": 2.1,
+        "unit": "m",
+        "origin": "synthetic_fixture",
+        "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement",
+        "source_value": null
+      },
+      "source_refs": [
+        {
+          "kind": "synthetic_fixture",
+          "artifact_role": null,
+          "path": null,
+          "sha256": null,
+          "upstream_object_id": null,
+          "region_candidate_px": null,
+          "pixel_support": null
+        }
+      ],
+      "confidence": {
+        "semantic_score": null,
+        "score_source": null,
+        "score_aggregation": null,
+        "availability": "UNAVAILABLE",
+        "unavailable_reason": "Synthetic fixture: no model produced this object.",
+        "calibration_status": "NOT_APPLICABLE"
+      },
+      "geometry_checks": [],
+      "assumptions": [
+        "SYNTHETIC: every dimension of this aperture is invented test data"
+      ],
+      "review": {
+        "state": "SYNTHETIC_NOT_APPLICABLE",
+        "reviewer": null,
+        "reviewer_role": null,
+        "reviewed_utc": null,
+        "decision_notes": "Synthetic fixture: there is nothing to review against.",
+        "review_record_path": null,
+        "review_record_sha256": null
+      },
+      "edits": [],
+      "candidate_original": null
+    }
+  ]
+}

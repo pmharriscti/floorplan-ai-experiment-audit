@@ -56,6 +56,30 @@ Phase 5's checkpoint-selection composite: `0.40 x structural_wall IoU + 0.10 x b
 
 `structural_wall AND NOT raw door opening AND NOT raw window opening`, derived from three predicted masks; it is not a trained head and is reported for context only.
 
+## Integration Gates (experiment 11)
+
+`bim_bridge_v0` reports evidence gates, not segmentation metrics. Each gate is `PASS`, `FAIL`, `BLOCKED` or `NOT_RUN`, and the synthetic and real tracks have separate gates.
+
+| Gate | Meaning |
+| --- | --- |
+| G1 | Input identity and provenance established |
+| G2 | Coordinate mapping, units, and scale established |
+| G3 | Schema and geometry checks pass |
+| G4 | IFC identities, relationships, and properties survive reopening |
+| G5 | Uncertainty and assumptions are preserved |
+| G6 | Real prediction lineage and recorded human review are established |
+| G7 | Actual target application/viewer inspection is recorded |
+
+A gate pass rate is not an accuracy. Gate results and object counts are never placed in the IoU, Dice or F1 columns of the scoreboard, which stay `UNKNOWN` for this experiment. A technical exporter pass, a reviewed prediction bridge, and downstream application acceptance are three different milestones.
+
+## Attribute Origin and Review State (experiment 11)
+
+Origin says where a value came from: `predicted_by_model`, `derived_from_geometry`, `manually_entered`, `assumed_for_preview`, `unknown`, or `synthetic_fixture`. Review state says whether a person verified the object: `CANDIDATE_UNREVIEWED`, `HUMAN_ACCEPTED`, `HUMAN_ACCEPTED_WITH_EDITS` or `HUMAN_REJECTED`. They are recorded separately. An edit by an agent or by an automated rule is not a review.
+
+## Semantic Score (experiment 11)
+
+A raw model score for an object, with its source and aggregation method. It is `null` when the only persisted prediction is a thresholded mask. It is never derived from binary pixels, IoU, F1, appearance or a successful export, and no overall confidence is computed.
+
 ## Micro vs Macro
 
 Micro metrics aggregate counts across the split before computing the score. Macro metrics compute per-sample scores and then average them. The scoreboard prefers the primary metric used by the source report for the experiment. Detailed metrics retain micro/macro distinctions where they were present.

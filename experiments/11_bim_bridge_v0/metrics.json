@@ -1,0 +1,565 @@
+{
+  "experiment_id": "11_bim_bridge_v0",
+  "evidence_status": "VERIFIED",
+  "experiment_kind": "downstream_integration",
+  "comparable_to_segmentation_rankings": false,
+  "objective": "The meaningful result today is not \u2018we generated a 3D picture.\u2019 It is \u2018we can turn reviewed prediction-derived geometry into identifiable IFC building elements, preserve uncertainty, and inspect the result.\u2019 That is a concrete step toward the PM\u2019s BIM goal\u2014and it creates a stable destination for the ML improvements that follow.",
+  "experiment_question": "Can a small, explicitly reviewed subset of current floor-plan predictions become individually identifiable IFC walls and a hosted opening, with inspectable dimensions, provenance, uncertainty, and reproducible validation?",
+  "primary_split": "not_applicable",
+  "input_sample_split": "val",
+  "primary_metric_policy": "This experiment trains and evaluates no model, so it has no segmentation metric. Every pixel-metric scoreboard column is UNKNOWN (null). Its results are gate outcomes and object counts, which are not comparable with IoU, Dice or F1 and are never placed in those columns.",
+  "primary_metrics": {
+    "wall_iou": null,
+    "wall_dice": null,
+    "boundary_f1_2px": null,
+    "centerline_cldice": null,
+    "junction_f1_5px": null,
+    "door_object_f1": null
+  },
+  "milestones": {
+    "technical_exporter": {
+      "status": "PASS",
+      "meaning": "The exporter turns a valid building_model.json into a checked IFC4 file. Shown on synthetic geometry."
+    },
+    "reviewed_prediction_bridge": {
+      "status": "PARTIAL",
+      "meaning": "Reviewed prediction-derived geometry becomes identifiable IFC elements with evidenced dimensions.",
+      "blocked_gates": [
+        "G2",
+        "G6"
+      ]
+    },
+    "downstream_application_acceptance": {
+      "status": "NOT_RUN",
+      "meaning": "A person opened the file in the target application or a viewer and recorded the result."
+    }
+  },
+  "gate_definitions": {
+    "G1": "Input identity and provenance established",
+    "G2": "Coordinate mapping, units, and scale established",
+    "G3": "Schema and geometry checks pass",
+    "G4": "IFC identities, relationships, and properties survive reopening",
+    "G5": "Uncertainty and assumptions are preserved",
+    "G6": "Real prediction lineage and recorded human review are established",
+    "G7": "Actual target application/viewer inspection is recorded"
+  },
+  "gates": {
+    "SYNTHETIC_EXPORT_SMOKE": {
+      "G1": {
+        "status": "PASS",
+        "reason": "The fixture is identified and labelled synthetic in the model, the IFC and the report. No real input exists in this track, so this says nothing about real provenance.",
+        "parts": {}
+      },
+      "G2": {
+        "status": "PASS",
+        "reason": "Units are metres, the wall axis is the centreline, storey and base elevation are applied once (raised storey at 3.0 m), and the transform tests pass. Scale does not apply: the geometry is authored in metres.",
+        "parts": {
+          "units": "PASS",
+          "elevation_applied_once": "PASS",
+          "transform_tests": "PASS",
+          "scale": "NOT_APPLICABLE"
+        }
+      },
+      "G3": {
+        "status": "PASS",
+        "reason": "Input checks 46/46 and geometry-kernel checks 35/35 pass, including the volume removed by the aperture.",
+        "parts": {}
+      },
+      "G4": {
+        "status": "PASS",
+        "reason": "The file was reopened from disk; 49/49 schema, structure, identity and property checks pass; a repeat export reuses every GlobalId.",
+        "parts": {}
+      },
+      "G5": {
+        "status": "PASS",
+        "reason": "20/20 property checks pass. The semantic score is null with availability UNAVAILABLE and a reason; every object is marked synthetic.",
+        "parts": {}
+      },
+      "G6": {
+        "status": "NOT_RUN",
+        "reason": "Does not apply to synthetic geometry: there is no prediction and nothing to review.",
+        "parts": {}
+      },
+      "G7": {
+        "status": "NOT_RUN",
+        "reason": "No viewer or target application was used.",
+        "parts": {}
+      }
+    },
+    "REVIEWED_PREDICTION_BRIDGE": {
+      "G1": {
+        "status": "PASS",
+        "reason": "Source image, split, sample, prediction file, thresholds, config snapshot and checkpoint are on disk with hashes. The image hash equals the upstream manifest and the checkpoint hash equals audit entry 09.",
+        "parts": {
+          "inspect_stage": "PASS",
+          "candidate_stage": "PASS"
+        }
+      },
+      "G2": {
+        "status": "BLOCKED",
+        "reason": "BLOCKED on scale. The mapping from image pixels through the letterbox and region of interest to model metres is established and tested, and units are metres. But the drawing has no dimension string and no scale bar, so no documented scale evidence exists. The scale in use is an estimate from the apartment area label, marked ASSUMED_FOR_PREVIEW. No dimensional claim is permitted.",
+        "parts": {
+          "coordinate_mapping": "PASS",
+          "units": "PASS",
+          "transform_tests": "PASS",
+          "scale_evidence": "BLOCKED",
+          "scale_status": "ASSUMED_FOR_PREVIEW"
+        }
+      },
+      "G3": {
+        "status": "PASS",
+        "reason": "Input checks 66/66 and geometry-kernel checks 29/29 pass on the preview export. These check the file against its input, not against the building.",
+        "parts": {}
+      },
+      "G4": {
+        "status": "PASS",
+        "reason": "The preview file was reopened from disk; 49/49 schema, structure, identity and property checks pass; a repeat export reuses every GlobalId.",
+        "parts": {}
+      },
+      "G5": {
+        "status": "PASS",
+        "reason": "21/21 property checks pass. Every object carries a null semantic score with a reason, its attribute origins, its assumptions, its diagnostics, its edits and its review state inside the IFC.",
+        "parts": {}
+      },
+      "G6": {
+        "status": "BLOCKED",
+        "reason": "BLOCKED on human review. Prediction lineage is established: every wall names the prediction mask region it came from. But no human has reviewed this geometry. Every object is CANDIDATE_UNREVIEWED. Adjustments made by automated rules are recorded as edits and are not a review.",
+        "parts": {
+          "prediction_lineage": "PASS",
+          "human_review": "BLOCKED",
+          "geometry_status": "CANDIDATE_UNREVIEWED"
+        }
+      },
+      "G7": {
+        "status": "NOT_RUN",
+        "reason": "No viewer or target application is available in this environment (Blender is installed without an IFC add-on). Nobody has opened the file in a viewer. The independent parser check is not a viewer test.",
+        "parts": {}
+      }
+    }
+  },
+  "selected_thresholds": {
+    "note": "Inherited from upstream experiment 09. This experiment selects and changes no threshold.",
+    "structural_wall": 0.05,
+    "door_opening": 0.95
+  },
+  "tracks": {
+    "SYNTHETIC_EXPORT_SMOKE": {
+      "label": "SYNTHETIC: exporter behaviour only. Not prediction accuracy, not human review, not BIM readiness on real drawings.",
+      "technical_checks": "PASS",
+      "checks_by_status": {
+        "PASS": 130
+      },
+      "checks_by_group": {
+        "input": {
+          "PASS": 46
+        },
+        "ifc_reopen": {
+          "PASS": 2
+        },
+        "ifc_schema": {
+          "PASS": 2
+        },
+        "ifc_structure": {
+          "PASS": 15
+        },
+        "ifc_identity": {
+          "PASS": 10
+        },
+        "ifc_provenance": {
+          "PASS": 20
+        },
+        "geometry": {
+          "PASS": 35
+        }
+      },
+      "counts": {
+        "walls_exported_of_requested": [
+          5,
+          5
+        ],
+        "apertures_exported_of_requested": [
+          1,
+          1
+        ],
+        "apertures_with_valid_host": [
+          1,
+          1
+        ],
+        "walls_tracing_to_prediction_evidence": [
+          0,
+          5
+        ],
+        "attributes_by_origin": {
+          "predicted_by_model": 0,
+          "derived_from_geometry": 0,
+          "manually_entered": 0,
+          "assumed_for_preview": 0,
+          "unknown": 0,
+          "synthetic_fixture": 25
+        },
+        "attributes_total": 25,
+        "attributes_assumed_for_preview": [
+          0,
+          25
+        ],
+        "objects_human_reviewed": [
+          0,
+          6
+        ],
+        "objects_with_semantic_score": [
+          0,
+          6
+        ],
+        "edits_by_actor_type": {
+          "human": 0,
+          "agent": 0,
+          "automated_rule": 0
+        },
+        "edits_total": 0,
+        "unresolved_geometry_diagnostics": [],
+        "correction_time_measured": null,
+        "correction_time_note": "No human correction took place, so no correction time was captured."
+      },
+      "void_removed_volume_m3": 0.37800000000000056,
+      "void_expected_volume_m3": 0.3780000000000001,
+      "storey_elevation_m": 3.0
+    },
+    "REVIEWED_PREDICTION_BRIDGE": {
+      "label": "Real prediction-derived geometry, UNREVIEWED candidate, PREVIEW ONLY",
+      "geometry_status": "CANDIDATE_UNREVIEWED",
+      "permitted_use": "preview_only_not_for_engineering_or_inspection",
+      "scale_status": "ASSUMED_FOR_PREVIEW",
+      "dimensional_claims_permitted": false,
+      "metric_export": {
+        "status": "BLOCKED",
+        "blockers": [
+          "No documented, human-confirmed plan scale (scale status ASSUMED_FOR_PREVIEW).",
+          "No recorded human review (geometry status CANDIDATE_UNREVIEWED)."
+        ]
+      },
+      "preview_export": {
+        "status": "PASS",
+        "label": "PREVIEW ONLY. Not a metric export. No dimensional claim. Not for engineering or inspection.",
+        "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/export_preview/cubicasa-high-quality-architectural-333-val-region-01__PREVIEW_CANDIDATE_UNREVIEWED.ifc"
+      },
+      "technical_checks_on_preview": "PASS",
+      "checks_by_status": {
+        "PASS": 138,
+        "WARN": 6
+      },
+      "checks_by_group": {
+        "input": {
+          "PASS": 60,
+          "WARN": 6
+        },
+        "ifc_reopen": {
+          "PASS": 2
+        },
+        "ifc_schema": {
+          "PASS": 2
+        },
+        "ifc_structure": {
+          "PASS": 15
+        },
+        "ifc_identity": {
+          "PASS": 9
+        },
+        "ifc_provenance": {
+          "PASS": 21
+        },
+        "geometry": {
+          "PASS": 29
+        }
+      },
+      "counts": {
+        "walls_exported_of_requested": [
+          4,
+          4
+        ],
+        "apertures_exported_of_requested": [
+          1,
+          1
+        ],
+        "apertures_with_valid_host": [
+          1,
+          1
+        ],
+        "walls_tracing_to_prediction_evidence": [
+          4,
+          4
+        ],
+        "attributes_by_origin": {
+          "predicted_by_model": 0,
+          "derived_from_geometry": 10,
+          "manually_entered": 0,
+          "assumed_for_preview": 11,
+          "unknown": 0,
+          "synthetic_fixture": 0
+        },
+        "attributes_total": 21,
+        "attributes_assumed_for_preview": [
+          11,
+          21
+        ],
+        "objects_human_reviewed": [
+          0,
+          5
+        ],
+        "objects_with_semantic_score": [
+          0,
+          5
+        ],
+        "edits_by_actor_type": {
+          "human": 0,
+          "agent": 0,
+          "automated_rule": 1
+        },
+        "edits_total": 1,
+        "unresolved_geometry_diagnostics": [],
+        "correction_time_measured": null,
+        "correction_time_note": "No human correction took place, so no correction time was captured."
+      },
+      "objects": [
+        {
+          "object_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002",
+          "kind": "wall",
+          "review_state": "CANDIDATE_UNREVIEWED",
+          "semantic_score": null,
+          "edits": 0,
+          "attribute_origins": {
+            "axis": "derived_from_geometry",
+            "thickness": "derived_from_geometry",
+            "height": "assumed_for_preview",
+            "base_elevation": "assumed_for_preview"
+          },
+          "values_m_PREVIEW_ONLY": {
+            "axis": [
+              [
+                1.049439,
+                2.650065
+              ],
+              [
+                6.738506,
+                2.650065
+              ]
+            ],
+            "thickness": 0.248551,
+            "height": 2.7,
+            "base_elevation": 0.0
+          }
+        },
+        {
+          "object_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003",
+          "kind": "wall",
+          "review_state": "CANDIDATE_UNREVIEWED",
+          "semantic_score": null,
+          "edits": 0,
+          "attribute_origins": {
+            "axis": "derived_from_geometry",
+            "thickness": "derived_from_geometry",
+            "height": "assumed_for_preview",
+            "base_elevation": "assumed_for_preview"
+          },
+          "values_m_PREVIEW_ONLY": {
+            "axis": [
+              [
+                2.112687,
+                0.980397
+              ],
+              [
+                6.807548,
+                0.980397
+              ]
+            ],
+            "thickness": 0.165701,
+            "height": 2.7,
+            "base_elevation": 0.0
+          }
+        },
+        {
+          "object_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004",
+          "kind": "wall",
+          "review_state": "CANDIDATE_UNREVIEWED",
+          "semantic_score": null,
+          "edits": 0,
+          "attribute_origins": {
+            "axis": "derived_from_geometry",
+            "thickness": "derived_from_geometry",
+            "height": "assumed_for_preview",
+            "base_elevation": "assumed_for_preview"
+          },
+          "values_m_PREVIEW_ONLY": {
+            "axis": [
+              [
+                0.386636,
+                0.386636
+              ],
+              [
+                2.112687,
+                0.400444
+              ]
+            ],
+            "thickness": 0.110467,
+            "height": 2.7,
+            "base_elevation": 0.0
+          }
+        },
+        {
+          "object_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012",
+          "kind": "wall",
+          "review_state": "CANDIDATE_UNREVIEWED",
+          "semantic_score": null,
+          "edits": 1,
+          "attribute_origins": {
+            "axis": "derived_from_geometry",
+            "thickness": "derived_from_geometry",
+            "height": "assumed_for_preview",
+            "base_elevation": "assumed_for_preview"
+          },
+          "values_m_PREVIEW_ONLY": {
+            "axis": [
+              [
+                2.112687,
+                0.400444
+              ],
+              [
+                2.112687,
+                2.650065
+              ]
+            ],
+            "thickness": 0.110467,
+            "height": 2.7,
+            "base_elevation": 0.0
+          }
+        },
+        {
+          "object_id": "opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02",
+          "kind": "aperture",
+          "review_state": "CANDIDATE_UNREVIEWED",
+          "semantic_score": null,
+          "edits": 0,
+          "attribute_origins": {
+            "offset_along_host": "derived_from_geometry",
+            "width": "derived_from_geometry",
+            "bottom_elevation": "assumed_for_preview",
+            "height": "assumed_for_preview"
+          },
+          "values_m_PREVIEW_ONLY": {
+            "offset_along_host": 0.110467,
+            "width": 0.773271,
+            "bottom_elevation": 0.0,
+            "height": 2.1
+          }
+        }
+      ],
+      "void_removed_volume_m3_PREVIEW_ONLY": 0.2690767337391027,
+      "apertures_in_region_not_exported": [
+        {
+          "component_id": 1,
+          "pixel_count": 159,
+          "bbox_px": [
+            413,
+            193,
+            419,
+            216
+          ],
+          "centroid_px": [
+            415.92452830188677,
+            205.0566037735849
+          ],
+          "reason": "no selected wall hosts this component"
+        }
+      ],
+      "upstream_walls_produced_by_vectorizer": 14,
+      "upstream_walls_selected": 4
+    }
+  },
+  "scale_estimate_NOT_EVIDENCE": {
+    "status": "ASSUMED_FOR_PREVIEW",
+    "human_confirmed": false,
+    "metres_per_source_px": 0.010720102950656141,
+    "derivation": {
+      "area_m2": 39.5,
+      "outer_wall_ids": {
+        "left": "wall_009",
+        "right": "wall_014",
+        "top": "wall_002",
+        "bottom": "wall_006"
+      },
+      "inner_faces_candidate_px": {
+        "x_min": 114.375,
+        "x_max": 468.75,
+        "y_min": 164.54166666666666,
+        "y_max": 310.6875
+      },
+      "inner_area_candidate_px2": 51790.4296875,
+      "metres_per_candidate_px": 0.027616827718584862,
+      "letterbox_scale": 0.38817285822592873,
+      "metres_per_source_px": 0.010720102950656141
+    },
+    "uncertainty_note": "Not a measurement. It assumes the label gives the area between the inner faces of the four outer walls, including internal partitions. If the label excludes partitions or the sauna, lengths change by a few percent. Wall faces come from a thresholded mask and are uncertain by about one pixel.",
+    "derived_by_actor_type": "agent"
+  },
+  "edits_recorded": [
+    {
+      "object_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012",
+      "field": "thickness",
+      "before": {
+        "thickness_px": 40.0
+      },
+      "after": {
+        "thickness_px": 4.0
+      },
+      "reason": "Vectorizer thickness 40.0 px disagrees with the predicted mask by more than 2.0 px; the median perpendicular run on the predicted structural_wall mask is 4.0 px.",
+      "actor_type": "automated_rule",
+      "actor": "bim_bridge candidates.thickness_from_predicted_mask rule 0.2",
+      "timestamp_utc": "2026-09-28T18:37:01Z",
+      "evidence": "candidate_geometry.json diagnostics for wall_012: 70 perpendicular samples, p10-p90 [4.0, 4.0] px"
+    }
+  ],
+  "automated_tests": {
+    "total": 130,
+    "passed": 130,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "skips": [],
+    "expected_negative_tests": 76,
+    "expected_negative_note": "Negative tests pass when the bridge correctly refuses or flags bad input. They are included in 'passed'."
+  },
+  "independent_parser_cross_check": {
+    "is_viewer_test": false,
+    "tracks": {
+      "synthetic": {
+        "status": "PASS",
+        "passed": 23,
+        "failed": 0,
+        "web_ifc_version": "0.0.66"
+      },
+      "real": {
+        "status": "PASS",
+        "passed": 19,
+        "failed": 0,
+        "web_ifc_version": "0.0.66"
+      }
+    }
+  },
+  "unknown_or_not_measured": {
+    "dimensional_accuracy": null,
+    "dimensional_accuracy_note": "No reference geometry was used, so accuracy is unknown. It is not zero error.",
+    "semantic_confidence": null,
+    "semantic_confidence_note": "Thresholded masks only; no probability maps were saved upstream.",
+    "human_correction_time_seconds": null,
+    "viewer_inspection": "NOT_RUN",
+    "target_application": null,
+    "business_acceptance_tolerances": null
+  },
+  "not_claimed": [
+    "any new wall IoU or segmentation improvement",
+    "any training comparison",
+    "broad reliability",
+    "dimensional accuracy",
+    "fitness for engineering or inspection use",
+    "viewer or target-application acceptance"
+  ]
+}

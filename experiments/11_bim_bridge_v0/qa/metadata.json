@@ -1,0 +1,36 @@
+{
+  "experiment_id": "11_bim_bridge_v0",
+  "artifact_type": "review aid written by the bridge's candidate-preparation stage; copied without regeneration",
+  "strategy": "downstream integration evidence copy",
+  "sample_id": "high_quality_architectural/333",
+  "split": "val",
+  "images": [
+    {
+      "file": "review_overlay_candidates_on_source.png",
+      "width": 1310,
+      "height": 1134,
+      "mode": "RGB",
+      "sha256": "2dc74b6fff0130c286447bf59296cdb6f601efe37d63eb2b36ecef46a2cd9e6e",
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/review_overlay_candidates_on_source.png",
+      "panels": [
+        "source image, letterboxed, cropped to the region of interest",
+        "the same crop with the predicted structural_wall mask (grey), the predicted door_opening mask (orange), candidate walls (blue outline, green centreline) and the candidate aperture (magenta outline)"
+      ]
+    }
+  ],
+  "region_of_interest_letterbox_px": {
+    "space": "letterbox_512",
+    "x_min": 228,
+    "y_min": 143,
+    "x_max": 490,
+    "y_max": 256
+  },
+  "prediction_artifact": "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/masks/val/high_quality_architectural__333__heads.png",
+  "prediction_artifact_sha256": "4da6f6eb69c64ef721a30e7f81f74843348db831d3608b331fcc2dbd03f1f355",
+  "no_training_performed": true,
+  "no_inference_performed": true,
+  "ground_truth_shown": false,
+  "note": "The overlay shows predictions and candidates only. It contains no ground truth and no TP/FP/FN colours, because this experiment makes no accuracy claim.",
+  "viewer_screenshot": null,
+  "viewer_screenshot_note": "No IFC viewer screenshot exists. No viewer was run."
+}

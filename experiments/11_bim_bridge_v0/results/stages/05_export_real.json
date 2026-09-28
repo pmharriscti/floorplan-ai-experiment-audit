@@ -1,0 +1,86 @@
+{
+  "experiment_id": "bim_bridge_v0",
+  "run_id": "bim_bridge_v0_20260928_183649_UTC",
+  "stage": "export_real",
+  "status": "BLOCKED",
+  "written_utc": "2026-09-28T18:37:10Z",
+  "track": "REVIEWED_PREDICTION_BRIDGE",
+  "metric_export": {
+    "status": "BLOCKED",
+    "blockers": [
+      "No documented, human-confirmed plan scale (scale status ASSUMED_FOR_PREVIEW).",
+      "No recorded human review (geometry status CANDIDATE_UNREVIEWED)."
+    ]
+  },
+  "preview_export": {
+    "status": "PASS",
+    "label": "PREVIEW ONLY. Not a metric export. No dimensional claim. Not for engineering or inspection.",
+    "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/export_preview/cubicasa-high-quality-architectural-333-val-region-01__PREVIEW_CANDIDATE_UNREVIEWED.ifc"
+  },
+  "note": "Stage status BLOCKED means the metric export of real geometry is blocked. A preview file was still written and technically checked.",
+  "geometry_status": "CANDIDATE_UNREVIEWED",
+  "scale_status": "ASSUMED_FOR_PREVIEW",
+  "checks": {
+    "PASS": 138,
+    "WARN": 6
+  },
+  "counts": {
+    "walls_exported_of_requested": [
+      4,
+      4
+    ],
+    "apertures_exported_of_requested": [
+      1,
+      1
+    ],
+    "apertures_with_valid_host": [
+      1,
+      1
+    ],
+    "walls_tracing_to_prediction_evidence": [
+      4,
+      4
+    ],
+    "attributes_by_origin": {
+      "predicted_by_model": 0,
+      "derived_from_geometry": 10,
+      "manually_entered": 0,
+      "assumed_for_preview": 11,
+      "unknown": 0,
+      "synthetic_fixture": 0
+    },
+    "attributes_total": 21,
+    "attributes_assumed_for_preview": [
+      11,
+      21
+    ],
+    "objects_human_reviewed": [
+      0,
+      5
+    ],
+    "objects_with_semantic_score": [
+      0,
+      5
+    ],
+    "edits_by_actor_type": {
+      "human": 0,
+      "agent": 0,
+      "automated_rule": 1
+    },
+    "edits_total": 1,
+    "unresolved_geometry_diagnostics": [],
+    "correction_time_measured": null,
+    "correction_time_note": "No human correction took place, so no correction time was captured."
+  },
+  "paths": {
+    "candidate_geometry": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/candidate_geometry.json",
+    "source_building_model": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/building_model.json",
+    "building_model": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/export_preview/building_model.json",
+    "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/export_preview/cubicasa-high-quality-architectural-333-val-region-01__PREVIEW_CANDIDATE_UNREVIEWED.ifc",
+    "guid_map": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/export_preview/guid_map.json",
+    "report_json": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/export_preview/validation_report.json",
+    "report_markdown": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/export_preview/validation_report.md"
+  },
+  "ifc_sha256": "e4def87979953d853790d3c3f63ddde4d4b39f3a7c7a8df7eecb492713dcd09e",
+  "failed": []
+}

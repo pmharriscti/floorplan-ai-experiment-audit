@@ -1,0 +1,108 @@
+{
+  "check": "independent parser cross-check (web-ifc)",
+  "is_viewer_test": false,
+  "web_ifc_version": "0.0.66",
+  "node": "v18.19.1",
+  "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/export_preview/cubicasa-high-quality-architectural-333-val-region-01__PREVIEW_CANDIDATE_UNREVIEWED.ifc",
+  "model": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/export_preview/building_model.json",
+  "overall": "PASS",
+  "passed": 19,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "opens",
+      "status": "PASS",
+      "detail": "web-ifc model id 0"
+    },
+    {
+      "name": "schema",
+      "status": "PASS",
+      "detail": "schema IFC4"
+    },
+    {
+      "name": "object_counts",
+      "status": "PASS",
+      "detail": "{\"IfcProject\":1,\"IfcSite\":1,\"IfcBuilding\":1,\"IfcBuildingStorey\":1,\"IfcWall\":4,\"IfcOpeningElement\":1,\"IfcRelVoidsElement\":1}"
+    },
+    {
+      "name": "wall_present[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002]",
+      "status": "PASS",
+      "detail": "GlobalId 1XkaxwpSjJ8Qnf5B_jRxg1"
+    },
+    {
+      "name": "wall_guid[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002]",
+      "status": "PASS",
+      "detail": "GlobalId 1XkaxwpSjJ8Qnf5B_jRxg1 vs guid map 1XkaxwpSjJ8Qnf5B_jRxg1"
+    },
+    {
+      "name": "wall_bounding_box[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002]",
+      "status": "PASS",
+      "detail": "web-ifc box [1.0494,2.5258,0]..[6.7385,2.7743,2.7]; expected [1.0494,2.5258,0]..[6.7385,2.7743,2.7]"
+    },
+    {
+      "name": "wall_net_volume[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002]",
+      "status": "PASS",
+      "detail": "web-ifc volume 3.81786 m3; expected 3.81786 m3 (no openings)"
+    },
+    {
+      "name": "wall_present[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003]",
+      "status": "PASS",
+      "detail": "GlobalId 3d2OAZpCHGUAZ91g4AXd7s"
+    },
+    {
+      "name": "wall_guid[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003]",
+      "status": "PASS",
+      "detail": "GlobalId 3d2OAZpCHGUAZ91g4AXd7s vs guid map 3d2OAZpCHGUAZ91g4AXd7s"
+    },
+    {
+      "name": "wall_bounding_box[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003]",
+      "status": "PASS",
+      "detail": "web-ifc box [2.1127,0.8975,0]..[6.8075,1.0632,2.7]; expected [2.1127,0.8975,0]..[6.8075,1.0632,2.7]"
+    },
+    {
+      "name": "wall_net_volume[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003]",
+      "status": "PASS",
+      "detail": "web-ifc volume 1.83137 m3; expected 1.83137 m3 (opening subtracted)"
+    },
+    {
+      "name": "wall_present[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004]",
+      "status": "PASS",
+      "detail": "GlobalId 1b$tabjrHGbPd9xW5BjLOQ"
+    },
+    {
+      "name": "wall_guid[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004]",
+      "status": "PASS",
+      "detail": "GlobalId 1b$tabjrHGbPd9xW5BjLOQ vs guid map 1b$tabjrHGbPd9xW5BjLOQ"
+    },
+    {
+      "name": "wall_bounding_box[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004]",
+      "status": "PASS",
+      "detail": "web-ifc box [0.3862,0.3314,0]..[2.1131,0.4557,2.7]; expected [0.3862,0.3314,0]..[2.1131,0.4557,2.7]"
+    },
+    {
+      "name": "wall_net_volume[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004]",
+      "status": "PASS",
+      "detail": "web-ifc volume 0.51483 m3; expected 0.51483 m3 (no openings)"
+    },
+    {
+      "name": "wall_present[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012]",
+      "status": "PASS",
+      "detail": "GlobalId 11mnaExH9O2vr$qGRs3ceQ"
+    },
+    {
+      "name": "wall_guid[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012]",
+      "status": "PASS",
+      "detail": "GlobalId 11mnaExH9O2vr$qGRs3ceQ vs guid map 11mnaExH9O2vr$qGRs3ceQ"
+    },
+    {
+      "name": "wall_bounding_box[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012]",
+      "status": "PASS",
+      "detail": "web-ifc box [2.0575,0.4004,0]..[2.1679,2.6501,2.7]; expected [2.0575,0.4004,0]..[2.1679,2.6501,2.7]"
+    },
+    {
+      "name": "wall_net_volume[wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012]",
+      "status": "PASS",
+      "detail": "web-ifc volume 0.67097 m3; expected 0.67097 m3 (no openings)"
+    }
+  ]
+}

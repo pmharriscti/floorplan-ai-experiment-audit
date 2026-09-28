@@ -1,0 +1,160 @@
+experiment_id: 11_bim_bridge_v0
+name: bim_bridge_v0 downstream IFC bridge
+evidence_status: VERIFIED
+status: completed
+experiment_kind: downstream_integration
+comparable_to_segmentation_rankings: false
+source_run_directory: /mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC
+source_workspace: /home/pmharris/dev/bim_bridge_v0
+bridge_version: 0.2.0
+contract_version: bim_bridge.building_model/0.2
+question: Can a small, explicitly reviewed subset of current floor-plan predictions become individually identifiable IFC walls and a hosted opening, with inspectable dimensions, provenance, uncertainty,
+  and reproducible validation?
+tracks:
+  SYNTHETIC_EXPORT_SMOKE: invented geometry; tests the contract and the exporter only
+  REVIEWED_PREDICTION_BRIDGE: one saved prediction; candidates, review record, preview export
+protections:
+  training: false
+  fine_tuning: false
+  new_inference: false
+  threshold_selection: false
+  target_generation_changed: false
+  cloud_gpu: false
+  upstream_artifacts: read-only
+  annotation_svg_or_ground_truth_read: false
+  existing_exporters_modified: false
+input:
+  upstream_experiment: 09_phase5_hierarchical_multihead_512
+  upstream_run_directory: /mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED
+  sample_id: high_quality_architectural/333
+  split: val
+  prediction_kind: thresholded uint8 bitmask
+  heads_used:
+    walls: structural_wall (bit 0)
+    aperture: door_opening (bit 5)
+  thresholds_inherited:
+    structural_wall: 0.05
+    door_opening: 0.95
+  region_of_interest_letterbox_px:
+    space: letterbox_512
+    x_min: 228
+    y_min: 143
+    x_max: 490
+    y_max: 256
+  selection:
+    upstream_wall_ids:
+    - wall_002
+    - wall_003
+    - wall_004
+    - wall_012
+    max_apertures: 1
+    reason: 'Bathroom and alcove partitions of the apartment: four straight walls meeting at one junction, one predicted door aperture. wall_013 and its predicted door lie in the same block and are left
+      out to keep the first region to one aperture.'
+geometry:
+  extraction: existing floorplan-synth vectorizer, run unmodified on the decoded predicted wall mask
+  wall_type: straight, vertical, constant thickness
+  wall_axis_convention: centreline
+  aperture_type: rectangular void through the full wall thickness; not a door or window element
+  candidate_rules:
+    thickness_disagreement_px: 2.0
+    thickness_sample_margin_px: 6
+    min_axis_support_ratio: 0.9
+    aperture_host_band_px: 4.0
+    min_aperture_component_px: 20
+  wall_joins: not resolved
+coordinates:
+  candidate_space: letterbox_512
+  order:
+  - letterbox (original px -> candidate px)
+  - roi_translation
+  - rotation
+  - y_flip
+  - scale_to_metres
+  letterbox:
+    size: 512
+    scale: 0.38817285822592873
+    pad_left: 0.0
+    pad_top: 136.0
+  rotation_deg: 0.0
+  y_axis: candidate y points down; model y points up
+  model_origin: bottom-left corner of the region of interest, in letterbox space
+  units:
+    length: metre
+    angle: radian
+scale:
+  status: ASSUMED_FOR_PREVIEW
+  metres_per_source_px: 0.010720102950656141
+  evidence: NONE documented; agent-derived estimate from the apartment area label
+  human_confirmed: false
+  dimensional_claims_permitted: false
+preview_profile:
+  name: preview_vertical_defaults_v0
+  storey_elevation_m: 0.0
+  wall_base_elevation_m: 0.0
+  wall_height_m: 2.7
+  apertures:
+    door_opening:
+      bottom_elevation_m: 0.0
+      height_m: 2.1
+ifc:
+  schema: IFC4
+  schema_basis: Prototype choice. No receiving BIM application or accepted IFC schema is documented in the inspected repositories.
+  target_application: null
+  target_compatibility: UNVERIFIED
+  opening_body_overcut_m: 0.01
+  library: IfcOpenShell 0.8.5
+  entities:
+  - IfcProject
+  - IfcSite
+  - IfcBuilding
+  - IfcBuildingStorey
+  - IfcWall
+  - IfcOpeningElement
+  - IfcRelVoidsElement
+  - IfcRelContainedInSpatialStructure
+  - IfcRelAggregates
+  - IfcPropertySet
+  property_sets:
+  - AutoAutoCAD_Provenance
+  - AutoAutoCAD_ModelProvenance
+  not_written:
+  - materials
+  - fire ratings
+  - classifications
+  - IfcDoor
+  - IfcWindow
+  - georeferencing
+  - IfcOwnerHistory
+identity:
+  object_id_pattern: <kind>:<model_id>:<name>
+  guid_map: persistent; first assignment is UUIDv5-derived; later exports reuse the stored value; removed objects are retired, never reassigned
+  cross_prediction_matching: not performed
+tolerances:
+  implementation:
+    length_m: 0.0001
+    volume_relative: 0.0001
+    direction: 1.0e-09
+    min_wall_length_m: 0.05
+    max_wall_length_m: 500.0
+    max_wall_thickness_m: 2.0
+    max_wall_height_m: 30.0
+    aperture_fit_m: 1.0e-09
+  business_acceptance: null
+checkpoint:
+  path: null
+  sha256: null
+  note: This experiment trains no model and has no checkpoint. The upstream checkpoint is recorded in provenance.json.
+code:
+  git_commit: null
+  note: workspace is not a git repository; file hashes in provenance.json
+environment:
+  python: 3.12.3
+  ifcopenshell: 0.8.5
+  opencv_python_headless: 4.13.0.92
+  isolated: true
+unknowns:
+  plan_scale_evidence: UNKNOWN
+  human_review: NONE
+  target_application: UNKNOWN
+  semantic_confidence: UNKNOWN
+  dvc_status: UNKNOWN

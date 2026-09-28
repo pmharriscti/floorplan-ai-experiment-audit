@@ -1,0 +1,1682 @@
+{
+  "report_version": "bim_bridge.validation_report/0.2",
+  "objective": "The meaningful result today is not \u2018we generated a 3D picture.\u2019 It is \u2018we can turn reviewed prediction-derived geometry into identifiable IFC building elements, preserve uncertainty, and inspect the result.\u2019 That is a concrete step toward the PM\u2019s BIM goal\u2014and it creates a stable destination for the ML improvements that follow.",
+  "bridge": {
+    "name": "bim_bridge_v0",
+    "version": "0.2.0",
+    "contract_version": "bim_bridge.building_model/0.2",
+    "ifcopenshell": "0.8.5",
+    "python": "3.12.3"
+  },
+  "model": {
+    "experiment_id": "bim_bridge_v0",
+    "run_id": "bim_bridge_v0_20260928_183649_UTC",
+    "model_id": "synthetic-smoke-01",
+    "track": "SYNTHETIC_EXPORT_SMOKE",
+    "description": "SYNTHETIC exporter smoke test for bim_bridge_v0: one rectangular room, one diagonal partition and one hosted aperture on a raised storey. Not a real building and not a prediction.",
+    "generated_utc": "2026-09-28T18:36:57Z",
+    "units": {
+      "length": "metre",
+      "angle": "radian"
+    },
+    "scale": {
+      "status": "NOT_APPLICABLE_SYNTHETIC",
+      "metres_per_source_px": null,
+      "evidence": null,
+      "dimensional_claims_permitted": false,
+      "note": "Synthetic geometry is authored directly in metres. There is no drawing, so there is no scale and no dimensional claim about any building."
+    },
+    "status": {
+      "geometry_status": "SYNTHETIC_FIXTURE",
+      "permitted_use": "exporter_test_only",
+      "publication_status": "not_published"
+    },
+    "ifc": {
+      "schema": "IFC4",
+      "schema_basis": "Prototype choice. No receiving BIM application or accepted IFC schema is documented in the inspected repositories.",
+      "target_application": null,
+      "target_compatibility": "UNVERIFIED"
+    },
+    "coordinate_system": {
+      "handedness": "right_handed",
+      "x_axis": "arbitrary (synthetic)",
+      "y_axis": "arbitrary (synthetic)",
+      "z_axis": "up",
+      "origin": "south-west centreline corner of the synthetic room",
+      "wall_axis_convention": "centreline"
+    },
+    "transforms": null,
+    "source": {
+      "document_id": null,
+      "page": null,
+      "sample_id": null,
+      "split": null,
+      "roi": null,
+      "source_image": null,
+      "prediction_artifacts": [],
+      "upstream_model": null,
+      "geometry_extraction": null,
+      "notes": [
+        "SYNTHETIC: no source image, no prediction and no model were used."
+      ]
+    },
+    "tolerances": {
+      "implementation": {
+        "length_m": 0.0001,
+        "volume_relative": 0.0001,
+        "direction": 1e-09,
+        "min_wall_length_m": 0.05,
+        "max_wall_length_m": 500.0,
+        "max_wall_thickness_m": 2.0,
+        "max_wall_height_m": 30.0,
+        "aperture_fit_m": 1e-09
+      },
+      "business_acceptance": null
+    }
+  },
+  "paths": {
+    "building_model": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/synthetic/building_model.json",
+    "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/synthetic/synthetic-smoke-01__SYNTHETIC.ifc",
+    "guid_map": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/synthetic/guid_map.json",
+    "report_json": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/synthetic/validation_report.json",
+    "report_markdown": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/synthetic/validation_report.md"
+  },
+  "result": {
+    "technical_checks": "PASS",
+    "ifc_written": true,
+    "checks_total": 130,
+    "by_status": {
+      "PASS": 130
+    },
+    "by_group": {
+      "input": {
+        "PASS": 46
+      },
+      "ifc_reopen": {
+        "PASS": 2
+      },
+      "ifc_schema": {
+        "PASS": 2
+      },
+      "ifc_structure": {
+        "PASS": 15
+      },
+      "ifc_identity": {
+        "PASS": 10
+      },
+      "ifc_provenance": {
+        "PASS": 20
+      },
+      "geometry": {
+        "PASS": 35
+      }
+    },
+    "failed": [],
+    "warnings": [],
+    "note": "A technical PASS means the file matches its input and passes schema and geometry checks. It is not a reviewed prediction bridge and not downstream acceptance."
+  },
+  "counts": {
+    "walls_exported_of_requested": [
+      5,
+      5
+    ],
+    "apertures_exported_of_requested": [
+      1,
+      1
+    ],
+    "apertures_with_valid_host": [
+      1,
+      1
+    ],
+    "walls_tracing_to_prediction_evidence": [
+      0,
+      5
+    ],
+    "attributes_by_origin": {
+      "predicted_by_model": 0,
+      "derived_from_geometry": 0,
+      "manually_entered": 0,
+      "assumed_for_preview": 0,
+      "unknown": 0,
+      "synthetic_fixture": 25
+    },
+    "attributes_total": 25,
+    "attributes_assumed_for_preview": [
+      0,
+      25
+    ],
+    "objects_human_reviewed": [
+      0,
+      6
+    ],
+    "objects_with_semantic_score": [
+      0,
+      6
+    ],
+    "edits_by_actor_type": {
+      "human": 0,
+      "agent": 0,
+      "automated_rule": 0
+    },
+    "edits_total": 0,
+    "unresolved_geometry_diagnostics": [],
+    "correction_time_measured": null,
+    "correction_time_note": "No human correction took place, so no correction time was captured."
+  },
+  "objects": [
+    {
+      "object_id": "wall:synthetic-smoke-01:south",
+      "kind": "wall",
+      "name": "SYNTHETIC south wall",
+      "host_wall_id": null,
+      "predicted_class": null,
+      "centreline_length_m": 6.0,
+      "fields": {
+        "axis": {
+          "value": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              6.0,
+              0.0
+            ]
+          ],
+          "origin": "synthetic_fixture",
+          "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement"
+        },
+        "thickness": {
+          "value": 0.2,
+          "origin": "synthetic_fixture",
+          "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement"
+        },
+        "height": {
+          "value": 2.7,
+          "origin": "synthetic_fixture",
+          "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement"
+        },
+        "base_elevation": {
+          "value": 3.0,
+          "origin": "synthetic_fixture",
+          "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement"
+        }
+      },
+      "confidence": {
+        "semantic_score": null,
+        "score_source": null,
+        "score_aggregation": null,
+        "availability": "UNAVAILABLE",
+        "unavailable_reason": "Synthetic fixture: no model produced this object.",
+        "calibration_status": "NOT_APPLICABLE"
+      },
+      "review": {
+        "state": "SYNTHETIC_NOT_APPLICABLE",
+        "reviewer": null,
+        "reviewer_role": null,
+        "reviewed_utc": null,
+        "decision_notes": "Synthetic fixture: there is nothing to review against.",
+        "review_record_path": null,
+        "review_record_sha256": null
+      },
+      "edits": [],
+      "geometry_checks": [],
+      "assumptions": [
+        "SYNTHETIC: every dimension of this wall is invented test data"
+      ],
+      "source_refs": [
+        {
+          "kind": "synthetic_fixture",
+          "artifact_role": null,
+          "path": null,
+          "sha256": null,
+          "upstream_object_id": null,
+          "region_candidate_px": null,
+          "pixel_support": null
+        }
+      ],
+      "candidate_original": null
+    },
+    {
+      "object_id": "wall:synthetic-smoke-01:east",
+      "kind": "wall",
+      "name": "SYNTHETIC east wall",
+      "host_wall_id": null,
+      "predicted_class": null,
+      "centreline_length_m": 4.0,
+      "fields": {
+        "axis": {
+          "value": [
+            [
+              6.0,
+              0.0
+            ],
+            [
+              6.0,
+              4.0
+            ]
+          ],
+          "origin": "synthetic_fixture",
+          "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement"
+        },
+        "thickness": {
+          "value": 0.2,
+          "origin": "synthetic_fixture",
+          "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement"
+        },
+        "height": {
+          "value": 2.7,
+          "origin": "synthetic_fixture",
+          "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement"
+        },
+        "base_elevation": {
+          "value": 3.0,
+          "origin": "synthetic_fixture",
+          "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement"
+        }
+      },
+      "confidence": {
+        "semantic_score": null,
+        "score_source": null,
+        "score_aggregation": null,
+        "availability": "UNAVAILABLE",
+        "unavailable_reason": "Synthetic fixture: no model produced this object.",
+        "calibration_status": "NOT_APPLICABLE"
+      },
+      "review": {
+        "state": "SYNTHETIC_NOT_APPLICABLE",
+        "reviewer": null,
+        "reviewer_role": null,
+        "reviewed_utc": null,
+        "decision_notes": "Synthetic fixture: there is nothing to review against.",
+        "review_record_path": null,
+        "review_record_sha256": null
+      },
+      "edits": [],
+      "geometry_checks": [],
+      "assumptions": [
+        "SYNTHETIC: every dimension of this wall is invented test data"
+      ],
+      "source_refs": [
+        {
+          "kind": "synthetic_fixture",
+          "artifact_role": null,
+          "path": null,
+          "sha256": null,
+          "upstream_object_id": null,
+          "region_candidate_px": null,
+          "pixel_support": null
+        }
+      ],
+      "candidate_original": null
+    },
+    {
+      "object_id": "wall:synthetic-smoke-01:north",
+      "kind": "wall",
+      "name": "SYNTHETIC north wall",
+      "host_wall_id": null,
+      "predicted_class": null,
+      "centreline_length_m": 6.0,
+      "fields": {
+        "axis": {
+          "value": [
+            [
+              6.0,
+              4.0
+            ],
+            [
+              0.0,
+              4.0
+            ]
+          ],
+          "origin": "synthetic_fixture",
+          "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement"
+        },
+        "thickness": {
+          "value": 0.2,
+          "origin": "synthetic_fixture",
+          "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement"
+        },
+        "height": {
+          "value": 2.7,
+          "origin": "synthetic_fixture",
+          "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement"
+        },
+        "base_elevation": {
+          "value": 3.0,
+          "origin": "synthetic_fixture",
+          "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement"
+        }
+      },
+      "confidence": {
+        "semantic_score": null,
+        "score_source": null,
+        "score_aggregation": null,
+        "availability": "UNAVAILABLE",
+        "unavailable_reason": "Synthetic fixture: no model produced this object.",
+        "calibration_status": "NOT_APPLICABLE"
+      },
+      "review": {
+        "state": "SYNTHETIC_NOT_APPLICABLE",
+        "reviewer": null,
+        "reviewer_role": null,
+        "reviewed_utc": null,
+        "decision_notes": "Synthetic fixture: there is nothing to review against.",
+        "review_record_path": null,
+        "review_record_sha256": null
+      },
+      "edits": [],
+      "geometry_checks": [],
+      "assumptions": [
+        "SYNTHETIC: every dimension of this wall is invented test data"
+      ],
+      "source_refs": [
+        {
+          "kind": "synthetic_fixture",
+          "artifact_role": null,
+          "path": null,
+          "sha256": null,
+          "upstream_object_id": null,
+          "region_candidate_px": null,
+          "pixel_support": null
+        }
+      ],
+      "candidate_original": null
+    },
+    {
+      "object_id": "wall:synthetic-smoke-01:west",
+      "kind": "wall",
+      "name": "SYNTHETIC west wall",
+      "host_wall_id": null,
+      "predicted_class": null,
+      "centreline_length_m": 4.0,
+      "fields": {
+        "axis": {
+          "value": [
+            [
+              0.0,
+              4.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "origin": "synthetic_fixture",
+          "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement"
+        },
+        "thickness": {
+          "value": 0.2,
+          "origin": "synthetic_fixture",
+          "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement"
+        },
+        "height": {
+          "value": 2.7,
+          "origin": "synthetic_fixture",
+          "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement"
+        },
+        "base_elevation": {
+          "value": 3.0,
+          "origin": "synthetic_fixture",
+          "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement"
+        }
+      },
+      "confidence": {
+        "semantic_score": null,
+        "score_source": null,
+        "score_aggregation": null,
+        "availability": "UNAVAILABLE",
+        "unavailable_reason": "Synthetic fixture: no model produced this object.",
+        "calibration_status": "NOT_APPLICABLE"
+      },
+      "review": {
+        "state": "SYNTHETIC_NOT_APPLICABLE",
+        "reviewer": null,
+        "reviewer_role": null,
+        "reviewed_utc": null,
+        "decision_notes": "Synthetic fixture: there is nothing to review against.",
+        "review_record_path": null,
+        "review_record_sha256": null
+      },
+      "edits": [],
+      "geometry_checks": [],
+      "assumptions": [
+        "SYNTHETIC: every dimension of this wall is invented test data"
+      ],
+      "source_refs": [
+        {
+          "kind": "synthetic_fixture",
+          "artifact_role": null,
+          "path": null,
+          "sha256": null,
+          "upstream_object_id": null,
+          "region_candidate_px": null,
+          "pixel_support": null
+        }
+      ],
+      "candidate_original": null
+    },
+    {
+      "object_id": "wall:synthetic-smoke-01:diagonal",
+      "kind": "wall",
+      "name": "SYNTHETIC diagonal partition",
+      "host_wall_id": null,
+      "predicted_class": null,
+      "centreline_length_m": 3.605551275463989,
+      "fields": {
+        "axis": {
+          "value": [
+            [
+              1.0,
+              1.0
+            ],
+            [
+              4.0,
+              3.0
+            ]
+          ],
+          "origin": "synthetic_fixture",
+          "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement"
+        },
+        "thickness": {
+          "value": 0.1,
+          "origin": "synthetic_fixture",
+          "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement"
+        },
+        "height": {
+          "value": 2.4,
+          "origin": "synthetic_fixture",
+          "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement"
+        },
+        "base_elevation": {
+          "value": 3.1,
+          "origin": "synthetic_fixture",
+          "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement"
+        }
+      },
+      "confidence": {
+        "semantic_score": null,
+        "score_source": null,
+        "score_aggregation": null,
+        "availability": "UNAVAILABLE",
+        "unavailable_reason": "Synthetic fixture: no model produced this object.",
+        "calibration_status": "NOT_APPLICABLE"
+      },
+      "review": {
+        "state": "SYNTHETIC_NOT_APPLICABLE",
+        "reviewer": null,
+        "reviewer_role": null,
+        "reviewed_utc": null,
+        "decision_notes": "Synthetic fixture: there is nothing to review against.",
+        "review_record_path": null,
+        "review_record_sha256": null
+      },
+      "edits": [],
+      "geometry_checks": [],
+      "assumptions": [
+        "SYNTHETIC: every dimension of this wall is invented test data"
+      ],
+      "source_refs": [
+        {
+          "kind": "synthetic_fixture",
+          "artifact_role": null,
+          "path": null,
+          "sha256": null,
+          "upstream_object_id": null,
+          "region_candidate_px": null,
+          "pixel_support": null
+        }
+      ],
+      "candidate_original": null
+    },
+    {
+      "object_id": "opening:synthetic-smoke-01:south-01",
+      "kind": "aperture",
+      "name": "SYNTHETIC aperture in south wall",
+      "host_wall_id": "wall:synthetic-smoke-01:south",
+      "predicted_class": null,
+      "centreline_length_m": null,
+      "fields": {
+        "offset_along_host": {
+          "value": 2.0,
+          "origin": "synthetic_fixture",
+          "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement"
+        },
+        "width": {
+          "value": 0.9,
+          "origin": "synthetic_fixture",
+          "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement"
+        },
+        "bottom_elevation": {
+          "value": 0.0,
+          "origin": "synthetic_fixture",
+          "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement"
+        },
+        "height": {
+          "value": 2.1,
+          "origin": "synthetic_fixture",
+          "basis": "SYNTHETIC fixture value: invented, not derived from any drawing, prediction or measurement"
+        }
+      },
+      "confidence": {
+        "semantic_score": null,
+        "score_source": null,
+        "score_aggregation": null,
+        "availability": "UNAVAILABLE",
+        "unavailable_reason": "Synthetic fixture: no model produced this object.",
+        "calibration_status": "NOT_APPLICABLE"
+      },
+      "review": {
+        "state": "SYNTHETIC_NOT_APPLICABLE",
+        "reviewer": null,
+        "reviewer_role": null,
+        "reviewed_utc": null,
+        "decision_notes": "Synthetic fixture: there is nothing to review against.",
+        "review_record_path": null,
+        "review_record_sha256": null
+      },
+      "edits": [],
+      "geometry_checks": [],
+      "assumptions": [
+        "SYNTHETIC: every dimension of this aperture is invented test data"
+      ],
+      "source_refs": [
+        {
+          "kind": "synthetic_fixture",
+          "artifact_role": null,
+          "path": null,
+          "sha256": null,
+          "upstream_object_id": null,
+          "region_candidate_px": null,
+          "pixel_support": null
+        }
+      ],
+      "candidate_original": null
+    }
+  ],
+  "guid_map": {
+    "created": [
+      "project:synthetic-smoke-01",
+      "site:synthetic-smoke-01",
+      "building:synthetic-smoke-01",
+      "storey:synthetic-smoke-01:level-1",
+      "rel:aggregates:project:synthetic-smoke-01",
+      "rel:aggregates:site:synthetic-smoke-01",
+      "rel:aggregates:building:synthetic-smoke-01",
+      "pset:building:synthetic-smoke-01:AutoAutoCAD_ModelProvenance",
+      "rel:pset:building:synthetic-smoke-01:AutoAutoCAD_ModelProvenance",
+      "pset:storey:synthetic-smoke-01:level-1:AutoAutoCAD_Provenance",
+      "rel:pset:storey:synthetic-smoke-01:level-1:AutoAutoCAD_Provenance",
+      "wall:synthetic-smoke-01:south",
+      "pset:wall:synthetic-smoke-01:south:AutoAutoCAD_Provenance",
+      "rel:pset:wall:synthetic-smoke-01:south:AutoAutoCAD_Provenance",
+      "wall:synthetic-smoke-01:east",
+      "pset:wall:synthetic-smoke-01:east:AutoAutoCAD_Provenance",
+      "rel:pset:wall:synthetic-smoke-01:east:AutoAutoCAD_Provenance",
+      "wall:synthetic-smoke-01:north",
+      "pset:wall:synthetic-smoke-01:north:AutoAutoCAD_Provenance",
+      "rel:pset:wall:synthetic-smoke-01:north:AutoAutoCAD_Provenance",
+      "wall:synthetic-smoke-01:west",
+      "pset:wall:synthetic-smoke-01:west:AutoAutoCAD_Provenance",
+      "rel:pset:wall:synthetic-smoke-01:west:AutoAutoCAD_Provenance",
+      "wall:synthetic-smoke-01:diagonal",
+      "pset:wall:synthetic-smoke-01:diagonal:AutoAutoCAD_Provenance",
+      "rel:pset:wall:synthetic-smoke-01:diagonal:AutoAutoCAD_Provenance",
+      "rel:contained:storey:synthetic-smoke-01:level-1",
+      "opening:synthetic-smoke-01:south-01",
+      "rel:voids:opening:synthetic-smoke-01:south-01",
+      "pset:opening:synthetic-smoke-01:south-01:AutoAutoCAD_Provenance",
+      "rel:pset:opening:synthetic-smoke-01:south-01:AutoAutoCAD_Provenance"
+    ],
+    "reused": [],
+    "retired": []
+  },
+  "export": {
+    "ifc_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/synthetic/synthetic-smoke-01__SYNTHETIC.ifc",
+    "schema": "IFC4",
+    "timestamp": "2026-09-28T18:36:57Z",
+    "entity_count": 547,
+    "guids_created": [
+      "project:synthetic-smoke-01",
+      "site:synthetic-smoke-01",
+      "building:synthetic-smoke-01",
+      "storey:synthetic-smoke-01:level-1",
+      "rel:aggregates:project:synthetic-smoke-01",
+      "rel:aggregates:site:synthetic-smoke-01",
+      "rel:aggregates:building:synthetic-smoke-01",
+      "pset:building:synthetic-smoke-01:AutoAutoCAD_ModelProvenance",
+      "rel:pset:building:synthetic-smoke-01:AutoAutoCAD_ModelProvenance",
+      "pset:storey:synthetic-smoke-01:level-1:AutoAutoCAD_Provenance",
+      "rel:pset:storey:synthetic-smoke-01:level-1:AutoAutoCAD_Provenance",
+      "wall:synthetic-smoke-01:south",
+      "pset:wall:synthetic-smoke-01:south:AutoAutoCAD_Provenance",
+      "rel:pset:wall:synthetic-smoke-01:south:AutoAutoCAD_Provenance",
+      "wall:synthetic-smoke-01:east",
+      "pset:wall:synthetic-smoke-01:east:AutoAutoCAD_Provenance",
+      "rel:pset:wall:synthetic-smoke-01:east:AutoAutoCAD_Provenance",
+      "wall:synthetic-smoke-01:north",
+      "pset:wall:synthetic-smoke-01:north:AutoAutoCAD_Provenance",
+      "rel:pset:wall:synthetic-smoke-01:north:AutoAutoCAD_Provenance",
+      "wall:synthetic-smoke-01:west",
+      "pset:wall:synthetic-smoke-01:west:AutoAutoCAD_Provenance",
+      "rel:pset:wall:synthetic-smoke-01:west:AutoAutoCAD_Provenance",
+      "wall:synthetic-smoke-01:diagonal",
+      "pset:wall:synthetic-smoke-01:diagonal:AutoAutoCAD_Provenance",
+      "rel:pset:wall:synthetic-smoke-01:diagonal:AutoAutoCAD_Provenance",
+      "rel:contained:storey:synthetic-smoke-01:level-1",
+      "opening:synthetic-smoke-01:south-01",
+      "rel:voids:opening:synthetic-smoke-01:south-01",
+      "pset:opening:synthetic-smoke-01:south-01:AutoAutoCAD_Provenance",
+      "rel:pset:opening:synthetic-smoke-01:south-01:AutoAutoCAD_Provenance"
+    ],
+    "guids_reused": [],
+    "guids_retired": [],
+    "walls": 5,
+    "openings": 1,
+    "opening_overcut_m": 0.01,
+    "ifc_sha256": "4477996a68bb41668aab3ff5be5107d9d1545e17c6aaea5b9c4fb6faae73f00f",
+    "repeat_export_byte_identical": true
+  },
+  "checks": [
+    {
+      "group": "input",
+      "name": "no_unevidenced_fields",
+      "status": "PASS",
+      "detail": "No material, fire-rating, load-bearing, equipment, inspection or overall-confidence fields.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "all_numbers_finite",
+      "status": "PASS",
+      "detail": "No NaN or infinite numbers.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "json_schema",
+      "status": "PASS",
+      "detail": "Conforms to building_model schema 0.2.",
+      "data": {
+        "error_count": 0
+      }
+    },
+    {
+      "group": "input",
+      "name": "unique_object_ids",
+      "status": "PASS",
+      "detail": "10 object IDs, all unique.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "required_dimensions_present",
+      "status": "PASS",
+      "detail": "Every dimension needed for export has a value.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "unknown_origin_means_null",
+      "status": "PASS",
+      "detail": "origin=unknown is used exactly where the value is null.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "origins_match_track",
+      "status": "PASS",
+      "detail": "Attribute origins are consistent with track SYNTHETIC_EXPORT_SMOKE.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "synthetic_track_is_labelled",
+      "status": "PASS",
+      "detail": "Synthetic track: synthetic fixture status, no scale, no transforms, no review, exporter test only.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "wall_length[wall:synthetic-smoke-01:south]",
+      "status": "PASS",
+      "detail": "Centreline length 6.0000 m (allowed 0.05..500.0).",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "wall_thickness[wall:synthetic-smoke-01:south]",
+      "status": "PASS",
+      "detail": "Thickness 0.2000 m (allowed 0..2.0).",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "wall_height[wall:synthetic-smoke-01:south]",
+      "status": "PASS",
+      "detail": "Height 2.7000 m (allowed 0..30.0).",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "wall_storey[wall:synthetic-smoke-01:south]",
+      "status": "PASS",
+      "detail": "Assigned to storey 'storey:synthetic-smoke-01:level-1'.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "candidate_geometry_checks[wall:synthetic-smoke-01:south]",
+      "status": "PASS",
+      "detail": "No failed geometry diagnostics are recorded on this object.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "manual_values_have_edit_records[wall:synthetic-smoke-01:south]",
+      "status": "PASS",
+      "detail": "Every manually entered value has a recorded edit.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "wall_length[wall:synthetic-smoke-01:east]",
+      "status": "PASS",
+      "detail": "Centreline length 4.0000 m (allowed 0.05..500.0).",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "wall_thickness[wall:synthetic-smoke-01:east]",
+      "status": "PASS",
+      "detail": "Thickness 0.2000 m (allowed 0..2.0).",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "wall_height[wall:synthetic-smoke-01:east]",
+      "status": "PASS",
+      "detail": "Height 2.7000 m (allowed 0..30.0).",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "wall_storey[wall:synthetic-smoke-01:east]",
+      "status": "PASS",
+      "detail": "Assigned to storey 'storey:synthetic-smoke-01:level-1'.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "candidate_geometry_checks[wall:synthetic-smoke-01:east]",
+      "status": "PASS",
+      "detail": "No failed geometry diagnostics are recorded on this object.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "manual_values_have_edit_records[wall:synthetic-smoke-01:east]",
+      "status": "PASS",
+      "detail": "Every manually entered value has a recorded edit.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "wall_length[wall:synthetic-smoke-01:north]",
+      "status": "PASS",
+      "detail": "Centreline length 6.0000 m (allowed 0.05..500.0).",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "wall_thickness[wall:synthetic-smoke-01:north]",
+      "status": "PASS",
+      "detail": "Thickness 0.2000 m (allowed 0..2.0).",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "wall_height[wall:synthetic-smoke-01:north]",
+      "status": "PASS",
+      "detail": "Height 2.7000 m (allowed 0..30.0).",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "wall_storey[wall:synthetic-smoke-01:north]",
+      "status": "PASS",
+      "detail": "Assigned to storey 'storey:synthetic-smoke-01:level-1'.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "candidate_geometry_checks[wall:synthetic-smoke-01:north]",
+      "status": "PASS",
+      "detail": "No failed geometry diagnostics are recorded on this object.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "manual_values_have_edit_records[wall:synthetic-smoke-01:north]",
+      "status": "PASS",
+      "detail": "Every manually entered value has a recorded edit.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "wall_length[wall:synthetic-smoke-01:west]",
+      "status": "PASS",
+      "detail": "Centreline length 4.0000 m (allowed 0.05..500.0).",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "wall_thickness[wall:synthetic-smoke-01:west]",
+      "status": "PASS",
+      "detail": "Thickness 0.2000 m (allowed 0..2.0).",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "wall_height[wall:synthetic-smoke-01:west]",
+      "status": "PASS",
+      "detail": "Height 2.7000 m (allowed 0..30.0).",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "wall_storey[wall:synthetic-smoke-01:west]",
+      "status": "PASS",
+      "detail": "Assigned to storey 'storey:synthetic-smoke-01:level-1'.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "candidate_geometry_checks[wall:synthetic-smoke-01:west]",
+      "status": "PASS",
+      "detail": "No failed geometry diagnostics are recorded on this object.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "manual_values_have_edit_records[wall:synthetic-smoke-01:west]",
+      "status": "PASS",
+      "detail": "Every manually entered value has a recorded edit.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "wall_length[wall:synthetic-smoke-01:diagonal]",
+      "status": "PASS",
+      "detail": "Centreline length 3.6056 m (allowed 0.05..500.0).",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "wall_thickness[wall:synthetic-smoke-01:diagonal]",
+      "status": "PASS",
+      "detail": "Thickness 0.1000 m (allowed 0..2.0).",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "wall_height[wall:synthetic-smoke-01:diagonal]",
+      "status": "PASS",
+      "detail": "Height 2.4000 m (allowed 0..30.0).",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "wall_storey[wall:synthetic-smoke-01:diagonal]",
+      "status": "PASS",
+      "detail": "Assigned to storey 'storey:synthetic-smoke-01:level-1'.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "candidate_geometry_checks[wall:synthetic-smoke-01:diagonal]",
+      "status": "PASS",
+      "detail": "No failed geometry diagnostics are recorded on this object.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "manual_values_have_edit_records[wall:synthetic-smoke-01:diagonal]",
+      "status": "PASS",
+      "detail": "Every manually entered value has a recorded edit.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "no_duplicate_wall_geometry",
+      "status": "PASS",
+      "detail": "No two walls share a centreline.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "aperture_host_resolves[opening:synthetic-smoke-01:south-01]",
+      "status": "PASS",
+      "detail": "Host wall 'wall:synthetic-smoke-01:south' found.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "aperture_size[opening:synthetic-smoke-01:south-01]",
+      "status": "PASS",
+      "detail": "Width 0.9000 m, height 2.1000 m.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "aperture_within_host_length[opening:synthetic-smoke-01:south-01]",
+      "status": "PASS",
+      "detail": "Spans 2.0000..2.9000 m along a 6.0000 m host.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "aperture_within_host_height[opening:synthetic-smoke-01:south-01]",
+      "status": "PASS",
+      "detail": "Spans 0.0000..2.1000 m above the wall base in a 2.7000 m high host.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "candidate_geometry_checks[opening:synthetic-smoke-01:south-01]",
+      "status": "PASS",
+      "detail": "No failed geometry diagnostics are recorded on this object.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "manual_values_have_edit_records[opening:synthetic-smoke-01:south-01]",
+      "status": "PASS",
+      "detail": "Every manually entered value has a recorded edit.",
+      "data": {}
+    },
+    {
+      "group": "input",
+      "name": "apertures_do_not_overlap[wall:synthetic-smoke-01:south]",
+      "status": "PASS",
+      "detail": "Apertures in this wall do not overlap.",
+      "data": {}
+    },
+    {
+      "group": "ifc_reopen",
+      "name": "file_exists",
+      "status": "PASS",
+      "detail": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/synthetic/synthetic-smoke-01__SYNTHETIC.ifc (44423 bytes)",
+      "data": {}
+    },
+    {
+      "group": "ifc_reopen",
+      "name": "reopens",
+      "status": "PASS",
+      "detail": "Reopened with IfcOpenShell 0.8.5; 547 entities.",
+      "data": {}
+    },
+    {
+      "group": "ifc_schema",
+      "name": "schema_identifier",
+      "status": "PASS",
+      "detail": "File schema is 'IFC4' (expected 'IFC4').",
+      "data": {}
+    },
+    {
+      "group": "ifc_schema",
+      "name": "schema_and_express_rules",
+      "status": "PASS",
+      "detail": "ifcopenshell.validate reports no attribute-type, cardinality, inverse or EXPRESS WHERE-rule violations.",
+      "data": {
+        "statement_count": 0
+      }
+    },
+    {
+      "group": "ifc_structure",
+      "name": "exactly_one_IfcProject",
+      "status": "PASS",
+      "detail": "1 IfcProject instance(s).",
+      "data": {}
+    },
+    {
+      "group": "ifc_structure",
+      "name": "exactly_one_IfcSite",
+      "status": "PASS",
+      "detail": "1 IfcSite instance(s).",
+      "data": {}
+    },
+    {
+      "group": "ifc_structure",
+      "name": "exactly_one_IfcBuilding",
+      "status": "PASS",
+      "detail": "1 IfcBuilding instance(s).",
+      "data": {}
+    },
+    {
+      "group": "ifc_structure",
+      "name": "exactly_one_IfcBuildingStorey",
+      "status": "PASS",
+      "detail": "1 IfcBuildingStorey instance(s).",
+      "data": {}
+    },
+    {
+      "group": "ifc_structure",
+      "name": "spatial_chain",
+      "status": "PASS",
+      "detail": "Project > Site > Building > Storey are linked by IfcRelAggregates.",
+      "data": {}
+    },
+    {
+      "group": "ifc_structure",
+      "name": "length_unit_is_metre",
+      "status": "PASS",
+      "detail": "Length unit METRE, prefix None, scale to metres 1.",
+      "data": {}
+    },
+    {
+      "group": "ifc_structure",
+      "name": "storey_elevation",
+      "status": "PASS",
+      "detail": "Storey elevation 3.0 m.",
+      "data": {}
+    },
+    {
+      "group": "ifc_structure",
+      "name": "wall_count",
+      "status": "PASS",
+      "detail": "5 IfcWall (input has 5).",
+      "data": {}
+    },
+    {
+      "group": "ifc_structure",
+      "name": "opening_count",
+      "status": "PASS",
+      "detail": "1 IfcOpeningElement (input has 1).",
+      "data": {}
+    },
+    {
+      "group": "ifc_structure",
+      "name": "objects_identified_by_tag",
+      "status": "PASS",
+      "detail": "Every input object is present, identified by Tag = object_id.",
+      "data": {}
+    },
+    {
+      "group": "ifc_structure",
+      "name": "walls_contained_in_storey",
+      "status": "PASS",
+      "detail": "Every wall is contained in the storey.",
+      "data": {}
+    },
+    {
+      "group": "ifc_structure",
+      "name": "aperture_hosted[opening:synthetic-smoke-01:south-01]",
+      "status": "PASS",
+      "detail": "IfcRelVoidsElement links it to host 'wall:synthetic-smoke-01:south' (expected 'wall:synthetic-smoke-01:south').",
+      "data": {}
+    },
+    {
+      "group": "ifc_structure",
+      "name": "no_unevidenced_entities",
+      "status": "PASS",
+      "detail": "No material or classification entities were written.",
+      "data": {}
+    },
+    {
+      "group": "ifc_structure",
+      "name": "no_standard_psets_claimed",
+      "status": "PASS",
+      "detail": "No buildingSMART Pset_/Qto_ sets were written; only application-specific sets.",
+      "data": {}
+    },
+    {
+      "group": "ifc_structure",
+      "name": "no_unevidenced_properties",
+      "status": "PASS",
+      "detail": "No material / fire / load-bearing / inspection properties were written.",
+      "data": {}
+    },
+    {
+      "group": "ifc_identity",
+      "name": "global_ids_unique",
+      "status": "PASS",
+      "detail": "31 rooted entities, 31 distinct GlobalIds.",
+      "data": {}
+    },
+    {
+      "group": "ifc_identity",
+      "name": "global_ids_well_formed",
+      "status": "PASS",
+      "detail": "Every GlobalId is a valid 22-character IFC GUID.",
+      "data": {}
+    },
+    {
+      "group": "ifc_identity",
+      "name": "guid_map_matches_file",
+      "status": "PASS",
+      "detail": "All 31 active GUID-map entries resolve to an entity of the recorded class, and every GlobalId in the file is in the map.",
+      "data": {}
+    },
+    {
+      "group": "ifc_identity",
+      "name": "object_guid[wall:synthetic-smoke-01:south]",
+      "status": "PASS",
+      "detail": "GlobalId 0NAeBeUb1HGP8SwzgoN146 matches the GUID map.",
+      "data": {}
+    },
+    {
+      "group": "ifc_identity",
+      "name": "object_guid[wall:synthetic-smoke-01:east]",
+      "status": "PASS",
+      "detail": "GlobalId 3dWIIo$N1PYfGlUMx8UU18 matches the GUID map.",
+      "data": {}
+    },
+    {
+      "group": "ifc_identity",
+      "name": "object_guid[wall:synthetic-smoke-01:north]",
+      "status": "PASS",
+      "detail": "GlobalId 1zQtxA7_1RZxoutIG2NxJD matches the GUID map.",
+      "data": {}
+    },
+    {
+      "group": "ifc_identity",
+      "name": "object_guid[wall:synthetic-smoke-01:west]",
+      "status": "PASS",
+      "detail": "GlobalId 14nvQIIoHVsOXaFuXPPMZc matches the GUID map.",
+      "data": {}
+    },
+    {
+      "group": "ifc_identity",
+      "name": "object_guid[wall:synthetic-smoke-01:diagonal]",
+      "status": "PASS",
+      "detail": "GlobalId 38bwIYdoLM0gHQD8rxti2L matches the GUID map.",
+      "data": {}
+    },
+    {
+      "group": "ifc_identity",
+      "name": "object_guid[opening:synthetic-smoke-01:south-01]",
+      "status": "PASS",
+      "detail": "GlobalId 0pQs6l0ynHvuay5mekgxyM matches the GUID map.",
+      "data": {}
+    },
+    {
+      "group": "ifc_provenance",
+      "name": "model_pset_present",
+      "status": "PASS",
+      "detail": "AutoAutoCAD_ModelProvenance is attached to the building.",
+      "data": {}
+    },
+    {
+      "group": "ifc_provenance",
+      "name": "model_pset_values",
+      "status": "PASS",
+      "detail": "Model provenance values match the input.",
+      "data": {}
+    },
+    {
+      "group": "ifc_provenance",
+      "name": "pset_present[wall:synthetic-smoke-01:south]",
+      "status": "PASS",
+      "detail": "AutoAutoCAD_Provenance is attached.",
+      "data": {}
+    },
+    {
+      "group": "ifc_provenance",
+      "name": "pset_complete[wall:synthetic-smoke-01:south]",
+      "status": "PASS",
+      "detail": "All 38 required properties exist.",
+      "data": {}
+    },
+    {
+      "group": "ifc_provenance",
+      "name": "pset_values[wall:synthetic-smoke-01:south]",
+      "status": "PASS",
+      "detail": "Provenance, uncertainty and review values match the input (a null score stays null).",
+      "data": {}
+    },
+    {
+      "group": "ifc_provenance",
+      "name": "pset_present[wall:synthetic-smoke-01:east]",
+      "status": "PASS",
+      "detail": "AutoAutoCAD_Provenance is attached.",
+      "data": {}
+    },
+    {
+      "group": "ifc_provenance",
+      "name": "pset_complete[wall:synthetic-smoke-01:east]",
+      "status": "PASS",
+      "detail": "All 38 required properties exist.",
+      "data": {}
+    },
+    {
+      "group": "ifc_provenance",
+      "name": "pset_values[wall:synthetic-smoke-01:east]",
+      "status": "PASS",
+      "detail": "Provenance, uncertainty and review values match the input (a null score stays null).",
+      "data": {}
+    },
+    {
+      "group": "ifc_provenance",
+      "name": "pset_present[wall:synthetic-smoke-01:north]",
+      "status": "PASS",
+      "detail": "AutoAutoCAD_Provenance is attached.",
+      "data": {}
+    },
+    {
+      "group": "ifc_provenance",
+      "name": "pset_complete[wall:synthetic-smoke-01:north]",
+      "status": "PASS",
+      "detail": "All 38 required properties exist.",
+      "data": {}
+    },
+    {
+      "group": "ifc_provenance",
+      "name": "pset_values[wall:synthetic-smoke-01:north]",
+      "status": "PASS",
+      "detail": "Provenance, uncertainty and review values match the input (a null score stays null).",
+      "data": {}
+    },
+    {
+      "group": "ifc_provenance",
+      "name": "pset_present[wall:synthetic-smoke-01:west]",
+      "status": "PASS",
+      "detail": "AutoAutoCAD_Provenance is attached.",
+      "data": {}
+    },
+    {
+      "group": "ifc_provenance",
+      "name": "pset_complete[wall:synthetic-smoke-01:west]",
+      "status": "PASS",
+      "detail": "All 38 required properties exist.",
+      "data": {}
+    },
+    {
+      "group": "ifc_provenance",
+      "name": "pset_values[wall:synthetic-smoke-01:west]",
+      "status": "PASS",
+      "detail": "Provenance, uncertainty and review values match the input (a null score stays null).",
+      "data": {}
+    },
+    {
+      "group": "ifc_provenance",
+      "name": "pset_present[wall:synthetic-smoke-01:diagonal]",
+      "status": "PASS",
+      "detail": "AutoAutoCAD_Provenance is attached.",
+      "data": {}
+    },
+    {
+      "group": "ifc_provenance",
+      "name": "pset_complete[wall:synthetic-smoke-01:diagonal]",
+      "status": "PASS",
+      "detail": "All 38 required properties exist.",
+      "data": {}
+    },
+    {
+      "group": "ifc_provenance",
+      "name": "pset_values[wall:synthetic-smoke-01:diagonal]",
+      "status": "PASS",
+      "detail": "Provenance, uncertainty and review values match the input (a null score stays null).",
+      "data": {}
+    },
+    {
+      "group": "ifc_provenance",
+      "name": "pset_present[opening:synthetic-smoke-01:south-01]",
+      "status": "PASS",
+      "detail": "AutoAutoCAD_Provenance is attached.",
+      "data": {}
+    },
+    {
+      "group": "ifc_provenance",
+      "name": "pset_complete[opening:synthetic-smoke-01:south-01]",
+      "status": "PASS",
+      "detail": "All 37 required properties exist.",
+      "data": {}
+    },
+    {
+      "group": "ifc_provenance",
+      "name": "pset_values[opening:synthetic-smoke-01:south-01]",
+      "status": "PASS",
+      "detail": "Provenance, uncertainty and review values match the input (a null score stays null).",
+      "data": {}
+    },
+    {
+      "group": "geometry",
+      "name": "wall_placement[wall:synthetic-smoke-01:south]",
+      "status": "PASS",
+      "detail": "World placement origin [0.0, 0.0, 3.0] and axis [1.0, 0.0, 0.0] match the input start point, base elevation (applied once) and direction.",
+      "data": {}
+    },
+    {
+      "group": "geometry",
+      "name": "wall_geometry_builds[wall:synthetic-smoke-01:south]",
+      "status": "PASS",
+      "detail": "Geometry kernel produced 8 vertices, 12 triangles.",
+      "data": {}
+    },
+    {
+      "group": "geometry",
+      "name": "wall_length[wall:synthetic-smoke-01:south]",
+      "status": "PASS",
+      "detail": "Extent along axis 0.00000..6.00000 m (expected 0..6.00000).",
+      "data": {
+        "measured": 6.0,
+        "expected": 6.0
+      }
+    },
+    {
+      "group": "geometry",
+      "name": "wall_thickness[wall:synthetic-smoke-01:south]",
+      "status": "PASS",
+      "detail": "Extent across axis -0.10000..0.10000 m (expected \u00b10.10000; centred on the centreline).",
+      "data": {
+        "measured": 0.2,
+        "expected": 0.2
+      }
+    },
+    {
+      "group": "geometry",
+      "name": "wall_vertical_extent[wall:synthetic-smoke-01:south]",
+      "status": "PASS",
+      "detail": "z 3.00000..5.70000 m (expected 3.00000..5.70000).",
+      "data": {
+        "measured": 2.7,
+        "expected": 2.7
+      }
+    },
+    {
+      "group": "geometry",
+      "name": "wall_gross_volume[wall:synthetic-smoke-01:south]",
+      "status": "PASS",
+      "detail": "Gross volume 3.240000 m3 (expected length x thickness x height = 3.240000).",
+      "data": {
+        "measured": 3.2400000000000007,
+        "expected": 3.2400000000000007
+      }
+    },
+    {
+      "group": "geometry",
+      "name": "wall_net_volume_after_voids[wall:synthetic-smoke-01:south]",
+      "status": "PASS",
+      "detail": "Net volume with 1 aperture(s) subtracted 2.862000 m3 (expected 2.862000).",
+      "data": {
+        "measured": 2.862,
+        "expected": 2.8620000000000005
+      }
+    },
+    {
+      "group": "geometry",
+      "name": "void_removes_intended_volume[wall:synthetic-smoke-01:south]",
+      "status": "PASS",
+      "detail": "The void removed 0.378000 m3 of wall (expected width x wall thickness x height = 0.378000).",
+      "data": {
+        "measured": 0.37800000000000056,
+        "expected": 0.3780000000000001
+      }
+    },
+    {
+      "group": "geometry",
+      "name": "wall_placement[wall:synthetic-smoke-01:east]",
+      "status": "PASS",
+      "detail": "World placement origin [6.0, 0.0, 3.0] and axis [0.0, 1.0, 0.0] match the input start point, base elevation (applied once) and direction.",
+      "data": {}
+    },
+    {
+      "group": "geometry",
+      "name": "wall_geometry_builds[wall:synthetic-smoke-01:east]",
+      "status": "PASS",
+      "detail": "Geometry kernel produced 8 vertices, 12 triangles.",
+      "data": {}
+    },
+    {
+      "group": "geometry",
+      "name": "wall_length[wall:synthetic-smoke-01:east]",
+      "status": "PASS",
+      "detail": "Extent along axis 0.00000..4.00000 m (expected 0..4.00000).",
+      "data": {
+        "measured": 4.0,
+        "expected": 4.0
+      }
+    },
+    {
+      "group": "geometry",
+      "name": "wall_thickness[wall:synthetic-smoke-01:east]",
+      "status": "PASS",
+      "detail": "Extent across axis -0.10000..0.10000 m (expected \u00b10.10000; centred on the centreline).",
+      "data": {
+        "measured": 0.1999999999999993,
+        "expected": 0.2
+      }
+    },
+    {
+      "group": "geometry",
+      "name": "wall_vertical_extent[wall:synthetic-smoke-01:east]",
+      "status": "PASS",
+      "detail": "z 3.00000..5.70000 m (expected 3.00000..5.70000).",
+      "data": {
+        "measured": 2.7,
+        "expected": 2.7
+      }
+    },
+    {
+      "group": "geometry",
+      "name": "wall_gross_volume[wall:synthetic-smoke-01:east]",
+      "status": "PASS",
+      "detail": "Gross volume 2.160000 m3 (expected length x thickness x height = 2.160000).",
+      "data": {
+        "measured": 2.1599999999999966,
+        "expected": 2.16
+      }
+    },
+    {
+      "group": "geometry",
+      "name": "wall_placement[wall:synthetic-smoke-01:north]",
+      "status": "PASS",
+      "detail": "World placement origin [6.0, 4.0, 3.0] and axis [-1.0, 0.0, 0.0] match the input start point, base elevation (applied once) and direction.",
+      "data": {}
+    },
+    {
+      "group": "geometry",
+      "name": "wall_geometry_builds[wall:synthetic-smoke-01:north]",
+      "status": "PASS",
+      "detail": "Geometry kernel produced 8 vertices, 12 triangles.",
+      "data": {}
+    },
+    {
+      "group": "geometry",
+      "name": "wall_length[wall:synthetic-smoke-01:north]",
+      "status": "PASS",
+      "detail": "Extent along axis 0.00000..6.00000 m (expected 0..6.00000).",
+      "data": {
+        "measured": 6.0,
+        "expected": 6.0
+      }
+    },
+    {
+      "group": "geometry",
+      "name": "wall_thickness[wall:synthetic-smoke-01:north]",
+      "status": "PASS",
+      "detail": "Extent across axis -0.10000..0.10000 m (expected \u00b10.10000; centred on the centreline).",
+      "data": {
+        "measured": 0.19999999999999973,
+        "expected": 0.2
+      }
+    },
+    {
+      "group": "geometry",
+      "name": "wall_vertical_extent[wall:synthetic-smoke-01:north]",
+      "status": "PASS",
+      "detail": "z 3.00000..5.70000 m (expected 3.00000..5.70000).",
+      "data": {
+        "measured": 2.7,
+        "expected": 2.7
+      }
+    },
+    {
+      "group": "geometry",
+      "name": "wall_gross_volume[wall:synthetic-smoke-01:north]",
+      "status": "PASS",
+      "detail": "Gross volume 3.240000 m3 (expected length x thickness x height = 3.240000).",
+      "data": {
+        "measured": 3.2400000000000007,
+        "expected": 3.2400000000000007
+      }
+    },
+    {
+      "group": "geometry",
+      "name": "wall_placement[wall:synthetic-smoke-01:west]",
+      "status": "PASS",
+      "detail": "World placement origin [0.0, 4.0, 3.0] and axis [0.0, -1.0, 0.0] match the input start point, base elevation (applied once) and direction.",
+      "data": {}
+    },
+    {
+      "group": "geometry",
+      "name": "wall_geometry_builds[wall:synthetic-smoke-01:west]",
+      "status": "PASS",
+      "detail": "Geometry kernel produced 8 vertices, 12 triangles.",
+      "data": {}
+    },
+    {
+      "group": "geometry",
+      "name": "wall_length[wall:synthetic-smoke-01:west]",
+      "status": "PASS",
+      "detail": "Extent along axis 0.00000..4.00000 m (expected 0..4.00000).",
+      "data": {
+        "measured": 4.0,
+        "expected": 4.0
+      }
+    },
+    {
+      "group": "geometry",
+      "name": "wall_thickness[wall:synthetic-smoke-01:west]",
+      "status": "PASS",
+      "detail": "Extent across axis -0.10000..0.10000 m (expected \u00b10.10000; centred on the centreline).",
+      "data": {
+        "measured": 0.2,
+        "expected": 0.2
+      }
+    },
+    {
+      "group": "geometry",
+      "name": "wall_vertical_extent[wall:synthetic-smoke-01:west]",
+      "status": "PASS",
+      "detail": "z 3.00000..5.70000 m (expected 3.00000..5.70000).",
+      "data": {
+        "measured": 2.7,
+        "expected": 2.7
+      }
+    },
+    {
+      "group": "geometry",
+      "name": "wall_gross_volume[wall:synthetic-smoke-01:west]",
+      "status": "PASS",
+      "detail": "Gross volume 2.160000 m3 (expected length x thickness x height = 2.160000).",
+      "data": {
+        "measured": 2.16,
+        "expected": 2.16
+      }
+    },
+    {
+      "group": "geometry",
+      "name": "wall_placement[wall:synthetic-smoke-01:diagonal]",
+      "status": "PASS",
+      "detail": "World placement origin [1.0, 1.0, 3.1] and axis [0.83205, 0.5547, 0.0] match the input start point, base elevation (applied once) and direction.",
+      "data": {}
+    },
+    {
+      "group": "geometry",
+      "name": "wall_geometry_builds[wall:synthetic-smoke-01:diagonal]",
+      "status": "PASS",
+      "detail": "Geometry kernel produced 8 vertices, 12 triangles.",
+      "data": {}
+    },
+    {
+      "group": "geometry",
+      "name": "wall_length[wall:synthetic-smoke-01:diagonal]",
+      "status": "PASS",
+      "detail": "Extent along axis -0.00000..3.60555 m (expected 0..3.60555).",
+      "data": {
+        "measured": 3.6055512754639896,
+        "expected": 3.605551275463989
+      }
+    },
+    {
+      "group": "geometry",
+      "name": "wall_thickness[wall:synthetic-smoke-01:diagonal]",
+      "status": "PASS",
+      "detail": "Extent across axis -0.05000..0.05000 m (expected \u00b10.05000; centred on the centreline).",
+      "data": {
+        "measured": 0.10000000000000002,
+        "expected": 0.1
+      }
+    },
+    {
+      "group": "geometry",
+      "name": "wall_vertical_extent[wall:synthetic-smoke-01:diagonal]",
+      "status": "PASS",
+      "detail": "z 3.10000..5.50000 m (expected 3.10000..5.50000).",
+      "data": {
+        "measured": 2.4,
+        "expected": 2.4
+      }
+    },
+    {
+      "group": "geometry",
+      "name": "wall_gross_volume[wall:synthetic-smoke-01:diagonal]",
+      "status": "PASS",
+      "detail": "Gross volume 0.865332 m3 (expected length x thickness x height = 0.865332).",
+      "data": {
+        "measured": 0.8653323061113584,
+        "expected": 0.8653323061113575
+      }
+    },
+    {
+      "group": "geometry",
+      "name": "aperture_position_and_width[opening:synthetic-smoke-01:south-01]",
+      "status": "PASS",
+      "detail": "Along host 2.00000..2.90000 m (expected 2.00000..2.90000).",
+      "data": {}
+    },
+    {
+      "group": "geometry",
+      "name": "aperture_passes_through_wall[opening:synthetic-smoke-01:south-01]",
+      "status": "PASS",
+      "detail": "Across host -0.11000..0.11000 m; covers the full 0.20000 m thickness plus the 0.01 m exporter overcut per face.",
+      "data": {}
+    },
+    {
+      "group": "geometry",
+      "name": "aperture_vertical_extent[opening:synthetic-smoke-01:south-01]",
+      "status": "PASS",
+      "detail": "z 3.00000..5.10000 m (expected 3.00000..5.10000).",
+      "data": {}
+    },
+    {
+      "group": "ifc_identity",
+      "name": "repeat_export_reuses_guids",
+      "status": "PASS",
+      "detail": "Repeat export created 0 new GlobalIds, reused 31, byte-identical: True.",
+      "data": {}
+    }
+  ],
+  "not_modelled": [
+    "materials and material layers",
+    "fire ratings",
+    "load-bearing or external status",
+    "equipment data",
+    "inspection or construction status",
+    "wall joins and corner clean-up",
+    "doors and windows as IfcDoor / IfcWindow (only the aperture void is modelled)",
+    "spaces and rooms",
+    "georeferencing",
+    "curved, tapered or sloped walls",
+    "classification references"
+  ],
+  "not_established": [
+    "segmentation accuracy, wall IoU or any training comparison",
+    "dimensional accuracy of the geometry (no reference geometry was used, so accuracy is unknown, not zero error)",
+    "acceptance by any BIM viewer or authoring tool",
+    "conformance to a model view definition or an IDS",
+    "fitness for engineering, inspection or construction use"
+  ]
+}

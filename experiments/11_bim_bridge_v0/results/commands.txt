@@ -1,0 +1,12 @@
+cd /home/pmharris/dev/bim_bridge_v0
+.venv/bin/python -m bim_bridge new-run --config /home/pmharris/dev/bim_bridge_v0/configs/bim_bridge_v0.yaml            # prints the new run directory
+RUN=/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC
+.venv/bin/python -m bim_bridge inspect --run-dir $RUN
+.venv/bin/python -m bim_bridge synthetic --run-dir $RUN
+.venv/bin/python -m bim_bridge prepare-candidates --run-dir $RUN
+.venv/bin/python -m bim_bridge export --run-dir $RUN --preview
+.venv/bin/python -m bim_bridge independent-parser --run-dir $RUN
+.venv/bin/python -m bim_bridge test --run-dir $RUN
+.venv/bin/python -m bim_bridge finalize --run-dir $RUN
+# after a human fills in the review record:
+# .venv/bin/python -m bim_bridge apply-review --run-dir $RUN --review <review_record.json>

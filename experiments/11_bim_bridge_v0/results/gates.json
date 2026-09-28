@@ -1,0 +1,201 @@
+{
+  "experiment_id": "bim_bridge_v0",
+  "run_id": "bim_bridge_v0_20260928_183649_UTC",
+  "computed_utc": "2026-09-28T18:37:46Z",
+  "gate_definitions": {
+    "G1": "Input identity and provenance established",
+    "G2": "Coordinate mapping, units, and scale established",
+    "G3": "Schema and geometry checks pass",
+    "G4": "IFC identities, relationships, and properties survive reopening",
+    "G5": "Uncertainty and assumptions are preserved",
+    "G6": "Real prediction lineage and recorded human review are established",
+    "G7": "Actual target application/viewer inspection is recorded"
+  },
+  "status_vocabulary": [
+    "PASS",
+    "FAIL",
+    "BLOCKED",
+    "NOT_RUN"
+  ],
+  "tracks": {
+    "SYNTHETIC_EXPORT_SMOKE": {
+      "label": "SYNTHETIC: exporter behaviour only",
+      "gates": {
+        "G1": {
+          "status": "PASS",
+          "reason": "The fixture is identified and labelled synthetic in the model, the IFC and the report. No real input exists in this track, so this says nothing about real provenance.",
+          "evidence": [
+            "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/synthetic/validation_report.json",
+            "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/synthetic/building_model.json"
+          ],
+          "parts": {}
+        },
+        "G2": {
+          "status": "PASS",
+          "reason": "Units are metres, the wall axis is the centreline, storey and base elevation are applied once (raised storey at 3.0 m), and the transform tests pass. Scale does not apply: the geometry is authored in metres.",
+          "evidence": [
+            "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/synthetic/validation_report.json",
+            "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/synthetic/building_model.json",
+            "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/tests/pytest_junit.xml"
+          ],
+          "parts": {
+            "units": "PASS",
+            "elevation_applied_once": "PASS",
+            "transform_tests": "PASS",
+            "scale": "NOT_APPLICABLE"
+          }
+        },
+        "G3": {
+          "status": "PASS",
+          "reason": "Input checks 46/46 and geometry-kernel checks 35/35 pass, including the volume removed by the aperture.",
+          "evidence": [
+            "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/synthetic/validation_report.json",
+            "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/synthetic/building_model.json"
+          ],
+          "parts": {}
+        },
+        "G4": {
+          "status": "PASS",
+          "reason": "The file was reopened from disk; 49/49 schema, structure, identity and property checks pass; a repeat export reuses every GlobalId.",
+          "evidence": [
+            "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/synthetic/validation_report.json",
+            "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/synthetic/building_model.json",
+            "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/synthetic/guid_map.json"
+          ],
+          "parts": {}
+        },
+        "G5": {
+          "status": "PASS",
+          "reason": "20/20 property checks pass. The semantic score is null with availability UNAVAILABLE and a reason; every object is marked synthetic.",
+          "evidence": [
+            "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/synthetic/validation_report.json",
+            "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/synthetic/building_model.json"
+          ],
+          "parts": {}
+        },
+        "G6": {
+          "status": "NOT_RUN",
+          "reason": "Does not apply to synthetic geometry: there is no prediction and nothing to review.",
+          "evidence": [],
+          "parts": {}
+        },
+        "G7": {
+          "status": "NOT_RUN",
+          "reason": "No viewer or target application was used.",
+          "evidence": [],
+          "parts": {}
+        }
+      }
+    },
+    "REVIEWED_PREDICTION_BRIDGE": {
+      "label": "Real prediction-derived geometry",
+      "gates": {
+        "G1": {
+          "status": "PASS",
+          "reason": "Source image, split, sample, prediction file, thresholds, config snapshot and checkpoint are on disk with hashes. The image hash equals the upstream manifest and the checkpoint hash equals audit entry 09.",
+          "evidence": [
+            "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/inputs/INPUT_INVENTORY.md",
+            "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/inputs/input_inventory.json",
+            "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/candidate_geometry.json"
+          ],
+          "parts": {
+            "inspect_stage": "PASS",
+            "candidate_stage": "PASS"
+          }
+        },
+        "G2": {
+          "status": "BLOCKED",
+          "reason": "BLOCKED on scale. The mapping from image pixels through the letterbox and region of interest to model metres is established and tested, and units are metres. But the drawing has no dimension string and no scale bar, so no documented scale evidence exists. The scale in use is an estimate from the apartment area label, marked ASSUMED_FOR_PREVIEW. No dimensional claim is permitted.",
+          "evidence": [
+            "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/export_preview/validation_report.json",
+            "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/tests/pytest_junit.xml",
+            "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/candidate_geometry.json"
+          ],
+          "parts": {
+            "coordinate_mapping": "PASS",
+            "units": "PASS",
+            "transform_tests": "PASS",
+            "scale_evidence": "BLOCKED",
+            "scale_status": "ASSUMED_FOR_PREVIEW"
+          }
+        },
+        "G3": {
+          "status": "PASS",
+          "reason": "Input checks 66/66 and geometry-kernel checks 29/29 pass on the preview export. These check the file against its input, not against the building.",
+          "evidence": [
+            "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/export_preview/validation_report.json"
+          ],
+          "parts": {}
+        },
+        "G4": {
+          "status": "PASS",
+          "reason": "The preview file was reopened from disk; 49/49 schema, structure, identity and property checks pass; a repeat export reuses every GlobalId.",
+          "evidence": [
+            "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/export_preview/validation_report.json",
+            "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/export_preview/guid_map.json"
+          ],
+          "parts": {}
+        },
+        "G5": {
+          "status": "PASS",
+          "reason": "21/21 property checks pass. Every object carries a null semantic score with a reason, its attribute origins, its assumptions, its diagnostics, its edits and its review state inside the IFC.",
+          "evidence": [
+            "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/export_preview/validation_report.json"
+          ],
+          "parts": {}
+        },
+        "G6": {
+          "status": "BLOCKED",
+          "reason": "BLOCKED on human review. Prediction lineage is established: every wall names the prediction mask region it came from. But no human has reviewed this geometry. Every object is CANDIDATE_UNREVIEWED. Adjustments made by automated rules are recorded as edits and are not a review.",
+          "evidence": [
+            "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/candidate_geometry.json",
+            "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/review_record_TEMPLATE.json"
+          ],
+          "parts": {
+            "prediction_lineage": "PASS",
+            "human_review": "BLOCKED",
+            "geometry_status": "CANDIDATE_UNREVIEWED"
+          }
+        },
+        "G7": {
+          "status": "NOT_RUN",
+          "reason": "No viewer or target application is available in this environment (Blender is installed without an IFC add-on). Nobody has opened the file in a viewer. The independent parser check is not a viewer test.",
+          "evidence": [
+            "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/VIEWER_INSPECTION_STEPS.md"
+          ],
+          "parts": {}
+        }
+      },
+      "metric_export": {
+        "status": "BLOCKED",
+        "blockers": [
+          "No documented, human-confirmed plan scale (scale status ASSUMED_FOR_PREVIEW).",
+          "No recorded human review (geometry status CANDIDATE_UNREVIEWED)."
+        ]
+      },
+      "preview_export": {
+        "status": "PASS",
+        "label": "PREVIEW ONLY. Not a metric export. No dimensional claim. Not for engineering or inspection.",
+        "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/export_preview/cubicasa-high-quality-architectural-333-val-region-01__PREVIEW_CANDIDATE_UNREVIEWED.ifc"
+      }
+    }
+  },
+  "milestones": {
+    "technical_exporter": {
+      "status": "PASS",
+      "meaning": "The exporter turns a valid building_model.json into a checked IFC4 file. Shown on synthetic geometry."
+    },
+    "reviewed_prediction_bridge": {
+      "status": "PARTIAL",
+      "meaning": "Reviewed prediction-derived geometry becomes identifiable IFC elements with evidenced dimensions.",
+      "blocked_gates": [
+        "G2",
+        "G6"
+      ]
+    },
+    "downstream_application_acceptance": {
+      "status": "NOT_RUN",
+      "meaning": "A person opened the file in the target application or a viewer and recorded the result."
+    }
+  }
+}

@@ -272,6 +272,7 @@ Masks are saved with nearest-neighbor semantics and checked for binary values. S
 | Historical comparison copy | 07 | Copy the source run's six representative Adam-vs-AdamW test comparisons, masks, and overlays. No training or inference is performed. |
 | Historical composite copy | 08 | Copy four composites from the best RunPod epoch. Each already contains input, target, prediction, and TP/FP/FN panels. No training or inference is performed. |
 | Saved thresholded masks | 09 | Decode the source run's per-sample prediction bitmasks (one bit per head, one bit per fixture class) written by its evaluate stage at the selected thresholds, pair them with the manifest ground-truth masks, and render per-head masks and overlays. Per-image pixel metrics recomputed from the masks are checked against the run's per-image CSV. No new inference is performed. |
+| Downstream integration evidence copy | 11 | Copy the review aid written by the bridge run: the source image and the predicted masks with candidate geometry drawn over them. It contains no ground truth and uses no error palette, because the experiment makes no accuracy claim. No IFC viewer screenshot is created or implied. No training or inference is performed. |
 
 The core visual generator is [generate_audit_overlay.py](../scripts/generate_audit_overlay.py). It uses three shared validation samples across experiments 01-06:
 
@@ -393,6 +394,7 @@ The current repository performs these checks with focused shell and Python valid
 | AdamW visual packaging | Automated by `scripts/generate_adamw_audit_visuals.py` |
 | RunPod historical-composite packaging | Manual copy with recorded hashes |
 | Phase 5 saved-mask visual packaging | Automated by `scripts/generate_hierarchical_audit_visuals.py` |
+| bim_bridge_v0 audit entry preparation | Automated by `scripts/prepare_audit_entry.py` in the bridge workspace; it writes a local draft and never stages, commits or pushes |
 | Normalized README/config/metrics/provenance | Manually authored from verified evidence |
 | JSON/YAML/link/image/hash validation | Scripted during each audit pass, but not yet centralized |
 | Scoreboard and index updates | Manual with cross-file validation |
