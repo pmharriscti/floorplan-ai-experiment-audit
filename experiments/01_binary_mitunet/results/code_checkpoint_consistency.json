@@ -1,0 +1,39 @@
+{
+  "check": "code snapshot against the baseline checkpoint",
+  "performed_utc_date": "2026-09-29",
+  "performed_by": {
+    "actor_type": "agent",
+    "name": "Claude (AI assistant)"
+  },
+  "method": "Built the model with build_mitunet(encoder_weights=None) from the code snapshot, loaded the checkpoint file on CPU and compared state-dict keys and tensor shapes. No training and no inference was run.",
+  "environment": {
+    "python_env": "/home/pmharris/dev/mitunet/.venv",
+    "torch": "2.12.0+cu130",
+    "segmentation_models_pytorch": "0.5.0"
+  },
+  "checkpoint": {
+    "path": "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu/best_model.pth",
+    "sha256": "fb9665056aa06057a571f247882ba5d32abde297215f2ae94d210759f540b72f",
+    "sha256_matches_audit_record": true
+  },
+  "result": {
+    "tensors_in_checkpoint": 954,
+    "tensors_in_snapshot_model": 954,
+    "keys_only_in_checkpoint": 0,
+    "keys_only_in_snapshot_model": 0,
+    "shape_mismatches": 0,
+    "strict_load": "all keys matched"
+  },
+  "parameter_count": {
+    "recorded_in_parameters_json": 64250658,
+    "trainable_parameters_in_snapshot_model": 64248664,
+    "buffer_elements": 1994,
+    "parameters_plus_buffers": 64250658,
+    "finding": "The recorded model_parameter_count equals parameters plus buffers (all state-dict elements). The number of trainable parameters is 64,248,664."
+  },
+  "what_this_shows": "The snapshot's model definition produces the same architecture as the baseline checkpoint.",
+  "what_this_does_not_show": [
+    "That the snapshot's training script, loss, data loading or augmentation are the code that trained the baseline.",
+    "That re-running the snapshot reproduces the baseline metrics. No re-run was made."
+  ]
+}

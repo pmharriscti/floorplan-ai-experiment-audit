@@ -19,7 +19,178 @@
   },
   "code": {
     "git_commit": null,
-    "git_commit_status": "UNKNOWN"
+    "git_commit_status": "UNKNOWN",
+    "reference_snapshot": {
+      "path": "code/",
+      "source_repository": "/home/pmharris/dev/mitunet",
+      "upstream_origin": "https://github.com/aliasstudio/mitunet",
+      "upstream_licence": "MIT",
+      "commit": "459778bd07b1a0b8a60413a2e681bbd4ff7bd829",
+      "commit_date": "2026-07-23T13:09:03-04:00",
+      "baseline_run_date": "2026-06-25",
+      "is_the_code_that_trained_the_baseline": "UNKNOWN",
+      "note": "Earliest recorded code state that contains the baseline training code; about four weeks later than the run. git_commit stays null because the commit of the run itself is unknown.",
+      "model_definition_matches_checkpoint": true,
+      "consistency_check": "results/code_checkpoint_consistency.json",
+      "files": {
+        "CITATION.cff": {
+          "sha256": "0b938f6e76c38b2284816eab8f101da15ad2608c36d175fa4733a2eef98811a7",
+          "size_bytes": 896,
+          "identical_to_commit": true,
+          "identical_to_current_working_tree": true
+        },
+        "LICENSE": {
+          "sha256": "eb22219cfe63fc15e044bfd58884cd3e76ca5f1295c1a52bd70b518771fcaa16",
+          "size_bytes": 1111,
+          "identical_to_commit": true,
+          "identical_to_current_working_tree": true
+        },
+        "README_CUBICASA_TRAINING.md": {
+          "sha256": "3efcafc6c0c8d6cc2fce01f34e9be5923555fa5fef29b180ee267e3db6ebc6db",
+          "size_bytes": 4083,
+          "identical_to_commit": true,
+          "identical_to_current_working_tree": true
+        },
+        "configs/cubicasa5k_mitunet.yaml": {
+          "sha256": "98871ea0c02c9501f84554f763608b81a1e64f6bbebf48c1dbc602f0cb727be2",
+          "size_bytes": 555,
+          "identical_to_commit": true,
+          "identical_to_current_working_tree": true
+        },
+        "mitunet_cubicasa/__init__.py": {
+          "sha256": "31b32906f8c9e8e981c61ed525dcaae996b90b27ae1778f4646a3037987f7cd2",
+          "size_bytes": 272,
+          "identical_to_commit": true,
+          "identical_to_current_working_tree": true
+        },
+        "mitunet_cubicasa/audit.py": {
+          "sha256": "f2e29d69b67953482ac31bf593ffd085dbed884f2a1294a8d7d1368775b6bb6f",
+          "size_bytes": 7611,
+          "identical_to_commit": true,
+          "identical_to_current_working_tree": true
+        },
+        "mitunet_cubicasa/cubicasa_parser.py": {
+          "sha256": "5891d515b9fa909a20b188ad186e497d892ee7f86569db877823f4835d23c27a",
+          "size_bytes": 20652,
+          "identical_to_commit": true,
+          "identical_to_current_working_tree": false
+        },
+        "mitunet_cubicasa/dataset.py": {
+          "sha256": "1394a08078e11f785e3b2d2f40e1633fd9d7e71fb2e4ced2cecce66ff9628eca",
+          "size_bytes": 30692,
+          "identical_to_commit": true,
+          "identical_to_current_working_tree": false
+        },
+        "mitunet_cubicasa/engine.py": {
+          "sha256": "ab78e1870b09f27002296d4f31ebc445c635162b1d4a022190f3acde80edaa82",
+          "size_bytes": 23177,
+          "identical_to_commit": true,
+          "identical_to_current_working_tree": false
+        },
+        "mitunet_cubicasa/losses.py": {
+          "sha256": "1e5f1e019f112e6a60c042fd538215d27bf648d8672c43efe81e9c2a1b6dc57c",
+          "size_bytes": 5224,
+          "identical_to_commit": true,
+          "identical_to_current_working_tree": false
+        },
+        "mitunet_cubicasa/metrics.py": {
+          "sha256": "1cd38bcd0a6e9e1fd3a1957c2501b3253094dd8ba4c7354e09be306a31f7a64a",
+          "size_bytes": 8346,
+          "identical_to_commit": true,
+          "identical_to_current_working_tree": false
+        },
+        "mitunet_cubicasa/model.py": {
+          "sha256": "c72743ec31f71fc982acdadaab99083396ff3586c9f4d3415004cfabc01b991d",
+          "size_bytes": 6747,
+          "identical_to_commit": true,
+          "identical_to_current_working_tree": false
+        },
+        "mitunet_cubicasa/observability.py": {
+          "sha256": "50837fbb56cd9bdbf0d234e7f6d6831c56d4b1c424fe5ff3b99e29b3019917d6",
+          "size_bytes": 19425,
+          "identical_to_commit": true,
+          "identical_to_current_working_tree": true
+        },
+        "mitunet_cubicasa/ontology.py": {
+          "sha256": "ce6cad851a11afdd67e6d75a29dd26a5b37a9a61436d845e4ed3e183a468d7ae",
+          "size_bytes": 7569,
+          "identical_to_commit": true,
+          "identical_to_current_working_tree": false
+        },
+        "mitunet_cubicasa/transforms.py": {
+          "sha256": "6b1c0f2233c4fde76010bb2e870bef131a6898df3180f3518b7ac12c563298cf",
+          "size_bytes": 2299,
+          "identical_to_commit": true,
+          "identical_to_current_working_tree": true
+        },
+        "mitunet_cubicasa/utils.py": {
+          "sha256": "e873292cedf9defc6aca9f0961dbc82ae5f0bea6630cd3ba04116371c0c37ea6",
+          "size_bytes": 6191,
+          "identical_to_commit": true,
+          "identical_to_current_working_tree": true
+        },
+        "requirements-cubicasa.txt": {
+          "sha256": "5cdd35d487190e60004f8d1abecb9ca77a7c0e39a29e3ba4a49d2494e2232a30",
+          "size_bytes": 89,
+          "identical_to_commit": true,
+          "identical_to_current_working_tree": true
+        },
+        "requirements.txt": {
+          "sha256": "2cb9f0d2676f7b6eaa4aabf69983df1b27fd78602da76554a8abbe089d462760",
+          "size_bytes": 216,
+          "identical_to_commit": true,
+          "identical_to_current_working_tree": true
+        },
+        "run_cubicasa_training.sh": {
+          "sha256": "61e20bafd4dbfa9126b32b1a94bf9892540a666017d2b9807fcc1ba879b9f3d2",
+          "size_bytes": 428,
+          "identical_to_commit": true,
+          "identical_to_current_working_tree": true
+        },
+        "scripts/evaluate_mitunet_cubicasa.py": {
+          "sha256": "d801f7880d1f3d4592e64b3cbeebff37dcb5a0fb5d42712c3bb78fdc65ef14f0",
+          "size_bytes": 6097,
+          "identical_to_commit": true,
+          "identical_to_current_working_tree": false
+        },
+        "scripts/predict_mitunet.py": {
+          "sha256": "8af99b872ea19cab89a3bf0891eedb55ea1ec4be99390f160b68aaa506c2b514",
+          "size_bytes": 9171,
+          "identical_to_commit": true,
+          "identical_to_current_working_tree": true
+        },
+        "scripts/train_mitunet_cubicasa.py": {
+          "sha256": "546c620ba145b064c2f1d0d1ede82252de6ef2941449713c824b20753efdbdbc",
+          "size_bytes": 60600,
+          "identical_to_commit": true,
+          "identical_to_current_working_tree": false
+        },
+        "scripts/validate_cubicasa.py": {
+          "sha256": "eba78e514e55e6bea8b86081a61292226e8579228ac06a4fdef3d7624be08831",
+          "size_bytes": 2089,
+          "identical_to_commit": true,
+          "identical_to_current_working_tree": true
+        },
+        "tests/test_dataset.py": {
+          "sha256": "20ace76cf317c1fabcb8754a213798f1c8ac646b9fd09ac6afb3b2e55bf4d069",
+          "size_bytes": 2794,
+          "identical_to_commit": true,
+          "identical_to_current_working_tree": false
+        },
+        "tests/test_metrics.py": {
+          "sha256": "84e1f4c673c69a4e600418a2fb180513cbebe402e74050082ce55eaf6ca5b75e",
+          "size_bytes": 1301,
+          "identical_to_commit": true,
+          "identical_to_current_working_tree": true
+        },
+        "tests/test_model.py": {
+          "sha256": "f398d01715941bc265a45561cfdfda8704435c58f0c9b792431d6c05b8902ed2",
+          "size_bytes": 1785,
+          "identical_to_commit": true,
+          "identical_to_current_working_tree": false
+        }
+      }
+    }
   },
   "tracking": {
     "mlflow": null,
@@ -28,7 +199,80 @@
   "large_artifacts_committed": false,
   "notes": [
     "Baseline checkpoint SHA-256 was located in a downstream comparator artifact, not in the baseline folder itself.",
-    "Source git commit and DVC hash were not located in inspected baseline artifacts."
-  ]
+    "Source git commit and DVC hash were not located in inspected baseline artifacts.",
+    "2026-09-29: added a reference code snapshot, copies of the run's records and BASELINE_MODEL.md. The recorded model_parameter_count 64250658 is parameters plus buffers; trainable parameters are 64248664."
+  ],
+  "run_record_copies": {
+    "results/run_config.yaml": {
+      "source_path": "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu/config.yaml",
+      "source_sha256": "941d715f5ae232b0f0f229433549700419893ef8589976470754cae039c3e6eb",
+      "audit_copy_sha256": "941d715f5ae232b0f0f229433549700419893ef8589976470754cae039c3e6eb",
+      "identical": true,
+      "size_bytes": 776
+    },
+    "results/environment.json": {
+      "source_path": "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu/environment.json",
+      "source_sha256": "f4ffa88fbee0fc0700ecca69956b3dabac6377147ef2b037a495de66b5f6802f",
+      "audit_copy_sha256": "f4ffa88fbee0fc0700ecca69956b3dabac6377147ef2b037a495de66b5f6802f",
+      "identical": true,
+      "size_bytes": 1114
+    },
+    "results/parameters.json": {
+      "source_path": "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu/parameters.json",
+      "source_sha256": "4aa77685dc2bc2f4a9b9d840c1df8506f13b090909f3d7ef7bba734db6c64a14",
+      "audit_copy_sha256": "4aa77685dc2bc2f4a9b9d840c1df8506f13b090909f3d7ef7bba734db6c64a14",
+      "identical": true,
+      "size_bytes": 4486
+    },
+    "results/parameters.md": {
+      "source_path": "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu/parameters.md",
+      "source_sha256": "b80e63193a100b12c694b43e5a3c3ae761db2f9c65dc15d38ac7b1e33a03dc18",
+      "audit_copy_sha256": "b80e63193a100b12c694b43e5a3c3ae761db2f9c65dc15d38ac7b1e33a03dc18",
+      "identical": true,
+      "size_bytes": 1407
+    },
+    "results/dataset_summary.json": {
+      "source_path": "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu/dataset_summary.json",
+      "source_sha256": "820dbdabe8391030356d1b44b590b59608d5a476bfd64ff7b6709c81a4650d70",
+      "audit_copy_sha256": "820dbdabe8391030356d1b44b590b59608d5a476bfd64ff7b6709c81a4650d70",
+      "identical": true,
+      "size_bytes": 2844
+    },
+    "results/training_history.csv": {
+      "source_path": "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu/training_history.csv",
+      "source_sha256": "70da795c7c290463b195bbc12f647a007abb53e42f457bceb37ce3d339f4c289",
+      "audit_copy_sha256": "70da795c7c290463b195bbc12f647a007abb53e42f457bceb37ce3d339f4c289",
+      "identical": true,
+      "size_bytes": 2938
+    },
+    "results/threshold_search.csv": {
+      "source_path": "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu/threshold_search.csv",
+      "source_sha256": "2abb1d5e16d9743f0b82f6173a605798fa9d7c0457a9a1a65aa185b41097b175",
+      "audit_copy_sha256": "2abb1d5e16d9743f0b82f6173a605798fa9d7c0457a9a1a65aa185b41097b175",
+      "identical": true,
+      "size_bytes": 1439
+    },
+    "results/source_metrics.json": {
+      "source_path": "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu/metrics.json",
+      "source_sha256": "6c510ae3a8ddfeca303a7d850f2c82cedc9da0670952611beb9cdf4034d449dc",
+      "audit_copy_sha256": "6c510ae3a8ddfeca303a7d850f2c82cedc9da0670952611beb9cdf4034d449dc",
+      "identical": true,
+      "size_bytes": 10932
+    },
+    "results/validation_metrics.json": {
+      "source_path": "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu/validation_metrics.json",
+      "source_sha256": "4847f56838f6977ef0c475faf093f136d9df46d87ef5c84173d09cd2e2afe24c",
+      "audit_copy_sha256": "4847f56838f6977ef0c475faf093f136d9df46d87ef5c84173d09cd2e2afe24c",
+      "identical": true,
+      "size_bytes": 3672
+    },
+    "results/test_metrics.json": {
+      "source_path": "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu/test_metrics.json",
+      "source_sha256": "0413d27912696f325bc7cd147a55e2f4effcc5b97be516e8b31a26ba68cced03",
+      "audit_copy_sha256": "0413d27912696f325bc7cd147a55e2f4effcc5b97be516e8b31a26ba68cced03",
+      "identical": true,
+      "size_bytes": 7361
+    }
+  },
+  "updated_utc_date": "2026-09-29"
 }
-

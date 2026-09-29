@@ -1,0 +1,26 @@
+experiment_root: experiments/cubicasa5k_mitunet
+cache_dir: artifacts/cubicasa5k_wall_cache
+epochs: 30
+batch_size: 4
+image_size: 512
+resize_mode: letterbox
+optimizer: adam
+lr: 0.0001
+weight_decay: 0.0
+tversky_alpha: 0.6
+tversky_beta: 0.4
+threshold: 0.5
+seed: 42
+num_workers: 4
+amp: true
+grad_clip:
+early_stopping_patience: 8
+early_stopping_metric: val_iou
+early_stopping_min_delta: 0.0
+scheduler_patience: 3
+encoder_weights: imagenet
+subtract_openings: false
+preview_count: 20
+threshold_search: true
+bootstrap_seed: 123
+reports_root: reports/training_runs

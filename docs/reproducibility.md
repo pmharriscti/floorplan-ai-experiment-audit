@@ -2,6 +2,8 @@
 
 This repository is an audit index, not a runnable copy of the experiment workspace. It intentionally excludes raw data, checkpoints, caches, prediction images, and full outputs.
 
+One exception: experiment 01 carries a reference snapshot of the baseline model and training scripts under `experiments/01_binary_mitunet/code/`. It is not proven to be the code that trained the baseline, and it needs the dataset and an environment to run.
+
 ## Artifact Roots
 
 - Local source repository: `/home/pmharris/dev/mitunet`

@@ -1,0 +1,143 @@
+{
+  "best_epochs": {
+    "best_validation_iou": {
+      "epoch": 29,
+      "learning_rate": 2.5e-05,
+      "train_loss": 0.09192868183056513,
+      "val_dice": 0.8998776657541074,
+      "val_iou": 0.8179796353020612,
+      "val_loss": 0.1012247483432293
+    },
+    "best_validation_loss": {
+      "epoch": 28,
+      "learning_rate": 2.5e-05,
+      "train_loss": 0.09226147302559444,
+      "val_dice": 0.898555033873629,
+      "val_iou": 0.8157965776844233,
+      "val_loss": 0.10121941670775414
+    },
+    "final_epoch": {
+      "epoch": 30,
+      "learning_rate": 2.5e-05,
+      "train_loss": 0.09090771134410586,
+      "val_dice": 0.8988444022401525,
+      "val_iou": 0.8162737437549518,
+      "val_loss": 0.10153454810380935
+    }
+  },
+  "data_and_preprocessing": {
+    "augment": true,
+    "cache_dir": "artifacts/cubicasa5k_wall_cache",
+    "data_root": "/home/pmharris/dev/cubicasa5k_data",
+    "image_size": 512,
+    "input_size": 512,
+    "limit_test": null,
+    "limit_train": null,
+    "limit_val": null,
+    "preprocessing_from_checkpoint": {
+      "image_interpolation": "bilinear",
+      "input_size": 512,
+      "mask_interpolation": "nearest",
+      "normalize": "imagenet",
+      "resize_mode": "letterbox",
+      "subtract_openings": false
+    },
+    "resize_mode": "letterbox",
+    "subtract_openings": false,
+    "threshold_search": true
+  },
+  "environment": {
+    "cwd": "/home/pmharris/dev/mitunet",
+    "device": {
+      "cuda_available": true,
+      "cuda_version": "13.0",
+      "gpu_model": "NVIDIA RTX PRO 3000 Blackwell Generation Laptop GPU",
+      "gpu_vram_available_bytes": 11561598976,
+      "gpu_vram_total_bytes": 12820480000,
+      "mps_available": false,
+      "selected_device": "cuda",
+      "torch_version": "2.12.0+cu130"
+    },
+    "packages": {
+      "Pillow": "12.2.0",
+      "albumentations": "2.0.8",
+      "numpy": "2.4.5",
+      "opencv-python-headless": "4.10.0.84",
+      "pandas": "3.0.3",
+      "pyyaml": "6.0.3",
+      "scikit-image": "0.26.0",
+      "segmentation-models-pytorch": "0.5.0",
+      "svgpathtools": "1.7.2",
+      "torch": "2.12.0",
+      "torchvision": "0.27.0"
+    },
+    "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "python": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+    "python_executable": "/home/pmharris/dev/mitunet/.venv/bin/python"
+  },
+  "generated_from": {
+    "checkpoint": "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu/best_model.pth",
+    "config": "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu/config.yaml",
+    "environment": "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu/environment.json",
+    "history": "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu/training_history.csv"
+  },
+  "loss_and_thresholds": {
+    "configured_threshold": 0.5,
+    "loss": "AsymmetricTverskyLoss",
+    "selected_checkpoint_threshold": 0.1,
+    "threshold_search": true,
+    "tversky_alpha": 0.6,
+    "tversky_beta": 0.4
+  },
+  "model": {
+    "architecture": {
+      "classes": 1,
+      "decoder_attention_type": "scse",
+      "encoder_name": "mit_b4",
+      "encoder_weights_loaded": "imagenet",
+      "encoder_weights_requested": "imagenet",
+      "in_channels": 3,
+      "library": "segmentation_models_pytorch",
+      "name": "MitUNet",
+      "output": "raw_logits",
+      "uses_segformer_encoder_transplant": true
+    },
+    "best_validation": {
+      "dice": 0.8998776657541074,
+      "epoch": 29,
+      "iou": 0.8179796353020612
+    },
+    "checkpoint_epoch": 29,
+    "checkpoint_threshold": 0.1,
+    "model_parameter_count": 64250658,
+    "state_tensor_count": 954,
+    "trainable_parameter_count_at_training": 64250658,
+    "validation_metrics_at_checkpoint": {}
+  },
+  "run_dir": "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu",
+  "run_id": "full_gpu",
+  "timing": {
+    "mean_epoch_time_seconds": null,
+    "median_epoch_time_seconds": null,
+    "total_epoch_time_seconds": null
+  },
+  "training": {
+    "amp": true,
+    "amp_active": true,
+    "batch_size": 4,
+    "early_stopping_metric": "val_iou",
+    "early_stopping_min_delta": 0.0,
+    "early_stopping_patience": 8,
+    "effective_batch_size": 4,
+    "epochs_configured": 30,
+    "epochs_logged": 30,
+    "grad_clip": null,
+    "gradient_accumulation_steps": 1,
+    "lr": 0.0001,
+    "num_workers": 4,
+    "optimizer": "adam",
+    "scheduler_patience": 3,
+    "seed": 42,
+    "weight_decay": 0.0
+  }
+}

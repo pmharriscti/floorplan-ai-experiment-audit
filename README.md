@@ -4,7 +4,7 @@ This repository is the initial evidence-backed audit index for the floor-plan se
 
 GitHub repository: [pmharriscti/floorplan-ai-experiment-audit](https://github.com/pmharriscti/floorplan-ai-experiment-audit)
 
-Audit date: 2026-08-31. Updated 2026-09-17 with the RunPod 1024 high-resolution crop treatment, 2026-09-24 with the Phase 5 hierarchical multi-head expansion and the Phase 3A.2 door-opening target ablation, and 2026-09-25 with that ablation's completed 30-epoch evaluation. Updated 2026-09-28 with the bim_bridge_v0 downstream IFC bridge, and 2026-09-29 with its human-review follow-up.
+Audit date: 2026-08-31. Updated 2026-09-17 with the RunPod 1024 high-resolution crop treatment, 2026-09-24 with the Phase 5 hierarchical multi-head expansion and the Phase 3A.2 door-opening target ablation, and 2026-09-25 with that ablation's completed 30-epoch evaluation. Updated 2026-09-28 with the bim_bridge_v0 downstream IFC bridge, and 2026-09-29 with its human-review follow-up and with a model description and reference code snapshot for the experiment 01 baseline.
 
 ## Scope
 

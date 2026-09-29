@@ -1,0 +1,66 @@
+{
+  "cache_dir": "artifacts/cubicasa5k_wall_cache",
+  "dataset_root": "/home/pmharris/dev/cubicasa5k_data/data/datasets/qmarva/cubicasa5k/versions/4/cubicasa5k/cubicasa5k",
+  "doors_windows_policy": "Doors/windows are not subtracted from native SVG wall targets by default.",
+  "image_file": "F1_scaled.png",
+  "layout": {
+    "coco_annotation_files": [
+      "/home/pmharris/dev/cubicasa5k_data/data/datasets/qmarva/cubicasa5k/versions/4/cubicasa5k_coco/test_coco_pt.json",
+      "/home/pmharris/dev/cubicasa5k_data/data/datasets/qmarva/cubicasa5k/versions/4/cubicasa5k_coco/train_coco_pt.json",
+      "/home/pmharris/dev/cubicasa5k_data/data/datasets/qmarva/cubicasa5k/versions/4/cubicasa5k_coco/val_coco_pt.json"
+    ],
+    "data_root": "/home/pmharris/dev/cubicasa5k_data",
+    "has_coco_annotations": true,
+    "has_lmdb": false,
+    "has_pre_generated_binary_masks": false,
+    "has_train_val_test_txt": true,
+    "lmdb_files": [],
+    "mask_like_files": [],
+    "model_svg_count": 5000,
+    "native_cubicasa": true,
+    "original_image_count": 5000,
+    "scaled_image_count": 5000,
+    "split_files": [
+      "/home/pmharris/dev/cubicasa5k_data/data/datasets/qmarva/cubicasa5k/versions/4/cubicasa5k/cubicasa5k/test.txt",
+      "/home/pmharris/dev/cubicasa5k_data/data/datasets/qmarva/cubicasa5k/versions/4/cubicasa5k/cubicasa5k/train.txt",
+      "/home/pmharris/dev/cubicasa5k_data/data/datasets/qmarva/cubicasa5k/versions/4/cubicasa5k/cubicasa5k/val.txt"
+    ]
+  },
+  "preview_dir": "experiments/cubicasa5k_mitunet/full_gpu/mask_overlays",
+  "split_files": {
+    "test": "/home/pmharris/dev/cubicasa5k_data/data/datasets/qmarva/cubicasa5k/versions/4/cubicasa5k/cubicasa5k/test.txt",
+    "train": "/home/pmharris/dev/cubicasa5k_data/data/datasets/qmarva/cubicasa5k/versions/4/cubicasa5k/cubicasa5k/train.txt",
+    "val": "/home/pmharris/dev/cubicasa5k_data/data/datasets/qmarva/cubicasa5k/versions/4/cubicasa5k/cubicasa5k/val.txt"
+  },
+  "splits": {
+    "test": {
+      "empty_masks": 0,
+      "invalid_samples": 0,
+      "resolved_samples": 400,
+      "total_pixels": 934037314,
+      "valid_samples": 400,
+      "wall_pixel_prevalence": 0.08433481812697688,
+      "wall_pixels": 78771867
+    },
+    "train": {
+      "empty_masks": 0,
+      "invalid_samples": 0,
+      "resolved_samples": 4200,
+      "total_pixels": 10532743213,
+      "valid_samples": 4200,
+      "wall_pixel_prevalence": 0.07762067169651789,
+      "wall_pixels": 817558603
+    },
+    "val": {
+      "empty_masks": 0,
+      "invalid_samples": 0,
+      "resolved_samples": 400,
+      "total_pixels": 884635530,
+      "valid_samples": 400,
+      "wall_pixel_prevalence": 0.08455210023047571,
+      "wall_pixels": 74797792
+    }
+  },
+  "target": "binary wall mask from native SVG Wall polygons",
+  "wall_mapping": "floortrans.loaders.house.rooms_selected['Wall'] == 2"
+}

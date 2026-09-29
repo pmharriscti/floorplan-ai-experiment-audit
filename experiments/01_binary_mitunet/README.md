@@ -20,7 +20,16 @@ Primary evidence files:
 
 The run used CubiCasa5K v4 with train/validation/test counts of `4200`/`400`/`400`, RGB input size `512`, letterbox resize, Adam optimizer, learning rate `0.0001`, batch size `4`, AMP enabled, seed `42`, 30 configured epochs, and threshold search enabled.
 
-The model used `segmentation_models_pytorch`, encoder `mit_b4`, ImageNet encoder weights, one output class, and raw logits. Verified model parameter count from `parameters.json` is `64250658`.
+The model used `segmentation_models_pytorch`, encoder `mit_b4`, ImageNet encoder weights, one output class, and raw logits. Verified model parameter count from `parameters.json` is `64250658`. That figure counts parameters and buffers; the trainable parameters are `64248664` (see [results/code_checkpoint_consistency.json](results/code_checkpoint_consistency.json)).
+
+## Model Description and Code
+
+- [BASELINE_MODEL.md](BASELINE_MODEL.md) describes the network, data, training and results.
+- [code/](code/) holds a reference snapshot of the model and training scripts, with its limits in [code/README.md](code/README.md).
+- [results/](results/) holds copies of the run's own records.
+
+The snapshot is from a commit made about four weeks after the run. Its model definition matches the baseline
+checkpoint tensor for tensor. **It is not proven to be the code that trained the baseline.**
 
 ## Verified Metrics
 
@@ -46,6 +55,8 @@ This run is a successful baseline for binary wall segmentation. It remains the r
 
 ## Missing Evidence
 
-The source git commit and DVC hash for this baseline were not located in the inspected baseline artifacts.
+The source git commit and DVC hash for this baseline were not located in the inspected baseline artifacts. The code snapshot added on 2026-09-29 does not change that.
+
+The augmentation operations applied during training are not recorded; the run records only that augmentation was on.
 
 See [config.yaml](config.yaml), [metrics.json](metrics.json), and [provenance.json](provenance.json).

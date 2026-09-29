@@ -1,0 +1,5 @@
+-r requirements.txt
+PyYAML>=6.0.2
+pytest>=8.3.0
+scikit-image>=0.24.0
+svgpathtools>=1.6.1
