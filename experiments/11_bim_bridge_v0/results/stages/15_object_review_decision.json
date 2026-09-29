@@ -1,0 +1,34 @@
+{
+  "experiment_id": "bim_bridge_v0",
+  "run_id": "bim_bridge_v0_20260928_183649_UTC",
+  "stage": "object_review_decision",
+  "status": "BLOCKED",
+  "written_utc": "2026-09-29T13:27:40Z",
+  "track": "REVIEWED_PREDICTION_BRIDGE",
+  "meaning": "A whole-object human decision for wall_012 was recorded in the draft review record. It was not applied: four objects have no decision and the validator refuses the record. No candidate, review state, scale status, IFC or gate changed.",
+  "decision_id": "decision-003-wall_012-whole-object",
+  "object_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012",
+  "decision": "ACCEPT_WITH_EDITS",
+  "record": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_in_progress/decision_003_wall_012_whole_object_20260929_132739_UTC.json",
+  "record_sha256": "3a67aeadb66bff82aa87366d3f2c7d777da57de96a7478b445129129972a97e5",
+  "draft_review_record": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_in_progress/review_record_DRAFT_03.json",
+  "objects_pending": [
+    "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002",
+    "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003",
+    "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004",
+    "opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02"
+  ],
+  "validator_refusal": [
+    "reviewer is empty: a named human reviewer is required",
+    "reviewer_role is empty",
+    "reviewed_utc must be YYYY-MM-DDTHH:MM:SSZ",
+    "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002: decision must be one of ['ACCEPT', 'ACCEPT_WITH_EDITS', 'REJECT']",
+    "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003: decision must be one of ['ACCEPT', 'ACCEPT_WITH_EDITS', 'REJECT']",
+    "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004: decision must be one of ['ACCEPT', 'ACCEPT_WITH_EDITS', 'REJECT']",
+    "opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02: decision must be one of ['ACCEPT', 'ACCEPT_WITH_EDITS', 'REJECT']"
+  ],
+  "applied": false,
+  "new_ifc_written": false,
+  "scale_confirmed": false,
+  "gates_changed": []
+}

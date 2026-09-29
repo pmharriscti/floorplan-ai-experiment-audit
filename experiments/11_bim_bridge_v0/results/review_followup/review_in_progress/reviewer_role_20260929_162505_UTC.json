@@ -1,0 +1,48 @@
+{
+  "record_version": "bim_bridge.reviewer_role_record/0.1",
+  "run_id": "bim_bridge_v0_20260928_183649_UTC",
+  "recorded_utc": "2026-09-29T16:25:05Z",
+  "reviewer_role": "Prototype image-space geometry reviewer",
+  "scope_statement_verbatim": "My review covers visual agreement with the source drawing for a limited prototype preview. It does not certify real-world dimensions, construction suitability, or inspection readiness.",
+  "stated_by": {
+    "actor_type": "human",
+    "name": "Paul Harris",
+    "channel": "Instruction given to the AI assistant in the working session."
+  },
+  "recorded_by": {
+    "actor_type": "agent",
+    "name": "Claude (AI assistant)"
+  },
+  "signature": {
+    "digitally_signed_by_reviewer": false
+  },
+  "schema": {
+    "field": "reviewer_role",
+    "type": "free text, non-empty string",
+    "predefined_values": null,
+    "evidence": [
+      "src/bim_bridge/review.py:34",
+      "src/bim_bridge/schema/building_model.schema.json:148"
+    ],
+    "lands_in_ifc_as": "AutoAutoCAD_Provenance.ReviewerRole (src/bim_bridge/ifc_export.py:91)"
+  },
+  "where_the_scope_statement_is_kept": "This file only. The review schema has a role field and no scope field, so the scope statement is not in the draft record and would not reach the IFC. Existing review notes were not rewritten to add it.",
+  "draft_review_record": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_in_progress/review_record_DRAFT_05.json",
+  "draft_review_record_sha256": "b0fbe078cdcc80729d5c8945d4c542852e4b4eebb47d33df14fa02e5007dc739",
+  "objects_section_identical_to_previous_draft": true,
+  "previous_draft": {
+    "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_in_progress/review_record_DRAFT_04.json",
+    "sha256": "deda0a1707fd7a3113bf9a27a7e1f4c7e63e448be6ff0dcecd29c214ffb6dd70"
+  },
+  "still_empty_in_the_draft": {
+    "reviewer": "record-level reviewer name",
+    "reviewed_utc": "set when the record is completed"
+  },
+  "validator_still_refuses": [
+    "reviewer is empty: a named human reviewer is required",
+    "reviewed_utc must be YYYY-MM-DDTHH:MM:SSZ",
+    "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003: decision must be one of ['ACCEPT', 'ACCEPT_WITH_EDITS', 'REJECT']",
+    "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004: decision must be one of ['ACCEPT', 'ACCEPT_WITH_EDITS', 'REJECT']",
+    "opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02: decision must be one of ['ACCEPT', 'ACCEPT_WITH_EDITS', 'REJECT']"
+  ]
+}

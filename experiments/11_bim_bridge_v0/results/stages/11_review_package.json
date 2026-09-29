@@ -1,0 +1,32 @@
+{
+  "experiment_id": "bim_bridge_v0",
+  "run_id": "bim_bridge_v0_20260928_183649_UTC",
+  "stage": "review_package",
+  "status": "PASS",
+  "written_utc": "2026-09-28T19:51:17Z",
+  "track": "REVIEWED_PREDICTION_BRIDGE",
+  "meaning": "The review package was written. This is not a review: no gate, review state or scale status changed.",
+  "package_dir": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_package_20260928_195105_UTC",
+  "human_review_recorded": false,
+  "scale_confirmed": false,
+  "gates_changed": [],
+  "reuse_check": {
+    "review_template_hash_matches_candidate_geometry": true,
+    "review_template_objects_match": true,
+    "review_template_current_values_match": true,
+    "review_template_is_blank": true,
+    "ifc_objects_have_guids": true,
+    "exported_model_built_from_this_candidate_geometry": true,
+    "existing_overlay_present": true
+  },
+  "images": [
+    "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_package_20260928_195105_UTC/01_overview_full_plan.png",
+    "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_package_20260928_195105_UTC/02_overview_region.png",
+    "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_package_20260928_195105_UTC/03_closeup_wall_002.png",
+    "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_package_20260928_195105_UTC/04_closeup_wall_003.png",
+    "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_package_20260928_195105_UTC/05_closeup_wall_004.png",
+    "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_package_20260928_195105_UTC/06_closeup_wall_012.png",
+    "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_package_20260928_195105_UTC/07_closeup_door_opening-c02.png",
+    "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_package_20260928_195105_UTC/08_excluded_aperture_component_01.png"
+  ]
+}

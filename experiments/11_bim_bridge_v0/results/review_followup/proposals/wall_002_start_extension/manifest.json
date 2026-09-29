@@ -1,0 +1,23 @@
+{
+  "built_by": {
+    "actor_type": "agent",
+    "script": "/home/pmharris/dev/bim_bridge_v0/scripts/propose_wall_endpoint_extension.py",
+    "script_sha256": "f8f2150fc27022bb89bd26c001d2146bb9fb270aed29c11a2c4e4ee19a23cfc9"
+  },
+  "existing_run_files_unchanged": 89,
+  "inputs_read_only_sha256": {
+    "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/candidate_geometry.json": "fcfd4a7061ed1d7fafc68a4985ca461fb15cba1812e933f6ec394c96dcfa7780",
+    "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/vectorizer_output/wall_geometry.json": "5fe575ee31c816258b3868e763884bf90cf634a87b5cab6a56946a6bf776e08e",
+    "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/masks/val/high_quality_architectural__333__heads.png": "4da6f6eb69c64ef721a30e7f81f74843348db831d3608b331fcc2dbd03f1f355",
+    "/home/pmharris/dev/cubicasa5k_data/data/datasets/qmarva/cubicasa5k/versions/4/cubicasa5k/cubicasa5k/high_quality_architectural/333/F1_scaled.png": "ac6be65c391069f75307a9b90c66240a0e94c9e75cadfd161ca14001bd6a88cc",
+    "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/export_preview/cubicasa-high-quality-architectural-333-val-region-01__PREVIEW_CANDIDATE_UNREVIEWED.ifc": "e4def87979953d853790d3c3f63ddde4d4b39f3a7c7a8df7eecb492713dcd09e",
+    "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/export_preview/guid_map.json": "1c258d27d5c20243a08e4a467ff2118936141b1eaeef2fbd876f2c55cc00046d",
+    "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/gates.json": "59060b796e3248c82b0ed02bb7e625368291e56b8e7cf71b29729e70eb2a07fd"
+  },
+  "outputs_sha256": {
+    "01_wall_002_start_extension_original_current_proposed.png": "05e50a63a1cd37e5fe418666bda5885db517cd6a4028cb6e76a259c9a6365d9a",
+    "PROPOSAL.md": "fa880dc6076f4973f5103fdc8f0100a8520ee1ef5568f1a092a943204118ef69",
+    "extension_columns.json": "f3b9ebd3289f6aed15857dbe3c8a51f2d31afbe0106c2d99e754092d4efa5954",
+    "proposal.json": "02b2c73eef6db88d96d617b1da7ce66de7900d167b15ab00b00378427fbbe06a"
+  }
+}

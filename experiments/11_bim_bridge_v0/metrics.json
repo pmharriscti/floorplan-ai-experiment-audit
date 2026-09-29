@@ -561,5 +561,111 @@
     "dimensional accuracy",
     "fitness for engineering or inspection use",
     "viewer or target-application acceptance"
-  ]
+  ],
+  "review_followup_2026_09_29": {
+    "date": "2026-09-29",
+    "status": "HUMAN_REVIEW_IN_PROGRESS_NOT_APPLIED",
+    "summary": "A human reviewer recorded whole-object decisions for 2 of 5 objects in a draft review record. The record is incomplete, the validator refuses it, and it was not applied. No geometry, IFC, review state, scale status or gate changed.",
+    "reviewer": {
+      "name": "Paul Harris",
+      "role": "Prototype image-space geometry reviewer",
+      "role_field": "free text; no predefined values",
+      "scope_statement": "My review covers visual agreement with the source drawing for a limited prototype preview. It does not certify real-world dimensions, construction suitability, or inspection readiness.",
+      "how_recorded": "Decisions were given by the reviewer in the working session and written to files by an AI assistant. The reviewer did not sign the files, digitally or otherwise."
+    },
+    "objects_with_a_recorded_decision_in_the_draft": [
+      2,
+      5
+    ],
+    "objects_with_an_applied_review_state": [
+      0,
+      5
+    ],
+    "decisions": [
+      {
+        "object": "wall_012",
+        "decision": "ACCEPT_WITH_EDITS",
+        "scope": "limited image-space preview",
+        "edits": "axis x 304.5 -> 305.5 at both ends; y unchanged",
+        "thickness": "4.0 px kept as a preview approximation; prediction-mask-derived origin preserved; no thickness edit",
+        "also_recorded": [
+          "2D connection to wall_004 accepted for the limited preview",
+          "disclosed limitation: outside of the L-shaped corner underfilled; corner shape not confirmed",
+          "no corner-filling or neighbouring-wall edits authorised"
+        ],
+        "consolidates": [
+          "partial-001-wall_012-axis-x",
+          "partial-002-wall_012-lower-junction-wall_004"
+        ]
+      },
+      {
+        "object": "wall_002",
+        "decision": "ACCEPT_WITH_EDITS",
+        "scope": "limited image-space preview",
+        "edits": "axis start x 266.0 -> 233.0; start y and the end point unchanged",
+        "thickness": "9.0 px kept as a preview approximation; origin 'vectorizer' preserved; no thickness edit",
+        "also_recorded": [
+          "PARTIAL WALL limitation in the review notes: x = 233 is an internal segmentation boundary, not a physical wall ending; upstream wall_001 is not selected or exported",
+          "the original extraction cause remains unresolved"
+        ]
+      }
+    ],
+    "pending_objects": [
+      "wall_003",
+      "wall_004",
+      "door_opening-c02"
+    ],
+    "validator_refusal_of_the_current_draft": [
+      "reviewer is empty",
+      "reviewed_utc is empty",
+      "three objects have no decision"
+    ],
+    "alignment_evidence_wall_012": {
+      "rows_checked_away_from_junctions": 57,
+      "current_axis_minus_predicted_mask_centre_px_median": -1.0,
+      "proposed_axis_minus_predicted_mask_centre_px_median": 0.0,
+      "predicted_mask_covered_by_footprint": {
+        "current": "75-76%",
+        "proposed": "94-100%"
+      },
+      "note": "Compares geometry with the model's own prediction and with drawn ink (heuristic). It is not a measurement of the building."
+    },
+    "extension_evidence_wall_002": {
+      "columns_checked": 34,
+      "axis_on_predicted_wall": "34 of 34",
+      "door_opening_px": 0,
+      "window_opening_px": 0,
+      "junction_px": 0,
+      "endpoint_px": 0,
+      "drawn_edge_line_breaks": 0,
+      "conflicts_found": 0,
+      "note": "Agreement with the prediction mask is not an approval. The drawing check is a heuristic."
+    },
+    "finding_001_wall_002_start": {
+      "verdict": "UNRESOLVED_RECONSTRUCTION_ENDPOINT",
+      "summary": "The start x 266.0 is the vectorizer's unedited value, not a crop. Upstream wall_001 (not selected) ends at x 233; the 33 px between them belong to no upstream wall although the prediction is continuous. The cause is not recorded because the vectorizer ran with debug images off."
+    },
+    "unchanged": {
+      "gates": "G1 PASS, G2 BLOCKED, G3 PASS, G4 PASS, G5 PASS, G6 BLOCKED, G7 NOT_RUN",
+      "milestones": "technical exporter PASS; reviewed prediction bridge PARTIAL; viewer acceptance NOT_RUN",
+      "scale_status": "ASSUMED_FOR_PREVIEW",
+      "geometry_status": "CANDIDATE_UNREVIEWED",
+      "candidate_geometry_sha256": "fcfd4a7061ed1d7fafc68a4985ca461fb15cba1812e933f6ec394c96dcfa7780",
+      "ifc": {
+        "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/export_preview/cubicasa-high-quality-architectural-333-val-region-01__PREVIEW_CANDIDATE_UNREVIEWED.ifc",
+        "sha256": "e4def87979953d853790d3c3f63ddde4d4b39f3a7c7a8df7eecb492713dcd09e",
+        "note": "Still the unreviewed preview, exported before any review. It does not contain the approved edits."
+      },
+      "new_ifc_revision": null,
+      "explicit_ifc_wall_connection_relationships": 0,
+      "run_files_existing_before_follow_up": "byte-identical, checked against checksums.sha256"
+    },
+    "not_claimed": [
+      "No object is human-reviewed in the geometry or the IFC.",
+      "No scale confirmation and no dimensional claim.",
+      "No viewer inspection.",
+      "No accuracy claim; no ground truth or annotation was read.",
+      "The reviewer's decisions concern visual agreement with the drawing for a preview, not the building."
+    ]
+  }
 }

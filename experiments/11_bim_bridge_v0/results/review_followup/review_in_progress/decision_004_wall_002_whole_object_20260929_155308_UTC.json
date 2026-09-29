@@ -1,0 +1,190 @@
+{
+  "record_version": "bim_bridge.object_review_decision/0.1",
+  "experiment_id": "bim_bridge_v0",
+  "run_id": "bim_bridge_v0_20260928_183649_UTC",
+  "model_id": "cubicasa-high-quality-architectural-333-val-region-01",
+  "decision_id": "decision-004-wall_002-whole-object",
+  "recorded_utc": "2026-09-29T15:53:08Z",
+  "kind": "WHOLE_OBJECT_REVIEW_DECISION",
+  "object_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002",
+  "decision": "ACCEPT_WITH_EDITS",
+  "scope": "limited image-space preview",
+  "applies_only_to": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002",
+  "applied_to_geometry": false,
+  "why_not_applied_yet": "Three objects have no decision and reviewer_role has not been stated. The validator refuses the record. It was not bypassed and no role was invented.",
+  "decided_by": {
+    "actor_type": "human",
+    "name": "Paul Harris",
+    "role": null,
+    "role_note": "No role was stated; none was invented.",
+    "channel": "Instruction given to the AI assistant in the working session."
+  },
+  "recorded_by": {
+    "actor_type": "agent",
+    "name": "Claude (AI assistant)",
+    "note": "The agent wrote this file from the reviewer's instruction, quoted below."
+  },
+  "signature": {
+    "digitally_signed_by_reviewer": false,
+    "note": "The reviewer did not sign this file."
+  },
+  "decision_time_note": "recorded_utc is when this file was written.",
+  "reviewer_statement_verbatim": "Record wall_002 as ACCEPT_WITH_EDITS for the limited\nimage-space preview.\n\nObject:\nwall:cubicasa-high-quality-architectural-333-val-region-01:wall_002\n\nAuthorized change:\n- axis_px.start.x: 266.0 -> 233.0\n\nPreserve:\n- The exact existing start Y coordinate.\n- The complete existing end coordinate.\n- thickness_px = 9.0.\n- Existing object identity and IFC GlobalId mapping.\n- Original candidate geometry and upstream provenance.\n\nI accept the unchanged 9 px thickness as a preview approximation,\nnot a verified exact or real-world thickness. Preserve its origin;\ndo not create a thickness edit when its value is unchanged.\n\nReason:\nI accept extending this selected segment across the previously\nomitted interval for the preview. The original extraction cause\nremains unresolved.\n\nPut the following limitation in the supported review notes so it\nsurvives export as ReviewDecisionNotes:\n\nPARTIAL WALL. wall_002 represents only part of a longer drawn wall.\nIts start at x = 233 in letterbox-512 coordinates is an internal\nsegmentation boundary, not a physical wall ending. Upstream\nwall_001 ends there but is not selected or exported. The drawing\nand prediction continue to the left. The retained 9 px thickness\nis an approximation and is slightly taller than the prediction\nmask over much of the extension.\n\nRecord the endpoint edit with before/after values and the reason.\nBind the decision to the exact candidate and proposal hashes.\n\nDo not modify or import wall_001, change other objects, or add a\ndedicated Limitations property for this experiment.\n\nPreserve the completed wall_012 decision. Leave wall_003,\nwall_004, and door_opening-c02 pending until I explicitly decide.",
+  "tied_to": {
+    "candidate_geometry_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/candidate_geometry.json",
+    "candidate_geometry_sha256": "fcfd4a7061ed1d7fafc68a4985ca461fb15cba1812e933f6ec394c96dcfa7780",
+    "candidate_version": "bim_bridge.candidate_geometry/0.2",
+    "proposal_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/proposals/wall_002_start_extension_20260929_141905_UTC/proposal.json",
+    "proposal_sha256": "02b2c73eef6db88d96d617b1da7ce66de7900d167b15ab00b00378427fbbe06a",
+    "proposal_version": "bim_bridge.geometry_proposal/0.1",
+    "related_finding": {
+      "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_in_progress/finding_001_wall_002_start_endpoint_20260929_133628_UTC.json",
+      "sha256": "42ae8f22ac5a1a9501d8e3f3436881ea0d1777cef18af6b07636dcc6584bdf6d",
+      "verdict": "UNRESOLVED_RECONSTRUCTION_ENDPOINT"
+    }
+  },
+  "endpoint_edit": {
+    "field": "axis_px.start",
+    "before": [
+      266.0,
+      160.04166666666666
+    ],
+    "after": [
+      233.0,
+      160.04166666666666
+    ],
+    "reason": "I accept extending this selected segment across the previously omitted interval for the preview. The original extraction cause remains unresolved."
+  },
+  "preserved": {
+    "axis_px.start.y": 160.04166666666666,
+    "axis_px.end": [
+      472.0,
+      160.04166666666666
+    ],
+    "thickness_px": 9.0,
+    "thickness_origin": "vectorizer",
+    "thickness_basis": "Vectorizer thickness 9.0 px, consistent with 9.0 px measured on the predicted structural_wall mask.",
+    "object_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002",
+    "ifc_global_id_mapping": {
+      "ifc_guid": "1XkaxwpSjJ8Qnf5B_jRxg1",
+      "uuid": "61ba4efa-cdcb-5321-ac69-14bfad6fba81",
+      "guid_map": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/export_preview/guid_map.json",
+      "guid_map_sha256": "1c258d27d5c20243a08e4a467ff2118936141b1eaeef2fbd876f2c55cc00046d"
+    },
+    "candidate_original": {
+      "axis_px": {
+        "start": [
+          266.0,
+          160.04166666666666
+        ],
+        "end": [
+          472.0,
+          160.04166666666666
+        ]
+      },
+      "thickness_px": 9.0,
+      "orientation": "horizontal",
+      "source": "vectorizer output, unedited"
+    },
+    "source_refs": [
+      {
+        "kind": "prediction_mask_region",
+        "artifact_role": "predicted_structural_wall",
+        "path": "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/masks/val/high_quality_architectural__333__heads.png",
+        "sha256": "4da6f6eb69c64ef721a30e7f81f74843348db831d3608b331fcc2dbd03f1f355",
+        "upstream_object_id": null,
+        "region_candidate_px": [
+          261.5,
+          155.54166666666666,
+          476.5,
+          164.54166666666666
+        ],
+        "pixel_support": {
+          "axis_support_ratio": 1.0,
+          "axis_samples": 207,
+          "measured_thickness_px_median": 9.0
+        }
+      },
+      {
+        "kind": "vectorizer_output",
+        "artifact_role": "wall_geometry.json",
+        "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/vectorizer_output/wall_geometry.json",
+        "sha256": "5fe575ee31c816258b3868e763884bf90cf634a87b5cab6a56946a6bf776e08e",
+        "upstream_object_id": "wall_002",
+        "region_candidate_px": null,
+        "pixel_support": null
+      }
+    ]
+  },
+  "thickness": {
+    "value_px": 9.0,
+    "accepted_as": "preview approximation",
+    "verified_exact_thickness": false,
+    "real_world_measurement": false,
+    "thickness_edit_created": false
+  },
+  "limitation_for_ReviewDecisionNotes_verbatim": "PARTIAL WALL. wall_002 represents only part of a longer drawn wall. Its start at x = 233 in letterbox-512 coordinates is an internal segmentation boundary, not a physical wall ending. Upstream wall_001 ends there but is not selected or exported. The drawing and prediction continue to the left. The retained 9 px thickness is an approximation and is slightly taller than the prediction mask over much of the extension.",
+  "review_notes_as_written": "PARTIAL WALL. wall_002 represents only part of a longer drawn wall. Its start at x = 233 in letterbox-512 coordinates is an internal segmentation boundary, not a physical wall ending. Upstream wall_001 ends there but is not selected or exported. The drawing and prediction continue to the left. The retained 9 px thickness is an approximation and is slightly taller than the prediction mask over much of the extension. || DECISION decision-004-wall_002-whole-object by Paul Harris, recorded 2026-09-29T15:53:08Z by an AI assistant from the reviewer's instruction; not signed by the reviewer. ACCEPT_WITH_EDITS for the LIMITED IMAGE-SPACE PREVIEW only. Thickness 9 px accepted as a preview approximation, not a verified exact or real-world thickness; origin unchanged (vectorizer), no thickness edit. The original extraction cause of the omitted interval remains unresolved. Scale ASSUMED_FOR_PREVIEW, not confirmed. Bound to candidate_geometry sha256 fcfd4a7061ed1d7fafc68a4985ca461fb15cba1812e933f6ec394c96dcfa7780 and proposal.json sha256 02b2c73eef6db88d96d617b1da7ce66de7900d167b15ab00b00378427fbbe06a.",
+  "extraction_cause": "unresolved",
+  "not_authorized": [
+    "modify or import wall_001",
+    "change other objects",
+    "a dedicated Limitations property"
+  ],
+  "not_covered": [
+    "wall_003, wall_004 and door_opening-c02: no decision.",
+    "No scale confirmation.",
+    "No dimensional or real-world claim.",
+    "No viewer inspection."
+  ],
+  "mechanics_check": {
+    "what": "In-memory check of the edit mechanics on wall_002 alone, with a marker in place of a reviewer. Nothing was written from it and it is not a review.",
+    "resulting_axis_px": {
+      "start": [
+        233.0,
+        160.04166666666666
+      ],
+      "end": [
+        472.0,
+        160.04166666666666
+      ]
+    },
+    "resulting_thickness_px": 9.0,
+    "thickness_source_unchanged": true,
+    "human_edits": [
+      {
+        "field": "axis_px.start",
+        "before": {
+          "axis_px.start": [
+            266.0,
+            160.04166666666666
+          ]
+        },
+        "after": {
+          "axis_px.start": [
+            233.0,
+            160.04166666666666
+          ]
+        },
+        "reason": "I accept extending this selected segment across the previously omitted interval for the preview. The original extraction cause remains unresolved."
+      }
+    ],
+    "thickness_edit_created": false,
+    "candidate_original_kept": true,
+    "decision_notes_start_with_limitation": true,
+    "object_id_unchanged": true
+  },
+  "state_after_this_record": {
+    "object_review_state_in_candidate_geometry": "CANDIDATE_UNREVIEWED",
+    "decision_in_draft_record": "ACCEPT_WITH_EDITS",
+    "scale_status": "ASSUMED_FOR_PREVIEW",
+    "scale_confirmed": false,
+    "candidate_geometry_changed": false,
+    "ifc_changed": false,
+    "new_ifc_written": false,
+    "gates_changed": [],
+    "G2": "BLOCKED",
+    "G6": "BLOCKED",
+    "G7": "NOT_RUN"
+  }
+}

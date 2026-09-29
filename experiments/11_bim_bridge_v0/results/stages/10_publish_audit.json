@@ -1,0 +1,41 @@
+{
+  "experiment_id": "bim_bridge_v0",
+  "run_id": "bim_bridge_v0_20260928_183649_UTC",
+  "stage": "publish_audit",
+  "status": "PASS",
+  "written_utc": "2026-09-28T19:10:22Z",
+  "published_utc": "2026-09-28T19:10:22Z",
+  "authorised_by": "repository owner, explicit request in the working session of 2026-09-28",
+  "repository": "pmharriscti/floorplan-ai-experiment-audit",
+  "branch": "main",
+  "commit": "40069ca675673340b9e3f97ed676eaddedd1418b",
+  "parent_commit": "703fcbc4e3482cf664a79d853ea268ddb583354e",
+  "remote_head_verified": "40069ca675673340b9e3f97ed676eaddedd1418b",
+  "local_equals_remote": true,
+  "worktree_clean_after_push": true,
+  "files_in_commit": 41,
+  "new_files": 33,
+  "modified_files": 8,
+  "binary_files": [
+    "experiments/11_bim_bridge_v0/qa/review_overlay_candidates_on_source.png"
+  ],
+  "not_published": [
+    "IFC files",
+    "checkpoints",
+    "datasets",
+    "prediction dumps",
+    "the bridge workspace source code",
+    "the run directory"
+  ],
+  "commit_url": "https://github.com/pmharriscti/floorplan-ai-experiment-audit/commit/40069ca675673340b9e3f97ed676eaddedd1418b",
+  "entry_url": "https://github.com/pmharriscti/floorplan-ai-experiment-audit/tree/main/experiments/11_bim_bridge_v0",
+  "prepublication_validation": "audit_validation_03_prepublication.json (28 of 28)",
+  "changes_made_for_publication": [
+    "entry README publication section",
+    "root README date line",
+    "scoreboard notes: removed the local-draft sentence",
+    "provenance.json publication block; removed the stale hash of checksums.sha256"
+  ],
+  "supersedes_status_in": "AUDIT_ENTRY_STATUS.md, which describes the entry while it was an unpublished draft",
+  "experiment_outcome_unchanged": "reviewed prediction bridge PARTIAL; gates G2, G6 and G7 remain open"
+}

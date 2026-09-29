@@ -1,0 +1,428 @@
+{
+  "proposal_version": "bim_bridge.geometry_proposal/0.1",
+  "experiment_id": "bim_bridge_v0",
+  "run_id": "bim_bridge_v0_20260928_183649_UTC",
+  "model_id": "cubicasa-high-quality-architectural-333-val-region-01",
+  "written_utc": "2026-09-28T22:38:46Z",
+  "status": "PROPOSED_AWAITING_HUMAN_REVIEW",
+  "applied": false,
+  "is_a_review": false,
+  "human_acceptance_recorded": false,
+  "scale_status": "ASSUMED_FOR_PREVIEW",
+  "scale_confirmed": false,
+  "gates_changed": [],
+  "object_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012",
+  "object_review_state": "CANDIDATE_UNREVIEWED",
+  "candidate_geometry_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/candidate_geometry.json",
+  "candidate_geometry_sha256": "fcfd4a7061ed1d7fafc68a4985ca461fb15cba1812e933f6ec394c96dcfa7780",
+  "proposed_by": {
+    "actor_type": "human_request_prepared_by_agent",
+    "requested_by": "Paul Harris",
+    "prepared_by": "Claude (AI assistant) with scripts/propose_wall_axis_shift.py",
+    "note": "The shift value and the reason were given by the requester. The measurements and pictures were produced by the script. Neither is a recorded review decision."
+  },
+  "reason_given": "At the reported row 201, the predicted mask spans 303.5-307.5, while the current footprint spans 302.5-306.5. The original-image close-up also suggests that the current footprint is left of the intended wall strip.",
+  "candidate_space": "letterbox_512",
+  "current": {
+    "axis_px": {
+      "start": [
+        304.5,
+        241.5
+      ],
+      "end": [
+        304.5,
+        160.04166666666666
+      ]
+    },
+    "thickness_px": 4.0
+  },
+  "proposed": {
+    "axis_px": {
+      "start": [
+        305.5,
+        241.5
+      ],
+      "end": [
+        305.5,
+        160.04166666666666
+      ]
+    },
+    "thickness_px": 4.0
+  },
+  "change": {
+    "dx_px": 1.0,
+    "dy_px": 0.0,
+    "thickness_change_px": 0.0
+  },
+  "alignment_check": {
+    "rows_checked": 57,
+    "rows_checked_list": [
+      168,
+      169,
+      170,
+      171,
+      172,
+      173,
+      174,
+      175,
+      176,
+      177,
+      178,
+      179,
+      180,
+      181,
+      182,
+      183,
+      184,
+      185,
+      186,
+      187,
+      188,
+      189,
+      190,
+      191,
+      192,
+      193,
+      194,
+      195,
+      196,
+      197,
+      198,
+      199,
+      200,
+      201,
+      202,
+      203,
+      204,
+      205,
+      206,
+      207,
+      208,
+      209,
+      210,
+      211,
+      212,
+      213,
+      214,
+      227,
+      228,
+      229,
+      230,
+      231,
+      232,
+      233,
+      234,
+      235,
+      236
+    ],
+    "junction_clearance_px": 3.0,
+    "junction_bands_excluded": [
+      {
+        "wall": "wall_002",
+        "y_min": 155.54166666666666,
+        "y_max": 164.54166666666666
+      },
+      {
+        "wall": "wall_003",
+        "y_min": 217.5,
+        "y_max": 223.5
+      },
+      {
+        "wall": "wall_004",
+        "y_min": 239.75,
+        "y_max": 243.75
+      }
+    ],
+    "against_predicted_mask": {
+      "current_axis_minus_mask_centre": {
+        "n": 57,
+        "min": -1.0,
+        "median": -1.0,
+        "max": -0.5,
+        "mean": -0.9736842105263158
+      },
+      "proposed_axis_minus_mask_centre": {
+        "n": 57,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.5,
+        "mean": 0.02631578947368421
+      },
+      "current_mask_covered_fraction": {
+        "n": 57,
+        "min": 0.75,
+        "median": 0.75,
+        "max": 0.8,
+        "mean": 0.7526315789473684
+      },
+      "proposed_mask_covered_fraction": {
+        "n": 57,
+        "min": 0.8,
+        "median": 1.0,
+        "max": 1.0,
+        "mean": 0.9894736842105263
+      },
+      "rows_where_proposed_is_closer": 54,
+      "rows_where_current_is_closer": 0,
+      "mask_width": {
+        "n": 57,
+        "min": 4.0,
+        "median": 4.0,
+        "max": 5.0,
+        "mean": 4.052631578947368
+      }
+    },
+    "against_source_image_ink": {
+      "method": "Mean of 3 source rows; pixels darker than grey level 170 within 10 source px of the mask centre; outermost dark pixels taken as the drawn wall edges.",
+      "caveat": "A heuristic on the drawing, not a measurement of the building. Nearby ink (door frames, hatching, text) can fall in the window. Two pixel mappings are reported because the letterbox registration is known only to about 0.3 letterbox px.",
+      "ink_centre_letterbox_index_mapping": {
+        "n": 57,
+        "min": 305.29795299469293,
+        "median": 305.4920394238059,
+        "max": 306.26838514025775,
+        "mean": 305.6316454517643
+      },
+      "ink_centre_letterbox_half_pixel_mapping": {
+        "n": 57,
+        "min": 304.9920394238059,
+        "median": 305.18612585291885,
+        "max": 305.96247156937073,
+        "mean": 305.32573188087724
+      },
+      "ink_width_letterbox": {
+        "n": 57,
+        "min": 4.658074298711145,
+        "median": 5.046247156937073,
+        "max": 6.598938589840788,
+        "mean": 5.325459212853971
+      },
+      "current_axis_x": 304.5,
+      "proposed_axis_x": 305.5
+    },
+    "by_section": {
+      "rows_168_to_214": {
+        "rows": 47,
+        "mask_pixel_ranges_seen": [
+          [
+            304,
+            307
+          ]
+        ],
+        "current_axis_minus_mask_centre": {
+          "n": 47,
+          "min": -1.0,
+          "median": -1.0,
+          "max": -1.0,
+          "mean": -1.0
+        },
+        "proposed_axis_minus_mask_centre": {
+          "n": 47,
+          "min": 0.0,
+          "median": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        "current_mask_covered_fraction": {
+          "n": 47,
+          "min": 0.75,
+          "median": 0.75,
+          "max": 0.75,
+          "mean": 0.75
+        },
+        "proposed_mask_covered_fraction": {
+          "n": 47,
+          "min": 1.0,
+          "median": 1.0,
+          "max": 1.0,
+          "mean": 1.0
+        }
+      },
+      "rows_227_to_236": {
+        "rows": 10,
+        "mask_pixel_ranges_seen": [
+          [
+            303,
+            307
+          ],
+          [
+            304,
+            307
+          ]
+        ],
+        "current_axis_minus_mask_centre": {
+          "n": 10,
+          "min": -1.0,
+          "median": -1.0,
+          "max": -0.5,
+          "mean": -0.85
+        },
+        "proposed_axis_minus_mask_centre": {
+          "n": 10,
+          "min": 0.0,
+          "median": 0.0,
+          "max": 0.5,
+          "mean": 0.15
+        },
+        "current_mask_covered_fraction": {
+          "n": 10,
+          "min": 0.75,
+          "median": 0.75,
+          "max": 0.8,
+          "mean": 0.7649999999999999
+        },
+        "proposed_mask_covered_fraction": {
+          "n": 10,
+          "min": 0.8,
+          "median": 1.0,
+          "max": 1.0,
+          "mean": 0.9400000000000001
+        }
+      }
+    }
+  },
+  "junctions": [
+    {
+      "other_wall": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002",
+      "other_wall_endpoint": null,
+      "point": [
+        304.5,
+        160.04166666666666
+      ],
+      "kind": "wall_012 ends on the axis of this wall (T junction)",
+      "after_proposal": "wall_012 still ends on this axis, at x 305.5; the other wall runs x 266..472",
+      "still_overlaps": true
+    },
+    {
+      "other_wall": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003",
+      "other_wall_endpoint": "start",
+      "point": [
+        304.5,
+        220.5
+      ],
+      "kind": "this wall starts on the axis of wall_012 (T junction)",
+      "after_proposal": "its endpoint is 1 px from the proposed axis and inside the proposed footprint (x 303.5..307.5)",
+      "still_overlaps": true
+    },
+    {
+      "other_wall": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004",
+      "other_wall_endpoint": "end",
+      "point": [
+        304.5,
+        241.5
+      ],
+      "kind": "axis endpoints coincide with wall_012 start today",
+      "after_proposal": "axis endpoints 1 px apart in x; the other wall's endpoint is inside the proposed footprint (x 303.5..307.5)",
+      "still_overlaps": true
+    }
+  ],
+  "apertures": [
+    {
+      "object_id": "opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02",
+      "host_wall_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003",
+      "changed_by_proposal": false,
+      "aperture_x_range": [
+        308.5,
+        336.5
+      ],
+      "gap_to_wall_face_current_px": 2.0,
+      "gap_to_wall_face_proposed_px": 1.0
+    }
+  ],
+  "contract_dry_run": {
+    "ran": true,
+    "counts": {
+      "PASS": 60,
+      "FAIL": 0,
+      "WARN": 6,
+      "INFO": 0
+    },
+    "failed": [],
+    "current_geometry_counts": {
+      "PASS": 60,
+      "FAIL": 0,
+      "WARN": 6,
+      "INFO": 0
+    },
+    "note": "In-memory only. No model, IFC or review state was written. The trial geometry is still CANDIDATE_UNREVIEWED with an ASSUMED_FOR_PREVIEW scale."
+  },
+  "review_record_entry_if_the_reviewer_agrees": {
+    "object_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012",
+    "kind": "wall",
+    "decision": "ACCEPT_WITH_EDITS",
+    "edits": [
+      {
+        "field": "axis_px.start",
+        "after": [
+          305.5,
+          241.5
+        ],
+        "reason": "<reviewer's own reason>"
+      },
+      {
+        "field": "axis_px.end",
+        "after": [
+          305.5,
+          160.04166666666666
+        ],
+        "reason": "<reviewer's own reason>"
+      }
+    ],
+    "notes": null
+  },
+  "images": {
+    "01_full_wall_original_current_proposed.png": {
+      "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/proposals/wall_012_axis_shift_20260928_223842_UTC/01_full_wall_original_current_proposed.png",
+      "shows": "full wall with its three junctions: original, current, proposed, both; no mask tint",
+      "size_px": [
+        2904,
+        2148
+      ]
+    },
+    "02_full_wall_with_prediction_mask.png": {
+      "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/proposals/wall_012_axis_shift_20260928_223842_UTC/02_full_wall_with_prediction_mask.png",
+      "shows": "same views with the predicted wall mask tinted",
+      "size_px": [
+        2904,
+        2148
+      ]
+    },
+    "03_detail_junction_wall_002.png": {
+      "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/proposals/wall_012_axis_shift_20260928_223842_UTC/03_detail_junction_wall_002.png",
+      "shows": "detail at junction_wall_002",
+      "size_px": [
+        3356,
+        1304
+      ]
+    },
+    "04_detail_junction_wall_003.png": {
+      "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/proposals/wall_012_axis_shift_20260928_223842_UTC/04_detail_junction_wall_003.png",
+      "shows": "detail at junction_wall_003",
+      "size_px": [
+        3356,
+        1304
+      ]
+    },
+    "05_detail_junction_wall_004.png": {
+      "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/proposals/wall_012_axis_shift_20260928_223842_UTC/05_detail_junction_wall_004.png",
+      "shows": "detail at junction_wall_004",
+      "size_px": [
+        3356,
+        1304
+      ]
+    },
+    "06_detail_mid_span.png": {
+      "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/proposals/wall_012_axis_shift_20260928_223842_UTC/06_detail_mid_span.png",
+      "shows": "detail at mid_span",
+      "size_px": [
+        3356,
+        1290
+      ]
+    }
+  },
+  "inputs_read_only_sha256": {
+    "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/candidate_geometry.json": "fcfd4a7061ed1d7fafc68a4985ca461fb15cba1812e933f6ec394c96dcfa7780",
+    "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/predicted_structural_wall.png": "8e4f84e7b3a95adbe1e0041126f3744d8c530930a4f07f689714ed3d53f653ab",
+    "/home/pmharris/dev/cubicasa5k_data/data/datasets/qmarva/cubicasa5k/versions/4/cubicasa5k/cubicasa5k/high_quality_architectural/333/F1_scaled.png": "ac6be65c391069f75307a9b90c66240a0e94c9e75cadfd161ca14001bd6a88cc",
+    "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/review_record_TEMPLATE.json": "72d35f658e0bb8ad86df0f7a22533064eb0b9d38dac88c4be522e181d1cd8718"
+  }
+}

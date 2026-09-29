@@ -1,0 +1,50 @@
+{
+  "run_id": "bim_bridge_v0_20260928_183649_UTC",
+  "model_id": "cubicasa-high-quality-architectural-333-val-region-01",
+  "rule": "display label = last colon-separated segment of the exact object ID",
+  "objects": [
+    {
+      "display_label": "wall_002",
+      "object_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002",
+      "kind": "wall",
+      "ifc_class": "IfcWall",
+      "ifc_global_id": "1XkaxwpSjJ8Qnf5B_jRxg1"
+    },
+    {
+      "display_label": "wall_003",
+      "object_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003",
+      "kind": "wall",
+      "ifc_class": "IfcWall",
+      "ifc_global_id": "3d2OAZpCHGUAZ91g4AXd7s"
+    },
+    {
+      "display_label": "wall_004",
+      "object_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004",
+      "kind": "wall",
+      "ifc_class": "IfcWall",
+      "ifc_global_id": "1b$tabjrHGbPd9xW5BjLOQ"
+    },
+    {
+      "display_label": "wall_012",
+      "object_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012",
+      "kind": "wall",
+      "ifc_class": "IfcWall",
+      "ifc_global_id": "11mnaExH9O2vr$qGRs3ceQ"
+    },
+    {
+      "display_label": "door_opening-c02",
+      "object_id": "opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02",
+      "kind": "opening",
+      "ifc_class": "IfcOpeningElement",
+      "ifc_global_id": "1Y$u78JbXJIggJrkmIA5ew"
+    }
+  ],
+  "not_objects": [
+    {
+      "display_label": "EXCLUDED door_opening component 1",
+      "object_id": null,
+      "ifc_global_id": null,
+      "reason": "no selected wall hosts this component"
+    }
+  ]
+}

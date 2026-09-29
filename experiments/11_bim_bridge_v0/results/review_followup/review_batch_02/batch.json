@@ -1,0 +1,252 @@
+{
+  "batch_version": "bim_bridge.review_batch/0.1",
+  "run_id": "bim_bridge_v0_20260928_183649_UTC",
+  "model_id": "cubicasa-high-quality-architectural-333-val-region-01",
+  "written_utc": "2026-09-29T16:25:11Z",
+  "kind": "VISUALIZATION_ONLY",
+  "is_a_review": false,
+  "applied": false,
+  "exported": false,
+  "banner": "APPROVED EDITS SHOWN FOR REVIEW — NOT APPLIED OR EXPORTED",
+  "candidate_geometry_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/candidate_geometry.json",
+  "candidate_geometry_sha256": "fcfd4a7061ed1d7fafc68a4985ca461fb15cba1812e933f6ec394c96dcfa7780",
+  "draft_review_record": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_in_progress/review_record_DRAFT_05.json",
+  "draft_review_record_sha256": "b0fbe078cdcc80729d5c8945d4c542852e4b4eebb47d33df14fa02e5007dc739",
+  "approved_edits_shown": [
+    {
+      "object_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002",
+      "decision": "ACCEPT_WITH_EDITS",
+      "field": "axis_px.start",
+      "before": [
+        266.0,
+        160.04166666666666
+      ],
+      "after": [
+        233.0,
+        160.04166666666666
+      ]
+    },
+    {
+      "object_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012",
+      "decision": "ACCEPT_WITH_EDITS",
+      "field": "axis_px.start",
+      "before": [
+        304.5,
+        241.5
+      ],
+      "after": [
+        305.5,
+        241.5
+      ]
+    },
+    {
+      "object_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012",
+      "decision": "ACCEPT_WITH_EDITS",
+      "field": "axis_px.end",
+      "before": [
+        304.5,
+        160.04166666666666
+      ],
+      "after": [
+        305.5,
+        160.04166666666666
+      ]
+    }
+  ],
+  "objects_awaiting_decision": [
+    "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003",
+    "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004",
+    "opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02"
+  ],
+  "pending_geometry_equals_candidate": true,
+  "relationships": {
+    "wall_003": {
+      "object_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003",
+      "axis_px": {
+        "start": [
+          304.5,
+          220.5
+        ],
+        "end": [
+          474.5,
+          220.5
+        ]
+      },
+      "thickness_px": 6.0,
+      "thickness_source": "vectorizer",
+      "edits_recorded": [],
+      "ends": {
+        "start": {
+          "point": [
+            304.5,
+            220.5
+          ],
+          "notes": [
+            "inside the wall_012 footprint as approved (x 303.5..307.5); 1 px from the approved wall_012 axis x 305.5; before the approved edit the axes met exactly at x 304.5"
+          ]
+        },
+        "end": {
+          "point": [
+            474.5,
+            220.5
+          ],
+          "notes": [
+            "upstream intersection with wall_014, which is NOT SELECTED / NOT EXPORTED"
+          ]
+        }
+      },
+      "unselected_upstream_walls_meeting_it_along_its_length": [
+        {
+          "upstream_wall": "wall_013",
+          "point": [
+            416.0,
+            220.5
+          ],
+          "status": "NOT SELECTED / NOT EXPORTED"
+        }
+      ],
+      "mask_extent_at_mid_length": {
+        "across": "y",
+        "at": 390,
+        "mask_pixels": [
+          218,
+          223
+        ],
+        "mask_span": [
+          217.5,
+          223.5
+        ],
+        "footprint_span": [
+          217.5,
+          223.5
+        ]
+      },
+      "axis_is_exactly_horizontal": true
+    },
+    "wall_004": {
+      "object_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004",
+      "axis_px": {
+        "start": [
+          242.0,
+          242.0
+        ],
+        "end": [
+          304.5,
+          241.5
+        ]
+      },
+      "thickness_px": 4.0,
+      "thickness_source": "vectorizer",
+      "edits_recorded": [],
+      "ends": {
+        "start": {
+          "point": [
+            242.0,
+            242.0
+          ],
+          "notes": [
+            "no selected wall and no upstream intersection recorded at this end"
+          ]
+        },
+        "end": {
+          "point": [
+            304.5,
+            241.5
+          ],
+          "notes": [
+            "inside the wall_012 footprint as approved (x 303.5..307.5); 1 px from the approved wall_012 axis x 305.5; before the approved edit the axes met exactly at x 304.5"
+          ]
+        }
+      },
+      "unselected_upstream_walls_meeting_it_along_its_length": [],
+      "mask_extent_at_mid_length": {
+        "across": "y",
+        "at": 273,
+        "mask_pixels": [
+          241,
+          244
+        ],
+        "mask_span": [
+          240.5,
+          244.5
+        ],
+        "footprint_span": [
+          239.75,
+          243.75
+        ]
+      },
+      "axis_is_exactly_horizontal": false
+    },
+    "door_opening-c02": {
+      "object_id": "opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02",
+      "host_wall_id_from_candidate_record": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003",
+      "host_source": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/candidate_geometry.json apertures[0].host_wall_id",
+      "host_decision_in_draft": null,
+      "offset_px": 4.0,
+      "width_px": 28.0,
+      "measured_from": "host axis start x 304.5",
+      "x_range": [
+        308.5,
+        336.5
+      ],
+      "predicted_component": {
+        "component_id": 2,
+        "pixel_count": 168,
+        "bbox_px": [
+          309,
+          218,
+          336,
+          223
+        ],
+        "centroid_px": [
+          322.5,
+          220.5
+        ]
+      },
+      "geometry_checks": [
+        {
+          "name": "aperture_lies_in_host_band",
+          "status": "PASS",
+          "detail": "Component centroid is 0.00 px from the host axis.",
+          "measured": 0.0,
+          "threshold": 7.0
+        },
+        {
+          "name": "aperture_overlaps_predicted_wall",
+          "status": "PASS",
+          "detail": "84% of the predicted door_opening pixels are also predicted structural_wall pixels.",
+          "measured": 0.8392857142857143,
+          "threshold": 0.5
+        }
+      ],
+      "gap_to_wall_012_face_px": {
+        "candidate": 2.0,
+        "with_approved_wall_012_edit": 1.0
+      },
+      "changed_by_approved_edits": false,
+      "note": "An aperture is exported only if its host wall is exported. A decision on the aperture does not decide its host."
+    }
+  },
+  "combined_overlay": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_batch_02_20260929_162511_UTC/01_combined_overlay_approved_edits_NOT_APPLIED.png",
+  "existing_closeups_reused": {
+    "wall_003": {
+      "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_package_20260928_195105_UTC/04_closeup_wall_003.png",
+      "sha256": "d4b4447c0b561860962eb31bf8f19a831a8233f27e7c7ebbce7be35d12ba63b9",
+      "caveat": "Drawn before the approved edits: shows wall_012 at x 304.5 and the wall_002 start at x 266."
+    },
+    "wall_004": {
+      "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_package_20260928_195105_UTC/05_closeup_wall_004.png",
+      "sha256": "729f511cf12b84aa67c21fabbfc12797693a26ced698a03512cc1c017d99e992",
+      "caveat": "Drawn before the approved edits: shows wall_012 at x 304.5 and the wall_002 start at x 266."
+    },
+    "door_opening-c02": {
+      "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_package_20260928_195105_UTC/07_closeup_door_opening-c02.png",
+      "sha256": "f19d462f150a513d0e2406c0b01efc6ad7cea0b0e546c05c3e656f5594d96887",
+      "caveat": "Drawn before the approved edits: shows wall_012 at x 304.5 and the wall_002 start at x 266."
+    }
+  },
+  "scale_status": "ASSUMED_FOR_PREVIEW",
+  "scale_confirmed": false,
+  "viewer_inspection": "NOT_RUN",
+  "gates_changed": []
+}

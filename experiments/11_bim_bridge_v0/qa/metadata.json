@@ -16,6 +16,51 @@
         "source image, letterboxed, cropped to the region of interest",
         "the same crop with the predicted structural_wall mask (grey), the predicted door_opening mask (orange), candidate walls (blue outline, green centreline) and the candidate aperture (magenta outline)"
       ]
+    },
+    {
+      "file": "review_followup/review_batch_02_combined_overlay_approved_edits_NOT_APPLIED.jpg",
+      "width": 1800,
+      "height": 2036,
+      "mode": "RGB",
+      "sha256": "bdc2a9ef8d2a44f26dad628603d2eaa86fe886270d8f904c5874aa0d98d71b10",
+      "size_bytes": 804247,
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_batch_02_20260929_162511_UTC/01_combined_overlay_approved_edits_NOT_APPLIED.png",
+      "source_sha256": "d54569a1ec95126370635196e73226db5df2d85750795ba66b7f7393ee1a85a5",
+      "source_width": 2340,
+      "source_height": 2647,
+      "transformation": "resized to 1800x2036 (Lanczos) and saved as JPEG, quality 90, to keep the repository small; content otherwise unchanged; the full-size source stays in the run directory",
+      "content": "Review batch 02. Original drawing above; below it the candidate geometry with ONLY the two approved edits drawn in, under the banner 'APPROVED EDITS SHOWN FOR REVIEW - NOT APPLIED OR EXPORTED'. wall_003, wall_004 and door_opening-c02 are marked PENDING DECISION.",
+      "ground_truth_shown": false
+    },
+    {
+      "file": "review_followup/proposal_wall_012_axis_shift_original_current_proposed.jpg",
+      "width": 1800,
+      "height": 1331,
+      "mode": "RGB",
+      "sha256": "25c8751fc3c97f8e5b63d18491ee3960e745ccd9eed7df5215a18c44bde3aa48",
+      "size_bytes": 461382,
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/proposals/wall_012_axis_shift_20260928_223842_UTC/01_full_wall_original_current_proposed.png",
+      "source_sha256": "f30884f7c025003e5320f8d2f23146b9153fb9f8e404f92faf1803d76f0bd4d1",
+      "source_width": 2904,
+      "source_height": 2148,
+      "transformation": "resized to 1800x1331 (Lanczos) and saved as JPEG, quality 90, to keep the repository small; content otherwise unchanged; the full-size source stays in the run directory",
+      "content": "wall_012 axis proposal: original drawing, current footprint (axis x 304.5), proposed footprint (axis x 305.5), and both.",
+      "ground_truth_shown": false
+    },
+    {
+      "file": "review_followup/proposal_wall_002_start_extension_original_current_proposed.jpg",
+      "width": 1800,
+      "height": 549,
+      "mode": "RGB",
+      "sha256": "9d6616ba1059f96b16e4e19b72765293c72df0a3c4e965e86b50db6436432b18",
+      "size_bytes": 252899,
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/proposals/wall_002_start_extension_20260929_141905_UTC/01_wall_002_start_extension_original_current_proposed.png",
+      "source_sha256": "05e50a63a1cd37e5fe418666bda5885db517cd6a4028cb6e76a259c9a6365d9a",
+      "source_width": 3716,
+      "source_height": 1133,
+      "transformation": "resized to 1800x549 (Lanczos) and saved as JPEG, quality 90, to keep the repository small; content otherwise unchanged; the full-size source stays in the run directory",
+      "content": "wall_002 start-extension proposal: original drawing, current geometry (start x 266), proposed geometry (start x 233). Upstream wall_001 is labelled NOT SELECTED / NOT EXPORTED.",
+      "ground_truth_shown": false
     }
   ],
   "region_of_interest_letterbox_px": {
@@ -32,5 +77,6 @@
   "ground_truth_shown": false,
   "note": "The overlay shows predictions and candidates only. It contains no ground truth and no TP/FP/FN colours, because this experiment makes no accuracy claim.",
   "viewer_screenshot": null,
-  "viewer_screenshot_note": "No IFC viewer screenshot exists. No viewer was run."
+  "viewer_screenshot_note": "No IFC viewer screenshot exists. No viewer was run.",
+  "review_followup_note": "Images under review_followup/ are reduced derived copies of review aids written on 2026-09-28 and 2026-09-29. They show the source drawing, predictions, candidate geometry and proposed or approved edits. They contain no ground truth. Approved edits are drawn for review only; they were not applied or exported."
 }

@@ -1,0 +1,19 @@
+{
+  "experiment_id": "bim_bridge_v0",
+  "run_id": "bim_bridge_v0_20260928_183649_UTC",
+  "stage": "partial_review_decision",
+  "status": "PASS",
+  "written_utc": "2026-09-29T12:30:51Z",
+  "track": "REVIEWED_PREDICTION_BRIDGE",
+  "meaning": "A second partial human review decision was recorded. It is not a whole-object decision and was not applied. No candidate, review state, scale status, IFC or gate changed.",
+  "decision_id": "partial-002-wall_012-lower-junction-wall_004",
+  "object_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012",
+  "record": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_in_progress/partial_decision_002_wall_012_lower_junction_20260929_123049_UTC.json",
+  "record_sha256": "589d1a6e5c0080ae8cef789d2dede26cba0cdc95fe6ed82aafe0e5a1d5588fd0",
+  "draft_review_record": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_in_progress/review_record_DRAFT_02.json",
+  "applied": false,
+  "edits_made": [],
+  "whole_object_decision_recorded": false,
+  "scale_confirmed": false,
+  "gates_changed": []
+}

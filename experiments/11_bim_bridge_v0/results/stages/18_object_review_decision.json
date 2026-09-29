@@ -1,0 +1,32 @@
+{
+  "experiment_id": "bim_bridge_v0",
+  "run_id": "bim_bridge_v0_20260928_183649_UTC",
+  "stage": "object_review_decision",
+  "status": "BLOCKED",
+  "written_utc": "2026-09-29T15:53:10Z",
+  "track": "REVIEWED_PREDICTION_BRIDGE",
+  "meaning": "A whole-object human decision for wall_002 was recorded in the draft review record. It was not applied: three objects have no decision and reviewer_role is missing. No candidate, review state, scale status, IFC or gate changed.",
+  "decision_id": "decision-004-wall_002-whole-object",
+  "object_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002",
+  "decision": "ACCEPT_WITH_EDITS",
+  "record": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_in_progress/decision_004_wall_002_whole_object_20260929_155308_UTC.json",
+  "record_sha256": "d7b0e2dad64c397a0877ff427e67ae5c90f660b51386eec039ba0aab5bccd785",
+  "draft_review_record": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_in_progress/review_record_DRAFT_04.json",
+  "objects_pending": [
+    "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003",
+    "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004",
+    "opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02"
+  ],
+  "validator_refusal": [
+    "reviewer is empty: a named human reviewer is required",
+    "reviewer_role is empty",
+    "reviewed_utc must be YYYY-MM-DDTHH:MM:SSZ",
+    "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003: decision must be one of ['ACCEPT', 'ACCEPT_WITH_EDITS', 'REJECT']",
+    "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004: decision must be one of ['ACCEPT', 'ACCEPT_WITH_EDITS', 'REJECT']",
+    "opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02: decision must be one of ['ACCEPT', 'ACCEPT_WITH_EDITS', 'REJECT']"
+  ],
+  "applied": false,
+  "new_ifc_written": false,
+  "scale_confirmed": false,
+  "gates_changed": []
+}

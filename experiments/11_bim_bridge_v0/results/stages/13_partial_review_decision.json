@@ -1,0 +1,28 @@
+{
+  "experiment_id": "bim_bridge_v0",
+  "run_id": "bim_bridge_v0_20260928_183649_UTC",
+  "stage": "partial_review_decision",
+  "status": "PASS",
+  "written_utc": "2026-09-29T11:33:23Z",
+  "track": "REVIEWED_PREDICTION_BRIDGE",
+  "meaning": "A partial human review decision was recorded. It is not a whole-object decision and was not applied. No candidate, review state, scale status, IFC or gate changed.",
+  "decision_id": "partial-001-wall_012-axis-x",
+  "object_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012",
+  "record": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_in_progress/partial_decision_001_wall_012_axis_x_20260929_113319_UTC.json",
+  "record_sha256": "e87a7cbf923847e2798547052ea88666c50f905c240e27249406d3c9f7e4e2b7",
+  "draft_review_record": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_in_progress/review_record_DRAFT.json",
+  "draft_refused_by_apply_review_because": [
+    "reviewer is empty: a named human reviewer is required",
+    "reviewer_role is empty",
+    "reviewed_utc must be YYYY-MM-DDTHH:MM:SSZ",
+    "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002: decision must be one of ['ACCEPT', 'ACCEPT_WITH_EDITS', 'REJECT']",
+    "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003: decision must be one of ['ACCEPT', 'ACCEPT_WITH_EDITS', 'REJECT']",
+    "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004: decision must be one of ['ACCEPT', 'ACCEPT_WITH_EDITS', 'REJECT']",
+    "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012: decision must be one of ['ACCEPT', 'ACCEPT_WITH_EDITS', 'REJECT']",
+    "opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02: decision must be one of ['ACCEPT', 'ACCEPT_WITH_EDITS', 'REJECT']"
+  ],
+  "applied": false,
+  "whole_object_decision_recorded": false,
+  "scale_confirmed": false,
+  "gates_changed": []
+}

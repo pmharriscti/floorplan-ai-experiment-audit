@@ -1,0 +1,25 @@
+{
+  "built_by": {
+    "actor_type": "agent",
+    "script": "/home/pmharris/dev/bim_bridge_v0/scripts/propose_wall_axis_shift.py",
+    "script_sha256": "90d7f73c2b3939887aab3ab499cd6b400d84a6b48da3809c01f9422e548938ef"
+  },
+  "inputs_unchanged_after_build": true,
+  "inputs_read_only_sha256": {
+    "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/candidate_geometry.json": "fcfd4a7061ed1d7fafc68a4985ca461fb15cba1812e933f6ec394c96dcfa7780",
+    "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/predicted_structural_wall.png": "8e4f84e7b3a95adbe1e0041126f3744d8c530930a4f07f689714ed3d53f653ab",
+    "/home/pmharris/dev/cubicasa5k_data/data/datasets/qmarva/cubicasa5k/versions/4/cubicasa5k/cubicasa5k/high_quality_architectural/333/F1_scaled.png": "ac6be65c391069f75307a9b90c66240a0e94c9e75cadfd161ca14001bd6a88cc",
+    "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/review_record_TEMPLATE.json": "72d35f658e0bb8ad86df0f7a22533064eb0b9d38dac88c4be522e181d1cd8718"
+  },
+  "outputs_sha256": {
+    "01_full_wall_original_current_proposed.png": "f30884f7c025003e5320f8d2f23146b9153fb9f8e404f92faf1803d76f0bd4d1",
+    "02_full_wall_with_prediction_mask.png": "0076d41923d6c3e26dd2a4bc579c836e063c2082c29bc2445a4a38ed462fba0d",
+    "03_detail_junction_wall_002.png": "613d4f9560ab9af1c9ec26655d06f61afd387ce008ae09fa359b2c9117fd0fbc",
+    "04_detail_junction_wall_003.png": "3ba8a13b04777d46333ce4e6a1e4a3626cce0ca671b63a559c58397723468338",
+    "05_detail_junction_wall_004.png": "1110bfdaddd11483f8b3ee635e59d62d8a9dd7245e3e9de62728932b5368c462",
+    "06_detail_mid_span.png": "34f3253fc72d10e5281bf14d704a849f07e0693bdc703fff73614fd14e226930",
+    "PROPOSAL.md": "200886326f34b93ceea660ab253d4e03a8ee88a159c44bd0a06f6fa85d27dbe7",
+    "alignment_rows.json": "72bfa990fee3116d6957259c8e146eacc6e9908ab8aa2bf9cadbbca17311ed77",
+    "proposal.json": "98e635b61ac70761f1c6bc2e099099c00f267b5d3e3b70f95865a21b787dba77"
+  }
+}

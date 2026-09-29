@@ -1,0 +1,84 @@
+{
+  "record_version": "bim_bridge.review_finding/0.1",
+  "run_id": "bim_bridge_v0_20260928_183649_UTC",
+  "finding_id": "finding-001-wall_002-start-endpoint",
+  "written_utc": "2026-09-29T13:36:28Z",
+  "written_by": {
+    "actor_type": "agent",
+    "name": "Claude (AI assistant)"
+  },
+  "is_a_review": false,
+  "human_acceptance_recorded": false,
+  "geometry_changed": false,
+  "gates_changed": [],
+  "method": "Read existing artifacts and code only. Nothing was re-run.",
+  "object_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002",
+  "question": "Why is axis_px.start.x 266.0 while the drawing and the prediction continue farther left?",
+  "classification": {
+    "intentional_selection_or_crop_boundary": false,
+    "split_with_another_upstream_segment": "PARTLY: upstream wall_001 lies on the same line and ends at x 233.0, but a 33 px stretch between them belongs to no upstream wall",
+    "documented": false,
+    "verdict": "UNRESOLVED_RECONSTRUCTION_ENDPOINT"
+  },
+  "facts": [
+    {
+      "fact": "The endpoint is the vectorizer's value, copied unchanged. wall_002 centerline is [[266.0, 160.0417], [472.0, 160.0417]].",
+      "evidence": [
+        "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/vectorizer_output/wall_geometry.json",
+        "candidate_geometry.json walls[wall_002].original.source = 'vectorizer output, unedited', edits = []",
+        "src/bim_bridge/candidates.py:152"
+      ]
+    },
+    {
+      "fact": "The region of interest did not cut the wall. It is computed from the selected walls after selection (x_min 228) and is used to filter aperture components and to frame the overlay.",
+      "evidence": [
+        "src/bim_bridge/candidates.py:180",
+        "src/bim_bridge/candidates.py:187",
+        "candidate_geometry.json source.roi"
+      ]
+    },
+    {
+      "fact": "Selection picks whole upstream walls by id and does not trim them. wall_001 was not selected.",
+      "evidence": [
+        "src/bim_bridge/candidates.py:146-152",
+        "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/config/bim_bridge_v0.yaml real_input.selection",
+        "candidate_geometry.json selection.upstream_walls_not_selected"
+      ]
+    },
+    {
+      "fact": "Upstream wall_001 is on the same line: [[108.375, 160.0], [233.0, 160.0]], thickness 9.0. x 233.0 to 266.0 (33 px) is covered by no upstream wall.",
+      "evidence": [
+        "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/vectorizer_output/wall_geometry.json"
+      ]
+    },
+    {
+      "fact": "The predicted mask is continuous there: on rows 157, 160 and 163 one run spans x 101..480. Its height is 9 px up to about x 237 and 8 px from about x 240.",
+      "evidence": [
+        "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/predicted_structural_wall.png"
+      ]
+    },
+    {
+      "fact": "No upstream intersection is recorded at x 233 or x 266. The nearest on this wall is (304.5, 160.04) with wall_012.",
+      "evidence": [
+        "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/vectorizer_output/wall_geometry.json intersections"
+      ]
+    },
+    {
+      "fact": "The vectorizer joins collinear segments only when they are at most 6 px apart, and Hough bridges gaps of at most 8 px. A 33 px gap is left as two walls.",
+      "evidence": [
+        "/home/pmharris/dev/synth_gen_door_window/floorplan-synth/src/floorplan_synth/vectorization/line_snapping.py:64",
+        "/home/pmharris/dev/synth_gen_door_window/floorplan-synth/configs/wall_postprocess.yaml merge_collinear_distance_px: 6, max_line_gap_px: 8"
+      ]
+    },
+    {
+      "fact": "Why no line was found between x 233 and 266 is not recorded. The vectorizer's skeleton and raw-line debug images were switched off for the bridge run.",
+      "evidence": [
+        "src/bim_bridge/candidates.py:58 (save_debug_images=False)",
+        "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/vectorizer_output holds only wall_geometry.json and qa_report.json"
+      ]
+    }
+  ],
+  "unresolved": "The cause of the 33 px gap, and so of the start at x 266.0. The existing evidence shows where the value came from and rules out a crop, but not why the vectorizer stopped there.",
+  "would_resolve_it": "The vectorizer's skeleton and raw Hough lines for this mask. Producing them means re-running the vectorizer with debug output, which was not done because the request was limited to existing evidence.",
+  "consequence_for_review": "The exported wall_002 is a part of the drawn wall, from x 266.0 to 472.0. Nothing marks it as a partial wall in the candidate geometry or the IFC."
+}

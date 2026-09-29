@@ -1,0 +1,448 @@
+{
+  "package": "bim_bridge_v0 human-review package",
+  "run_id": "bim_bridge_v0_20260928_183649_UTC",
+  "model_id": "cubicasa-high-quality-architectural-333-val-region-01",
+  "written_utc": "2026-09-28T19:51:16Z",
+  "built_by": {
+    "actor_type": "agent",
+    "script": "/home/pmharris/dev/bim_bridge_v0/scripts/build_review_package.py",
+    "script_sha256": "0222b9013bda56f6a70f06aa3028b5eb82f5b9b73b8da16473de55dcd49f3299"
+  },
+  "is_a_review": false,
+  "human_review_recorded": false,
+  "scale_confirmed": false,
+  "gates_changed": [],
+  "reuse_check": {
+    "review_template_hash_matches_candidate_geometry": true,
+    "review_template_objects_match": true,
+    "review_template_current_values_match": true,
+    "review_template_is_blank": true,
+    "ifc_objects_have_guids": true,
+    "exported_model_built_from_this_candidate_geometry": true,
+    "existing_overlay_present": true,
+    "decision": "Review template, IFC, GlobalId map and viewer steps are reused unchanged. The first overlay is kept; it has no close-ups, no ID mapping and does not mark the automated edit or the excluded component, so new images were added."
+  },
+  "automated_decisions_highlighted": [
+    {
+      "object_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012",
+      "edit": {
+        "field": "thickness",
+        "before": {
+          "thickness_px": 40.0
+        },
+        "after": {
+          "thickness_px": 4.0
+        },
+        "reason": "Vectorizer thickness 40.0 px disagrees with the predicted mask by more than 2.0 px; the median perpendicular run on the predicted structural_wall mask is 4.0 px.",
+        "actor_type": "automated_rule",
+        "actor": "bim_bridge candidates.thickness_from_predicted_mask rule 0.2",
+        "timestamp_utc": "2026-09-28T18:37:01Z",
+        "evidence": "candidate_geometry.json diagnostics for wall_012: 70 perpendicular samples, p10-p90 [4.0, 4.0] px"
+      },
+      "human_verified": false
+    },
+    {
+      "excluded_aperture_component": {
+        "component_id": 1,
+        "pixel_count": 159,
+        "bbox_px": [
+          413,
+          193,
+          419,
+          216
+        ],
+        "centroid_px": [
+          415.92452830188677,
+          205.0566037735849
+        ],
+        "reason": "no selected wall hosts this component"
+      },
+      "human_verified": false
+    }
+  ],
+  "objects": [
+    {
+      "object_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002",
+      "display_label": "wall_002",
+      "image": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_package_20260928_195105_UTC/03_closeup_wall_002.png",
+      "ifc_class": "IfcWall",
+      "ifc_global_id": "1XkaxwpSjJ8Qnf5B_jRxg1",
+      "current": {
+        "axis_px": {
+          "start": [
+            266.0,
+            160.04166666666666
+          ],
+          "end": [
+            472.0,
+            160.04166666666666
+          ]
+        },
+        "thickness_px": 9.0,
+        "thickness_source": "vectorizer",
+        "thickness_basis": "Vectorizer thickness 9.0 px, consistent with 9.0 px measured on the predicted structural_wall mask."
+      },
+      "original": {
+        "axis_px": {
+          "start": [
+            266.0,
+            160.04166666666666
+          ],
+          "end": [
+            472.0,
+            160.04166666666666
+          ]
+        },
+        "thickness_px": 9.0,
+        "orientation": "horizontal",
+        "source": "vectorizer output, unedited"
+      },
+      "automated_edits": [],
+      "mask_extent_at_mid_length": {
+        "across": "y",
+        "at": 369,
+        "mask_pixels": [
+          156,
+          164
+        ],
+        "mask_span": [
+          155.5,
+          164.5
+        ],
+        "footprint_span": [
+          155.54166666666666,
+          164.54166666666666
+        ]
+      },
+      "review_state": "CANDIDATE_UNREVIEWED"
+    },
+    {
+      "object_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003",
+      "display_label": "wall_003",
+      "image": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_package_20260928_195105_UTC/04_closeup_wall_003.png",
+      "ifc_class": "IfcWall",
+      "ifc_global_id": "3d2OAZpCHGUAZ91g4AXd7s",
+      "current": {
+        "axis_px": {
+          "start": [
+            304.5,
+            220.5
+          ],
+          "end": [
+            474.5,
+            220.5
+          ]
+        },
+        "thickness_px": 6.0,
+        "thickness_source": "vectorizer",
+        "thickness_basis": "Vectorizer thickness 6.0 px, consistent with 6.0 px measured on the predicted structural_wall mask."
+      },
+      "original": {
+        "axis_px": {
+          "start": [
+            304.5,
+            220.5
+          ],
+          "end": [
+            474.5,
+            220.5
+          ]
+        },
+        "thickness_px": 6.0,
+        "orientation": "horizontal",
+        "source": "vectorizer output, unedited"
+      },
+      "automated_edits": [],
+      "mask_extent_at_mid_length": {
+        "across": "y",
+        "at": 390,
+        "mask_pixels": [
+          218,
+          223
+        ],
+        "mask_span": [
+          217.5,
+          223.5
+        ],
+        "footprint_span": [
+          217.5,
+          223.5
+        ]
+      },
+      "review_state": "CANDIDATE_UNREVIEWED"
+    },
+    {
+      "object_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004",
+      "display_label": "wall_004",
+      "image": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_package_20260928_195105_UTC/05_closeup_wall_004.png",
+      "ifc_class": "IfcWall",
+      "ifc_global_id": "1b$tabjrHGbPd9xW5BjLOQ",
+      "current": {
+        "axis_px": {
+          "start": [
+            242.0,
+            242.0
+          ],
+          "end": [
+            304.5,
+            241.5
+          ]
+        },
+        "thickness_px": 4.0,
+        "thickness_source": "vectorizer",
+        "thickness_basis": "Vectorizer thickness 4.0 px, consistent with 4.0 px measured on the predicted structural_wall mask."
+      },
+      "original": {
+        "axis_px": {
+          "start": [
+            242.0,
+            242.0
+          ],
+          "end": [
+            304.5,
+            241.5
+          ]
+        },
+        "thickness_px": 4.0,
+        "orientation": "horizontal",
+        "source": "vectorizer output, unedited"
+      },
+      "automated_edits": [],
+      "mask_extent_at_mid_length": {
+        "across": "y",
+        "at": 273,
+        "mask_pixels": [
+          241,
+          244
+        ],
+        "mask_span": [
+          240.5,
+          244.5
+        ],
+        "footprint_span": [
+          239.75,
+          243.75
+        ]
+      },
+      "review_state": "CANDIDATE_UNREVIEWED"
+    },
+    {
+      "object_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012",
+      "display_label": "wall_012",
+      "image": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_package_20260928_195105_UTC/06_closeup_wall_012.png",
+      "ifc_class": "IfcWall",
+      "ifc_global_id": "11mnaExH9O2vr$qGRs3ceQ",
+      "current": {
+        "axis_px": {
+          "start": [
+            304.5,
+            241.5
+          ],
+          "end": [
+            304.5,
+            160.04166666666666
+          ]
+        },
+        "thickness_px": 4.0,
+        "thickness_source": "predicted-mask measurement (automated rule replaced the vectorizer value)",
+        "thickness_basis": "Median perpendicular run 4.0 px on the predicted structural_wall mask; the vectorizer value 40.0 px was replaced by an automated rule."
+      },
+      "original": {
+        "axis_px": {
+          "start": [
+            304.5,
+            241.5
+          ],
+          "end": [
+            304.5,
+            160.04166666666666
+          ]
+        },
+        "thickness_px": 40.0,
+        "orientation": "vertical",
+        "source": "vectorizer output, unedited"
+      },
+      "automated_edits": [
+        {
+          "field": "thickness",
+          "before": {
+            "thickness_px": 40.0
+          },
+          "after": {
+            "thickness_px": 4.0
+          },
+          "reason": "Vectorizer thickness 40.0 px disagrees with the predicted mask by more than 2.0 px; the median perpendicular run on the predicted structural_wall mask is 4.0 px.",
+          "actor_type": "automated_rule",
+          "actor": "bim_bridge candidates.thickness_from_predicted_mask rule 0.2",
+          "timestamp_utc": "2026-09-28T18:37:01Z",
+          "evidence": "candidate_geometry.json diagnostics for wall_012: 70 perpendicular samples, p10-p90 [4.0, 4.0] px"
+        }
+      ],
+      "mask_extent_at_mid_length": {
+        "across": "x",
+        "at": 201,
+        "mask_pixels": [
+          304,
+          307
+        ],
+        "mask_span": [
+          303.5,
+          307.5
+        ],
+        "footprint_span": [
+          302.5,
+          306.5
+        ]
+      },
+      "review_state": "CANDIDATE_UNREVIEWED"
+    },
+    {
+      "object_id": "opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02",
+      "display_label": "door_opening-c02",
+      "image": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_package_20260928_195105_UTC/07_closeup_door_opening-c02.png",
+      "ifc_class": "IfcOpeningElement",
+      "ifc_global_id": "1Y$u78JbXJIggJrkmIA5ew",
+      "current": {
+        "offset_px": 4.0,
+        "width_px": 28.0
+      },
+      "original": {
+        "along_host_px": [
+          4.0,
+          32.0
+        ],
+        "component": {
+          "component_id": 2,
+          "pixel_count": 168,
+          "bbox_px": [
+            309,
+            218,
+            336,
+            223
+          ],
+          "centroid_px": [
+            322.5,
+            220.5
+          ]
+        },
+        "source": "connected component of the predicted door_opening mask, projected on the host axis"
+      },
+      "automated_edits": [],
+      "mask_extent_at_mid_length": null,
+      "review_state": "CANDIDATE_UNREVIEWED"
+    }
+  ],
+  "images": {
+    "01_overview_full_plan.png": {
+      "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_package_20260928_195105_UTC/01_overview_full_plan.png",
+      "shows": "whole plan overlay",
+      "object_id": null,
+      "size_px": [
+        2686,
+        1894
+      ]
+    },
+    "02_overview_region.png": {
+      "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_package_20260928_195105_UTC/02_overview_region.png",
+      "shows": "region overlay with a source-only panel",
+      "object_id": null,
+      "size_px": [
+        2148,
+        2602
+      ]
+    },
+    "03_closeup_wall_002.png": {
+      "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_package_20260928_195105_UTC/03_closeup_wall_002.png",
+      "shows": "close-up of wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002",
+      "object_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002",
+      "size_px": [
+        2001,
+        1507
+      ]
+    },
+    "04_closeup_wall_003.png": {
+      "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_package_20260928_195105_UTC/04_closeup_wall_003.png",
+      "shows": "close-up of wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003",
+      "object_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003",
+      "size_px": [
+        1725,
+        1549
+      ]
+    },
+    "05_closeup_wall_004.png": {
+      "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_package_20260928_195105_UTC/05_closeup_wall_004.png",
+      "shows": "close-up of wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004",
+      "object_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004",
+      "size_px": [
+        1500,
+        1818
+      ]
+    },
+    "06_closeup_wall_012.png": {
+      "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_package_20260928_195105_UTC/06_closeup_wall_012.png",
+      "shows": "close-up of wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012",
+      "object_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012",
+      "size_px": [
+        1704,
+        2113
+      ]
+    },
+    "07_closeup_door_opening-c02.png": {
+      "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_package_20260928_195105_UTC/07_closeup_door_opening-c02.png",
+      "shows": "close-up of opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02",
+      "object_id": "opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02",
+      "size_px": [
+        1500,
+        2653
+      ]
+    },
+    "08_excluded_aperture_component_01.png": {
+      "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_package_20260928_195105_UTC/08_excluded_aperture_component_01.png",
+      "shows": "excluded predicted aperture component",
+      "object_id": null,
+      "size_px": [
+        1948,
+        1883
+      ]
+    }
+  },
+  "review_template": {
+    "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_package_20260928_195105_UTC/review_record_TEMPLATE.json",
+    "original": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/review_record_TEMPLATE.json",
+    "sha256": "72d35f658e0bb8ad86df0f7a22533064eb0b9d38dac88c4be522e181d1cd8718"
+  },
+  "ifc": {
+    "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/export_preview/cubicasa-high-quality-architectural-333-val-region-01__PREVIEW_CANDIDATE_UNREVIEWED.ifc",
+    "sha256": "e4def87979953d853790d3c3f63ddde4d4b39f3a7c7a8df7eecb492713dcd09e",
+    "kind": "PREVIEW_CANDIDATE_UNREVIEWED"
+  },
+  "viewer_inspection_steps": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/VIEWER_INSPECTION_STEPS.md",
+  "inputs_read_only_sha256_before": {
+    "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/candidate_geometry.json": "fcfd4a7061ed1d7fafc68a4985ca461fb15cba1812e933f6ec394c96dcfa7780",
+    "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/review_record_TEMPLATE.json": "72d35f658e0bb8ad86df0f7a22533064eb0b9d38dac88c4be522e181d1cd8718",
+    "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/predicted_structural_wall.png": "8e4f84e7b3a95adbe1e0041126f3744d8c530930a4f07f689714ed3d53f653ab",
+    "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/predicted_door_opening.png": "022b77e53d3240fe234448cf21108df4903f41f1156d71efa7c50050bfecefab",
+    "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/vectorizer_output/wall_geometry.json": "5fe575ee31c816258b3868e763884bf90cf634a87b5cab6a56946a6bf776e08e",
+    "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/review_overlay_candidates_on_source.png": "2dc74b6fff0130c286447bf59296cdb6f601efe37d63eb2b36ecef46a2cd9e6e",
+    "/home/pmharris/dev/cubicasa5k_data/data/datasets/qmarva/cubicasa5k/versions/4/cubicasa5k/cubicasa5k/high_quality_architectural/333/F1_scaled.png": "ac6be65c391069f75307a9b90c66240a0e94c9e75cadfd161ca14001bd6a88cc",
+    "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/export_preview/cubicasa-high-quality-architectural-333-val-region-01__PREVIEW_CANDIDATE_UNREVIEWED.ifc": "e4def87979953d853790d3c3f63ddde4d4b39f3a7c7a8df7eecb492713dcd09e",
+    "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/export_preview/guid_map.json": "1c258d27d5c20243a08e4a467ff2118936141b1eaeef2fbd876f2c55cc00046d",
+    "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/VIEWER_INSPECTION_STEPS.md": "221b79ce4139786c6cff7bf1bcb7d03c256c13be0dc15b0ec9d4dc5578a80168"
+  },
+  "outputs_sha256": {
+    "01_overview_full_plan.png": "c2ce6830c0b0e3d0ea31cbf0699f9b4969140b1f735730570b19be71d1141e9b",
+    "02_overview_region.png": "4a7c22d554096926444c17a80ec4a8f48a5e9083987bc146cdab7608fdca3acf",
+    "03_closeup_wall_002.png": "adc2f04bcc3673753b982228e18ea2aff34421bff8cc937ba2dbdf045d00bd6d",
+    "04_closeup_wall_003.png": "d4b4447c0b561860962eb31bf8f19a831a8233f27e7c7ebbce7be35d12ba63b9",
+    "05_closeup_wall_004.png": "729f511cf12b84aa67c21fabbfc12797693a26ced698a03512cc1c017d99e992",
+    "06_closeup_wall_012.png": "df2bf98a2cf5cb61d7ebc141e02ad15d893a26c707eff3d5933ee49a706edcf5",
+    "07_closeup_door_opening-c02.png": "f19d462f150a513d0e2406c0b01efc6ad7cea0b0e546c05c3e656f5594d96887",
+    "08_excluded_aperture_component_01.png": "a45da06a91b4005b21ff0678175feddf55240de85945da03a9175fc910a6fdcd",
+    "ID_MAPPING.json": "097f166c4692a3449e0ef0fafcecb137e09bef577722ca2f57266380d6b25824",
+    "REVIEW_INSTRUCTIONS.md": "c9f96acb357ed42e90a130851fb8611ff76b8c70107350495e28c0f3d7538146",
+    "VIEWER_INSPECTION_STEPS.md": "221b79ce4139786c6cff7bf1bcb7d03c256c13be0dc15b0ec9d4dc5578a80168",
+    "review_record_TEMPLATE.json": "72d35f658e0bb8ad86df0f7a22533064eb0b9d38dac88c4be522e181d1cd8718",
+    "viewer_inspection_record_TEMPLATE.json": "0687059b9c254bdc6661b31bbfe9196f94afd907f0b97f06df35283130cd140a"
+  },
+  "inputs_unchanged_after_build": true
+}

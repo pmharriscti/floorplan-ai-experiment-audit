@@ -1,0 +1,19 @@
+{
+  "experiment_id": "11_bim_bridge_v0",
+  "run_id": "bim_bridge_v0_20260928_183649_UTC",
+  "stage": "audit_prep",
+  "status": "PASS",
+  "written_utc": "2026-09-28T18:42:02Z",
+  "audit_entry": "/home/pmharris/dev/floorplan-ai-experiment-audit/experiments/11_bim_bridge_v0",
+  "audit_readiness": "local draft prepared in the working tree",
+  "publication_status": {
+    "staged": false,
+    "committed": false,
+    "pushed": false,
+    "published": false
+  },
+  "audit_repository_head_before": "703fcbc4e3482cf664a79d853ea268ddb583354e",
+  "files_copied": 27,
+  "ifc_committed": false,
+  "note": "Publication needs separate authorisation. An unpublished entry is not a published entry."
+}

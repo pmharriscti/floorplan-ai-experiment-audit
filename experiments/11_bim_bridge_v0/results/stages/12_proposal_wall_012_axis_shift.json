@@ -1,0 +1,14 @@
+{
+  "experiment_id": "bim_bridge_v0",
+  "run_id": "bim_bridge_v0_20260928_183649_UTC",
+  "stage": "proposal_wall_012_axis_shift",
+  "status": "PASS",
+  "written_utc": "2026-09-28T22:38:47Z",
+  "track": "REVIEWED_PREDICTION_BRIDGE",
+  "meaning": "A geometry proposal was written for human review. Nothing was applied: no candidate, review state, scale status, IFC or gate changed.",
+  "proposal_dir": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/proposals/wall_012_axis_shift_20260928_223842_UTC",
+  "applied": false,
+  "human_acceptance_recorded": false,
+  "scale_confirmed": false,
+  "gates_changed": []
+}

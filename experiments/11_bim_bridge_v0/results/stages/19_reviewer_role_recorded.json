@@ -1,0 +1,19 @@
+{
+  "experiment_id": "bim_bridge_v0",
+  "run_id": "bim_bridge_v0_20260928_183649_UTC",
+  "stage": "reviewer_role_recorded",
+  "status": "PASS",
+  "written_utc": "2026-09-29T16:25:07Z",
+  "meaning": "The reviewer role was recorded in a new draft review record. Object decisions, notes, hashes and edits are identical to the previous draft. Nothing was applied.",
+  "reviewer_role": "Prototype image-space geometry reviewer",
+  "record": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_in_progress/reviewer_role_20260929_162505_UTC.json",
+  "draft_review_record": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_in_progress/review_record_DRAFT_05.json",
+  "validator_still_refuses": [
+    "reviewer is empty: a named human reviewer is required",
+    "reviewed_utc must be YYYY-MM-DDTHH:MM:SSZ",
+    "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003: decision must be one of ['ACCEPT', 'ACCEPT_WITH_EDITS', 'REJECT']",
+    "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004: decision must be one of ['ACCEPT', 'ACCEPT_WITH_EDITS', 'REJECT']",
+    "opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02: decision must be one of ['ACCEPT', 'ACCEPT_WITH_EDITS', 'REJECT']"
+  ],
+  "gates_changed": []
+}

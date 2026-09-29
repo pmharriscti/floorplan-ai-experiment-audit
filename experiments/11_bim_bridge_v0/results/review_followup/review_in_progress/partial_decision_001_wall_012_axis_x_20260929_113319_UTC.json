@@ -1,0 +1,96 @@
+{
+  "record_version": "bim_bridge.partial_review_decision/0.1",
+  "experiment_id": "bim_bridge_v0",
+  "run_id": "bim_bridge_v0_20260928_183649_UTC",
+  "model_id": "cubicasa-high-quality-architectural-333-val-region-01",
+  "decision_id": "partial-001-wall_012-axis-x",
+  "recorded_utc": "2026-09-29T11:33:19Z",
+  "kind": "PARTIAL_REVIEW_DECISION",
+  "is_whole_object_decision": false,
+  "applied_to_geometry": false,
+  "why_not_in_the_review_record_as_a_decision": "The implemented review schema (bim_bridge.review_record/0.2) holds one whole-object decision per object: ACCEPT, ACCEPT_WITH_EDITS or REJECT. It has no per-attribute decision. Submitting ACCEPT_WITH_EDITS now would mark the whole wall HUMAN_ACCEPTED_WITH_EDITS, which the reviewer did not decide.",
+  "decided_by": {
+    "actor_type": "human",
+    "name": "Paul Harris",
+    "role": null,
+    "role_note": "No role was stated; none was invented.",
+    "channel": "Instruction given to the AI assistant in the working session."
+  },
+  "recorded_by": {
+    "actor_type": "agent",
+    "name": "Claude (AI assistant)",
+    "note": "The agent wrote this file. The decision and its reason are the reviewer's, quoted in full below. The reviewer has not signed this file; they should read it and correct it if it misstates them."
+  },
+  "decision_time_note": "recorded_utc is when this file was written. The reviewer gave no separate decision time.",
+  "reviewer_statement_verbatim": "For wall_012, I approve the proposed horizontal axis position\nfor the image-space preview:\n\naxis_px.start.x: 304.5 -> 305.5\naxis_px.end.x:   304.5 -> 305.5\n\nReason:\nThe proposed teal footprint follows the original drawing’s\nvertical wall more centrally than the current blue footprint.\n\nKeep both Y coordinates unchanged.\nKeep thickness_px = 4.0 provisionally; this is not an approval\nof its exact thickness.\n\nThe lower endpoint/corner remains pending review.\nScale remains ASSUMED_FOR_PREVIEW.\n\nRecord this as a partial review decision tied to the candidate\nand proposal versions. Do not interpret it as acceptance of the\nentire wall or the other objects.",
+  "tied_to": {
+    "candidate_geometry_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/candidate_geometry.json",
+    "candidate_geometry_sha256": "fcfd4a7061ed1d7fafc68a4985ca461fb15cba1812e933f6ec394c96dcfa7780",
+    "candidate_version": "bim_bridge.candidate_geometry/0.2",
+    "proposal_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/proposals/wall_012_axis_shift_20260928_223842_UTC/proposal.json",
+    "proposal_sha256": "98e635b61ac70761f1c6bc2e099099c00f267b5d3e3b70f95865a21b787dba77",
+    "proposal_version": "bim_bridge.geometry_proposal/0.1",
+    "proposal_dir": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/proposals/wall_012_axis_shift_20260928_223842_UTC",
+    "pictures_reviewed": "not stated by the reviewer; the statement refers to the teal (proposed) and blue (current) footprints drawn in the proposal pictures"
+  },
+  "object_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012",
+  "candidate_space": "letterbox_512",
+  "approved": [
+    {
+      "attribute": "axis_px.start[0] (x)",
+      "from": 304.5,
+      "to": 305.5,
+      "scope": "image-space preview"
+    },
+    {
+      "attribute": "axis_px.end[0] (x)",
+      "from": 304.5,
+      "to": 305.5,
+      "scope": "image-space preview"
+    }
+  ],
+  "reason_given_by_reviewer": "The proposed teal footprint follows the original drawing’s vertical wall more centrally than the current blue footprint.",
+  "kept_unchanged": [
+    {
+      "attribute": "axis_px.start[1] (y)",
+      "value": 241.5
+    },
+    {
+      "attribute": "axis_px.end[1] (y)",
+      "value": 160.04166666666666
+    }
+  ],
+  "provisional_not_approved": [
+    {
+      "attribute": "thickness_px",
+      "value": 4.0,
+      "note": "Kept provisionally. Not an approval of the exact thickness. Its origin is still the automated rule that replaced the vectorizer value 40 px."
+    }
+  ],
+  "pending_review": [
+    "lower endpoint and corner of wall_012 (junction with wall_004)",
+    "exact thickness of wall_012",
+    "whole-object decision for wall_012",
+    "every other object: wall_002, wall_003, wall_004, door_opening-c02"
+  ],
+  "not_covered": [
+    "No acceptance of wall_012 as a whole.",
+    "No decision on any other object.",
+    "No scale confirmation.",
+    "No dimensional claim.",
+    "No statement about the building; the approval concerns the position on the drawing."
+  ],
+  "state_after_this_record": {
+    "object_review_state": "CANDIDATE_UNREVIEWED",
+    "geometry_status": "CANDIDATE_UNREVIEWED",
+    "scale_status": "ASSUMED_FOR_PREVIEW",
+    "scale_confirmed": false,
+    "candidate_geometry_changed": false,
+    "ifc_changed": false,
+    "gates_changed": [],
+    "G2": "BLOCKED",
+    "G6": "BLOCKED",
+    "G7": "NOT_RUN"
+  },
+  "how_this_enters_a_final_review": "When the reviewer reaches a whole-object decision for wall_012, the edits axis_px.start = [305.5, 241.5] and axis_px.end = [305.5, 160.04166666666666] go into the review record under ACCEPT_WITH_EDITS, with any further corrections to the endpoint or thickness. Only then does apply-review change a review state."
+}

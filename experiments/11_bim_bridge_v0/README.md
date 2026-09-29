@@ -17,8 +17,12 @@ with the segmentation experiments in this repository. Its pixel-metric scoreboar
 | Downstream application or viewer acceptance | **NOT_RUN** |
 
 **The reviewed-prediction IFC milestone remains partial. It was not demonstrated.** The technical chain from
-saved predictions to inspectable IFC objects works on unreviewed candidates. Nobody has reviewed the
-geometry, the drawing has no scale evidence, and nobody has opened the file in a viewer.
+saved predictions to inspectable IFC objects works on unreviewed candidates. No review has been
+applied to the geometry, the drawing has no scale evidence, and nobody has opened the file in a viewer.
+
+**Update 2026-09-29.** A human review is in progress. Decisions for 2 of 5 objects are recorded in a draft
+review record. The record is incomplete and was not applied. The milestones and gates above are unchanged.
+See [Human Review Follow-up](#human-review-follow-up-2026-09-29).
 
 These three milestones are different results. A pass on one is not a pass on another.
 
@@ -152,7 +156,68 @@ bridge correctly refuses or flags bad input.
 web-ifc, a second IFC engine, parsed and tessellated both files: synthetic 23 of 23 checks, real preview 19 of 19.
 **This is a parser check. It is not a viewer test.**
 
+## Human Review Follow-up (2026-09-29)
+
+The run was continued on 2026-09-29. It was not re-run, and its earlier evidence was not replaced. Every file
+that existed in the run before the follow-up is byte-identical, checked against the run's `checksums.sha256`.
+
+**Status: review in progress, not applied.** The candidate geometry, the IFC, the scale status and every gate
+are unchanged. The IFC is still the unreviewed preview and does not contain the approved edits.
+
+| Object | Decision in the draft record | Approved change | Still open |
+| --- | --- | --- | --- |
+| `wall_012` | `ACCEPT_WITH_EDITS`, limited image-space preview | axis x 304.5 to 305.5 at both ends | thickness 4.0 px is a preview approximation; the outside corner at `wall_004` is underfilled, disclosed, shape not confirmed |
+| `wall_002` | `ACCEPT_WITH_EDITS`, limited image-space preview | start x 266.0 to 233.0 | partial wall: x 233 is an internal segmentation boundary, not a wall ending; thickness 9.0 px is a preview approximation |
+| `wall_003` | pending | none | hosts `door_opening-c02`; its end meets `wall_014`, which is not exported |
+| `wall_004` | pending | none | footprint sits 0.75 px above the predicted mask |
+| `door_opening-c02` | pending | none | host is `wall_003`, from the candidate record |
+
+What was done:
+
+1. **Review package.** Labelled overlays and one close-up for each candidate, with the exact object IDs and IFC
+   GlobalIds. It marks the automated `wall_012` thickness change and the excluded aperture component as not
+   human-verified. See [results/review_followup/review_package/REVIEW_INSTRUCTIONS.md](results/review_followup/review_package/REVIEW_INSTRUCTIONS.md).
+2. **Proposal for `wall_012`.** The axis was 1 px left of the centre of the predicted wall on all 57 rows
+   checked away from the junctions. The proposed axis is on the centre. See
+   [results/review_followup/proposals/wall_012_axis_shift/PROPOSAL.md](results/review_followup/proposals/wall_012_axis_shift/PROPOSAL.md).
+3. **Finding on `wall_002`.** Its start at x 266.0 is the vectorizer's unedited value, not a crop. The cause
+   of the 33 px gap to upstream `wall_001` is **unresolved**, because the vectorizer ran with its debug images
+   off. See [the finding](results/review_followup/review_in_progress/finding_001_wall_002_start_endpoint_20260929_133628_UTC.json).
+4. **Proposal for `wall_002`.** Extending the start to x 233 met no conflicting evidence: no opening, junction
+   or endpoint prediction, and no break in the drawn wall edge lines. See
+   [results/review_followup/proposals/wall_002_start_extension/PROPOSAL.md](results/review_followup/proposals/wall_002_start_extension/PROPOSAL.md).
+5. **Decisions.** The reviewer accepted both proposals for the limited image-space preview. The decision
+   records hold the reviewer's statements in full and the hashes of the candidate geometry and the proposals.
+6. **Review batch 02.** One combined overlay for the three pending objects. See
+   [results/review_followup/review_batch_02/BATCH.md](results/review_followup/review_batch_02/BATCH.md).
+
+How the decisions were recorded:
+
+- The reviewer is the repository owner, in the role `Prototype image-space geometry reviewer`. The review
+  covers visual agreement with the source drawing for a limited prototype preview. It does not certify
+  real-world dimensions, construction suitability or inspection readiness.
+- The reviewer gave the decisions in the working session. An AI assistant wrote the files. **The reviewer
+  did not sign them.**
+- The review schema holds one decision for each whole object. Partial decisions were kept as separate records
+  and in review notes until the reviewer decided the whole object.
+- The current draft is [review_record_DRAFT_05.json](results/review_followup/review_in_progress/review_record_DRAFT_05.json).
+  The validator refuses it: the reviewer name and review time are empty and three objects have no decision.
+  It was not bypassed.
+
+What the follow-up does not show:
+
+- Agreement with the prediction mask shows that geometry follows the model's prediction. It is not an approval
+  and says nothing about the building. No ground truth or annotation was read.
+- The drawing checks are heuristics on drawn ink.
+- The existing IFC holds no explicit wall-to-wall connection relationship. The accepted 2D connection at the
+  `wall_012` and `wall_004` junction is not verified in the IFC.
+- A note on a partial wall reaches the IFC only through the review notes, as `ReviewDecisionNotes`, after a
+  complete record is applied. The existing IFC carries no such note.
+
 ## Visual QA
+
+Three review images from the follow-up were added on 2026-09-29. The approved edits in them are drawn for
+review only and were not applied or exported.
 
 See [qa/README.md](qa/README.md). One review aid shows the source image and the predicted masks with the
 candidate geometry drawn over them. It contains no ground truth. No IFC viewer screenshot exists, because
@@ -160,7 +225,10 @@ no viewer was run.
 
 ## Manual Inputs, Edits and Assumptions
 
-- **Human inputs: none.** No reviewer, review date or approval exists, and none was invented.
+- **Human inputs in the run of 2026-09-28: none.** No reviewer, review date or approval existed, and none was
+  invented.
+- **Human inputs on 2026-09-29.** The reviewer proposed and approved two axis edits and stated a reviewer
+  role. They are held in a draft record and are not applied. See the follow-up section above.
 - **Agent inputs.** An AI assistant chose the wall selection and read the area label `1 H+K+S 39.5 M2` from
   the source image. Both are recorded in the run configuration. An agent input is not a review.
 - **One edit by an automated rule.** The vectorizer proposed a thickness of 40 px for `wall_012`, which is
@@ -187,7 +255,8 @@ partitions, and the bridge now measures thickness on the predicted mask.
 
 - No new wall IoU, no segmentation improvement, no training comparison and no broad reliability claim.
 - No dimensional accuracy. No reference geometry was used, so accuracy is unknown. It is not zero error.
-- No human review, no evidenced plan scale, no viewer inspection, no target application.
+- No applied human review, no evidenced plan scale, no viewer inspection, no target application. Decisions
+  for 2 of 5 objects exist in a draft record only.
 - No semantic confidence, because upstream saved no probability maps.
 - One region of one validation sample. Nothing here generalises.
 - Wall joins are not resolved, so summed wall volumes are not a quantity take-off.
@@ -195,7 +264,9 @@ partitions, and the bridge now measures thickness on the predicted mask.
 
 ## Next Smallest Actions
 
-1. **G6.** A person fills in the review record template, one decision for each of the 5 objects, and runs `bim-bridge apply-review`.
+1. **G6.** The reviewer decides the three pending objects, `wall_003`, `wall_004` and `door_opening-c02`, and
+   confirms the reviewer name. The completed record is then applied with `bim-bridge apply-review`, and a new
+   IFC revision is exported beside the earlier one and checked.
 2. **G2.** A person supplies or confirms a plan scale with its evidence, in the same record.
 3. **G7.** A person opens the IFC in the target application or a viewer and records the result, following
    [results/real_VIEWER_INSPECTION_STEPS.md](results/real_VIEWER_INSPECTION_STEPS.md). The target BIM application has to be named first.
@@ -204,8 +275,10 @@ partitions, and the bridge now measures thickness on the predicted mask.
 
 This entry was published to `origin/main` on 2026-09-28, after the repository owner authorised publication. Its commit is in the repository history.
 
+The entry was updated on 2026-09-29 with the human-review follow-up, after the repository owner asked for the update.
+
 Publishing the audit entry does not change the experiment's outcome. The reviewed-prediction milestone is still partial, and gates G2, G6 and G7 are still open.
 
-Files under `results/` are unchanged copies of the run's outputs, so they describe the state at the time of the run. Where a copied file says the geometry or the audit is not published, it is describing that earlier moment.
+Files under `results/` are unchanged copies of the run's outputs, so they describe the state at the time they were written. Where a copied file says the geometry or the audit is not published, it is describing that earlier moment.
 
 See [config.yaml](config.yaml), [metrics.json](metrics.json), and [provenance.json](provenance.json).

@@ -1,0 +1,19 @@
+{
+  "experiment_id": "bim_bridge_v0",
+  "run_id": "bim_bridge_v0_20260928_183649_UTC",
+  "stage": "review_batch",
+  "status": "PASS",
+  "written_utc": "2026-09-29T16:25:14Z",
+  "track": "REVIEWED_PREDICTION_BRIDGE",
+  "meaning": "A review batch was drawn for the pending objects. Visualization only: nothing was applied or exported, and no object was accepted.",
+  "batch_dir": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_batch_02_20260929_162511_UTC",
+  "objects_awaiting_decision": [
+    "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003",
+    "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004",
+    "opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02"
+  ],
+  "applied": false,
+  "new_ifc_written": false,
+  "scale_confirmed": false,
+  "gates_changed": []
+}

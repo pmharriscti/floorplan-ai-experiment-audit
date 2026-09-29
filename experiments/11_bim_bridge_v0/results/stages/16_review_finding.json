@@ -1,0 +1,12 @@
+{
+  "experiment_id": "bim_bridge_v0",
+  "run_id": "bim_bridge_v0_20260928_183649_UTC",
+  "stage": "review_finding",
+  "status": "PASS",
+  "written_utc": "2026-09-29T13:36:30Z",
+  "meaning": "A finding was written from existing evidence. It is not a review. No geometry, review state, scale status, IFC or gate changed.",
+  "finding_id": "finding-001-wall_002-start-endpoint",
+  "verdict": "UNRESOLVED_RECONSTRUCTION_ENDPOINT",
+  "record": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_in_progress/finding_001_wall_002_start_endpoint_20260929_133628_UTC.json",
+  "gates_changed": []
+}

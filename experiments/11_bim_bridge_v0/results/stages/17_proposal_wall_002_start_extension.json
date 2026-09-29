@@ -1,0 +1,16 @@
+{
+  "experiment_id": "bim_bridge_v0",
+  "run_id": "bim_bridge_v0_20260928_183649_UTC",
+  "stage": "proposal_wall_002_start_extension",
+  "status": "PASS",
+  "written_utc": "2026-09-29T14:19:11Z",
+  "track": "REVIEWED_PREDICTION_BRIDGE",
+  "meaning": "A geometry proposal was written for human review. Nothing was applied: no candidate, review state, scale status, IFC or gate changed.",
+  "proposal_dir": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/proposals/wall_002_start_extension_20260929_141905_UTC",
+  "suitability": "NO_CONFLICT_FOUND_IN_THE_CHECKS_RUN",
+  "conflicts": [],
+  "applied": false,
+  "human_acceptance_recorded": false,
+  "scale_confirmed": false,
+  "gates_changed": []
+}

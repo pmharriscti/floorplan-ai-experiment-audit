@@ -1,0 +1,375 @@
+{
+  "proposal_version": "bim_bridge.geometry_proposal/0.1",
+  "experiment_id": "bim_bridge_v0",
+  "run_id": "bim_bridge_v0_20260928_183649_UTC",
+  "model_id": "cubicasa-high-quality-architectural-333-val-region-01",
+  "written_utc": "2026-09-29T14:19:05Z",
+  "status": "PROPOSED_AWAITING_HUMAN_REVIEW",
+  "suitability": "NO_CONFLICT_FOUND_IN_THE_CHECKS_RUN",
+  "conflicts": [],
+  "applied": false,
+  "is_a_review": false,
+  "human_acceptance_recorded": false,
+  "scale_status": "ASSUMED_FOR_PREVIEW",
+  "scale_confirmed": false,
+  "gates_changed": [],
+  "object_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002",
+  "object_review_state": "CANDIDATE_UNREVIEWED",
+  "candidate_space": "letterbox_512",
+  "proposed_by": {
+    "actor_type": "human_request_prepared_by_agent",
+    "requested_by": "Paul Harris",
+    "prepared_by": "Claude (AI assistant) with scripts/propose_wall_endpoint_extension.py",
+    "note": "The endpoint value was given by the requester. The checks and the picture were produced by the script. Neither is a recorded review decision."
+  },
+  "exact_change_awaiting_review": {
+    "field": "axis_px.start",
+    "from": [
+      266.0,
+      160.04166666666666
+    ],
+    "to": [
+      233.0,
+      160.04166666666666
+    ],
+    "axis_px.end": "unchanged [472.0, 160.04166666666666]",
+    "thickness_px": "unchanged 9.0",
+    "axis_length_px": {
+      "from": 206.0,
+      "to": 239.0
+    },
+    "other_objects_modified": [],
+    "upstream_segment_imported_or_modified": null
+  },
+  "current": {
+    "axis_px": {
+      "start": [
+        266.0,
+        160.04166666666666
+      ],
+      "end": [
+        472.0,
+        160.04166666666666
+      ]
+    },
+    "thickness_px": 9.0
+  },
+  "proposed": {
+    "axis_px": {
+      "start": [
+        233.0,
+        160.04166666666666
+      ],
+      "end": [
+        472.0,
+        160.04166666666666
+      ]
+    },
+    "thickness_px": 9.0
+  },
+  "boundary_explanation": {
+    "x": 233.0,
+    "kind": "internal segmentation boundary, not a physical wall ending",
+    "basis": [
+      "Upstream vectorizer segment wall_001 has centerline [[108.375, 160.0], [233.0, 160.0]]; its right end is x 233.",
+      "The predicted wall mask and the drawn wall continue on both sides of this x.",
+      "No junction or endpoint prediction lies in the extension band (junction 0 px, endpoint 0 px).",
+      "See finding-001-wall_002-start-endpoint for why the vectorizer left two segments."
+    ],
+    "neighbour": {
+      "upstream_object_id": "wall_001",
+      "status": "NOT SELECTED / NOT EXPORTED",
+      "centerline": [
+        [
+          108.375,
+          160.0
+        ],
+        [
+          233.0,
+          160.0
+        ]
+      ],
+      "thickness": 9.0,
+      "modified": false,
+      "imported": false
+    }
+  },
+  "limitation_note": "PARTIAL WALL. wall_002 represents only part of a longer drawn wall. Its start at x = 233 (letterbox_512 px) is an internal segmentation boundary, not a physical wall ending: it is where the vectorizer's segment wall_001 ends. wall_001 (x 108.375 to 233) was not selected and is not exported. The drawing and the predicted wall mask continue to the left of x = 233.",
+  "limitation_note_supported_by": [
+    "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/vectorizer_output/wall_geometry.json",
+    "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/candidate_geometry.json selection.upstream_walls_not_selected",
+    "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/masks/val/high_quality_architectural__333__heads.png",
+    "/home/pmharris/dev/cubicasa5k_data/data/datasets/qmarva/cubicasa5k/versions/4/cubicasa5k/cubicasa5k/high_quality_architectural/333/F1_scaled.png"
+  ],
+  "remaining_unexported_after_proposal": "The drawn wall left of x 233 (upstream wall_001, x 108.375 to 233) stays unexported.",
+  "check_against_predictions": {
+    "columns_checked": 34,
+    "x_range": [
+      233,
+      266
+    ],
+    "footprint_pixel_rows": [
+      156,
+      165
+    ],
+    "columns_with_axis_on_predicted_wall": 34,
+    "mask_heights_seen": [
+      8,
+      9
+    ],
+    "mask_row_ranges_seen": [
+      [
+        156,
+        163
+      ],
+      [
+        156,
+        164
+      ]
+    ],
+    "columns_where_footprint_exceeds_mask": 34,
+    "max_footprint_rows_without_mask": 2,
+    "prediction_heads_in_the_extension_band": {
+      "structural_wall": {
+        "pixels": 277,
+        "x_range": [
+          233,
+          266
+        ]
+      },
+      "wall_boundary": {
+        "pixels": 194,
+        "x_range": [
+          233,
+          266
+        ]
+      },
+      "wall_centerline": {
+        "pixels": 102,
+        "x_range": [
+          233,
+          266
+        ]
+      },
+      "junction": {
+        "pixels": 0,
+        "x_range": null
+      },
+      "endpoint": {
+        "pixels": 0,
+        "x_range": null
+      },
+      "door_opening": {
+        "pixels": 0,
+        "x_range": null
+      },
+      "window_opening": {
+        "pixels": 0,
+        "x_range": null
+      },
+      "visible_wall": {
+        "pixels": 277,
+        "x_range": [
+          233,
+          266
+        ]
+      }
+    },
+    "fixture_predictions_in_the_extension_band": {
+      "path": "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/masks/val/high_quality_architectural__333__fixtures.png",
+      "pixels_any_class": 0
+    },
+    "opening_predictions_conflict": false,
+    "caveat": "Agreement with the mask shows the geometry follows the model's prediction. It is not evidence about the building and is not an approval."
+  },
+  "check_against_drawing": {
+    "method": "Each source column from x 600 to 686. Pixels darker than grey level 150 within 5 source px of where the footprint edges fall are taken as the two drawn wall edge lines.",
+    "caveat": "A heuristic on the drawing. It can detect a break in a drawn edge line. It cannot tell a wall from another pair of parallel lines, and it does not measure the building.",
+    "source_columns_checked": 87,
+    "columns_missing_top_edge_line": [],
+    "columns_missing_bottom_edge_line": [],
+    "drawn_band_source_rows": [
+      48.5,
+      72.5
+    ],
+    "drawn_band_letterbox_y": [
+      154.82638362395755,
+      164.14253222137984
+    ],
+    "drawn_band_width_letterbox": 9.31614859742229,
+    "footprint_letterbox_y": [
+      155.54166666666666,
+      164.54166666666666
+    ],
+    "ink_between_the_edges": {
+      "columns_with_any": 31,
+      "note": "Scattered marks inside the band, consistent with the material hatch seen along the rest of this wall in the picture."
+    },
+    "drawn_lines_meeting_the_wall_from_above": [
+      {
+        "source_x": [
+          637,
+          639
+        ],
+        "letterbox_x": [
+          247.3,
+          248.0
+        ]
+      },
+      {
+        "source_x": [
+          646,
+          648
+        ],
+        "letterbox_x": [
+          250.8,
+          251.5
+        ]
+      }
+    ],
+    "drawn_lines_meeting_the_wall_from_below": [
+      {
+        "source_x": [
+          619,
+          620
+        ],
+        "letterbox_x": [
+          240.3,
+          240.7
+        ]
+      }
+    ]
+  },
+  "other_objects_on_the_extension": [],
+  "region_of_interest": {
+    "roi": {
+      "space": "letterbox_512",
+      "x_min": 228,
+      "y_min": 143,
+      "x_max": 490,
+      "y_max": 256
+    },
+    "extension_inside_roi_x": true
+  },
+  "contract_dry_run": {
+    "current_geometry": {
+      "PASS": 60,
+      "FAIL": 0,
+      "WARN": 6,
+      "INFO": 0
+    },
+    "proposed_geometry": {
+      "PASS": 60,
+      "FAIL": 0,
+      "WARN": 6,
+      "INFO": 0
+    },
+    "note": "In memory only. Nothing written. Still CANDIDATE_UNREVIEWED with an ASSUMED_FOR_PREVIEW scale."
+  },
+  "note_survival_in_ifc": {
+    "routes": [
+      {
+        "route": "Review record object `notes`",
+        "lands_in_ifc_as": "AutoAutoCAD_Provenance.ReviewDecisionNotes on the IfcWall",
+        "code": "src/bim_bridge/review.py:77, src/bim_bridge/ifc_export.py:92",
+        "needs_code_change": false,
+        "condition": "Only after a human review record is applied. Text over 255 characters is written as IfcText."
+      },
+      {
+        "route": "Human edit `reason`",
+        "lands_in_ifc_as": "AutoAutoCAD_Provenance.Edits (JSON), with before and after values",
+        "code": "src/bim_bridge/review.py:74, src/bim_bridge/ifc_export.py:94",
+        "needs_code_change": false,
+        "condition": "Only if the endpoint edit is applied."
+      },
+      {
+        "route": "Vectorizer start x kept",
+        "lands_in_ifc_as": "AutoAutoCAD_Provenance.CandidateOriginal",
+        "code": "src/bim_bridge/ifc_export.py:95",
+        "needs_code_change": false,
+        "condition": "Always."
+      },
+      {
+        "route": "A dedicated limitation field",
+        "lands_in_ifc_as": "would need a new property, for example Limitations, or an entry in Assumptions",
+        "code": "src/bim_bridge/model_builder.py:43, src/bim_bridge/ifc_export.py:96",
+        "needs_code_change": true,
+        "condition": "Assumptions is generated by the bridge and takes no input from the candidate or the review. Not done; needs separate authorization."
+      },
+      {
+        "route": "Today, with no review applied",
+        "lands_in_ifc_as": "nowhere",
+        "code": null,
+        "needs_code_change": null,
+        "condition": "The existing preview IFC carries no partial-wall note."
+      }
+    ],
+    "mechanics_test": {
+      "ran": true,
+      "what": "Mechanics test in a scratch folder on this wall alone, with a marker in place of a reviewer. Not a review. The file is not in the run and is not an IFC revision.",
+      "contract_checks": {
+        "PASS": 28,
+        "FAIL": 0,
+        "WARN": 1,
+        "INFO": 0
+      },
+      "ReviewDecisionNotes_equals_note": true,
+      "ReviewDecisionNotes_ifc_type": "IfcText",
+      "note_length": 364,
+      "Edits_contains_reason": true,
+      "AxisCandidatePixels": "{\"end\": [472.0, 160.04166666666666], \"space\": \"letterbox_512\", \"start\": [233.0, 160.04166666666666]}",
+      "global_id_same_as_current_ifc": true,
+      "CandidateOriginal_keeps_start": {
+        "axis_px": {
+          "end": [
+            472.0,
+            160.04166666666666
+          ],
+          "start": [
+            266.0,
+            160.04166666666666
+          ]
+        },
+        "orientation": "horizontal",
+        "source": "vectorizer output, unedited",
+        "thickness_px": 9.0
+      }
+    }
+  },
+  "review_record_entry_if_the_reviewer_agrees": {
+    "object_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002",
+    "kind": "wall",
+    "decision": "ACCEPT_WITH_EDITS",
+    "edits": [
+      {
+        "field": "axis_px.start",
+        "after": [
+          233.0,
+          160.04166666666666
+        ],
+        "reason": "<reviewer's own reason> Start extended from x 266 to x 233, the end of upstream segment wall_001; this is an internal segmentation boundary, not a physical wall ending."
+      }
+    ],
+    "notes": "PARTIAL WALL. wall_002 represents only part of a longer drawn wall. Its start at x = 233 (letterbox_512 px) is an internal segmentation boundary, not a physical wall ending: it is where the vectorizer's segment wall_001 ends. wall_001 (x 108.375 to 233) was not selected and is not exported. The drawing and the predicted wall mask continue to the left of x = 233."
+  },
+  "image": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/proposals/wall_002_start_extension_20260929_141905_UTC/01_wall_002_start_extension_original_current_proposed.png",
+  "inputs_read_only_sha256": {
+    "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/candidate_geometry.json": "fcfd4a7061ed1d7fafc68a4985ca461fb15cba1812e933f6ec394c96dcfa7780",
+    "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/vectorizer_output/wall_geometry.json": "5fe575ee31c816258b3868e763884bf90cf634a87b5cab6a56946a6bf776e08e",
+    "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/masks/val/high_quality_architectural__333__heads.png": "4da6f6eb69c64ef721a30e7f81f74843348db831d3608b331fcc2dbd03f1f355",
+    "/home/pmharris/dev/cubicasa5k_data/data/datasets/qmarva/cubicasa5k/versions/4/cubicasa5k/cubicasa5k/high_quality_architectural/333/F1_scaled.png": "ac6be65c391069f75307a9b90c66240a0e94c9e75cadfd161ca14001bd6a88cc",
+    "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/export_preview/cubicasa-high-quality-architectural-333-val-region-01__PREVIEW_CANDIDATE_UNREVIEWED.ifc": "e4def87979953d853790d3c3f63ddde4d4b39f3a7c7a8df7eecb492713dcd09e",
+    "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/export_preview/guid_map.json": "1c258d27d5c20243a08e4a467ff2118936141b1eaeef2fbd876f2c55cc00046d",
+    "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/gates.json": "59060b796e3248c82b0ed02bb7e625368291e56b8e7cf71b29729e70eb2a07fd"
+  },
+  "not_done": [
+    "inference",
+    "reading ground truth or annotations",
+    "vectorizer re-run or retuning",
+    "merge threshold change",
+    "geometry change",
+    "review acceptance",
+    "IFC export into the run",
+    "git push"
+  ]
+}
