@@ -1,0 +1,69 @@
+{
+  "experiment_id": "bim_bridge_pm_comparison_v0",
+  "run_id": "bim_bridge_pm_comparison_v0_20261006_130747_UTC",
+  "stage": "prepare_candidates",
+  "status": "PASS",
+  "written_utc": "2026-10-06T13:14:38Z",
+  "sample_key": "cc-02",
+  "model_id": "cc-high-quality-architectural--4847-p01",
+  "outcome": "WALLS_AND_HOSTED_OPENINGS",
+  "scope": "WHOLE_PLAN_ATTEMPT",
+  "upstream_walls": 12,
+  "candidate_walls": 12,
+  "excluded_walls": [],
+  "apertures": 3,
+  "openings_not_exported": 9,
+  "automated_edits": [
+    {
+      "object_id": "wall:cc-high-quality-architectural--4847-p01:wall_002",
+      "field": "thickness",
+      "before": {
+        "thickness_px": 40.0
+      },
+      "after": {
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--4847-p01:wall_007",
+      "field": "thickness",
+      "before": {
+        "thickness_px": 6.0
+      },
+      "after": {
+        "thickness_px": 3.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--4847-p01:wall_008",
+      "field": "thickness",
+      "before": {
+        "thickness_px": 6.0
+      },
+      "after": {
+        "thickness_px": 3.0
+      }
+    }
+  ],
+  "plan_diagnostics_summary": {
+    "predicted_wall_pixel_coverage_ratio": 0.7468811556139199,
+    "skeleton_coverage_ratio": 0.7580831408775981,
+    "candidate_pixels_outside_predicted_wall": 2638
+  },
+  "ground_truth_or_annotation_read": false,
+  "sample_333_geometry_or_decisions_used": false,
+  "paths": {
+    "candidate_geometry": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/cc-02/candidates/candidate_geometry.json",
+    "candidate_geometry_sha256": "5b23af24430a78e9b11ab5278e3cf3a5700355798070873055b757b8ed77e1d0"
+  },
+  "geometry_status": "CANDIDATE_UNREVIEWED",
+  "scale_status": "ASSUMED_FOR_PREVIEW",
+  "input_checks": {
+    "PASS": 141,
+    "FAIL": 0,
+    "WARN": 16,
+    "INFO": 0
+  },
+  "failed": [],
+  "building_model": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/cc-02/building_model.json"
+}

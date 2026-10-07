@@ -1,0 +1,233 @@
+{
+  "record_version": "bim_bridge.object_review_decision/0.1",
+  "experiment_id": "bim_bridge_v0",
+  "run_id": "bim_bridge_v0_20260928_183649_UTC",
+  "model_id": "cubicasa-high-quality-architectural-333-val-region-01",
+  "decision_id": "decision-006-wall_004-whole-object",
+  "recorded_utc": "2026-10-01T20:20:30Z",
+  "kind": "WHOLE_OBJECT_REVIEW_DECISION",
+  "object_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004",
+  "decision": "ACCEPT",
+  "scope": "limited image-space preview",
+  "applies_only_to": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004",
+  "applied_to_geometry": false,
+  "why_not_applied_yet": "door_opening-c02 has no decision and the record-level reviewer name and review time are empty. The validator refuses the record. It was not bypassed.",
+  "decided_by": {
+    "actor_type": "human",
+    "name": "Paul Harris",
+    "role": "Prototype image-space geometry reviewer",
+    "role_source": "stated by the reviewer",
+    "channel": "Instruction given to the AI assistant in the working session."
+  },
+  "recorded_by": {
+    "actor_type": "agent",
+    "name": "Claude (AI assistant)",
+    "note": "The agent wrote this file from the reviewer's instruction, quoted below."
+  },
+  "signature": {
+    "digitally_signed_by_reviewer": false,
+    "note": "The reviewer did not sign this file."
+  },
+  "decision_time_note": "recorded_utc is when this file was written.",
+  "reviewer_statement_verbatim": "Record wall_004 as ACCEPT for the limited image-space preview.\n\nObject:\nwall:cubicasa-high-quality-architectural-333-val-region-01:wall_004\n\nNo geometry edits:\n- axis_px.start = [242.0, 242.0]\n- axis_px.end = [304.5, 241.5]\n- thickness_px = 4.0\n\nReason:\nThe candidate represents the intended short horizontal wall in\nthe source drawing. I accept its current extent, position, and\napproximate thickness for this limited preview.\n\nPreserve these limitations in the review notes:\n- At the reported column 273, the footprint is 0.75 px higher\n  than the prediction-mask centre. This is not an exact match.\n- The outside corner at wall_012 remains underfilled.\n- Exact physical thickness, real-world dimensions, and dimensional\n  tolerance compliance are not verified.\n\nPreserve the vectorizer origin of the unchanged coordinates and\nthickness. Do not create geometry edits for unchanged values.\nDo not flatten the axis, snap endpoints, or fill the corner.\n\nMy assessment considers the already-approved wall_012 proposal\nat x = 305.5. Verify the resulting geometric contact after the\ncomplete review is applied and a new IFC is exported.\n\nReviewer role:\nPrototype image-space geometry reviewer\n\nBind this decision to the exact candidate version and preserve\nthe existing decisions, object ID, GlobalId, and provenance.\n\nLeave door_opening-c02 pending. Do not infer any missing decision\nfor wall_003 from this instruction.",
+  "reason_given_by_reviewer": "The candidate represents the intended short horizontal wall in the source drawing. I accept its current extent, position, and approximate thickness for this limited preview.",
+  "tied_to": {
+    "candidate_geometry_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/candidate_geometry.json",
+    "candidate_geometry_sha256": "fcfd4a7061ed1d7fafc68a4985ca461fb15cba1812e933f6ec394c96dcfa7780",
+    "candidate_version": "bim_bridge.candidate_geometry/0.2",
+    "wall_012_proposal_considered": {
+      "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/proposals/wall_012_axis_shift_20260928_223842_UTC/proposal.json",
+      "sha256": "98e635b61ac70761f1c6bc2e099099c00f267b5d3e3b70f95865a21b787dba77",
+      "approved_axis_px": {
+        "start": [
+          305.5,
+          241.5
+        ],
+        "end": [
+          305.5,
+          160.04166666666666
+        ]
+      },
+      "approved_in": {
+        "decision_id": "decision-003-wall_012-whole-object",
+        "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_in_progress/decision_003_wall_012_whole_object_20260929_132739_UTC.json",
+        "sha256": "3a67aeadb66bff82aa87366d3f2c7d777da57de96a7478b445129129972a97e5"
+      }
+    }
+  },
+  "geometry_accepted_unchanged": {
+    "candidate_space": "letterbox_512",
+    "axis_px": {
+      "start": [
+        242.0,
+        242.0
+      ],
+      "end": [
+        304.5,
+        241.5
+      ]
+    },
+    "thickness_px": 4.0,
+    "axis_is_exactly_horizontal": false,
+    "axis_y_difference_px": 0.5
+  },
+  "edits": [],
+  "origin_preserved": {
+    "axis": "vectorizer output, unedited",
+    "thickness": "vectorizer",
+    "thickness_basis": "Vectorizer thickness 4.0 px, consistent with 4.0 px measured on the predicted structural_wall mask."
+  },
+  "limitations_preserved_in_review_notes": [
+    {
+      "limitation": "At column 273 the footprint is 0.75 px higher than the prediction-mask centre. Not an exact match.",
+      "checked_against_the_mask": {
+        "column": 273,
+        "mask_pixel_rows": [
+          241,
+          244
+        ],
+        "mask_span_y": [
+          240.5,
+          244.5
+        ],
+        "mask_centre_y": 242.5,
+        "footprint_span_y": [
+          239.75,
+          243.75
+        ],
+        "footprint_centre_y": 241.75,
+        "footprint_minus_mask_centre_px": -0.75,
+        "note": "Negative y is up in the image, so the footprint is 0.75 px higher. The reviewer's figure is confirmed."
+      }
+    },
+    {
+      "limitation": "The outside corner at wall_012 remains underfilled.",
+      "first_disclosed_in": {
+        "decision_id": "partial-002-wall_012-lower-junction-wall_004",
+        "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_in_progress/partial_decision_002_wall_012_lower_junction_20260929_123049_UTC.json",
+        "sha256": "589d1a6e5c0080ae8cef789d2dede26cba0cdc95fe6ed82aafe0e5a1d5588fd0"
+      }
+    },
+    {
+      "limitation": "Exact physical thickness, real-world dimensions and dimensional tolerance compliance are not verified."
+    }
+  ],
+  "not_authorized": [
+    "flattening the axis",
+    "snapping endpoints",
+    "filling the corner",
+    "geometry edits for unchanged values"
+  ],
+  "contact_with_wall_012": {
+    "basis_of_assessment": "the already-approved wall_012 proposal, axis x = 305.5",
+    "wall_004_end": [
+      304.5,
+      241.5
+    ],
+    "wall_012_footprint_x_as_approved": [
+      303.5,
+      307.5
+    ],
+    "wall_004_end_inside_that_footprint_in_2d": true,
+    "verified_in_ifc": false,
+    "to_verify": "geometric contact in the new IFC, after the complete review is applied and exported; to be reported separately from explicit IFC connection relationships"
+  },
+  "preserved": {
+    "object_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004",
+    "ifc_global_id_mapping": {
+      "ifc_guid": "1b$tabjrHGbPd9xW5BjLOQ",
+      "uuid": "65ff7925-b754-5095-99c9-ee014bb5561a",
+      "guid_map": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/export_preview/guid_map.json",
+      "guid_map_sha256": "1c258d27d5c20243a08e4a467ff2118936141b1eaeef2fbd876f2c55cc00046d"
+    },
+    "candidate_original": {
+      "axis_px": {
+        "start": [
+          242.0,
+          242.0
+        ],
+        "end": [
+          304.5,
+          241.5
+        ]
+      },
+      "thickness_px": 4.0,
+      "orientation": "horizontal",
+      "source": "vectorizer output, unedited"
+    },
+    "source_refs": [
+      {
+        "kind": "prediction_mask_region",
+        "artifact_role": "predicted_structural_wall",
+        "path": "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/masks/val/high_quality_architectural__333__heads.png",
+        "sha256": "4da6f6eb69c64ef721a30e7f81f74843348db831d3608b331fcc2dbd03f1f355",
+        "upstream_object_id": null,
+        "region_candidate_px": [
+          240.0,
+          239.5,
+          306.5,
+          244.0
+        ],
+        "pixel_support": {
+          "axis_support_ratio": 1.0,
+          "axis_samples": 63,
+          "measured_thickness_px_median": 4.0
+        }
+      },
+      {
+        "kind": "vectorizer_output",
+        "artifact_role": "wall_geometry.json",
+        "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/vectorizer_output/wall_geometry.json",
+        "sha256": "5fe575ee31c816258b3868e763884bf90cf634a87b5cab6a56946a6bf776e08e",
+        "upstream_object_id": "wall_004",
+        "region_candidate_px": null,
+        "pixel_support": null
+      }
+    ],
+    "existing_decisions": [
+      {
+        "decision_id": "decision-003-wall_012-whole-object",
+        "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_in_progress/decision_003_wall_012_whole_object_20260929_132739_UTC.json",
+        "sha256": "3a67aeadb66bff82aa87366d3f2c7d777da57de96a7478b445129129972a97e5"
+      },
+      {
+        "decision_id": "decision-004-wall_002-whole-object",
+        "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_in_progress/decision_004_wall_002_whole_object_20260929_155308_UTC.json",
+        "sha256": "d7b0e2dad64c397a0877ff427e67ae5c90f660b51386eec039ba0aab5bccd785"
+      },
+      {
+        "decision_id": "decision-005-wall_003-whole-object",
+        "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_in_progress/decision_005_wall_003_whole_object_20261001_171930_UTC.json",
+        "sha256": "0a3153b328ef03e214e185001cb0f6bf43d477ee840f20251919effa2c6bacd4"
+      }
+    ]
+  },
+  "wall_003": "Not touched by this instruction. Its decision is decision-005-wall_003-whole-object, recorded from the reviewer's earlier explicit instruction. Nothing about wall_003 was inferred here.",
+  "not_covered": [
+    "door_opening-c02: no decision.",
+    "No scale confirmation.",
+    "No dimensional or real-world claim.",
+    "No viewer inspection."
+  ],
+  "mechanics_check": {
+    "what": "In-memory check on wall_004 alone, with a marker in place of a reviewer. Nothing was written from it and it is not a review.",
+    "resulting_state": "HUMAN_ACCEPTED",
+    "geometry_unchanged": true,
+    "edits_recorded": 0,
+    "candidate_original_kept": true,
+    "object_id_unchanged": true
+  },
+  "state_after_this_record": {
+    "object_review_state_in_candidate_geometry": "CANDIDATE_UNREVIEWED",
+    "decision_in_draft_record": "ACCEPT",
+    "scale_status": "ASSUMED_FOR_PREVIEW",
+    "scale_confirmed": false,
+    "candidate_geometry_changed": false,
+    "ifc_changed": false,
+    "new_ifc_written": false,
+    "gates_changed": [],
+    "G2": "BLOCKED",
+    "G6": "BLOCKED",
+    "G7": "NOT_RUN"
+  }
+}

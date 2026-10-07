@@ -1,0 +1,52 @@
+{
+  "experiment_id": "12_bim_bridge_pm_comparison",
+  "images": [
+    {
+      "file": "comparison_sheet_r04_after_repair.jpg",
+      "width": 1600,
+      "height": 5882,
+      "mode": "RGB",
+      "sha256": "cf655357e3042673bc2acde56d2ca510dc8870812a00434724dc3a7c78af4a91",
+      "size_bytes": 1411449,
+      "jpeg_quality": 70,
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/comparison_20261006_191845_UTC_r04_repair_v1_2/COMPARISON_SHEET.png",
+      "source_sha256": "70e1c91bb867557564c4e2ffdf9c6b88d5ef21eb9a8ef1f9ae632829a3288e9c",
+      "source_width": 2217,
+      "source_height": 8150,
+      "transformation": "resized to 1600x5882 (Lanczos), JPEG quality 70; content otherwise unchanged",
+      "content": "All 15 plans after the bridge repair (revision r04): source | masks | masks vs labels | IFC walls vs labels | IFC plan read from the file."
+    },
+    {
+      "file": "comparison_sheet_r01_before_repair.jpg",
+      "width": 1600,
+      "height": 5882,
+      "mode": "RGB",
+      "sha256": "270996a9a94656b0abd934fb9a223f0611d5680b06f36f9373cc03d40eb7e1c6",
+      "size_bytes": 1416169,
+      "jpeg_quality": 70,
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/comparison_20261006_133204_UTC/COMPARISON_SHEET.png",
+      "source_sha256": "c35485cfac31e1bce035c00db065eaf73a562d3e75734c3e8f5e143addb31dce",
+      "source_width": 2217,
+      "source_height": 8150,
+      "transformation": "resized to 1600x5882 (Lanczos), JPEG quality 70; content otherwise unchanged",
+      "content": "All 15 plans before the bridge repair (revision r01), same layout."
+    },
+    {
+      "file": "com-03_clinic_r01_vs_r04.jpg",
+      "width": 1600,
+      "height": 1148,
+      "mode": "RGB",
+      "sha256": "96f328e50abda579b901169a6094e156d5d532f4a5df7b0ec4b78c3cc684dd90",
+      "size_bytes": 279721,
+      "jpeg_quality": 85,
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/ifc_reviewer_comparison/updated_r04_repair_v1_2_20261006_202303_UTC/com-03__r01_vs_r04.png",
+      "source_sha256": "fa5704f6233c953f1b7f22ae703089c963e57469d6c85db49ac2ec4f9dcce20d",
+      "source_width": 3834,
+      "source_height": 2750,
+      "transformation": "resized to 1600x1148 (Lanczos), JPEG quality 85; content otherwise unchanged",
+      "content": "Clinic (com-03): original | IFC r01 | IFC r04 // IFC r04 over original | user's r01 3D viewer screenshot | automated r04 3D render."
+    }
+  ],
+  "ground_truth_shown": "CubiCasa rows: dataset labels; AI rows: unreviewed draft labels",
+  "viewer_screenshot_note": "The 3D panels in the clinic image are a user screenshot (r01) and an automated headless render (r04) of the local web-ifc viewer; neither is a recorded viewer inspection."
+}

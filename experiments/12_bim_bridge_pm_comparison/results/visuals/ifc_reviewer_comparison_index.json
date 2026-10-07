@@ -1,0 +1,111 @@
+{
+  "record": "ifc_reviewer_comparison/1",
+  "written_utc": "2026-10-06T15:00:14Z",
+  "what": "Each visual = the ifc_comparisons panels (original | IFC plan read from the file | IFC over original) + the user's 3D screenshot from the local web-ifc viewer of the same candidate IFC.",
+  "status": "All IFCs shown are CANDIDATE_UNREVIEWED previews with an assumed scale. The screenshots are viewer views, not human review decisions; no review was applied.",
+  "visuals": [
+    {
+      "sample_key": "img-01",
+      "visual": "/mnt/e/AI_Team/mitunet/experiments/ifc_reviewer_comparison/img-01__original_ifc_plan_ifc_3d.png",
+      "visual_sha256": "9ed266bbff29c4547c86f852e0f43ff07193aeff9293ddd8ee0a3095e3bf79d2",
+      "left_part": {
+        "path": "/mnt/e/AI_Team/mitunet/experiments/ifc_comparisons/img-01__ifc_vs_original.png",
+        "sha256": "3a0ec0a724a54f083222fd70e0201766e7f14653144e69f1a99bf6df26295c02"
+      },
+      "viewer_screenshot": {
+        "path": "/mnt/e/AI_Team/mitunet/experiments/ifc_reviewer/img_01.png",
+        "sha256": "27a08cffef4ec7cb118c51becc7af0146f5010adae0dcf447d918ee50fadd2da",
+        "supplied_by": "user"
+      },
+      "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-01/export_candidate_preview_whole_plan_r01/synth-img-01-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r01.ifc",
+      "ifc_sha256": "6aa613824528e3336b9eb025102516c770ee0bf95b56b754343270aea07a02b9",
+      "screenshot_matches_ifc": "yes: viewer header names this sample and the object count equals walls + openings of this IFC"
+    },
+    {
+      "sample_key": "img-02",
+      "visual": "/mnt/e/AI_Team/mitunet/experiments/ifc_reviewer_comparison/img-02__original_ifc_plan_ifc_3d.png",
+      "visual_sha256": "bdf1b2a59d74d67bb5807347369d30d10a910581a66da400d187841151d843a3",
+      "left_part": {
+        "path": "/mnt/e/AI_Team/mitunet/experiments/ifc_comparisons/img-02__ifc_vs_original.png",
+        "sha256": "5d185bedf09a958cc7e6003b8918c09f7dcae0d08d11b5f7419ea891447cebc8"
+      },
+      "viewer_screenshot": {
+        "path": "/mnt/e/AI_Team/mitunet/experiments/ifc_reviewer/img_02.png",
+        "sha256": "e03090f83d30b1723490c3ee5a2acb44d37570b62bf75baff97d67609f7077ed",
+        "supplied_by": "user"
+      },
+      "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-02/export_candidate_preview_whole_plan_r01/synth-img-02-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r01.ifc",
+      "ifc_sha256": "7cfc5adb377aeadf2a71ba122977d4ae165fe5d438cb3fb4f3793531382f8842",
+      "screenshot_matches_ifc": "yes: viewer header names this sample and the object count equals walls + openings of this IFC"
+    },
+    {
+      "sample_key": "img-03",
+      "visual": "/mnt/e/AI_Team/mitunet/experiments/ifc_reviewer_comparison/img-03__original_ifc_plan_ifc_3d.png",
+      "visual_sha256": "8801f2062be69fb50ec86f4ca977b9229cf2c21a26e704a3fe1f11a56e8ebe5b",
+      "left_part": {
+        "path": "/mnt/e/AI_Team/mitunet/experiments/ifc_comparisons/img-03__ifc_vs_original.png",
+        "sha256": "63e5f34108042be0b8bf8f89a33c808b4f89ed61a169cd15477db3bb956828f0"
+      },
+      "viewer_screenshot": {
+        "path": "/mnt/e/AI_Team/mitunet/experiments/ifc_reviewer/img_03.png",
+        "sha256": "d5051655168fc12906a08dd80e5f6abc58a80a15e8ce7fd636aa77b8591f692d",
+        "supplied_by": "user"
+      },
+      "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-03/export_candidate_preview_whole_plan_r01/synth-img-03-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r01.ifc",
+      "ifc_sha256": "22582b1109534418a6e70216c94edcfb2a80c9c02fe92e5bbbb9120bad240258",
+      "screenshot_matches_ifc": "yes: viewer header names this sample and the object count equals walls + openings of this IFC"
+    },
+    {
+      "sample_key": "img-04",
+      "visual": "/mnt/e/AI_Team/mitunet/experiments/ifc_reviewer_comparison/img-04__MISMATCHED_DO_NOT_USE__screenshot_shows_img-06.png",
+      "visual_sha256": "f33ae3622b8659fb73a957371cb8ddc6ac7ef7641e64c47e768dc1526788aa8c",
+      "left_part": {
+        "path": "/mnt/e/AI_Team/mitunet/experiments/ifc_comparisons/img-04__ifc_vs_original.png",
+        "sha256": "221e4bc05137218d52ad36f3b3e5cc11aa0f2ddd976bcfb57e0a6578d78e6f96"
+      },
+      "viewer_screenshot": {
+        "path": "/mnt/e/AI_Team/mitunet/experiments/ifc_reviewer/img_04.png",
+        "sha256": "9035b8b0e0a600c72bf0934b5e0a21915a3b922e4e3ca7de890638b220d8b308",
+        "supplied_by": "user"
+      },
+      "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-04/export_candidate_preview_whole_plan_r01/synth-img-04-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r01.ifc",
+      "ifc_sha256": "ca0a7d70411898030cbd031bee6962550c7639b8b2edd061c76b20c89c503318",
+      "status": "MISMATCHED_DO_NOT_USE",
+      "problem": "The supplied screenshot ifc_reviewer/img_04.png shows samples/img-06/... (17 objects with geometry = img-06's 15 walls + 2 openings), not img-04 (17 walls + 6 openings = 23). Needs a correct img-04 screenshot."
+    },
+    {
+      "sample_key": "com-02",
+      "visual": "/mnt/e/AI_Team/mitunet/experiments/ifc_reviewer_comparison/com-02__original_ifc_plan_ifc_3d.png",
+      "visual_sha256": "e7eaf1bfdf446515d5d7ced67eea7ee32a63bac6978bb910449d0f4968394cd0",
+      "left_part": {
+        "path": "/mnt/e/AI_Team/mitunet/experiments/ifc_comparisons/com-02__ifc_vs_original.png",
+        "sha256": "ce81a8fdc256ee39a6e62e0cc9d4ed2b307dd5146135c6d721cfa191962077a3"
+      },
+      "viewer_screenshot": {
+        "path": "/mnt/e/AI_Team/mitunet/experiments/ifc_reviewer/com_02.png",
+        "sha256": "55249dc8b7d83fa329c6d2ebf63bdf3ca4bba61a971d350102287a7d6c79d424",
+        "supplied_by": "user"
+      },
+      "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-02/export_candidate_preview_whole_plan_r01/com-com-02-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r01.ifc",
+      "ifc_sha256": "62e31f00270b9ed40655760bf05f3cd0c0aa934be0434ca7211cd94633bf1aeb",
+      "screenshot_matches_ifc": "yes: viewer header names this sample and the object count equals walls + openings of this IFC"
+    },
+    {
+      "sample_key": "com-03",
+      "visual": "/mnt/e/AI_Team/mitunet/experiments/ifc_reviewer_comparison/com-03__original_ifc_plan_ifc_3d.png",
+      "visual_sha256": "c2e90bf89514d7dc482c67ccfda156ae1eeda5971bf8eea17e34059c14aa097d",
+      "left_part": {
+        "path": "/mnt/e/AI_Team/mitunet/experiments/ifc_comparisons/com-03__ifc_vs_original.png",
+        "sha256": "890c64b00ebe43a59f3a71096fa6c9aa52753920c99df395568611142a17f222"
+      },
+      "viewer_screenshot": {
+        "path": "/mnt/e/AI_Team/mitunet/experiments/ifc_reviewer/com_03.png",
+        "sha256": "e9272b499c7d270f67f9949ae605f4df3a27f254b1dbdf2ff411e629ac4ddfd9",
+        "supplied_by": "user"
+      },
+      "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-03/export_candidate_preview_whole_plan_r01/com-com-03-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r01.ifc",
+      "ifc_sha256": "6c5a048c0f700ba96fcd4b8fa9000d926e656becdf67e5f356d2fd8623472e81",
+      "screenshot_matches_ifc": "yes: viewer header names this sample and the object count equals walls + openings of this IFC"
+    }
+  ]
+}

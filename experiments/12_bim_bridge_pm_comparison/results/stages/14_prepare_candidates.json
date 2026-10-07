@@ -1,0 +1,91 @@
+{
+  "experiment_id": "bim_bridge_pm_comparison_v0",
+  "run_id": "bim_bridge_pm_comparison_v0_20261006_130747_UTC",
+  "stage": "prepare_candidates",
+  "status": "PASS",
+  "written_utc": "2026-10-06T13:13:30Z",
+  "sample_key": "cc-01",
+  "model_id": "cc-high-quality--4712-p01",
+  "outcome": "WALLS_AND_HOSTED_OPENINGS",
+  "scope": "WHOLE_PLAN_ATTEMPT",
+  "upstream_walls": 23,
+  "candidate_walls": 23,
+  "excluded_walls": [],
+  "apertures": 7,
+  "openings_not_exported": 7,
+  "automated_edits": [
+    {
+      "object_id": "wall:cc-high-quality--4712-p01:wall_007",
+      "field": "thickness",
+      "before": {
+        "thickness_px": 24.0
+      },
+      "after": {
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality--4712-p01:wall_017",
+      "field": "thickness",
+      "before": {
+        "thickness_px": 19.0
+      },
+      "after": {
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "opening:cc-high-quality--4712-p01:door_opening-c02",
+      "field": "offset_along_host",
+      "before": {
+        "along_host_px": [
+          -16.5,
+          24.5
+        ]
+      },
+      "after": {
+        "along_host_px": [
+          0.0,
+          24.5
+        ]
+      }
+    },
+    {
+      "object_id": "opening:cc-high-quality--4712-p01:door_opening-c07",
+      "field": "offset_along_host",
+      "before": {
+        "along_host_px": [
+          36.875,
+          70.875
+        ]
+      },
+      "after": {
+        "along_host_px": [
+          36.875,
+          67.375
+        ]
+      }
+    }
+  ],
+  "plan_diagnostics_summary": {
+    "predicted_wall_pixel_coverage_ratio": 0.8228885508170977,
+    "skeleton_coverage_ratio": 0.9060124395300622,
+    "candidate_pixels_outside_predicted_wall": 3149
+  },
+  "ground_truth_or_annotation_read": false,
+  "sample_333_geometry_or_decisions_used": false,
+  "paths": {
+    "candidate_geometry": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/cc-01/candidates/candidate_geometry.json",
+    "candidate_geometry_sha256": "1e134efa2ca76ef8f19f5c9d28b10fb3fb350826cde501fc6e854f278e3f89b2"
+  },
+  "geometry_status": "CANDIDATE_UNREVIEWED",
+  "scale_status": "ASSUMED_FOR_PREVIEW",
+  "input_checks": {
+    "PASS": 265,
+    "FAIL": 0,
+    "WARN": 31,
+    "INFO": 0
+  },
+  "failed": [],
+  "building_model": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/cc-01/building_model.json"
+}

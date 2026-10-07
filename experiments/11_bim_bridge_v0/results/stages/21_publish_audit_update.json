@@ -1,0 +1,25 @@
+{
+  "experiment_id": "bim_bridge_v0",
+  "run_id": "bim_bridge_v0_20260928_183649_UTC",
+  "stage": "publish_audit_update",
+  "status": "PASS",
+  "written_utc": "2026-09-29T16:42:37Z",
+  "meaning": "The audit entry for experiment 11 was updated with the human-review follow-up and pushed. The experiment outcome, gates, scale status, candidate geometry and IFC are unchanged.",
+  "repository": "pmharriscti/floorplan-ai-experiment-audit",
+  "branch": "main",
+  "commit": "1f90edc624dde2114ae037cfc36cc0376f86abf7",
+  "previous_commit": "40069ca675673340b9e3f97ed676eaddedd1418b",
+  "files_changed": 51,
+  "files_added": 41,
+  "files_modified": 10,
+  "verified": {
+    "local_equals_fetched_remote": true,
+    "ls_remote": true,
+    "github_api": true,
+    "working_tree_clean": true
+  },
+  "ifc_or_model_artifacts_committed": 0,
+  "images": "3 reduced JPEG copies under qa/review_followup/, largest 804247 bytes; source paths and hashes in qa/metadata.json",
+  "authorised_by": "repository owner, in the working session of 2026-09-29",
+  "gates_changed": []
+}

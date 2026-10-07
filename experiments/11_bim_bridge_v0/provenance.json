@@ -230,24 +230,27 @@
     ]
   },
   "human_review": {
-    "recorded": false,
-    "applied": false,
+    "recorded": true,
+    "applied": true,
+    "applied_utc": "2026-10-01T20:33:50Z",
     "objects_reviewed": [
-      0,
+      5,
       5
     ],
-    "in_progress": true,
-    "objects_with_a_recorded_decision_in_a_draft_record": [
-      2,
-      5
-    ],
-    "draft_review_record": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_in_progress/review_record_DRAFT_05.json",
-    "draft_review_record_sha256": "b0fbe078cdcc80729d5c8945d4c542852e4b4eebb47d33df14fa02e5007dc739",
     "reviewer": "Paul Harris",
     "reviewer_role": "Prototype image-space geometry reviewer",
     "signed_by_reviewer": false,
+    "applied_review_record": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/reviewed/review_record.json",
+    "applied_review_record_sha256": "2fc5a9872bbff01f7f9bf00d969adb2f618c3159af0699fdca01ba31a60922cd",
+    "decision_records": [
+      "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_in_progress/decision_003_wall_012_whole_object_20260929_132739_UTC.json",
+      "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_in_progress/decision_004_wall_002_whole_object_20260929_155308_UTC.json",
+      "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_in_progress/decision_005_wall_003_whole_object_20261001_171930_UTC.json",
+      "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_in_progress/decision_006_wall_004_whole_object_20261001_202030_UTC.json",
+      "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_in_progress/decision_007_door_opening-c02_whole_object_20261001_203201_UTC.json"
+    ],
     "review_record_template": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/review_record_TEMPLATE.json",
-    "note": "Updated 2026-09-29. A reviewer recorded decisions for 2 of 5 objects. The record is incomplete and was not applied, so 'recorded' (a complete applied review) stays false. Files were written by an AI assistant from the reviewer's instructions; the reviewer did not sign them."
+    "note": "Decisions were given by the reviewer in the working session and written by an AI assistant; the reviewer did not sign the files. History of the in-progress review is under results/review_followup/."
   },
   "viewer_inspection": {
     "status": "NOT_RUN",
@@ -788,6 +791,262 @@
       "identical": true,
       "transformation": "none",
       "size_bytes": 878
+    },
+    "results/review_followup/review_in_progress/STATUS_06.md": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_in_progress/STATUS_06.md",
+      "source_sha256": "c0a68275d62f6baafb09c5d5a59d5613cc5760606b9b2a88d87dc23923f089a5",
+      "audit_copy_sha256": "c0a68275d62f6baafb09c5d5a59d5613cc5760606b9b2a88d87dc23923f089a5",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 2075
+    },
+    "results/review_followup/review_in_progress/STATUS_07.md": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_in_progress/STATUS_07.md",
+      "source_sha256": "357898a98fce18e58ec893bec9017fd17e163564326299badebacfd05b3589e6",
+      "audit_copy_sha256": "357898a98fce18e58ec893bec9017fd17e163564326299badebacfd05b3589e6",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 1904
+    },
+    "results/review_followup/review_in_progress/decision_005_wall_003_whole_object_20261001_171930_UTC.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_in_progress/decision_005_wall_003_whole_object_20261001_171930_UTC.json",
+      "source_sha256": "0a3153b328ef03e214e185001cb0f6bf43d477ee840f20251919effa2c6bacd4",
+      "audit_copy_sha256": "0a3153b328ef03e214e185001cb0f6bf43d477ee840f20251919effa2c6bacd4",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 8945
+    },
+    "results/review_followup/review_in_progress/decision_006_wall_004_whole_object_20261001_202030_UTC.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_in_progress/decision_006_wall_004_whole_object_20261001_202030_UTC.json",
+      "source_sha256": "91aa4bf1b70e94366b6e4eea1fc8ed87e3641a1379ba5c5a83ac16a5457e72d1",
+      "audit_copy_sha256": "91aa4bf1b70e94366b6e4eea1fc8ed87e3641a1379ba5c5a83ac16a5457e72d1",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 10968
+    },
+    "results/review_followup/review_in_progress/decision_007_door_opening-c02_whole_object_20261001_203201_UTC.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_in_progress/decision_007_door_opening-c02_whole_object_20261001_203201_UTC.json",
+      "source_sha256": "43676f796570b5cd22134eda8389940375e1aaafb44b243f5eaa827e20ec7487",
+      "audit_copy_sha256": "43676f796570b5cd22134eda8389940375e1aaafb44b243f5eaa827e20ec7487",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 8355
+    },
+    "results/review_followup/review_in_progress/review_record_COMPLETE_20261001_203350_UTC.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_in_progress/review_record_COMPLETE_20261001_203350_UTC.json",
+      "source_sha256": "2fc5a9872bbff01f7f9bf00d969adb2f618c3159af0699fdca01ba31a60922cd",
+      "audit_copy_sha256": "2fc5a9872bbff01f7f9bf00d969adb2f618c3159af0699fdca01ba31a60922cd",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 12319
+    },
+    "results/review_followup/review_in_progress/review_record_DRAFT_06.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_in_progress/review_record_DRAFT_06.json",
+      "source_sha256": "5cc48b57846bf73a5a567890bc1e2f52605f7004213c30331714dc643fb389dd",
+      "audit_copy_sha256": "5cc48b57846bf73a5a567890bc1e2f52605f7004213c30331714dc643fb389dd",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 9407
+    },
+    "results/review_followup/review_in_progress/review_record_DRAFT_07.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_in_progress/review_record_DRAFT_07.json",
+      "source_sha256": "5f8c868627496f72f18b56265e0e70b1bf1cc35e6cd96e5aa78cbbc695a55f77",
+      "audit_copy_sha256": "5f8c868627496f72f18b56265e0e70b1bf1cc35e6cd96e5aa78cbbc695a55f77",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 10832
+    },
+    "results/review_followup/review_in_progress/review_record_DRAFT_08.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_in_progress/review_record_DRAFT_08.json",
+      "source_sha256": "968c09e3bf10e026ea79371f7ce46cce95609f0326dfd9bc56a679194e1dda8d",
+      "audit_copy_sha256": "968c09e3bf10e026ea79371f7ce46cce95609f0326dfd9bc56a679194e1dda8d",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 12164
+    },
+    "results/stages/21_publish_audit_update.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/stages/21_publish_audit_update.json",
+      "source_sha256": "ac3c0afa693007fd970d6e1589afaabb229b8ee0ff2a38cd84f6f563366bbced",
+      "audit_copy_sha256": "ac3c0afa693007fd970d6e1589afaabb229b8ee0ff2a38cd84f6f563366bbced",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 1058
+    },
+    "results/stages/22_object_review_decision.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/stages/22_object_review_decision.json",
+      "source_sha256": "8dc0bc18030421caff5cdac25e837753b44ef40ce59b6bad3aa7b76dd65bff2b",
+      "audit_copy_sha256": "8dc0bc18030421caff5cdac25e837753b44ef40ce59b6bad3aa7b76dd65bff2b",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 1809
+    },
+    "results/stages/23_object_review_decision.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/stages/23_object_review_decision.json",
+      "source_sha256": "190ede95064c5ee9aaad51ae2cb54ad397ee69d7df5d34a08fa992f6b3fd8452",
+      "audit_copy_sha256": "190ede95064c5ee9aaad51ae2cb54ad397ee69d7df5d34a08fa992f6b3fd8452",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 1596
+    },
+    "results/stages/24_object_review_decision.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/stages/24_object_review_decision.json",
+      "source_sha256": "603feb0c9583624cae6fa0d25f67e1203d3ee69ebd8e5a1c43b80182185282b3",
+      "audit_copy_sha256": "603feb0c9583624cae6fa0d25f67e1203d3ee69ebd8e5a1c43b80182185282b3",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 1264
+    },
+    "results/stages/25_apply_review.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/stages/25_apply_review.json",
+      "source_sha256": "acd012087273a7942a25dbd53a495a13e45393dcad339dcd2a44e28ccfef11b6",
+      "audit_copy_sha256": "acd012087273a7942a25dbd53a495a13e45393dcad339dcd2a44e28ccfef11b6",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 916
+    },
+    "results/stages/26_export_real.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/stages/26_export_real.json",
+      "source_sha256": "7f21d453693d93afe06a7b02425dcaad8317dc2b0a1a44d77582442f9f242f85",
+      "audit_copy_sha256": "7f21d453693d93afe06a7b02425dcaad8317dc2b0a1a44d77582442f9f242f85",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 494
+    },
+    "results/stages/27_export_real.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/stages/27_export_real.json",
+      "source_sha256": "9d7dbf1dfbc8039c70c5a522f347a48b7bb425464cc892e9291244270b2aebf7",
+      "audit_copy_sha256": "9d7dbf1dfbc8039c70c5a522f347a48b7bb425464cc892e9291244270b2aebf7",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 3920
+    },
+    "results/stages/28_verify_reviewed_export.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/stages/28_verify_reviewed_export.json",
+      "source_sha256": "4f7ad16c13cffcdcce2350955ecc5b1f5725c6a8d3d014e2a9f1765373ea8d25",
+      "audit_copy_sha256": "4f7ad16c13cffcdcce2350955ecc5b1f5725c6a8d3d014e2a9f1765373ea8d25",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 1201
+    },
+    "results/stages/29_verify_reviewed_export.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/stages/29_verify_reviewed_export.json",
+      "source_sha256": "75df132b496202f824199b0362718e08f8a220363a1a3ce722994dc5a43022f2",
+      "audit_copy_sha256": "75df132b496202f824199b0362718e08f8a220363a1a3ce722994dc5a43022f2",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 1204
+    },
+    "results/stages/30_finalize.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/stages/30_finalize.json",
+      "source_sha256": "6a55ee4b536afd123dddeffffd4d70b0e794086cd38a90c07e36a211e56ec830",
+      "audit_copy_sha256": "6a55ee4b536afd123dddeffffd4d70b0e794086cd38a90c07e36a211e56ec830",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 1933
+    },
+    "results/review_followup/reviewed/review_record.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/reviewed/review_record.json",
+      "source_sha256": "2fc5a9872bbff01f7f9bf00d969adb2f618c3159af0699fdca01ba31a60922cd",
+      "audit_copy_sha256": "2fc5a9872bbff01f7f9bf00d969adb2f618c3159af0699fdca01ba31a60922cd",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 12319
+    },
+    "results/review_followup/reviewed/reviewed_geometry.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/reviewed/reviewed_geometry.json",
+      "source_sha256": "4cc3ffc4f6fcd86fb7b1a57362bcfdf177e37ccd22b408257114eecdd9345e90",
+      "audit_copy_sha256": "4cc3ffc4f6fcd86fb7b1a57362bcfdf177e37ccd22b408257114eecdd9345e90",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 43470
+    },
+    "results/review_followup/reviewed/building_model.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/reviewed/building_model.json",
+      "source_sha256": "c4fb0419c83ac888624ff4fde2a9902bd8d20b86948793b5f981202ee3b113b9",
+      "audit_copy_sha256": "c4fb0419c83ac888624ff4fde2a9902bd8d20b86948793b5f981202ee3b113b9",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 50621
+    },
+    "results/review_followup/export_reviewed_preview/building_model.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/export_reviewed_preview/building_model.json",
+      "source_sha256": "c4fb0419c83ac888624ff4fde2a9902bd8d20b86948793b5f981202ee3b113b9",
+      "audit_copy_sha256": "c4fb0419c83ac888624ff4fde2a9902bd8d20b86948793b5f981202ee3b113b9",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 50621
+    },
+    "results/review_followup/export_reviewed_preview/guid_map.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/export_reviewed_preview/guid_map.json",
+      "source_sha256": "1c258d27d5c20243a08e4a467ff2118936141b1eaeef2fbd876f2c55cc00046d",
+      "audit_copy_sha256": "1c258d27d5c20243a08e4a467ff2118936141b1eaeef2fbd876f2c55cc00046d",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 9211
+    },
+    "results/review_followup/export_reviewed_preview/independent_parser_check.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/export_reviewed_preview/independent_parser_check.json",
+      "source_sha256": "bbdb558b4bcd88cd760b39adbb87c4797e00ec7757fd6e52e53d408a7e50ec35",
+      "audit_copy_sha256": "bbdb558b4bcd88cd760b39adbb87c4797e00ec7757fd6e52e53d408a7e50ec35",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 4523
+    },
+    "results/review_followup/export_reviewed_preview/review_verification.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/export_reviewed_preview/review_verification.json",
+      "source_sha256": "be058904616c87500c90265b5e713ff64655ad96271dab6a589fe1db74931747",
+      "audit_copy_sha256": "be058904616c87500c90265b5e713ff64655ad96271dab6a589fe1db74931747",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 21283
+    },
+    "results/review_followup/export_reviewed_preview/review_verification_02.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/export_reviewed_preview/review_verification_02.json",
+      "source_sha256": "c53f628f540d71394281ac0762805e3488c05adb3164496ba06779fd2dd76a92",
+      "audit_copy_sha256": "c53f628f540d71394281ac0762805e3488c05adb3164496ba06779fd2dd76a92",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 21747
+    },
+    "results/review_followup/export_reviewed_preview/validation_report.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/export_reviewed_preview/validation_report.json",
+      "source_sha256": "dda84fe2afc6b1e82854288167ecae58fea46bc4cee88b7c9d7114bdf5dda88a",
+      "audit_copy_sha256": "dda84fe2afc6b1e82854288167ecae58fea46bc4cee88b7c9d7114bdf5dda88a",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 96219
+    },
+    "results/review_followup/export_reviewed_preview/validation_report.md": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/export_reviewed_preview/validation_report.md",
+      "source_sha256": "19b05de6184a918b991a0e2e4f0f52485e21c36f7fdb1b5f4c481161e3328267",
+      "audit_copy_sha256": "19b05de6184a918b991a0e2e4f0f52485e21c36f7fdb1b5f4c481161e3328267",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 41851
+    },
+    "results/gates_02.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/gates_02.json",
+      "source_sha256": "77562647dfbe738aa01ff2e167b936942b520dd19f2463a2bbf6303021ec7d48",
+      "audit_copy_sha256": "77562647dfbe738aa01ff2e167b936942b520dd19f2463a2bbf6303021ec7d48",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 10364
+    },
+    "results/source_FINAL_REPORT_02.md": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/FINAL_REPORT_02.md",
+      "source_sha256": "f268d32855083e70cd9eaa0f7bcb862379a89a54a26f5ee20f7775a0605e1b54",
+      "audit_copy_sha256": "f268d32855083e70cd9eaa0f7bcb862379a89a54a26f5ee20f7775a0605e1b54",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 12775
+    },
+    "results/source_PM_SUMMARY_02.md": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/PM_SUMMARY_02.md",
+      "source_sha256": "2bd6511c4288059fa0f937d21c5c59d790b18a7f36dcf71d338d34023876afa2",
+      "audit_copy_sha256": "2bd6511c4288059fa0f937d21c5c59d790b18a7f36dcf71d338d34023876afa2",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 3050
     }
   },
   "audit_copies_verified_identical_to_source": true,
@@ -817,6 +1076,12 @@
         "what": "Human-review follow-up added: review package, two geometry proposals, one finding, decisions for 2 of 5 objects in a draft record, review batch 02.",
         "authorised_by": "repository owner, in the working session of 2026-09-29",
         "note": "The update does not change the experiment outcome. Gates G2, G6 and G7 remain open."
+      },
+      {
+        "date": "2026-10-07",
+        "what": "Review completed and applied; reviewed-preview IFC exported and verified; gates recomputed with the corrected finalize (G6 PASS).",
+        "authorised_by": "repository owner, in the working session of 2026-10-07",
+        "note": "The reviewed-prediction milestone stays PARTIAL: G2 (scale) is BLOCKED. G7 stays NOT_RUN."
       }
     ]
   },
@@ -831,7 +1096,7 @@
     "Upstream Phase 5 code is untracked in its repository (see audit entry 09)."
   ],
   "source_files_note": "The run's checksums.sha256 is rewritten whenever a later stage adds a file, so it is referenced by path only and its hash is not recorded here: /mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/checksums.sha256",
-  "updated_utc_date": "2026-09-29",
+  "updated_utc_date": "2026-10-07",
   "review_followup": {
     "date": "2026-09-29",
     "source_directories": [
@@ -868,5 +1133,29 @@
     "no_training": true,
     "no_ground_truth_read": true,
     "vectorizer_rerun": false
+  },
+  "review_applied_2026_10_01": {
+    "reviewed_preview_ifc": {
+      "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/export_reviewed_preview/cubicasa-high-quality-architectural-333-val-region-01__REVIEWED_PREVIEW_SCALE_ASSUMED_FOR_PREVIEW.ifc",
+      "sha256": "b02d532c745216c5479d372b2fd5c3700fdaf11f6ebc96c0dac398f3c67ef375",
+      "size_bytes": 64870,
+      "committed": false,
+      "written_by": "scripts/export_reviewed_preview.py (new folder; the bridge CLI preview folder name was taken by the unreviewed export)"
+    },
+    "new_scripts_sha256": {
+      "/home/pmharris/dev/bim_bridge_v0/scripts/export_reviewed_preview.py": "2f0ff01644f2a1f618bc75944f7d4838ffda71205e8584721a16eebf397d4134",
+      "/home/pmharris/dev/bim_bridge_v0/scripts/verify_reviewed_export.py": "6db99eb9221f128cfaad775dba4d907e5a0c4ed2bc286d8066466896039cfbdf"
+    },
+    "bridge_finalize_change": {
+      "file": "/home/pmharris/dev/bim_bridge_v0/src/bim_bridge/finalize.py",
+      "sha256_after": "34a92301b8a36c7261b89b0eb5d092bd6ac07e9d5a2bd69b82c977dc20087eee",
+      "tests_after_change": "130 passed"
+    },
+    "earlier_gates_and_reports_unchanged": true,
+    "new_gates_and_reports": [
+      "gates_02.json",
+      "FINAL_REPORT_02.md",
+      "PM_SUMMARY_02.md"
+    ]
   }
 }

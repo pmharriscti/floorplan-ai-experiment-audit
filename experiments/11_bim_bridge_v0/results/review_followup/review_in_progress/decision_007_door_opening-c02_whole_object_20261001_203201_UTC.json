@@ -1,0 +1,150 @@
+{
+  "record_version": "bim_bridge.object_review_decision/0.1",
+  "experiment_id": "bim_bridge_v0",
+  "run_id": "bim_bridge_v0_20260928_183649_UTC",
+  "model_id": "cubicasa-high-quality-architectural-333-val-region-01",
+  "decision_id": "decision-007-door_opening-c02-whole-object",
+  "recorded_utc": "2026-10-01T20:32:01Z",
+  "kind": "WHOLE_OBJECT_REVIEW_DECISION",
+  "object_id": "opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02",
+  "decision": "ACCEPT",
+  "scope": "limited image-space preview",
+  "applies_only_to": "opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02",
+  "applied_to_geometry": false,
+  "decided_by": {
+    "actor_type": "human",
+    "name": "Paul Harris",
+    "role": "Prototype image-space geometry reviewer",
+    "role_source": "stated by the reviewer",
+    "channel": "Instruction given to the AI assistant in the working session."
+  },
+  "recorded_by": {
+    "actor_type": "agent",
+    "name": "Claude (AI assistant)",
+    "note": "The agent wrote this file from the reviewer's instruction, quoted below."
+  },
+  "signature": {
+    "digitally_signed_by_reviewer": false,
+    "note": "The reviewer did not sign this file."
+  },
+  "decision_time_note": "recorded_utc is when this file was written.",
+  "reviewer_statement_verbatim": "Record door_opening-c02 as ACCEPT for the limited\nimage-space preview.\n\nObject:\nopening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02\n\nNo geometry edits:\n- Keep host wall:\n  wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003\n- Keep offset_px = 4.0.\n- Keep width_px = 28.0.\n- Preserve the existing opening geometry and attribute origins.\n\nReason:\nThe candidate's plan-view position and approximate width match\nthe doorway visible in the original drawing. Its assignment to\nwall_003 is acceptable for this limited preview.\n\nPreserve these limitations:\n- Width is accepted as an image-space preview approximation,\n  not a verified physical measurement.\n- Aperture height and sill/bottom elevation remain assumptions.\n- Semantic confidence remains null/unavailable.\n- This accepts an IfcOpeningElement, not a separately verified\n  door leaf, door swing, or complete door assembly.\n- The actual exported void still requires verification.\n\nThe review considers the approved wall_012 position at x = 305.5.\nNo neighbouring-wall or opening-position edits are authorized.\n\nReviewer role:\nPrototype image-space geometry reviewer\n\nBind this decision to the exact candidate version and preserve\nthe existing object ID, GlobalId, prediction lineage, and review\nhistory.",
+  "reason_given_by_reviewer": "The candidate's plan-view position and approximate width match the doorway visible in the original drawing. Its assignment to wall_003 is acceptable for this limited preview.",
+  "tied_to": {
+    "candidate_geometry_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/candidates/candidate_geometry.json",
+    "candidate_geometry_sha256": "fcfd4a7061ed1d7fafc68a4985ca461fb15cba1812e933f6ec394c96dcfa7780",
+    "candidate_version": "bim_bridge.candidate_geometry/0.2",
+    "wall_012_proposal_considered": {
+      "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/proposals/wall_012_axis_shift_20260928_223842_UTC/proposal.json",
+      "sha256": "98e635b61ac70761f1c6bc2e099099c00f267b5d3e3b70f95865a21b787dba77",
+      "approved_axis_x": 305.5
+    }
+  },
+  "geometry_accepted_unchanged": {
+    "host_wall_id": "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003",
+    "offset_px": 4.0,
+    "width_px": 28.0,
+    "candidate_space": "letterbox_512"
+  },
+  "edits": [],
+  "limitations_preserved_in_review_notes": [
+    "Width is an image-space preview approximation, not a verified physical measurement.",
+    "Aperture height and sill/bottom elevation remain assumptions.",
+    "Semantic confidence remains null/unavailable.",
+    "Accepts an IfcOpeningElement, not a separately verified door leaf, door swing or complete door assembly.",
+    "The actual exported void still requires verification."
+  ],
+  "not_authorized": [
+    "neighbouring-wall edits",
+    "opening-position edits"
+  ],
+  "preserved": {
+    "object_id": "opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02",
+    "ifc_global_id_mapping": {
+      "ifc_guid": "1Y$u78JbXJIggJrkmIA5ew",
+      "uuid": "62ff81c8-4e58-534a-aa93-d6ec12285a3a",
+      "guid_map": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/export_preview/guid_map.json",
+      "guid_map_sha256": "1c258d27d5c20243a08e4a467ff2118936141b1eaeef2fbd876f2c55cc00046d"
+    },
+    "candidate_original": {
+      "along_host_px": [
+        4.0,
+        32.0
+      ],
+      "component": {
+        "component_id": 2,
+        "pixel_count": 168,
+        "bbox_px": [
+          309,
+          218,
+          336,
+          223
+        ],
+        "centroid_px": [
+          322.5,
+          220.5
+        ]
+      },
+      "source": "connected component of the predicted door_opening mask, projected on the host axis"
+    },
+    "source_refs": [
+      {
+        "kind": "prediction_mask_region",
+        "artifact_role": "predicted_door_opening",
+        "path": "/mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/masks/val/high_quality_architectural__333__heads.png",
+        "sha256": "4da6f6eb69c64ef721a30e7f81f74843348db831d3608b331fcc2dbd03f1f355",
+        "upstream_object_id": null,
+        "region_candidate_px": [
+          309.0,
+          218.0,
+          336.0,
+          223.0
+        ],
+        "pixel_support": {
+          "pixel_count": 168,
+          "overlap_with_predicted_wall": 0.8392857142857143
+        }
+      }
+    ],
+    "confidence": {
+      "semantic_score": null,
+      "score_source": null,
+      "score_aggregation": null,
+      "availability": "UNAVAILABLE",
+      "unavailable_reason": "The only persisted prediction is a thresholded mask. The upstream run saved no probability maps (save_probability_maps: false), and no score can be derived from binary pixels.",
+      "calibration_status": "NOT_CALIBRATED"
+    },
+    "review_history": [
+      {
+        "decision_id": "decision-003-wall_012-whole-object",
+        "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_in_progress/decision_003_wall_012_whole_object_20260929_132739_UTC.json",
+        "sha256": "3a67aeadb66bff82aa87366d3f2c7d777da57de96a7478b445129129972a97e5"
+      },
+      {
+        "decision_id": "decision-004-wall_002-whole-object",
+        "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_in_progress/decision_004_wall_002_whole_object_20260929_155308_UTC.json",
+        "sha256": "d7b0e2dad64c397a0877ff427e67ae5c90f660b51386eec039ba0aab5bccd785"
+      },
+      {
+        "decision_id": "decision-005-wall_003-whole-object",
+        "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_in_progress/decision_005_wall_003_whole_object_20261001_171930_UTC.json",
+        "sha256": "0a3153b328ef03e214e185001cb0f6bf43d477ee840f20251919effa2c6bacd4"
+      },
+      {
+        "decision_id": "decision-006-wall_004-whole-object",
+        "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_in_progress/decision_006_wall_004_whole_object_20261001_202030_UTC.json",
+        "sha256": "91aa4bf1b70e94366b6e4eea1fc8ed87e3641a1379ba5c5a83ac16a5457e72d1"
+      }
+    ]
+  },
+  "conditional_authorization_given_with_this_decision": "If all five explicit decisions and the required reviewer fields are present and the record passes validation: apply the recorded decisions and export a NEW reviewed-preview IFC, keeping the earlier candidate geometry and IFC unchanged.",
+  "state_after_this_record": {
+    "object_review_state_in_candidate_geometry": "CANDIDATE_UNREVIEWED",
+    "decision_in_draft_record": "ACCEPT",
+    "scale_status": "ASSUMED_FOR_PREVIEW",
+    "scale_confirmed": false,
+    "candidate_geometry_changed": false,
+    "ifc_changed": false,
+    "gates_changed": []
+  }
+}

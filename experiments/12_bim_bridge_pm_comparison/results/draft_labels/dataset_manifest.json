@@ -1,0 +1,466 @@
+{
+  "name": "synthetic_floorplan_structure_drafts",
+  "version": "0.1",
+  "status": "DRAFT_NOT_GROUND_TRUTH",
+  "taxonomy": {
+    "0": "non_structural",
+    "1": "visible_wall",
+    "2": "window_opening",
+    "3": "door_opening",
+    "255": "ignore"
+  },
+  "scale_status": "UNKNOWN_NOT_VERIFIED",
+  "fixture_annotation_status": "NOT_ANNOTATED",
+  "selection_assumption": "All 9 commercial plans plus the 2-bedroom apartment. Both single-family plans included as extras.",
+  "annotation_spec_sha256": "a4b38059c6911053a258d4629db01554d99279823d8a446ad86cb90a19894199",
+  "generator_sha256": "4a8a56eb399add093ecb52f90f39b2943baf88f31cdddd79ef0b498fbb269f1c",
+  "subsets": {
+    "assumed_10": [
+      "fp01_office",
+      "fp02_retail",
+      "fp03_restaurant",
+      "fp04_warehouse",
+      "fp05_hotel",
+      "fp06_clinic",
+      "fp07_school",
+      "fp08_grocery",
+      "fp09_manufacturing",
+      "fp10_apartment"
+    ],
+    "commercial_9": [
+      "fp01_office",
+      "fp02_retail",
+      "fp03_restaurant",
+      "fp04_warehouse",
+      "fp05_hotel",
+      "fp06_clinic",
+      "fp07_school",
+      "fp08_grocery",
+      "fp09_manufacturing"
+    ],
+    "all_12": [
+      "fp01_office",
+      "fp02_retail",
+      "fp03_restaurant",
+      "fp04_warehouse",
+      "fp05_hotel",
+      "fp06_clinic",
+      "fp07_school",
+      "fp08_grocery",
+      "fp09_manufacturing",
+      "fp10_apartment",
+      "fp11_house_ground",
+      "fp12_house_upper"
+    ]
+  },
+  "images": [
+    {
+      "id": "fp01_office",
+      "title": "Office suite",
+      "group": "commercial",
+      "image": "images/fp01_office.png",
+      "source_original_filename": "office_suite_floor_plan.png",
+      "source_sha256": "3b42ab1f47955a7725f9f13ec49f24e1048687dfd1225f7346faba328ad49c68",
+      "size": [
+        1254,
+        1254
+      ],
+      "door_instances": 6,
+      "window_instances": 6,
+      "ignored_opening_instances": 0,
+      "valid_pixels": 1572516,
+      "ignored_pixels": 0,
+      "visible_wall_pixels": 98074,
+      "structural_wall_pixels": 116918,
+      "label_sha256": {
+        "visible_wall": "1513647029b0cb26491dad9d308a8510147ec0a984e67650e20e3a2debd0546f",
+        "structural_wall": "e2c2dd01340a141577bdcf0139e17f66e9ebc779bd596b445a881bd0c007252c",
+        "door_opening": "2db17643842568b1bda1c1f33dfa4f07c604d50354336ebf0479030d6d9f52e6",
+        "window_opening": "08cfdd3efca350ca9624261fddad2f17a97deb104e2ebdc713625f25325c2a48",
+        "valid": "056cea6ce8626fde82a04d1a8d7420e7fb05bdba23133df65c9995e7d44d1866",
+        "semantic_structure4": "879b4b9352cd5d4858f514da20d3b1ceef4a9457d0c1be3f2836d982d312126c",
+        "partial13_structure_only": "2f5154c7b916de2f9d6f7a9956b9771098249e5a2bb2db0e8a94ca0e3cf3972c"
+      },
+      "review_status": "DRAFT_NOT_GROUND_TRUTH",
+      "review_notes": [
+        "Door masks are jamb-to-jamb cuts only; swings and leaves are excluded.",
+        "The narrow glazed strip immediately left of the main entrance is provisionally a separate window opening."
+      ]
+    },
+    {
+      "id": "fp02_retail",
+      "title": "Retail store",
+      "group": "commercial",
+      "image": "images/fp02_retail.png",
+      "source_original_filename": "retail_store_floor_plan.png",
+      "source_sha256": "130ac3cf5a131b6af57cf46b5b1d714209504ea1cfadd38749f7928ba2d4b5c6",
+      "size": [
+        1254,
+        1254
+      ],
+      "door_instances": 3,
+      "window_instances": 3,
+      "ignored_opening_instances": 0,
+      "valid_pixels": 1572516,
+      "ignored_pixels": 0,
+      "visible_wall_pixels": 74116,
+      "structural_wall_pixels": 97883,
+      "label_sha256": {
+        "visible_wall": "81ef7e13f9911997f7705fd0f255479d4c04dec5c98806e08cd171b97fcffccb",
+        "structural_wall": "735a55f74f5039b10a4e9047ef69c161f01ec0286895ae0497936d6e8ef70383",
+        "door_opening": "3f1afa345dbe3bfb1290c720d162e7c3dec817856accbc615d1f4344cba32cac",
+        "window_opening": "e4ea73d0f143e16853d262b1cb7343ef6a5d7e9957301310fecf29779a33ba6a",
+        "valid": "056cea6ce8626fde82a04d1a8d7420e7fb05bdba23133df65c9995e7d44d1866",
+        "semantic_structure4": "edc8cc9920e8c4ad2c54b277959cf3fec0e916b414bfce359b471f4345a323ce",
+        "partial13_structure_only": "aac773d4abbe18552a6e7b36121cb39afc23cad31500c041fbbdcd670b81e862"
+      },
+      "review_status": "DRAFT_NOT_GROUND_TRUTH",
+      "review_notes": [
+        "Furniture, shelving, counters and plumbing fixtures are not labeled in this structure-only release."
+      ]
+    },
+    {
+      "id": "fp03_restaurant",
+      "title": "Restaurant",
+      "group": "commercial",
+      "image": "images/fp03_restaurant.png",
+      "source_original_filename": "restaurant_floor_plan_blueprint.png",
+      "source_sha256": "2495bccef4319c66539fd114c776ebc7d19e6c719b09d886f16a343d587b8724",
+      "size": [
+        1254,
+        1254
+      ],
+      "door_instances": 3,
+      "window_instances": 11,
+      "ignored_opening_instances": 0,
+      "valid_pixels": 1570469,
+      "ignored_pixels": 2047,
+      "visible_wall_pixels": 79052,
+      "structural_wall_pixels": 120849,
+      "label_sha256": {
+        "visible_wall": "05eb103bc8bc8ff6d7bcb1933bcd25f13057a8b208b006a5ec756c39252aeeaa",
+        "structural_wall": "370cfbd704fa01b4fd36ca8c8618bbdd8eef417cc46b35583e25628c4249334a",
+        "door_opening": "28a07a1847e1974e7b76e00f02a660d1f898cc153ae80ade9e27d989e72aab8f",
+        "window_opening": "388988b980f82e500e1dabde13c08bb62313ba87e41e1b0fc5c819b11085a017",
+        "valid": "431578ac5246bc51d7c95b3b6e4c5f771386b197f0708c73f39fe7d9a3ec7294",
+        "semantic_structure4": "98f89979a850cd448b6de0001399aa19199ca9d337195e2b35005f61e9b771b9",
+        "partial13_structure_only": "6b443dbdefe944bcdf31e848d9333a15456251b3477789adeaf55440834586b5"
+      },
+      "review_status": "DRAFT_NOT_GROUND_TRUTH",
+      "review_notes": [
+        "The women's restroom has no clearly drawn entrance; no door has been invented.",
+        "Short black divider beside the upper kitchen cabinets is ambiguous: wall versus cabinet end panel."
+      ]
+    },
+    {
+      "id": "fp04_warehouse",
+      "title": "Warehouse / distribution center",
+      "group": "commercial",
+      "image": "images/fp04_warehouse.png",
+      "source_original_filename": "warehouse_distribution_center_floor_plan.png",
+      "source_sha256": "5b1af2960e3fdb62fedbc840bb1b43e35ff9528cbc5dcc07c826bc29025cf067",
+      "size": [
+        1254,
+        1254
+      ],
+      "door_instances": 15,
+      "window_instances": 14,
+      "ignored_opening_instances": 4,
+      "valid_pixels": 1554194,
+      "ignored_pixels": 18322,
+      "visible_wall_pixels": 48495,
+      "structural_wall_pixels": 67359,
+      "label_sha256": {
+        "visible_wall": "1aab4b09475e6627e3f4c499b017aaac06d01b6d0fe69a49ab589ccefcd26c7f",
+        "structural_wall": "fc2d20ac5ac73c40544d6a77fe6f8c31643c3c2ea5357c1cc8897e578687e652",
+        "door_opening": "aefb6909e33b28fab4873c3d0191f17fb775918431f5e5d4c95d1b417a69a478",
+        "window_opening": "cad0ad54062e9d5803eb06991b3fb6ae73eeb02b0aee7282d0dfcb38e5b3cde2",
+        "valid": "bb91c296c5edb0a5e22882af85936b46f1a21c516d3035df702290103d2a1155",
+        "semantic_structure4": "f09e2ee975ab6902bd44770f3046c9fe9c47ade8ff5d0bf99343e57c9ee8c4b0",
+        "partial13_structure_only": "b52feb731fc26bb9faf69283d906c52b2952ca9679d9c04aca5a97b063e189ed"
+      },
+      "review_status": "DRAFT_NOT_GROUND_TRUTH",
+      "review_notes": [
+        "The four loading-dock openings have ambiguous wall-plane depth; they are draft instances inside ignored regions.",
+        "The break-room/lobby connection has a dashed gap without an unambiguous door symbol; it is ignored, not invented as a door.",
+        "Exterior dock equipment, stair treads, and racks are not walls or windows."
+      ]
+    },
+    {
+      "id": "fp05_hotel",
+      "title": "Hotel guest-room floor",
+      "group": "commercial",
+      "image": "images/fp05_hotel.png",
+      "source_original_filename": "hotel_floor_plan_blueprint.png",
+      "source_sha256": "32711ad5b7338b7b14670423d3135c25bbe1f6b42f79f015cd57b5e9b146e890",
+      "size": [
+        1254,
+        1254
+      ],
+      "door_instances": 27,
+      "window_instances": 16,
+      "ignored_opening_instances": 2,
+      "valid_pixels": 1569204,
+      "ignored_pixels": 3312,
+      "visible_wall_pixels": 112150,
+      "structural_wall_pixels": 146926,
+      "label_sha256": {
+        "visible_wall": "1cf2c30b206abe5985cbe46cc31f4949e4955940bd1ed5a47fb93f9c1536f74e",
+        "structural_wall": "6644fdabde4144bd9fd75c84e7b18016bcd6ccfdef0238ffdbb8066060809646",
+        "door_opening": "235711789172b47fcebe4dc10de062e56f8f4b499581283f2ae2cde558649640",
+        "window_opening": "69158e91609ed234c3ce16d932c6ff134503bcfe0da48dae6af7e5187195ac3a",
+        "valid": "739fd475f6f0f8a4fb97e5283f5ca78663473bfa7bc0f2078b84da42c5f44767",
+        "semantic_structure4": "250e6a0532d92d14b19b8b6deabb5a141ba3b7ed6d9a88df2e3d3ed36cc18367",
+        "partial13_structure_only": "9c54e6243d1e940343b0de7c36f395fc9aa0972e71e4e9ac11866aa0257dc67a"
+      },
+      "review_status": "DRAFT_NOT_GROUND_TRUTH",
+      "review_notes": [
+        "Elevator shaft openings are included as provisional door openings, not ordinary swing doors.",
+        "The mechanical room appears to connect through a guest-room partition; this is recorded as drawn, not repaired.",
+        "Bathroom partitions and doorway ends need close review at native resolution."
+      ]
+    },
+    {
+      "id": "fp06_clinic",
+      "title": "Medical clinic",
+      "group": "commercial",
+      "image": "images/fp06_clinic.png",
+      "source_original_filename": "medical_clinic_floor_plan_blueprint.png",
+      "source_sha256": "dae2a87fa8eecb0a1369a863ceee468603c5e34aa76b7caadd15ff4112f2a73a",
+      "size": [
+        1254,
+        1254
+      ],
+      "door_instances": 17,
+      "window_instances": 10,
+      "ignored_opening_instances": 0,
+      "valid_pixels": 1572516,
+      "ignored_pixels": 0,
+      "visible_wall_pixels": 117214,
+      "structural_wall_pixels": 145370,
+      "label_sha256": {
+        "visible_wall": "a73dba75ec88d1b82e862e033aa7266f549a3b1ca80ae926eb82ab292bcd48ef",
+        "structural_wall": "b93762694420a0f38311ec197c0eb1be9ab8c7025002cd52d4bcd26106102fc6",
+        "door_opening": "df3b224ef7ef987b51582f3ca1290af7d2d8b3302f4c111cb8e46aa3de583830",
+        "window_opening": "a3516c56920e3a65447d56da2366bd5fed4db9b24a0f1aac741c4518e554f48b",
+        "valid": "056cea6ce8626fde82a04d1a8d7420e7fb05bdba23133df65c9995e7d44d1866",
+        "semantic_structure4": "aa31df7e53bc5d8663bc346d13656ba0857b64f9f92085e64d15770128b595ba",
+        "partial13_structure_only": "20927e5f08710b9b78932beee8cdf2098071621eaf6dc86a04707611558f96dd"
+      },
+      "review_status": "DRAFT_NOT_GROUND_TRUTH",
+      "review_notes": [
+        "The nurses-station counter is not labeled as a fixture. Only the bold partition behind it is provisionally labeled as wall.",
+        "No fire sprinkler or hazard classification is inferred from the room names."
+      ]
+    },
+    {
+      "id": "fp07_school",
+      "title": "School classroom wing",
+      "group": "commercial",
+      "image": "images/fp07_school.png",
+      "source_original_filename": "school_classroom_wing_floor_plan.png",
+      "source_sha256": "e6feeb2724b5d7fd02bd3303ee981a0d88752eeca3b6288495bec0b51662a593",
+      "size": [
+        1254,
+        1254
+      ],
+      "door_instances": 14,
+      "window_instances": 16,
+      "ignored_opening_instances": 0,
+      "valid_pixels": 1572516,
+      "ignored_pixels": 0,
+      "visible_wall_pixels": 92150,
+      "structural_wall_pixels": 126735,
+      "label_sha256": {
+        "visible_wall": "0c6afa0e7602d787a1e066980e0dc5a51e947df2376cf288c4a55e9a4842eeb3",
+        "structural_wall": "561a66645541fb8d23238162b9a311b06489af092e00d4c1c107460171223b5a",
+        "door_opening": "7e2e2cee2f9e8b855e47fc4777ddb2461145dd79cdb925000ed25411b33a5703",
+        "window_opening": "8896cabfa2730ee17e6dd3b550cb2e42a9436adca15b571c9e3b63b5c231fd67",
+        "valid": "056cea6ce8626fde82a04d1a8d7420e7fb05bdba23133df65c9995e7d44d1866",
+        "semantic_structure4": "51fbf0b419156cccde8898f95bdc5c1ae422b85a6b28d634bbae5a374cc756a9",
+        "partial13_structure_only": "65af55647c73867a7fe26ee8c6a2f782ffba07b6f030fdda52517eae728b7cf2"
+      },
+      "review_status": "DRAFT_NOT_GROUND_TRUTH",
+      "review_notes": [
+        "Toilet-stall screens, shelving and classroom furniture are outside this structure-only taxonomy.",
+        "Pale door swing graphics are not wall pixels."
+      ]
+    },
+    {
+      "id": "fp08_grocery",
+      "title": "Grocery store",
+      "group": "commercial",
+      "image": "images/fp08_grocery.png",
+      "source_original_filename": "detailed_grocery_store_floor_plan.png",
+      "source_sha256": "90925a95a407c17522067b6e011ff8da54677f06fc02ee665c795dd8f7ddc36f",
+      "size": [
+        1254,
+        1254
+      ],
+      "door_instances": 16,
+      "window_instances": 18,
+      "ignored_opening_instances": 6,
+      "valid_pixels": 1530161,
+      "ignored_pixels": 42355,
+      "visible_wall_pixels": 66285,
+      "structural_wall_pixels": 96699,
+      "label_sha256": {
+        "visible_wall": "db53a3eb740d2d568ca2e815622f48df35ec985f6083a583d54a938d163261b3",
+        "structural_wall": "1c3aaeb9bd906491cd92ff146204611ad2f7968d1115bff27ea8f58df1160a4e",
+        "door_opening": "d1cf0c915fb0069425dbd506ef074931872e7c46871234b1863d3e736eb836c0",
+        "window_opening": "a3e09e900547c4901bf26c9b627aa2992a64cad06ed00e0b5bb2aec0b75c4e1a",
+        "valid": "277a40e40dc8e21056d43d6dc156ff56a2c9390c70b7b7209527bcd4324923a4",
+        "semantic_structure4": "67b97a0e667349958c5e36a9fee384e8c3b2fc7409a8310d1ece7078620e3474",
+        "partial13_structure_only": "eca94ff038296a4ce6f0837a202bed872ac305df7d6e39a1e6cbb042edcbe36f"
+      },
+      "review_status": "DRAFT_NOT_GROUND_TRUTH",
+      "review_notes": [
+        "The loading entry mixes incompatible-looking symbols; its opening is provisional and ignored for metrics.",
+        "Customer-service glazing/partition and the cooler envelope are ambiguous architectural versus equipment boundaries; ignored regions are supplied.",
+        "Entrances are annotated as drawn, without correcting the plan for construction feasibility."
+      ]
+    },
+    {
+      "id": "fp09_manufacturing",
+      "title": "Light manufacturing plant",
+      "group": "commercial",
+      "image": "images/fp09_manufacturing.png",
+      "source_original_filename": "light_manufacturing_plant_floor_plan.png",
+      "source_sha256": "5d0f4c2f53b5d297b5b2f3e079f2006260a69865fdfb0858b8fa5b5c794d7db1",
+      "size": [
+        1254,
+        1254
+      ],
+      "door_instances": 14,
+      "window_instances": 20,
+      "ignored_opening_instances": 0,
+      "valid_pixels": 1572516,
+      "ignored_pixels": 0,
+      "visible_wall_pixels": 68237,
+      "structural_wall_pixels": 91324,
+      "label_sha256": {
+        "visible_wall": "0463a364524a8b8bd655d6cd5ca7ddf2d23aa3a98c8b8c2bcc0ae1ee1573b6a7",
+        "structural_wall": "cd2e7cc829b8fc28f342a5be413b59f1e5cea29a1b439663852d38c8c17096c6",
+        "door_opening": "34dfd3725c49faed13de959e9c6e99d14484a3464c2756c6f2755a20143feb2b",
+        "window_opening": "46b68fb5666400bc7bddde513019d700ff616895003e63b50d173ab03676789f",
+        "valid": "056cea6ce8626fde82a04d1a8d7420e7fb05bdba23133df65c9995e7d44d1866",
+        "semantic_structure4": "964d041cef1acde488b7578af31fd2ba41f0251b6199d4f23cc43a04a337fa50",
+        "partial13_structure_only": "a093fb0184d3f61f5e3fd4547d537076901348574cc989e4cab3fc466526d754"
+      },
+      "review_status": "DRAFT_NOT_GROUND_TRUTH",
+      "review_notes": [
+        "Loading shutters are door openings, not windows.",
+        "Interior doors are not invented for rooms that have no clearly drawn access.",
+        "Small blue interior openings into shipping/receiving are provisionally classified as windows."
+      ]
+    },
+    {
+      "id": "fp10_apartment",
+      "title": "Two-bedroom apartment",
+      "group": "residential",
+      "image": "images/fp10_apartment.png",
+      "source_original_filename": "modern_two_bedroom_apartment_floor_plan.png",
+      "source_sha256": "faeb5e7cb1b39231a8989b94c1f9163b7b6f263d70799ab723b954d3269138d6",
+      "size": [
+        1254,
+        1254
+      ],
+      "door_instances": 7,
+      "window_instances": 6,
+      "ignored_opening_instances": 1,
+      "valid_pixels": 1463878,
+      "ignored_pixels": 108638,
+      "visible_wall_pixels": 132386,
+      "structural_wall_pixels": 162546,
+      "label_sha256": {
+        "visible_wall": "81132f688afa976bad9957fe1fd4799b596beb8327a6fbdd44f8942ee5c1847b",
+        "structural_wall": "73c356019e4f1b7ef3a197165b485645e6ec993842080ebc4e7e41d8aed3f8ad",
+        "door_opening": "6ae382ead7095070079255c758af83aa7b464ea5cd0a90681cb9f9db13a6a1e9",
+        "window_opening": "58eb5b8f00efe53dac7c36cf354530f682cf855e1dde38831f964b95f60e8040",
+        "valid": "06a80d57973b04a72875d9a7760c25efc31761a0aaeafbf56754060bd105fdc2",
+        "semantic_structure4": "3de29ac17564c99e41daf8da3e7a6b15f197f501af267062c9528f262c34ccca",
+        "partial13_structure_only": "73f05b0661d1e16ac70e790ebd708219775102b07d2b212c70cfa2d4e68ab789"
+      },
+      "review_status": "DRAFT_NOT_GROUND_TRUTH",
+      "review_notes": [
+        "Balcony railing is not an enclosing wall.",
+        "Closet/pass-through gaps lacking a clear door symbol are ignored rather than classified as doors.",
+        "The balcony glazed assembly is provisionally a door opening; movable versus fixed panel extents need human review."
+      ]
+    },
+    {
+      "id": "fp11_house_ground",
+      "title": "Single-family home / first floor",
+      "group": "residential",
+      "image": "images/fp11_house_ground.png",
+      "source_original_filename": "single_family_home_first_floor_plan.png",
+      "source_sha256": "914e6e02f0869d674ad72e9b4d3fad1a5198027d3d785d679b79762ecdb9ef60",
+      "size": [
+        1254,
+        1254
+      ],
+      "door_instances": 7,
+      "window_instances": 9,
+      "ignored_opening_instances": 1,
+      "valid_pixels": 1568100,
+      "ignored_pixels": 4416,
+      "visible_wall_pixels": 83802,
+      "structural_wall_pixels": 115088,
+      "label_sha256": {
+        "visible_wall": "a2f766c51cd93a5ecc22f3a3be107636d87f806087081ce056e9db2f0e8da88f",
+        "structural_wall": "c9de797b1f5122086611705ff0f2b259825651f130a434849e01c3b681033c74",
+        "door_opening": "1bdd5b43c5e5cd144fd958776164f659d3aaf6fb0ec278e7c1edfbc2731b0996",
+        "window_opening": "bc1fdbd1c6219ef5128f6b588089eb668a094760df21c80e7fc40f959a52d9d8",
+        "valid": "2430b0081a91ae52c8c14f7a8ff82856257431582493649bba1c6a3218a9bd2d",
+        "semantic_structure4": "0626eca968654f1499c4d1b7570601b6d6da19f1d5ead1142986573ccb615015",
+        "partial13_structure_only": "05d426db537f5120757fd27e91b5d34764513f51f506a523b139aef130eea0be"
+      },
+      "review_status": "DRAFT_NOT_GROUND_TRUTH",
+      "review_notes": [
+        "Bonus image outside the assumed ten-image subset.",
+        "Porch/patio slab outlines and stair railings are excluded from wall labels.",
+        "The rear entry has a nonstandard generated door graphic; its candidate is ignored."
+      ]
+    },
+    {
+      "id": "fp12_house_upper",
+      "title": "Single-family home / second floor",
+      "group": "residential",
+      "image": "images/fp12_house_upper.png",
+      "source_original_filename": "single_family_home_second_floor_plan.png",
+      "source_sha256": "6f381f675562ef1c6545c117074b2dbea96ace9d7a12e7d196ed7be6d6d15ea8",
+      "size": [
+        1254,
+        1254
+      ],
+      "door_instances": 10,
+      "window_instances": 8,
+      "ignored_opening_instances": 1,
+      "valid_pixels": 1564623,
+      "ignored_pixels": 7893,
+      "visible_wall_pixels": 113390,
+      "structural_wall_pixels": 142916,
+      "label_sha256": {
+        "visible_wall": "0a0d4f70fb182a567f4330b5a315ca97a15f04decc178a30fb75266eaf4e457a",
+        "structural_wall": "3eeaa17fe88c5f2da12f2eda646b5fe9a550f0a2ea838d52c47aa2665add5386",
+        "door_opening": "51d635c8db0bcd4c17731f0fa8b84147810574e718a61236cf5e6995cc263661",
+        "window_opening": "9ee612110cf1799aa36e9b82e70f6f93f1077c455339602959ed40d91e81844e",
+        "valid": "f11cfe1e08bc8e120197c4f03930abcbe12c599d6c35c6cc1b6e44e320555f8d",
+        "semantic_structure4": "347c260eef8ae350fb3fcc69e530219b629a58a7ef3e9fbe171539dc298b6465",
+        "partial13_structure_only": "5a46485b70635888a43bfc2117ca820a25b7c02066a89da92bda87258ed3cc2f"
+      },
+      "review_status": "DRAFT_NOT_GROUND_TRUTH",
+      "review_notes": [
+        "Bonus image outside the assumed ten-image subset.",
+        "Two long internal glazed-looking symbols are provisionally sliding closet doors, not exterior windows.",
+        "Primary-bath double-door/vestibule geometry is unclear; the inner threshold is ignored."
+      ]
+    }
+  ],
+  "counts": {
+    "images": 12,
+    "door_instances": 139,
+    "window_instances": 137,
+    "independently_human_reviewed_images": 0
+  }
+}

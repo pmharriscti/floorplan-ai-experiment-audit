@@ -3,7 +3,7 @@
   "evidence_status": "VERIFIED",
   "experiment_kind": "downstream_integration",
   "comparable_to_segmentation_rankings": false,
-  "objective": "The meaningful result today is not \u2018we generated a 3D picture.\u2019 It is \u2018we can turn reviewed prediction-derived geometry into identifiable IFC building elements, preserve uncertainty, and inspect the result.\u2019 That is a concrete step toward the PM\u2019s BIM goal\u2014and it creates a stable destination for the ML improvements that follow.",
+  "objective": "The meaningful result today is not ‘we generated a 3D picture.’ It is ‘we can turn reviewed prediction-derived geometry into identifiable IFC building elements, preserve uncertainty, and inspect the result.’ That is a concrete step toward the PM’s BIM goal—and it creates a stable destination for the ML improvements that follow.",
   "experiment_question": "Can a small, explicitly reviewed subset of current floor-plan predictions become individually identifiable IFC walls and a hosted opening, with inspectable dimensions, provenance, uncertainty, and reproducible validation?",
   "primary_split": "not_applicable",
   "input_sample_split": "val",
@@ -667,5 +667,170 @@
       "No accuracy claim; no ground truth or annotation was read.",
       "The reviewer's decisions concern visual agreement with the drawing for a preview, not the building."
     ]
+  },
+  "review_applied_2026_10_01": {
+    "date": "2026-10-01",
+    "status": "HUMAN_REVIEW_APPLIED",
+    "reviewer": "Paul Harris",
+    "reviewer_role": "Prototype image-space geometry reviewer",
+    "reviewed_utc": "2026-10-01T20:33:50Z",
+    "signed_by_reviewer": false,
+    "reviewer_fields": "The reviewer chose the name and completion time when asked; the record states this.",
+    "decisions": {
+      "wall_002": {
+        "decision": "ACCEPT_WITH_EDITS",
+        "edits": [
+          "axis_px.start"
+        ]
+      },
+      "wall_003": {
+        "decision": "ACCEPT",
+        "edits": []
+      },
+      "wall_004": {
+        "decision": "ACCEPT",
+        "edits": []
+      },
+      "wall_012": {
+        "decision": "ACCEPT_WITH_EDITS",
+        "edits": [
+          "axis_px.start",
+          "axis_px.end"
+        ]
+      },
+      "door_opening-c02": {
+        "decision": "ACCEPT",
+        "edits": []
+      }
+    },
+    "validator_problems": 0,
+    "applied_by": "bim-bridge apply-review",
+    "metric_export": "BLOCKED on scale (ASSUMED_FOR_PREVIEW)",
+    "reviewed_preview_ifc": {
+      "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/export_reviewed_preview/cubicasa-high-quality-architectural-333-val-region-01__REVIEWED_PREVIEW_SCALE_ASSUMED_FOR_PREVIEW.ifc",
+      "sha256": "b02d532c745216c5479d372b2fd5c3700fdaf11f6ebc96c0dac398f3c67ef375",
+      "size_bytes": 64870,
+      "committed": false,
+      "written_by": "scripts/export_reviewed_preview.py (new folder; the bridge CLI preview folder name was taken by the unreviewed export)"
+    },
+    "checks": {
+      "bridge": {
+        "PASS": 143,
+        "WARN": 1
+      },
+      "web_ifc_independent_parser": {
+        "overall": "PASS",
+        "passed": 19,
+        "failed": 0
+      },
+      "verification_against_earlier_ifc_and_review_record": {
+        "passed": 73,
+        "failed": 0,
+        "by_group": {
+          "authorized_edits": {
+            "PASS": 8,
+            "FAIL": 0
+          },
+          "unchanged_geometry": {
+            "PASS": 3,
+            "FAIL": 0
+          },
+          "identity": {
+            "PASS": 3,
+            "FAIL": 0
+          },
+          "review_properties": {
+            "PASS": 17,
+            "FAIL": 0
+          },
+          "provenance": {
+            "PASS": 28,
+            "FAIL": 0
+          },
+          "opening": {
+            "PASS": 5,
+            "FAIL": 0
+          },
+          "junction_contact_geometry": {
+            "PASS": 3,
+            "FAIL": 0
+          },
+          "explicit_connection_relationships": {
+            "PASS": 1,
+            "FAIL": 0
+          },
+          "status": {
+            "PASS": 3,
+            "FAIL": 0
+          },
+          "preservation": {
+            "PASS": 2,
+            "FAIL": 0
+          }
+        }
+      }
+    },
+    "junction_contact_plan_overlap_wall_012": {
+      "wall_002-wall_012": {
+        "earlier_ifc_overlap_px2": 18.0,
+        "reviewed_ifc_overlap_px2": 18.0
+      },
+      "wall_003-wall_012": {
+        "earlier_ifc_overlap_px2": 12.0,
+        "reviewed_ifc_overlap_px2": 18.0
+      },
+      "wall_004-wall_012": {
+        "earlier_ifc_overlap_px2": 3.968,
+        "reviewed_ifc_overlap_px2": 1.98
+      }
+    },
+    "explicit_ifc_connection_relationships": {
+      "IfcRelConnectsPathElements": 0,
+      "IfcRelConnectsElements_including_subtypes": 0,
+      "note": "None was added. Walls that overlap in plan are separate solids with no connection relationship."
+    },
+    "gates_recomputed": {
+      "file": "results/gates_02.json",
+      "computed_utc": "2026-10-07T20:55:08Z",
+      "real_track": {
+        "G1": "PASS",
+        "G2": "BLOCKED",
+        "G3": "PASS",
+        "G4": "PASS",
+        "G5": "PASS",
+        "G6": "PASS",
+        "G7": "NOT_RUN"
+      },
+      "milestones": {
+        "technical_exporter": "PASS",
+        "reviewed_prediction_bridge": "PARTIAL",
+        "downstream_application_acceptance": "NOT_RUN"
+      },
+      "finalize_fix": "bim_bridge.finalize now picks the real-track export by review status (reviewed metric > reviewed preview > unreviewed preview) instead of the first export_* folder alphabetically; report text follows the applied review. 130 of 130 bridge tests pass after the change."
+    },
+    "not_claimed": [
+      "No scale confirmation; G2 stays BLOCKED.",
+      "No viewer inspection is recorded; G7 stays NOT_RUN.",
+      "The review covers visual agreement with the drawing for a limited preview, not the building.",
+      "No dimensional accuracy."
+    ]
+  },
+  "gates_current": {
+    "source": "results/gates_02.json",
+    "real_track": {
+      "G1": "PASS",
+      "G2": "BLOCKED",
+      "G3": "PASS",
+      "G4": "PASS",
+      "G5": "PASS",
+      "G6": "PASS",
+      "G7": "NOT_RUN"
+    },
+    "milestones": {
+      "technical_exporter": "PASS",
+      "reviewed_prediction_bridge": "PARTIAL",
+      "downstream_application_acceptance": "NOT_RUN"
+    },
+    "earlier": "results/gates.json (2026-09-28)"
   }
 }

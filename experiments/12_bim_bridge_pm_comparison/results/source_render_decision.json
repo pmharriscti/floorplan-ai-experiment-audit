@@ -1,0 +1,139 @@
+{
+  "record": "source_render_decision/1",
+  "decided_utc": "2026-10-06T13:08:24Z",
+  "decided_before_any_inference_on_these_sources": true,
+  "finding": "All inputs are opaque rasters. No render step is needed and none is applied.",
+  "primary": {
+    "name": "SOURCE_AS_IS",
+    "transform": "none"
+  },
+  "diagnostic": null,
+  "rendered": [
+    {
+      "sample_key": "cc-01",
+      "source_path": "/home/pmharris/dev/cubicasa5k_data/data/datasets/qmarva/cubicasa5k/versions/4/cubicasa5k/cubicasa5k/high_quality/4712/F1_scaled.png",
+      "source_sha256": "8c00e3cabbaa476284812c2ed38ade3ad443a4d6d16c402b9f9d8b0ebeb95243",
+      "source_mode": "RGB",
+      "rendered_path": "/home/pmharris/dev/cubicasa5k_data/data/datasets/qmarva/cubicasa5k/versions/4/cubicasa5k/cubicasa5k/high_quality/4712/F1_scaled.png",
+      "rendered_sha256": "8c00e3cabbaa476284812c2ed38ade3ad443a4d6d16c402b9f9d8b0ebeb95243",
+      "size_px": [
+        1351,
+        1297
+      ],
+      "how": "none: the saved prediction was made from this file by the upstream evaluate stage",
+      "geometry_change": "none"
+    },
+    {
+      "sample_key": "cc-02",
+      "source_path": "/home/pmharris/dev/cubicasa5k_data/data/datasets/qmarva/cubicasa5k/versions/4/cubicasa5k/cubicasa5k/high_quality_architectural/4847/F1_scaled.png",
+      "source_sha256": "437c7112e7908b5b2c8111d44613aa77e557f96de62dc60c8d831e975170d1a7",
+      "source_mode": "RGB",
+      "rendered_path": "/home/pmharris/dev/cubicasa5k_data/data/datasets/qmarva/cubicasa5k/versions/4/cubicasa5k/cubicasa5k/high_quality_architectural/4847/F1_scaled.png",
+      "rendered_sha256": "437c7112e7908b5b2c8111d44613aa77e557f96de62dc60c8d831e975170d1a7",
+      "size_px": [
+        1176,
+        1822
+      ],
+      "how": "none: the saved prediction was made from this file by the upstream evaluate stage",
+      "geometry_change": "none"
+    },
+    {
+      "sample_key": "cc-03",
+      "source_path": "/home/pmharris/dev/cubicasa5k_data/data/datasets/qmarva/cubicasa5k/versions/4/cubicasa5k/cubicasa5k/high_quality_architectural/2539/F1_scaled.png",
+      "source_sha256": "13fe690094ea4ec4ec9110983817237c465c6c8c53674668f5dba2740b87f095",
+      "source_mode": "RGB",
+      "rendered_path": "/home/pmharris/dev/cubicasa5k_data/data/datasets/qmarva/cubicasa5k/versions/4/cubicasa5k/cubicasa5k/high_quality_architectural/2539/F1_scaled.png",
+      "rendered_sha256": "13fe690094ea4ec4ec9110983817237c465c6c8c53674668f5dba2740b87f095",
+      "size_px": [
+        1239,
+        1332
+      ],
+      "how": "none: the saved prediction was made from this file by the upstream evaluate stage",
+      "geometry_change": "none"
+    },
+    {
+      "sample_key": "com-01",
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/synth_images_commercial/ChatGPT Image Oct 2, 2026, 04_30_52 PM-1.png",
+      "source_sha256": "5b1af2960e3fdb62fedbc840bb1b43e35ff9528cbc5dcc07c826bc29025cf067",
+      "source_mode": "RGB",
+      "rendered_path": "/mnt/e/AI_Team/mitunet/experiments/synth_images_commercial/ChatGPT Image Oct 2, 2026, 04_30_52 PM-1.png",
+      "rendered_sha256": "5b1af2960e3fdb62fedbc840bb1b43e35ff9528cbc5dcc07c826bc29025cf067",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "how": "none: opaque RGB raster given to the frozen contract as is",
+      "geometry_change": "none"
+    },
+    {
+      "sample_key": "com-02",
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/synth_images_commercial/ChatGPT Image Oct 2, 2026, 04_30_53 PM-2.png",
+      "source_sha256": "32711ad5b7338b7b14670423d3135c25bbe1f6b42f79f015cd57b5e9b146e890",
+      "source_mode": "RGB",
+      "rendered_path": "/mnt/e/AI_Team/mitunet/experiments/synth_images_commercial/ChatGPT Image Oct 2, 2026, 04_30_53 PM-2.png",
+      "rendered_sha256": "32711ad5b7338b7b14670423d3135c25bbe1f6b42f79f015cd57b5e9b146e890",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "how": "none: opaque RGB raster given to the frozen contract as is",
+      "geometry_change": "none"
+    },
+    {
+      "sample_key": "com-03",
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/synth_images_commercial/ChatGPT Image Oct 2, 2026, 04_30_53 PM-3.png",
+      "source_sha256": "dae2a87fa8eecb0a1369a863ceee468603c5e34aa76b7caadd15ff4112f2a73a",
+      "source_mode": "RGB",
+      "rendered_path": "/mnt/e/AI_Team/mitunet/experiments/synth_images_commercial/ChatGPT Image Oct 2, 2026, 04_30_53 PM-3.png",
+      "rendered_sha256": "dae2a87fa8eecb0a1369a863ceee468603c5e34aa76b7caadd15ff4112f2a73a",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "how": "none: opaque RGB raster given to the frozen contract as is",
+      "geometry_change": "none"
+    },
+    {
+      "sample_key": "com-04",
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/synth_images_commercial/ChatGPT Image Oct 2, 2026, 04_30_54 PM-4.png",
+      "source_sha256": "e6feeb2724b5d7fd02bd3303ee981a0d88752eeca3b6288495bec0b51662a593",
+      "source_mode": "RGB",
+      "rendered_path": "/mnt/e/AI_Team/mitunet/experiments/synth_images_commercial/ChatGPT Image Oct 2, 2026, 04_30_54 PM-4.png",
+      "rendered_sha256": "e6feeb2724b5d7fd02bd3303ee981a0d88752eeca3b6288495bec0b51662a593",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "how": "none: opaque RGB raster given to the frozen contract as is",
+      "geometry_change": "none"
+    },
+    {
+      "sample_key": "com-05",
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/synth_images_commercial/ChatGPT Image Oct 2, 2026, 04_30_55 PM-5.png",
+      "source_sha256": "90925a95a407c17522067b6e011ff8da54677f06fc02ee665c795dd8f7ddc36f",
+      "source_mode": "RGB",
+      "rendered_path": "/mnt/e/AI_Team/mitunet/experiments/synth_images_commercial/ChatGPT Image Oct 2, 2026, 04_30_55 PM-5.png",
+      "rendered_sha256": "90925a95a407c17522067b6e011ff8da54677f06fc02ee665c795dd8f7ddc36f",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "how": "none: opaque RGB raster given to the frozen contract as is",
+      "geometry_change": "none"
+    },
+    {
+      "sample_key": "com-06",
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/synth_images_commercial/ChatGPT Image Oct 2, 2026, 04_30_56 PM-6.png",
+      "source_sha256": "5d0f4c2f53b5d297b5b2f3e079f2006260a69865fdfb0858b8fa5b5c794d7db1",
+      "source_mode": "RGB",
+      "rendered_path": "/mnt/e/AI_Team/mitunet/experiments/synth_images_commercial/ChatGPT Image Oct 2, 2026, 04_30_56 PM-6.png",
+      "rendered_sha256": "5d0f4c2f53b5d297b5b2f3e079f2006260a69865fdfb0858b8fa5b5c794d7db1",
+      "size_px": [
+        1254,
+        1254
+      ],
+      "how": "none: opaque RGB raster given to the frozen contract as is",
+      "geometry_change": "none"
+    }
+  ]
+}

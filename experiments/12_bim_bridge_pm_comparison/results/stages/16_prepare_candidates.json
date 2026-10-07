@@ -1,0 +1,111 @@
+{
+  "experiment_id": "bim_bridge_pm_comparison_v0",
+  "run_id": "bim_bridge_pm_comparison_v0_20261006_130747_UTC",
+  "stage": "prepare_candidates",
+  "status": "PASS",
+  "written_utc": "2026-10-06T13:13:41Z",
+  "sample_key": "cc-03",
+  "model_id": "cc-high-quality-architectural--2539-p01",
+  "outcome": "WALLS_AND_HOSTED_OPENINGS",
+  "scope": "WHOLE_PLAN_ATTEMPT",
+  "upstream_walls": 18,
+  "candidate_walls": 18,
+  "excluded_walls": [],
+  "apertures": 10,
+  "openings_not_exported": 9,
+  "automated_edits": [
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_002",
+      "field": "thickness",
+      "before": {
+        "thickness_px": 8.0
+      },
+      "after": {
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_003",
+      "field": "thickness",
+      "before": {
+        "thickness_px": 40.0
+      },
+      "after": {
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_005",
+      "field": "thickness",
+      "before": {
+        "thickness_px": 9.5
+      },
+      "after": {
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_007",
+      "field": "thickness",
+      "before": {
+        "thickness_px": 32.5
+      },
+      "after": {
+        "thickness_px": 9.0
+      }
+    },
+    {
+      "object_id": "opening:cc-high-quality-architectural--2539-p01:door_opening-c01",
+      "field": "offset_along_host",
+      "before": {
+        "along_host_px": [
+          -10.5,
+          21.5
+        ]
+      },
+      "after": {
+        "along_host_px": [
+          0.0,
+          21.5
+        ]
+      }
+    },
+    {
+      "object_id": "opening:cc-high-quality-architectural--2539-p01:door_opening-c07",
+      "field": "offset_along_host",
+      "before": {
+        "along_host_px": [
+          70.5,
+          102.5
+        ]
+      },
+      "after": {
+        "along_host_px": [
+          70.5,
+          88.0
+        ]
+      }
+    }
+  ],
+  "plan_diagnostics_summary": {
+    "predicted_wall_pixel_coverage_ratio": 0.8833139984532096,
+    "skeleton_coverage_ratio": 0.926720947446336,
+    "candidate_pixels_outside_predicted_wall": 3266
+  },
+  "ground_truth_or_annotation_read": false,
+  "sample_333_geometry_or_decisions_used": false,
+  "paths": {
+    "candidate_geometry": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/cc-03/candidates/candidate_geometry.json",
+    "candidate_geometry_sha256": "87c99e35839891265563d224f8b34bbc74b797eea41bfac4a8eaf9f6dd56678a"
+  },
+  "geometry_status": "CANDIDATE_UNREVIEWED",
+  "scale_status": "ASSUMED_FOR_PREVIEW",
+  "input_checks": {
+    "PASS": 251,
+    "FAIL": 0,
+    "WARN": 29,
+    "INFO": 0
+  },
+  "failed": [],
+  "building_model": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/cc-03/building_model.json"
+}

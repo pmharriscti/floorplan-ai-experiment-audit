@@ -1,0 +1,78 @@
+{
+  "experiment_id": "bim_bridge_pm_comparison_v0",
+  "run_id": "bim_bridge_pm_comparison_v0_20261006_130747_UTC",
+  "stage": "export",
+  "status": "PASS",
+  "written_utc": "2026-10-06T19:10:41Z",
+  "sample_key": "com-06",
+  "kind": "candidate",
+  "scope": "whole_plan",
+  "revision": "r03",
+  "folder": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-06/export_candidate_preview_whole_plan_r03",
+  "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-06/export_candidate_preview_whole_plan_r03/com-com-06-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r03.ifc",
+  "ifc_windows_path": "E:\\AI_Team\\mitunet\\experiments\\bim_bridge_pm_comparison_v0\\bim_bridge_pm_comparison_v0_20261006_130747_UTC\\samples\\com-06\\export_candidate_preview_whole_plan_r03\\com-com-06-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r03.ifc",
+  "ifc_sha256": "8d419e3a59e45644a7edb00276ed2aea6c1dacf1e59b108c1e515fc66dbadafb",
+  "ifc_size_bytes": 320804,
+  "model_id": "com-com-06-p01",
+  "geometry_status": "CANDIDATE_UNREVIEWED",
+  "scale_status": "ASSUMED_FOR_PREVIEW",
+  "permitted_use": "preview_only_not_for_engineering_or_inspection",
+  "walls": 18,
+  "openings": 9,
+  "bridge_checks": {
+    "technical": "PASS",
+    "by_status": {
+      "PASS": 547,
+      "WARN": 28
+    },
+    "failed": []
+  },
+  "run_specific_checks": {
+    "passed": 8,
+    "failed": 0,
+    "failed_names": []
+  },
+  "independent_parser": {
+    "status": "PASS",
+    "passed": 75,
+    "failed": 0,
+    "web_ifc_version": "0.0.66",
+    "report": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-06/export_candidate_preview_whole_plan_r03/independent_parser_check.json",
+    "stderr": "",
+    "is_viewer_test": false,
+    "note": "A second IFC engine parsed and tessellated the file. This is not acceptance by any viewer or BIM application."
+  },
+  "plan_contact_pairs": 23,
+  "connection_relationships": {
+    "IfcRelConnectsElements": 0,
+    "IfcRelConnectsPathElements": 0,
+    "IfcRelConnectsWithRealizingElements": 0
+  },
+  "repeat_export_byte_identical": true,
+  "guids_created": 4,
+  "guids_reused": 98,
+  "guids_retired": [
+    "pset:wall:com-com-06-p01:wall_009:AutoAutoCAD_Provenance",
+    "pset:wall:com-com-06-p01:wall_011:AutoAutoCAD_Provenance",
+    "rel:pset:wall:com-com-06-p01:wall_009:AutoAutoCAD_Provenance",
+    "rel:pset:wall:com-com-06-p01:wall_011:AutoAutoCAD_Provenance",
+    "wall:com-com-06-p01:wall_009",
+    "wall:com-com-06-p01:wall_011"
+  ],
+  "guid_map_sha256": "a3d992ebe283a4459cac1eb33f8cb74c91d07412b3549bbe43d5b5e44b048345",
+  "metric_export": {
+    "status": "BLOCKED",
+    "blockers": [
+      "Plan scale is ASSUMED_FOR_PREVIEW (arbitrary visualization scale).",
+      "No recorded human review."
+    ]
+  },
+  "viewer_inspection": "NOT_RUN",
+  "reports": {
+    "validation_report": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-06/export_candidate_preview_whole_plan_r03/validation_report.json",
+    "validation_report_md": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-06/export_candidate_preview_whole_plan_r03/validation_report.md",
+    "run_specific_checks": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-06/export_candidate_preview_whole_plan_r03/run_specific_checks.json",
+    "independent_parser": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-06/export_candidate_preview_whole_plan_r03/independent_parser_check.json"
+  },
+  "note": "PASS = the preview file matches its input and passes the technical checks. It is not a metric export, not a review and not viewer acceptance."
+}

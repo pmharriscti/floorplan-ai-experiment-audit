@@ -1,0 +1,110 @@
+# bim_bridge PM comparison: CubiCasa test plans vs AI-generated plans
+
+**A downstream illustration, not a benchmark.** Fifteen plans were taken through the frozen Phase 5 multi-head model
+(experiment 09) and the bim_bridge_v0 IFC chain (experiment 11). No model was trained and no threshold was chosen.
+The results are not comparable with the segmentation rankings above; the scoreboard's pixel-metric columns are `UNKNOWN`.
+
+## Question
+
+How does the chain behave from masks to IFC files on a few CubiCasa5K test plans and on AI-generated plans, and how
+much of the loss between the masks and the IFC walls can automated bridge repairs recover?
+
+## Inputs
+
+| Group | Plans | How chosen | Predictions | Labels |
+| --- | --- | --- | --- | --- |
+| CubiCasa5K test | 3 | `random.Random(42)` over the 400 test plans | saved upstream predictions | dataset labels |
+| AI-generated, residential/mixed | 6 | every image in the folder, file-name order | from run `bim_bridge_synth_images_v0_20261002_200115_UTC` | **draft, unreviewed** |
+| AI-generated, commercial | 6 | every image in the folder, file-name order | fresh frozen inference | **draft, unreviewed** |
+
+The AI-generated images were made with an image generator and depict no real building. Their labels were drawn by an
+AI assistant by tracing dark pixels inside hand-placed guide bands; **none of the 12 was reviewed by a person**. Scores
+against them are agreement with draft labels, not verified accuracy. The model also follows dark ink, so agreement may
+overstate true accuracy.
+
+## Results, pooled by group
+
+| Group | Labels | Mask wall IoU | IFC wall IoU before repair (r01) | IFC wall IoU after repair (r04) | Doors in IFC, r01 | Doors in IFC, r04 |
+| --- | --- | --- | --- | --- | --- | --- |
+| CubiCasa test (3) | dataset | 79.8% | 64.8% | 71.1% | 18/23 | 19/23 |
+| AI residential/mixed (6) | draft, unreviewed | 79.3% | 76.4% | 82.7% | 24/33 | 30/33 |
+| AI commercial (6) | draft, unreviewed | 73.5% | 71.0% | 76.5% | 68/93 | 74/93 |
+
+For context, the model's mean wall IoU over all 400 CubiCasa test plans is 81.1% (boundary F1 at 2 px 95.4%).
+
+- On the residential AI plans the masks agree with the draft labels about as well as on CubiCasa; commercial plans are lower.
+- Most of the loss happened between the masks and the IFC walls. On CubiCasa the repair rules narrowed that gap from 15.0 to 8.7 points; on the AI plans the repaired IFC walls now score at or above the masks.
+- Doors: the model finds most doors in the masks, but some are lost when masks become walls.
+
+## Results per plan
+
+| Plan | Labels | Mask wall IoU | IFC r01 | IFC r04 | Doors in IFC r01 | Doors in IFC r04 | Walls r01 → r04 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| `cc-01` CubiCasa high_quality/4712 | dataset | 70.5% | 57.7% | 66.4% | 5/6 | 5/6 | 23 → 14 |
+| `cc-02` CubiCasa high_quality_architectural/4847 | dataset | 87.7% | 56.2% | 59.6% | 3/7 | 4/7 | 12 → 8 |
+| `cc-03` CubiCasa high_quality_architectural/2539 | dataset | 83.9% | 76.4% | 82.9% | 10/10 | 10/10 | 18 → 16 |
+| `img-01` house, ground floor | draft, unreviewed | 81.3% | 72.9% | 79.3% | 2/6 | 5/6 | 25 → 17 |
+| `img-02` house, upper floor | draft, unreviewed | 79.2% | 79.5% | 84.1% | 7/9 | 7/9 | 21 → 19 |
+| `img-03` apartment | draft, unreviewed | 79.0% | 71.3% | 82.6% | 6/6 | 6/6 | 22 → 16 |
+| `img-04` office | draft, unreviewed | 75.9% | 74.3% | 79.5% | 6/6 | 6/6 | 17 → 10 |
+| `img-05` retail | draft, unreviewed | 81.0% | 80.0% | 88.1% | 1/3 | 3/3 | 11 → 7 |
+| `img-06` restaurant | draft, unreviewed | 80.5% | 82.4% | 83.6% | 2/3 | 3/3 | 15 → 8 |
+| `com-01` warehouse | draft, unreviewed | 61.7% | 60.3% | 59.2% | 10/11 | 10/11 | 22 → 13 |
+| `com-02` hotel | draft, unreviewed | 76.3% | 67.2% | 74.3% | 11/25 | 14/25 | 45 → 35 |
+| `com-03` clinic | draft, unreviewed | 77.3% | 76.7% | 81.2% | 15/17 | 16/17 | 29 → 23 |
+| `com-04` school | draft, unreviewed | 76.6% | 72.0% | 85.0% | 13/14 | 14/14 | 22 → 16 |
+| `com-05` grocery | draft, unreviewed | 68.3% | 75.6% | 76.7% | 11/12 | 11/12 | 21 → 19 |
+| `com-06` manufacturing | draft, unreviewed | 73.0% | 70.6% | 74.9% | 8/14 | 9/14 | 20 → 17 |
+
+IFC wall IoU is measured on the walls read back from each IFC file, mapped to the model's 512 grid. Doors count as
+found when a predicted region shares at least one pixel with a labelled door (a loose detection count).
+
+## Bridge repair rules (revision r04, `repair_v1.2`)
+
+Applied after the vectorizer and before door hosting, evidenced on each plan's predicted mask only:
+
+1. **R1 collinear merge.** Two walls on the same line become one when at least 90% of the gap lies on the predicted mask; overlapping duplicates merge too.
+2. **R2 end extension.** A wall end moves along its axis while the mask continues under the wall body, up to 40 px per end in total, stopping at parallel neighbours. Through a perpendicular neighbour this closes the corner.
+3. **R3 recentre.** A merged or extended axis is snapped orthogonal and moved onto the mask centreline (at most 3.0 px).
+
+Across the 15 plans the rules made 1030 automated edits (R2_extend 577, R3_recentre 368, R1_merge 85). Each is recorded on its object with before and
+after values, so a reviewer can see and undo it. IFC wall IoU improved on 14 of 15 plans; com-01 got slightly worse.
+
+Two earlier versions are kept on disk as evidence: r02 (`repair_v1.0`) left overlapping duplicate walls on three plans,
+which the input contract refused; r03 (`repair_v1.1`) let a short segment's slope tilt a long merged wall off the mask and
+let extensions compound across rounds, and two plans regressed. **The rules were developed and checked on these same
+15 plans, so their gains are not held-out evidence.**
+
+## Why the warehouse (com-01) scores lowest
+
+Its walls are about 4 px wide on the 512 grid. A 1-pixel disagreement on each wall edge would alone cap IoU at about 67%.
+88% of its error lies within 2 px of a labelled wall edge, and its boundary F1 at 2 px is 94%. The rest is mostly the
+entrance vestibule walls and a stub near the restrooms. IoU understates thin-walled plans; report boundary F1 with it.
+
+## Status of the IFC files
+
+All 30 files (r01 and r04 for 15 plans) pass the bridge checks, 8 run-specific checks, the independent web-ifc parse and
+a byte-identical repeat export. Every file is a **candidate, unreviewed** preview with an assumed scale (0.01 preview
+metres per source pixel). Windows are predicted but not exported. No viewer inspection is recorded. The IFC files are
+not committed; their paths and hashes are in [metrics.json](metrics.json).
+
+## Evidence
+
+- Comparison tables and reports: [results/comparison_r04/](results/comparison_r04/), [results/comparison_r01/](results/comparison_r01/)
+- The label bundle's own evaluator, run at full resolution as a cross-check: `results/comparison_r0x/label_bundle_evaluator/`
+- Inputs and inference contract: [results/subset_manifest.json](results/subset_manifest.json), [results/config/inference_contract.json](results/config/inference_contract.json)
+- Repair configurations: [results/config/](results/config/)
+- Draft label bundle README and manifest: [results/draft_labels/](results/draft_labels/)
+- Visual QA: [qa/README.md](qa/README.md)
+
+## Non-claims
+
+- Not a benchmark; 15 plans illustrate behaviour and establish nothing in general.
+- No claim about real company drawings; AI-generated plans share one drawing style.
+- No dimensional accuracy, no human review of these plans, no viewer acceptance.
+
+## Publication Status
+
+Published on 2026-10-07 after the repository owner asked for this entry.
+
+See [config.yaml](config.yaml), [metrics.json](metrics.json), and [provenance.json](provenance.json).

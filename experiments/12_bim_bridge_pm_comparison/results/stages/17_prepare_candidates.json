@@ -1,0 +1,71 @@
+{
+  "experiment_id": "bim_bridge_pm_comparison_v0",
+  "run_id": "bim_bridge_pm_comparison_v0_20261006_130747_UTC",
+  "stage": "prepare_candidates",
+  "status": "PASS",
+  "written_utc": "2026-10-06T13:13:43Z",
+  "sample_key": "com-01",
+  "model_id": "com-com-01-p01",
+  "outcome": "WALLS_AND_HOSTED_OPENINGS",
+  "scope": "WHOLE_PLAN_ATTEMPT",
+  "upstream_walls": 22,
+  "candidate_walls": 22,
+  "excluded_walls": [],
+  "apertures": 10,
+  "openings_not_exported": 23,
+  "automated_edits": [
+    {
+      "object_id": "opening:com-com-01-p01:door_opening-c06",
+      "field": "offset_along_host",
+      "before": {
+        "along_host_px": [
+          43.5,
+          59.5
+        ]
+      },
+      "after": {
+        "along_host_px": [
+          43.5,
+          56.0
+        ]
+      }
+    },
+    {
+      "object_id": "opening:com-com-01-p01:door_opening-c07",
+      "field": "offset_along_host",
+      "before": {
+        "along_host_px": [
+          -4.5,
+          10.5
+        ]
+      },
+      "after": {
+        "along_host_px": [
+          0.0,
+          10.5
+        ]
+      }
+    }
+  ],
+  "plan_diagnostics_summary": {
+    "predicted_wall_pixel_coverage_ratio": 0.7851261620185923,
+    "skeleton_coverage_ratio": 0.8318166498146276,
+    "candidate_pixels_outside_predicted_wall": 3146
+  },
+  "ground_truth_or_annotation_read": false,
+  "sample_333_geometry_or_decisions_used": false,
+  "paths": {
+    "candidate_geometry": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-01/candidates/candidate_geometry.json",
+    "candidate_geometry_sha256": "5a33c0379725f30e6eb61b3884b1b36576267902a789b2c4304d403b1bc3a60e"
+  },
+  "geometry_status": "CANDIDATE_UNREVIEWED",
+  "scale_status": "ASSUMED_FOR_PREVIEW",
+  "input_checks": {
+    "PASS": 284,
+    "FAIL": 0,
+    "WARN": 33,
+    "INFO": 0
+  },
+  "failed": [],
+  "building_model": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-01/building_model.json"
+}

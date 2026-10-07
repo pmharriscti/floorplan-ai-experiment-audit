@@ -1,0 +1,102 @@
+{
+  "experiment_id": "bim_bridge_pm_comparison_v0",
+  "run_id": "bim_bridge_pm_comparison_v0_20261006_130747_UTC",
+  "stage": "export",
+  "status": "PASS",
+  "written_utc": "2026-10-06T19:17:51Z",
+  "sample_key": "com-02",
+  "kind": "candidate",
+  "scope": "whole_plan",
+  "revision": "r04",
+  "folder": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-02/export_candidate_preview_whole_plan_r04",
+  "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-02/export_candidate_preview_whole_plan_r04/com-com-02-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r04.ifc",
+  "ifc_windows_path": "E:\\AI_Team\\mitunet\\experiments\\bim_bridge_pm_comparison_v0\\bim_bridge_pm_comparison_v0_20261006_130747_UTC\\samples\\com-02\\export_candidate_preview_whole_plan_r04\\com-com-02-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r04.ifc",
+  "ifc_sha256": "5d64ac97c98ec08f39ca535e4c3e7d1140930da1133226fd0c619fb9a9c6476e",
+  "ifc_size_bytes": 649057,
+  "model_id": "com-com-02-p01",
+  "geometry_status": "CANDIDATE_UNREVIEWED",
+  "scale_status": "ASSUMED_FOR_PREVIEW",
+  "permitted_use": "preview_only_not_for_engineering_or_inspection",
+  "walls": 35,
+  "openings": 18,
+  "bridge_checks": {
+    "technical": "PASS",
+    "by_status": {
+      "PASS": 1017,
+      "WARN": 54
+    },
+    "failed": []
+  },
+  "run_specific_checks": {
+    "passed": 8,
+    "failed": 0,
+    "failed_names": []
+  },
+  "independent_parser": {
+    "status": "PASS",
+    "passed": 143,
+    "failed": 0,
+    "web_ifc_version": "0.0.66",
+    "report": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-02/export_candidate_preview_whole_plan_r04/independent_parser_check.json",
+    "stderr": "",
+    "is_viewer_test": false,
+    "note": "A second IFC engine parsed and tessellated the file. This is not acceptance by any viewer or BIM application."
+  },
+  "plan_contact_pairs": 46,
+  "connection_relationships": {
+    "IfcRelConnectsElements": 0,
+    "IfcRelConnectsPathElements": 0,
+    "IfcRelConnectsWithRealizingElements": 0
+  },
+  "repeat_export_byte_identical": true,
+  "guids_created": 12,
+  "guids_reused": 177,
+  "guids_retired": [
+    "pset:wall:com-com-02-p01:wall_008:AutoAutoCAD_Provenance",
+    "pset:wall:com-com-02-p01:wall_010:AutoAutoCAD_Provenance",
+    "pset:wall:com-com-02-p01:wall_012:AutoAutoCAD_Provenance",
+    "pset:wall:com-com-02-p01:wall_013:AutoAutoCAD_Provenance",
+    "pset:wall:com-com-02-p01:wall_014:AutoAutoCAD_Provenance",
+    "pset:wall:com-com-02-p01:wall_015:AutoAutoCAD_Provenance",
+    "pset:wall:com-com-02-p01:wall_025:AutoAutoCAD_Provenance",
+    "pset:wall:com-com-02-p01:wall_036:AutoAutoCAD_Provenance",
+    "pset:wall:com-com-02-p01:wall_040:AutoAutoCAD_Provenance",
+    "pset:wall:com-com-02-p01:wall_042:AutoAutoCAD_Provenance",
+    "rel:pset:wall:com-com-02-p01:wall_008:AutoAutoCAD_Provenance",
+    "rel:pset:wall:com-com-02-p01:wall_010:AutoAutoCAD_Provenance",
+    "rel:pset:wall:com-com-02-p01:wall_012:AutoAutoCAD_Provenance",
+    "rel:pset:wall:com-com-02-p01:wall_013:AutoAutoCAD_Provenance",
+    "rel:pset:wall:com-com-02-p01:wall_014:AutoAutoCAD_Provenance",
+    "rel:pset:wall:com-com-02-p01:wall_015:AutoAutoCAD_Provenance",
+    "rel:pset:wall:com-com-02-p01:wall_025:AutoAutoCAD_Provenance",
+    "rel:pset:wall:com-com-02-p01:wall_036:AutoAutoCAD_Provenance",
+    "rel:pset:wall:com-com-02-p01:wall_040:AutoAutoCAD_Provenance",
+    "rel:pset:wall:com-com-02-p01:wall_042:AutoAutoCAD_Provenance",
+    "wall:com-com-02-p01:wall_008",
+    "wall:com-com-02-p01:wall_010",
+    "wall:com-com-02-p01:wall_012",
+    "wall:com-com-02-p01:wall_013",
+    "wall:com-com-02-p01:wall_014",
+    "wall:com-com-02-p01:wall_015",
+    "wall:com-com-02-p01:wall_025",
+    "wall:com-com-02-p01:wall_036",
+    "wall:com-com-02-p01:wall_040",
+    "wall:com-com-02-p01:wall_042"
+  ],
+  "guid_map_sha256": "ca129390eff7c94f2b4a332de0d60e2f677ba20ebd749b22388d2ef4ff0f7c70",
+  "metric_export": {
+    "status": "BLOCKED",
+    "blockers": [
+      "Plan scale is ASSUMED_FOR_PREVIEW (arbitrary visualization scale).",
+      "No recorded human review."
+    ]
+  },
+  "viewer_inspection": "NOT_RUN",
+  "reports": {
+    "validation_report": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-02/export_candidate_preview_whole_plan_r04/validation_report.json",
+    "validation_report_md": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-02/export_candidate_preview_whole_plan_r04/validation_report.md",
+    "run_specific_checks": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-02/export_candidate_preview_whole_plan_r04/run_specific_checks.json",
+    "independent_parser": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-02/export_candidate_preview_whole_plan_r04/independent_parser_check.json"
+  },
+  "note": "PASS = the preview file matches its input and passes the technical checks. It is not a metric export, not a review and not viewer acceptance."
+}

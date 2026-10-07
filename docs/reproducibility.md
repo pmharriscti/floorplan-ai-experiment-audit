@@ -34,6 +34,13 @@ One exception: experiment 01 carries a reference snapshot of the baseline model 
 4. The upstream Phase 5 run directory must be mounted. The bridge reads its saved prediction bitmask, manifest and evaluation summary, and refuses to run if the image hash or the documented bit layout differs.
 5. A rerun reproduces the candidate geometry, the preview IFC and the gate outcomes. It cannot produce a human review, a plan scale or a viewer inspection; those need a person.
 
+## Reproducing Experiment 12 (bim_bridge PM comparison)
+
+1. Use the experiment 11 bridge environment and the workspace `/home/pmharris/dev/bim_bridge_pm_comparison_v0` (not a git repository; file hashes in the entry's `provenance.json`).
+2. Inputs are frozen in `results/subset_manifest.json`; commercial images run through `scripts/run_frozen_inference.py` with the inference contract.
+3. Candidates and IFCs: `scripts/prepare_candidates_external.py` (with `--repair --config <repair yaml> --out-name candidates_r04` for the repaired revision) and `scripts/export_external.py`.
+4. Comparison: `scripts/build_pm_comparison.py --labels <draft label bundle> --export-revision r01|r04`.
+
 ## DVC And MLflow Status
 
 Phase 1 recorded DVC targets but did not have DVC installed in the run environment. Phase 2 recorded DVC as available and configured, with full `dvc status` intentionally deferred because it walks large external output trees. DeepLabV3 and the Phase experiments recorded MLflow run IDs; baseline and hybrid MLflow status is `UNKNOWN` in this audit. Phase 5 records an MLflow run ID in the shared `mlflow/mlflow.db` and writes no DVC status. bim_bridge_v0 trains no model and uses neither MLflow nor DVC.

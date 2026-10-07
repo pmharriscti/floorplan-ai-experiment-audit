@@ -1,0 +1,648 @@
+{
+  "verification": "reviewed-preview IFC reopened and compared with the earlier unreviewed preview, the candidate geometry and the applied review record",
+  "written_utc": "2026-10-01T20:35:31Z",
+  "performed_by": {
+    "actor_type": "agent",
+    "script": "/home/pmharris/dev/bim_bridge_v0/scripts/verify_reviewed_export.py"
+  },
+  "is_viewer_inspection": false,
+  "is_human_inspection": false,
+  "says_nothing_about": "the building, real-world dimensions or accuracy",
+  "engine": "IfcOpenShell 0.8.5",
+  "new_ifc": {
+    "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/export_reviewed_preview/cubicasa-high-quality-architectural-333-val-region-01__REVIEWED_PREVIEW_SCALE_ASSUMED_FOR_PREVIEW.ifc",
+    "sha256": "b02d532c745216c5479d372b2fd5c3700fdaf11f6ebc96c0dac398f3c67ef375",
+    "size_bytes": 64870
+  },
+  "earlier_ifc": {
+    "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/export_preview/cubicasa-high-quality-architectural-333-val-region-01__PREVIEW_CANDIDATE_UNREVIEWED.ifc",
+    "sha256": "e4def87979953d853790d3c3f63ddde4d4b39f3a7c7a8df7eecb492713dcd09e"
+  },
+  "review_record": {
+    "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/reviewed/review_record.json",
+    "sha256": "2fc5a9872bbff01f7f9bf00d969adb2f618c3159af0699fdca01ba31a60922cd"
+  },
+  "scale_used_for_expected_values": {
+    "metres_per_candidate_px": 0.027616827718584862,
+    "status": "ASSUMED_FOR_PREVIEW",
+    "note": "Used only to predict how far the edits move the geometry in the file. It is an assumed scale."
+  },
+  "overall": "PASS",
+  "passed": 73,
+  "failed": 0,
+  "by_group": {
+    "authorized_edits": {
+      "PASS": 8,
+      "FAIL": 0
+    },
+    "unchanged_geometry": {
+      "PASS": 3,
+      "FAIL": 0
+    },
+    "identity": {
+      "PASS": 3,
+      "FAIL": 0
+    },
+    "review_properties": {
+      "PASS": 17,
+      "FAIL": 0
+    },
+    "provenance": {
+      "PASS": 28,
+      "FAIL": 0
+    },
+    "opening": {
+      "PASS": 5,
+      "FAIL": 0
+    },
+    "junction_contact_geometry": {
+      "PASS": 3,
+      "FAIL": 0
+    },
+    "explicit_connection_relationships": {
+      "PASS": 1,
+      "FAIL": 0
+    },
+    "status": {
+      "PASS": 3,
+      "FAIL": 0
+    },
+    "preservation": {
+      "PASS": 2,
+      "FAIL": 0
+    }
+  },
+  "junction_contact_geometry": [
+    {
+      "pair": [
+        "wall_002",
+        "wall_003"
+      ],
+      "earlier_ifc": {
+        "overlap_area_m2": 0.0,
+        "overlap_area_px2": 0.0,
+        "gap_m": 1.462542,
+        "gap_px": 52.958,
+        "in_contact": false
+      },
+      "new_ifc": {
+        "overlap_area_m2": 0.0,
+        "overlap_area_px2": 0.0,
+        "gap_m": 1.462542,
+        "gap_px": 52.958,
+        "in_contact": false
+      }
+    },
+    {
+      "pair": [
+        "wall_002",
+        "wall_004"
+      ],
+      "earlier_ifc": {
+        "overlap_area_m2": 0.0,
+        "overlap_area_px2": 0.0,
+        "gap_m": 2.070114,
+        "gap_px": 74.958,
+        "in_contact": false
+      },
+      "new_ifc": {
+        "overlap_area_m2": 0.0,
+        "overlap_area_px2": 0.0,
+        "gap_m": 2.070114,
+        "gap_px": 74.958,
+        "in_contact": false
+      }
+    },
+    {
+      "pair": [
+        "wall_002",
+        "wall_012"
+      ],
+      "earlier_ifc": {
+        "overlap_area_m2": 0.013728,
+        "overlap_area_px2": 18.0,
+        "gap_m": 0.0,
+        "gap_px": 0.0,
+        "in_contact": true
+      },
+      "new_ifc": {
+        "overlap_area_m2": 0.013728,
+        "overlap_area_px2": 18.0,
+        "gap_m": 0.0,
+        "gap_px": 0.0,
+        "in_contact": true
+      }
+    },
+    {
+      "pair": [
+        "wall_003",
+        "wall_004"
+      ],
+      "earlier_ifc": {
+        "overlap_area_m2": 0.0,
+        "overlap_area_px2": 0.0,
+        "gap_m": 0.441871,
+        "gap_px": 16.0,
+        "in_contact": false
+      },
+      "new_ifc": {
+        "overlap_area_m2": 0.0,
+        "overlap_area_px2": 0.0,
+        "gap_m": 0.441871,
+        "gap_px": 16.0,
+        "in_contact": false
+      }
+    },
+    {
+      "pair": [
+        "wall_003",
+        "wall_012"
+      ],
+      "earlier_ifc": {
+        "overlap_area_m2": 0.009152,
+        "overlap_area_px2": 12.0,
+        "gap_m": 0.0,
+        "gap_px": 0.0,
+        "in_contact": true
+      },
+      "new_ifc": {
+        "overlap_area_m2": 0.013728,
+        "overlap_area_px2": 18.0,
+        "gap_m": 0.0,
+        "gap_px": 0.0,
+        "in_contact": true
+      }
+    },
+    {
+      "pair": [
+        "wall_004",
+        "wall_012"
+      ],
+      "earlier_ifc": {
+        "overlap_area_m2": 0.003026,
+        "overlap_area_px2": 3.968,
+        "gap_m": 0.0,
+        "gap_px": 0.0,
+        "in_contact": true
+      },
+      "new_ifc": {
+        "overlap_area_m2": 0.00151,
+        "overlap_area_px2": 1.98,
+        "gap_m": 0.0,
+        "gap_px": 0.0,
+        "in_contact": true
+      }
+    }
+  ],
+  "explicit_connection_relationships": {
+    "IfcRelConnectsPathElements": 0,
+    "IfcRelConnectsElements_including_subtypes": 0,
+    "note": "None was added. Walls that overlap in plan are separate solids with no connection relationship."
+  },
+  "checks": [
+    {
+      "group": "authorized_edits",
+      "name": "wall_012_placement_moved_as_authorized",
+      "status": "PASS",
+      "detail": "axis x 304.5 -> 305.5 at both ends: placement moved by [0.027617, 0.0, 0.0] m; expected [0.027617, 0.0, 0.0] m (0.027617 m per px, assumed scale)"
+    },
+    {
+      "group": "authorized_edits",
+      "name": "wall_012_length",
+      "status": "PASS",
+      "detail": "length 2.249621 -> 2.249621 m; expected change 0.000000"
+    },
+    {
+      "group": "authorized_edits",
+      "name": "wall_012_thickness_height_direction_unchanged",
+      "status": "PASS",
+      "detail": "thickness 0.110467, height 2.7000"
+    },
+    {
+      "group": "authorized_edits",
+      "name": "wall_012_axis_pixels_in_file",
+      "status": "PASS",
+      "detail": "AxisCandidatePixels start [305.5, 241.5] end [305.5, 160.04166666666666]"
+    },
+    {
+      "group": "authorized_edits",
+      "name": "wall_002_placement_moved_as_authorized",
+      "status": "PASS",
+      "detail": "start x 266.0 -> 233.0: placement moved by [-0.911355, 0.0, 0.0] m; expected [-0.911355, 0.0, 0.0] m (0.027617 m per px, assumed scale)"
+    },
+    {
+      "group": "authorized_edits",
+      "name": "wall_002_length",
+      "status": "PASS",
+      "detail": "length 5.689067 -> 6.600422 m; expected change 0.911355"
+    },
+    {
+      "group": "authorized_edits",
+      "name": "wall_002_thickness_height_direction_unchanged",
+      "status": "PASS",
+      "detail": "thickness 0.248551, height 2.7000"
+    },
+    {
+      "group": "authorized_edits",
+      "name": "wall_002_axis_pixels_in_file",
+      "status": "PASS",
+      "detail": "AxisCandidatePixels start [233.0, 160.04166666666666] end [472.0, 160.04166666666666]"
+    },
+    {
+      "group": "unchanged_geometry",
+      "name": "wall_003_identical_to_earlier_ifc",
+      "status": "PASS",
+      "detail": "placement [2.112687, 0.980397, 0.0], size 4.694861 x 0.165701 x 2.7000, net volume 1.831370"
+    },
+    {
+      "group": "unchanged_geometry",
+      "name": "wall_004_identical_to_earlier_ifc",
+      "status": "PASS",
+      "detail": "placement [0.386636, 0.386636, 0.0], size 1.726106 x 0.110467 x 2.7000, net volume 0.514830"
+    },
+    {
+      "group": "unchanged_geometry",
+      "name": "door_opening-c02_identical_to_earlier_ifc",
+      "status": "PASS",
+      "detail": "placement [2.223154, 0.980397, 0.0], size 0.773271 x 0.185701 x 2.1000, net volume 0.301554"
+    },
+    {
+      "group": "identity",
+      "name": "all_globalids_identical_to_earlier_ifc",
+      "status": "PASS",
+      "detail": "28 rooted entities; only in earlier file 0, only in new file 0"
+    },
+    {
+      "group": "identity",
+      "name": "object_globalids_stable",
+      "status": "PASS",
+      "detail": "wall_002 1XkaxwpSjJ8Qnf5B_jRxg1; wall_003 3d2OAZpCHGUAZ91g4AXd7s; wall_004 1b$tabjrHGbPd9xW5BjLOQ; wall_012 11mnaExH9O2vr$qGRs3ceQ; door_opening-c02 1Y$u78JbXJIggJrkmIA5ew"
+    },
+    {
+      "group": "identity",
+      "name": "guid_map_unchanged",
+      "status": "PASS",
+      "detail": "guid_map.json sha256 1c258d27d5c20243a08e4a467ff2118936141b1eaeef2fbd876f2c55cc00046d in both folders"
+    },
+    {
+      "group": "review_properties",
+      "name": "wall_002_review_fields",
+      "status": "PASS",
+      "detail": "ReviewState HUMAN_ACCEPTED_WITH_EDITS, Reviewer Paul Harris, ReviewerRole Prototype image-space geometry reviewer, ReviewedUtc 2026-10-01T20:33:50Z, ReviewRecordSha256 matches the applied record: True"
+    },
+    {
+      "group": "review_properties",
+      "name": "wall_002_review_notes_equal_record",
+      "status": "PASS",
+      "detail": "1106 characters"
+    },
+    {
+      "group": "provenance",
+      "name": "wall_002_candidate_original_kept",
+      "status": "PASS",
+      "detail": "CandidateOriginal equals the candidate's original geometry"
+    },
+    {
+      "group": "provenance",
+      "name": "wall_002_source_references_kept",
+      "status": "PASS",
+      "detail": "SourceReferences equal the candidate's and the earlier file's"
+    },
+    {
+      "group": "provenance",
+      "name": "wall_002_uncertainty_kept",
+      "status": "PASS",
+      "detail": "SemanticScore null, ScaleStatus ASSUMED_FOR_PREVIEW, DimensionalClaimsPermitted False"
+    },
+    {
+      "group": "review_properties",
+      "name": "wall_002_edits",
+      "status": "PASS",
+      "detail": "human edits ['axis_px.start']; automated edits kept 0"
+    },
+    {
+      "group": "provenance",
+      "name": "wall_002_Thickness_origin_unchanged",
+      "status": "PASS",
+      "detail": "ThicknessOrigin derived_from_geometry"
+    },
+    {
+      "group": "provenance",
+      "name": "wall_002_Height_origin_unchanged",
+      "status": "PASS",
+      "detail": "HeightOrigin assumed_for_preview"
+    },
+    {
+      "group": "review_properties",
+      "name": "wall_003_review_fields",
+      "status": "PASS",
+      "detail": "ReviewState HUMAN_ACCEPTED, Reviewer Paul Harris, ReviewerRole Prototype image-space geometry reviewer, ReviewedUtc 2026-10-01T20:33:50Z, ReviewRecordSha256 matches the applied record: True"
+    },
+    {
+      "group": "review_properties",
+      "name": "wall_003_review_notes_equal_record",
+      "status": "PASS",
+      "detail": "1147 characters"
+    },
+    {
+      "group": "provenance",
+      "name": "wall_003_candidate_original_kept",
+      "status": "PASS",
+      "detail": "CandidateOriginal equals the candidate's original geometry"
+    },
+    {
+      "group": "provenance",
+      "name": "wall_003_source_references_kept",
+      "status": "PASS",
+      "detail": "SourceReferences equal the candidate's and the earlier file's"
+    },
+    {
+      "group": "provenance",
+      "name": "wall_003_uncertainty_kept",
+      "status": "PASS",
+      "detail": "SemanticScore null, ScaleStatus ASSUMED_FOR_PREVIEW, DimensionalClaimsPermitted False"
+    },
+    {
+      "group": "review_properties",
+      "name": "wall_003_edits",
+      "status": "PASS",
+      "detail": "human edits []; automated edits kept 0"
+    },
+    {
+      "group": "provenance",
+      "name": "wall_003_Thickness_origin_unchanged",
+      "status": "PASS",
+      "detail": "ThicknessOrigin derived_from_geometry"
+    },
+    {
+      "group": "provenance",
+      "name": "wall_003_Height_origin_unchanged",
+      "status": "PASS",
+      "detail": "HeightOrigin assumed_for_preview"
+    },
+    {
+      "group": "review_properties",
+      "name": "wall_004_review_fields",
+      "status": "PASS",
+      "detail": "ReviewState HUMAN_ACCEPTED, Reviewer Paul Harris, ReviewerRole Prototype image-space geometry reviewer, ReviewedUtc 2026-10-01T20:33:50Z, ReviewRecordSha256 matches the applied record: True"
+    },
+    {
+      "group": "review_properties",
+      "name": "wall_004_review_notes_equal_record",
+      "status": "PASS",
+      "detail": "1433 characters"
+    },
+    {
+      "group": "provenance",
+      "name": "wall_004_candidate_original_kept",
+      "status": "PASS",
+      "detail": "CandidateOriginal equals the candidate's original geometry"
+    },
+    {
+      "group": "provenance",
+      "name": "wall_004_source_references_kept",
+      "status": "PASS",
+      "detail": "SourceReferences equal the candidate's and the earlier file's"
+    },
+    {
+      "group": "provenance",
+      "name": "wall_004_uncertainty_kept",
+      "status": "PASS",
+      "detail": "SemanticScore null, ScaleStatus ASSUMED_FOR_PREVIEW, DimensionalClaimsPermitted False"
+    },
+    {
+      "group": "review_properties",
+      "name": "wall_004_edits",
+      "status": "PASS",
+      "detail": "human edits []; automated edits kept 0"
+    },
+    {
+      "group": "provenance",
+      "name": "wall_004_Thickness_origin_unchanged",
+      "status": "PASS",
+      "detail": "ThicknessOrigin derived_from_geometry"
+    },
+    {
+      "group": "provenance",
+      "name": "wall_004_Height_origin_unchanged",
+      "status": "PASS",
+      "detail": "HeightOrigin assumed_for_preview"
+    },
+    {
+      "group": "review_properties",
+      "name": "wall_012_review_fields",
+      "status": "PASS",
+      "detail": "ReviewState HUMAN_ACCEPTED_WITH_EDITS, Reviewer Paul Harris, ReviewerRole Prototype image-space geometry reviewer, ReviewedUtc 2026-10-01T20:33:50Z, ReviewRecordSha256 matches the applied record: True"
+    },
+    {
+      "group": "review_properties",
+      "name": "wall_012_review_notes_equal_record",
+      "status": "PASS",
+      "detail": "1390 characters"
+    },
+    {
+      "group": "provenance",
+      "name": "wall_012_candidate_original_kept",
+      "status": "PASS",
+      "detail": "CandidateOriginal equals the candidate's original geometry"
+    },
+    {
+      "group": "provenance",
+      "name": "wall_012_source_references_kept",
+      "status": "PASS",
+      "detail": "SourceReferences equal the candidate's and the earlier file's"
+    },
+    {
+      "group": "provenance",
+      "name": "wall_012_uncertainty_kept",
+      "status": "PASS",
+      "detail": "SemanticScore null, ScaleStatus ASSUMED_FOR_PREVIEW, DimensionalClaimsPermitted False"
+    },
+    {
+      "group": "review_properties",
+      "name": "wall_012_edits",
+      "status": "PASS",
+      "detail": "human edits ['axis_px.end', 'axis_px.start']; automated edits kept 1"
+    },
+    {
+      "group": "provenance",
+      "name": "wall_012_Thickness_origin_unchanged",
+      "status": "PASS",
+      "detail": "ThicknessOrigin derived_from_geometry"
+    },
+    {
+      "group": "provenance",
+      "name": "wall_012_Height_origin_unchanged",
+      "status": "PASS",
+      "detail": "HeightOrigin assumed_for_preview"
+    },
+    {
+      "group": "review_properties",
+      "name": "door_opening-c02_review_fields",
+      "status": "PASS",
+      "detail": "ReviewState HUMAN_ACCEPTED, Reviewer Paul Harris, ReviewerRole Prototype image-space geometry reviewer, ReviewedUtc 2026-10-01T20:33:50Z, ReviewRecordSha256 matches the applied record: True"
+    },
+    {
+      "group": "review_properties",
+      "name": "door_opening-c02_review_notes_equal_record",
+      "status": "PASS",
+      "detail": "1371 characters"
+    },
+    {
+      "group": "provenance",
+      "name": "door_opening-c02_candidate_original_kept",
+      "status": "PASS",
+      "detail": "CandidateOriginal equals the candidate's original geometry"
+    },
+    {
+      "group": "provenance",
+      "name": "door_opening-c02_source_references_kept",
+      "status": "PASS",
+      "detail": "SourceReferences equal the candidate's and the earlier file's"
+    },
+    {
+      "group": "provenance",
+      "name": "door_opening-c02_uncertainty_kept",
+      "status": "PASS",
+      "detail": "SemanticScore null, ScaleStatus ASSUMED_FOR_PREVIEW, DimensionalClaimsPermitted False"
+    },
+    {
+      "group": "review_properties",
+      "name": "door_opening-c02_edits",
+      "status": "PASS",
+      "detail": "human edits []; automated edits kept 0"
+    },
+    {
+      "group": "provenance",
+      "name": "door_opening-c02_Width_origin_unchanged",
+      "status": "PASS",
+      "detail": "WidthOrigin derived_from_geometry"
+    },
+    {
+      "group": "provenance",
+      "name": "door_opening-c02_Height_origin_unchanged",
+      "status": "PASS",
+      "detail": "HeightOrigin assumed_for_preview"
+    },
+    {
+      "group": "provenance",
+      "name": "door_opening-c02_BottomElevation_origin_unchanged",
+      "status": "PASS",
+      "detail": "BottomElevationOrigin assumed_for_preview"
+    },
+    {
+      "group": "review_properties",
+      "name": "wall_002_endpoint_edit_before_after_reason",
+      "status": "PASS",
+      "detail": "before {'axis_px.start': [266.0, 160.04166666666666]}, after {'axis_px.start': [233.0, 160.04166666666666]}, reason: I accept extending this selected segment across the previously omitted interval for the preview. The original extraction cause remains unresolved."
+    },
+    {
+      "group": "review_properties",
+      "name": "wall_002_partial_wall_limitation",
+      "status": "PASS",
+      "detail": "PARTIAL WALL. wall_002 represents only part of a longer drawn wall. Its start at x = 233 in letterbox-512 coordinates is an internal segmentation boundary, not a physical wall ending. Upstream wall_001 ends there but is not selected or exported. The drawing and prediction continue to the left. The retained 9 px thickness is an a"
+    },
+    {
+      "group": "provenance",
+      "name": "wall_002_candidate_original_start_is_266",
+      "status": "PASS",
+      "detail": "CandidateOriginal.axis_px.start = [266.0, 160.0417]"
+    },
+    {
+      "group": "provenance",
+      "name": "wall_012_thickness_origin_kept",
+      "status": "PASS",
+      "detail": "Median perpendicular run 4.0 px on the predicted structural_wall mask; the vectorizer value 40.0 px was replaced by an automated rule. Converted at 0.027617 m per letterbox_512 px (scale status ASSUMED_FOR_PREVIEW)."
+    },
+    {
+      "group": "opening",
+      "name": "one_void_relationship_to_wall_003",
+      "status": "PASS",
+      "detail": "IfcRelVoidsElement 32BTyALjHPUuz2Nji4uRS$: door_opening-c02 voids wall_003"
+    },
+    {
+      "group": "opening",
+      "name": "void_removes_expected_volume_from_wall_003",
+      "status": "PASS",
+      "detail": "gross 2.100447 - net 1.831370 = 0.269077 m3; opening width x wall thickness x opening height = 0.269077 m3"
+    },
+    {
+      "group": "opening",
+      "name": "void_passes_through_full_wall_thickness",
+      "status": "PASS",
+      "detail": "opening body depth 0.1857 > wall thickness 0.1657; it extends past both wall faces"
+    },
+    {
+      "group": "opening",
+      "name": "void_inside_wall_length_and_height",
+      "status": "PASS",
+      "detail": "opening x 2.2232..2.9964 within wall x 2.1127..6.8075"
+    },
+    {
+      "group": "opening",
+      "name": "other_walls_have_no_void",
+      "status": "PASS",
+      "detail": "wall_002, wall_004 and wall_012: gross volume equals net volume"
+    },
+    {
+      "group": "junction_contact_geometry",
+      "name": "wall_002_wall_012_footprints_overlap",
+      "status": "PASS",
+      "detail": "plan footprints overlap 18.0 px2 (0.013728 m2 at the assumed scale); earlier file 18.0 px2"
+    },
+    {
+      "group": "junction_contact_geometry",
+      "name": "wall_003_wall_012_footprints_overlap",
+      "status": "PASS",
+      "detail": "plan footprints overlap 18.0 px2 (0.013728 m2 at the assumed scale); earlier file 12.0 px2"
+    },
+    {
+      "group": "junction_contact_geometry",
+      "name": "wall_004_wall_012_footprints_overlap",
+      "status": "PASS",
+      "detail": "plan footprints overlap 1.98 px2 (0.00151 m2 at the assumed scale); earlier file 3.968 px2"
+    },
+    {
+      "group": "explicit_connection_relationships",
+      "name": "none_present_none_added",
+      "status": "PASS",
+      "detail": "{\"IfcRelConnectsPathElements\": 0, \"IfcRelConnectsElements_including_subtypes\": 0, \"note\": \"None was added. Walls that overlap in plan are separate solids with no connection relationship.\"}"
+    },
+    {
+      "group": "status",
+      "name": "scale_still_assumed",
+      "status": "PASS",
+      "detail": "ScaleStatus ASSUMED_FOR_PREVIEW, DimensionalClaimsPermitted False, ScaleEvidenceHumanConfirmed False"
+    },
+    {
+      "group": "status",
+      "name": "geometry_status_and_use",
+      "status": "PASS",
+      "detail": "GeometryStatus HUMAN_REVIEWED, PermittedUse reviewed_geometry_preview_dimensions_unverified"
+    },
+    {
+      "group": "status",
+      "name": "object_counts",
+      "status": "PASS",
+      "detail": "4 IfcWall, 1 IfcOpeningElement, 0 IfcDoor"
+    },
+    {
+      "group": "preservation",
+      "name": "earlier_ifc_unchanged",
+      "status": "PASS",
+      "detail": "cubicasa-high-quality-architectural-333-val-region-01__PREVIEW_CANDIDATE_UNREVIEWED.ifc sha256 e4def87979953d853790d3c3f63ddde4d4b39f3a7c7a8df7eecb492713dcd09e"
+    },
+    {
+      "group": "preservation",
+      "name": "candidate_geometry_unchanged",
+      "status": "PASS",
+      "detail": "candidate_geometry.json sha256 fcfd4a7061ed1d7fafc68a4985ca461fb15cba1812e933f6ec394c96dcfa7780"
+    }
+  ],
+  "supersedes": {
+    "files": [
+      "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/export_reviewed_preview/review_verification.json"
+    ],
+    "reason": "The first verification computed wall footprints from the wrong origin (the wall start point taken as the footprint centre), so its junction-contact rows are wrong. Its other checks were unaffected. This file computes footprints from the tessellated bodies."
+  }
+}

@@ -1,0 +1,4349 @@
+{
+  "experiment_id": "bim_bridge_pm_comparison_v0",
+  "run_id": "bim_bridge_pm_comparison_v0_20261006_130747_UTC",
+  "stage": "prepare_candidates",
+  "status": "PASS",
+  "written_utc": "2026-10-06T19:06:16Z",
+  "sample_key": "com-02",
+  "candidates_folder": "candidates_r02",
+  "repair": [
+    {
+      "rule": "R2_extend",
+      "wall": "wall_001",
+      "end": "end",
+      "extension_px": 15
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_001",
+      "end": "start",
+      "extension_px": 13
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_002",
+      "end": "end",
+      "extension_px": 3
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_003",
+      "end": "end",
+      "extension_px": 2
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_003",
+      "end": "start",
+      "extension_px": 3
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_004",
+      "end": "end",
+      "extension_px": 2
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_004",
+      "end": "start",
+      "extension_px": 2
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_005",
+      "end": "end",
+      "extension_px": 2
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_005",
+      "end": "start",
+      "extension_px": 8
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_006",
+      "end": "end",
+      "extension_px": 5
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_006",
+      "end": "start",
+      "extension_px": 2
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_007",
+      "end": "end",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_007",
+      "end": "start",
+      "extension_px": 3
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_008",
+      "end": "end",
+      "extension_px": 5
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_008",
+      "end": "start",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_009",
+      "end": "end",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_009",
+      "end": "start",
+      "extension_px": 3
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_010",
+      "end": "end",
+      "extension_px": 21
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_010",
+      "end": "start",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_011",
+      "end": "end",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_011",
+      "end": "start",
+      "extension_px": 3
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_012",
+      "end": "end",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_012",
+      "end": "start",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_013",
+      "end": "end",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_013",
+      "end": "start",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_014",
+      "end": "end",
+      "extension_px": 3
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_014",
+      "end": "start",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_015",
+      "end": "end",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_015",
+      "end": "start",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_016",
+      "end": "end",
+      "extension_px": 15
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_016",
+      "end": "start",
+      "extension_px": 3
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_017",
+      "end": "end",
+      "extension_px": 24
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_017",
+      "end": "start",
+      "extension_px": 2
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_018",
+      "end": "end",
+      "extension_px": 15
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_018",
+      "end": "start",
+      "extension_px": 2
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_019",
+      "end": "end",
+      "extension_px": 20
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_019",
+      "end": "start",
+      "extension_px": 4
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_020",
+      "end": "end",
+      "extension_px": 20
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_020",
+      "end": "start",
+      "extension_px": 3
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_021",
+      "end": "end",
+      "extension_px": 2
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_021",
+      "end": "start",
+      "extension_px": 4
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_022",
+      "end": "end",
+      "extension_px": 29
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_022",
+      "end": "start",
+      "extension_px": 2
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_023",
+      "end": "end",
+      "extension_px": 3
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_023",
+      "end": "start",
+      "extension_px": 27
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_024",
+      "end": "end",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_024",
+      "end": "start",
+      "extension_px": 9
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_025",
+      "end": "end",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_025",
+      "end": "start",
+      "extension_px": 11
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_026",
+      "end": "end",
+      "extension_px": 2
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_026",
+      "end": "start",
+      "extension_px": 2
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_027",
+      "end": "end",
+      "extension_px": 3
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_027",
+      "end": "start",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_028",
+      "end": "end",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_028",
+      "end": "start",
+      "extension_px": 3
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_029",
+      "end": "end",
+      "extension_px": 4
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_030",
+      "end": "end",
+      "extension_px": 2
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_030",
+      "end": "start",
+      "extension_px": 12
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_031",
+      "end": "end",
+      "extension_px": 35
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_031",
+      "end": "start",
+      "extension_px": 4
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_032",
+      "end": "end",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_032",
+      "end": "start",
+      "extension_px": 3
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_033",
+      "end": "end",
+      "extension_px": 3
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_033",
+      "end": "start",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_034",
+      "end": "end",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_034",
+      "end": "start",
+      "extension_px": 4
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_035",
+      "end": "end",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_035",
+      "end": "start",
+      "extension_px": 3
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_036",
+      "end": "end",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_036",
+      "end": "start",
+      "extension_px": 3
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_037",
+      "end": "end",
+      "extension_px": 34
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_037",
+      "end": "start",
+      "extension_px": 4
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_038",
+      "end": "start",
+      "extension_px": 3
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_039",
+      "end": "end",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_039",
+      "end": "start",
+      "extension_px": 3
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_040",
+      "end": "end",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_040",
+      "end": "start",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_041",
+      "end": "end",
+      "extension_px": 35
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_041",
+      "end": "start",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_042",
+      "end": "end",
+      "extension_px": 4
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_042",
+      "end": "start",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_043",
+      "end": "end",
+      "extension_px": 37
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_043",
+      "end": "start",
+      "extension_px": 3
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_044",
+      "end": "end",
+      "extension_px": 3
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_044",
+      "end": "start",
+      "extension_px": 2
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_045",
+      "end": "end",
+      "extension_px": 4
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_045",
+      "end": "start",
+      "extension_px": 6
+    },
+    {
+      "rule": "R1_merge",
+      "kept": "wall_011",
+      "merged": "wall_015",
+      "gap_px": 58.0,
+      "gap_support": 1.0,
+      "axis_offset_px": 2.0
+    },
+    {
+      "rule": "R1_merge",
+      "kept": "wall_012",
+      "merged": "wall_013",
+      "gap_px": 7.0,
+      "gap_support": 1.0,
+      "axis_offset_px": 0.5
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_007",
+      "end": "end",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_008",
+      "end": "start",
+      "extension_px": 22
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_009",
+      "end": "end",
+      "extension_px": 22
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_010",
+      "end": "start",
+      "extension_px": 26
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_011",
+      "end": "end",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_012",
+      "end": "end",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_012",
+      "end": "start",
+      "extension_px": 4
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_014",
+      "end": "start",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_024",
+      "end": "end",
+      "extension_px": 9
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_025",
+      "end": "end",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_027",
+      "end": "start",
+      "extension_px": 6
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_028",
+      "end": "end",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_032",
+      "end": "end",
+      "extension_px": 5
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_033",
+      "end": "start",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_034",
+      "end": "end",
+      "extension_px": 20
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_035",
+      "end": "end",
+      "extension_px": 16
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_036",
+      "end": "end",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_039",
+      "end": "end",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_040",
+      "end": "end",
+      "extension_px": 5
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_040",
+      "end": "start",
+      "extension_px": 3
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_041",
+      "end": "start",
+      "extension_px": 37
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_042",
+      "end": "start",
+      "extension_px": 21
+    },
+    {
+      "rule": "R1_merge",
+      "kept": "wall_011",
+      "merged": "wall_014",
+      "gap_px": 3.0,
+      "gap_support": 1.0,
+      "axis_offset_px": 0.186
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_007",
+      "end": "end",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_012",
+      "end": "end",
+      "extension_px": 13
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_025",
+      "end": "end",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_028",
+      "end": "end",
+      "extension_px": 4
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_033",
+      "end": "start",
+      "extension_px": 7
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_036",
+      "end": "end",
+      "extension_px": 7
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_039",
+      "end": "end",
+      "extension_px": 7
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_007",
+      "end": "end",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_025",
+      "end": "end",
+      "extension_px": 40
+    }
+  ],
+  "merged_walls": [
+    "wall_015",
+    "wall_013",
+    "wall_014"
+  ],
+  "model_id": "com-com-02-p01",
+  "outcome": "WALLS_AND_HOSTED_OPENINGS",
+  "scope": "WHOLE_PLAN_ATTEMPT",
+  "upstream_walls": 45,
+  "candidate_walls": 41,
+  "excluded_walls": [
+    {
+      "id": "wall_007",
+      "reasons": [
+        "after repair, automated diagnostic FAIL: thickness_matches_predicted_mask (Thickness in use 5.5 px; predicted-mask median 3.0 px; vectorizer proposed 5.5 px.)"
+      ]
+    }
+  ],
+  "apertures": 18,
+  "openings_not_exported": 26,
+  "automated_edits": [
+    {
+      "object_id": "wall:com-com-02-p01:wall_001",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            23.0,
+            84.0
+          ],
+          "end": [
+            488.0,
+            84.0
+          ]
+        },
+        "thickness_px": 7.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            23.0,
+            84.0
+          ],
+          "end": [
+            503.0,
+            84.0
+          ]
+        },
+        "thickness_px": 7.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_001",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            23.0,
+            84.0
+          ],
+          "end": [
+            503.0,
+            84.0
+          ]
+        },
+        "thickness_px": 7.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            10.0,
+            84.0
+          ],
+          "end": [
+            503.0,
+            84.0
+          ]
+        },
+        "thickness_px": 7.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_002",
+      "field": "thickness",
+      "before": {
+        "thickness_px": 40.0
+      },
+      "after": {
+        "thickness_px": 3.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_002",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            368.0,
+            157.0
+          ],
+          "end": [
+            441.5,
+            157.0
+          ]
+        },
+        "thickness_px": 3.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            368.0,
+            157.0
+          ],
+          "end": [
+            444.5,
+            157.0
+          ]
+        },
+        "thickness_px": 3.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_003",
+      "field": "thickness",
+      "before": {
+        "thickness_px": 14.5
+      },
+      "after": {
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_003",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            102.0,
+            168.0
+          ],
+          "end": [
+            146.0,
+            168.0
+          ]
+        },
+        "thickness_px": 4.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            102.0,
+            168.0
+          ],
+          "end": [
+            148.0,
+            168.0
+          ]
+        },
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_003",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            102.0,
+            168.0
+          ],
+          "end": [
+            148.0,
+            168.0
+          ]
+        },
+        "thickness_px": 4.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            99.0,
+            168.0
+          ],
+          "end": [
+            148.0,
+            168.0
+          ]
+        },
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_004",
+      "field": "thickness",
+      "before": {
+        "thickness_px": 21.0
+      },
+      "after": {
+        "thickness_px": 3.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_004",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            176.0,
+            168.0
+          ],
+          "end": [
+            220.0,
+            168.0
+          ]
+        },
+        "thickness_px": 3.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            176.0,
+            168.0
+          ],
+          "end": [
+            222.0,
+            168.0
+          ]
+        },
+        "thickness_px": 3.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_004",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            176.0,
+            168.0
+          ],
+          "end": [
+            222.0,
+            168.0
+          ]
+        },
+        "thickness_px": 3.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            174.0,
+            168.0
+          ],
+          "end": [
+            222.0,
+            168.0
+          ]
+        },
+        "thickness_px": 3.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_005",
+      "field": "thickness",
+      "before": {
+        "thickness_px": 6.0
+      },
+      "after": {
+        "thickness_px": 3.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_005",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            256.0,
+            168.0
+          ],
+          "end": [
+            295.0,
+            168.0
+          ]
+        },
+        "thickness_px": 3.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            256.0,
+            168.0
+          ],
+          "end": [
+            297.0,
+            168.0
+          ]
+        },
+        "thickness_px": 3.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_005",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            256.0,
+            168.0
+          ],
+          "end": [
+            297.0,
+            168.0
+          ]
+        },
+        "thickness_px": 3.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            248.0,
+            168.0
+          ],
+          "end": [
+            297.0,
+            168.0
+          ]
+        },
+        "thickness_px": 3.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_006",
+      "field": "thickness",
+      "before": {
+        "thickness_px": 21.0
+      },
+      "after": {
+        "thickness_px": 3.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_006",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            324.0,
+            168.0
+          ],
+          "end": [
+            367.5,
+            168.0
+          ]
+        },
+        "thickness_px": 3.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            324.0,
+            168.0
+          ],
+          "end": [
+            372.5,
+            168.0
+          ]
+        },
+        "thickness_px": 3.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_006",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            324.0,
+            168.0
+          ],
+          "end": [
+            372.5,
+            168.0
+          ]
+        },
+        "thickness_px": 3.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            322.0,
+            168.0
+          ],
+          "end": [
+            372.5,
+            168.0
+          ]
+        },
+        "thickness_px": 3.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_008",
+      "field": "thickness",
+      "before": {
+        "thickness_px": 10.0
+      },
+      "after": {
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_008",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            72.0,
+            199.5
+          ],
+          "end": [
+            367.5,
+            199.5
+          ]
+        },
+        "thickness_px": 4.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            72.0,
+            199.5
+          ],
+          "end": [
+            372.5,
+            199.5
+          ]
+        },
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_008",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            72.0,
+            199.5
+          ],
+          "end": [
+            372.5,
+            199.5
+          ]
+        },
+        "thickness_px": 4.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            32.0,
+            199.5
+          ],
+          "end": [
+            372.5,
+            199.5
+          ]
+        },
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_008",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            32.0,
+            199.5
+          ],
+          "end": [
+            372.5,
+            199.5
+          ]
+        },
+        "thickness_px": 4.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            10.0,
+            199.5
+          ],
+          "end": [
+            372.5,
+            199.5
+          ]
+        },
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_009",
+      "field": "thickness",
+      "before": {
+        "thickness_px": 7.0
+      },
+      "after": {
+        "thickness_px": 3.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_009",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            394.0,
+            201.0
+          ],
+          "end": [
+            441.5,
+            200.0
+          ]
+        },
+        "thickness_px": 3.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            394.0,
+            201.0
+          ],
+          "end": [
+            481.4911386795545,
+            199.15808129095674
+          ]
+        },
+        "thickness_px": 3.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_009",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            394.0,
+            201.0
+          ],
+          "end": [
+            481.4911386795545,
+            199.15808129095674
+          ]
+        },
+        "thickness_px": 3.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            391.0006645990334,
+            201.06314390317826
+          ],
+          "end": [
+            481.4911386795545,
+            199.15808129095674
+          ]
+        },
+        "thickness_px": 3.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_009",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            391.0006645990334,
+            201.06314390317826
+          ],
+          "end": [
+            481.4911386795545,
+            199.15808129095674
+          ]
+        },
+        "thickness_px": 3.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            391.0006645990334,
+            201.06314390317826
+          ],
+          "end": [
+            503.4862649533095,
+            198.69502600098295
+          ]
+        },
+        "thickness_px": 3.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_010",
+      "field": "thickness",
+      "before": {
+        "thickness_px": 8.5
+      },
+      "after": {
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_010",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            457.0,
+            200.0
+          ],
+          "end": [
+            482.0,
+            200.0
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            457.0,
+            200.0
+          ],
+          "end": [
+            503.0,
+            200.0
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_010",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            457.0,
+            200.0
+          ],
+          "end": [
+            503.0,
+            200.0
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            417.0,
+            200.0
+          ],
+          "end": [
+            503.0,
+            200.0
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_010",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            417.0,
+            200.0
+          ],
+          "end": [
+            503.0,
+            200.0
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            391.0,
+            200.0
+          ],
+          "end": [
+            503.0,
+            200.0
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_011",
+      "field": "thickness",
+      "before": {
+        "thickness_px": 8.5
+      },
+      "after": {
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_011",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            98.625,
+            238.0
+          ],
+          "end": [
+            129.0,
+            238.0
+          ]
+        },
+        "thickness_px": 4.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            98.625,
+            238.0
+          ],
+          "end": [
+            169.0,
+            238.0
+          ]
+        },
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_011",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            98.625,
+            238.0
+          ],
+          "end": [
+            169.0,
+            238.0
+          ]
+        },
+        "thickness_px": 4.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            95.625,
+            238.0
+          ],
+          "end": [
+            169.0,
+            238.0
+          ]
+        },
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_011",
+      "field": "repair:R1_merge",
+      "before": {
+        "kept": {
+          "id": "wall_011",
+          "axis_px": {
+            "start": [
+              95.625,
+              238.0
+            ],
+            "end": [
+              169.0,
+              238.0
+            ]
+          },
+          "thickness_px": 4.0,
+          "thickness_source": "predicted-mask measurement (automated rule replaced the vectorizer value)",
+          "thickness_basis": "Median perpendicular run 4.0 px on the predicted structural_wall mask; the vectorizer value 8.5 px was replaced by an automated rule."
+        },
+        "merged": {
+          "id": "wall_015",
+          "axis_px": {
+            "start": [
+              227.0,
+              240.0
+            ],
+            "end": [
+              334.0,
+              240.0
+            ]
+          },
+          "thickness_px": 3.0,
+          "thickness_source": "predicted-mask measurement (automated rule replaced the vectorizer value)",
+          "thickness_basis": "Median perpendicular run 3.0 px on the predicted structural_wall mask; the vectorizer value 9.5 px was replaced by an automated rule."
+        }
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            95.625,
+            239.18641718641717
+          ],
+          "end": [
+            334.0,
+            239.18641718641717
+          ]
+        },
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_011",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            95.625,
+            239.18641718641717
+          ],
+          "end": [
+            334.0,
+            239.18641718641717
+          ]
+        },
+        "thickness_px": 4.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            95.625,
+            239.18641718641717
+          ],
+          "end": [
+            374.0,
+            239.18641718641717
+          ]
+        },
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_011",
+      "field": "repair:R1_merge",
+      "before": {
+        "kept": {
+          "id": "wall_011",
+          "axis_px": {
+            "start": [
+              95.625,
+              239.18641718641717
+            ],
+            "end": [
+              374.0,
+              239.18641718641717
+            ]
+          },
+          "thickness_px": 4.0,
+          "thickness_source": "predicted-mask measurement (automated rule replaced the vectorizer value)",
+          "thickness_basis": "Median perpendicular run 4.0 px on the predicted structural_wall mask; the vectorizer value 8.5 px was replaced by an automated rule."
+        },
+        "merged": {
+          "id": "wall_014",
+          "axis_px": {
+            "start": [
+              377.0,
+              239.0
+            ],
+            "end": [
+              502.75,
+              239.0
+            ]
+          },
+          "thickness_px": 3.0,
+          "thickness_source": "predicted-mask measurement (automated rule replaced the vectorizer value)",
+          "thickness_basis": "Median perpendicular run 3.0 px on the predicted structural_wall mask; the vectorizer value 13.5 px was replaced by an automated rule."
+        }
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            95.625,
+            239.12841047762174
+          ],
+          "end": [
+            502.75,
+            239.12841047762174
+          ]
+        },
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_012",
+      "field": "thickness",
+      "before": {
+        "thickness_px": 10.5
+      },
+      "after": {
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_012",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            140.0,
+            238.0
+          ],
+          "end": [
+            244.0,
+            238.0
+          ]
+        },
+        "thickness_px": 4.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            140.0,
+            238.0
+          ],
+          "end": [
+            284.0,
+            238.0
+          ]
+        },
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_012",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            140.0,
+            238.0
+          ],
+          "end": [
+            284.0,
+            238.0
+          ]
+        },
+        "thickness_px": 4.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            100.0,
+            238.0
+          ],
+          "end": [
+            284.0,
+            238.0
+          ]
+        },
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_012",
+      "field": "repair:R1_merge",
+      "before": {
+        "kept": {
+          "id": "wall_012",
+          "axis_px": {
+            "start": [
+              100.0,
+              238.0
+            ],
+            "end": [
+              284.0,
+              238.0
+            ]
+          },
+          "thickness_px": 4.0,
+          "thickness_source": "predicted-mask measurement (automated rule replaced the vectorizer value)",
+          "thickness_basis": "Median perpendicular run 4.0 px on the predicted structural_wall mask; the vectorizer value 10.5 px was replaced by an automated rule."
+        },
+        "merged": {
+          "id": "wall_013",
+          "axis_px": {
+            "start": [
+              291.0,
+              238.5
+            ],
+            "end": [
+              450.0,
+              238.5
+            ]
+          },
+          "thickness_px": 4.0,
+          "thickness_source": "predicted-mask measurement (automated rule replaced the vectorizer value)",
+          "thickness_basis": "Median perpendicular run 4.0 px on the predicted structural_wall mask; the vectorizer value 9.0 px was replaced by an automated rule."
+        }
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            100.0,
+            238.231778425656
+          ],
+          "end": [
+            450.0,
+            238.231778425656
+          ]
+        },
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_012",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            100.0,
+            238.231778425656
+          ],
+          "end": [
+            450.0,
+            238.231778425656
+          ]
+        },
+        "thickness_px": 4.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            100.0,
+            238.231778425656
+          ],
+          "end": [
+            490.0,
+            238.231778425656
+          ]
+        },
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_012",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            100.0,
+            238.231778425656
+          ],
+          "end": [
+            490.0,
+            238.231778425656
+          ]
+        },
+        "thickness_px": 4.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            96.0,
+            238.231778425656
+          ],
+          "end": [
+            490.0,
+            238.231778425656
+          ]
+        },
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_012",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            96.0,
+            238.231778425656
+          ],
+          "end": [
+            490.0,
+            238.231778425656
+          ]
+        },
+        "thickness_px": 4.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            96.0,
+            238.231778425656
+          ],
+          "end": [
+            503.0,
+            238.231778425656
+          ]
+        },
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_016",
+      "field": "thickness",
+      "before": {
+        "thickness_px": 7.5
+      },
+      "after": {
+        "thickness_px": 3.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_016",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            128.0,
+            272.0
+          ],
+          "end": [
+            157.0,
+            272.0
+          ]
+        },
+        "thickness_px": 3.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            128.0,
+            272.0
+          ],
+          "end": [
+            172.0,
+            272.0
+          ]
+        },
+        "thickness_px": 3.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_016",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            128.0,
+            272.0
+          ],
+          "end": [
+            172.0,
+            272.0
+          ]
+        },
+        "thickness_px": 3.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            125.0,
+            272.0
+          ],
+          "end": [
+            172.0,
+            272.0
+          ]
+        },
+        "thickness_px": 3.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_017",
+      "field": "thickness",
+      "before": {
+        "thickness_px": 7.0
+      },
+      "after": {
+        "thickness_px": 3.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_017",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            268.0,
+            272.0
+          ],
+          "end": [
+            296.0,
+            272.0
+          ]
+        },
+        "thickness_px": 3.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            268.0,
+            272.0
+          ],
+          "end": [
+            320.0,
+            272.0
+          ]
+        },
+        "thickness_px": 3.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_017",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            268.0,
+            272.0
+          ],
+          "end": [
+            320.0,
+            272.0
+          ]
+        },
+        "thickness_px": 3.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            266.0,
+            272.0
+          ],
+          "end": [
+            320.0,
+            272.0
+          ]
+        },
+        "thickness_px": 3.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_018",
+      "field": "thickness",
+      "before": {
+        "thickness_px": 9.5
+      },
+      "after": {
+        "thickness_px": 3.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_018",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            337.0,
+            272.0
+          ],
+          "end": [
+            368.0,
+            272.0
+          ]
+        },
+        "thickness_px": 3.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            337.0,
+            272.0
+          ],
+          "end": [
+            383.0,
+            272.0
+          ]
+        },
+        "thickness_px": 3.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_018",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            337.0,
+            272.0
+          ],
+          "end": [
+            383.0,
+            272.0
+          ]
+        },
+        "thickness_px": 3.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            335.0,
+            272.0
+          ],
+          "end": [
+            383.0,
+            272.0
+          ]
+        },
+        "thickness_px": 3.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_019",
+      "field": "thickness",
+      "before": {
+        "thickness_px": 6.5
+      },
+      "after": {
+        "thickness_px": 3.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_019",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            391.0,
+            272.0
+          ],
+          "end": [
+            415.0,
+            272.0
+          ]
+        },
+        "thickness_px": 3.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            391.0,
+            272.0
+          ],
+          "end": [
+            435.0,
+            272.0
+          ]
+        },
+        "thickness_px": 3.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_019",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            391.0,
+            272.0
+          ],
+          "end": [
+            435.0,
+            272.0
+          ]
+        },
+        "thickness_px": 3.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            387.0,
+            272.0
+          ],
+          "end": [
+            435.0,
+            272.0
+          ]
+        },
+        "thickness_px": 3.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_020",
+      "field": "thickness",
+      "before": {
+        "thickness_px": 6.5
+      },
+      "after": {
+        "thickness_px": 3.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_020",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            459.0,
+            272.0
+          ],
+          "end": [
+            483.0,
+            272.0
+          ]
+        },
+        "thickness_px": 3.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            459.0,
+            272.0
+          ],
+          "end": [
+            503.0,
+            272.0
+          ]
+        },
+        "thickness_px": 3.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_020",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            459.0,
+            272.0
+          ],
+          "end": [
+            503.0,
+            272.0
+          ]
+        },
+        "thickness_px": 3.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            456.0,
+            272.0
+          ],
+          "end": [
+            503.0,
+            272.0
+          ]
+        },
+        "thickness_px": 3.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_021",
+      "field": "thickness",
+      "before": {
+        "thickness_px": 40.0
+      },
+      "after": {
+        "thickness_px": 6.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_021",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            12.666666666666666,
+            289.0
+          ],
+          "end": [
+            98.625,
+            289.0
+          ]
+        },
+        "thickness_px": 6.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            12.666666666666666,
+            289.0
+          ],
+          "end": [
+            100.625,
+            289.0
+          ]
+        },
+        "thickness_px": 6.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_021",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            12.666666666666666,
+            289.0
+          ],
+          "end": [
+            100.625,
+            289.0
+          ]
+        },
+        "thickness_px": 6.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            8.666666666666666,
+            289.0
+          ],
+          "end": [
+            100.625,
+            289.0
+          ]
+        },
+        "thickness_px": 6.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_022",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            12.0,
+            332.0
+          ],
+          "end": [
+            71.0,
+            332.0
+          ]
+        },
+        "thickness_px": 6.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            12.0,
+            332.0
+          ],
+          "end": [
+            100.0,
+            332.0
+          ]
+        },
+        "thickness_px": 6.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_022",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            12.0,
+            332.0
+          ],
+          "end": [
+            100.0,
+            332.0
+          ]
+        },
+        "thickness_px": 6.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            10.0,
+            332.0
+          ],
+          "end": [
+            100.0,
+            332.0
+          ]
+        },
+        "thickness_px": 6.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_023",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            37.0,
+            377.125
+          ],
+          "end": [
+            499.75,
+            377.125
+          ]
+        },
+        "thickness_px": 8.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            37.0,
+            377.125
+          ],
+          "end": [
+            502.75,
+            377.125
+          ]
+        },
+        "thickness_px": 8.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_023",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            37.0,
+            377.125
+          ],
+          "end": [
+            502.75,
+            377.125
+          ]
+        },
+        "thickness_px": 8.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            10.0,
+            377.125
+          ],
+          "end": [
+            502.75,
+            377.125
+          ]
+        },
+        "thickness_px": 8.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_024",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            12.666666666666666,
+            90.0
+          ],
+          "end": [
+            12.0,
+            332.0
+          ]
+        },
+        "thickness_px": 7.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            12.666666666666666,
+            90.0
+          ],
+          "end": [
+            11.889807580660893,
+            371.99984822009606
+          ]
+        },
+        "thickness_px": 7.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_024",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            12.666666666666666,
+            90.0
+          ],
+          "end": [
+            11.889807580660893,
+            371.99984822009606
+          ]
+        },
+        "thickness_px": 7.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            12.691459961017966,
+            81.0000341504784
+          ],
+          "end": [
+            11.889807580660893,
+            371.99984822009606
+          ]
+        },
+        "thickness_px": 7.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_024",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            12.691459961017966,
+            81.0000341504784
+          ],
+          "end": [
+            11.889807580660893,
+            371.99984822009606
+          ]
+        },
+        "thickness_px": 7.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            12.691459961017966,
+            81.0000341504784
+          ],
+          "end": [
+            11.865014286309593,
+            380.9998140696177
+          ]
+        },
+        "thickness_px": 7.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_025",
+      "field": "thickness",
+      "before": {
+        "thickness_px": 10.0
+      },
+      "after": {
+        "thickness_px": 6.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_025",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            12.0,
+            370.0
+          ],
+          "end": [
+            12.0,
+            332.0
+          ]
+        },
+        "thickness_px": 6.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            12.0,
+            370.0
+          ],
+          "end": [
+            12.0,
+            292.0
+          ]
+        },
+        "thickness_px": 6.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_025",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            12.0,
+            370.0
+          ],
+          "end": [
+            12.0,
+            292.0
+          ]
+        },
+        "thickness_px": 6.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            12.0,
+            381.0
+          ],
+          "end": [
+            12.0,
+            292.0
+          ]
+        },
+        "thickness_px": 6.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_025",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            12.0,
+            381.0
+          ],
+          "end": [
+            12.0,
+            292.0
+          ]
+        },
+        "thickness_px": 6.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            12.0,
+            381.0
+          ],
+          "end": [
+            12.0,
+            252.0
+          ]
+        },
+        "thickness_px": 6.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_025",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            12.0,
+            381.0
+          ],
+          "end": [
+            12.0,
+            252.0
+          ]
+        },
+        "thickness_px": 6.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            12.0,
+            381.0
+          ],
+          "end": [
+            12.0,
+            212.0
+          ]
+        },
+        "thickness_px": 6.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_025",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            12.0,
+            381.0
+          ],
+          "end": [
+            12.0,
+            212.0
+          ]
+        },
+        "thickness_px": 6.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            12.0,
+            381.0
+          ],
+          "end": [
+            12.0,
+            172.0
+          ]
+        },
+        "thickness_px": 6.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_026",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            56.0,
+            332.0
+          ],
+          "end": [
+            56.0,
+            289.0
+          ]
+        },
+        "thickness_px": 7.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            56.0,
+            332.0
+          ],
+          "end": [
+            56.0,
+            287.0
+          ]
+        },
+        "thickness_px": 7.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_026",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            56.0,
+            332.0
+          ],
+          "end": [
+            56.0,
+            287.0
+          ]
+        },
+        "thickness_px": 7.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            56.0,
+            334.0
+          ],
+          "end": [
+            56.0,
+            287.0
+          ]
+        },
+        "thickness_px": 7.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_027",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            69.0,
+            156.0
+          ],
+          "end": [
+            69.0,
+            84.0
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            69.0,
+            156.0
+          ],
+          "end": [
+            69.0,
+            81.0
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_027",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            69.0,
+            156.0
+          ],
+          "end": [
+            69.0,
+            81.0
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            69.0,
+            196.0
+          ],
+          "end": [
+            69.0,
+            81.0
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_027",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            69.0,
+            196.0
+          ],
+          "end": [
+            69.0,
+            81.0
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            69.0,
+            202.0
+          ],
+          "end": [
+            69.0,
+            81.0
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_028",
+      "field": "thickness",
+      "before": {
+        "thickness_px": 7.0
+      },
+      "after": {
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_028",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            72.0,
+            199.5
+          ],
+          "end": [
+            72.0,
+            165.0
+          ]
+        },
+        "thickness_px": 4.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            72.0,
+            199.5
+          ],
+          "end": [
+            72.0,
+            125.0
+          ]
+        },
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_028",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            72.0,
+            199.5
+          ],
+          "end": [
+            72.0,
+            125.0
+          ]
+        },
+        "thickness_px": 4.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            72.0,
+            202.5
+          ],
+          "end": [
+            72.0,
+            125.0
+          ]
+        },
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_028",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            72.0,
+            202.5
+          ],
+          "end": [
+            72.0,
+            125.0
+          ]
+        },
+        "thickness_px": 4.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            72.0,
+            202.5
+          ],
+          "end": [
+            72.0,
+            85.0
+          ]
+        },
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_028",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            72.0,
+            202.5
+          ],
+          "end": [
+            72.0,
+            85.0
+          ]
+        },
+        "thickness_px": 4.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            72.0,
+            202.5
+          ],
+          "end": [
+            72.0,
+            81.0
+          ]
+        },
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_029",
+      "field": "thickness",
+      "before": {
+        "thickness_px": 8.0
+      },
+      "after": {
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_029",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            98.625,
+            238.0
+          ],
+          "end": [
+            98.625,
+            377.125
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            98.625,
+            238.0
+          ],
+          "end": [
+            98.625,
+            381.125
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_030",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            143.0,
+            158.0
+          ],
+          "end": [
+            143.0,
+            84.0
+          ]
+        },
+        "thickness_px": 5.5
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            143.0,
+            158.0
+          ],
+          "end": [
+            143.0,
+            82.0
+          ]
+        },
+        "thickness_px": 5.5
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_030",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            143.0,
+            158.0
+          ],
+          "end": [
+            143.0,
+            82.0
+          ]
+        },
+        "thickness_px": 5.5
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            143.0,
+            170.0
+          ],
+          "end": [
+            143.0,
+            82.0
+          ]
+        },
+        "thickness_px": 5.5
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_031",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            167.0,
+            377.125
+          ],
+          "end": [
+            167.0,
+            272.0
+          ]
+        },
+        "thickness_px": 3.5
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            167.0,
+            377.125
+          ],
+          "end": [
+            167.0,
+            237.0
+          ]
+        },
+        "thickness_px": 3.5
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_031",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            167.0,
+            377.125
+          ],
+          "end": [
+            167.0,
+            237.0
+          ]
+        },
+        "thickness_px": 3.5
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            167.0,
+            381.125
+          ],
+          "end": [
+            167.0,
+            237.0
+          ]
+        },
+        "thickness_px": 3.5
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_032",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            218.5,
+            84.0
+          ],
+          "end": [
+            218.5,
+            157.0
+          ]
+        },
+        "thickness_px": 4.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            218.5,
+            84.0
+          ],
+          "end": [
+            218.5,
+            197.0
+          ]
+        },
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_032",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            218.5,
+            84.0
+          ],
+          "end": [
+            218.5,
+            197.0
+          ]
+        },
+        "thickness_px": 4.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            218.5,
+            81.0
+          ],
+          "end": [
+            218.5,
+            197.0
+          ]
+        },
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_032",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            218.5,
+            81.0
+          ],
+          "end": [
+            218.5,
+            197.0
+          ]
+        },
+        "thickness_px": 4.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            218.5,
+            81.0
+          ],
+          "end": [
+            218.5,
+            202.0
+          ]
+        },
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_033",
+      "field": "thickness",
+      "before": {
+        "thickness_px": 31.0
+      },
+      "after": {
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_033",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            220.0,
+            168.0
+          ],
+          "end": [
+            220.0,
+            199.5
+          ]
+        },
+        "thickness_px": 4.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            220.0,
+            168.0
+          ],
+          "end": [
+            220.0,
+            202.5
+          ]
+        },
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_033",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            220.0,
+            168.0
+          ],
+          "end": [
+            220.0,
+            202.5
+          ]
+        },
+        "thickness_px": 4.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            220.0,
+            128.0
+          ],
+          "end": [
+            220.0,
+            202.5
+          ]
+        },
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_033",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            220.0,
+            128.0
+          ],
+          "end": [
+            220.0,
+            202.5
+          ]
+        },
+        "thickness_px": 4.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            220.0,
+            88.0
+          ],
+          "end": [
+            220.0,
+            202.5
+          ]
+        },
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_033",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            220.0,
+            88.0
+          ],
+          "end": [
+            220.0,
+            202.5
+          ]
+        },
+        "thickness_px": 4.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            220.0,
+            81.0
+          ],
+          "end": [
+            220.0,
+            202.5
+          ]
+        },
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_034",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            238.0,
+            377.125
+          ],
+          "end": [
+            238.0,
+            297.0
+          ]
+        },
+        "thickness_px": 3.5
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            238.0,
+            377.125
+          ],
+          "end": [
+            238.0,
+            257.0
+          ]
+        },
+        "thickness_px": 3.5
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_034",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            238.0,
+            377.125
+          ],
+          "end": [
+            238.0,
+            257.0
+          ]
+        },
+        "thickness_px": 3.5
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            238.0,
+            381.125
+          ],
+          "end": [
+            238.0,
+            257.0
+          ]
+        },
+        "thickness_px": 3.5
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_034",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            238.0,
+            381.125
+          ],
+          "end": [
+            238.0,
+            257.0
+          ]
+        },
+        "thickness_px": 3.5
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            238.0,
+            381.125
+          ],
+          "end": [
+            238.0,
+            237.0
+          ]
+        },
+        "thickness_px": 3.5
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_035",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            292.0,
+            84.0
+          ],
+          "end": [
+            292.0,
+            146.0
+          ]
+        },
+        "thickness_px": 3.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            292.0,
+            84.0
+          ],
+          "end": [
+            292.0,
+            186.0
+          ]
+        },
+        "thickness_px": 3.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_035",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            292.0,
+            84.0
+          ],
+          "end": [
+            292.0,
+            186.0
+          ]
+        },
+        "thickness_px": 3.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            292.0,
+            81.0
+          ],
+          "end": [
+            292.0,
+            186.0
+          ]
+        },
+        "thickness_px": 3.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_035",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            292.0,
+            81.0
+          ],
+          "end": [
+            292.0,
+            186.0
+          ]
+        },
+        "thickness_px": 3.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            292.0,
+            81.0
+          ],
+          "end": [
+            292.0,
+            202.0
+          ]
+        },
+        "thickness_px": 3.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_036",
+      "field": "thickness",
+      "before": {
+        "thickness_px": 31.5
+      },
+      "after": {
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_036",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            295.0,
+            199.5
+          ],
+          "end": [
+            295.0,
+            168.0
+          ]
+        },
+        "thickness_px": 4.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            295.0,
+            199.5
+          ],
+          "end": [
+            295.0,
+            128.0
+          ]
+        },
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_036",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            295.0,
+            199.5
+          ],
+          "end": [
+            295.0,
+            128.0
+          ]
+        },
+        "thickness_px": 4.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            295.0,
+            202.5
+          ],
+          "end": [
+            295.0,
+            128.0
+          ]
+        },
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_036",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            295.0,
+            202.5
+          ],
+          "end": [
+            295.0,
+            128.0
+          ]
+        },
+        "thickness_px": 4.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            295.0,
+            202.5
+          ],
+          "end": [
+            295.0,
+            88.0
+          ]
+        },
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_036",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            295.0,
+            202.5
+          ],
+          "end": [
+            295.0,
+            88.0
+          ]
+        },
+        "thickness_px": 4.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            295.0,
+            202.5
+          ],
+          "end": [
+            295.0,
+            81.0
+          ]
+        },
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_037",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            307.0,
+            377.125
+          ],
+          "end": [
+            307.0,
+            271.0
+          ]
+        },
+        "thickness_px": 3.5
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            307.0,
+            377.125
+          ],
+          "end": [
+            307.0,
+            237.0
+          ]
+        },
+        "thickness_px": 3.5
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_037",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            307.0,
+            377.125
+          ],
+          "end": [
+            307.0,
+            237.0
+          ]
+        },
+        "thickness_px": 3.5
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            307.0,
+            381.125
+          ],
+          "end": [
+            307.0,
+            237.0
+          ]
+        },
+        "thickness_px": 3.5
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_038",
+      "field": "thickness",
+      "before": {
+        "thickness_px": 31.5
+      },
+      "after": {
+        "thickness_px": 3.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_038",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            324.0,
+            199.5
+          ],
+          "end": [
+            324.0,
+            168.0
+          ]
+        },
+        "thickness_px": 3.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            324.0,
+            202.5
+          ],
+          "end": [
+            324.0,
+            168.0
+          ]
+        },
+        "thickness_px": 3.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_039",
+      "field": "thickness",
+      "before": {
+        "thickness_px": 17.0
+      },
+      "after": {
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_039",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            367.5,
+            199.5
+          ],
+          "end": [
+            367.5,
+            168.0
+          ]
+        },
+        "thickness_px": 4.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            367.5,
+            199.5
+          ],
+          "end": [
+            367.5,
+            128.0
+          ]
+        },
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_039",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            367.5,
+            199.5
+          ],
+          "end": [
+            367.5,
+            128.0
+          ]
+        },
+        "thickness_px": 4.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            367.5,
+            202.5
+          ],
+          "end": [
+            367.5,
+            128.0
+          ]
+        },
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_039",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            367.5,
+            202.5
+          ],
+          "end": [
+            367.5,
+            128.0
+          ]
+        },
+        "thickness_px": 4.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            367.5,
+            202.5
+          ],
+          "end": [
+            367.5,
+            88.0
+          ]
+        },
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_039",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            367.5,
+            202.5
+          ],
+          "end": [
+            367.5,
+            88.0
+          ]
+        },
+        "thickness_px": 4.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            367.5,
+            202.5
+          ],
+          "end": [
+            367.5,
+            81.0
+          ]
+        },
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_040",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            368.0,
+            124.0
+          ],
+          "end": [
+            368.0,
+            157.0
+          ]
+        },
+        "thickness_px": 4.5
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            368.0,
+            124.0
+          ],
+          "end": [
+            368.0,
+            197.0
+          ]
+        },
+        "thickness_px": 4.5
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_040",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            368.0,
+            124.0
+          ],
+          "end": [
+            368.0,
+            197.0
+          ]
+        },
+        "thickness_px": 4.5
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            368.0,
+            84.0
+          ],
+          "end": [
+            368.0,
+            197.0
+          ]
+        },
+        "thickness_px": 4.5
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_040",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            368.0,
+            84.0
+          ],
+          "end": [
+            368.0,
+            197.0
+          ]
+        },
+        "thickness_px": 4.5
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            368.0,
+            84.0
+          ],
+          "end": [
+            368.0,
+            202.0
+          ]
+        },
+        "thickness_px": 4.5
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_040",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            368.0,
+            84.0
+          ],
+          "end": [
+            368.0,
+            202.0
+          ]
+        },
+        "thickness_px": 4.5
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            368.0,
+            81.0
+          ],
+          "end": [
+            368.0,
+            202.0
+          ]
+        },
+        "thickness_px": 4.5
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_041",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            370.0,
+            304.0
+          ],
+          "end": [
+            368.0,
+            272.0
+          ]
+        },
+        "thickness_px": 4.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            370.0,
+            304.0
+          ],
+          "end": [
+            365.8167599845687,
+            237.0681597530989
+          ]
+        },
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_041",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            370.0,
+            304.0
+          ],
+          "end": [
+            365.8167599845687,
+            237.0681597530989
+          ]
+        },
+        "thickness_px": 4.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            372.4951314462072,
+            343.92210313931554
+          ],
+          "end": [
+            365.8167599845687,
+            237.0681597530989
+          ]
+        },
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_041",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            372.4951314462072,
+            343.92210313931554
+          ],
+          "end": [
+            365.8167599845687,
+            237.0681597530989
+          ]
+        },
+        "thickness_px": 4.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            374.8031280339489,
+            380.8500485431824
+          ],
+          "end": [
+            365.8167599845687,
+            237.0681597530989
+          ]
+        },
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_042",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            371.0,
+            332.0
+          ],
+          "end": [
+            371.0,
+            377.125
+          ]
+        },
+        "thickness_px": 3.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            371.0,
+            332.0
+          ],
+          "end": [
+            371.0,
+            381.125
+          ]
+        },
+        "thickness_px": 3.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_042",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            371.0,
+            332.0
+          ],
+          "end": [
+            371.0,
+            381.125
+          ]
+        },
+        "thickness_px": 3.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            371.0,
+            292.0
+          ],
+          "end": [
+            371.0,
+            381.125
+          ]
+        },
+        "thickness_px": 3.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_042",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            371.0,
+            292.0
+          ],
+          "end": [
+            371.0,
+            381.125
+          ]
+        },
+        "thickness_px": 3.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            371.0,
+            271.0
+          ],
+          "end": [
+            371.0,
+            381.125
+          ]
+        },
+        "thickness_px": 3.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_043",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            432.0,
+            240.0
+          ],
+          "end": [
+            432.0,
+            344.0
+          ]
+        },
+        "thickness_px": 3.5
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            432.0,
+            240.0
+          ],
+          "end": [
+            432.0,
+            381.0
+          ]
+        },
+        "thickness_px": 3.5
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_043",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            432.0,
+            240.0
+          ],
+          "end": [
+            432.0,
+            381.0
+          ]
+        },
+        "thickness_px": 3.5
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            432.0,
+            237.0
+          ],
+          "end": [
+            432.0,
+            381.0
+          ]
+        },
+        "thickness_px": 3.5
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_044",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            441.5,
+            200.0
+          ],
+          "end": [
+            441.5,
+            84.0
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            441.5,
+            200.0
+          ],
+          "end": [
+            441.5,
+            81.0
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_044",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            441.5,
+            200.0
+          ],
+          "end": [
+            441.5,
+            81.0
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            441.5,
+            202.0
+          ],
+          "end": [
+            441.5,
+            81.0
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_045",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            499.75,
+            88.0
+          ],
+          "end": [
+            499.75,
+            377.125
+          ]
+        },
+        "thickness_px": 7.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            499.75,
+            88.0
+          ],
+          "end": [
+            499.75,
+            381.125
+          ]
+        },
+        "thickness_px": 7.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-02-p01:wall_045",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            499.75,
+            88.0
+          ],
+          "end": [
+            499.75,
+            381.125
+          ]
+        },
+        "thickness_px": 7.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            499.75,
+            82.0
+          ],
+          "end": [
+            499.75,
+            381.125
+          ]
+        },
+        "thickness_px": 7.0
+      }
+    }
+  ],
+  "plan_diagnostics_summary": {
+    "predicted_wall_pixel_coverage_ratio": 0.9030229340488869,
+    "skeleton_coverage_ratio": 0.9382100857085908,
+    "candidate_pixels_outside_predicted_wall": 7780
+  },
+  "ground_truth_or_annotation_read": false,
+  "sample_333_geometry_or_decisions_used": false,
+  "paths": {
+    "candidate_geometry": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-02/candidates_r02/candidate_geometry.json",
+    "candidate_geometry_sha256": "d9dc140071e5455c6b5593848ef545ec4314f5f71ec6bb448661793ad05dbea2"
+  },
+  "geometry_status": "CANDIDATE_UNREVIEWED",
+  "scale_status": "ASSUMED_FOR_PREVIEW",
+  "input_checks": {
+    "PASS": 499,
+    "FAIL": 0,
+    "WARN": 60,
+    "INFO": 0
+  },
+  "failed": [],
+  "building_model": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-02/building_model_r02.json"
+}

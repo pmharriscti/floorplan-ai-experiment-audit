@@ -1,0 +1,11 @@
+{
+  "record": "adapter_equivalence_reference/1",
+  "performed_in_run": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC",
+  "performed_utc": null,
+  "what_it_showed": "The batch-1 inference adapter run on a CubiCasa image reproduced the upstream saved bitmask except for 13 pixels (AMP rounding; shapes equal).",
+  "why_referenced_not_repeated": "Repeating it would mean new inference on a CubiCasa image, which was not requested. The script is byte-identical to the one checked, the checkpoint hash and the environment are the same.",
+  "run_frozen_inference_py_sha256_here": "4ed04000bf42e9814216dbc365b1e05af4bbb755b30da5f26378ee7c325bd733",
+  "run_frozen_inference_py_sha256_in_that_run": "4ed04000bf42e9814216dbc365b1e05af4bbb755b30da5f26378ee7c325bd733",
+  "identical": true,
+  "copied_file": "equivalence_result.json (byte copy of the earlier run's file)"
+}

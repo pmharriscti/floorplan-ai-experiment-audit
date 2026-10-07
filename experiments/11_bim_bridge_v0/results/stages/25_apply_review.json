@@ -1,0 +1,24 @@
+{
+  "experiment_id": "bim_bridge_v0",
+  "run_id": "bim_bridge_v0_20260928_183649_UTC",
+  "stage": "apply_review",
+  "status": "PASS",
+  "written_utc": "2026-10-01T20:32:53Z",
+  "track": "REVIEWED_PREDICTION_BRIDGE",
+  "reviewer": "Paul Harris",
+  "reviewed_utc": "2026-10-01T20:33:50Z",
+  "geometry_status": "HUMAN_REVIEWED",
+  "scale_status": "ASSUMED_FOR_PREVIEW",
+  "input_checks": {
+    "PASS": 65,
+    "FAIL": 0,
+    "WARN": 1,
+    "INFO": 0
+  },
+  "failed": [],
+  "paths": {
+    "reviewed_geometry": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/reviewed/reviewed_geometry.json",
+    "building_model": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/reviewed/building_model.json",
+    "review_record": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/reviewed/review_record.json"
+  }
+}

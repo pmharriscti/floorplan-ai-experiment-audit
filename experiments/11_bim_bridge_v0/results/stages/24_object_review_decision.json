@@ -1,0 +1,22 @@
+{
+  "experiment_id": "bim_bridge_v0",
+  "run_id": "bim_bridge_v0_20260928_183649_UTC",
+  "stage": "object_review_decision",
+  "status": "BLOCKED",
+  "written_utc": "2026-10-01T20:32:08Z",
+  "track": "REVIEWED_PREDICTION_BRIDGE",
+  "meaning": "A whole-object human decision for door_opening-c02 was recorded in the draft review record. All five objects now have decisions. Not applied: the reviewer name and review time are empty.",
+  "decision_id": "decision-007-door_opening-c02-whole-object",
+  "object_id": "opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02",
+  "decision": "ACCEPT",
+  "record": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_in_progress/decision_007_door_opening-c02_whole_object_20261001_203201_UTC.json",
+  "record_sha256": "43676f796570b5cd22134eda8389940375e1aaafb44b243f5eaa827e20ec7487",
+  "draft_review_record": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/review_in_progress/review_record_DRAFT_08.json",
+  "objects_pending": [],
+  "validator_refusal": [
+    "reviewer is empty: a named human reviewer is required",
+    "reviewed_utc must be YYYY-MM-DDTHH:MM:SSZ"
+  ],
+  "applied": false,
+  "gates_changed": []
+}

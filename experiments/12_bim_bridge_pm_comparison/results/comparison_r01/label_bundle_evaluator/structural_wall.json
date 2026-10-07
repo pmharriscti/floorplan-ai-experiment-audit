@@ -1,0 +1,176 @@
+{
+  "evaluation_status": "DRAFT_ANNOTATION_AGREEMENT_ONLY",
+  "target": "structural_wall",
+  "subset": "all_12",
+  "images": 12,
+  "annotation_spec_sha256": "a4b38059c6911053a258d4629db01554d99279823d8a446ad86cb90a19894199",
+  "limitations": "Synthetic generated plans with inferred annotations; no deployment, code-compliance or real-world-generalization claim.",
+  "aggregation": "Each class sums TP/FP/FN over all included valid pixels. Empty unions are null, not perfect scores.",
+  "aggregate_per_class": {
+    "1": {
+      "tp": 1207465,
+      "fp": 186618,
+      "fn": 195340,
+      "iou": 0.7596876350726018,
+      "dice": 0.8634346459350535
+    }
+  },
+  "per_image": [
+    {
+      "id": "fp01_office",
+      "valid_pixels": 1572516,
+      "class_scores": {
+        "1": {
+          "tp": 105318,
+          "fp": 22056,
+          "fn": 11600,
+          "iou": 0.757825204714551,
+          "dice": 0.8622304455323957
+        }
+      }
+    },
+    {
+      "id": "fp02_retail",
+      "valid_pixels": 1572516,
+      "class_scores": {
+        "1": {
+          "tp": 86781,
+          "fp": 11247,
+          "fn": 11102,
+          "iou": 0.7952075506276918,
+          "dice": 0.8859226893844654
+        }
+      }
+    },
+    {
+      "id": "fp03_restaurant",
+      "valid_pixels": 1570469,
+      "class_scores": {
+        "1": {
+          "tp": 106204,
+          "fp": 12291,
+          "fn": 13390,
+          "iou": 0.8052773249421845,
+          "dice": 0.8921369739887185
+        }
+      }
+    },
+    {
+      "id": "fp04_warehouse",
+      "valid_pixels": 1554194,
+      "class_scores": {
+        "1": {
+          "tp": 47019,
+          "fp": 17495,
+          "fn": 13754,
+          "iou": 0.6007435989165432,
+          "dice": 0.7505806667890523
+        }
+      }
+    },
+    {
+      "id": "fp05_hotel",
+      "valid_pixels": 1569204,
+      "class_scores": {
+        "1": {
+          "tp": 122033,
+          "fp": 19767,
+          "fn": 22996,
+          "iou": 0.7405094783853977,
+          "dice": 0.850911170069972
+        }
+      }
+    },
+    {
+      "id": "fp06_clinic",
+      "valid_pixels": 1572516,
+      "class_scores": {
+        "1": {
+          "tp": 126320,
+          "fp": 18875,
+          "fn": 19050,
+          "iou": 0.7690949496179488,
+          "dice": 0.8694784299554317
+        }
+      }
+    },
+    {
+      "id": "fp07_school",
+      "valid_pixels": 1572516,
+      "class_scores": {
+        "1": {
+          "tp": 108287,
+          "fp": 12573,
+          "fn": 18448,
+          "iou": 0.7773207568840268,
+          "dice": 0.8747107170984875
+        }
+      }
+    },
+    {
+      "id": "fp08_grocery",
+      "valid_pixels": 1530161,
+      "class_scores": {
+        "1": {
+          "tp": 74811,
+          "fp": 21567,
+          "fn": 16085,
+          "iou": 0.6652054453464695,
+          "dice": 0.7989469974475901
+        }
+      }
+    },
+    {
+      "id": "fp09_manufacturing",
+      "valid_pixels": 1572516,
+      "class_scores": {
+        "1": {
+          "tp": 75788,
+          "fp": 13866,
+          "fn": 15536,
+          "iou": 0.7204867382831067,
+          "dice": 0.83753826431942
+        }
+      }
+    },
+    {
+      "id": "fp10_apartment",
+      "valid_pixels": 1463878,
+      "class_scores": {
+        "1": {
+          "tp": 134570,
+          "fp": 14850,
+          "fn": 19740,
+          "iou": 0.7955190352329156,
+          "dice": 0.8861159582523952
+        }
+      }
+    },
+    {
+      "id": "fp11_house_ground",
+      "valid_pixels": 1568100,
+      "class_scores": {
+        "1": {
+          "tp": 100477,
+          "fp": 10549,
+          "fn": 11977,
+          "iou": 0.8168662552945863,
+          "dice": 0.8992035081439055
+        }
+      }
+    },
+    {
+      "id": "fp12_house_upper",
+      "valid_pixels": 1564623,
+      "class_scores": {
+        "1": {
+          "tp": 119857,
+          "fp": 11482,
+          "fn": 21662,
+          "iou": 0.7833739648760466,
+          "dice": 0.8785302245123837
+        }
+      }
+    }
+  ]
+}

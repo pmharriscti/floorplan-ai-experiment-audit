@@ -1,0 +1,54 @@
+{
+  "experiment_id": "bim_bridge_v0",
+  "run_id": "bim_bridge_v0_20260928_183649_UTC",
+  "stage": "verify_reviewed_export",
+  "status": "FAIL",
+  "written_utc": "2026-10-01T20:35:10Z",
+  "meaning": "Automated reopening and comparison of the reviewed-preview IFC. Not a viewer inspection. No gate was recomputed.",
+  "verification": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC/real/export_reviewed_preview/review_verification.json",
+  "passed": 71,
+  "failed": 2,
+  "by_group": {
+    "authorized_edits": {
+      "PASS": 8,
+      "FAIL": 0
+    },
+    "unchanged_geometry": {
+      "PASS": 3,
+      "FAIL": 0
+    },
+    "identity": {
+      "PASS": 3,
+      "FAIL": 0
+    },
+    "review_properties": {
+      "PASS": 17,
+      "FAIL": 0
+    },
+    "provenance": {
+      "PASS": 28,
+      "FAIL": 0
+    },
+    "opening": {
+      "PASS": 5,
+      "FAIL": 0
+    },
+    "junction_contact_geometry": {
+      "PASS": 1,
+      "FAIL": 2
+    },
+    "explicit_connection_relationships": {
+      "PASS": 1,
+      "FAIL": 0
+    },
+    "status": {
+      "PASS": 3,
+      "FAIL": 0
+    },
+    "preservation": {
+      "PASS": 2,
+      "FAIL": 0
+    }
+  },
+  "gates_changed": []
+}

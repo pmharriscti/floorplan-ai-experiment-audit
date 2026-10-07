@@ -1,0 +1,152 @@
+{
+  "record": "ifc_vs_original_visuals/1",
+  "written_utc": "2026-10-06T14:35:25Z",
+  "method": "IFC footprints read from each file with IfcOpenShell, mapped to original-image pixels with the model's PlanTransform and the inference letterbox; no geometry was recomputed from masks",
+  "status": "Candidate, unreviewed IFC previews; assumed scale; windows not exported",
+  "visuals": [
+    {
+      "sample_key": "img-01",
+      "source_image": "/mnt/e/AI_Team/mitunet/experiments/synth_images/ChatGPT Image Oct 2, 2026, 03_55_25 PM-1.png",
+      "source_sha256": "914e6e02f0869d674ad72e9b4d3fad1a5198027d3d785d679b79762ecdb9ef60",
+      "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-01/export_candidate_preview_whole_plan_r01/synth-img-01-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r01.ifc",
+      "ifc_windows_path": "E:\\AI_Team\\mitunet\\experiments\\bim_bridge_synth_images_v0\\bim_bridge_synth_images_v0_20261002_200115_UTC\\samples\\img-01\\export_candidate_preview_whole_plan_r01\\synth-img-01-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r01.ifc",
+      "ifc_sha256": "6aa613824528e3336b9eb025102516c770ee0bf95b56b754343270aea07a02b9",
+      "walls": 25,
+      "door_openings": 3,
+      "visual": "/mnt/e/AI_Team/mitunet/experiments/ifc_comparisons/img-01__ifc_vs_original.png",
+      "visual_sha256": "3a0ec0a724a54f083222fd70e0201766e7f14653144e69f1a99bf6df26295c02"
+    },
+    {
+      "sample_key": "img-02",
+      "source_image": "/mnt/e/AI_Team/mitunet/experiments/synth_images/ChatGPT Image Oct 2, 2026, 03_55_26 PM-2.png",
+      "source_sha256": "6f381f675562ef1c6545c117074b2dbea96ace9d7a12e7d196ed7be6d6d15ea8",
+      "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-02/export_candidate_preview_whole_plan_r01/synth-img-02-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r01.ifc",
+      "ifc_windows_path": "E:\\AI_Team\\mitunet\\experiments\\bim_bridge_synth_images_v0\\bim_bridge_synth_images_v0_20261002_200115_UTC\\samples\\img-02\\export_candidate_preview_whole_plan_r01\\synth-img-02-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r01.ifc",
+      "ifc_sha256": "7cfc5adb377aeadf2a71ba122977d4ae165fe5d438cb3fb4f3793531382f8842",
+      "walls": 21,
+      "door_openings": 8,
+      "visual": "/mnt/e/AI_Team/mitunet/experiments/ifc_comparisons/img-02__ifc_vs_original.png",
+      "visual_sha256": "5d185bedf09a958cc7e6003b8918c09f7dcae0d08d11b5f7419ea891447cebc8"
+    },
+    {
+      "sample_key": "img-03",
+      "source_image": "/mnt/e/AI_Team/mitunet/experiments/synth_images/ChatGPT Image Oct 2, 2026, 03_55_26 PM-3.png",
+      "source_sha256": "faeb5e7cb1b39231a8989b94c1f9163b7b6f263d70799ab723b954d3269138d6",
+      "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-03/export_candidate_preview_whole_plan_r01/synth-img-03-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r01.ifc",
+      "ifc_windows_path": "E:\\AI_Team\\mitunet\\experiments\\bim_bridge_synth_images_v0\\bim_bridge_synth_images_v0_20261002_200115_UTC\\samples\\img-03\\export_candidate_preview_whole_plan_r01\\synth-img-03-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r01.ifc",
+      "ifc_sha256": "22582b1109534418a6e70216c94edcfb2a80c9c02fe92e5bbbb9120bad240258",
+      "walls": 22,
+      "door_openings": 10,
+      "visual": "/mnt/e/AI_Team/mitunet/experiments/ifc_comparisons/img-03__ifc_vs_original.png",
+      "visual_sha256": "63e5f34108042be0b8bf8f89a33c808b4f89ed61a169cd15477db3bb956828f0"
+    },
+    {
+      "sample_key": "img-04",
+      "source_image": "/mnt/e/AI_Team/mitunet/experiments/synth_images/ChatGPT Image Oct 2, 2026, 03_55_28 PM-4.png",
+      "source_sha256": "3b42ab1f47955a7725f9f13ec49f24e1048687dfd1225f7346faba328ad49c68",
+      "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-04/export_candidate_preview_whole_plan_r01/synth-img-04-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r01.ifc",
+      "ifc_windows_path": "E:\\AI_Team\\mitunet\\experiments\\bim_bridge_synth_images_v0\\bim_bridge_synth_images_v0_20261002_200115_UTC\\samples\\img-04\\export_candidate_preview_whole_plan_r01\\synth-img-04-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r01.ifc",
+      "ifc_sha256": "ca0a7d70411898030cbd031bee6962550c7639b8b2edd061c76b20c89c503318",
+      "walls": 17,
+      "door_openings": 6,
+      "visual": "/mnt/e/AI_Team/mitunet/experiments/ifc_comparisons/img-04__ifc_vs_original.png",
+      "visual_sha256": "221e4bc05137218d52ad36f3b3e5cc11aa0f2ddd976bcfb57e0a6578d78e6f96"
+    },
+    {
+      "sample_key": "img-05",
+      "source_image": "/mnt/e/AI_Team/mitunet/experiments/synth_images/ChatGPT Image Oct 2, 2026, 03_55_28 PM-5.png",
+      "source_sha256": "130ac3cf5a131b6af57cf46b5b1d714209504ea1cfadd38749f7928ba2d4b5c6",
+      "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-05/export_candidate_preview_whole_plan_r01/synth-img-05-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r01.ifc",
+      "ifc_windows_path": "E:\\AI_Team\\mitunet\\experiments\\bim_bridge_synth_images_v0\\bim_bridge_synth_images_v0_20261002_200115_UTC\\samples\\img-05\\export_candidate_preview_whole_plan_r01\\synth-img-05-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r01.ifc",
+      "ifc_sha256": "f2d6d902e5c18e04d98d426072daef8dc2ddc51d34db45a4795454e3412e0e88",
+      "walls": 11,
+      "door_openings": 1,
+      "visual": "/mnt/e/AI_Team/mitunet/experiments/ifc_comparisons/img-05__ifc_vs_original.png",
+      "visual_sha256": "bc2c6c75f4241e598bdc9f0993bffc22addab7f6331f4e81705cb090d081bebe"
+    },
+    {
+      "sample_key": "img-06",
+      "source_image": "/mnt/e/AI_Team/mitunet/experiments/synth_images/ChatGPT Image Oct 2, 2026, 03_55_29 PM-6.png",
+      "source_sha256": "2495bccef4319c66539fd114c776ebc7d19e6c719b09d886f16a343d587b8724",
+      "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-06/export_candidate_preview_whole_plan_r01/synth-img-06-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r01.ifc",
+      "ifc_windows_path": "E:\\AI_Team\\mitunet\\experiments\\bim_bridge_synth_images_v0\\bim_bridge_synth_images_v0_20261002_200115_UTC\\samples\\img-06\\export_candidate_preview_whole_plan_r01\\synth-img-06-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r01.ifc",
+      "ifc_sha256": "9534f76b5d7920d976a378f8a408825b6aa74ebce0736bbea2259fb73f495a1a",
+      "walls": 15,
+      "door_openings": 2,
+      "visual": "/mnt/e/AI_Team/mitunet/experiments/ifc_comparisons/img-06__ifc_vs_original.png",
+      "visual_sha256": "81c383eebf694600bf72c0a5f0c797142bb81b6f1832bd92b5fc769ba257177c"
+    },
+    {
+      "sample_key": "com-01",
+      "source_image": "/mnt/e/AI_Team/mitunet/experiments/synth_images_commercial/ChatGPT Image Oct 2, 2026, 04_30_52 PM-1.png",
+      "source_sha256": "5b1af2960e3fdb62fedbc840bb1b43e35ff9528cbc5dcc07c826bc29025cf067",
+      "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-01/export_candidate_preview_whole_plan_r01/com-com-01-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r01.ifc",
+      "ifc_windows_path": "E:\\AI_Team\\mitunet\\experiments\\bim_bridge_pm_comparison_v0\\bim_bridge_pm_comparison_v0_20261006_130747_UTC\\samples\\com-01\\export_candidate_preview_whole_plan_r01\\com-com-01-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r01.ifc",
+      "ifc_sha256": "e0765a6c5b1b024d4e58216c725f7cbf7f237158e233736be2f6f30a1b8f28c2",
+      "walls": 22,
+      "door_openings": 10,
+      "visual": "/mnt/e/AI_Team/mitunet/experiments/ifc_comparisons/com-01__ifc_vs_original.png",
+      "visual_sha256": "8b789440897e0d2972525a3e78de502e093a1c30c6ad0f93d4e9f1b6d9712b44"
+    },
+    {
+      "sample_key": "com-02",
+      "source_image": "/mnt/e/AI_Team/mitunet/experiments/synth_images_commercial/ChatGPT Image Oct 2, 2026, 04_30_53 PM-2.png",
+      "source_sha256": "32711ad5b7338b7b14670423d3135c25bbe1f6b42f79f015cd57b5e9b146e890",
+      "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-02/export_candidate_preview_whole_plan_r01/com-com-02-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r01.ifc",
+      "ifc_windows_path": "E:\\AI_Team\\mitunet\\experiments\\bim_bridge_pm_comparison_v0\\bim_bridge_pm_comparison_v0_20261006_130747_UTC\\samples\\com-02\\export_candidate_preview_whole_plan_r01\\com-com-02-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r01.ifc",
+      "ifc_sha256": "62e31f00270b9ed40655760bf05f3cd0c0aa934be0434ca7211cd94633bf1aeb",
+      "walls": 45,
+      "door_openings": 15,
+      "visual": "/mnt/e/AI_Team/mitunet/experiments/ifc_comparisons/com-02__ifc_vs_original.png",
+      "visual_sha256": "ce81a8fdc256ee39a6e62e0cc9d4ed2b307dd5146135c6d721cfa191962077a3"
+    },
+    {
+      "sample_key": "com-03",
+      "source_image": "/mnt/e/AI_Team/mitunet/experiments/synth_images_commercial/ChatGPT Image Oct 2, 2026, 04_30_53 PM-3.png",
+      "source_sha256": "dae2a87fa8eecb0a1369a863ceee468603c5e34aa76b7caadd15ff4112f2a73a",
+      "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-03/export_candidate_preview_whole_plan_r01/com-com-03-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r01.ifc",
+      "ifc_windows_path": "E:\\AI_Team\\mitunet\\experiments\\bim_bridge_pm_comparison_v0\\bim_bridge_pm_comparison_v0_20261006_130747_UTC\\samples\\com-03\\export_candidate_preview_whole_plan_r01\\com-com-03-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r01.ifc",
+      "ifc_sha256": "6c5a048c0f700ba96fcd4b8fa9000d926e656becdf67e5f356d2fd8623472e81",
+      "walls": 29,
+      "door_openings": 15,
+      "visual": "/mnt/e/AI_Team/mitunet/experiments/ifc_comparisons/com-03__ifc_vs_original.png",
+      "visual_sha256": "890c64b00ebe43a59f3a71096fa6c9aa52753920c99df395568611142a17f222"
+    },
+    {
+      "sample_key": "com-04",
+      "source_image": "/mnt/e/AI_Team/mitunet/experiments/synth_images_commercial/ChatGPT Image Oct 2, 2026, 04_30_54 PM-4.png",
+      "source_sha256": "e6feeb2724b5d7fd02bd3303ee981a0d88752eeca3b6288495bec0b51662a593",
+      "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-04/export_candidate_preview_whole_plan_r01/com-com-04-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r01.ifc",
+      "ifc_windows_path": "E:\\AI_Team\\mitunet\\experiments\\bim_bridge_pm_comparison_v0\\bim_bridge_pm_comparison_v0_20261006_130747_UTC\\samples\\com-04\\export_candidate_preview_whole_plan_r01\\com-com-04-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r01.ifc",
+      "ifc_sha256": "d21f272ad01e11933ab7cbfb0a42100a3cd88fdb659ce3692f0fdd9182a4629a",
+      "walls": 22,
+      "door_openings": 13,
+      "visual": "/mnt/e/AI_Team/mitunet/experiments/ifc_comparisons/com-04__ifc_vs_original.png",
+      "visual_sha256": "8fcb40364e68290828a9ad48ca54b3a27b3dba4cfd447861dc6c65088fa8b7d0"
+    },
+    {
+      "sample_key": "com-05",
+      "source_image": "/mnt/e/AI_Team/mitunet/experiments/synth_images_commercial/ChatGPT Image Oct 2, 2026, 04_30_55 PM-5.png",
+      "source_sha256": "90925a95a407c17522067b6e011ff8da54677f06fc02ee665c795dd8f7ddc36f",
+      "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-05/export_candidate_preview_whole_plan_r01/com-com-05-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r01.ifc",
+      "ifc_windows_path": "E:\\AI_Team\\mitunet\\experiments\\bim_bridge_pm_comparison_v0\\bim_bridge_pm_comparison_v0_20261006_130747_UTC\\samples\\com-05\\export_candidate_preview_whole_plan_r01\\com-com-05-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r01.ifc",
+      "ifc_sha256": "880ab518bf8bc90911bc60c12ebc789ac20391821939f8b3b42cc8cd6f83e263",
+      "walls": 21,
+      "door_openings": 16,
+      "visual": "/mnt/e/AI_Team/mitunet/experiments/ifc_comparisons/com-05__ifc_vs_original.png",
+      "visual_sha256": "6a74782c70c3ba8e3164153da15b8f5ef46f0cd5e2e9b401fbfdffcda8593a78"
+    },
+    {
+      "sample_key": "com-06",
+      "source_image": "/mnt/e/AI_Team/mitunet/experiments/synth_images_commercial/ChatGPT Image Oct 2, 2026, 04_30_56 PM-6.png",
+      "source_sha256": "5d0f4c2f53b5d297b5b2f3e079f2006260a69865fdfb0858b8fa5b5c794d7db1",
+      "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-06/export_candidate_preview_whole_plan_r01/com-com-06-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r01.ifc",
+      "ifc_windows_path": "E:\\AI_Team\\mitunet\\experiments\\bim_bridge_pm_comparison_v0\\bim_bridge_pm_comparison_v0_20261006_130747_UTC\\samples\\com-06\\export_candidate_preview_whole_plan_r01\\com-com-06-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r01.ifc",
+      "ifc_sha256": "cbf89a340e4a120a611701fa953f58feb483abbd13b63fc32048c6773f49064d",
+      "walls": 20,
+      "door_openings": 8,
+      "visual": "/mnt/e/AI_Team/mitunet/experiments/ifc_comparisons/com-06__ifc_vs_original.png",
+      "visual_sha256": "2ed2a216925e18bdd9979f9df21f9584e5edd03b59efe4936488af28988227dd"
+    }
+  ]
+}

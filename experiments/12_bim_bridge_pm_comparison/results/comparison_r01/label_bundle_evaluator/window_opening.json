@@ -1,0 +1,176 @@
+{
+  "evaluation_status": "DRAFT_ANNOTATION_AGREEMENT_ONLY",
+  "target": "window_opening",
+  "subset": "all_12",
+  "images": 12,
+  "annotation_spec_sha256": "a4b38059c6911053a258d4629db01554d99279823d8a446ad86cb90a19894199",
+  "limitations": "Synthetic generated plans with inferred annotations; no deployment, code-compliance or real-world-generalization claim.",
+  "aggregation": "Each class sums TP/FP/FN over all included valid pixels. Empty unions are null, not perfect scores.",
+  "aggregate_per_class": {
+    "1": {
+      "tp": 211268,
+      "fp": 95832,
+      "fn": 12259,
+      "iou": 0.6615376425903137,
+      "dice": 0.7962957030079509
+    }
+  },
+  "per_image": [
+    {
+      "id": "fp01_office",
+      "valid_pixels": 1572516,
+      "class_scores": {
+        "1": {
+          "tp": 12327,
+          "fp": 5774,
+          "fn": 917,
+          "iou": 0.6481754127668524,
+          "dice": 0.7865369277396714
+        }
+      }
+    },
+    {
+      "id": "fp02_retail",
+      "valid_pixels": 1572516,
+      "class_scores": {
+        "1": {
+          "tp": 16626,
+          "fp": 7435,
+          "fn": 1208,
+          "iou": 0.6579603466698326,
+          "dice": 0.7936985320443967
+        }
+      }
+    },
+    {
+      "id": "fp03_restaurant",
+      "valid_pixels": 1570469,
+      "class_scores": {
+        "1": {
+          "tp": 35562,
+          "fp": 11009,
+          "fn": 405,
+          "iou": 0.7570248637602179,
+          "dice": 0.8617121810559984
+        }
+      }
+    },
+    {
+      "id": "fp04_warehouse",
+      "valid_pixels": 1554194,
+      "class_scores": {
+        "1": {
+          "tp": 6473,
+          "fp": 6097,
+          "fn": 2172,
+          "iou": 0.4390856057522724,
+          "dice": 0.6102286118312514
+        }
+      }
+    },
+    {
+      "id": "fp05_hotel",
+      "valid_pixels": 1569204,
+      "class_scores": {
+        "1": {
+          "tp": 21480,
+          "fp": 9974,
+          "fn": 1848,
+          "iou": 0.6450063059275719,
+          "dice": 0.7841991895148042
+        }
+      }
+    },
+    {
+      "id": "fp06_clinic",
+      "valid_pixels": 1572516,
+      "class_scores": {
+        "1": {
+          "tp": 14641,
+          "fp": 7191,
+          "fn": 839,
+          "iou": 0.6458030082484231,
+          "dice": 0.7847877358490566
+        }
+      }
+    },
+    {
+      "id": "fp07_school",
+      "valid_pixels": 1572516,
+      "class_scores": {
+        "1": {
+          "tp": 25600,
+          "fp": 6420,
+          "fn": 1364,
+          "iou": 0.7668344116942247,
+          "dice": 0.86803200868032
+        }
+      }
+    },
+    {
+      "id": "fp08_grocery",
+      "valid_pixels": 1530161,
+      "class_scores": {
+        "1": {
+          "tp": 17342,
+          "fp": 8077,
+          "fn": 1224,
+          "iou": 0.650902676125061,
+          "dice": 0.7885415482550869
+        }
+      }
+    },
+    {
+      "id": "fp09_manufacturing",
+      "valid_pixels": 1572516,
+      "class_scores": {
+        "1": {
+          "tp": 11841,
+          "fp": 12230,
+          "fn": 771,
+          "iou": 0.476652443442557,
+          "dice": 0.6455851484338795
+        }
+      }
+    },
+    {
+      "id": "fp10_apartment",
+      "valid_pixels": 1463878,
+      "class_scores": {
+        "1": {
+          "tp": 14720,
+          "fp": 4302,
+          "fn": 682,
+          "iou": 0.7470564352415753,
+          "dice": 0.8552172902626075
+        }
+      }
+    },
+    {
+      "id": "fp11_house_ground",
+      "valid_pixels": 1568100,
+      "class_scores": {
+        "1": {
+          "tp": 17542,
+          "fp": 12917,
+          "fn": 189,
+          "iou": 0.5723701383450797,
+          "dice": 0.7280348620045652
+        }
+      }
+    },
+    {
+      "id": "fp12_house_upper",
+      "valid_pixels": 1564623,
+      "class_scores": {
+        "1": {
+          "tp": 17114,
+          "fp": 4406,
+          "fn": 640,
+          "iou": 0.7722924187725632,
+          "dice": 0.8715180526557009
+        }
+      }
+    }
+  ]
+}

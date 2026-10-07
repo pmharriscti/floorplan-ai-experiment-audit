@@ -1,0 +1,204 @@
+{
+  "schema_version": "bim_bridge.guid_map/0.1",
+  "model_id": "cubicasa-high-quality-architectural-333-val-region-01",
+  "namespace_uuid": "6f1d2c0a-5b7e-5a41-9c3e-b1d0b81d9e00",
+  "derivation": "uuid5(namespace_uuid, model_id + '|' + key), compressed to the 22-character IFC GlobalId encoding; existing entries are never re-derived",
+  "entries": {
+    "building:cubicasa-high-quality-architectural-333-val-region-01": {
+      "ifc_guid": "2ibSqaPW5SGOR5VIyig0BB",
+      "uuid": "ac95cd24-6601-5c41-86c5-7d2f2ca802cb",
+      "ifc_class": "IfcBuilding",
+      "first_assigned_utc": "2026-09-28T18:37:01Z",
+      "status": "active"
+    },
+    "opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02": {
+      "ifc_guid": "1Y$u78JbXJIggJrkmIA5ew",
+      "uuid": "62ff81c8-4e58-534a-aa93-d6ec12285a3a",
+      "ifc_class": "IfcOpeningElement",
+      "first_assigned_utc": "2026-09-28T18:37:01Z",
+      "status": "active"
+    },
+    "project:cubicasa-high-quality-architectural-333-val-region-01": {
+      "ifc_guid": "0_BJHv71rUsvJ9Oo$Lhzoh",
+      "uuid": "3e2d3479-1c1d-5edb-94c9-632fd5afdcab",
+      "ifc_class": "IfcProject",
+      "first_assigned_utc": "2026-09-28T18:37:01Z",
+      "status": "active"
+    },
+    "pset:building:cubicasa-high-quality-architectural-333-val-region-01:AutoAutoCAD_ModelProvenance": {
+      "ifc_guid": "0KHfvOCRvRVRQNm0uqZyI2",
+      "uuid": "14469e58-31be-5b7d-b697-c00e348fc482",
+      "ifc_class": "IfcPropertySet",
+      "first_assigned_utc": "2026-09-28T18:37:01Z",
+      "status": "active"
+    },
+    "pset:opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02:AutoAutoCAD_Provenance": {
+      "ifc_guid": "1r5_9RzlTJR9gNSu5DYlme",
+      "uuid": "7517e25b-f6f7-536c-9a97-73814d8afc28",
+      "ifc_class": "IfcPropertySet",
+      "first_assigned_utc": "2026-09-28T18:37:01Z",
+      "status": "active"
+    },
+    "pset:storey:cubicasa-high-quality-architectural-333-val-region-01:level-0:AutoAutoCAD_Provenance": {
+      "ifc_guid": "1tPOXnzhjUIRs4W3iyuZCA",
+      "uuid": "77658871-f6bb-5e49-bd84-803b3ce2330a",
+      "ifc_class": "IfcPropertySet",
+      "first_assigned_utc": "2026-09-28T18:37:01Z",
+      "status": "active"
+    },
+    "pset:wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002:AutoAutoCAD_Provenance": {
+      "ifc_guid": "1kZTSzkFDJ0gtuT1rfVBLU",
+      "uuid": "6e8dd73d-b8f3-5302-adf8-741d697cb55e",
+      "ifc_class": "IfcPropertySet",
+      "first_assigned_utc": "2026-09-28T18:37:01Z",
+      "status": "active"
+    },
+    "pset:wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003:AutoAutoCAD_Provenance": {
+      "ifc_guid": "00KdkevRLTexqfXIP$r2PP",
+      "uuid": "00527ba8-e5b5-5da3-bd29-85267fd42659",
+      "ifc_class": "IfcPropertySet",
+      "first_assigned_utc": "2026-09-28T18:37:01Z",
+      "status": "active"
+    },
+    "pset:wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004:AutoAutoCAD_Provenance": {
+      "ifc_guid": "2ZyDM3S6jIrBl4LQdQSzOi",
+      "uuid": "a3f0d583-706b-52d4-bbc4-55a9da73d62c",
+      "ifc_class": "IfcPropertySet",
+      "first_assigned_utc": "2026-09-28T18:37:01Z",
+      "status": "active"
+    },
+    "pset:wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012:AutoAutoCAD_Provenance": {
+      "ifc_guid": "1vnD_EusDMmw5v$8LhHEaW",
+      "uuid": "79c4df8e-e363-56c3-a179-fc856b44e920",
+      "ifc_class": "IfcPropertySet",
+      "first_assigned_utc": "2026-09-28T18:37:01Z",
+      "status": "active"
+    },
+    "rel:aggregates:building:cubicasa-high-quality-architectural-333-val-region-01": {
+      "ifc_guid": "2J0S1m65zKJ9pR4iwD9a71",
+      "uuid": "9301c070-185f-544c-9cdb-12ce8d2641c1",
+      "ifc_class": "IfcRelAggregates",
+      "first_assigned_utc": "2026-09-28T18:37:01Z",
+      "status": "active"
+    },
+    "rel:aggregates:project:cubicasa-high-quality-architectural-333-val-region-01": {
+      "ifc_guid": "12FTi6sK9VmuKy1MMnT5_q",
+      "uuid": "423ddb06-d942-5fc3-853c-0565b1745fb4",
+      "ifc_class": "IfcRelAggregates",
+      "first_assigned_utc": "2026-09-28T18:37:01Z",
+      "status": "active"
+    },
+    "rel:aggregates:site:cubicasa-high-quality-architectural-333-val-region-01": {
+      "ifc_guid": "1sCQ7RX2LG39UP8QmxwA$7",
+      "uuid": "7631a1db-8425-500c-9799-21ac3be8afc7",
+      "ifc_class": "IfcRelAggregates",
+      "first_assigned_utc": "2026-09-28T18:37:01Z",
+      "status": "active"
+    },
+    "rel:contained:storey:cubicasa-high-quality-architectural-333-val-region-01:level-0": {
+      "ifc_guid": "2TYIuuHHXST9xoywmjx0yZ",
+      "uuid": "9d892e38-4518-5c74-9ef2-f3ac2dec0f23",
+      "ifc_class": "IfcRelContainedInSpatialStructure",
+      "first_assigned_utc": "2026-09-28T18:37:01Z",
+      "status": "active"
+    },
+    "rel:pset:building:cubicasa-high-quality-architectural-333-val-region-01:AutoAutoCAD_ModelProvenance": {
+      "ifc_guid": "3kmUfry9nKIOErJ2KgfRhn",
+      "uuid": "eec1ea75-f09c-5449-83b5-4c252aa5baf1",
+      "ifc_class": "IfcRelDefinesByProperties",
+      "first_assigned_utc": "2026-09-28T18:37:01Z",
+      "status": "active"
+    },
+    "rel:pset:opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02:AutoAutoCAD_Provenance": {
+      "ifc_guid": "0blizgAl1O8uKh0rsao9A$",
+      "uuid": "25becf6a-2af0-5823-852b-035da4c892bf",
+      "ifc_class": "IfcRelDefinesByProperties",
+      "first_assigned_utc": "2026-09-28T18:37:01Z",
+      "status": "active"
+    },
+    "rel:pset:storey:cubicasa-high-quality-architectural-333-val-region-01:level-0:AutoAutoCAD_Provenance": {
+      "ifc_guid": "1P0T$kyW5P0OexjdHH1Y2x",
+      "uuid": "5901dfee-f201-5901-8a3b-b674510620bb",
+      "ifc_class": "IfcRelDefinesByProperties",
+      "first_assigned_utc": "2026-09-28T18:37:01Z",
+      "status": "active"
+    },
+    "rel:pset:wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002:AutoAutoCAD_Provenance": {
+      "ifc_guid": "31uiGgEdHP7wSUscvNHHHo",
+      "uuid": "c1e2c42a-3a74-591f-a71e-da6e57451472",
+      "ifc_class": "IfcRelDefinesByProperties",
+      "first_assigned_utc": "2026-09-28T18:37:01Z",
+      "status": "active"
+    },
+    "rel:pset:wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003:AutoAutoCAD_Provenance": {
+      "ifc_guid": "0EIXkiT3TGI9wxLTIBoUuX",
+      "uuid": "0e4a1bac-7437-5048-9ebb-55d48bc9ee21",
+      "ifc_class": "IfcRelDefinesByProperties",
+      "first_assigned_utc": "2026-09-28T18:37:01Z",
+      "status": "active"
+    },
+    "rel:pset:wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004:AutoAutoCAD_Provenance": {
+      "ifc_guid": "12ZmMdMN9OFxJ31txQCncb",
+      "uuid": "428f05a7-5972-583f-b4c3-077eda3319a5",
+      "ifc_class": "IfcRelDefinesByProperties",
+      "first_assigned_utc": "2026-09-28T18:37:01Z",
+      "status": "active"
+    },
+    "rel:pset:wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012:AutoAutoCAD_Provenance": {
+      "ifc_guid": "1injRFIHnRHgm8qcaQrf12",
+      "uuid": "6cc6d6cf-491c-5b46-ac08-d2691ad69042",
+      "ifc_class": "IfcRelDefinesByProperties",
+      "first_assigned_utc": "2026-09-28T18:37:01Z",
+      "status": "active"
+    },
+    "rel:voids:opening:cubicasa-high-quality-architectural-333-val-region-01:door_opening-c02": {
+      "ifc_guid": "32BTyALjHPUuz2Nji4uRS$",
+      "uuid": "c22ddf0a-56d4-597b-8f42-5edb04e1b73f",
+      "ifc_class": "IfcRelVoidsElement",
+      "first_assigned_utc": "2026-09-28T18:37:01Z",
+      "status": "active"
+    },
+    "site:cubicasa-high-quality-architectural-333-val-region-01": {
+      "ifc_guid": "39oJbR2BHJLRfWIWq71qnP",
+      "uuid": "c9c9395b-08b4-5355-ba60-4a0d07074c59",
+      "ifc_class": "IfcSite",
+      "first_assigned_utc": "2026-09-28T18:37:01Z",
+      "status": "active"
+    },
+    "storey:cubicasa-high-quality-architectural-333-val-region-01:level-0": {
+      "ifc_guid": "3yiujcvSbMF9e3MX9jISnh",
+      "uuid": "fcb38b66-e5c9-563c-9a03-5a126d49cc6b",
+      "ifc_class": "IfcBuildingStorey",
+      "first_assigned_utc": "2026-09-28T18:37:01Z",
+      "status": "active"
+    },
+    "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_002": {
+      "ifc_guid": "1XkaxwpSjJ8Qnf5B_jRxg1",
+      "uuid": "61ba4efa-cdcb-5321-ac69-14bfad6fba81",
+      "ifc_class": "IfcWall",
+      "first_assigned_utc": "2026-09-28T18:37:01Z",
+      "status": "active"
+    },
+    "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_003": {
+      "ifc_guid": "3d2OAZpCHGUAZ91g4AXd7s",
+      "uuid": "e70982a3-ccc4-5078-a8c9-06a10a8671f6",
+      "ifc_class": "IfcWall",
+      "first_assigned_utc": "2026-09-28T18:37:01Z",
+      "status": "active"
+    },
+    "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_004": {
+      "ifc_guid": "1b$tabjrHGbPd9xW5BjLOQ",
+      "uuid": "65ff7925-b754-5095-99c9-ee014bb5561a",
+      "ifc_class": "IfcWall",
+      "first_assigned_utc": "2026-09-28T18:37:01Z",
+      "status": "active"
+    },
+    "wall:cubicasa-high-quality-architectural-333-val-region-01:wall_012": {
+      "ifc_guid": "11mnaExH9O2vr$qGRs3ceQ",
+      "uuid": "41c3190e-ed12-580b-9d7f-d106f60e6a1a",
+      "ifc_class": "IfcWall",
+      "first_assigned_utc": "2026-09-28T18:37:01Z",
+      "status": "active"
+    }
+  }
+}

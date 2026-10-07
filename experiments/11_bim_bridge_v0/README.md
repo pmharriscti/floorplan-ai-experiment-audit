@@ -13,16 +13,15 @@ with the segmentation experiments in this repository. Its pixel-metric scoreboar
 | Milestone | Status |
 | --- | --- |
 | Technical exporter, shown on synthetic geometry | **PASS** |
-| Reviewed prediction bridge | **PARTIAL**: not demonstrated. Gates not passed: G2, G6 |
+| Reviewed prediction bridge | **PARTIAL**: not demonstrated. Gate not passed: G2 (scale). G6 now **PASS** (2026-10-01 review) |
 | Downstream application or viewer acceptance | **NOT_RUN** |
 
-**The reviewed-prediction IFC milestone remains partial. It was not demonstrated.** The technical chain from
-saved predictions to inspectable IFC objects works on unreviewed candidates. No review has been
-applied to the geometry, the drawing has no scale evidence, and nobody has opened the file in a viewer.
+**The reviewed-prediction IFC milestone remains partial. It was not demonstrated.** All five real objects
+are now human-reviewed and a reviewed-preview IFC exists, so gate G6 passes. The drawing still has no scale
+evidence (G2), and no viewer inspection has been recorded (G7).
 
-**Update 2026-09-29.** A human review is in progress. Decisions for 2 of 5 objects are recorded in a draft
-review record. The record is incomplete and was not applied. The milestones and gates above are unchanged.
-See [Human Review Follow-up](#human-review-follow-up-2026-09-29).
+**Update 2026-10-01 to 2026-10-07.** The review was completed and applied, a reviewed-preview IFC was exported
+and verified, and the gates were recomputed. See [Human Review Completed and Applied](#human-review-completed-and-applied-2026-10-01).
 
 These three milestones are different results. A pass on one is not a pass on another.
 
@@ -120,7 +119,7 @@ the scale is not evidenced and that no object was reviewed by a person.
 | G3 | Schema and geometry checks pass | **PASS** |
 | G4 | IFC identities, relationships, and properties survive reopening | **PASS** |
 | G5 | Uncertainty and assumptions are preserved | **PASS** |
-| G6 | Real prediction lineage and recorded human review are established | **BLOCKED** |
+| G6 | Real prediction lineage and recorded human review are established | **BLOCKED** (2026-09-28); **PASS** after the review was applied (2026-10-01, [results/gates_02.json](results/gates_02.json)) |
 | G7 | Actual target application/viewer inspection is recorded | **NOT_RUN** |
 
 | Measure | Count |
@@ -156,7 +155,61 @@ bridge correctly refuses or flags bad input.
 web-ifc, a second IFC engine, parsed and tessellated both files: synthetic 23 of 23 checks, real preview 19 of 19.
 **This is a parser check. It is not a viewer test.**
 
+## Human Review Completed and Applied (2026-10-01)
+
+The review that was in progress on 2026-09-29 was completed. Every object has an explicit decision from the
+reviewer, `Paul Harris`, in the role `Prototype image-space geometry reviewer`. The review covers visual agreement with the
+source drawing for a limited prototype preview. It does not certify real-world dimensions, construction
+suitability or inspection readiness. The decision files were written by an AI assistant from the reviewer's
+instructions; the reviewer did not sign them.
+
+| Object | Decision | Human edits |
+| --- | --- | --- |
+| `wall_002` | `ACCEPT_WITH_EDITS` | axis_px.start |
+| `wall_003` | `ACCEPT` | none |
+| `wall_004` | `ACCEPT` | none |
+| `wall_012` | `ACCEPT_WITH_EDITS` | axis_px.start, axis_px.end |
+| `door_opening-c02` | `ACCEPT` | none |
+
+- The completed record passed the review validator with no problems and was applied with `bim-bridge apply-review`.
+  The reviewer chose the reviewer name and the completion time when asked; the record says so.
+- The metric export stays **BLOCKED** on scale. A **reviewed-preview IFC** was exported into a new folder; the earlier
+  unreviewed preview is unchanged. The IFC is not committed; its path and SHA-256 are in [provenance.json](provenance.json).
+- Checks on the reviewed-preview IFC: bridge checks 143 passed, 1 warning (scale not evidenced), 0 failed;
+  independent web-ifc parse 19 of 19; reopen-and-compare verification 73 of 73
+  ([results/review_followup/export_reviewed_preview/review_verification_02.json](results/review_followup/export_reviewed_preview/review_verification_02.json)).
+- The verification confirms the two authorised edits (wall_012 axis x 305.5; wall_002 start x 233), unchanged geometry
+  for the three unedited objects, identical GlobalIds, the partial-wall note on wall_002 in `ReviewDecisionNotes`, the
+  endpoint edit in `Edits`, the original geometry in `CandidateOriginal`, and the door opening voiding wall_003 with the
+  expected volume removed.
+- **Junction contact, reported separately from IFC relationships.** In plan, wall_012 overlaps its three neighbours
+  (wall_002-wall_012 18.0 px², wall_003-wall_012 18.0 px², wall_004-wall_012 1.98 px²). The file holds **no**
+  explicit wall-connection relationship (`IfcRelConnects...`); none was added.
+
+### Gates recomputed (2026-10-07)
+
+The bridge's `finalize` command chose the first `export_*` folder alphabetically, which was the unreviewed preview.
+It now chooses by review status (reviewed metric, then reviewed preview, then unreviewed preview), and the report
+text follows the applied review. All 130 bridge tests pass after the change. The earlier `gates.json`,
+`FINAL_REPORT.md` and `PM_SUMMARY.md` are unchanged; the new results are numbered `_02`.
+
+| Gate | 2026-09-28 | Recomputed 2026-10-07 |
+| --- | --- | --- |
+| G1 | PASS | **PASS** |
+| G2 | BLOCKED | **BLOCKED** |
+| G3 | PASS | **PASS** |
+| G4 | PASS | **PASS** |
+| G5 | PASS | **PASS** |
+| G6 | BLOCKED | **PASS** |
+| G7 | NOT_RUN | **NOT_RUN** |
+
+Milestones after recomputation: technical exporter **PASS**, reviewed prediction bridge
+**PARTIAL** (blocked on G2), downstream application acceptance **NOT_RUN**.
+New reports: [results/source_FINAL_REPORT_02.md](results/source_FINAL_REPORT_02.md), [results/source_PM_SUMMARY_02.md](results/source_PM_SUMMARY_02.md).
+
 ## Human Review Follow-up (2026-09-29)
+
+*Historical: this section describes the review while it was in progress. It is superseded by the section above.*
 
 The run was continued on 2026-09-29. It was not re-run, and its earlier evidence was not replaced. Every file
 that existed in the run before the follow-up is byte-identical, checked against the run's `checksums.sha256`.
@@ -227,8 +280,8 @@ no viewer was run.
 
 - **Human inputs in the run of 2026-09-28: none.** No reviewer, review date or approval existed, and none was
   invented.
-- **Human inputs on 2026-09-29.** The reviewer proposed and approved two axis edits and stated a reviewer
-  role. They are held in a draft record and are not applied. See the follow-up section above.
+- **Human inputs on 2026-09-29 to 2026-10-01.** The reviewer decided all five objects (two accepted with axis edits,
+  three accepted unchanged) and stated a reviewer role. The completed record was applied on 2026-10-01.
 - **Agent inputs.** An AI assistant chose the wall selection and read the area label `1 H+K+S 39.5 M2` from
   the source image. Both are recorded in the run configuration. An agent input is not a review.
 - **One edit by an automated rule.** The vectorizer proposed a thickness of 40 px for `wall_012`, which is
@@ -245,8 +298,8 @@ no viewer was run.
 ## Interpretation
 
 Outcome label `partial_downstream_integration`. The exporter works, and the chain from a saved prediction to individually
-identifiable, property-carrying IFC objects works end to end. That is a technical result on unreviewed
-candidates. It is not the reviewed-prediction milestone.
+identifiable, property-carrying IFC objects works end to end, and since 2026-10-01 on human-reviewed geometry
+(G6 PASS). It is not yet the reviewed-prediction milestone, because the plan scale is not evidenced (G2).
 
 The experiment also found a defect in reused code. The vectorizer's thickness is unreliable for thin
 partitions, and the bridge now measures thickness on the predicted mask.
@@ -255,8 +308,8 @@ partitions, and the bridge now measures thickness on the predicted mask.
 
 - No new wall IoU, no segmentation improvement, no training comparison and no broad reliability claim.
 - No dimensional accuracy. No reference geometry was used, so accuracy is unknown. It is not zero error.
-- No applied human review, no evidenced plan scale, no viewer inspection, no target application. Decisions
-  for 2 of 5 objects exist in a draft record only.
+- No evidenced plan scale, no viewer inspection, no target application. The applied review is image-space
+  agreement with the drawing for a preview, not a check of the building.
 - No semantic confidence, because upstream saved no probability maps.
 - One region of one validation sample. Nothing here generalises.
 - Wall joins are not resolved, so summed wall volumes are not a quantity take-off.
@@ -264,20 +317,18 @@ partitions, and the bridge now measures thickness on the predicted mask.
 
 ## Next Smallest Actions
 
-1. **G6.** The reviewer decides the three pending objects, `wall_003`, `wall_004` and `door_opening-c02`, and
-   confirms the reviewer name. The completed record is then applied with `bim-bridge apply-review`, and a new
-   IFC revision is exported beside the earlier one and checked.
-2. **G2.** A person supplies or confirms a plan scale with its evidence, in the same record.
-3. **G7.** A person opens the IFC in the target application or a viewer and records the result, following
+1. **G2.** A person supplies or confirms a plan scale with its evidence. With an evidenced scale the metric export
+   is no longer blocked.
+2. **G7.** A person opens the IFC in the target application or a viewer and records the result, following
    [results/real_VIEWER_INSPECTION_STEPS.md](results/real_VIEWER_INSPECTION_STEPS.md). The target BIM application has to be named first.
 
 ## Publication Status
 
 This entry was published to `origin/main` on 2026-09-28, after the repository owner authorised publication. Its commit is in the repository history.
 
-The entry was updated on 2026-09-29 with the human-review follow-up, after the repository owner asked for the update.
+The entry was updated on 2026-09-29 with the human-review follow-up, and on 2026-10-07 with the completed and applied review and the recomputed gates, each time after the repository owner asked for the update.
 
-Publishing the audit entry does not change the experiment's outcome. The reviewed-prediction milestone is still partial, and gates G2, G6 and G7 are still open.
+Publishing the audit entry does not change the experiment's outcome. The reviewed-prediction milestone is still partial: gate G2 is blocked on scale and G7 is not run. G6 passes since 2026-10-01.
 
 Files under `results/` are unchanged copies of the run's outputs, so they describe the state at the time they were written. Where a copied file says the geometry or the audit is not published, it is describing that earlier moment.
 

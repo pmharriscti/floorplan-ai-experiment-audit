@@ -1,0 +1,108 @@
+# bim_bridge_pm_comparison_v0: how does the frozen Phase 5 multi-head model plus the IFC bridge behave on a few CubiCasa5K
+# test plans and on a few AI-generated plans? A side-by-side illustration for the PM. NOT a benchmark; nine images.
+# No training, no threshold selection, no scale confirmation, no human review in this run.
+experiment_id: bim_bridge_pm_comparison_v0
+goal: "Show, side by side, what the frozen Phase 5 model and the bim_bridge_v0 chain produce on CubiCasa5K test plans (with ground truth) and on AI-generated plans (no ground truth): masks, candidate geometry, candidate IFC previews, and accuracy metrics where labels exist."
+contract_experiment_id_note: "building_model.json carries experiment_id 'bim_bridge_v0' because contract 0.2 fixes that constant; the run_id identifies this experiment."
+model_id_prefix: pm            # fallback only; each input group sets its own prefix
+
+storage:
+  run_root: /mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0
+
+input_groups:
+  cubicasa_test:
+    kind: cubicasa_saved_predictions
+    label: "CubiCasa5K v4 test split; saved Phase 5 predictions (no new inference); ground truth exists"
+    model_id_prefix: cc
+    split_label: test
+    manifest: /mnt/e/AI_Team/mitunet/derived_data/mitunet_hierarchical_multihead_512/manifests/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/test_manifest.csv
+    count: 3
+    selection: "random.Random(42).sample over the 400 test sample_ids in manifest order; chosen before any output was seen; sample 333 is a val sample and cannot appear"
+    seed: 42
+    exclude_sample_ids: []
+  synth_images_commercial:
+    kind: external_folder_fresh_inference
+    label: "AI-generated plans (commercial), folder synth_images_commercial; fresh frozen inference; no ground truth"
+    model_id_prefix: com
+    split_label: external_ai_generated_image
+    folder: /mnt/e/AI_Team/mitunet/experiments/synth_images_commercial
+    windows_folder: 'E:\AI_Team\mitunet\experiments\synth_images_commercial'
+    selection: "every supported raster in the folder, sorted by file name; none left out"
+    supported_extensions: [png, jpg, jpeg, tif, tiff, bmp]
+    read_only: true
+  synth_images_prior_run:
+    kind: reference_to_earlier_run
+    label: "AI-generated plans (residential and mixed), folder synth_images; results of run bim_bridge_synth_images_v0_20261002_200115_UTC are referenced, not re-run"
+    run_dir: /mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC
+    include_sample_keys: [img-01, img-02, img-03]
+    selection: "the first three images in that run's frozen file-name order; not chosen by content or result"
+
+reused_bridge:
+  workspace: /home/pmharris/dev/bim_bridge_v0
+  bridge_version: "0.2.0"
+  contract: bim_bridge.building_model/0.2
+  adapter_origin: /home/pmharris/dev/bim_bridge_synth_images_v0 (scripts copied; prepare_inputs.py, build_pm_comparison.py new; small adaptations recorded in the adapter code identity)
+  not_copied_from_other_samples: ["wall selection", "review decisions", "scale estimates", "axis shifts", "endpoint extensions", "any thickness value"]
+
+upstream:
+  run_dir: /mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED
+  mitunet_repo: /home/pmharris/dev/mitunet
+  mitunet_python: /home/pmharris/dev/mitunet/.venv/bin/python
+  prior_bridge_run: /mnt/e/AI_Team/mitunet/experiments/bim_bridge_v0/bim_bridge_v0_20260928_183649_UTC
+  per_image_metrics_dir: /mnt/e/AI_Team/mitunet/experiments/mitunet_hierarchical_multihead_512/mitunet_hierarchical_multihead_512_20260923_181223_UTC_NOAUG_FIXED/metrics
+
+ifc:
+  schema: IFC4
+  schema_basis: "Prototype choice. No receiving BIM application or accepted IFC schema is documented in the inspected repositories."
+  target_application: null
+  target_compatibility: UNVERIFIED
+  opening_body_overcut_m: 0.01
+
+tolerances:
+  implementation:
+    length_m: 1.0e-4
+    volume_relative: 1.0e-4
+    direction: 1.0e-9
+    min_wall_length_m: 0.05
+    max_wall_length_m: 500.0
+    max_wall_thickness_m: 2.0
+    max_wall_height_m: 30.0
+    aperture_fit_m: 1.0e-9
+  business_acceptance: null
+
+# Same pilot preview profile for every source, so the three groups are drawn the same way. Visualization defaults, NOT measurements.
+preview_profile:
+  name: pilot_preview_profile_v0
+  metres_per_original_px: 0.01
+  storey_elevation_m: 0.0
+  wall_base_elevation_m: 0.0
+  wall_height_m: 2.7
+  apertures:
+    door_opening: {bottom_elevation_m: 0.0, height_m: 2.1}
+
+candidate_rules:
+  thickness_disagreement_px: 2.0
+  thickness_sample_margin_px: 6
+  min_axis_support_ratio: 0.9
+  aperture_host_band_px: 4.0
+  min_aperture_component_px: 20
+
+heads:
+  wall_head: structural_wall
+  aperture_head: door_opening
+  recorded_not_exported: [window_opening]
+
+vectorizer:
+  repo: /home/pmharris/dev/synth_gen_door_window/floorplan-synth
+  module: floorplan_synth.vectorization.postprocess.postprocess_wall_mask
+  config: configs/wall_postprocess.yaml
+  opencv_pin: "4.13.0.92"
+
+diagnostics:
+  uncovered_skeleton_min_run_px: 10
+  endpoint_probe_px: [3, 8]
+  junction_tolerance_px: 2.0
+
+focus_review:
+  target_objects: [5, 10]
+  rule: "not used in this run: no focus region is built and no review is requested"

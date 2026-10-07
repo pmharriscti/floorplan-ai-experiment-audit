@@ -1,0 +1,9 @@
+{
+  "experiment_id": "bim_bridge_pm_comparison_v0",
+  "run_id": "bim_bridge_pm_comparison_v0_20261006_130747_UTC",
+  "stage": "prepare_candidates",
+  "status": "FAIL",
+  "written_utc": "2026-10-06T13:12:21Z",
+  "sample_key": "cc-02",
+  "error": "TypeError: float() argument must be a string or a real number, not 'NoneType'"
+}

@@ -1,0 +1,1925 @@
+{
+  "experiment_id": "bim_bridge_pm_comparison_v0",
+  "run_id": "bim_bridge_pm_comparison_v0_20261006_130747_UTC",
+  "stage": "prepare_candidates",
+  "status": "PASS",
+  "written_utc": "2026-10-06T19:16:55Z",
+  "sample_key": "cc-03",
+  "candidates_folder": "candidates_r04",
+  "repair": [
+    {
+      "rule": "R2_extend",
+      "wall": "wall_001",
+      "end": "end",
+      "extension_px": 5
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_001",
+      "after": "R2 extension of end",
+      "offset_px": 0.5,
+      "max_move_px": 0.5
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_001",
+      "end": "start",
+      "extension_px": 4
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_001",
+      "after": "R2 extension of start",
+      "offset_px": -0.5,
+      "max_move_px": 0.5
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_002",
+      "end": "end",
+      "extension_px": 3
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_002",
+      "end": "start",
+      "extension_px": 6
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_003",
+      "end": "end",
+      "extension_px": 5
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_004",
+      "end": "end",
+      "extension_px": 2
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_004",
+      "after": "R2 extension of end",
+      "offset_px": -0.5,
+      "max_move_px": 0.5
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_004",
+      "end": "start",
+      "extension_px": 3
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_004",
+      "after": "R2 extension of start",
+      "offset_px": 0.5,
+      "max_move_px": 0.5
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_005",
+      "end": "end",
+      "extension_px": 3
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_005",
+      "after": "R2 extension of end",
+      "offset_px": 1.0,
+      "max_move_px": 1.0
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_006",
+      "end": "end",
+      "extension_px": 3
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_006",
+      "end": "start",
+      "extension_px": 11
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_007",
+      "end": "end",
+      "extension_px": 5
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_007",
+      "end": "start",
+      "extension_px": 4
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_008",
+      "end": "end",
+      "extension_px": 15
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_008",
+      "after": "R2 extension of end",
+      "offset_px": -0.5,
+      "max_move_px": 0.812
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_008",
+      "end": "start",
+      "extension_px": 4
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_008",
+      "after": "R2 extension of start",
+      "offset_px": 0.5,
+      "max_move_px": 0.5
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_009",
+      "end": "end",
+      "extension_px": 4
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_009",
+      "after": "R2 extension of end",
+      "offset_px": 0.0,
+      "max_move_px": 0.254
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_009",
+      "end": "start",
+      "extension_px": 6
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_010",
+      "end": "end",
+      "extension_px": 4
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_010",
+      "after": "R2 extension of end",
+      "offset_px": 1.0,
+      "max_move_px": 1.0
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_010",
+      "end": "start",
+      "extension_px": 5
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_011",
+      "end": "end",
+      "extension_px": 6
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_011",
+      "after": "R2 extension of end",
+      "offset_px": 1.5,
+      "max_move_px": 1.5
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_011",
+      "end": "start",
+      "extension_px": 2
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_011",
+      "after": "R2 extension of start",
+      "offset_px": 0.5,
+      "max_move_px": 0.5
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_012",
+      "end": "end",
+      "extension_px": 2
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_013",
+      "end": "end",
+      "extension_px": 2
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_013",
+      "end": "start",
+      "extension_px": 2
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_014",
+      "end": "end",
+      "extension_px": 4
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_014",
+      "after": "R2 extension of end",
+      "offset_px": 1.0,
+      "max_move_px": 1.0
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_014",
+      "end": "start",
+      "extension_px": 14
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_015",
+      "end": "start",
+      "extension_px": 40
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_015",
+      "after": "R2 extension of start",
+      "offset_px": -0.5,
+      "max_move_px": 0.5
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_016",
+      "end": "end",
+      "extension_px": 40
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_016",
+      "after": "R2 extension of end",
+      "offset_px": -0.5,
+      "max_move_px": 0.5
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_016",
+      "end": "start",
+      "extension_px": 4
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_016",
+      "after": "R2 extension of start",
+      "offset_px": 0.5,
+      "max_move_px": 0.5
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_017",
+      "end": "end",
+      "extension_px": 20
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_017",
+      "after": "R2 extension of end",
+      "offset_px": -0.5,
+      "max_move_px": 0.877
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_017",
+      "end": "start",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_018",
+      "end": "end",
+      "extension_px": 6
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_018",
+      "after": "R2 extension of end",
+      "offset_px": 0.5,
+      "max_move_px": 0.5
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_018",
+      "end": "start",
+      "extension_px": 5
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_014",
+      "after": "R1 merge with wall_015",
+      "offset_px": -0.5,
+      "max_move_px": 0.5
+    },
+    {
+      "rule": "R1_merge",
+      "kept": "wall_014",
+      "merged": "wall_015",
+      "gap_px": -43.0,
+      "gap_support": 1.0,
+      "axis_offset_px": 1.667
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_016",
+      "after": "R1 merge with wall_017",
+      "offset_px": -0.5,
+      "max_move_px": 0.5
+    },
+    {
+      "rule": "R1_merge",
+      "kept": "wall_016",
+      "merged": "wall_017",
+      "gap_px": -79.99,
+      "gap_support": 1.0,
+      "axis_offset_px": 0.248
+    }
+  ],
+  "merged_walls": [
+    "wall_015",
+    "wall_017"
+  ],
+  "model_id": "cc-high-quality-architectural--2539-p01",
+  "outcome": "WALLS_AND_HOSTED_OPENINGS",
+  "scope": "WHOLE_PLAN_ATTEMPT",
+  "upstream_walls": 18,
+  "candidate_walls": 16,
+  "excluded_walls": [],
+  "apertures": 10,
+  "openings_not_exported": 9,
+  "automated_edits": [
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_001",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            54.0,
+            47.5
+          ],
+          "end": [
+            457.5,
+            47.5
+          ]
+        },
+        "thickness_px": 10.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            54.0,
+            47.5
+          ],
+          "end": [
+            462.5,
+            47.5
+          ]
+        },
+        "thickness_px": 10.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_001",
+      "field": "repair:R3_recentre",
+      "before": {
+        "axis_px": {
+          "start": [
+            54.0,
+            47.5
+          ],
+          "end": [
+            462.5,
+            47.5
+          ]
+        },
+        "thickness_px": 10.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            54.0,
+            48.0
+          ],
+          "end": [
+            462.5,
+            48.0
+          ]
+        },
+        "thickness_px": 10.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_001",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            54.0,
+            48.0
+          ],
+          "end": [
+            462.5,
+            48.0
+          ]
+        },
+        "thickness_px": 10.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            50.0,
+            48.0
+          ],
+          "end": [
+            462.5,
+            48.0
+          ]
+        },
+        "thickness_px": 10.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_001",
+      "field": "repair:R3_recentre",
+      "before": {
+        "axis_px": {
+          "start": [
+            50.0,
+            48.0
+          ],
+          "end": [
+            462.5,
+            48.0
+          ]
+        },
+        "thickness_px": 10.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            50.0,
+            47.5
+          ],
+          "end": [
+            462.5,
+            47.5
+          ]
+        },
+        "thickness_px": 10.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_002",
+      "field": "thickness",
+      "before": {
+        "thickness_px": 8.0
+      },
+      "after": {
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_002",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            292.0,
+            128.0
+          ],
+          "end": [
+            386.16666666666663,
+            128.0
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            292.0,
+            128.0
+          ],
+          "end": [
+            389.16666666666663,
+            128.0
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_002",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            292.0,
+            128.0
+          ],
+          "end": [
+            389.16666666666663,
+            128.0
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            286.0,
+            128.0
+          ],
+          "end": [
+            389.16666666666663,
+            128.0
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_003",
+      "field": "thickness",
+      "before": {
+        "thickness_px": 40.0
+      },
+      "after": {
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_003",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            386.16666666666663,
+            144.0
+          ],
+          "end": [
+            457.5,
+            144.0
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            386.16666666666663,
+            144.0
+          ],
+          "end": [
+            462.5,
+            144.0
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_004",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            54.0,
+            160.625
+          ],
+          "end": [
+            258.0,
+            160.625
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            54.0,
+            160.625
+          ],
+          "end": [
+            260.0,
+            160.625
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_004",
+      "field": "repair:R3_recentre",
+      "before": {
+        "axis_px": {
+          "start": [
+            54.0,
+            160.625
+          ],
+          "end": [
+            260.0,
+            160.625
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            54.0,
+            160.125
+          ],
+          "end": [
+            260.0,
+            160.125
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_004",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            54.0,
+            160.125
+          ],
+          "end": [
+            260.0,
+            160.125
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            51.0,
+            160.125
+          ],
+          "end": [
+            260.0,
+            160.125
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_004",
+      "field": "repair:R3_recentre",
+      "before": {
+        "axis_px": {
+          "start": [
+            51.0,
+            160.125
+          ],
+          "end": [
+            260.0,
+            160.125
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            51.0,
+            160.625
+          ],
+          "end": [
+            260.0,
+            160.625
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_005",
+      "field": "thickness",
+      "before": {
+        "thickness_px": 9.5
+      },
+      "after": {
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_005",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            320.0,
+            183.0
+          ],
+          "end": [
+            386.16666666666663,
+            183.0
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            320.0,
+            183.0
+          ],
+          "end": [
+            389.16666666666663,
+            183.0
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_005",
+      "field": "repair:R3_recentre",
+      "before": {
+        "axis_px": {
+          "start": [
+            320.0,
+            183.0
+          ],
+          "end": [
+            389.16666666666663,
+            183.0
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            320.0,
+            184.0
+          ],
+          "end": [
+            389.16666666666663,
+            184.0
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_006",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            126.04166666666666,
+            225.0
+          ],
+          "end": [
+            189.0,
+            225.0
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            126.04166666666666,
+            225.0
+          ],
+          "end": [
+            192.0,
+            225.0
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_006",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            126.04166666666666,
+            225.0
+          ],
+          "end": [
+            192.0,
+            225.0
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            115.04166666666666,
+            225.0
+          ],
+          "end": [
+            192.0,
+            225.0
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_007",
+      "field": "thickness",
+      "before": {
+        "thickness_px": 32.5
+      },
+      "after": {
+        "thickness_px": 9.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_007",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            389.375,
+            226.0
+          ],
+          "end": [
+            457.5,
+            226.0
+          ]
+        },
+        "thickness_px": 9.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            389.375,
+            226.0
+          ],
+          "end": [
+            462.5,
+            226.0
+          ]
+        },
+        "thickness_px": 9.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_007",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            389.375,
+            226.0
+          ],
+          "end": [
+            462.5,
+            226.0
+          ]
+        },
+        "thickness_px": 9.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            385.375,
+            226.0
+          ],
+          "end": [
+            462.5,
+            226.0
+          ]
+        },
+        "thickness_px": 9.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_008",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            54.0,
+            227.5
+          ],
+          "end": [
+            114.0,
+            228.0
+          ]
+        },
+        "thickness_px": 10.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            54.0,
+            227.5
+          ],
+          "end": [
+            128.99947919379184,
+            228.12499565994827
+          ]
+        },
+        "thickness_px": 10.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_008",
+      "field": "repair:R3_recentre",
+      "before": {
+        "axis_px": {
+          "start": [
+            54.0,
+            227.5
+          ],
+          "end": [
+            128.99947919379184,
+            228.12499565994827
+          ]
+        },
+        "thickness_px": 10.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            54.00416652199828,
+            227.31251519018105
+          ],
+          "end": [
+            129.00364571579013,
+            227.31251519018105
+          ]
+        },
+        "thickness_px": 10.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_008",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            54.00416652199828,
+            227.31251519018105
+          ],
+          "end": [
+            129.00364571579013,
+            227.31251519018105
+          ]
+        },
+        "thickness_px": 10.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            50.00416652199828,
+            227.31251519018105
+          ],
+          "end": [
+            129.00364571579013,
+            227.31251519018105
+          ]
+        },
+        "thickness_px": 10.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_008",
+      "field": "repair:R3_recentre",
+      "before": {
+        "axis_px": {
+          "start": [
+            50.00416652199828,
+            227.31251519018105
+          ],
+          "end": [
+            129.00364571579013,
+            227.31251519018105
+          ]
+        },
+        "thickness_px": 10.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            50.00416652199828,
+            227.81251519018105
+          ],
+          "end": [
+            129.00364571579013,
+            227.81251519018105
+          ]
+        },
+        "thickness_px": 10.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_009",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            126.04166666666666,
+            380.5
+          ],
+          "end": [
+            391.0,
+            381.0
+          ]
+        },
+        "thickness_px": 9.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            126.04166666666666,
+            380.5
+          ],
+          "end": [
+            394.999992877808,
+            381.00754834321964
+          ]
+        },
+        "thickness_px": 9.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_009",
+      "field": "repair:R3_recentre",
+      "before": {
+        "axis_px": {
+          "start": [
+            126.04166666666666,
+            380.5
+          ],
+          "end": [
+            394.999992877808,
+            381.00754834321964
+          ]
+        },
+        "thickness_px": 9.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            126.04166666666666,
+            380.75377417160985
+          ],
+          "end": [
+            394.999992877808,
+            380.75377417160985
+          ]
+        },
+        "thickness_px": 9.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_009",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            126.04166666666666,
+            380.75377417160985
+          ],
+          "end": [
+            394.999992877808,
+            380.75377417160985
+          ]
+        },
+        "thickness_px": 9.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            120.04166666666666,
+            380.75377417160985
+          ],
+          "end": [
+            394.999992877808,
+            380.75377417160985
+          ]
+        },
+        "thickness_px": 9.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_010",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            54.0,
+            227.5
+          ],
+          "end": [
+            54.0,
+            47.5
+          ]
+        },
+        "thickness_px": 10.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            54.0,
+            227.5
+          ],
+          "end": [
+            54.0,
+            43.5
+          ]
+        },
+        "thickness_px": 10.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_010",
+      "field": "repair:R3_recentre",
+      "before": {
+        "axis_px": {
+          "start": [
+            54.0,
+            227.5
+          ],
+          "end": [
+            54.0,
+            43.5
+          ]
+        },
+        "thickness_px": 10.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            55.0,
+            227.5
+          ],
+          "end": [
+            55.0,
+            43.5
+          ]
+        },
+        "thickness_px": 10.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_010",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            55.0,
+            227.5
+          ],
+          "end": [
+            55.0,
+            43.5
+          ]
+        },
+        "thickness_px": 10.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            55.0,
+            232.5
+          ],
+          "end": [
+            55.0,
+            43.5
+          ]
+        },
+        "thickness_px": 10.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_011",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            126.04166666666666,
+            160.625
+          ],
+          "end": [
+            126.04166666666666,
+            380.5
+          ]
+        },
+        "thickness_px": 10.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            126.04166666666666,
+            160.625
+          ],
+          "end": [
+            126.04166666666666,
+            386.5
+          ]
+        },
+        "thickness_px": 10.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_011",
+      "field": "repair:R3_recentre",
+      "before": {
+        "axis_px": {
+          "start": [
+            126.04166666666666,
+            160.625
+          ],
+          "end": [
+            126.04166666666666,
+            386.5
+          ]
+        },
+        "thickness_px": 10.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            124.54166666666666,
+            160.625
+          ],
+          "end": [
+            124.54166666666666,
+            386.5
+          ]
+        },
+        "thickness_px": 10.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_011",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            124.54166666666666,
+            160.625
+          ],
+          "end": [
+            124.54166666666666,
+            386.5
+          ]
+        },
+        "thickness_px": 10.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            124.54166666666666,
+            158.625
+          ],
+          "end": [
+            124.54166666666666,
+            386.5
+          ]
+        },
+        "thickness_px": 10.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_011",
+      "field": "repair:R3_recentre",
+      "before": {
+        "axis_px": {
+          "start": [
+            124.54166666666666,
+            158.625
+          ],
+          "end": [
+            124.54166666666666,
+            386.5
+          ]
+        },
+        "thickness_px": 10.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            124.04166666666666,
+            158.625
+          ],
+          "end": [
+            124.04166666666666,
+            386.5
+          ]
+        },
+        "thickness_px": 10.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_012",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            200.0,
+            160.625
+          ],
+          "end": [
+            200.0,
+            34.0
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            200.0,
+            160.625
+          ],
+          "end": [
+            200.0,
+            32.0
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_013",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            320.0,
+            183.0
+          ],
+          "end": [
+            320.0,
+            34.0
+          ]
+        },
+        "thickness_px": 5.5
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            320.0,
+            183.0
+          ],
+          "end": [
+            320.0,
+            32.0
+          ]
+        },
+        "thickness_px": 5.5
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_013",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            320.0,
+            183.0
+          ],
+          "end": [
+            320.0,
+            32.0
+          ]
+        },
+        "thickness_px": 5.5
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            320.0,
+            185.0
+          ],
+          "end": [
+            320.0,
+            32.0
+          ]
+        },
+        "thickness_px": 5.5
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_014",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            384.0,
+            105.0
+          ],
+          "end": [
+            384.0,
+            47.5
+          ]
+        },
+        "thickness_px": 9.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            384.0,
+            105.0
+          ],
+          "end": [
+            384.0,
+            43.5
+          ]
+        },
+        "thickness_px": 9.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_014",
+      "field": "repair:R3_recentre",
+      "before": {
+        "axis_px": {
+          "start": [
+            384.0,
+            105.0
+          ],
+          "end": [
+            384.0,
+            43.5
+          ]
+        },
+        "thickness_px": 9.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            385.0,
+            105.0
+          ],
+          "end": [
+            385.0,
+            43.5
+          ]
+        },
+        "thickness_px": 9.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_014",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            385.0,
+            105.0
+          ],
+          "end": [
+            385.0,
+            43.5
+          ]
+        },
+        "thickness_px": 9.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            385.0,
+            119.0
+          ],
+          "end": [
+            385.0,
+            43.5
+          ]
+        },
+        "thickness_px": 9.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_014",
+      "field": "repair:R1_merge",
+      "before": {
+        "kept": {
+          "id": "wall_014",
+          "axis_px": {
+            "start": [
+              385.0,
+              119.0
+            ],
+            "end": [
+              385.0,
+              43.5
+            ]
+          },
+          "thickness_px": 9.0,
+          "thickness_source": "vectorizer",
+          "thickness_basis": "Vectorizer thickness 9.0 px, consistent with 8.0 px measured on the predicted structural_wall mask."
+        },
+        "merged": {
+          "id": "wall_015",
+          "axis_px": {
+            "start": [
+              386.66666666666663,
+              76.0
+            ],
+            "end": [
+              386.66666666666663,
+              204.0
+            ]
+          },
+          "thickness_px": 6.0,
+          "thickness_source": "vectorizer",
+          "thickness_basis": "Vectorizer thickness 6.0 px, consistent with 6.0 px measured on the predicted structural_wall mask."
+        }
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            386.04832104832104,
+            204.0
+          ],
+          "end": [
+            386.04832104832104,
+            43.5
+          ]
+        },
+        "thickness_px": 9.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_014",
+      "field": "repair:R3_recentre",
+      "before": {
+        "axis_px": {
+          "start": [
+            386.04832104832104,
+            204.0
+          ],
+          "end": [
+            386.04832104832104,
+            43.5
+          ]
+        },
+        "thickness_px": 9.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            385.54832104832104,
+            204.0
+          ],
+          "end": [
+            385.54832104832104,
+            43.5
+          ]
+        },
+        "thickness_px": 9.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_016",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            389.375,
+            226.0
+          ],
+          "end": [
+            389.375,
+            325.5
+          ]
+        },
+        "thickness_px": 11.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            389.375,
+            226.0
+          ],
+          "end": [
+            389.375,
+            365.5
+          ]
+        },
+        "thickness_px": 11.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_016",
+      "field": "repair:R3_recentre",
+      "before": {
+        "axis_px": {
+          "start": [
+            389.375,
+            226.0
+          ],
+          "end": [
+            389.375,
+            365.5
+          ]
+        },
+        "thickness_px": 11.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            389.875,
+            226.0
+          ],
+          "end": [
+            389.875,
+            365.5
+          ]
+        },
+        "thickness_px": 11.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_016",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            389.875,
+            226.0
+          ],
+          "end": [
+            389.875,
+            365.5
+          ]
+        },
+        "thickness_px": 11.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            389.875,
+            222.0
+          ],
+          "end": [
+            389.875,
+            365.5
+          ]
+        },
+        "thickness_px": 11.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_016",
+      "field": "repair:R3_recentre",
+      "before": {
+        "axis_px": {
+          "start": [
+            389.875,
+            222.0
+          ],
+          "end": [
+            389.875,
+            365.5
+          ]
+        },
+        "thickness_px": 11.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            389.375,
+            222.0
+          ],
+          "end": [
+            389.375,
+            365.5
+          ]
+        },
+        "thickness_px": 11.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_016",
+      "field": "repair:R1_merge",
+      "before": {
+        "kept": {
+          "id": "wall_016",
+          "axis_px": {
+            "start": [
+              389.375,
+              222.0
+            ],
+            "end": [
+              389.375,
+              365.5
+            ]
+          },
+          "thickness_px": 11.0,
+          "thickness_source": "vectorizer",
+          "thickness_basis": "Vectorizer thickness 11.0 px, consistent with 10.0 px measured on the predicted structural_wall mask."
+        },
+        "merged": {
+          "id": "wall_017",
+          "axis_px": {
+            "start": [
+              389.6233878086162,
+              285.5063286069257
+            ],
+            "end": [
+              389.6233878086162,
+              385.0047264921316
+            ]
+          },
+          "thickness_px": 10.0,
+          "thickness_source": "vectorizer",
+          "thickness_basis": "Vectorizer thickness 10.0 px, consistent with 10.0 px measured on the predicted structural_wall mask."
+        }
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            389.4767051520776,
+            222.0
+          ],
+          "end": [
+            389.4767051520776,
+            385.0047264921316
+          ]
+        },
+        "thickness_px": 11.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_016",
+      "field": "repair:R3_recentre",
+      "before": {
+        "axis_px": {
+          "start": [
+            389.4767051520776,
+            222.0
+          ],
+          "end": [
+            389.4767051520776,
+            385.0047264921316
+          ]
+        },
+        "thickness_px": 11.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            389.9767051520776,
+            222.0
+          ],
+          "end": [
+            389.9767051520776,
+            385.0047264921316
+          ]
+        },
+        "thickness_px": 11.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_018",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            457.5,
+            226.0
+          ],
+          "end": [
+            457.5,
+            47.5
+          ]
+        },
+        "thickness_px": 11.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            457.5,
+            226.0
+          ],
+          "end": [
+            457.5,
+            41.5
+          ]
+        },
+        "thickness_px": 11.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_018",
+      "field": "repair:R3_recentre",
+      "before": {
+        "axis_px": {
+          "start": [
+            457.5,
+            226.0
+          ],
+          "end": [
+            457.5,
+            41.5
+          ]
+        },
+        "thickness_px": 11.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            458.0,
+            226.0
+          ],
+          "end": [
+            458.0,
+            41.5
+          ]
+        },
+        "thickness_px": 11.0
+      }
+    },
+    {
+      "object_id": "wall:cc-high-quality-architectural--2539-p01:wall_018",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            458.0,
+            226.0
+          ],
+          "end": [
+            458.0,
+            41.5
+          ]
+        },
+        "thickness_px": 11.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            458.0,
+            231.0
+          ],
+          "end": [
+            458.0,
+            41.5
+          ]
+        },
+        "thickness_px": 11.0
+      }
+    },
+    {
+      "object_id": "opening:cc-high-quality-architectural--2539-p01:door_opening-c07",
+      "field": "offset_along_host",
+      "before": {
+        "along_host_px": [
+          -14.5,
+          17.5
+        ]
+      },
+      "after": {
+        "along_host_px": [
+          0.0,
+          17.5
+        ]
+      }
+    }
+  ],
+  "plan_diagnostics_summary": {
+    "predicted_wall_pixel_coverage_ratio": 0.9408352668213457,
+    "skeleton_coverage_ratio": 0.9474463360473723,
+    "candidate_pixels_outside_predicted_wall": 3297
+  },
+  "ground_truth_or_annotation_read": false,
+  "sample_333_geometry_or_decisions_used": false,
+  "paths": {
+    "candidate_geometry": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/cc-03/candidates_r04/candidate_geometry.json",
+    "candidate_geometry_sha256": "d855c61fc9aaab2e3d67f2386d8e440a00e5c9cb383b5593b101d004b2ae7e38"
+  },
+  "geometry_status": "CANDIDATE_UNREVIEWED",
+  "scale_status": "ASSUMED_FOR_PREVIEW",
+  "input_checks": {
+    "PASS": 234,
+    "FAIL": 0,
+    "WARN": 27,
+    "INFO": 0
+  },
+  "failed": [],
+  "building_model": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/cc-03/building_model_r04.json"
+}

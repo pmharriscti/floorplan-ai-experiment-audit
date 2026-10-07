@@ -1,0 +1,89 @@
+{
+  "experiment_id": "bim_bridge_pm_comparison_v0",
+  "run_id": "bim_bridge_pm_comparison_v0_20261006_130747_UTC",
+  "stage": "prepare_inputs",
+  "status": "PASS",
+  "written_utc": "2026-10-06T13:08:24Z",
+  "selected": [
+    {
+      "frozen_order": 1,
+      "group": "cubicasa_test",
+      "sample_key": "cc-01",
+      "plan_id": "high_quality/4712",
+      "sha256": "8c00e3cabbaa476284812c2ed38ade3ad443a4d6d16c402b9f9d8b0ebeb95243",
+      "prediction_origin": "SAVED_UPSTREAM_PREDICTION"
+    },
+    {
+      "frozen_order": 2,
+      "group": "cubicasa_test",
+      "sample_key": "cc-02",
+      "plan_id": "high_quality_architectural/4847",
+      "sha256": "437c7112e7908b5b2c8111d44613aa77e557f96de62dc60c8d831e975170d1a7",
+      "prediction_origin": "SAVED_UPSTREAM_PREDICTION"
+    },
+    {
+      "frozen_order": 3,
+      "group": "cubicasa_test",
+      "sample_key": "cc-03",
+      "plan_id": "high_quality_architectural/2539",
+      "sha256": "13fe690094ea4ec4ec9110983817237c465c6c8c53674668f5dba2740b87f095",
+      "prediction_origin": "SAVED_UPSTREAM_PREDICTION"
+    },
+    {
+      "frozen_order": 4,
+      "group": "synth_images_commercial",
+      "sample_key": "com-01",
+      "plan_id": "com-01",
+      "sha256": "5b1af2960e3fdb62fedbc840bb1b43e35ff9528cbc5dcc07c826bc29025cf067",
+      "prediction_origin": "FRESH_FROZEN_INFERENCE"
+    },
+    {
+      "frozen_order": 5,
+      "group": "synth_images_commercial",
+      "sample_key": "com-02",
+      "plan_id": "com-02",
+      "sha256": "32711ad5b7338b7b14670423d3135c25bbe1f6b42f79f015cd57b5e9b146e890",
+      "prediction_origin": "FRESH_FROZEN_INFERENCE"
+    },
+    {
+      "frozen_order": 6,
+      "group": "synth_images_commercial",
+      "sample_key": "com-03",
+      "plan_id": "com-03",
+      "sha256": "dae2a87fa8eecb0a1369a863ceee468603c5e34aa76b7caadd15ff4112f2a73a",
+      "prediction_origin": "FRESH_FROZEN_INFERENCE"
+    },
+    {
+      "frozen_order": 7,
+      "group": "synth_images_commercial",
+      "sample_key": "com-04",
+      "plan_id": "com-04",
+      "sha256": "e6feeb2724b5d7fd02bd3303ee981a0d88752eeca3b6288495bec0b51662a593",
+      "prediction_origin": "FRESH_FROZEN_INFERENCE"
+    },
+    {
+      "frozen_order": 8,
+      "group": "synth_images_commercial",
+      "sample_key": "com-05",
+      "plan_id": "com-05",
+      "sha256": "90925a95a407c17522067b6e011ff8da54677f06fc02ee665c795dd8f7ddc36f",
+      "prediction_origin": "FRESH_FROZEN_INFERENCE"
+    },
+    {
+      "frozen_order": 9,
+      "group": "synth_images_commercial",
+      "sample_key": "com-06",
+      "plan_id": "com-06",
+      "sha256": "5d0f4c2f53b5d297b5b2f3e079f2006260a69865fdfb0858b8fa5b5c794d7db1",
+      "prediction_origin": "FRESH_FROZEN_INFERENCE"
+    }
+  ],
+  "exclusions": [],
+  "referenced_earlier_run_samples": [
+    "img-01",
+    "img-02",
+    "img-03"
+  ],
+  "inference_inputs": 6,
+  "inference_run_before_freeze": false
+}

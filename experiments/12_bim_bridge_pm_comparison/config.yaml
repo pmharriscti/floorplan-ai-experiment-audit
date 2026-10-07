@@ -1,0 +1,25 @@
+experiment_id: 12_bim_bridge_pm_comparison
+name: 'bim_bridge PM comparison: CubiCasa test plans vs AI-generated plans, and bridge repair rules'
+evidence_status: VERIFIED
+status: completed
+experiment_kind: downstream_integration_illustration
+comparable_to_segmentation_rankings: false
+source_run_directory: /mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC
+referenced_earlier_run: /mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC
+workspace: /home/pmharris/dev/bim_bridge_pm_comparison_v0
+model:
+  upstream_experiment: 09_phase5_hierarchical_multihead_512
+  checkpoint_sha256: c281b31974e194f216df3e2170eb5b2197d72a872713ed9176973940a95357ae
+  thresholds: validation-selected upstream; unchanged
+inputs:
+  cubicasa_test: 3 test plans by random.Random(42).sample over the 400 test ids; saved upstream predictions, no new inference
+  synth_images_commercial: 6 AI-generated images, all files in file-name order; fresh frozen inference
+  synth_images_prior_run: img-01..img-06 of run bim_bridge_synth_images_v0_20261002_200115_UTC (inference from that run)
+protections:
+  training: false
+  threshold_selection: false
+  vectorizer_changed: false
+  tuning_on_these_plans: repair rules were developed and checked on these same 15 plans; their gains are not held-out evidence
+  upstream_artifacts: read-only
+preview_profile: pilot_preview_profile_v0 (0.01 m per source px, wall height 2.7 m, door height 2.1 m)
+repair_config: results/config/bim_bridge_pm_comparison_v0_repair_v1_2.yaml

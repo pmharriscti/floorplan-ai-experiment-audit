@@ -1,0 +1,2044 @@
+{
+  "experiment_id": "bim_bridge_pm_comparison_v0",
+  "run_id": "bim_bridge_pm_comparison_v0_20261006_130747_UTC",
+  "stage": "prepare_candidates",
+  "status": "PASS",
+  "written_utc": "2026-10-06T19:06:28Z",
+  "sample_key": "com-06",
+  "candidates_folder": "candidates_r02",
+  "repair": [
+    {
+      "rule": "R2_extend",
+      "wall": "wall_001",
+      "end": "end",
+      "extension_px": 3
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_001",
+      "end": "start",
+      "extension_px": 3
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_003",
+      "end": "end",
+      "extension_px": 3
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_004",
+      "end": "end",
+      "extension_px": 3
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_004",
+      "end": "start",
+      "extension_px": 20
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_005",
+      "end": "end",
+      "extension_px": 3
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_005",
+      "end": "start",
+      "extension_px": 3
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_006",
+      "end": "end",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_006",
+      "end": "start",
+      "extension_px": 2
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_007",
+      "end": "end",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_007",
+      "end": "start",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_008",
+      "end": "end",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_008",
+      "end": "start",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_009",
+      "end": "end",
+      "extension_px": 2
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_009",
+      "end": "start",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_010",
+      "end": "end",
+      "extension_px": 4
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_010",
+      "end": "start",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_011",
+      "end": "end",
+      "extension_px": 11
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_011",
+      "end": "start",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_012",
+      "end": "end",
+      "extension_px": 3
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_012",
+      "end": "start",
+      "extension_px": 4
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_013",
+      "end": "end",
+      "extension_px": 2
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_013",
+      "end": "start",
+      "extension_px": 6
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_014",
+      "end": "start",
+      "extension_px": 6
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_015",
+      "end": "end",
+      "extension_px": 2
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_015",
+      "end": "start",
+      "extension_px": 6
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_016",
+      "end": "end",
+      "extension_px": 2
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_016",
+      "end": "start",
+      "extension_px": 6
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_017",
+      "end": "end",
+      "extension_px": 2
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_017",
+      "end": "start",
+      "extension_px": 6
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_018",
+      "end": "end",
+      "extension_px": 2
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_018",
+      "end": "start",
+      "extension_px": 3
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_019",
+      "end": "start",
+      "extension_px": 3
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_020",
+      "end": "end",
+      "extension_px": 2
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_020",
+      "end": "start",
+      "extension_px": 6
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_021",
+      "end": "end",
+      "extension_px": 3
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_021",
+      "end": "start",
+      "extension_px": 2
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_006",
+      "end": "end",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_007",
+      "end": "end",
+      "extension_px": 10
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_007",
+      "end": "start",
+      "extension_px": 10
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_008",
+      "end": "end",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_008",
+      "end": "start",
+      "extension_px": 8
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_009",
+      "end": "start",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_010",
+      "end": "start",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_011",
+      "end": "start",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_006",
+      "end": "end",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_008",
+      "end": "end",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_009",
+      "end": "start",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_010",
+      "end": "start",
+      "extension_px": 19
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_011",
+      "end": "start",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_006",
+      "end": "end",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_008",
+      "end": "end",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_009",
+      "end": "start",
+      "extension_px": 36
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_011",
+      "end": "start",
+      "extension_px": 40
+    }
+  ],
+  "merged_walls": [],
+  "model_id": "com-com-06-p01",
+  "outcome": "WALLS_AND_HOSTED_OPENINGS",
+  "scope": "WHOLE_PLAN_ATTEMPT",
+  "upstream_walls": 21,
+  "candidate_walls": 20,
+  "excluded_walls": [
+    {
+      "id": "wall_002",
+      "reasons": [
+        "automated diagnostic FAIL: axis_lies_on_predicted_wall (17 of 450 centreline samples lie on predicted structural_wall pixels.)"
+      ]
+    }
+  ],
+  "apertures": 9,
+  "openings_not_exported": 27,
+  "automated_edits": [
+    {
+      "object_id": "wall:com-com-06-p01:wall_001",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            16.0,
+            32.0
+          ],
+          "end": [
+            496.125,
+            32.0
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            16.0,
+            32.0
+          ],
+          "end": [
+            499.125,
+            32.0
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_001",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            16.0,
+            32.0
+          ],
+          "end": [
+            499.125,
+            32.0
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            13.0,
+            32.0
+          ],
+          "end": [
+            499.125,
+            32.0
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_003",
+      "field": "thickness",
+      "before": {
+        "thickness_px": 6.0
+      },
+      "after": {
+        "thickness_px": 3.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_003",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            410.0,
+            123.33333333333333
+          ],
+          "end": [
+            496.125,
+            123.33333333333333
+          ]
+        },
+        "thickness_px": 3.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            410.0,
+            123.33333333333333
+          ],
+          "end": [
+            499.125,
+            123.33333333333333
+          ]
+        },
+        "thickness_px": 3.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_004",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            429.0,
+            219.0
+          ],
+          "end": [
+            496.125,
+            219.0
+          ]
+        },
+        "thickness_px": 4.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            429.0,
+            219.0
+          ],
+          "end": [
+            499.125,
+            219.0
+          ]
+        },
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_004",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            429.0,
+            219.0
+          ],
+          "end": [
+            499.125,
+            219.0
+          ]
+        },
+        "thickness_px": 4.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            409.0,
+            219.0
+          ],
+          "end": [
+            499.125,
+            219.0
+          ]
+        },
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_005",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            142.5,
+            299.5
+          ],
+          "end": [
+            496.125,
+            299.5
+          ]
+        },
+        "thickness_px": 4.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            142.5,
+            299.5
+          ],
+          "end": [
+            499.125,
+            299.5
+          ]
+        },
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_005",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            142.5,
+            299.5
+          ],
+          "end": [
+            499.125,
+            299.5
+          ]
+        },
+        "thickness_px": 4.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            139.5,
+            299.5
+          ],
+          "end": [
+            499.125,
+            299.5
+          ]
+        },
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_006",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            49.0,
+            382.0
+          ],
+          "end": [
+            142.5,
+            384.0
+          ]
+        },
+        "thickness_px": 7.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            49.0,
+            382.0
+          ],
+          "end": [
+            182.4908521767764,
+            384.85541929789895
+          ]
+        },
+        "thickness_px": 7.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_006",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            49.0,
+            382.0
+          ],
+          "end": [
+            182.4908521767764,
+            384.85541929789895
+          ]
+        },
+        "thickness_px": 7.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            47.00045739116118,
+            381.95722903510506
+          ],
+          "end": [
+            182.4908521767764,
+            384.85541929789895
+          ]
+        },
+        "thickness_px": 7.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_006",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            47.00045739116118,
+            381.95722903510506
+          ],
+          "end": [
+            182.4908521767764,
+            384.85541929789895
+          ]
+        },
+        "thickness_px": 7.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            47.00045739116118,
+            381.95722903510506
+          ],
+          "end": [
+            222.4817043535528,
+            385.7108385957979
+          ]
+        },
+        "thickness_px": 7.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_006",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            47.00045739116118,
+            381.95722903510506
+          ],
+          "end": [
+            222.4817043535528,
+            385.7108385957979
+          ]
+        },
+        "thickness_px": 7.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            47.00045739116118,
+            381.95722903510506
+          ],
+          "end": [
+            262.4725565303292,
+            386.56625789369684
+          ]
+        },
+        "thickness_px": 7.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_006",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            47.00045739116118,
+            381.95722903510506
+          ],
+          "end": [
+            262.4725565303292,
+            386.56625789369684
+          ]
+        },
+        "thickness_px": 7.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            47.00045739116118,
+            381.95722903510506
+          ],
+          "end": [
+            302.4634087071056,
+            387.4216771915958
+          ]
+        },
+        "thickness_px": 7.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_007",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            142.5,
+            384.0
+          ],
+          "end": [
+            170.0,
+            387.0
+          ]
+        },
+        "thickness_px": 6.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            142.5,
+            384.0
+          ],
+          "end": [
+            209.7640870643198,
+            391.3379004070167
+          ]
+        },
+        "thickness_px": 6.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_007",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            142.5,
+            384.0
+          ],
+          "end": [
+            209.7640870643198,
+            391.3379004070167
+          ]
+        },
+        "thickness_px": 6.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            102.7359129356802,
+            379.6620995929833
+          ],
+          "end": [
+            209.7640870643198,
+            391.3379004070167
+          ]
+        },
+        "thickness_px": 6.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_007",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            102.7359129356802,
+            379.6620995929833
+          ],
+          "end": [
+            209.7640870643198,
+            391.3379004070167
+          ]
+        },
+        "thickness_px": 6.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            102.7359129356802,
+            379.6620995929833
+          ],
+          "end": [
+            219.70510883039975,
+            392.42237550877087
+          ]
+        },
+        "thickness_px": 6.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_007",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            102.7359129356802,
+            379.6620995929833
+          ],
+          "end": [
+            219.70510883039975,
+            392.42237550877087
+          ]
+        },
+        "thickness_px": 6.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            92.79489116960026,
+            378.57762449122913
+          ],
+          "end": [
+            219.70510883039975,
+            392.42237550877087
+          ]
+        },
+        "thickness_px": 6.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_008",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            188.0,
+            388.0
+          ],
+          "end": [
+            244.0,
+            388.0
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            188.0,
+            388.0
+          ],
+          "end": [
+            284.0,
+            388.0
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_008",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            188.0,
+            388.0
+          ],
+          "end": [
+            284.0,
+            388.0
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            148.0,
+            388.0
+          ],
+          "end": [
+            284.0,
+            388.0
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_008",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            148.0,
+            388.0
+          ],
+          "end": [
+            284.0,
+            388.0
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            148.0,
+            388.0
+          ],
+          "end": [
+            324.0,
+            388.0
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_008",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            148.0,
+            388.0
+          ],
+          "end": [
+            324.0,
+            388.0
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            140.0,
+            388.0
+          ],
+          "end": [
+            324.0,
+            388.0
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_008",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            140.0,
+            388.0
+          ],
+          "end": [
+            324.0,
+            388.0
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            140.0,
+            388.0
+          ],
+          "end": [
+            364.0,
+            388.0
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_008",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            140.0,
+            388.0
+          ],
+          "end": [
+            364.0,
+            388.0
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            140.0,
+            388.0
+          ],
+          "end": [
+            404.0,
+            388.0
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_009",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            296.0,
+            387.875
+          ],
+          "end": [
+            462.5,
+            387.875
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            296.0,
+            387.875
+          ],
+          "end": [
+            464.5,
+            387.875
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_009",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            296.0,
+            387.875
+          ],
+          "end": [
+            464.5,
+            387.875
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            256.0,
+            387.875
+          ],
+          "end": [
+            464.5,
+            387.875
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_009",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            256.0,
+            387.875
+          ],
+          "end": [
+            464.5,
+            387.875
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            216.0,
+            387.875
+          ],
+          "end": [
+            464.5,
+            387.875
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_009",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            216.0,
+            387.875
+          ],
+          "end": [
+            464.5,
+            387.875
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            176.0,
+            387.875
+          ],
+          "end": [
+            464.5,
+            387.875
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_009",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            176.0,
+            387.875
+          ],
+          "end": [
+            464.5,
+            387.875
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            140.0,
+            387.875
+          ],
+          "end": [
+            464.5,
+            387.875
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_010",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            14.4375,
+            129.0
+          ],
+          "end": [
+            14.4375,
+            299.0
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            14.4375,
+            129.0
+          ],
+          "end": [
+            14.4375,
+            303.0
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_010",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            14.4375,
+            129.0
+          ],
+          "end": [
+            14.4375,
+            303.0
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            14.4375,
+            89.0
+          ],
+          "end": [
+            14.4375,
+            303.0
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_010",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            14.4375,
+            89.0
+          ],
+          "end": [
+            14.4375,
+            303.0
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            14.4375,
+            49.0
+          ],
+          "end": [
+            14.4375,
+            303.0
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_010",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            14.4375,
+            49.0
+          ],
+          "end": [
+            14.4375,
+            303.0
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            14.4375,
+            30.0
+          ],
+          "end": [
+            14.4375,
+            303.0
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_011",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            15.0,
+            101.0
+          ],
+          "end": [
+            15.0,
+            41.0
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            15.0,
+            101.0
+          ],
+          "end": [
+            15.0,
+            30.0
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_011",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            15.0,
+            101.0
+          ],
+          "end": [
+            15.0,
+            30.0
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            15.0,
+            141.0
+          ],
+          "end": [
+            15.0,
+            30.0
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_011",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            15.0,
+            141.0
+          ],
+          "end": [
+            15.0,
+            30.0
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            15.0,
+            181.0
+          ],
+          "end": [
+            15.0,
+            30.0
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_011",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            15.0,
+            181.0
+          ],
+          "end": [
+            15.0,
+            30.0
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            15.0,
+            221.0
+          ],
+          "end": [
+            15.0,
+            30.0
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_011",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            15.0,
+            221.0
+          ],
+          "end": [
+            15.0,
+            30.0
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            15.0,
+            261.0
+          ],
+          "end": [
+            15.0,
+            30.0
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_012",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            49.0,
+            382.0
+          ],
+          "end": [
+            49.0,
+            301.0
+          ]
+        },
+        "thickness_px": 6.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            49.0,
+            382.0
+          ],
+          "end": [
+            49.0,
+            298.0
+          ]
+        },
+        "thickness_px": 6.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_012",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            49.0,
+            382.0
+          ],
+          "end": [
+            49.0,
+            298.0
+          ]
+        },
+        "thickness_px": 6.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            49.0,
+            386.0
+          ],
+          "end": [
+            49.0,
+            298.0
+          ]
+        },
+        "thickness_px": 6.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_013",
+      "field": "thickness",
+      "before": {
+        "thickness_px": 40.0
+      },
+      "after": {
+        "thickness_px": 3.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_013",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            99.0,
+            101.0
+          ],
+          "end": [
+            99.0,
+            32.0
+          ]
+        },
+        "thickness_px": 3.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            99.0,
+            101.0
+          ],
+          "end": [
+            99.0,
+            30.0
+          ]
+        },
+        "thickness_px": 3.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_013",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            99.0,
+            101.0
+          ],
+          "end": [
+            99.0,
+            30.0
+          ]
+        },
+        "thickness_px": 3.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            99.0,
+            107.0
+          ],
+          "end": [
+            99.0,
+            30.0
+          ]
+        },
+        "thickness_px": 3.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_014",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            142.5,
+            384.0
+          ],
+          "end": [
+            142.5,
+            299.5
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            142.5,
+            390.0
+          ],
+          "end": [
+            142.5,
+            299.5
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_015",
+      "field": "thickness",
+      "before": {
+        "thickness_px": 40.0
+      },
+      "after": {
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_015",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            174.0,
+            101.0
+          ],
+          "end": [
+            174.0,
+            32.0
+          ]
+        },
+        "thickness_px": 4.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            174.0,
+            101.0
+          ],
+          "end": [
+            174.0,
+            30.0
+          ]
+        },
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_015",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            174.0,
+            101.0
+          ],
+          "end": [
+            174.0,
+            30.0
+          ]
+        },
+        "thickness_px": 4.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            174.0,
+            107.0
+          ],
+          "end": [
+            174.0,
+            30.0
+          ]
+        },
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_016",
+      "field": "thickness",
+      "before": {
+        "thickness_px": 40.0
+      },
+      "after": {
+        "thickness_px": 3.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_016",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            275.0,
+            101.0
+          ],
+          "end": [
+            275.0,
+            32.0
+          ]
+        },
+        "thickness_px": 3.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            275.0,
+            101.0
+          ],
+          "end": [
+            275.0,
+            30.0
+          ]
+        },
+        "thickness_px": 3.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_016",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            275.0,
+            101.0
+          ],
+          "end": [
+            275.0,
+            30.0
+          ]
+        },
+        "thickness_px": 3.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            275.0,
+            107.0
+          ],
+          "end": [
+            275.0,
+            30.0
+          ]
+        },
+        "thickness_px": 3.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_017",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            380.0,
+            101.0
+          ],
+          "end": [
+            380.0,
+            32.0
+          ]
+        },
+        "thickness_px": 3.5
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            380.0,
+            101.0
+          ],
+          "end": [
+            380.0,
+            30.0
+          ]
+        },
+        "thickness_px": 3.5
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_017",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            380.0,
+            101.0
+          ],
+          "end": [
+            380.0,
+            30.0
+          ]
+        },
+        "thickness_px": 3.5
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            380.0,
+            107.0
+          ],
+          "end": [
+            380.0,
+            30.0
+          ]
+        },
+        "thickness_px": 3.5
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_018",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            410.0,
+            299.5
+          ],
+          "end": [
+            410.0,
+            123.33333333333333
+          ]
+        },
+        "thickness_px": 4.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            410.0,
+            299.5
+          ],
+          "end": [
+            410.0,
+            121.33333333333333
+          ]
+        },
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_018",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            410.0,
+            299.5
+          ],
+          "end": [
+            410.0,
+            121.33333333333333
+          ]
+        },
+        "thickness_px": 4.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            410.0,
+            302.5
+          ],
+          "end": [
+            410.0,
+            121.33333333333333
+          ]
+        },
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_019",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            462.5,
+            387.875
+          ],
+          "end": [
+            462.5,
+            299.5
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            462.5,
+            390.875
+          ],
+          "end": [
+            462.5,
+            299.5
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_020",
+      "field": "thickness",
+      "before": {
+        "thickness_px": 29.0
+      },
+      "after": {
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_020",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            464.5,
+            101.0
+          ],
+          "end": [
+            464.5,
+            32.0
+          ]
+        },
+        "thickness_px": 4.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            464.5,
+            101.0
+          ],
+          "end": [
+            464.5,
+            30.0
+          ]
+        },
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_020",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            464.5,
+            101.0
+          ],
+          "end": [
+            464.5,
+            30.0
+          ]
+        },
+        "thickness_px": 4.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            464.5,
+            107.0
+          ],
+          "end": [
+            464.5,
+            30.0
+          ]
+        },
+        "thickness_px": 4.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_021",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            496.125,
+            32.0
+          ],
+          "end": [
+            496.125,
+            299.5
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            496.125,
+            32.0
+          ],
+          "end": [
+            496.125,
+            302.5
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:com-com-06-p01:wall_021",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            496.125,
+            32.0
+          ],
+          "end": [
+            496.125,
+            302.5
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            496.125,
+            30.0
+          ],
+          "end": [
+            496.125,
+            302.5
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    }
+  ],
+  "plan_diagnostics_summary": {
+    "predicted_wall_pixel_coverage_ratio": 0.8178400546821599,
+    "skeleton_coverage_ratio": 0.8486782133090246,
+    "candidate_pixels_outside_predicted_wall": 4261
+  },
+  "ground_truth_or_annotation_read": false,
+  "sample_333_geometry_or_decisions_used": false,
+  "paths": {
+    "candidate_geometry": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-06/candidates_r02/candidate_geometry.json",
+    "candidate_geometry_sha256": "16bb35ffc12997cef59114ac56cda4ac89869b00e4c38168ecc2a44f142866ff"
+  },
+  "geometry_status": "CANDIDATE_UNREVIEWED",
+  "scale_status": "ASSUMED_FOR_PREVIEW",
+  "input_checks": {
+    "PASS": 257,
+    "FAIL": 0,
+    "WARN": 30,
+    "INFO": 0
+  },
+  "failed": [],
+  "building_model": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-06/building_model_r02.json"
+}

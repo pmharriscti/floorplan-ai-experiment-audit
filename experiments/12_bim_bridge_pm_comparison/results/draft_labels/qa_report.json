@@ -1,0 +1,88 @@
+{
+  "status": "PASS",
+  "scope": "Encoding, alignment, provenance and algebraic invariants only. Not an accuracy or semantic-quality certificate.",
+  "image_count": 12,
+  "independently_human_reviewed_images": 0,
+  "annotation_spec_sha256": "a4b38059c6911053a258d4629db01554d99279823d8a446ad86cb90a19894199",
+  "per_image": [
+    {
+      "id": "fp01_office",
+      "mechanical_checks": "PASS",
+      "errors": [],
+      "semantic_review": "NOT_INDEPENDENTLY_HUMAN_REVIEWED"
+    },
+    {
+      "id": "fp02_retail",
+      "mechanical_checks": "PASS",
+      "errors": [],
+      "semantic_review": "NOT_INDEPENDENTLY_HUMAN_REVIEWED"
+    },
+    {
+      "id": "fp03_restaurant",
+      "mechanical_checks": "PASS",
+      "errors": [],
+      "semantic_review": "NOT_INDEPENDENTLY_HUMAN_REVIEWED"
+    },
+    {
+      "id": "fp04_warehouse",
+      "mechanical_checks": "PASS",
+      "errors": [],
+      "semantic_review": "NOT_INDEPENDENTLY_HUMAN_REVIEWED"
+    },
+    {
+      "id": "fp05_hotel",
+      "mechanical_checks": "PASS",
+      "errors": [],
+      "semantic_review": "NOT_INDEPENDENTLY_HUMAN_REVIEWED"
+    },
+    {
+      "id": "fp06_clinic",
+      "mechanical_checks": "PASS",
+      "errors": [],
+      "semantic_review": "NOT_INDEPENDENTLY_HUMAN_REVIEWED"
+    },
+    {
+      "id": "fp07_school",
+      "mechanical_checks": "PASS",
+      "errors": [],
+      "semantic_review": "NOT_INDEPENDENTLY_HUMAN_REVIEWED"
+    },
+    {
+      "id": "fp08_grocery",
+      "mechanical_checks": "PASS",
+      "errors": [],
+      "semantic_review": "NOT_INDEPENDENTLY_HUMAN_REVIEWED"
+    },
+    {
+      "id": "fp09_manufacturing",
+      "mechanical_checks": "PASS",
+      "errors": [],
+      "semantic_review": "NOT_INDEPENDENTLY_HUMAN_REVIEWED"
+    },
+    {
+      "id": "fp10_apartment",
+      "mechanical_checks": "PASS",
+      "errors": [],
+      "semantic_review": "NOT_INDEPENDENTLY_HUMAN_REVIEWED"
+    },
+    {
+      "id": "fp11_house_ground",
+      "mechanical_checks": "PASS",
+      "errors": [],
+      "semantic_review": "NOT_INDEPENDENTLY_HUMAN_REVIEWED"
+    },
+    {
+      "id": "fp12_house_upper",
+      "mechanical_checks": "PASS",
+      "errors": [],
+      "semantic_review": "NOT_INDEPENDENTLY_HUMAN_REVIEWED"
+    }
+  ],
+  "errors": [],
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.3.5",
+    "Pillow": "12.3.0",
+    "opencv": "4.13.0"
+  }
+}

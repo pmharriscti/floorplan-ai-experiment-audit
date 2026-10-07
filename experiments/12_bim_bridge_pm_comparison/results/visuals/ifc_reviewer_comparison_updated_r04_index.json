@@ -1,0 +1,202 @@
+{
+  "record": "ifc_reviewer_comparison_update/1",
+  "written_utc": "2026-10-06T20:23:55Z",
+  "earlier_folder_contents_unchanged": true,
+  "what": "Original | IFC r01 plan | IFC r04 plan // IFC r04 over original | user's r01 3D screenshot | automated r04 3D render. Wall IoU against the unreviewed draft labels.",
+  "visuals": [
+    {
+      "sample_key": "img-01",
+      "visual": "/mnt/e/AI_Team/mitunet/experiments/ifc_reviewer_comparison/updated_r04_repair_v1_2_20261006_202303_UTC/img-01__r01_vs_r04.png",
+      "visual_sha256": "4585816efffc7b1e9ed62d38e89d518598920e6c1c4f743f5d00537a17e34289",
+      "ifc_r01": {
+        "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-01/export_candidate_preview_whole_plan_r01/synth-img-01-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r01.ifc",
+        "sha256": "6aa613824528e3336b9eb025102516c770ee0bf95b56b754343270aea07a02b9",
+        "walls": 25,
+        "openings": 3
+      },
+      "ifc_r04": {
+        "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-01/export_candidate_preview_whole_plan_r04/synth-img-01-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r04.ifc",
+        "sha256": "3a057b7acbad383ed1eda29775503771d0847d97f0a7d06442ae7abe1b534454",
+        "walls": 17,
+        "openings": 7
+      },
+      "wall_iou": {
+        "mask": 0.8130214612973233,
+        "ifc_r01": 0.7286397498390509,
+        "ifc_r04": 0.7933964769407807
+      },
+      "doors_in_ifc": {
+        "r01": "2/6",
+        "r04": "5/6"
+      },
+      "user_screenshot": {
+        "path": "/mnt/e/AI_Team/mitunet/experiments/ifc_reviewer/img_01.png",
+        "sha256": "27a08cffef4ec7cb118c51becc7af0146f5010adae0dcf447d918ee50fadd2da",
+        "shows": "r01"
+      },
+      "user_screenshot_note": null,
+      "r04_3d_render": "headless Chrome render of the local web-ifc viewer by the assistant; not a human viewer inspection"
+    },
+    {
+      "sample_key": "img-02",
+      "visual": "/mnt/e/AI_Team/mitunet/experiments/ifc_reviewer_comparison/updated_r04_repair_v1_2_20261006_202303_UTC/img-02__r01_vs_r04.png",
+      "visual_sha256": "283e9d42f2b8bc649ece8ef1486165be29b15d82b7834947a8972e4dbfddd141",
+      "ifc_r01": {
+        "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-02/export_candidate_preview_whole_plan_r01/synth-img-02-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r01.ifc",
+        "sha256": "7cfc5adb377aeadf2a71ba122977d4ae165fe5d438cb3fb4f3793531382f8842",
+        "walls": 21,
+        "openings": 8
+      },
+      "ifc_r04": {
+        "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-02/export_candidate_preview_whole_plan_r04/synth-img-02-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r04.ifc",
+        "sha256": "2059a8d921ff49c29290211c32c8672449b9d6fe99300ae111bdc7ae606bbf39",
+        "walls": 19,
+        "openings": 8
+      },
+      "wall_iou": {
+        "mask": 0.7916195232335843,
+        "ifc_r01": 0.7954007439972945,
+        "ifc_r04": 0.8410855663824605
+      },
+      "doors_in_ifc": {
+        "r01": "7/9",
+        "r04": "7/9"
+      },
+      "user_screenshot": {
+        "path": "/mnt/e/AI_Team/mitunet/experiments/ifc_reviewer/img_02.png",
+        "sha256": "e03090f83d30b1723490c3ee5a2acb44d37570b62bf75baff97d67609f7077ed",
+        "shows": "r01"
+      },
+      "user_screenshot_note": null,
+      "r04_3d_render": "headless Chrome render of the local web-ifc viewer by the assistant; not a human viewer inspection"
+    },
+    {
+      "sample_key": "img-03",
+      "visual": "/mnt/e/AI_Team/mitunet/experiments/ifc_reviewer_comparison/updated_r04_repair_v1_2_20261006_202303_UTC/img-03__r01_vs_r04.png",
+      "visual_sha256": "621e1e49347e1f51107b23a27ab761f6884d5e00d57b20db0ab7394ee6a038eb",
+      "ifc_r01": {
+        "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-03/export_candidate_preview_whole_plan_r01/synth-img-03-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r01.ifc",
+        "sha256": "22582b1109534418a6e70216c94edcfb2a80c9c02fe92e5bbbb9120bad240258",
+        "walls": 22,
+        "openings": 10
+      },
+      "ifc_r04": {
+        "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-03/export_candidate_preview_whole_plan_r04/synth-img-03-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r04.ifc",
+        "sha256": "1fb1f1b21eac4c92036c4d06b8d7b13e0e0621f6b7ffcab5b8e391bd42260ba8",
+        "walls": 16,
+        "openings": 10
+      },
+      "wall_iou": {
+        "mask": 0.7899215576411263,
+        "ifc_r01": 0.712775147724524,
+        "ifc_r04": 0.8256982465867351
+      },
+      "doors_in_ifc": {
+        "r01": "6/6",
+        "r04": "6/6"
+      },
+      "user_screenshot": {
+        "path": "/mnt/e/AI_Team/mitunet/experiments/ifc_reviewer/img_03.png",
+        "sha256": "d5051655168fc12906a08dd80e5f6abc58a80a15e8ce7fd636aa77b8591f692d",
+        "shows": "r01"
+      },
+      "user_screenshot_note": null,
+      "r04_3d_render": "headless Chrome render of the local web-ifc viewer by the assistant; not a human viewer inspection"
+    },
+    {
+      "sample_key": "img-04",
+      "visual": "/mnt/e/AI_Team/mitunet/experiments/ifc_reviewer_comparison/updated_r04_repair_v1_2_20261006_202303_UTC/img-04__r01_vs_r04.png",
+      "visual_sha256": "be7246cd0a4fd5e86754e890b27417a67f10f1c144d30ec7cb1cfea7bd828855",
+      "ifc_r01": {
+        "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-04/export_candidate_preview_whole_plan_r01/synth-img-04-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r01.ifc",
+        "sha256": "ca0a7d70411898030cbd031bee6962550c7639b8b2edd061c76b20c89c503318",
+        "walls": 17,
+        "openings": 6
+      },
+      "ifc_r04": {
+        "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-04/export_candidate_preview_whole_plan_r04/synth-img-04-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r04.ifc",
+        "sha256": "2de864002c21d59900dc90e290ceb444fcc0bc2e9c9febdd31a8f14ee3f37ccd",
+        "walls": 10,
+        "openings": 6
+      },
+      "wall_iou": {
+        "mask": 0.7588571909450476,
+        "ifc_r01": 0.7427577277876679,
+        "ifc_r04": 0.7945724077468718
+      },
+      "doors_in_ifc": {
+        "r01": "6/6",
+        "r04": "6/6"
+      },
+      "user_screenshot": null,
+      "user_screenshot_note": "img_04.png shows img-06; not used",
+      "r04_3d_render": "headless Chrome render of the local web-ifc viewer by the assistant; not a human viewer inspection"
+    },
+    {
+      "sample_key": "com-02",
+      "visual": "/mnt/e/AI_Team/mitunet/experiments/ifc_reviewer_comparison/updated_r04_repair_v1_2_20261006_202303_UTC/com-02__r01_vs_r04.png",
+      "visual_sha256": "b9904efd0a8382060c8939bc2b96d1b35e872a0859e553e6a5ee9de4273eeb26",
+      "ifc_r01": {
+        "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-02/export_candidate_preview_whole_plan_r01/com-com-02-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r01.ifc",
+        "sha256": "62e31f00270b9ed40655760bf05f3cd0c0aa934be0434ca7211cd94633bf1aeb",
+        "walls": 45,
+        "openings": 15
+      },
+      "ifc_r04": {
+        "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-02/export_candidate_preview_whole_plan_r04/com-com-02-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r04.ifc",
+        "sha256": "5d64ac97c98ec08f39ca535e4c3e7d1140930da1133226fd0c619fb9a9c6476e",
+        "walls": 35,
+        "openings": 18
+      },
+      "wall_iou": {
+        "mask": 0.7628817654058342,
+        "ifc_r01": 0.6716255689151552,
+        "ifc_r04": 0.7431884253938206
+      },
+      "doors_in_ifc": {
+        "r01": "11/25",
+        "r04": "14/25"
+      },
+      "user_screenshot": {
+        "path": "/mnt/e/AI_Team/mitunet/experiments/ifc_reviewer/com_02.png",
+        "sha256": "55249dc8b7d83fa329c6d2ebf63bdf3ca4bba61a971d350102287a7d6c79d424",
+        "shows": "r01"
+      },
+      "user_screenshot_note": null,
+      "r04_3d_render": "headless Chrome render of the local web-ifc viewer by the assistant; not a human viewer inspection"
+    },
+    {
+      "sample_key": "com-03",
+      "visual": "/mnt/e/AI_Team/mitunet/experiments/ifc_reviewer_comparison/updated_r04_repair_v1_2_20261006_202303_UTC/com-03__r01_vs_r04.png",
+      "visual_sha256": "fa5704f6233c953f1b7f22ae703089c963e57469d6c85db49ac2ec4f9dcce20d",
+      "ifc_r01": {
+        "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-03/export_candidate_preview_whole_plan_r01/com-com-03-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r01.ifc",
+        "sha256": "6c5a048c0f700ba96fcd4b8fa9000d926e656becdf67e5f356d2fd8623472e81",
+        "walls": 29,
+        "openings": 15
+      },
+      "ifc_r04": {
+        "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-03/export_candidate_preview_whole_plan_r04/com-com-03-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r04.ifc",
+        "sha256": "96e65bb71012309f7dc5a9493d9920d056319e69a728fec85936de1f1df7dc8f",
+        "walls": 23,
+        "openings": 16
+      },
+      "wall_iou": {
+        "mask": 0.7727142241997991,
+        "ifc_r01": 0.7667015706806283,
+        "ifc_r04": 0.8124657534246575
+      },
+      "doors_in_ifc": {
+        "r01": "15/17",
+        "r04": "16/17"
+      },
+      "user_screenshot": {
+        "path": "/mnt/e/AI_Team/mitunet/experiments/ifc_reviewer/com_03.png",
+        "sha256": "e9272b499c7d270f67f9949ae605f4df3a27f254b1dbdf2ff411e629ac4ddfd9",
+        "shows": "r01"
+      },
+      "user_screenshot_note": null,
+      "r04_3d_render": "headless Chrome render of the local web-ifc viewer by the assistant; not a human viewer inspection"
+    }
+  ]
+}

@@ -4,11 +4,11 @@ This repository is the initial evidence-backed audit index for the floor-plan se
 
 GitHub repository: [pmharriscti/floorplan-ai-experiment-audit](https://github.com/pmharriscti/floorplan-ai-experiment-audit)
 
-Audit date: 2026-08-31. Updated 2026-09-17 with the RunPod 1024 high-resolution crop treatment, 2026-09-24 with the Phase 5 hierarchical multi-head expansion and the Phase 3A.2 door-opening target ablation, and 2026-09-25 with that ablation's completed 30-epoch evaluation. Updated 2026-09-28 with the bim_bridge_v0 downstream IFC bridge, and 2026-09-29 with its human-review follow-up and with a model description and reference code snapshot for the experiment 01 baseline.
+Audit date: 2026-08-31. Updated 2026-09-17 with the RunPod 1024 high-resolution crop treatment, 2026-09-24 with the Phase 5 hierarchical multi-head expansion and the Phase 3A.2 door-opening target ablation, and 2026-09-25 with that ablation's completed 30-epoch evaluation. Updated 2026-09-28 with the bim_bridge_v0 downstream IFC bridge, 2026-09-29 with its human-review follow-up, 2026-10-07 with the applied review and with experiment 12, the PM comparison of CubiCasa and AI-generated plans and with a model description and reference code snapshot for the experiment 01 baseline.
 
 ## Scope
 
-The current audit covers eleven experiments:
+The current audit covers twelve experiments:
 
 | ID | Experiment | Status | Read next |
 | --- | --- | --- | --- |
@@ -23,6 +23,7 @@ The current audit covers eleven experiments:
 | 09 | Phase 5 hierarchical multi-head MitUNet 512 | completed | [experiments/09_phase5_hierarchical_multihead_512/README.md](experiments/09_phase5_hierarchical_multihead_512/README.md) |
 | 10 | Phase 3A.2 door-opening target ablation, candidate_v3.1 vs candidate_v3.2 (512) | completed | [experiments/10_phase3a2_door_opening_v31_vs_v32_512/README.md](experiments/10_phase3a2_door_opening_v31_vs_v32_512/README.md) |
 | 11 | bim_bridge_v0 downstream IFC bridge (integration, not a segmentation experiment) | completed | [experiments/11_bim_bridge_v0/README.md](experiments/11_bim_bridge_v0/README.md) |
+| 12 | bim_bridge PM comparison: CubiCasa test vs AI-generated plans, bridge repair rules (illustration, not a benchmark) | completed | [experiments/12_bim_bridge_pm_comparison/README.md](experiments/12_bim_bridge_pm_comparison/README.md) |
 
 The top-level scorecard is [EXPERIMENT_SCOREBOARD.csv](EXPERIMENT_SCOREBOARD.csv), and the source/evidence index is [EXPERIMENT_INDEX.md](EXPERIMENT_INDEX.md).
 
@@ -69,6 +70,8 @@ Experiment 11, `bim_bridge_v0`, is a downstream integration experiment. It train
 > The meaningful result today is not ‘we generated a 3D picture.’ It is ‘we can turn reviewed prediction-derived geometry into identifiable IFC building elements, preserve uncertainty, and inspect the result.’ That is a concrete step toward the PM’s BIM goal—and it creates a stable destination for the ML improvements that follow.
 
 The exporter passed on synthetic geometry (130 of 130 checks). From one saved Phase 5 prediction of `high_quality_architectural/333`, the bridge produced 4 individually identifiable `IfcWall` objects and 1 hosted `IfcOpeningElement`, each carrying its provenance, assumptions and review state inside the IFC. **The reviewed-prediction milestone remains partial and was not demonstrated**: 0 of 5 objects were reviewed by a person, the drawing has no scale evidence so the metric export is blocked and only a preview was written, semantic confidence is null for 5 of 5 objects, and no viewer or target application has opened the file.
+
+Experiment 12 takes 15 plans (3 CubiCasa test plans, 12 AI-generated plans) through the same chain and measures the IFC walls against labels. The AI-generated plans' labels are unreviewed AI-made drafts. Automated bridge repair rules raised pooled IFC wall IoU in every group; the rules were developed on the same plans, so this is not held-out evidence.
 
 ## Open Evidence Gaps
 
