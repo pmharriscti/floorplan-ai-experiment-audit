@@ -1,0 +1,1932 @@
+{
+  "experiment_id": "bim_bridge_pm_comparison_v0",
+  "run_id": "bim_bridge_synth_images_v0_20261002_200115_UTC",
+  "stage": "prepare_candidates",
+  "status": "PASS",
+  "written_utc": "2026-10-08T13:27:06Z",
+  "sample_key": "img-04",
+  "candidates_folder": "candidates_r05",
+  "repair": [
+    {
+      "rule": "R2_extend",
+      "wall": "wall_001",
+      "end": "end",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_001",
+      "end": "start",
+      "extension_px": 5
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_002",
+      "end": "end",
+      "extension_px": 15
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_002",
+      "end": "start",
+      "extension_px": 35
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_003",
+      "end": "end",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_003",
+      "end": "start",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_004",
+      "end": "end",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_004",
+      "end": "start",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_005",
+      "end": "end",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_005",
+      "end": "start",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_006",
+      "end": "end",
+      "extension_px": 5
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_006",
+      "after": "R2 extension of end",
+      "offset_px": 0.5,
+      "max_move_px": 0.5
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_006",
+      "end": "start",
+      "extension_px": 40
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_006",
+      "after": "R2 extension of start",
+      "offset_px": -0.5,
+      "max_move_px": 0.5
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_007",
+      "end": "end",
+      "extension_px": 5
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_007",
+      "after": "R2 extension of end",
+      "offset_px": 0.5,
+      "max_move_px": 0.5
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_007",
+      "end": "start",
+      "extension_px": 5
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_007",
+      "after": "R2 extension of start",
+      "offset_px": -0.5,
+      "max_move_px": 0.5
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_009",
+      "end": "end",
+      "extension_px": 40
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_009",
+      "after": "R2 extension of end",
+      "offset_px": 0.5,
+      "max_move_px": 1.089
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_009",
+      "end": "start",
+      "extension_px": 4
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_009",
+      "after": "R2 extension of start",
+      "offset_px": -0.5,
+      "max_move_px": 0.5
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_010",
+      "end": "end",
+      "extension_px": 5
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_010",
+      "after": "R2 extension of end",
+      "offset_px": -0.5,
+      "max_move_px": 0.5
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_010",
+      "end": "start",
+      "extension_px": 40
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_010",
+      "after": "R2 extension of start",
+      "offset_px": 0.5,
+      "max_move_px": 0.5
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_011",
+      "end": "end",
+      "extension_px": 4
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_011",
+      "after": "R2 extension of end",
+      "offset_px": -0.5,
+      "max_move_px": 0.5
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_011",
+      "end": "start",
+      "extension_px": 4
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_011",
+      "after": "R2 extension of start",
+      "offset_px": 0.5,
+      "max_move_px": 0.5
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_012",
+      "end": "end",
+      "extension_px": 2
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_012",
+      "after": "R2 extension of end",
+      "offset_px": 0.5,
+      "max_move_px": 0.5
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_012",
+      "end": "start",
+      "extension_px": 3
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_012",
+      "after": "R2 extension of start",
+      "offset_px": -0.5,
+      "max_move_px": 0.5
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_013",
+      "end": "end",
+      "extension_px": 5
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_013",
+      "after": "R2 extension of end",
+      "offset_px": 1.5,
+      "max_move_px": 2.799
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_013",
+      "end": "start",
+      "extension_px": 3
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_013",
+      "after": "R2 extension of start",
+      "offset_px": 0.5,
+      "max_move_px": 0.5
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_014",
+      "end": "end",
+      "extension_px": 36
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_014",
+      "after": "R2 extension of end",
+      "offset_px": 0.0,
+      "max_move_px": 0.365
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_014",
+      "end": "start",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_015",
+      "end": "end",
+      "extension_px": 5
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_015",
+      "after": "R2 extension of end",
+      "offset_px": 0.5,
+      "max_move_px": 0.5
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_015",
+      "end": "start",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_016",
+      "end": "end",
+      "extension_px": 28
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_016",
+      "after": "R2 extension of end",
+      "offset_px": -0.5,
+      "max_move_px": 0.5
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_016",
+      "end": "start",
+      "extension_px": 2
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_017",
+      "end": "end",
+      "extension_px": 4
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_017",
+      "after": "R2 extension of end",
+      "offset_px": 0.5,
+      "max_move_px": 0.753
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_017",
+      "end": "start",
+      "extension_px": 5
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_017",
+      "after": "R2 extension of start",
+      "offset_px": 0.5,
+      "max_move_px": 0.5
+    },
+    {
+      "rule": "R1_merge",
+      "kept": "wall_001",
+      "merged": "wall_003",
+      "gap_px": -48.5,
+      "gap_support": 1.0,
+      "axis_offset_px": 0.375
+    },
+    {
+      "rule": "R1_merge",
+      "kept": "wall_001",
+      "merged": "wall_002",
+      "gap_px": 12.5,
+      "gap_support": 1.0,
+      "axis_offset_px": 0.242
+    },
+    {
+      "rule": "R1_merge",
+      "kept": "wall_001",
+      "merged": "wall_004",
+      "gap_px": -196.0,
+      "gap_support": 1.0,
+      "axis_offset_px": 0.304
+    },
+    {
+      "rule": "R1_merge",
+      "kept": "wall_001",
+      "merged": "wall_005",
+      "gap_px": -44.0,
+      "gap_support": 1.0,
+      "axis_offset_px": 0.211
+    },
+    {
+      "rule": "R1_merge",
+      "kept": "wall_001",
+      "merged": "wall_006",
+      "gap_px": -60.0,
+      "gap_support": 1.0,
+      "axis_offset_px": 0.159
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_009",
+      "after": "R1 merge with wall_010",
+      "offset_px": 0.5,
+      "max_move_px": 0.5
+    },
+    {
+      "rule": "R1_merge",
+      "kept": "wall_009",
+      "merged": "wall_010",
+      "gap_px": -57.99,
+      "gap_support": 1.0,
+      "axis_offset_px": 0.411
+    },
+    {
+      "rule": "R1_merge",
+      "kept": "wall_014",
+      "merged": "wall_015",
+      "gap_px": -76.0,
+      "gap_support": 1.0,
+      "axis_offset_px": 0.365
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_013",
+      "end": "start",
+      "extension_px": 27
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_013",
+      "after": "R2 extension of start",
+      "offset_px": -0.5,
+      "max_move_px": 0.5
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_017",
+      "end": "start",
+      "extension_px": 29
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_017",
+      "after": "R2 extension of start",
+      "offset_px": -0.5,
+      "max_move_px": 0.5
+    }
+  ],
+  "merged_walls": [
+    "wall_003",
+    "wall_002",
+    "wall_004",
+    "wall_005",
+    "wall_006",
+    "wall_010",
+    "wall_015"
+  ],
+  "model_id": "synth-img-04-p01",
+  "outcome": "WALLS_AND_HOSTED_OPENINGS",
+  "scope": "WHOLE_PLAN_ATTEMPT",
+  "upstream_walls": 17,
+  "candidate_walls": 10,
+  "excluded_walls": [],
+  "apertures": 12,
+  "openings_not_exported": 0,
+  "automated_edits": [
+    {
+      "object_id": "wall:synth-img-04-p01:wall_001",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            40.5,
+            73.625
+          ],
+          "end": [
+            144.0,
+            73.625
+          ]
+        },
+        "thickness_px": 10.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            40.5,
+            73.625
+          ],
+          "end": [
+            184.0,
+            73.625
+          ]
+        },
+        "thickness_px": 10.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-04-p01:wall_001",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            40.5,
+            73.625
+          ],
+          "end": [
+            184.0,
+            73.625
+          ]
+        },
+        "thickness_px": 10.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            35.5,
+            73.625
+          ],
+          "end": [
+            184.0,
+            73.625
+          ]
+        },
+        "thickness_px": 10.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-04-p01:wall_001",
+      "field": "repair:R1_merge",
+      "before": {
+        "kept": {
+          "id": "wall_001",
+          "axis_px": {
+            "start": [
+              35.5,
+              73.625
+            ],
+            "end": [
+              184.0,
+              73.625
+            ]
+          },
+          "thickness_px": 10.0,
+          "thickness_source": "vectorizer",
+          "thickness_basis": "Vectorizer thickness 10.0 px, consistent with 10.0 px measured on the predicted structural_wall mask."
+        },
+        "merged": {
+          "id": "wall_003",
+          "axis_px": {
+            "start": [
+              135.5,
+              74.0
+            ],
+            "end": [
+              245.0,
+              74.0
+            ]
+          },
+          "thickness_px": 11.0,
+          "thickness_source": "vectorizer",
+          "thickness_basis": "Vectorizer thickness 11.0 px, consistent with 11.0 px measured on the predicted structural_wall mask."
+        }
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            35.5,
+            73.78415697674419
+          ],
+          "end": [
+            245.0,
+            73.78415697674419
+          ]
+        },
+        "thickness_px": 10.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-04-p01:wall_001",
+      "field": "repair:R1_merge",
+      "before": {
+        "kept": {
+          "id": "wall_001",
+          "axis_px": {
+            "start": [
+              35.5,
+              73.78415697674419
+            ],
+            "end": [
+              245.0,
+              73.78415697674419
+            ]
+          },
+          "thickness_px": 10.0,
+          "thickness_source": "vectorizer",
+          "thickness_basis": "Vectorizer thickness 10.0 px, consistent with 10.0 px measured on the predicted structural_wall mask."
+        },
+        "merged": {
+          "id": "wall_002",
+          "axis_px": {
+            "start": [
+              257.5,
+              73.54166666666667
+            ],
+            "end": [
+              377.0,
+              73.54166666666667
+            ]
+          },
+          "thickness_px": 10.5,
+          "thickness_source": "vectorizer",
+          "thickness_basis": "Vectorizer thickness 10.5 px, consistent with 11.0 px measured on the predicted structural_wall mask."
+        }
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            35.5,
+            73.69607918934521
+          ],
+          "end": [
+            377.0,
+            73.69607918934521
+          ]
+        },
+        "thickness_px": 10.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-04-p01:wall_001",
+      "field": "repair:R1_merge",
+      "before": {
+        "kept": {
+          "id": "wall_001",
+          "axis_px": {
+            "start": [
+              35.5,
+              73.69607918934521
+            ],
+            "end": [
+              377.0,
+              73.69607918934521
+            ]
+          },
+          "thickness_px": 10.0,
+          "thickness_source": "vectorizer",
+          "thickness_basis": "Vectorizer thickness 10.0 px, consistent with 10.0 px measured on the predicted structural_wall mask."
+        },
+        "merged": {
+          "id": "wall_004",
+          "axis_px": {
+            "start": [
+              181.0,
+              74.0
+            ],
+            "end": [
+              332.5,
+              74.0
+            ]
+          },
+          "thickness_px": 10.0,
+          "thickness_source": "vectorizer",
+          "thickness_basis": "Vectorizer thickness 10.0 px, consistent with 9.0 px measured on the predicted structural_wall mask."
+        }
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            35.5,
+            73.78947473257888
+          ],
+          "end": [
+            377.0,
+            73.78947473257888
+          ]
+        },
+        "thickness_px": 10.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-04-p01:wall_001",
+      "field": "repair:R1_merge",
+      "before": {
+        "kept": {
+          "id": "wall_001",
+          "axis_px": {
+            "start": [
+              35.5,
+              73.78947473257888
+            ],
+            "end": [
+              377.0,
+              73.78947473257888
+            ]
+          },
+          "thickness_px": 10.0,
+          "thickness_source": "vectorizer",
+          "thickness_basis": "Vectorizer thickness 10.0 px, consistent with 10.0 px measured on the predicted structural_wall mask."
+        },
+        "merged": {
+          "id": "wall_005",
+          "axis_px": {
+            "start": [
+              333.0,
+              74.0
+            ],
+            "end": [
+              445.0,
+              74.0
+            ]
+          },
+          "thickness_px": 9.5,
+          "thickness_source": "vectorizer",
+          "thickness_basis": "Vectorizer thickness 9.5 px, consistent with 9.0 px measured on the predicted structural_wall mask."
+        }
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            35.5,
+            73.84146774239402
+          ],
+          "end": [
+            445.0,
+            73.84146774239402
+          ]
+        },
+        "thickness_px": 10.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-04-p01:wall_001",
+      "field": "repair:R1_merge",
+      "before": {
+        "kept": {
+          "id": "wall_001",
+          "axis_px": {
+            "start": [
+              35.5,
+              73.84146774239402
+            ],
+            "end": [
+              445.0,
+              73.84146774239402
+            ]
+          },
+          "thickness_px": 10.0,
+          "thickness_source": "vectorizer",
+          "thickness_basis": "Vectorizer thickness 10.0 px, consistent with 10.0 px measured on the predicted structural_wall mask."
+        },
+        "merged": {
+          "id": "wall_006",
+          "axis_px": {
+            "start": [
+              385.0,
+              74.0
+            ],
+            "end": [
+              476.5,
+              74.0
+            ]
+          },
+          "thickness_px": 10.0,
+          "thickness_source": "vectorizer",
+          "thickness_basis": "Vectorizer thickness 10.0 px, consistent with 10.0 px measured on the predicted structural_wall mask."
+        }
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            35.5,
+            73.87042123854361
+          ],
+          "end": [
+            476.5,
+            73.87042123854361
+          ]
+        },
+        "thickness_px": 10.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-04-p01:wall_007",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            40.5,
+            228.0
+          ],
+          "end": [
+            471.5,
+            228.0
+          ]
+        },
+        "thickness_px": 6.5
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            40.5,
+            228.0
+          ],
+          "end": [
+            476.5,
+            228.0
+          ]
+        },
+        "thickness_px": 6.5
+      }
+    },
+    {
+      "object_id": "wall:synth-img-04-p01:wall_007",
+      "field": "repair:R3_recentre",
+      "before": {
+        "axis_px": {
+          "start": [
+            40.5,
+            228.0
+          ],
+          "end": [
+            476.5,
+            228.0
+          ]
+        },
+        "thickness_px": 6.5
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            40.5,
+            228.5
+          ],
+          "end": [
+            476.5,
+            228.5
+          ]
+        },
+        "thickness_px": 6.5
+      }
+    },
+    {
+      "object_id": "wall:synth-img-04-p01:wall_007",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            40.5,
+            228.5
+          ],
+          "end": [
+            476.5,
+            228.5
+          ]
+        },
+        "thickness_px": 6.5
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            35.5,
+            228.5
+          ],
+          "end": [
+            476.5,
+            228.5
+          ]
+        },
+        "thickness_px": 6.5
+      }
+    },
+    {
+      "object_id": "wall:synth-img-04-p01:wall_007",
+      "field": "repair:R3_recentre",
+      "before": {
+        "axis_px": {
+          "start": [
+            35.5,
+            228.5
+          ],
+          "end": [
+            476.5,
+            228.5
+          ]
+        },
+        "thickness_px": 6.5
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            35.5,
+            228.0
+          ],
+          "end": [
+            476.5,
+            228.0
+          ]
+        },
+        "thickness_px": 6.5
+      }
+    },
+    {
+      "object_id": "wall:synth-img-04-p01:wall_009",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            40.5,
+            396.5
+          ],
+          "end": [
+            70.0,
+            397.0
+          ]
+        },
+        "thickness_px": 8.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            40.5,
+            396.5
+          ],
+          "end": [
+            109.99425576215894,
+            397.6778687417315
+          ]
+        },
+        "thickness_px": 8.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-04-p01:wall_009",
+      "field": "repair:R3_recentre",
+      "before": {
+        "axis_px": {
+          "start": [
+            40.5,
+            396.5
+          ],
+          "end": [
+            109.99425576215894,
+            397.6778687417315
+          ]
+        },
+        "thickness_px": 8.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            40.49152664072836,
+            397.58886256789276
+          ],
+          "end": [
+            109.9857824028873,
+            397.58886256789276
+          ]
+        },
+        "thickness_px": 8.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-04-p01:wall_009",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            40.49152664072836,
+            397.58886256789276
+          ],
+          "end": [
+            109.9857824028873,
+            397.58886256789276
+          ]
+        },
+        "thickness_px": 8.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            36.49152664072836,
+            397.58886256789276
+          ],
+          "end": [
+            109.9857824028873,
+            397.58886256789276
+          ]
+        },
+        "thickness_px": 8.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-04-p01:wall_009",
+      "field": "repair:R3_recentre",
+      "before": {
+        "axis_px": {
+          "start": [
+            36.49152664072836,
+            397.58886256789276
+          ],
+          "end": [
+            109.9857824028873,
+            397.58886256789276
+          ]
+        },
+        "thickness_px": 8.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            36.49152664072836,
+            397.08886256789276
+          ],
+          "end": [
+            109.9857824028873,
+            397.08886256789276
+          ]
+        },
+        "thickness_px": 8.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-04-p01:wall_009",
+      "field": "repair:R1_merge",
+      "before": {
+        "kept": {
+          "id": "wall_009",
+          "axis_px": {
+            "start": [
+              36.49152664072836,
+              397.08886256789276
+            ],
+            "end": [
+              109.9857824028873,
+              397.08886256789276
+            ]
+          },
+          "thickness_px": 8.0,
+          "thickness_source": "vectorizer",
+          "thickness_basis": "Vectorizer thickness 8.0 px, consistent with 8.0 px measured on the predicted structural_wall mask."
+        },
+        "merged": {
+          "id": "wall_010",
+          "axis_px": {
+            "start": [
+              52.0,
+              397.5
+            ],
+            "end": [
+              477.0,
+              397.5
+            ]
+          },
+          "thickness_px": 8.0,
+          "thickness_source": "vectorizer",
+          "thickness_basis": "Vectorizer thickness 8.0 px, consistent with 8.0 px measured on the predicted structural_wall mask."
+        }
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            36.49152664072836,
+            397.4393849793866
+          ],
+          "end": [
+            477.0,
+            397.4393849793866
+          ]
+        },
+        "thickness_px": 8.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-04-p01:wall_009",
+      "field": "repair:R3_recentre",
+      "before": {
+        "axis_px": {
+          "start": [
+            36.49152664072836,
+            397.4393849793866
+          ],
+          "end": [
+            477.0,
+            397.4393849793866
+          ]
+        },
+        "thickness_px": 8.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            36.49152664072836,
+            397.9393849793866
+          ],
+          "end": [
+            477.0,
+            397.9393849793866
+          ]
+        },
+        "thickness_px": 8.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-04-p01:wall_011",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            40.5,
+            396.5
+          ],
+          "end": [
+            40.5,
+            73.625
+          ]
+        },
+        "thickness_px": 10.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            40.5,
+            396.5
+          ],
+          "end": [
+            40.5,
+            69.625
+          ]
+        },
+        "thickness_px": 10.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-04-p01:wall_011",
+      "field": "repair:R3_recentre",
+      "before": {
+        "axis_px": {
+          "start": [
+            40.5,
+            396.5
+          ],
+          "end": [
+            40.5,
+            69.625
+          ]
+        },
+        "thickness_px": 10.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            40.0,
+            396.5
+          ],
+          "end": [
+            40.0,
+            69.625
+          ]
+        },
+        "thickness_px": 10.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-04-p01:wall_011",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            40.0,
+            396.5
+          ],
+          "end": [
+            40.0,
+            69.625
+          ]
+        },
+        "thickness_px": 10.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            40.0,
+            400.5
+          ],
+          "end": [
+            40.0,
+            69.625
+          ]
+        },
+        "thickness_px": 10.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-04-p01:wall_011",
+      "field": "repair:R3_recentre",
+      "before": {
+        "axis_px": {
+          "start": [
+            40.0,
+            400.5
+          ],
+          "end": [
+            40.0,
+            69.625
+          ]
+        },
+        "thickness_px": 10.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            40.5,
+            400.5
+          ],
+          "end": [
+            40.5,
+            69.625
+          ]
+        },
+        "thickness_px": 10.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-04-p01:wall_012",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            172.0,
+            397.5
+          ],
+          "end": [
+            172.0,
+            270.0
+          ]
+        },
+        "thickness_px": 6.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            172.0,
+            397.5
+          ],
+          "end": [
+            172.0,
+            268.0
+          ]
+        },
+        "thickness_px": 6.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-04-p01:wall_012",
+      "field": "repair:R3_recentre",
+      "before": {
+        "axis_px": {
+          "start": [
+            172.0,
+            397.5
+          ],
+          "end": [
+            172.0,
+            268.0
+          ]
+        },
+        "thickness_px": 6.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            172.5,
+            397.5
+          ],
+          "end": [
+            172.5,
+            268.0
+          ]
+        },
+        "thickness_px": 6.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-04-p01:wall_012",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            172.5,
+            397.5
+          ],
+          "end": [
+            172.5,
+            268.0
+          ]
+        },
+        "thickness_px": 6.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            172.5,
+            400.5
+          ],
+          "end": [
+            172.5,
+            268.0
+          ]
+        },
+        "thickness_px": 6.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-04-p01:wall_012",
+      "field": "repair:R3_recentre",
+      "before": {
+        "axis_px": {
+          "start": [
+            172.5,
+            400.5
+          ],
+          "end": [
+            172.5,
+            268.0
+          ]
+        },
+        "thickness_px": 6.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            172.0,
+            400.5
+          ],
+          "end": [
+            172.0,
+            268.0
+          ]
+        },
+        "thickness_px": 6.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-04-p01:wall_013",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            178.0,
+            201.0
+          ],
+          "end": [
+            175.5,
+            74.0
+          ]
+        },
+        "thickness_px": 6.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            178.0,
+            201.0
+          ],
+          "end": [
+            175.40159386752921,
+            69.0009684704843
+          ]
+        },
+        "thickness_px": 6.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-04-p01:wall_013",
+      "field": "repair:R3_recentre",
+      "before": {
+        "axis_px": {
+          "start": [
+            178.0,
+            201.0
+          ],
+          "end": [
+            175.40159386752921,
+            69.0009684704843
+          ]
+        },
+        "thickness_px": 6.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            178.2005063926193,
+            200.97047816025878
+          ],
+          "end": [
+            178.2005063926193,
+            68.97144663074306
+          ]
+        },
+        "thickness_px": 6.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-04-p01:wall_013",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            178.2005063926193,
+            200.97047816025878
+          ],
+          "end": [
+            178.2005063926193,
+            68.97144663074306
+          ]
+        },
+        "thickness_px": 6.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            178.2005063926193,
+            203.97047816025878
+          ],
+          "end": [
+            178.2005063926193,
+            68.97144663074306
+          ]
+        },
+        "thickness_px": 6.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-04-p01:wall_013",
+      "field": "repair:R3_recentre",
+      "before": {
+        "axis_px": {
+          "start": [
+            178.2005063926193,
+            203.97047816025878
+          ],
+          "end": [
+            178.2005063926193,
+            68.97144663074306
+          ]
+        },
+        "thickness_px": 6.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            178.7005063926193,
+            203.97047816025878
+          ],
+          "end": [
+            178.7005063926193,
+            68.97144663074306
+          ]
+        },
+        "thickness_px": 6.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-04-p01:wall_013",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            178.7005063926193,
+            203.97047816025878
+          ],
+          "end": [
+            178.7005063926193,
+            68.97144663074306
+          ]
+        },
+        "thickness_px": 6.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            178.7005063926193,
+            230.97047816025878
+          ],
+          "end": [
+            178.7005063926193,
+            68.97144663074306
+          ]
+        },
+        "thickness_px": 6.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-04-p01:wall_013",
+      "field": "repair:R3_recentre",
+      "before": {
+        "axis_px": {
+          "start": [
+            178.7005063926193,
+            230.97047816025878
+          ],
+          "end": [
+            178.7005063926193,
+            68.97144663074306
+          ]
+        },
+        "thickness_px": 6.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            178.2005063926193,
+            230.97047816025878
+          ],
+          "end": [
+            178.2005063926193,
+            68.97144663074306
+          ]
+        },
+        "thickness_px": 6.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-04-p01:wall_014",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            318.0,
+            184.0
+          ],
+          "end": [
+            317.5,
+            105.5
+          ]
+        },
+        "thickness_px": 5.5
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            318.0,
+            184.0
+          ],
+          "end": [
+            317.27070528809253,
+            69.5007302305298
+          ]
+        },
+        "thickness_px": 5.5
+      }
+    },
+    {
+      "object_id": "wall:synth-img-04-p01:wall_014",
+      "field": "repair:R3_recentre",
+      "before": {
+        "axis_px": {
+          "start": [
+            318.0,
+            184.0
+          ],
+          "end": [
+            317.27070528809253,
+            69.5007302305298
+          ]
+        },
+        "thickness_px": 5.5
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            317.6353526440463,
+            184.0
+          ],
+          "end": [
+            317.6353526440463,
+            69.5007302305298
+          ]
+        },
+        "thickness_px": 5.5
+      }
+    },
+    {
+      "object_id": "wall:synth-img-04-p01:wall_014",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            317.6353526440463,
+            184.0
+          ],
+          "end": [
+            317.6353526440463,
+            69.5007302305298
+          ]
+        },
+        "thickness_px": 5.5
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            317.6353526440463,
+            224.0
+          ],
+          "end": [
+            317.6353526440463,
+            69.5007302305298
+          ]
+        },
+        "thickness_px": 5.5
+      }
+    },
+    {
+      "object_id": "wall:synth-img-04-p01:wall_014",
+      "field": "repair:R1_merge",
+      "before": {
+        "kept": {
+          "id": "wall_014",
+          "axis_px": {
+            "start": [
+              317.6353526440463,
+              224.0
+            ],
+            "end": [
+              317.6353526440463,
+              69.5007302305298
+            ]
+          },
+          "thickness_px": 5.5,
+          "thickness_source": "vectorizer",
+          "thickness_basis": "Vectorizer thickness 5.5 px, consistent with 5.0 px measured on the predicted structural_wall mask."
+        },
+        "merged": {
+          "id": "wall_015",
+          "axis_px": {
+            "start": [
+              318.0,
+              145.5
+            ],
+            "end": [
+              318.0,
+              68.54166666666667
+            ]
+          },
+          "thickness_px": 6.5,
+          "thickness_source": "vectorizer",
+          "thickness_basis": "Vectorizer thickness 6.5 px, consistent with 6.0 px measured on the predicted structural_wall mask."
+        }
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            317.7565958107965,
+            224.0
+          ],
+          "end": [
+            317.7565958107965,
+            68.54166666666669
+          ]
+        },
+        "thickness_px": 5.5
+      }
+    },
+    {
+      "object_id": "wall:synth-img-04-p01:wall_016",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            368.5,
+            228.0
+          ],
+          "end": [
+            368.5,
+            373.0
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            368.5,
+            228.0
+          ],
+          "end": [
+            368.5,
+            401.0
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-04-p01:wall_016",
+      "field": "repair:R3_recentre",
+      "before": {
+        "axis_px": {
+          "start": [
+            368.5,
+            228.0
+          ],
+          "end": [
+            368.5,
+            401.0
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            369.0,
+            228.0
+          ],
+          "end": [
+            369.0,
+            401.0
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-04-p01:wall_016",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            369.0,
+            228.0
+          ],
+          "end": [
+            369.0,
+            401.0
+          ]
+        },
+        "thickness_px": 5.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            369.0,
+            226.0
+          ],
+          "end": [
+            369.0,
+            401.0
+          ]
+        },
+        "thickness_px": 5.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-04-p01:wall_017",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            472.0,
+            367.0
+          ],
+          "end": [
+            471.5,
+            74.0
+          ]
+        },
+        "thickness_px": 10.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            472.0,
+            367.0
+          ],
+          "end": [
+            471.4931740713723,
+            70.00000582416695
+          ]
+        },
+        "thickness_px": 10.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-04-p01:wall_017",
+      "field": "repair:R3_recentre",
+      "before": {
+        "axis_px": {
+          "start": [
+            472.0,
+            367.0
+          ],
+          "end": [
+            471.4931740713723,
+            70.00000582416695
+          ]
+        },
+        "thickness_px": 10.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            472.24658630766527,
+            366.99914675892154
+          ],
+          "end": [
+            472.24658630766527,
+            69.99915258308849
+          ]
+        },
+        "thickness_px": 10.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-04-p01:wall_017",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            472.24658630766527,
+            366.99914675892154
+          ],
+          "end": [
+            472.24658630766527,
+            69.99915258308849
+          ]
+        },
+        "thickness_px": 10.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            472.24658630766527,
+            371.99914675892154
+          ],
+          "end": [
+            472.24658630766527,
+            69.99915258308849
+          ]
+        },
+        "thickness_px": 10.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-04-p01:wall_017",
+      "field": "repair:R3_recentre",
+      "before": {
+        "axis_px": {
+          "start": [
+            472.24658630766527,
+            371.99914675892154
+          ],
+          "end": [
+            472.24658630766527,
+            69.99915258308849
+          ]
+        },
+        "thickness_px": 10.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            472.74658630766527,
+            371.99914675892154
+          ],
+          "end": [
+            472.74658630766527,
+            69.99915258308849
+          ]
+        },
+        "thickness_px": 10.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-04-p01:wall_017",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            472.74658630766527,
+            371.99914675892154
+          ],
+          "end": [
+            472.74658630766527,
+            69.99915258308849
+          ]
+        },
+        "thickness_px": 10.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            472.74658630766527,
+            400.99914675892154
+          ],
+          "end": [
+            472.74658630766527,
+            69.99915258308849
+          ]
+        },
+        "thickness_px": 10.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-04-p01:wall_017",
+      "field": "repair:R3_recentre",
+      "before": {
+        "axis_px": {
+          "start": [
+            472.74658630766527,
+            400.99914675892154
+          ],
+          "end": [
+            472.74658630766527,
+            69.99915258308849
+          ]
+        },
+        "thickness_px": 10.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            472.24658630766527,
+            400.99914675892154
+          ],
+          "end": [
+            472.24658630766527,
+            69.99915258308849
+          ]
+        },
+        "thickness_px": 10.0
+      }
+    }
+  ],
+  "plan_diagnostics_summary": {
+    "predicted_wall_pixel_coverage_ratio": 0.982630038704805,
+    "skeleton_coverage_ratio": 0.9948774240761068,
+    "candidate_pixels_outside_predicted_wall": 3598
+  },
+  "ground_truth_or_annotation_read": false,
+  "sample_333_geometry_or_decisions_used": false,
+  "paths": {
+    "candidate_geometry": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-04/candidates_r05/candidate_geometry.json",
+    "candidate_geometry_sha256": "8ef9c56a5861a9264a0f2915b9e374ed2b1a6ee1bbf123180a287ac9ff29ad00"
+  },
+  "geometry_status": "CANDIDATE_UNREVIEWED",
+  "scale_status": "ASSUMED_FOR_PREVIEW",
+  "input_checks": {
+    "PASS": 200,
+    "FAIL": 0,
+    "WARN": 23,
+    "INFO": 0
+  },
+  "failed": [],
+  "building_model": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-04/building_model_r05.json"
+}

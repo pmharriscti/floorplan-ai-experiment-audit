@@ -23,3 +23,18 @@ protections:
   upstream_artifacts: read-only
 preview_profile: pilot_preview_profile_v0 (0.01 m per source px, wall height 2.7 m, door height 2.1 m)
 repair_config: results/config/bim_bridge_pm_comparison_v0_repair_v1_2.yaml
+windows_r05:
+  date: '2026-10-08'
+  config: results/config/bim_bridge_pm_comparison_v0_windows_v1.yaml
+  preview_profile: pilot_preview_profile_v1 (0.01 m per source px, wall height 2.7 m, door 0.0-2.1 m, window sill 0.9 m height 1.2 m; all assumptions)
+  aperture_heads:
+  - door_opening
+  - window_opening
+  repair_rules: repair_v1.2, unchanged
+  aperture_yield_gap_px: 0.5
+  min_aperture_width_after_yield_px: 2.0
+  protections:
+    core_bridge_changed: false
+    vectorizer_changed: false
+    doors_changed: false
+    walls_changed: false

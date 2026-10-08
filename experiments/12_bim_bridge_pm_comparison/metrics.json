@@ -738,7 +738,599 @@
   "not_measured": [
     "No human review of the 15 plans; every IFC is CANDIDATE_UNREVIEWED.",
     "No scale: 0.01 preview metres per source pixel, ASSUMED_FOR_PREVIEW.",
-    "Windows predicted but not exported.",
-    "No viewer inspection recorded."
-  ]
+    "No viewer inspection recorded.",
+    "Windows: not exported in r01 and r04; exported in r05 (2026-10-08) as apertures with an assumed vertical profile. Window heights are not measured.",
+    "Windows 'found' uses the same loose one-pixel touch rule as doors: a detection count, not a shape score."
+  ],
+  "windows_r05_2026_10_08": {
+    "status": "window apertures exported",
+    "revision": "r05",
+    "config": "results/config/bim_bridge_pm_comparison_v0_windows_v1.yaml",
+    "preview_profile": {
+      "name": "pilot_preview_profile_v1",
+      "door_opening": {
+        "bottom_elevation_m": 0.0,
+        "height_m": 2.1
+      },
+      "window_opening": {
+        "bottom_elevation_m": 0.9,
+        "height_m": 1.2
+      },
+      "wall_height_m": 2.7,
+      "note": "Sill and height of the window profile are visualization assumptions chosen by the AI assistant in the working session; nobody confirmed them. They are labelled as assumptions on every exported object, like the door values."
+    },
+    "rule": {
+      "hosting": "every head in heads.aperture_heads with a vertical profile is hosted by the r04 host rule; heads without a profile stay recorded and unexported",
+      "overlap_same_head": "unchanged: both components left unexported as ambiguous",
+      "overlap_different_heads": "the earlier head in aperture_heads (door_opening) keeps its void; the window is trimmed to stop 0.5 px short of it (recorded as an automated edit), or left unexported when the door covers it or would split it; smallest span kept 2.0 px",
+      "why_a_gap": "two voids that merely touch fail the input contract's 1e-9 m overlap test after offset and width are rounded separately (the first cc-01 export attempt failed this way; its validation report is kept)"
+    },
+    "pooled_by_group": {
+      "cubicasa_test": {
+        "windows": 19,
+        "windows_found_by_mask": 19,
+        "windows_found_in_ifc_r05": 19,
+        "doors_found_in_ifc_r04": 19,
+        "doors_found_in_ifc_r05": 19,
+        "ifc_wall_iou_pooled_r04": 0.7114247479148512,
+        "ifc_wall_iou_pooled_r05": 0.7114247479148512
+      },
+      "synth_images_prior_run": {
+        "windows": 43,
+        "windows_found_by_mask": 43,
+        "windows_found_in_ifc_r05": 43,
+        "doors_found_in_ifc_r04": 30,
+        "doors_found_in_ifc_r05": 30,
+        "ifc_wall_iou_pooled_r04": 0.8266431713171734,
+        "ifc_wall_iou_pooled_r05": 0.8266431713171734
+      },
+      "synth_images_commercial": {
+        "windows": 92,
+        "windows_found_by_mask": 90,
+        "windows_found_in_ifc_r05": 90,
+        "doors_found_in_ifc_r04": 74,
+        "doors_found_in_ifc_r05": 74,
+        "ifc_wall_iou_pooled_r04": 0.7645252187914661,
+        "ifc_wall_iou_pooled_r05": 0.7645252187914661
+      }
+    },
+    "per_plan": {
+      "cc-01": {
+        "doors_in_ifc_r04": 7,
+        "doors_in_ifc_r05": 7,
+        "doors_found_in_ifc_r05": "5/6",
+        "window_components_predicted": 6,
+        "window_components_exported_r05": 6,
+        "windows_found_by_mask": "4/4",
+        "windows_found_in_ifc_r05": "4/4",
+        "openings_r05": {
+          "door": 7,
+          "window": 6
+        },
+        "walls_r05": 14,
+        "ifc_wall_iou_r05": 0.6638396624472573,
+        "windows_trimmed_to_yield_to_a_door": 3,
+        "window_components_not_exported": []
+      },
+      "cc-02": {
+        "doors_in_ifc_r04": 4,
+        "doors_in_ifc_r05": 4,
+        "doors_found_in_ifc_r05": "4/7",
+        "window_components_predicted": 6,
+        "window_components_exported_r05": 6,
+        "windows_found_by_mask": "6/6",
+        "windows_found_in_ifc_r05": "6/6",
+        "openings_r05": {
+          "door": 4,
+          "window": 6
+        },
+        "walls_r05": 8,
+        "ifc_wall_iou_r05": 0.5955085017645172,
+        "windows_trimmed_to_yield_to_a_door": 0,
+        "window_components_not_exported": []
+      },
+      "cc-03": {
+        "doors_in_ifc_r04": 10,
+        "doors_in_ifc_r05": 10,
+        "doors_found_in_ifc_r05": "10/10",
+        "window_components_predicted": 9,
+        "window_components_exported_r05": 9,
+        "windows_found_by_mask": "9/9",
+        "windows_found_in_ifc_r05": "9/9",
+        "openings_r05": {
+          "door": 10,
+          "window": 9
+        },
+        "walls_r05": 16,
+        "ifc_wall_iou_r05": 0.8288962728692101,
+        "windows_trimmed_to_yield_to_a_door": 0,
+        "window_components_not_exported": []
+      },
+      "img-01": {
+        "doors_in_ifc_r04": 7,
+        "doors_in_ifc_r05": 7,
+        "doors_found_in_ifc_r05": "5/6",
+        "window_components_predicted": 11,
+        "window_components_exported_r05": 11,
+        "windows_found_by_mask": "9/9",
+        "windows_found_in_ifc_r05": "9/9",
+        "openings_r05": {
+          "door": 7,
+          "window": 11
+        },
+        "walls_r05": 17,
+        "ifc_wall_iou_r05": 0.7933964769407807,
+        "windows_trimmed_to_yield_to_a_door": 0,
+        "window_components_not_exported": []
+      },
+      "img-02": {
+        "doors_in_ifc_r04": 8,
+        "doors_in_ifc_r05": 8,
+        "doors_found_in_ifc_r05": "7/9",
+        "window_components_predicted": 8,
+        "window_components_exported_r05": 8,
+        "windows_found_by_mask": "8/8",
+        "windows_found_in_ifc_r05": "8/8",
+        "openings_r05": {
+          "door": 8,
+          "window": 8
+        },
+        "walls_r05": 19,
+        "ifc_wall_iou_r05": 0.8410855663824605,
+        "windows_trimmed_to_yield_to_a_door": 0,
+        "window_components_not_exported": []
+      },
+      "img-03": {
+        "doors_in_ifc_r04": 10,
+        "doors_in_ifc_r05": 10,
+        "doors_found_in_ifc_r05": "6/6",
+        "window_components_predicted": 10,
+        "window_components_exported_r05": 8,
+        "windows_found_by_mask": "6/6",
+        "windows_found_in_ifc_r05": "6/6",
+        "openings_r05": {
+          "door": 10,
+          "window": 8
+        },
+        "walls_r05": 16,
+        "ifc_wall_iou_r05": 0.8256982465867351,
+        "windows_trimmed_to_yield_to_a_door": 0,
+        "window_components_not_exported": [
+          {
+            "component_id": 2,
+            "pixel_count": 51,
+            "reason": "no candidate wall hosts this component"
+          },
+          {
+            "component_id": 8,
+            "pixel_count": 5,
+            "reason": "component smaller than min_aperture_component_px (20)"
+          }
+        ]
+      },
+      "img-04": {
+        "doors_in_ifc_r04": 6,
+        "doors_in_ifc_r05": 6,
+        "doors_found_in_ifc_r05": "6/6",
+        "window_components_predicted": 6,
+        "window_components_exported_r05": 6,
+        "windows_found_by_mask": "6/6",
+        "windows_found_in_ifc_r05": "6/6",
+        "openings_r05": {
+          "door": 6,
+          "window": 6
+        },
+        "walls_r05": 10,
+        "ifc_wall_iou_r05": 0.7945724077468718,
+        "windows_trimmed_to_yield_to_a_door": 0,
+        "window_components_not_exported": []
+      },
+      "img-05": {
+        "doors_in_ifc_r04": 3,
+        "doors_in_ifc_r05": 3,
+        "doors_found_in_ifc_r05": "3/3",
+        "window_components_predicted": 3,
+        "window_components_exported_r05": 3,
+        "windows_found_by_mask": "3/3",
+        "windows_found_in_ifc_r05": "3/3",
+        "openings_r05": {
+          "door": 3,
+          "window": 3
+        },
+        "walls_r05": 7,
+        "ifc_wall_iou_r05": 0.8810519366197183,
+        "windows_trimmed_to_yield_to_a_door": 0,
+        "window_components_not_exported": []
+      },
+      "img-06": {
+        "doors_in_ifc_r04": 3,
+        "doors_in_ifc_r05": 3,
+        "doors_found_in_ifc_r05": "3/3",
+        "window_components_predicted": 11,
+        "window_components_exported_r05": 11,
+        "windows_found_by_mask": "11/11",
+        "windows_found_in_ifc_r05": "11/11",
+        "openings_r05": {
+          "door": 3,
+          "window": 11
+        },
+        "walls_r05": 8,
+        "ifc_wall_iou_r05": 0.8359253499222395,
+        "windows_trimmed_to_yield_to_a_door": 0,
+        "window_components_not_exported": []
+      },
+      "com-01": {
+        "doors_in_ifc_r04": 11,
+        "doors_in_ifc_r05": 11,
+        "doors_found_in_ifc_r05": "10/11",
+        "window_components_predicted": 19,
+        "window_components_exported_r05": 18,
+        "windows_found_by_mask": "12/14",
+        "windows_found_in_ifc_r05": "12/14",
+        "openings_r05": {
+          "door": 11,
+          "window": 18
+        },
+        "walls_r05": 13,
+        "ifc_wall_iou_r05": 0.5916351826075429,
+        "windows_trimmed_to_yield_to_a_door": 0,
+        "window_components_not_exported": [
+          {
+            "component_id": 10,
+            "pixel_count": 52,
+            "reason": "no candidate wall hosts this component"
+          }
+        ]
+      },
+      "com-02": {
+        "doors_in_ifc_r04": 18,
+        "doors_in_ifc_r05": 18,
+        "doors_found_in_ifc_r05": "14/25",
+        "window_components_predicted": 16,
+        "window_components_exported_r05": 16,
+        "windows_found_by_mask": "16/16",
+        "windows_found_in_ifc_r05": "16/16",
+        "openings_r05": {
+          "door": 18,
+          "window": 16
+        },
+        "walls_r05": 35,
+        "ifc_wall_iou_r05": 0.7431884253938206,
+        "windows_trimmed_to_yield_to_a_door": 0,
+        "window_components_not_exported": []
+      },
+      "com-03": {
+        "doors_in_ifc_r04": 16,
+        "doors_in_ifc_r05": 16,
+        "doors_found_in_ifc_r05": "16/17",
+        "window_components_predicted": 10,
+        "window_components_exported_r05": 10,
+        "windows_found_by_mask": "10/10",
+        "windows_found_in_ifc_r05": "10/10",
+        "openings_r05": {
+          "door": 16,
+          "window": 10
+        },
+        "walls_r05": 23,
+        "ifc_wall_iou_r05": 0.8124657534246575,
+        "windows_trimmed_to_yield_to_a_door": 0,
+        "window_components_not_exported": []
+      },
+      "com-04": {
+        "doors_in_ifc_r04": 14,
+        "doors_in_ifc_r05": 14,
+        "doors_found_in_ifc_r05": "14/14",
+        "window_components_predicted": 16,
+        "window_components_exported_r05": 16,
+        "windows_found_by_mask": "16/16",
+        "windows_found_in_ifc_r05": "16/16",
+        "openings_r05": {
+          "door": 14,
+          "window": 16
+        },
+        "walls_r05": 16,
+        "ifc_wall_iou_r05": 0.8498101997029213,
+        "windows_trimmed_to_yield_to_a_door": 0,
+        "window_components_not_exported": []
+      },
+      "com-05": {
+        "doors_in_ifc_r04": 17,
+        "doors_in_ifc_r05": 17,
+        "doors_found_in_ifc_r05": "11/12",
+        "window_components_predicted": 20,
+        "window_components_exported_r05": 19,
+        "windows_found_by_mask": "16/16",
+        "windows_found_in_ifc_r05": "16/16",
+        "openings_r05": {
+          "door": 17,
+          "window": 19
+        },
+        "walls_r05": 19,
+        "ifc_wall_iou_r05": 0.7667889004433255,
+        "windows_trimmed_to_yield_to_a_door": 2,
+        "window_components_not_exported": [
+          {
+            "component_id": 16,
+            "pixel_count": 56,
+            "reason": "no candidate wall hosts this component"
+          }
+        ]
+      },
+      "com-06": {
+        "doors_in_ifc_r04": 9,
+        "doors_in_ifc_r05": 9,
+        "doors_found_in_ifc_r05": "9/14",
+        "window_components_predicted": 24,
+        "window_components_exported_r05": 23,
+        "windows_found_by_mask": "20/20",
+        "windows_found_in_ifc_r05": "20/20",
+        "openings_r05": {
+          "door": 9,
+          "window": 23
+        },
+        "walls_r05": 17,
+        "ifc_wall_iou_r05": 0.7494091164884638,
+        "windows_trimmed_to_yield_to_a_door": 1,
+        "window_components_not_exported": [
+          {
+            "component_id": 7,
+            "pixel_count": 98,
+            "reason": "no candidate wall hosts this component"
+          }
+        ]
+      }
+    },
+    "totals": {
+      "plans": 15,
+      "window_components_predicted": 175,
+      "window_components_exported": 170,
+      "windows_trimmed_to_yield_to_a_door": 6,
+      "doors_changed_vs_r04": 0,
+      "ifc_wall_iou_changed_vs_r04": 0,
+      "window_components_not_exported_by_reason": {
+        "no candidate wall hosts this component": 4,
+        "component smaller than min_aperture_component_px (20)": 1
+      }
+    },
+    "comparison_script_change": {
+      "what": "IFC openings are read with their PredictedClass property and split into door and window sets before any door metric is computed; new window columns",
+      "record_version": "bim_bridge_pm_comparison/2",
+      "regression_check": {
+        "folder": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/comparison_20261008_132412_UTC_r04_regression_check_of_windows_v1_script",
+        "what": "the r04 exports re-scored with the comparison script after the change (openings split by PredictedClass)",
+        "plans": 12,
+        "pre_existing_fields_identical_to_2026_10_06_comparison": true,
+        "window_openings_in_r04_ifcs": 0,
+        "note": "img-04..06 were not included in the check run; the 12 plans compared cover both run directories"
+      }
+    },
+    "ifc_files_r05": {
+      "cc-01": {
+        "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/cc-01/export_candidate_preview_whole_plan_r05/cc-high-quality--4712-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+        "sha256": "313f0dc9f4c4cdfe1986178ededf3bc66be604c14c395fecfdfdc985cf9d943d",
+        "walls": 14,
+        "openings": 13,
+        "door_openings": 7,
+        "window_openings": 6,
+        "bridge_checks": "PASS",
+        "bridge_failed": 0,
+        "run_specific": "8/8",
+        "web_ifc": "PASS",
+        "repeat_export_identical": true,
+        "guids_reused_from_r04": 82,
+        "guids_created": 24
+      },
+      "cc-02": {
+        "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/cc-02/export_candidate_preview_whole_plan_r05/cc-high-quality-architectural--4847-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+        "sha256": "cdf11dce812bb39cfb5b6fe9c1c7963e606febb0c3b159bc3a9eaa9c8faa5089",
+        "walls": 8,
+        "openings": 10,
+        "door_openings": 4,
+        "window_openings": 6,
+        "bridge_checks": "PASS",
+        "bridge_failed": 0,
+        "run_specific": "8/8",
+        "web_ifc": "PASS",
+        "repeat_export_identical": true,
+        "guids_reused_from_r04": 52,
+        "guids_created": 24
+      },
+      "cc-03": {
+        "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/cc-03/export_candidate_preview_whole_plan_r05/cc-high-quality-architectural--2539-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+        "sha256": "75e11273cd83c1765585807c1b93b1fb6542ad784c727f82f4f37b5ffcd86ee1",
+        "walls": 16,
+        "openings": 19,
+        "door_openings": 10,
+        "window_openings": 9,
+        "bridge_checks": "PASS",
+        "bridge_failed": 0,
+        "run_specific": "8/8",
+        "web_ifc": "PASS",
+        "repeat_export_identical": true,
+        "guids_reused_from_r04": 100,
+        "guids_created": 36
+      },
+      "img-01": {
+        "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-01/export_candidate_preview_whole_plan_r05/synth-img-01-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+        "sha256": "953af662385a8874c9751320cfe17706b01965b6754dbfdf5b14070ed2980f0f",
+        "walls": 17,
+        "openings": 18,
+        "door_openings": 7,
+        "window_openings": 11,
+        "bridge_checks": "PASS",
+        "bridge_failed": 0,
+        "run_specific": "8/8",
+        "web_ifc": "PASS",
+        "repeat_export_identical": true,
+        "guids_reused_from_r04": 91,
+        "guids_created": 44
+      },
+      "img-02": {
+        "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-02/export_candidate_preview_whole_plan_r05/synth-img-02-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+        "sha256": "7f5af5d3db116509dd95769c24f2cd37b1a70fa0a734466219d6bdce8e1ef6bd",
+        "walls": 19,
+        "openings": 16,
+        "door_openings": 8,
+        "window_openings": 8,
+        "bridge_checks": "PASS",
+        "bridge_failed": 0,
+        "run_specific": "8/8",
+        "web_ifc": "PASS",
+        "repeat_export_identical": true,
+        "guids_reused_from_r04": 101,
+        "guids_created": 32
+      },
+      "img-03": {
+        "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-03/export_candidate_preview_whole_plan_r05/synth-img-03-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+        "sha256": "cbf4a29d800a613d2c876573189146fb254c58bb19b41e01f32ce4f1f6ad53b7",
+        "walls": 16,
+        "openings": 18,
+        "door_openings": 10,
+        "window_openings": 8,
+        "bridge_checks": "PASS",
+        "bridge_failed": 0,
+        "run_specific": "8/8",
+        "web_ifc": "PASS",
+        "repeat_export_identical": true,
+        "guids_reused_from_r04": 100,
+        "guids_created": 32
+      },
+      "img-04": {
+        "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-04/export_candidate_preview_whole_plan_r05/synth-img-04-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+        "sha256": "291844dec24a40d5dbe7138a75443b1f30735bc0a93156ae8e00dd7c94db0ac6",
+        "walls": 10,
+        "openings": 12,
+        "door_openings": 6,
+        "window_openings": 6,
+        "bridge_checks": "PASS",
+        "bridge_failed": 0,
+        "run_specific": "8/8",
+        "web_ifc": "PASS",
+        "repeat_export_identical": true,
+        "guids_reused_from_r04": 66,
+        "guids_created": 24
+      },
+      "img-05": {
+        "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-05/export_candidate_preview_whole_plan_r05/synth-img-05-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+        "sha256": "617b3a20bc5da5c4287a7417a403dfa5deee179be2a43cfce50ef6fdd79d5d1c",
+        "walls": 7,
+        "openings": 6,
+        "door_openings": 3,
+        "window_openings": 3,
+        "bridge_checks": "PASS",
+        "bridge_failed": 0,
+        "run_specific": "8/8",
+        "web_ifc": "PASS",
+        "repeat_export_identical": true,
+        "guids_reused_from_r04": 45,
+        "guids_created": 12
+      },
+      "img-06": {
+        "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-06/export_candidate_preview_whole_plan_r05/synth-img-06-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+        "sha256": "3b565adde23abb8082878b317f91db3df909a998154bc46be5d0f21ebb8bbe57",
+        "walls": 8,
+        "openings": 14,
+        "door_openings": 3,
+        "window_openings": 11,
+        "bridge_checks": "PASS",
+        "bridge_failed": 0,
+        "run_specific": "8/8",
+        "web_ifc": "PASS",
+        "repeat_export_identical": true,
+        "guids_reused_from_r04": 48,
+        "guids_created": 44
+      },
+      "com-01": {
+        "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-01/export_candidate_preview_whole_plan_r05/com-com-01-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+        "sha256": "0bdc5eee8e35c6e8bfd35798097ffd5eb8eba35fb5d8f320dfeaa6cbebe232da",
+        "walls": 13,
+        "openings": 29,
+        "door_openings": 11,
+        "window_openings": 18,
+        "bridge_checks": "PASS",
+        "bridge_failed": 0,
+        "run_specific": "8/8",
+        "web_ifc": "PASS",
+        "repeat_export_identical": true,
+        "guids_reused_from_r04": 95,
+        "guids_created": 72
+      },
+      "com-02": {
+        "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-02/export_candidate_preview_whole_plan_r05/com-com-02-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+        "sha256": "d7d5fa221fc9aca6030aefb24a94ff265ddc1bf9b989028c8670623f76aeabca",
+        "walls": 35,
+        "openings": 34,
+        "door_openings": 18,
+        "window_openings": 16,
+        "bridge_checks": "PASS",
+        "bridge_failed": 0,
+        "run_specific": "8/8",
+        "web_ifc": "PASS",
+        "repeat_export_identical": true,
+        "guids_reused_from_r04": 189,
+        "guids_created": 64
+      },
+      "com-03": {
+        "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-03/export_candidate_preview_whole_plan_r05/com-com-03-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+        "sha256": "111a2c61bfd825d7c341c1c03dcc2525b78be26408409b55919e459e14bb8683",
+        "walls": 23,
+        "openings": 26,
+        "door_openings": 16,
+        "window_openings": 10,
+        "bridge_checks": "PASS",
+        "bridge_failed": 0,
+        "run_specific": "8/8",
+        "web_ifc": "PASS",
+        "repeat_export_identical": true,
+        "guids_reused_from_r04": 145,
+        "guids_created": 40
+      },
+      "com-04": {
+        "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-04/export_candidate_preview_whole_plan_r05/com-com-04-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+        "sha256": "fe53569efeeb741408f05b1c0e8b8de0e67c28aef830d133023ea4c4be84c901",
+        "walls": 16,
+        "openings": 30,
+        "door_openings": 14,
+        "window_openings": 16,
+        "bridge_checks": "PASS",
+        "bridge_failed": 0,
+        "run_specific": "8/8",
+        "web_ifc": "PASS",
+        "repeat_export_identical": true,
+        "guids_reused_from_r04": 116,
+        "guids_created": 64
+      },
+      "com-05": {
+        "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-05/export_candidate_preview_whole_plan_r05/com-com-05-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+        "sha256": "3b1fbafebf4fb6abe4ad9d72a5d0cb65afe5b63dcf8c6305444c506ab8f08ac1",
+        "walls": 19,
+        "openings": 36,
+        "door_openings": 17,
+        "window_openings": 19,
+        "bridge_checks": "PASS",
+        "bridge_failed": 0,
+        "run_specific": "8/8",
+        "web_ifc": "PASS",
+        "repeat_export_identical": true,
+        "guids_reused_from_r04": 137,
+        "guids_created": 76
+      },
+      "com-06": {
+        "path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-06/export_candidate_preview_whole_plan_r05/com-com-06-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+        "sha256": "4aa503c16e01a0f57ba6beb6df3159e87c5486af3430276e55f27a152c1e1896",
+        "walls": 17,
+        "openings": 32,
+        "door_openings": 9,
+        "window_openings": 23,
+        "bridge_checks": "PASS",
+        "bridge_failed": 0,
+        "run_specific": "8/8",
+        "web_ifc": "PASS",
+        "repeat_export_identical": true,
+        "guids_reused_from_r04": 99,
+        "guids_created": 92
+      }
+    },
+    "ifc_file_count_all_revisions": 45
+  }
 }

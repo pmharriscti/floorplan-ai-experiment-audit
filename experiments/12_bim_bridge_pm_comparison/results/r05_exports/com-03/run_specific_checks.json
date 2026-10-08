@@ -1,0 +1,494 @@
+{
+  "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-03/export_candidate_preview_whole_plan_r05/com-com-03-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+  "ifc_sha256": "111a2c61bfd825d7c341c1c03dcc2525b78be26408409b55919e459e14bb8683",
+  "written_utc": "2026-10-08T13:22:01Z",
+  "checks": [
+    {
+      "name": "ifc_footprints_map_back_to_candidate_pixels",
+      "status": "PASS",
+      "detail": "Wall footprints rebuilt from the IFC bodies and mapped model -> candidate px differ from the candidate rectangles by at most 2.99e-05 px (tolerance 8.17e-03).",
+      "measured": 2.9895692585478945e-05
+    },
+    {
+      "name": "ifc_wall_heights_match_model",
+      "status": "PASS",
+      "detail": "Largest difference between the tessellated wall height and the model height: 0.00e+00 m.",
+      "measured": 0.0
+    },
+    {
+      "name": "source_pixel_round_trip",
+      "status": "PASS",
+      "detail": "source px -> letterbox px -> model metres -> back: max error 0.00e+00 source px.",
+      "measured": 0.0
+    },
+    {
+      "name": "scale_applied_once_in_original_pixels",
+      "status": "PASS",
+      "detail": "1253 source px span 12.530000 m in the model; 0.01 m per ORIGINAL px gives 12.530000 m (letterbox scale 0.408293 is not applied twice)."
+    },
+    {
+      "name": "no_connection_relationships_written",
+      "status": "PASS",
+      "detail": "Explicit connection relationships in the file: {'IfcRelConnectsElements': 0, 'IfcRelConnectsPathElements': 0, 'IfcRelConnectsWithRealizingElements': 0}. Plan contact below is geometry only; it is not an encoded wall-to-wall relationship."
+    },
+    {
+      "name": "hosted_cuts_remove_expected_volume",
+      "status": "PASS",
+      "detail": "26 aperture(s) in 12 host wall(s): gross minus net volume of each host equals the sum of its aperture cuts."
+    },
+    {
+      "name": "status_and_assumptions_retained_on_every_object",
+      "status": "PASS",
+      "detail": "Every object carries ReviewState in ['CANDIDATE_UNREVIEWED'], ScaleStatus ASSUMED_FOR_PREVIEW, DimensionalClaimsPermitted false, HeightIsAssumption true and the model's PermittedUse."
+    },
+    {
+      "name": "file_states_preview_status",
+      "status": "PASS",
+      "detail": "IfcProject.Description: CANDIDATE_UNREVIEWED, PREVIEW ONLY, SCALE ASSUMED_FOR_PREVIEW: 23 straight walls and 26 aperture(s) from fresh frozen-model inference of source plan com-03 (whole-plan attempt after candidate repair)."
+    }
+  ],
+  "passed": 8,
+  "failed": 0,
+  "plan_contact_pairs": [
+    {
+      "a": "wall:com-com-03-p01:wall_001",
+      "b": "wall:com-com-03-p01:wall_018",
+      "plan_overlap_area_m2_preview": 0.016796295204999367,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:com-com-03-p01:wall_001",
+      "b": "wall:com-com-03-p01:wall_021",
+      "plan_overlap_area_m2_preview": 0.014396838456995908,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:com-com-03-p01:wall_001",
+      "b": "wall:com-com-03-p01:wall_022",
+      "plan_overlap_area_m2_preview": 0.017996023579001985,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:com-com-03-p01:wall_001",
+      "b": "wall:com-com-03-p01:wall_025",
+      "plan_overlap_area_m2_preview": 0.017996023579001985,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:com-com-03-p01:wall_001",
+      "b": "wall:com-com-03-p01:wall_027",
+      "plan_overlap_area_m2_preview": 0.01799602357899488,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:com-com-03-p01:wall_001",
+      "b": "wall:com-com-03-p01:wall_028",
+      "plan_overlap_area_m2_preview": 0.04039952901194965,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:com-com-03-p01:wall_003",
+      "b": "wall:com-com-03-p01:wall_027",
+      "plan_overlap_area_m2_preview": 0.009597875976496084,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:com-com-03-p01:wall_003",
+      "b": "wall:com-com-03-p01:wall_028",
+      "plan_overlap_area_m2_preview": 0.02154651810801056,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:com-com-03-p01:wall_004",
+      "b": "wall:com-com-03-p01:wall_017",
+      "plan_overlap_area_m2_preview": 0.02119539721199981,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:com-com-03-p01:wall_004",
+      "b": "wall:com-com-03-p01:wall_018",
+      "plan_overlap_area_m2_preview": 0.00762811126250007,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:com-com-03-p01:wall_004",
+      "b": "wall:com-com-03-p01:wall_022",
+      "plan_overlap_area_m2_preview": 0.009597924961006754,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:com-com-03-p01:wall_004",
+      "b": "wall:com-com-03-p01:wall_025",
+      "plan_overlap_area_m2_preview": 0.007628111262491188,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:com-com-03-p01:wall_007",
+      "b": "wall:com-com-03-p01:wall_017",
+      "plan_overlap_area_m2_preview": 0.02119539721199981,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:com-com-03-p01:wall_007",
+      "b": "wall:com-com-03-p01:wall_020",
+      "plan_overlap_area_m2_preview": 0.00809828592374906,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:com-com-03-p01:wall_008",
+      "b": "wall:com-com-03-p01:wall_024",
+      "plan_overlap_area_m2_preview": 0.00839814760249169,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:com-com-03-p01:wall_008",
+      "b": "wall:com-com-03-p01:wall_026",
+      "plan_overlap_area_m2_preview": 0.00479896248050693,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:com-com-03-p01:wall_008",
+      "b": "wall:com-com-03-p01:wall_028",
+      "plan_overlap_area_m2_preview": 0.021546518108003454,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:com-com-03-p01:wall_009",
+      "b": "wall:com-com-03-p01:wall_026",
+      "plan_overlap_area_m2_preview": 0.009597924960999649,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:com-com-03-p01:wall_010",
+      "b": "wall:com-com-03-p01:wall_020",
+      "plan_overlap_area_m2_preview": 0.010797604350496925,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:com-com-03-p01:wall_010",
+      "b": "wall:com-com-03-p01:wall_024",
+      "plan_overlap_area_m2_preview": 0.005998690854497113,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:com-com-03-p01:wall_011",
+      "b": "wall:com-com-03-p01:wall_024",
+      "plan_overlap_area_m2_preview": 0.006298589271246158,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:com-com-03-p01:wall_011",
+      "b": "wall:com-com-03-p01:wall_026",
+      "plan_overlap_area_m2_preview": 0.008398147602505901,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:com-com-03-p01:wall_012",
+      "b": "wall:com-com-03-p01:wall_017",
+      "plan_overlap_area_m2_preview": 0.02039557829600014,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:com-com-03-p01:wall_012",
+      "b": "wall:com-com-03-p01:wall_019",
+      "plan_overlap_area_m2_preview": 0.009597924960999649,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:com-com-03-p01:wall_012",
+      "b": "wall:com-com-03-p01:wall_020",
+      "plan_overlap_area_m2_preview": 0.0080981757092502,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:com-com-03-p01:wall_013",
+      "b": "wall:com-com-03-p01:wall_026",
+      "plan_overlap_area_m2_preview": 0.005248892766751112,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:com-com-03-p01:wall_013",
+      "b": "wall:com-com-03-p01:wall_028",
+      "plan_overlap_area_m2_preview": 0.02154651810799635,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:com-com-03-p01:wall_014",
+      "b": "wall:com-com-03-p01:wall_017",
+      "plan_overlap_area_m2_preview": 0.04049122756000023,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:com-com-03-p01:wall_014",
+      "b": "wall:com-com-03-p01:wall_019",
+      "plan_overlap_area_m2_preview": 0.01973810833700096,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:com-com-03-p01:wall_014",
+      "b": "wall:com-com-03-p01:wall_023",
+      "plan_overlap_area_m2_preview": 0.02230608320499705,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:com-com-03-p01:wall_014",
+      "b": "wall:com-com-03-p01:wall_028",
+      "plan_overlap_area_m2_preview": 0.048478288180000106,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    }
+  ],
+  "plan_contact_note": "Plan overlap or touching of wall footprints, computed from the IFC bodies. Reported separately from 3D geometry checks and from connection relationships.",
+  "connection_relationships": {
+    "IfcRelConnectsElements": 0,
+    "IfcRelConnectsPathElements": 0,
+    "IfcRelConnectsWithRealizingElements": 0
+  },
+  "voids": [
+    {
+      "opening": "opening:com-com-03-p01:door_opening-c01",
+      "host": "wall:com-com-03-p01:wall_001",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 6.238875103408859,
+      "host_net_volume": 4.899967951279763,
+      "expected_single_cut_volume": 0.2217114493944
+    },
+    {
+      "opening": "opening:com-com-03-p01:door_opening-c02",
+      "host": "wall:com-com-03-p01:wall_001",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 6.238875103408859,
+      "host_net_volume": 4.899967951279763,
+      "expected_single_cut_volume": 0.24186729754740005
+    },
+    {
+      "opening": "opening:com-com-03-p01:door_opening-c03",
+      "host": "wall:com-com-03-p01:wall_003",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 0.47293636374271003,
+      "host_net_volume": 0.36711949821632334,
+      "expected_single_cut_volume": 0.1058168655264
+    },
+    {
+      "opening": "opening:com-com-03-p01:door_opening-c04",
+      "host": "wall:com-com-03-p01:wall_004",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 2.733973818692387,
+      "host_net_volume": 2.1343448454645055,
+      "expected_single_cut_volume": 0.11589458386800001
+    },
+    {
+      "opening": "opening:com-com-03-p01:door_opening-c05",
+      "host": "wall:com-com-03-p01:wall_004",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 2.733973818692387,
+      "host_net_volume": 2.1343448454645055,
+      "expected_single_cut_volume": 0.11589458386800001
+    },
+    {
+      "opening": "opening:com-com-03-p01:door_opening-c06",
+      "host": "wall:com-com-03-p01:wall_004",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 2.733973818692387,
+      "host_net_volume": 2.1343448454645055,
+      "expected_single_cut_volume": 0.12093364877370003
+    },
+    {
+      "opening": "opening:com-com-03-p01:door_opening-c07",
+      "host": "wall:com-com-03-p01:wall_004",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 2.733973818692387,
+      "host_net_volume": 2.1343448454645055,
+      "expected_single_cut_volume": 0.12093364877370003
+    },
+    {
+      "opening": "opening:com-com-03-p01:door_opening-c08",
+      "host": "wall:com-com-03-p01:wall_004",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 2.733973818692387,
+      "host_net_volume": 2.1343448454645055,
+      "expected_single_cut_volume": 0.1259725079445
+    },
+    {
+      "opening": "opening:com-com-03-p01:door_opening-c10",
+      "host": "wall:com-com-03-p01:wall_007",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 0.952351525221284,
+      "host_net_volume": 0.8263790172767879,
+      "expected_single_cut_volume": 0.1259725079445
+    },
+    {
+      "opening": "opening:com-com-03-p01:door_opening-c11",
+      "host": "wall:com-com-03-p01:wall_008",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 1.1985376391801845,
+      "host_net_volume": 1.0725651312356845,
+      "expected_single_cut_volume": 0.1259725079445
+    },
+    {
+      "opening": "opening:com-com-03-p01:door_opening-c12",
+      "host": "wall:com-com-03-p01:wall_010",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 1.0786839810686821,
+      "host_net_volume": 0.8519336725034954,
+      "expected_single_cut_volume": 0.1108557246972
+    },
+    {
+      "opening": "opening:com-com-03-p01:door_opening-c13",
+      "host": "wall:com-com-03-p01:wall_010",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 1.0786839810686821,
+      "host_net_volume": 0.8519336725034954,
+      "expected_single_cut_volume": 0.11589458386800001
+    },
+    {
+      "opening": "opening:com-com-03-p01:door_opening-c14",
+      "host": "wall:com-com-03-p01:wall_026",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 0.8001049364955019,
+      "host_net_volume": 0.6842103526275167,
+      "expected_single_cut_volume": 0.11589458386800001
+    },
+    {
+      "opening": "opening:com-com-03-p01:door_opening-c15",
+      "host": "wall:com-com-03-p01:wall_019",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 0.7802643623813963,
+      "host_net_volume": 0.654291854436897,
+      "expected_single_cut_volume": 0.1259725079445
+    },
+    {
+      "opening": "opening:com-com-03-p01:door_opening-c16",
+      "host": "wall:com-com-03-p01:wall_023",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 0.7757542731959898,
+      "host_net_volume": 0.6340353624885058,
+      "expected_single_cut_volume": 0.14171891070749998
+    },
+    {
+      "opening": "opening:com-com-03-p01:door_opening-c17",
+      "host": "wall:com-com-03-p01:wall_014",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 7.159632088140004,
+      "host_net_volume": 5.518932582030016,
+      "expected_single_cut_volume": 0.578213063106
+    },
+    {
+      "opening": "opening:com-com-03-p01:window_opening-c01",
+      "host": "wall:com-com-03-p01:wall_001",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 6.238875103408859,
+      "host_net_volume": 4.899967951279763,
+      "expected_single_cut_volume": 0.2533845135936
+    },
+    {
+      "opening": "opening:com-com-03-p01:window_opening-c02",
+      "host": "wall:com-com-03-p01:wall_001",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 6.238875103408859,
+      "host_net_volume": 4.899967951279763,
+      "expected_single_cut_volume": 0.24762581739839998
+    },
+    {
+      "opening": "opening:com-com-03-p01:window_opening-c03",
+      "host": "wall:com-com-03-p01:wall_001",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 6.238875103408859,
+      "host_net_volume": 4.899967951279763,
+      "expected_single_cut_volume": 0.2533845135936
+    },
+    {
+      "opening": "opening:com-com-03-p01:window_opening-c04",
+      "host": "wall:com-com-03-p01:wall_001",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 6.238875103408859,
+      "host_net_volume": 4.899967951279763,
+      "expected_single_cut_volume": 0.12093356060159999
+    },
+    {
+      "opening": "opening:com-com-03-p01:window_opening-c05",
+      "host": "wall:com-com-03-p01:wall_028",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 5.776049457824359,
+      "host_net_volume": 5.632081171222741,
+      "expected_single_cut_volume": 0.1439682866016
+    },
+    {
+      "opening": "opening:com-com-03-p01:window_opening-c06",
+      "host": "wall:com-com-03-p01:wall_017",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 5.181139566162,
+      "host_net_volume": 5.051567990658,
+      "expected_single_cut_volume": 0.129571575504
+    },
+    {
+      "opening": "opening:com-com-03-p01:window_opening-c07",
+      "host": "wall:com-com-03-p01:wall_014",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 7.159632088140004,
+      "host_net_volume": 5.518932582030016,
+      "expected_single_cut_volume": 0.272100202752
+    },
+    {
+      "opening": "opening:com-com-03-p01:window_opening-c08",
+      "host": "wall:com-com-03-p01:wall_014",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 7.159632088140004,
+      "host_net_volume": 5.518932582030016,
+      "expected_single_cut_volume": 0.27857872862399996
+    },
+    {
+      "opening": "opening:com-com-03-p01:window_opening-c09",
+      "host": "wall:com-com-03-p01:wall_014",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 7.159632088140004,
+      "host_net_volume": 5.518932582030016,
+      "expected_single_cut_volume": 0.26562167688
+    },
+    {
+      "opening": "opening:com-com-03-p01:window_opening-c10",
+      "host": "wall:com-com-03-p01:wall_014",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 7.159632088140004,
+      "host_net_volume": 5.518932582030016,
+      "expected_single_cut_volume": 0.24618583474799996
+    }
+  ],
+  "ifc_entity_counts": {
+    "IfcWall": 23,
+    "IfcOpeningElement": 26,
+    "IfcRelVoidsElement": 26,
+    "IfcPropertySet": 51,
+    "IfcBuildingStorey": 1
+  }
+}

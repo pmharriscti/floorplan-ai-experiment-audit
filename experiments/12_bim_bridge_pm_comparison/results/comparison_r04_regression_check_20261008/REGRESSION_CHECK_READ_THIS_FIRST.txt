@@ -1,0 +1,1 @@
+REGRESSION CHECK, not a new result: r04 exports re-scored on 2026-10-08 with the comparison script after the windows_v1 change (openings split by PredictedClass). Every pre-existing field is identical to comparison_20261006_191845_UTC_r04_repair_v1_2 for the 12 plans here (img-04..06 were not included); window openings in r04 IFCs = 0 as expected.

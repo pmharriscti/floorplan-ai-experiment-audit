@@ -1,0 +1,180 @@
+{
+  "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-05/export_candidate_preview_whole_plan_r05/synth-img-05-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+  "ifc_sha256": "617b3a20bc5da5c4287a7417a403dfa5deee179be2a43cfce50ef6fdd79d5d1c",
+  "written_utc": "2026-10-08T13:27:34Z",
+  "checks": [
+    {
+      "name": "ifc_footprints_map_back_to_candidate_pixels",
+      "status": "PASS",
+      "detail": "Wall footprints rebuilt from the IFC bodies and mapped model -> candidate px differ from the candidate rectangles by at most 3.05e-05 px (tolerance 8.17e-03).",
+      "measured": 3.0512580216992357e-05
+    },
+    {
+      "name": "ifc_wall_heights_match_model",
+      "status": "PASS",
+      "detail": "Largest difference between the tessellated wall height and the model height: 0.00e+00 m.",
+      "measured": 0.0
+    },
+    {
+      "name": "source_pixel_round_trip",
+      "status": "PASS",
+      "detail": "source px -> letterbox px -> model metres -> back: max error 0.00e+00 source px.",
+      "measured": 0.0
+    },
+    {
+      "name": "scale_applied_once_in_original_pixels",
+      "status": "PASS",
+      "detail": "1253 source px span 12.530000 m in the model; 0.01 m per ORIGINAL px gives 12.530000 m (letterbox scale 0.408293 is not applied twice)."
+    },
+    {
+      "name": "no_connection_relationships_written",
+      "status": "PASS",
+      "detail": "Explicit connection relationships in the file: {'IfcRelConnectsElements': 0, 'IfcRelConnectsPathElements': 0, 'IfcRelConnectsWithRealizingElements': 0}. Plan contact below is geometry only; it is not an encoded wall-to-wall relationship."
+    },
+    {
+      "name": "hosted_cuts_remove_expected_volume",
+      "status": "PASS",
+      "detail": "6 aperture(s) in 4 host wall(s): gross minus net volume of each host equals the sum of its aperture cuts."
+    },
+    {
+      "name": "status_and_assumptions_retained_on_every_object",
+      "status": "PASS",
+      "detail": "Every object carries ReviewState in ['CANDIDATE_UNREVIEWED'], ScaleStatus ASSUMED_FOR_PREVIEW, DimensionalClaimsPermitted false, HeightIsAssumption true and the model's PermittedUse."
+    },
+    {
+      "name": "file_states_preview_status",
+      "status": "PASS",
+      "detail": "IfcProject.Description: CANDIDATE_UNREVIEWED, PREVIEW ONLY, SCALE ASSUMED_FOR_PREVIEW: 7 straight walls and 6 aperture(s) from fresh frozen-model inference of source plan img-05 (whole-plan attempt after candidate repair). A"
+    }
+  ],
+  "passed": 8,
+  "failed": 0,
+  "plan_contact_pairs": [
+    {
+      "a": "wall:synth-img-05-p01:wall_001",
+      "b": "wall:synth-img-05-p01:wall_008",
+      "plan_overlap_area_m2_preview": 0.05002699944899902,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:synth-img-05-p01:wall_001",
+      "b": "wall:synth-img-05-p01:wall_009",
+      "plan_overlap_area_m2_preview": 0.036550020813010065,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:synth-img-05-p01:wall_001",
+      "b": "wall:synth-img-05-p01:wall_010",
+      "plan_overlap_area_m2_preview": 0.03373849841099741,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:synth-img-05-p01:wall_001",
+      "b": "wall:synth-img-05-p01:wall_011",
+      "plan_overlap_area_m2_preview": 0.044984817606007255,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:synth-img-05-p01:wall_003",
+      "b": "wall:synth-img-05-p01:wall_009",
+      "plan_overlap_area_m2_preview": 0.017779026083751148,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:synth-img-05-p01:wall_003",
+      "b": "wall:synth-img-05-p01:wall_010",
+      "plan_overlap_area_m2_preview": 0.02159518420900497,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:synth-img-05-p01:wall_003",
+      "b": "wall:synth-img-05-p01:wall_011",
+      "plan_overlap_area_m2_preview": 0.028793676913991817,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:synth-img-05-p01:wall_005",
+      "b": "wall:synth-img-05-p01:wall_008",
+      "plan_overlap_area_m2_preview": 0.044530760065999875,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:synth-img-05-p01:wall_005",
+      "b": "wall:synth-img-05-p01:wall_011",
+      "plan_overlap_area_m2_preview": 0.040491007129997314,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    }
+  ],
+  "plan_contact_note": "Plan overlap or touching of wall footprints, computed from the IFC bodies. Reported separately from 3D geometry checks and from connection relationships.",
+  "connection_relationships": {
+    "IfcRelConnectsElements": 0,
+    "IfcRelConnectsPathElements": 0,
+    "IfcRelConnectsWithRealizingElements": 0
+  },
+  "voids": [
+    {
+      "opening": "opening:synth-img-05-p01:door_opening-c01",
+      "host": "wall:synth-img-05-p01:wall_009",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 1.2060744623477853,
+      "host_net_volume": 0.9522409222295837,
+      "expected_single_cut_volume": 0.25383354011820003
+    },
+    {
+      "opening": "opening:synth-img-05-p01:door_opening-c02",
+      "host": "wall:synth-img-05-p01:wall_003",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 1.928969560976368,
+      "host_net_volume": 1.7022198181806167,
+      "expected_single_cut_volume": 0.2267497427958
+    },
+    {
+      "opening": "opening:synth-img-05-p01:door_opening-c03",
+      "host": "wall:synth-img-05-p01:wall_005",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 5.80885230189601,
+      "host_net_volume": 3.400441660602009,
+      "expected_single_cut_volume": 0.82763816079
+    },
+    {
+      "opening": "opening:synth-img-05-p01:window_opening-c01",
+      "host": "wall:synth-img-05-p01:wall_001",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 6.486667740617354,
+      "host_net_volume": 5.7524298904181626,
+      "expected_single_cut_volume": 0.7342378501992
+    },
+    {
+      "opening": "opening:synth-img-05-p01:window_opening-c02",
+      "host": "wall:synth-img-05-p01:wall_005",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 5.80885230189601,
+      "host_net_volume": 3.400441660602009,
+      "expected_single_cut_volume": 0.693207558624
+    },
+    {
+      "opening": "opening:synth-img-05-p01:window_opening-c03",
+      "host": "wall:synth-img-05-p01:wall_005",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 5.80885230189601,
+      "host_net_volume": 3.400441660602009,
+      "expected_single_cut_volume": 0.8875649218799999
+    }
+  ],
+  "ifc_entity_counts": {
+    "IfcWall": 7,
+    "IfcOpeningElement": 6,
+    "IfcRelVoidsElement": 6,
+    "IfcPropertySet": 15,
+    "IfcBuildingStorey": 1
+  }
+}

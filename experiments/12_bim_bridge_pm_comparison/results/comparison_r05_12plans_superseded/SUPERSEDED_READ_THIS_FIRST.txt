@@ -1,0 +1,1 @@
+SUPERSEDED: this r05 comparison covers 12 plans (the manifest's default prior keys img-01..03). The like-for-like comparison with the 15-plan r04 folder comparison_20261006_191845_UTC_r04_repair_v1_2 is comparison_20261008_132842_UTC_r05_windows_v1_15plans, built with --prior-keys img-01..06. Per-plan numbers for the 12 plans are identical in both.

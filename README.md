@@ -4,7 +4,7 @@ This repository is the initial evidence-backed audit index for the floor-plan se
 
 GitHub repository: [pmharriscti/floorplan-ai-experiment-audit](https://github.com/pmharriscti/floorplan-ai-experiment-audit)
 
-Audit date: 2026-08-31. Updated 2026-09-17 with the RunPod 1024 high-resolution crop treatment, 2026-09-24 with the Phase 5 hierarchical multi-head expansion and the Phase 3A.2 door-opening target ablation, and 2026-09-25 with that ablation's completed 30-epoch evaluation. Updated 2026-09-28 with the bim_bridge_v0 downstream IFC bridge, 2026-09-29 with its human-review follow-up, 2026-10-07 with the applied review and with experiment 12, the PM comparison of CubiCasa and AI-generated plans and with a model description and reference code snapshot for the experiment 01 baseline.
+Audit date: 2026-08-31. Updated 2026-09-17 with the RunPod 1024 high-resolution crop treatment, 2026-09-24 with the Phase 5 hierarchical multi-head expansion and the Phase 3A.2 door-opening target ablation, and 2026-09-25 with that ablation's completed 30-epoch evaluation. Updated 2026-09-28 with the bim_bridge_v0 downstream IFC bridge, 2026-09-29 with its human-review follow-up, 2026-10-07 with the applied review and with experiment 12, the PM comparison of CubiCasa and AI-generated plans and with a model description and reference code snapshot for the experiment 01 baseline. Updated 2026-10-08 with experiment 12's revision r05, which exports window apertures.
 
 ## Scope
 
@@ -71,7 +71,7 @@ Experiment 11, `bim_bridge_v0`, is a downstream integration experiment. It train
 
 The exporter passed on synthetic geometry (130 of 130 checks). From one saved Phase 5 prediction of `high_quality_architectural/333`, the bridge produced 4 individually identifiable `IfcWall` objects and 1 hosted `IfcOpeningElement`, each carrying its provenance, assumptions and review state inside the IFC. **The reviewed-prediction milestone remains partial and was not demonstrated**: 0 of 5 objects were reviewed by a person, the drawing has no scale evidence so the metric export is blocked and only a preview was written, semantic confidence is null for 5 of 5 objects, and no viewer or target application has opened the file.
 
-Experiment 12 takes 15 plans (3 CubiCasa test plans, 12 AI-generated plans) through the same chain and measures the IFC walls against labels. The AI-generated plans' labels are unreviewed AI-made drafts. Automated bridge repair rules raised pooled IFC wall IoU in every group; the rules were developed on the same plans, so this is not held-out evidence.
+Experiment 12 takes 15 plans (3 CubiCasa test plans, 12 AI-generated plans) through the same chain and measures the IFC walls against labels. The AI-generated plans' labels are unreviewed AI-made drafts. Automated bridge repair rules raised pooled IFC wall IoU in every group; the rules were developed on the same plans, so this is not held-out evidence. Revision r05 (2026-10-08) exports the predicted windows as apertures with an assumed vertical profile (170 of 175 components; doors and walls unchanged).
 
 ## Open Evidence Gaps
 

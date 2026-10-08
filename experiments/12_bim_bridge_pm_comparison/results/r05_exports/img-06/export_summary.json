@@ -1,0 +1,65 @@
+{
+  "sample_key": "img-06",
+  "kind": "candidate",
+  "scope": "whole_plan",
+  "revision": "r05",
+  "folder": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-06/export_candidate_preview_whole_plan_r05",
+  "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-06/export_candidate_preview_whole_plan_r05/synth-img-06-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+  "ifc_windows_path": "E:\\AI_Team\\mitunet\\experiments\\bim_bridge_synth_images_v0\\bim_bridge_synth_images_v0_20261002_200115_UTC\\samples\\img-06\\export_candidate_preview_whole_plan_r05\\synth-img-06-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+  "ifc_sha256": "3b565adde23abb8082878b317f91db3df909a998154bc46be5d0f21ebb8bbe57",
+  "ifc_size_bytes": 264758,
+  "model_id": "synth-img-06-p01",
+  "geometry_status": "CANDIDATE_UNREVIEWED",
+  "scale_status": "ASSUMED_FOR_PREVIEW",
+  "permitted_use": "preview_only_not_for_engineering_or_inspection",
+  "walls": 8,
+  "openings": 14,
+  "bridge_checks": {
+    "technical": "PASS",
+    "by_status": {
+      "PASS": 434,
+      "WARN": 23
+    },
+    "failed": []
+  },
+  "run_specific_checks": {
+    "passed": 8,
+    "failed": 0,
+    "failed_names": []
+  },
+  "independent_parser": {
+    "status": "PASS",
+    "passed": 35,
+    "failed": 0,
+    "web_ifc_version": "0.0.66",
+    "report": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-06/export_candidate_preview_whole_plan_r05/independent_parser_check.json",
+    "stderr": "",
+    "is_viewer_test": false,
+    "note": "A second IFC engine parsed and tessellated the file. This is not acceptance by any viewer or BIM application."
+  },
+  "plan_contact_pairs": 11,
+  "connection_relationships": {
+    "IfcRelConnectsElements": 0,
+    "IfcRelConnectsPathElements": 0,
+    "IfcRelConnectsWithRealizingElements": 0
+  },
+  "repeat_export_byte_identical": true,
+  "guids_created": 44,
+  "guids_reused": 48,
+  "guids_retired": [],
+  "guid_map_sha256": "001a40e4aca3a9882dfb746d39bd8de5be479b6b1c2553e7259dce5071c6dbc6",
+  "metric_export": {
+    "status": "BLOCKED",
+    "blockers": [
+      "Plan scale is ASSUMED_FOR_PREVIEW (arbitrary visualization scale).",
+      "No recorded human review."
+    ]
+  },
+  "viewer_inspection": "NOT_RUN",
+  "reports": {
+    "validation_report": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-06/export_candidate_preview_whole_plan_r05/validation_report.json",
+    "validation_report_md": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-06/export_candidate_preview_whole_plan_r05/validation_report.md",
+    "run_specific_checks": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-06/export_candidate_preview_whole_plan_r05/run_specific_checks.json",
+    "independent_parser": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-06/export_candidate_preview_whole_plan_r05/independent_parser_check.json"
+  }
+}

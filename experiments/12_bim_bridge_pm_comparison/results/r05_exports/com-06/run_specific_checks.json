@@ -1,0 +1,458 @@
+{
+  "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-06/export_candidate_preview_whole_plan_r05/com-com-06-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+  "ifc_sha256": "4aa503c16e01a0f57ba6beb6df3159e87c5486af3430276e55f27a152c1e1896",
+  "written_utc": "2026-10-08T13:23:07Z",
+  "checks": [
+    {
+      "name": "ifc_footprints_map_back_to_candidate_pixels",
+      "status": "PASS",
+      "detail": "Wall footprints rebuilt from the IFC bodies and mapped model -> candidate px differ from the candidate rectangles by at most 3.09e-05 px (tolerance 8.17e-03).",
+      "measured": 3.0860316749685806e-05
+    },
+    {
+      "name": "ifc_wall_heights_match_model",
+      "status": "PASS",
+      "detail": "Largest difference between the tessellated wall height and the model height: 0.00e+00 m.",
+      "measured": 0.0
+    },
+    {
+      "name": "source_pixel_round_trip",
+      "status": "PASS",
+      "detail": "source px -> letterbox px -> model metres -> back: max error 0.00e+00 source px.",
+      "measured": 0.0
+    },
+    {
+      "name": "scale_applied_once_in_original_pixels",
+      "status": "PASS",
+      "detail": "1253 source px span 12.530000 m in the model; 0.01 m per ORIGINAL px gives 12.530000 m (letterbox scale 0.408293 is not applied twice)."
+    },
+    {
+      "name": "no_connection_relationships_written",
+      "status": "PASS",
+      "detail": "Explicit connection relationships in the file: {'IfcRelConnectsElements': 0, 'IfcRelConnectsPathElements': 0, 'IfcRelConnectsWithRealizingElements': 0}. Plan contact below is geometry only; it is not an encoded wall-to-wall relationship."
+    },
+    {
+      "name": "hosted_cuts_remove_expected_volume",
+      "status": "PASS",
+      "detail": "32 aperture(s) in 8 host wall(s): gross minus net volume of each host equals the sum of its aperture cuts."
+    },
+    {
+      "name": "status_and_assumptions_retained_on_every_object",
+      "status": "PASS",
+      "detail": "Every object carries ReviewState in ['CANDIDATE_UNREVIEWED'], ScaleStatus ASSUMED_FOR_PREVIEW, DimensionalClaimsPermitted false, HeightIsAssumption true and the model's PermittedUse."
+    },
+    {
+      "name": "file_states_preview_status",
+      "status": "PASS",
+      "detail": "IfcProject.Description: CANDIDATE_UNREVIEWED, PREVIEW ONLY, SCALE ASSUMED_FOR_PREVIEW: 17 straight walls and 32 aperture(s) from fresh frozen-model inference of source plan com-06 (whole-plan attempt after candidate repair)."
+    }
+  ],
+  "passed": 8,
+  "failed": 0,
+  "plan_contact_pairs": [
+    {
+      "a": "wall:com-com-06-p01:wall_001",
+      "b": "wall:com-com-06-p01:wall_010",
+      "plan_overlap_area_m2_preview": 0.012923697162749992,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:com-com-06-p01:wall_001",
+      "b": "wall:com-com-06-p01:wall_013",
+      "plan_overlap_area_m2_preview": 0.008098230816502294,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:com-com-06-p01:wall_001",
+      "b": "wall:com-com-06-p01:wall_015",
+      "plan_overlap_area_m2_preview": 0.010797604350504031,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:com-com-06-p01:wall_001",
+      "b": "wall:com-com-06-p01:wall_016",
+      "plan_overlap_area_m2_preview": 0.008098230816493412,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:com-com-06-p01:wall_001",
+      "b": "wall:com-com-06-p01:wall_017",
+      "plan_overlap_area_m2_preview": 0.009447917583500498,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:com-com-06-p01:wall_001",
+      "b": "wall:com-com-06-p01:wall_020",
+      "plan_overlap_area_m2_preview": 0.010797604350500478,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:com-com-06-p01:wall_001",
+      "b": "wall:com-com-06-p01:wall_021",
+      "plan_overlap_area_m2_preview": 0.012147236010207507,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:com-com-06-p01:wall_003",
+      "b": "wall:com-com-06-p01:wall_018",
+      "plan_overlap_area_m2_preview": 0.0022495167242624348,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:com-com-06-p01:wall_003",
+      "b": "wall:com-com-06-p01:wall_021",
+      "plan_overlap_area_m2_preview": 0.008098230816500518,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:com-com-06-p01:wall_004",
+      "b": "wall:com-com-06-p01:wall_021",
+      "plan_overlap_area_m2_preview": 0.010797604350486267,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:com-com-06-p01:wall_005",
+      "b": "wall:com-com-06-p01:wall_014",
+      "plan_overlap_area_m2_preview": 0.004199073801249398,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:com-com-06-p01:wall_005",
+      "b": "wall:com-com-06-p01:wall_018",
+      "plan_overlap_area_m2_preview": 0.008398245571498819,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:com-com-06-p01:wall_005",
+      "b": "wall:com-com-06-p01:wall_019",
+      "plan_overlap_area_m2_preview": 0.010497663072506214,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:com-com-06-p01:wall_005",
+      "b": "wall:com-com-06-p01:wall_021",
+      "plan_overlap_area_m2_preview": 0.009447972690743711,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:com-com-06-p01:wall_006",
+      "b": "wall:com-com-06-p01:wall_007",
+      "plan_overlap_area_m2_preview": 6.57254649993888e-05,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:com-com-06-p01:wall_006",
+      "b": "wall:com-com-06-p01:wall_012",
+      "plan_overlap_area_m2_preview": 0.025149352772499967,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:com-com-06-p01:wall_006",
+      "b": "wall:com-com-06-p01:wall_014",
+      "plan_overlap_area_m2_preview": 0.020995326144999993,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:com-com-06-p01:wall_007",
+      "b": "wall:com-com-06-p01:wall_014",
+      "plan_overlap_area_m2_preview": 0.004578146907749492,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    },
+    {
+      "a": "wall:com-com-06-p01:wall_007",
+      "b": "wall:com-com-06-p01:wall_019",
+      "plan_overlap_area_m2_preview": 0.010567127331249537,
+      "gap_m_preview": 0.0,
+      "kind": "overlap"
+    }
+  ],
+  "plan_contact_note": "Plan overlap or touching of wall footprints, computed from the IFC bodies. Reported separately from 3D geometry checks and from connection relationships.",
+  "connection_relationships": {
+    "IfcRelConnectsElements": 0,
+    "IfcRelConnectsPathElements": 0,
+    "IfcRelConnectsWithRealizingElements": 0
+  },
+  "voids": [
+    {
+      "opening": "opening:com-com-06-p01:door_opening-c01",
+      "host": "wall:com-com-06-p01:wall_001",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 3.936743419045547,
+      "host_net_volume": 3.304182965524268,
+      "expected_single_cut_volume": 0.1007777491875
+    },
+    {
+      "opening": "opening:com-com-06-p01:door_opening-c02",
+      "host": "wall:com-com-06-p01:wall_001",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 3.936743419045547,
+      "host_net_volume": 3.304182965524268,
+      "expected_single_cut_volume": 0.10707631029270001
+    },
+    {
+      "opening": "opening:com-com-06-p01:door_opening-c03",
+      "host": "wall:com-com-06-p01:wall_001",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 3.936743419045547,
+      "host_net_volume": 3.304182965524268,
+      "expected_single_cut_volume": 0.1007777491875
+    },
+    {
+      "opening": "opening:com-com-06-p01:door_opening-c07",
+      "host": "wall:com-com-06-p01:wall_018",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 1.1607461953992082,
+      "host_net_volume": 0.98942374918258,
+      "expected_single_cut_volume": 0.0856612231083
+    },
+    {
+      "opening": "opening:com-com-06-p01:door_opening-c08",
+      "host": "wall:com-com-06-p01:wall_018",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 1.1607461953992082,
+      "host_net_volume": 0.98942374918258,
+      "expected_single_cut_volume": 0.0856612231083
+    },
+    {
+      "opening": "opening:com-com-06-p01:door_opening-c09",
+      "host": "wall:com-com-06-p01:wall_005",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 2.310424499773831,
+      "host_net_volume": 2.0915922515235246,
+      "expected_single_cut_volume": 0.0806223639375
+    },
+    {
+      "opening": "opening:com-com-06-p01:door_opening-c10",
+      "host": "wall:com-com-06-p01:wall_019",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 0.7318760918454256,
+      "host_net_volume": 0.6373969037631078,
+      "expected_single_cut_volume": 0.0944791880823
+    },
+    {
+      "opening": "opening:com-com-06-p01:door_opening-c11",
+      "host": "wall:com-com-06-p01:wall_006",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 1.1053981352655036,
+      "host_net_volume": 0.7438586910554998,
+      "expected_single_cut_volume": 0.36153944421
+    },
+    {
+      "opening": "opening:com-com-06-p01:door_opening-c12",
+      "host": "wall:com-com-06-p01:wall_007",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 3.1307254488107845,
+      "host_net_volume": 2.167579424847858,
+      "expected_single_cut_volume": 0.045349886838900004
+    },
+    {
+      "opening": "opening:com-com-06-p01:window_opening-c01",
+      "host": "wall:com-com-06-p01:wall_001",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 3.936743419045547,
+      "host_net_volume": 3.304182965524268,
+      "expected_single_cut_volume": 0.089980179126
+    },
+    {
+      "opening": "opening:com-com-06-p01:window_opening-c02",
+      "host": "wall:com-com-06-p01:wall_001",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 3.936743419045547,
+      "host_net_volume": 3.304182965524268,
+      "expected_single_cut_volume": 0.089980179126
+    },
+    {
+      "opening": "opening:com-com-06-p01:window_opening-c03",
+      "host": "wall:com-com-06-p01:wall_001",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 3.936743419045547,
+      "host_net_volume": 3.304182965524268,
+      "expected_single_cut_volume": 0.0863810013516
+    },
+    {
+      "opening": "opening:com-com-06-p01:window_opening-c04",
+      "host": "wall:com-com-06-p01:wall_001",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 3.936743419045547,
+      "host_net_volume": 3.304182965524268,
+      "expected_single_cut_volume": 0.057587285249999995
+    },
+    {
+      "opening": "opening:com-com-06-p01:window_opening-c05",
+      "host": "wall:com-com-06-p01:wall_010",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 2.2027136608125004,
+      "host_net_volume": 1.8499914468105032,
+      "expected_single_cut_volume": 0.0683849655264
+    },
+    {
+      "opening": "opening:com-com-06-p01:window_opening-c06",
+      "host": "wall:com-com-06-p01:wall_021",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 2.2067627358087045,
+      "host_net_volume": 1.832445308207145,
+      "expected_single_cut_volume": 0.0719841433008
+    },
+    {
+      "opening": "opening:com-com-06-p01:window_opening-c08",
+      "host": "wall:com-com-06-p01:wall_010",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 2.2027136608125004,
+      "host_net_volume": 1.8499914468105032,
+      "expected_single_cut_volume": 0.0791824988496
+    },
+    {
+      "opening": "opening:com-com-06-p01:window_opening-c09",
+      "host": "wall:com-com-06-p01:wall_021",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 2.2067627358087045,
+      "host_net_volume": 1.832445308207145,
+      "expected_single_cut_volume": 0.089980179126
+    },
+    {
+      "opening": "opening:com-com-06-p01:window_opening-c10",
+      "host": "wall:com-com-06-p01:wall_010",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 2.2027136608125004,
+      "host_net_volume": 1.8499914468105032,
+      "expected_single_cut_volume": 0.11877374827439999
+    },
+    {
+      "opening": "opening:com-com-06-p01:window_opening-c11",
+      "host": "wall:com-com-06-p01:wall_021",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 2.2067627358087045,
+      "host_net_volume": 1.832445308207145,
+      "expected_single_cut_volume": 0.0719841433008
+    },
+    {
+      "opening": "opening:com-com-06-p01:window_opening-c12",
+      "host": "wall:com-com-06-p01:wall_021",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 2.2067627358087045,
+      "host_net_volume": 1.832445308207145,
+      "expected_single_cut_volume": 0.0647856407988
+    },
+    {
+      "opening": "opening:com-com-06-p01:window_opening-c13",
+      "host": "wall:com-com-06-p01:wall_010",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 2.2027136608125004,
+      "host_net_volume": 1.8499914468105032,
+      "expected_single_cut_volume": 0.0863810013516
+    },
+    {
+      "opening": "opening:com-com-06-p01:window_opening-c14",
+      "host": "wall:com-com-06-p01:wall_021",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 2.2067627358087045,
+      "host_net_volume": 1.832445308207145,
+      "expected_single_cut_volume": 0.0755833210752
+    },
+    {
+      "opening": "opening:com-com-06-p01:window_opening-c15",
+      "host": "wall:com-com-06-p01:wall_005",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 2.310424499773831,
+      "host_net_volume": 2.0915922515235246,
+      "expected_single_cut_volume": 0.06910494215639999
+    },
+    {
+      "opening": "opening:com-com-06-p01:window_opening-c16",
+      "host": "wall:com-com-06-p01:wall_005",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 2.310424499773831,
+      "host_net_volume": 2.0915922515235246,
+      "expected_single_cut_volume": 0.06910494215639999
+    },
+    {
+      "opening": "opening:com-com-06-p01:window_opening-c17",
+      "host": "wall:com-com-06-p01:wall_007",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 3.1307254488107845,
+      "host_net_volume": 2.167579424847858,
+      "expected_single_cut_volume": 0.060466633347599996
+    },
+    {
+      "opening": "opening:com-com-06-p01:window_opening-c18",
+      "host": "wall:com-com-06-p01:wall_007",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 3.1307254488107845,
+      "host_net_volume": 2.167579424847858,
+      "expected_single_cut_volume": 0.2289091583496
+    },
+    {
+      "opening": "opening:com-com-06-p01:window_opening-c19",
+      "host": "wall:com-com-06-p01:wall_007",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 3.1307254488107845,
+      "host_net_volume": 2.167579424847858,
+      "expected_single_cut_volume": 0.0561474495528
+    },
+    {
+      "opening": "opening:com-com-06-p01:window_opening-c20",
+      "host": "wall:com-com-06-p01:wall_007",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 3.1307254488107845,
+      "host_net_volume": 2.167579424847858,
+      "expected_single_cut_volume": 0.1835592274248
+    },
+    {
+      "opening": "opening:com-com-06-p01:window_opening-c21",
+      "host": "wall:com-com-06-p01:wall_007",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 3.1307254488107845,
+      "host_net_volume": 2.167579424847858,
+      "expected_single_cut_volume": 0.060466633347599996
+    },
+    {
+      "opening": "opening:com-com-06-p01:window_opening-c22",
+      "host": "wall:com-com-06-p01:wall_007",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 3.1307254488107845,
+      "host_net_volume": 2.167579424847858,
+      "expected_single_cut_volume": 0.2116329522012
+    },
+    {
+      "opening": "opening:com-com-06-p01:window_opening-c23",
+      "host": "wall:com-com-06-p01:wall_007",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 3.1307254488107845,
+      "host_net_volume": 2.167579424847858,
+      "expected_single_cut_volume": 0.060466633347599996
+    },
+    {
+      "opening": "opening:com-com-06-p01:window_opening-c24",
+      "host": "wall:com-com-06-p01:wall_007",
+      "IfcRelVoidsElement": 1,
+      "host_gross_volume": 3.1307254488107845,
+      "host_net_volume": 2.167579424847858,
+      "expected_single_cut_volume": 0.0561474495528
+    }
+  ],
+  "ifc_entity_counts": {
+    "IfcWall": 17,
+    "IfcOpeningElement": 32,
+    "IfcRelVoidsElement": 32,
+    "IfcPropertySet": 51,
+    "IfcBuildingStorey": 1
+  }
+}

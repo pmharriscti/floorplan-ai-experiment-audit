@@ -1,0 +1,1231 @@
+{
+  "record": "bim_bridge_pm_comparison/2",
+  "written_utc": "2026-10-08T13:28:54Z",
+  "run_id": "bim_bridge_pm_comparison_v0_20261006_130747_UTC",
+  "is_benchmark": false,
+  "export_revision": "r05",
+  "candidates_name": "candidates_r05",
+  "plans": [
+    {
+      "sample_key": "cc-01",
+      "group": "cubicasa_test",
+      "plan": "high_quality/4712",
+      "source": "/home/pmharris/dev/cubicasa5k_data/data/datasets/qmarva/cubicasa5k/versions/4/cubicasa5k/cubicasa5k/high_quality/4712/F1_scaled.png",
+      "run_dir": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC",
+      "prediction_origin": "SAVED_UPSTREAM_PREDICTION",
+      "pipeline": {
+        "walls_in_ifc": 14,
+        "openings_in_ifc": 13,
+        "door_openings_in_ifc": 7,
+        "window_openings_in_ifc": 6,
+        "predicted_door_components": 8,
+        "predicted_window_components": 6,
+        "predicted_door_components_exported_as_openings_share": 0.875,
+        "predicted_window_components_exported_as_openings_share": 1.0,
+        "predicted_wall_pixels_covered_by_ifc_walls": 0.9592678019335525,
+        "ifc_wall_pixels_outside_predicted_wall": 0.16020793950850662,
+        "ifc_checks": {
+          "bridge": "PASS",
+          "bridge_failed": 0,
+          "run_specific": "8/8",
+          "web_ifc": "PASS",
+          "repeat_export_identical": true
+        },
+        "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/cc-01/export_candidate_preview_whole_plan_r05/cc-high-quality--4712-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+        "ifc_windows_path": "E:\\AI_Team\\mitunet\\experiments\\bim_bridge_pm_comparison_v0\\bim_bridge_pm_comparison_v0_20261006_130747_UTC\\samples\\cc-01\\export_candidate_preview_whole_plan_r05\\cc-high-quality--4712-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+        "ifc_sha256": "313f0dc9f4c4cdfe1986178ededf3bc66be604c14c395fecfdfdc985cf9d943d"
+      },
+      "accuracy": {
+        "label_status": "CUBICASA_DATASET_LABELS",
+        "mask_wall": {
+          "iou": 0.7052837938760269,
+          "precision": 0.7415223045590617,
+          "recall": 0.9351983660332983,
+          "tp_px": 15110,
+          "fp_px": 5267,
+          "fn_px": 1047
+        },
+        "ifc_wall": {
+          "iou": 0.6638396624472573,
+          "precision": 0.6759322907716102,
+          "recall": 0.9737575044872192,
+          "tp_px": 15733,
+          "fp_px": 7543,
+          "fn_px": 424
+        },
+        "door": {
+          "ground_truth_doors": 6,
+          "predicted_door_components": 8,
+          "ifc_door_openings": 7,
+          "gt_doors_touched_by_a_predicted_component": 5,
+          "gt_doors_touched_by_an_ifc_opening": 5,
+          "ifc_openings_touching_a_gt_door": 5,
+          "pixel_iou_mask_recomputed": 0.45128877238968984,
+          "match_rule": "a door counts as found when the two regions share at least one pixel on the 512 grid (loose; detection, not shape)"
+        },
+        "window": {
+          "ground_truth_windows": 4,
+          "predicted_window_components": 6,
+          "gt_windows_touched_by_a_predicted_component": 4,
+          "ifc_window_openings": 6,
+          "gt_windows_touched_by_an_ifc_opening": 4,
+          "ifc_window_openings_touching_a_gt_window": 6,
+          "note": "Window-class apertures are exported with the assumed window vertical profile of the preview profile (sill and height are assumptions, like door heights)."
+        },
+        "ground_truth_files": {
+          "kind": "cubicasa",
+          "wall": "/mnt/e/AI_Team/mitunet/phase1_wall_structure/cache/wall_region/test/high_quality__4712.png",
+          "door": "/mnt/e/AI_Team/mitunet/phase2_wall_boundary_door_openings/cache/door_opening/raw/test/high_quality__4712.png",
+          "window": "/mnt/e/AI_Team/mitunet/targets/mitunet_hierarchical_multihead_512/window_opening/raw/test/high_quality__4712.png"
+        }
+      },
+      "upstream_metrics": {
+        "structural_wall_iou": 0.7052837938760269,
+        "boundary_f1_2px": 0.8539415910634726,
+        "door_opening_object_f1": 0.7142857142857143,
+        "window_opening_object_f1": 0.8,
+        "junction_f1_5px": 0.8275862068965517
+      }
+    },
+    {
+      "sample_key": "cc-02",
+      "group": "cubicasa_test",
+      "plan": "high_quality_architectural/4847",
+      "source": "/home/pmharris/dev/cubicasa5k_data/data/datasets/qmarva/cubicasa5k/versions/4/cubicasa5k/cubicasa5k/high_quality_architectural/4847/F1_scaled.png",
+      "run_dir": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC",
+      "prediction_origin": "SAVED_UPSTREAM_PREDICTION",
+      "pipeline": {
+        "walls_in_ifc": 8,
+        "openings_in_ifc": 10,
+        "door_openings_in_ifc": 4,
+        "window_openings_in_ifc": 6,
+        "predicted_door_components": 6,
+        "predicted_window_components": 6,
+        "predicted_door_components_exported_as_openings_share": 0.6666666666666666,
+        "predicted_window_components_exported_as_openings_share": 1.0,
+        "predicted_wall_pixels_covered_by_ifc_walls": 0.7811063690085358,
+        "ifc_wall_pixels_outside_predicted_wall": 0.2641874130199474,
+        "ifc_checks": {
+          "bridge": "PASS",
+          "bridge_failed": 0,
+          "run_specific": "8/8",
+          "web_ifc": "PASS",
+          "repeat_export_identical": true
+        },
+        "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/cc-02/export_candidate_preview_whole_plan_r05/cc-high-quality-architectural--4847-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+        "ifc_windows_path": "E:\\AI_Team\\mitunet\\experiments\\bim_bridge_pm_comparison_v0\\bim_bridge_pm_comparison_v0_20261006_130747_UTC\\samples\\cc-02\\export_candidate_preview_whole_plan_r05\\cc-high-quality-architectural--4847-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+        "ifc_sha256": "cdf11dce812bb39cfb5b6fe9c1c7963e606febb0c3b159bc3a9eaa9c8faa5089"
+      },
+      "accuracy": {
+        "label_status": "CUBICASA_DATASET_LABELS",
+        "mask_wall": {
+          "iou": 0.876585479729204,
+          "precision": 0.9245732107682206,
+          "recall": 0.944099899430104,
+          "tp_px": 11265,
+          "fp_px": 919,
+          "fn_px": 667
+        },
+        "ifc_wall": {
+          "iou": 0.5955085017645172,
+          "precision": 0.7175661048399568,
+          "recall": 0.7778243379148508,
+          "tp_px": 9281,
+          "fp_px": 3653,
+          "fn_px": 2651
+        },
+        "door": {
+          "ground_truth_doors": 7,
+          "predicted_door_components": 6,
+          "ifc_door_openings": 4,
+          "gt_doors_touched_by_a_predicted_component": 6,
+          "gt_doors_touched_by_an_ifc_opening": 4,
+          "ifc_openings_touching_a_gt_door": 4,
+          "pixel_iou_mask_recomputed": 0.3894927536231884,
+          "match_rule": "a door counts as found when the two regions share at least one pixel on the 512 grid (loose; detection, not shape)"
+        },
+        "window": {
+          "ground_truth_windows": 6,
+          "predicted_window_components": 6,
+          "gt_windows_touched_by_a_predicted_component": 6,
+          "ifc_window_openings": 6,
+          "gt_windows_touched_by_an_ifc_opening": 6,
+          "ifc_window_openings_touching_a_gt_window": 6,
+          "note": "Window-class apertures are exported with the assumed window vertical profile of the preview profile (sill and height are assumptions, like door heights)."
+        },
+        "ground_truth_files": {
+          "kind": "cubicasa",
+          "wall": "/mnt/e/AI_Team/mitunet/phase1_wall_structure/cache/wall_region/test/high_quality_architectural__4847.png",
+          "door": "/mnt/e/AI_Team/mitunet/phase2_wall_boundary_door_openings/cache/door_opening/raw/test/high_quality_architectural__4847.png",
+          "window": "/mnt/e/AI_Team/mitunet/targets/mitunet_hierarchical_multihead_512/window_opening/raw/test/high_quality_architectural__4847.png"
+        }
+      },
+      "upstream_metrics": {
+        "structural_wall_iou": 0.876585479729204,
+        "boundary_f1_2px": 0.9749832875518241,
+        "door_opening_object_f1": 0.923076923076923,
+        "window_opening_object_f1": 1.0,
+        "junction_f1_5px": 0.689655172413793
+      }
+    },
+    {
+      "sample_key": "cc-03",
+      "group": "cubicasa_test",
+      "plan": "high_quality_architectural/2539",
+      "source": "/home/pmharris/dev/cubicasa5k_data/data/datasets/qmarva/cubicasa5k/versions/4/cubicasa5k/cubicasa5k/high_quality_architectural/2539/F1_scaled.png",
+      "run_dir": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC",
+      "prediction_origin": "SAVED_UPSTREAM_PREDICTION",
+      "pipeline": {
+        "walls_in_ifc": 16,
+        "openings_in_ifc": 19,
+        "door_openings_in_ifc": 10,
+        "window_openings_in_ifc": 9,
+        "predicted_door_components": 10,
+        "predicted_window_components": 9,
+        "predicted_door_components_exported_as_openings_share": 1.0,
+        "predicted_window_components_exported_as_openings_share": 1.0,
+        "predicted_wall_pixels_covered_by_ifc_walls": 0.9370166279969064,
+        "ifc_wall_pixels_outside_predicted_wall": 0.141116526362428,
+        "ifc_checks": {
+          "bridge": "PASS",
+          "bridge_failed": 0,
+          "run_specific": "8/8",
+          "web_ifc": "PASS",
+          "repeat_export_identical": true
+        },
+        "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/cc-03/export_candidate_preview_whole_plan_r05/cc-high-quality-architectural--2539-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+        "ifc_windows_path": "E:\\AI_Team\\mitunet\\experiments\\bim_bridge_pm_comparison_v0\\bim_bridge_pm_comparison_v0_20261006_130747_UTC\\samples\\cc-03\\export_candidate_preview_whole_plan_r05\\cc-high-quality-architectural--2539-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+        "ifc_sha256": "75e11273cd83c1765585807c1b93b1fb6542ad784c727f82f4f37b5ffcd86ee1"
+      },
+      "accuracy": {
+        "label_status": "CUBICASA_DATASET_LABELS",
+        "mask_wall": {
+          "iou": 0.8386433278764219,
+          "precision": 0.9657289249806651,
+          "recall": 0.8643679155490179,
+          "tp_px": 19979,
+          "fp_px": 709,
+          "fn_px": 3135
+        },
+        "ifc_wall": {
+          "iou": 0.8288962728692101,
+          "precision": 0.9173681878599912,
+          "recall": 0.8957774508955612,
+          "tp_px": 20705,
+          "fp_px": 1865,
+          "fn_px": 2409
+        },
+        "door": {
+          "ground_truth_doors": 10,
+          "predicted_door_components": 10,
+          "ifc_door_openings": 10,
+          "gt_doors_touched_by_a_predicted_component": 10,
+          "gt_doors_touched_by_an_ifc_opening": 10,
+          "ifc_openings_touching_a_gt_door": 10,
+          "pixel_iou_mask_recomputed": 0.7694661679700782,
+          "match_rule": "a door counts as found when the two regions share at least one pixel on the 512 grid (loose; detection, not shape)"
+        },
+        "window": {
+          "ground_truth_windows": 9,
+          "predicted_window_components": 9,
+          "gt_windows_touched_by_a_predicted_component": 9,
+          "ifc_window_openings": 9,
+          "gt_windows_touched_by_an_ifc_opening": 9,
+          "ifc_window_openings_touching_a_gt_window": 9,
+          "note": "Window-class apertures are exported with the assumed window vertical profile of the preview profile (sill and height are assumptions, like door heights)."
+        },
+        "ground_truth_files": {
+          "kind": "cubicasa",
+          "wall": "/mnt/e/AI_Team/mitunet/phase1_wall_structure/cache/wall_region/test/high_quality_architectural__2539.png",
+          "door": "/mnt/e/AI_Team/mitunet/phase2_wall_boundary_door_openings/cache/door_opening/raw/test/high_quality_architectural__2539.png",
+          "window": "/mnt/e/AI_Team/mitunet/targets/mitunet_hierarchical_multihead_512/window_opening/raw/test/high_quality_architectural__2539.png"
+        }
+      },
+      "upstream_metrics": {
+        "structural_wall_iou": 0.8386433278764219,
+        "boundary_f1_2px": 0.9705882360488707,
+        "door_opening_object_f1": 1.0,
+        "window_opening_object_f1": 1.0,
+        "junction_f1_5px": 0.7076923076923075
+      }
+    },
+    {
+      "sample_key": "img-01",
+      "group": "synth_images_prior_run",
+      "plan": "img-01",
+      "source": "/mnt/e/AI_Team/mitunet/experiments/synth_images/ChatGPT Image Oct 2, 2026, 03_55_25 PM-1.png",
+      "run_dir": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC",
+      "prediction_origin": "FRESH_FROZEN_INFERENCE",
+      "pipeline": {
+        "walls_in_ifc": 17,
+        "openings_in_ifc": 18,
+        "door_openings_in_ifc": 7,
+        "window_openings_in_ifc": 11,
+        "predicted_door_components": 9,
+        "predicted_window_components": 11,
+        "predicted_door_components_exported_as_openings_share": 0.7777777777777778,
+        "predicted_window_components_exported_as_openings_share": 1.0,
+        "predicted_wall_pixels_covered_by_ifc_walls": 0.9476180438448567,
+        "ifc_wall_pixels_outside_predicted_wall": 0.183452910725638,
+        "ifc_checks": {
+          "bridge": "PASS",
+          "bridge_failed": 0,
+          "run_specific": "8/8",
+          "web_ifc": "PASS",
+          "repeat_export_identical": true
+        },
+        "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-01/export_candidate_preview_whole_plan_r05/synth-img-01-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+        "ifc_windows_path": "E:\\AI_Team\\mitunet\\experiments\\bim_bridge_synth_images_v0\\bim_bridge_synth_images_v0_20261002_200115_UTC\\samples\\img-01\\export_candidate_preview_whole_plan_r05\\synth-img-01-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+        "ifc_sha256": "953af662385a8874c9751320cfe17706b01965b6754dbfdf5b14070ed2980f0f"
+      },
+      "accuracy": {
+        "label_status": "DRAFT_NOT_GROUND_TRUTH",
+        "mask_wall": {
+          "iou": 0.8130214612973233,
+          "precision": 0.9100134952766532,
+          "recall": 0.8840990140549612,
+          "tp_px": 16858,
+          "fp_px": 1667,
+          "fn_px": 2210
+        },
+        "ifc_wall": {
+          "iou": 0.7933964769407807,
+          "precision": 0.835633041208279,
+          "recall": 0.9401090832808895,
+          "tp_px": 17926,
+          "fp_px": 3526,
+          "fn_px": 1142
+        },
+        "door": {
+          "ground_truth_doors": 6,
+          "predicted_door_components": 9,
+          "ifc_door_openings": 7,
+          "gt_doors_touched_by_a_predicted_component": 5,
+          "gt_doors_touched_by_an_ifc_opening": 5,
+          "ifc_openings_touching_a_gt_door": 7,
+          "pixel_iou_mask_recomputed": 0.36751400258509265,
+          "grid": "native instance maps (1254 px); predictions mapped back by nearest sampling",
+          "doors_left_out_for_ignore_regions": 1,
+          "match_rule": "a door counts as found when the two regions share at least one native pixel (loose; detection, not shape)"
+        },
+        "window": {
+          "ground_truth_windows": 9,
+          "predicted_window_components": 11,
+          "gt_windows_touched_by_a_predicted_component": 9,
+          "ifc_window_openings": 11,
+          "gt_windows_touched_by_an_ifc_opening": 9,
+          "ifc_window_openings_touching_a_gt_window": 9,
+          "note": "Window-class apertures are exported with the assumed window vertical profile of the preview profile (sill and height are assumptions, like door heights)."
+        },
+        "valid_pixels_512": 261346,
+        "ground_truth_files": {
+          "root": "/mnt/e/AI_Team/mitunet/experiments/synth_images_labels/synthetic_floorplan_labels_v0_1",
+          "id": "fp11_house_ground"
+        }
+      },
+      "upstream_metrics": null
+    },
+    {
+      "sample_key": "img-02",
+      "group": "synth_images_prior_run",
+      "plan": "img-02",
+      "source": "/mnt/e/AI_Team/mitunet/experiments/synth_images/ChatGPT Image Oct 2, 2026, 03_55_26 PM-2.png",
+      "run_dir": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC",
+      "prediction_origin": "FRESH_FROZEN_INFERENCE",
+      "pipeline": {
+        "walls_in_ifc": 19,
+        "openings_in_ifc": 16,
+        "door_openings_in_ifc": 8,
+        "window_openings_in_ifc": 8,
+        "predicted_door_components": 9,
+        "predicted_window_components": 8,
+        "predicted_door_components_exported_as_openings_share": 0.8888888888888888,
+        "predicted_window_components_exported_as_openings_share": 1.0,
+        "predicted_wall_pixels_covered_by_ifc_walls": 0.9490063233965673,
+        "ifc_wall_pixels_outside_predicted_wall": 0.1483177948925821,
+        "ifc_checks": {
+          "bridge": "PASS",
+          "bridge_failed": 0,
+          "run_specific": "8/8",
+          "web_ifc": "PASS",
+          "repeat_export_identical": true
+        },
+        "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-02/export_candidate_preview_whole_plan_r05/synth-img-02-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+        "ifc_windows_path": "E:\\AI_Team\\mitunet\\experiments\\bim_bridge_synth_images_v0\\bim_bridge_synth_images_v0_20261002_200115_UTC\\samples\\img-02\\export_candidate_preview_whole_plan_r05\\synth-img-02-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+        "ifc_sha256": "7f5af5d3db116509dd95769c24f2cd37b1a70fa0a734466219d6bdce8e1ef6bd"
+      },
+      "accuracy": {
+        "label_status": "DRAFT_NOT_GROUND_TRUTH",
+        "mask_wall": {
+          "iou": 0.7916195232335843,
+          "precision": 0.9299234612035382,
+          "recall": 0.8418388515475894,
+          "tp_px": 20290,
+          "fp_px": 1529,
+          "fn_px": 3812
+        },
+        "ifc_wall": {
+          "iou": 0.8410855663824605,
+          "precision": 0.9105781513990192,
+          "recall": 0.9168118828313003,
+          "tp_px": 22097,
+          "fp_px": 2170,
+          "fn_px": 2005
+        },
+        "door": {
+          "ground_truth_doors": 9,
+          "predicted_door_components": 9,
+          "ifc_door_openings": 8,
+          "gt_doors_touched_by_a_predicted_component": 7,
+          "gt_doors_touched_by_an_ifc_opening": 7,
+          "ifc_openings_touching_a_gt_door": 8,
+          "pixel_iou_mask_recomputed": 0.4732036522429536,
+          "grid": "native instance maps (1254 px); predictions mapped back by nearest sampling",
+          "doors_left_out_for_ignore_regions": 1,
+          "match_rule": "a door counts as found when the two regions share at least one native pixel (loose; detection, not shape)"
+        },
+        "window": {
+          "ground_truth_windows": 8,
+          "predicted_window_components": 8,
+          "gt_windows_touched_by_a_predicted_component": 8,
+          "ifc_window_openings": 8,
+          "gt_windows_touched_by_an_ifc_opening": 8,
+          "ifc_window_openings_touching_a_gt_window": 8,
+          "note": "Window-class apertures are exported with the assumed window vertical profile of the preview profile (sill and height are assumptions, like door heights)."
+        },
+        "valid_pixels_512": 260704,
+        "ground_truth_files": {
+          "root": "/mnt/e/AI_Team/mitunet/experiments/synth_images_labels/synthetic_floorplan_labels_v0_1",
+          "id": "fp12_house_upper"
+        }
+      },
+      "upstream_metrics": null
+    },
+    {
+      "sample_key": "img-03",
+      "group": "synth_images_prior_run",
+      "plan": "img-03",
+      "source": "/mnt/e/AI_Team/mitunet/experiments/synth_images/ChatGPT Image Oct 2, 2026, 03_55_26 PM-3.png",
+      "run_dir": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC",
+      "prediction_origin": "FRESH_FROZEN_INFERENCE",
+      "pipeline": {
+        "walls_in_ifc": 16,
+        "openings_in_ifc": 18,
+        "door_openings_in_ifc": 10,
+        "window_openings_in_ifc": 8,
+        "predicted_door_components": 10,
+        "predicted_window_components": 10,
+        "predicted_door_components_exported_as_openings_share": 1.0,
+        "predicted_window_components_exported_as_openings_share": 0.8,
+        "predicted_wall_pixels_covered_by_ifc_walls": 0.9443325398278704,
+        "ifc_wall_pixels_outside_predicted_wall": 0.12513147626641333,
+        "ifc_checks": {
+          "bridge": "PASS",
+          "bridge_failed": 0,
+          "run_specific": "8/8",
+          "web_ifc": "PASS",
+          "repeat_export_identical": true
+        },
+        "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-03/export_candidate_preview_whole_plan_r05/synth-img-03-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+        "ifc_windows_path": "E:\\AI_Team\\mitunet\\experiments\\bim_bridge_synth_images_v0\\bim_bridge_synth_images_v0_20261002_200115_UTC\\samples\\img-03\\export_candidate_preview_whole_plan_r05\\synth-img-03-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+        "ifc_sha256": "cbf4a29d800a613d2c876573189146fb254c58bb19b41e01f32ce4f1f6ad53b7"
+      },
+      "accuracy": {
+        "label_status": "DRAFT_NOT_GROUND_TRUTH",
+        "mask_wall": {
+          "iou": 0.7899215576411263,
+          "precision": 0.9066682744483299,
+          "recall": 0.8598383776778227,
+          "tp_px": 22557,
+          "fp_px": 2322,
+          "fn_px": 3677
+        },
+        "ifc_wall": {
+          "iou": 0.8256982465867351,
+          "precision": 0.9008014516860728,
+          "recall": 0.9082869558588091,
+          "tp_px": 23828,
+          "fp_px": 2624,
+          "fn_px": 2406
+        },
+        "door": {
+          "ground_truth_doors": 6,
+          "predicted_door_components": 10,
+          "ifc_door_openings": 10,
+          "gt_doors_touched_by_a_predicted_component": 6,
+          "gt_doors_touched_by_an_ifc_opening": 6,
+          "ifc_openings_touching_a_gt_door": 6,
+          "pixel_iou_mask_recomputed": 0.623730625334046,
+          "grid": "native instance maps (1254 px); predictions mapped back by nearest sampling",
+          "doors_left_out_for_ignore_regions": 1,
+          "match_rule": "a door counts as found when the two regions share at least one native pixel (loose; detection, not shape)"
+        },
+        "window": {
+          "ground_truth_windows": 6,
+          "predicted_window_components": 10,
+          "gt_windows_touched_by_a_predicted_component": 6,
+          "ifc_window_openings": 8,
+          "gt_windows_touched_by_an_ifc_opening": 6,
+          "ifc_window_openings_touching_a_gt_window": 6,
+          "note": "Window-class apertures are exported with the assumed window vertical profile of the preview profile (sill and height are assumptions, like door heights)."
+        },
+        "valid_pixels_512": 243513,
+        "ground_truth_files": {
+          "root": "/mnt/e/AI_Team/mitunet/experiments/synth_images_labels/synthetic_floorplan_labels_v0_1",
+          "id": "fp10_apartment"
+        }
+      },
+      "upstream_metrics": null
+    },
+    {
+      "sample_key": "img-04",
+      "group": "synth_images_prior_run",
+      "plan": "img-04",
+      "source": "/mnt/e/AI_Team/mitunet/experiments/synth_images/ChatGPT Image Oct 2, 2026, 03_55_28 PM-4.png",
+      "run_dir": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC",
+      "prediction_origin": "FRESH_FROZEN_INFERENCE",
+      "pipeline": {
+        "walls_in_ifc": 10,
+        "openings_in_ifc": 12,
+        "door_openings_in_ifc": 6,
+        "window_openings_in_ifc": 6,
+        "predicted_door_components": 6,
+        "predicted_window_components": 6,
+        "predicted_door_components_exported_as_openings_share": 1.0,
+        "predicted_window_components_exported_as_openings_share": 1.0,
+        "predicted_wall_pixels_covered_by_ifc_walls": 0.9767299159822525,
+        "ifc_wall_pixels_outside_predicted_wall": 0.15255139651077074,
+        "ifc_checks": {
+          "bridge": "PASS",
+          "bridge_failed": 0,
+          "run_specific": "8/8",
+          "web_ifc": "PASS",
+          "repeat_export_identical": true
+        },
+        "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-04/export_candidate_preview_whole_plan_r05/synth-img-04-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+        "ifc_windows_path": "E:\\AI_Team\\mitunet\\experiments\\bim_bridge_synth_images_v0\\bim_bridge_synth_images_v0_20261002_200115_UTC\\samples\\img-04\\export_candidate_preview_whole_plan_r05\\synth-img-04-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+        "ifc_sha256": "291844dec24a40d5dbe7138a75443b1f30735bc0a93156ae8e00dd7c94db0ac6"
+      },
+      "accuracy": {
+        "label_status": "DRAFT_NOT_GROUND_TRUTH",
+        "mask_wall": {
+          "iou": 0.7588571909450476,
+          "precision": 0.8512697064098933,
+          "recall": 0.874848411350958,
+          "tp_px": 18035,
+          "fp_px": 3151,
+          "fn_px": 2580
+        },
+        "ifc_wall": {
+          "iou": 0.7945724077468718,
+          "precision": 0.8165697436317471,
+          "recall": 0.9672083434392432,
+          "tp_px": 19939,
+          "fp_px": 4479,
+          "fn_px": 676
+        },
+        "door": {
+          "ground_truth_doors": 6,
+          "predicted_door_components": 6,
+          "ifc_door_openings": 6,
+          "gt_doors_touched_by_a_predicted_component": 6,
+          "gt_doors_touched_by_an_ifc_opening": 6,
+          "ifc_openings_touching_a_gt_door": 6,
+          "pixel_iou_mask_recomputed": 0.4988262910798122,
+          "grid": "native instance maps (1254 px); predictions mapped back by nearest sampling",
+          "doors_left_out_for_ignore_regions": 0,
+          "match_rule": "a door counts as found when the two regions share at least one native pixel (loose; detection, not shape)"
+        },
+        "window": {
+          "ground_truth_windows": 6,
+          "predicted_window_components": 6,
+          "gt_windows_touched_by_a_predicted_component": 6,
+          "ifc_window_openings": 6,
+          "gt_windows_touched_by_an_ifc_opening": 6,
+          "ifc_window_openings_touching_a_gt_window": 6,
+          "note": "Window-class apertures are exported with the assumed window vertical profile of the preview profile (sill and height are assumptions, like door heights)."
+        },
+        "valid_pixels_512": 262144,
+        "ground_truth_files": {
+          "root": "/mnt/e/AI_Team/mitunet/experiments/synth_images_labels/synthetic_floorplan_labels_v0_1",
+          "id": "fp01_office"
+        }
+      },
+      "upstream_metrics": null
+    },
+    {
+      "sample_key": "img-05",
+      "group": "synth_images_prior_run",
+      "plan": "img-05",
+      "source": "/mnt/e/AI_Team/mitunet/experiments/synth_images/ChatGPT Image Oct 2, 2026, 03_55_28 PM-5.png",
+      "run_dir": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC",
+      "prediction_origin": "FRESH_FROZEN_INFERENCE",
+      "pipeline": {
+        "walls_in_ifc": 7,
+        "openings_in_ifc": 6,
+        "door_openings_in_ifc": 3,
+        "window_openings_in_ifc": 3,
+        "predicted_door_components": 3,
+        "predicted_window_components": 3,
+        "predicted_door_components_exported_as_openings_share": 1.0,
+        "predicted_window_components_exported_as_openings_share": 1.0,
+        "predicted_wall_pixels_covered_by_ifc_walls": 0.9676430935163624,
+        "ifc_wall_pixels_outside_predicted_wall": 0.09668192219679633,
+        "ifc_checks": {
+          "bridge": "PASS",
+          "bridge_failed": 0,
+          "run_specific": "8/8",
+          "web_ifc": "PASS",
+          "repeat_export_identical": true
+        },
+        "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-05/export_candidate_preview_whole_plan_r05/synth-img-05-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+        "ifc_windows_path": "E:\\AI_Team\\mitunet\\experiments\\bim_bridge_synth_images_v0\\bim_bridge_synth_images_v0_20261002_200115_UTC\\samples\\img-05\\export_candidate_preview_whole_plan_r05\\synth-img-05-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+        "ifc_sha256": "617b3a20bc5da5c4287a7417a403dfa5deee179be2a43cfce50ef6fdd79d5d1c"
+      },
+      "accuracy": {
+        "label_status": "DRAFT_NOT_GROUND_TRUTH",
+        "mask_wall": {
+          "iou": 0.810050967282293,
+          "precision": 0.9058095354822895,
+          "recall": 0.8845601436265709,
+          "tp_px": 14781,
+          "fp_px": 1537,
+          "fn_px": 1929
+        },
+        "ifc_wall": {
+          "iou": 0.8810519366197183,
+          "precision": 0.9161327231121281,
+          "recall": 0.9583482944344703,
+          "tp_px": 16014,
+          "fp_px": 1466,
+          "fn_px": 696
+        },
+        "door": {
+          "ground_truth_doors": 3,
+          "predicted_door_components": 3,
+          "ifc_door_openings": 3,
+          "gt_doors_touched_by_a_predicted_component": 3,
+          "gt_doors_touched_by_an_ifc_opening": 3,
+          "ifc_openings_touching_a_gt_door": 3,
+          "pixel_iou_mask_recomputed": 0.4933510638297872,
+          "grid": "native instance maps (1254 px); predictions mapped back by nearest sampling",
+          "doors_left_out_for_ignore_regions": 0,
+          "match_rule": "a door counts as found when the two regions share at least one native pixel (loose; detection, not shape)"
+        },
+        "window": {
+          "ground_truth_windows": 3,
+          "predicted_window_components": 3,
+          "gt_windows_touched_by_a_predicted_component": 3,
+          "ifc_window_openings": 3,
+          "gt_windows_touched_by_an_ifc_opening": 3,
+          "ifc_window_openings_touching_a_gt_window": 3,
+          "note": "Window-class apertures are exported with the assumed window vertical profile of the preview profile (sill and height are assumptions, like door heights)."
+        },
+        "valid_pixels_512": 262144,
+        "ground_truth_files": {
+          "root": "/mnt/e/AI_Team/mitunet/experiments/synth_images_labels/synthetic_floorplan_labels_v0_1",
+          "id": "fp02_retail"
+        }
+      },
+      "upstream_metrics": null
+    },
+    {
+      "sample_key": "img-06",
+      "group": "synth_images_prior_run",
+      "plan": "img-06",
+      "source": "/mnt/e/AI_Team/mitunet/experiments/synth_images/ChatGPT Image Oct 2, 2026, 03_55_29 PM-6.png",
+      "run_dir": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC",
+      "prediction_origin": "FRESH_FROZEN_INFERENCE",
+      "pipeline": {
+        "walls_in_ifc": 8,
+        "openings_in_ifc": 14,
+        "door_openings_in_ifc": 3,
+        "window_openings_in_ifc": 11,
+        "predicted_door_components": 3,
+        "predicted_window_components": 11,
+        "predicted_door_components_exported_as_openings_share": 1.0,
+        "predicted_window_components_exported_as_openings_share": 1.0,
+        "predicted_wall_pixels_covered_by_ifc_walls": 0.9899684004614536,
+        "ifc_wall_pixels_outside_predicted_wall": 0.12408467580881374,
+        "ifc_checks": {
+          "bridge": "PASS",
+          "bridge_failed": 0,
+          "run_specific": "8/8",
+          "web_ifc": "PASS",
+          "repeat_export_identical": true
+        },
+        "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-06/export_candidate_preview_whole_plan_r05/synth-img-06-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+        "ifc_windows_path": "E:\\AI_Team\\mitunet\\experiments\\bim_bridge_synth_images_v0\\bim_bridge_synth_images_v0_20261002_200115_UTC\\samples\\img-06\\export_candidate_preview_whole_plan_r05\\synth-img-06-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+        "ifc_sha256": "3b565adde23abb8082878b317f91db3df909a998154bc46be5d0f21ebb8bbe57"
+      },
+      "accuracy": {
+        "label_status": "DRAFT_NOT_GROUND_TRUTH",
+        "mask_wall": {
+          "iou": 0.8047733128418388,
+          "precision": 0.9019250253292806,
+          "recall": 0.8819537326001883,
+          "tp_px": 17804,
+          "fp_px": 1936,
+          "fn_px": 2383
+        },
+        "ifc_wall": {
+          "iou": 0.8359253499222395,
+          "precision": 0.8672851956434046,
+          "recall": 0.9585376727596968,
+          "tp_px": 19350,
+          "fp_px": 2961,
+          "fn_px": 837
+        },
+        "door": {
+          "ground_truth_doors": 3,
+          "predicted_door_components": 3,
+          "ifc_door_openings": 3,
+          "gt_doors_touched_by_a_predicted_component": 3,
+          "gt_doors_touched_by_an_ifc_opening": 3,
+          "ifc_openings_touching_a_gt_door": 3,
+          "pixel_iou_mask_recomputed": 0.476551724137931,
+          "grid": "native instance maps (1254 px); predictions mapped back by nearest sampling",
+          "doors_left_out_for_ignore_regions": 0,
+          "match_rule": "a door counts as found when the two regions share at least one native pixel (loose; detection, not shape)"
+        },
+        "window": {
+          "ground_truth_windows": 11,
+          "predicted_window_components": 11,
+          "gt_windows_touched_by_a_predicted_component": 11,
+          "ifc_window_openings": 11,
+          "gt_windows_touched_by_an_ifc_opening": 11,
+          "ifc_window_openings_touching_a_gt_window": 11,
+          "note": "Window-class apertures are exported with the assumed window vertical profile of the preview profile (sill and height are assumptions, like door heights)."
+        },
+        "valid_pixels_512": 261774,
+        "ground_truth_files": {
+          "root": "/mnt/e/AI_Team/mitunet/experiments/synth_images_labels/synthetic_floorplan_labels_v0_1",
+          "id": "fp03_restaurant"
+        }
+      },
+      "upstream_metrics": null
+    },
+    {
+      "sample_key": "com-01",
+      "group": "synth_images_commercial",
+      "plan": "com-01",
+      "source": "/mnt/e/AI_Team/mitunet/experiments/synth_images_commercial/ChatGPT Image Oct 2, 2026, 04_30_52 PM-1.png",
+      "run_dir": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC",
+      "prediction_origin": "FRESH_FROZEN_INFERENCE",
+      "pipeline": {
+        "walls_in_ifc": 13,
+        "openings_in_ifc": 29,
+        "door_openings_in_ifc": 11,
+        "window_openings_in_ifc": 18,
+        "predicted_door_components": 14,
+        "predicted_window_components": 19,
+        "predicted_door_components_exported_as_openings_share": 0.7857142857142857,
+        "predicted_window_components_exported_as_openings_share": 0.9473684210526315,
+        "predicted_wall_pixels_covered_by_ifc_walls": 0.9076582558654271,
+        "ifc_wall_pixels_outside_predicted_wall": 0.29194005110850196,
+        "ifc_checks": {
+          "bridge": "PASS",
+          "bridge_failed": 0,
+          "run_specific": "8/8",
+          "web_ifc": "PASS",
+          "repeat_export_identical": true
+        },
+        "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-01/export_candidate_preview_whole_plan_r05/com-com-01-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+        "ifc_windows_path": "E:\\AI_Team\\mitunet\\experiments\\bim_bridge_pm_comparison_v0\\bim_bridge_pm_comparison_v0_20261006_130747_UTC\\samples\\com-01\\export_candidate_preview_whole_plan_r05\\com-com-01-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+        "ifc_sha256": "0bdc5eee8e35c6e8bfd35798097ffd5eb8eba35fb5d8f320dfeaa6cbebe232da"
+      },
+      "accuracy": {
+        "label_status": "DRAFT_NOT_GROUND_TRUTH",
+        "mask_wall": {
+          "iou": 0.61687623087411,
+          "precision": 0.7672162034856336,
+          "recall": 0.7589227471810642,
+          "tp_px": 8144,
+          "fp_px": 2471,
+          "fn_px": 2587
+        },
+        "ifc_wall": {
+          "iou": 0.5916351826075429,
+          "precision": 0.6720373437735281,
+          "recall": 0.8317957319914268,
+          "tp_px": 8926,
+          "fp_px": 4356,
+          "fn_px": 1805
+        },
+        "door": {
+          "ground_truth_doors": 11,
+          "predicted_door_components": 14,
+          "ifc_door_openings": 11,
+          "gt_doors_touched_by_a_predicted_component": 11,
+          "gt_doors_touched_by_an_ifc_opening": 10,
+          "ifc_openings_touching_a_gt_door": 10,
+          "pixel_iou_mask_recomputed": 0.4498902706656913,
+          "grid": "native instance maps (1254 px); predictions mapped back by nearest sampling",
+          "doors_left_out_for_ignore_regions": 4,
+          "match_rule": "a door counts as found when the two regions share at least one native pixel (loose; detection, not shape)"
+        },
+        "window": {
+          "ground_truth_windows": 14,
+          "predicted_window_components": 19,
+          "gt_windows_touched_by_a_predicted_component": 12,
+          "ifc_window_openings": 18,
+          "gt_windows_touched_by_an_ifc_opening": 12,
+          "ifc_window_openings_touching_a_gt_window": 13,
+          "note": "Window-class apertures are exported with the assumed window vertical profile of the preview profile (sill and height are assumptions, like door heights)."
+        },
+        "valid_pixels_512": 258880,
+        "ground_truth_files": {
+          "root": "/mnt/e/AI_Team/mitunet/experiments/synth_images_labels/synthetic_floorplan_labels_v0_1",
+          "id": "fp04_warehouse"
+        }
+      },
+      "upstream_metrics": null
+    },
+    {
+      "sample_key": "com-02",
+      "group": "synth_images_commercial",
+      "plan": "com-02",
+      "source": "/mnt/e/AI_Team/mitunet/experiments/synth_images_commercial/ChatGPT Image Oct 2, 2026, 04_30_53 PM-2.png",
+      "run_dir": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC",
+      "prediction_origin": "FRESH_FROZEN_INFERENCE",
+      "pipeline": {
+        "walls_in_ifc": 35,
+        "openings_in_ifc": 34,
+        "door_openings_in_ifc": 18,
+        "window_openings_in_ifc": 16,
+        "predicted_door_components": 28,
+        "predicted_window_components": 16,
+        "predicted_door_components_exported_as_openings_share": 0.6428571428571429,
+        "predicted_window_components_exported_as_openings_share": 1.0,
+        "predicted_wall_pixels_covered_by_ifc_walls": 0.8912414573812418,
+        "ifc_wall_pixels_outside_predicted_wall": 0.20056412185031966,
+        "ifc_checks": {
+          "bridge": "PASS",
+          "bridge_failed": 0,
+          "run_specific": "8/8",
+          "web_ifc": "PASS",
+          "repeat_export_identical": true
+        },
+        "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-02/export_candidate_preview_whole_plan_r05/com-com-02-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+        "ifc_windows_path": "E:\\AI_Team\\mitunet\\experiments\\bim_bridge_pm_comparison_v0\\bim_bridge_pm_comparison_v0_20261006_130747_UTC\\samples\\com-02\\export_candidate_preview_whole_plan_r05\\com-com-02-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+        "ifc_sha256": "d7d5fa221fc9aca6030aefb24a94ff265ddc1bf9b989028c8670623f76aeabca"
+      },
+      "accuracy": {
+        "label_status": "DRAFT_NOT_GROUND_TRUTH",
+        "mask_wall": {
+          "iou": 0.7628817654058342,
+          "precision": 0.900566126080109,
+          "recall": 0.8330511477733591,
+          "tp_px": 21157,
+          "fp_px": 2336,
+          "fn_px": 4240
+        },
+        "ifc_wall": {
+          "iou": 0.7431884253938206,
+          "precision": 0.8400840657241115,
+          "recall": 0.8656534236327125,
+          "tp_px": 21985,
+          "fp_px": 4185,
+          "fn_px": 3412
+        },
+        "door": {
+          "ground_truth_doors": 25,
+          "predicted_door_components": 28,
+          "ifc_door_openings": 18,
+          "gt_doors_touched_by_a_predicted_component": 23,
+          "gt_doors_touched_by_an_ifc_opening": 14,
+          "ifc_openings_touching_a_gt_door": 16,
+          "pixel_iou_mask_recomputed": 0.5153061224489796,
+          "grid": "native instance maps (1254 px); predictions mapped back by nearest sampling",
+          "doors_left_out_for_ignore_regions": 2,
+          "match_rule": "a door counts as found when the two regions share at least one native pixel (loose; detection, not shape)"
+        },
+        "window": {
+          "ground_truth_windows": 16,
+          "predicted_window_components": 16,
+          "gt_windows_touched_by_a_predicted_component": 16,
+          "ifc_window_openings": 16,
+          "gt_windows_touched_by_an_ifc_opening": 16,
+          "ifc_window_openings_touching_a_gt_window": 16,
+          "note": "Window-class apertures are exported with the assumed window vertical profile of the preview profile (sill and height are assumptions, like door heights)."
+        },
+        "valid_pixels_512": 261544,
+        "ground_truth_files": {
+          "root": "/mnt/e/AI_Team/mitunet/experiments/synth_images_labels/synthetic_floorplan_labels_v0_1",
+          "id": "fp05_hotel"
+        }
+      },
+      "upstream_metrics": null
+    },
+    {
+      "sample_key": "com-03",
+      "group": "synth_images_commercial",
+      "plan": "com-03",
+      "source": "/mnt/e/AI_Team/mitunet/experiments/synth_images_commercial/ChatGPT Image Oct 2, 2026, 04_30_53 PM-3.png",
+      "run_dir": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC",
+      "prediction_origin": "FRESH_FROZEN_INFERENCE",
+      "pipeline": {
+        "walls_in_ifc": 23,
+        "openings_in_ifc": 26,
+        "door_openings_in_ifc": 16,
+        "window_openings_in_ifc": 10,
+        "predicted_door_components": 17,
+        "predicted_window_components": 10,
+        "predicted_door_components_exported_as_openings_share": 0.9411764705882353,
+        "predicted_window_components_exported_as_openings_share": 1.0,
+        "predicted_wall_pixels_covered_by_ifc_walls": 0.9628711849006731,
+        "ifc_wall_pixels_outside_predicted_wall": 0.15940147827654588,
+        "ifc_checks": {
+          "bridge": "PASS",
+          "bridge_failed": 0,
+          "run_specific": "8/8",
+          "web_ifc": "PASS",
+          "repeat_export_identical": true
+        },
+        "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-03/export_candidate_preview_whole_plan_r05/com-com-03-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+        "ifc_windows_path": "E:\\AI_Team\\mitunet\\experiments\\bim_bridge_pm_comparison_v0\\bim_bridge_pm_comparison_v0_20261006_130747_UTC\\samples\\com-03\\export_candidate_preview_whole_plan_r05\\com-com-03-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+        "ifc_sha256": "111a2c61bfd825d7c341c1c03dcc2525b78be26408409b55919e459e14bb8683"
+      },
+      "accuracy": {
+        "label_status": "DRAFT_NOT_GROUND_TRUTH",
+        "mask_wall": {
+          "iou": 0.7727142241997991,
+          "precision": 0.8893569570065667,
+          "recall": 0.8548969788399698,
+          "tp_px": 21534,
+          "fp_px": 2679,
+          "fn_px": 3655
+        },
+        "ifc_wall": {
+          "iou": 0.8124657534246575,
+          "precision": 0.8553812871822607,
+          "recall": 0.9418396919290166,
+          "tp_px": 23724,
+          "fp_px": 4011,
+          "fn_px": 1465
+        },
+        "door": {
+          "ground_truth_doors": 17,
+          "predicted_door_components": 17,
+          "ifc_door_openings": 16,
+          "gt_doors_touched_by_a_predicted_component": 17,
+          "gt_doors_touched_by_an_ifc_opening": 16,
+          "ifc_openings_touching_a_gt_door": 16,
+          "pixel_iou_mask_recomputed": 0.6023955594507742,
+          "grid": "native instance maps (1254 px); predictions mapped back by nearest sampling",
+          "doors_left_out_for_ignore_regions": 0,
+          "match_rule": "a door counts as found when the two regions share at least one native pixel (loose; detection, not shape)"
+        },
+        "window": {
+          "ground_truth_windows": 10,
+          "predicted_window_components": 10,
+          "gt_windows_touched_by_a_predicted_component": 10,
+          "ifc_window_openings": 10,
+          "gt_windows_touched_by_an_ifc_opening": 10,
+          "ifc_window_openings_touching_a_gt_window": 10,
+          "note": "Window-class apertures are exported with the assumed window vertical profile of the preview profile (sill and height are assumptions, like door heights)."
+        },
+        "valid_pixels_512": 262144,
+        "ground_truth_files": {
+          "root": "/mnt/e/AI_Team/mitunet/experiments/synth_images_labels/synthetic_floorplan_labels_v0_1",
+          "id": "fp06_clinic"
+        }
+      },
+      "upstream_metrics": null
+    },
+    {
+      "sample_key": "com-04",
+      "group": "synth_images_commercial",
+      "plan": "com-04",
+      "source": "/mnt/e/AI_Team/mitunet/experiments/synth_images_commercial/ChatGPT Image Oct 2, 2026, 04_30_54 PM-4.png",
+      "run_dir": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC",
+      "prediction_origin": "FRESH_FROZEN_INFERENCE",
+      "pipeline": {
+        "walls_in_ifc": 16,
+        "openings_in_ifc": 30,
+        "door_openings_in_ifc": 14,
+        "window_openings_in_ifc": 16,
+        "predicted_door_components": 14,
+        "predicted_window_components": 16,
+        "predicted_door_components_exported_as_openings_share": 1.0,
+        "predicted_window_components_exported_as_openings_share": 1.0,
+        "predicted_wall_pixels_covered_by_ifc_walls": 0.9328981852346339,
+        "ifc_wall_pixels_outside_predicted_wall": 0.16529510662773206,
+        "ifc_checks": {
+          "bridge": "PASS",
+          "bridge_failed": 0,
+          "run_specific": "8/8",
+          "web_ifc": "PASS",
+          "repeat_export_identical": true
+        },
+        "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-04/export_candidate_preview_whole_plan_r05/com-com-04-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+        "ifc_windows_path": "E:\\AI_Team\\mitunet\\experiments\\bim_bridge_pm_comparison_v0\\bim_bridge_pm_comparison_v0_20261006_130747_UTC\\samples\\com-04\\export_candidate_preview_whole_plan_r05\\com-com-04-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+        "ifc_sha256": "fe53569efeeb741408f05b1c0e8b8de0e67c28aef830d133023ea4c4be84c901"
+      },
+      "accuracy": {
+        "label_status": "DRAFT_NOT_GROUND_TRUTH",
+        "mask_wall": {
+          "iou": 0.7663726387617542,
+          "precision": 0.9107946397666024,
+          "recall": 0.8285650022492128,
+          "tp_px": 18419,
+          "fp_px": 1804,
+          "fn_px": 3811
+        },
+        "ifc_wall": {
+          "iou": 0.8498101997029213,
+          "precision": 0.9112467923192638,
+          "recall": 0.9264957264957265,
+          "tp_px": 20596,
+          "fp_px": 2006,
+          "fn_px": 1634
+        },
+        "door": {
+          "ground_truth_doors": 14,
+          "predicted_door_components": 14,
+          "ifc_door_openings": 14,
+          "gt_doors_touched_by_a_predicted_component": 14,
+          "gt_doors_touched_by_an_ifc_opening": 14,
+          "ifc_openings_touching_a_gt_door": 14,
+          "pixel_iou_mask_recomputed": 0.7072525145579672,
+          "grid": "native instance maps (1254 px); predictions mapped back by nearest sampling",
+          "doors_left_out_for_ignore_regions": 0,
+          "match_rule": "a door counts as found when the two regions share at least one native pixel (loose; detection, not shape)"
+        },
+        "window": {
+          "ground_truth_windows": 16,
+          "predicted_window_components": 16,
+          "gt_windows_touched_by_a_predicted_component": 16,
+          "ifc_window_openings": 16,
+          "gt_windows_touched_by_an_ifc_opening": 16,
+          "ifc_window_openings_touching_a_gt_window": 16,
+          "note": "Window-class apertures are exported with the assumed window vertical profile of the preview profile (sill and height are assumptions, like door heights)."
+        },
+        "valid_pixels_512": 262144,
+        "ground_truth_files": {
+          "root": "/mnt/e/AI_Team/mitunet/experiments/synth_images_labels/synthetic_floorplan_labels_v0_1",
+          "id": "fp07_school"
+        }
+      },
+      "upstream_metrics": null
+    },
+    {
+      "sample_key": "com-05",
+      "group": "synth_images_commercial",
+      "plan": "com-05",
+      "source": "/mnt/e/AI_Team/mitunet/experiments/synth_images_commercial/ChatGPT Image Oct 2, 2026, 04_30_55 PM-5.png",
+      "run_dir": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC",
+      "prediction_origin": "FRESH_FROZEN_INFERENCE",
+      "pipeline": {
+        "walls_in_ifc": 19,
+        "openings_in_ifc": 36,
+        "door_openings_in_ifc": 17,
+        "window_openings_in_ifc": 19,
+        "predicted_door_components": 20,
+        "predicted_window_components": 20,
+        "predicted_door_components_exported_as_openings_share": 0.85,
+        "predicted_window_components_exported_as_openings_share": 0.95,
+        "predicted_wall_pixels_covered_by_ifc_walls": 0.8394608546028104,
+        "ifc_wall_pixels_outside_predicted_wall": 0.19912448700410396,
+        "ifc_checks": {
+          "bridge": "PASS",
+          "bridge_failed": 0,
+          "run_specific": "8/8",
+          "web_ifc": "PASS",
+          "repeat_export_identical": true
+        },
+        "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-05/export_candidate_preview_whole_plan_r05/com-com-05-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+        "ifc_windows_path": "E:\\AI_Team\\mitunet\\experiments\\bim_bridge_pm_comparison_v0\\bim_bridge_pm_comparison_v0_20261006_130747_UTC\\samples\\com-05\\export_candidate_preview_whole_plan_r05\\com-com-05-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+        "ifc_sha256": "3b1fbafebf4fb6abe4ad9d72a5d0cb65afe5b63dcf8c6305444c506ab8f08ac1"
+      },
+      "accuracy": {
+        "label_status": "DRAFT_NOT_GROUND_TRUTH",
+        "mask_wall": {
+          "iou": 0.6826321924340363,
+          "precision": 0.8028414755732801,
+          "recall": 0.8201145767027371,
+          "tp_px": 12884,
+          "fp_px": 3164,
+          "fn_px": 2826
+        },
+        "ifc_wall": {
+          "iou": 0.7667889004433255,
+          "precision": 0.8454528996439563,
+          "recall": 0.8917886696371737,
+          "tp_px": 14010,
+          "fp_px": 2561,
+          "fn_px": 1700
+        },
+        "door": {
+          "ground_truth_doors": 12,
+          "predicted_door_components": 20,
+          "ifc_door_openings": 17,
+          "gt_doors_touched_by_a_predicted_component": 12,
+          "gt_doors_touched_by_an_ifc_opening": 11,
+          "ifc_openings_touching_a_gt_door": 14,
+          "pixel_iou_mask_recomputed": 0.592797783933518,
+          "grid": "native instance maps (1254 px); predictions mapped back by nearest sampling",
+          "doors_left_out_for_ignore_regions": 4,
+          "match_rule": "a door counts as found when the two regions share at least one native pixel (loose; detection, not shape)"
+        },
+        "window": {
+          "ground_truth_windows": 16,
+          "predicted_window_components": 20,
+          "gt_windows_touched_by_a_predicted_component": 16,
+          "ifc_window_openings": 19,
+          "gt_windows_touched_by_an_ifc_opening": 16,
+          "ifc_window_openings_touching_a_gt_window": 13,
+          "note": "Window-class apertures are exported with the assumed window vertical profile of the preview profile (sill and height are assumptions, like door heights)."
+        },
+        "valid_pixels_512": 254776,
+        "ground_truth_files": {
+          "root": "/mnt/e/AI_Team/mitunet/experiments/synth_images_labels/synthetic_floorplan_labels_v0_1",
+          "id": "fp08_grocery"
+        }
+      },
+      "upstream_metrics": null
+    },
+    {
+      "sample_key": "com-06",
+      "group": "synth_images_commercial",
+      "plan": "com-06",
+      "source": "/mnt/e/AI_Team/mitunet/experiments/synth_images_commercial/ChatGPT Image Oct 2, 2026, 04_30_56 PM-6.png",
+      "run_dir": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC",
+      "prediction_origin": "FRESH_FROZEN_INFERENCE",
+      "pipeline": {
+        "walls_in_ifc": 17,
+        "openings_in_ifc": 32,
+        "door_openings_in_ifc": 9,
+        "window_openings_in_ifc": 23,
+        "predicted_door_components": 12,
+        "predicted_window_components": 24,
+        "predicted_door_components_exported_as_openings_share": 0.75,
+        "predicted_window_components_exported_as_openings_share": 0.9583333333333334,
+        "predicted_wall_pixels_covered_by_ifc_walls": 0.8583048530416951,
+        "ifc_wall_pixels_outside_predicted_wall": 0.19799450724915374,
+        "ifc_checks": {
+          "bridge": "PASS",
+          "bridge_failed": 0,
+          "run_specific": "8/8",
+          "web_ifc": "PASS",
+          "repeat_export_identical": true
+        },
+        "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-06/export_candidate_preview_whole_plan_r05/com-com-06-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+        "ifc_windows_path": "E:\\AI_Team\\mitunet\\experiments\\bim_bridge_pm_comparison_v0\\bim_bridge_pm_comparison_v0_20261006_130747_UTC\\samples\\com-06\\export_candidate_preview_whole_plan_r05\\com-com-06-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+        "ifc_sha256": "4aa503c16e01a0f57ba6beb6df3159e87c5486af3430276e55f27a152c1e1896"
+      },
+      "accuracy": {
+        "label_status": "DRAFT_NOT_GROUND_TRUTH",
+        "mask_wall": {
+          "iou": 0.7302711103436367,
+          "precision": 0.8671907040328093,
+          "recall": 0.8222294232015555,
+          "tp_px": 12687,
+          "fp_px": 1943,
+          "fn_px": 2743
+        },
+        "ifc_wall": {
+          "iou": 0.7494091164884638,
+          "precision": 0.8505460816248324,
+          "recall": 0.8630589760207388,
+          "tp_px": 13317,
+          "fp_px": 2340,
+          "fn_px": 2113
+        },
+        "door": {
+          "ground_truth_doors": 14,
+          "predicted_door_components": 12,
+          "ifc_door_openings": 9,
+          "gt_doors_touched_by_a_predicted_component": 12,
+          "gt_doors_touched_by_an_ifc_opening": 9,
+          "ifc_openings_touching_a_gt_door": 9,
+          "pixel_iou_mask_recomputed": 0.408,
+          "grid": "native instance maps (1254 px); predictions mapped back by nearest sampling",
+          "doors_left_out_for_ignore_regions": 0,
+          "match_rule": "a door counts as found when the two regions share at least one native pixel (loose; detection, not shape)"
+        },
+        "window": {
+          "ground_truth_windows": 20,
+          "predicted_window_components": 24,
+          "gt_windows_touched_by_a_predicted_component": 20,
+          "ifc_window_openings": 23,
+          "gt_windows_touched_by_an_ifc_opening": 20,
+          "ifc_window_openings_touching_a_gt_window": 20,
+          "note": "Window-class apertures are exported with the assumed window vertical profile of the preview profile (sill and height are assumptions, like door heights)."
+        },
+        "valid_pixels_512": 262144,
+        "ground_truth_files": {
+          "root": "/mnt/e/AI_Team/mitunet/experiments/synth_images_labels/synthetic_floorplan_labels_v0_1",
+          "id": "fp09_manufacturing"
+        }
+      },
+      "upstream_metrics": null
+    }
+  ],
+  "pooled_by_group": {
+    "cubicasa_test": {
+      "plans": 3,
+      "mask_wall_iou_pooled": 0.7978587903198044,
+      "ifc_wall_iou_pooled": 0.7114247479148512,
+      "doors": 23,
+      "doors_found_by_mask": 21,
+      "doors_found_in_ifc": 19,
+      "windows": 19,
+      "windows_found_by_mask": 19,
+      "windows_found_in_ifc": 19,
+      "label_status": "CUBICASA_DATASET_LABELS"
+    },
+    "synth_images_prior_run": {
+      "plans": 6,
+      "mask_wall_iou_pooled": 0.7933739878324153,
+      "ifc_wall_iou_pooled": 0.8266431713171734,
+      "doors": 33,
+      "doors_found_by_mask": 30,
+      "doors_found_in_ifc": 30,
+      "windows": 43,
+      "windows_found_by_mask": 43,
+      "windows_found_in_ifc": 43,
+      "label_status": "DRAFT_NOT_GROUND_TRUTH"
+    },
+    "synth_images_commercial": {
+      "plans": 6,
+      "mask_wall_iou_pooled": 0.734599175730532,
+      "ifc_wall_iou_pooled": 0.7645252187914661,
+      "doors": 93,
+      "doors_found_by_mask": 89,
+      "doors_found_in_ifc": 74,
+      "windows": 92,
+      "windows_found_by_mask": 90,
+      "windows_found_in_ifc": 90,
+      "label_status": "DRAFT_NOT_GROUND_TRUTH"
+    }
+  },
+  "cubicasa_test_split_means_400_plans": {
+    "structural_wall_iou": 0.8114734871620829,
+    "boundary_f1_2px": 0.9539204213294288,
+    "door_opening_object_f1": 0.8751504111574657,
+    "window_opening_object_f1": 0.8557445328184917,
+    "junction_f1_5px": 0.7667439205020895
+  },
+  "draft_labels": {
+    "root": "/mnt/e/AI_Team/mitunet/experiments/synth_images_labels/synthetic_floorplan_labels_v0_1",
+    "status": "DRAFT_NOT_GROUND_TRUTH",
+    "independently_human_reviewed_images": 0,
+    "manifest_sha256": "9af3f95ed089d6f9fe2af2ff27439e020a6681264517a665db96d0371ae12e12"
+  },
+  "prior_keys": [
+    "img-01",
+    "img-02",
+    "img-03",
+    "img-04",
+    "img-05",
+    "img-06"
+  ],
+  "ground_truth_choice": {
+    "wall": "wall_region_mask_path (reproduces the upstream structural_wall_iou exactly)",
+    "door": "door_opening_raw_mask_path (reproduces the upstream door pixel IoU exactly)",
+    "window": "window_opening_raw_mask_path"
+  },
+  "ground_truth_read_after_geometry": true,
+  "inputs_unchanged": true
+}

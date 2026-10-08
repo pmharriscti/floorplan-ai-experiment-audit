@@ -45,8 +45,66 @@
       "source_height": 2750,
       "transformation": "resized to 1600x1148 (Lanczos), JPEG quality 85; content otherwise unchanged",
       "content": "Clinic (com-03): original | IFC r01 | IFC r04 // IFC r04 over original | user's r01 3D viewer screenshot | automated r04 3D render."
+    },
+    {
+      "file": "comparison_sheet_r05_windows.jpg",
+      "width": 1600,
+      "height": 5882,
+      "mode": "RGB",
+      "sha256": "c9d3b29125abc4c2676a2fc94c1265fc4c06a3f3e230ed6178efa42efefd2748",
+      "size_bytes": 1409638,
+      "jpeg_quality": 70,
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/comparison_20261008_132842_UTC_r05_windows_v1_15plans/COMPARISON_SHEET.png",
+      "source_sha256": "72d1d97c0d6b9cbc3db21f37ea10f804f0b1ff760f87d7a504419bcde12490c5",
+      "source_width": 2217,
+      "source_height": 8150,
+      "transformation": "resized to 1600x5882 (Lanczos), JPEG quality 70; content otherwise unchanged",
+      "content": "All 15 plans at revision r05 (window apertures exported): source | masks | masks vs labels | IFC walls vs labels | IFC plan read from the file (door voids magenta, window voids cyan)."
+    },
+    {
+      "file": "cc-01_r04_vs_r05.jpg",
+      "width": 1600,
+      "height": 817,
+      "mode": "RGB",
+      "sha256": "943c785f2c05dd982a2a0f2e512bc535b8634b06cca632fbafab1d424a9caef0",
+      "size_bytes": 229652,
+      "jpeg_quality": 85,
+      "source_paths": [
+        "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/comparison_20261006_191845_UTC_r04_repair_v1_2/plans/cc-01.png",
+        "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/comparison_20261008_132842_UTC_r05_windows_v1_15plans/plans/cc-01.png"
+      ],
+      "source_sha256s": [
+        "f98d961ed7952428c0da0e677e1aa93a498f750a6f46364d48e3e089269b5de3",
+        "e33219c7dec062630062dd61d64b3a5e1b21e794c226fd7a3eebc27c281c37ce"
+      ],
+      "source_width": 2217,
+      "source_height": 1132,
+      "transformation": "the two per-plan rows stacked vertically with a 40 px label strip above each, resized to 1600x817 (Lanczos), JPEG quality 85; row content otherwise unchanged",
+      "content": "CubiCasa high_quality/4712: the r04 row (windows not exported) above the r05 row (window voids cyan in panel 5; three windows trimmed where they abutted a door)."
+    },
+    {
+      "file": "com-06_r04_vs_r05.jpg",
+      "width": 1600,
+      "height": 850,
+      "mode": "RGB",
+      "sha256": "4ef1616124444bf93433c9e16a2d85206ea754de9fc2f7171221d8740ca787a1",
+      "size_bytes": 321932,
+      "jpeg_quality": 85,
+      "source_paths": [
+        "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/comparison_20261006_191845_UTC_r04_repair_v1_2/plans/com-06.png",
+        "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/comparison_20261008_132842_UTC_r05_windows_v1_15plans/plans/com-06.png"
+      ],
+      "source_sha256s": [
+        "6b27be5cd3e02d1b474ed727de397fedf17073e1bff311654027860cd38da597",
+        "07c89e63e1173ff9f543b916f4ceec9d436ec19c01b657f40faaf6344df80e0a"
+      ],
+      "source_width": 2132,
+      "source_height": 1132,
+      "transformation": "the two per-plan rows stacked vertically with a 40 px label strip above each, resized to 1600x850 (Lanczos), JPEG quality 85; row content otherwise unchanged",
+      "content": "Manufacturing (com-06), the plan with the most windows: r04 row above the r05 row (23 of 24 predicted window components exported)."
     }
   ],
   "ground_truth_shown": "CubiCasa rows: dataset labels; AI rows: unreviewed draft labels",
-  "viewer_screenshot_note": "The 3D panels in the clinic image are a user screenshot (r01) and an automated headless render (r04) of the local web-ifc viewer; neither is a recorded viewer inspection."
+  "viewer_screenshot_note": "The 3D panels in the clinic image are a user screenshot (r01) and an automated headless render (r04) of the local web-ifc viewer; neither is a recorded viewer inspection.",
+  "r05_colour_note": "Panel 5 at r05: walls blue, door voids magenta, window voids cyan."
 }

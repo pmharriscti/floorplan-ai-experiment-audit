@@ -1,0 +1,71 @@
+{
+  "experiment_id": "bim_bridge_pm_comparison_v0",
+  "run_id": "bim_bridge_pm_comparison_v0_20261006_130747_UTC",
+  "stage": "export",
+  "status": "PASS",
+  "written_utc": "2026-10-08T13:22:02Z",
+  "sample_key": "com-03",
+  "kind": "candidate",
+  "scope": "whole_plan",
+  "revision": "r05",
+  "folder": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-03/export_candidate_preview_whole_plan_r05",
+  "ifc": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-03/export_candidate_preview_whole_plan_r05/com-com-03-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+  "ifc_windows_path": "E:\\AI_Team\\mitunet\\experiments\\bim_bridge_pm_comparison_v0\\bim_bridge_pm_comparison_v0_20261006_130747_UTC\\samples\\com-03\\export_candidate_preview_whole_plan_r05\\com-com-03-p01__CANDIDATE_UNREVIEWED_PREVIEW__WHOLE_PLAN_ATTEMPT__SCALE_ASSUMED_FOR_PREVIEW__r05.ifc",
+  "ifc_sha256": "111a2c61bfd825d7c341c1c03dcc2525b78be26408409b55919e459e14bb8683",
+  "ifc_size_bytes": 570950,
+  "model_id": "com-com-03-p01",
+  "geometry_status": "CANDIDATE_UNREVIEWED",
+  "scale_status": "ASSUMED_FOR_PREVIEW",
+  "permitted_use": "preview_only_not_for_engineering_or_inspection",
+  "walls": 23,
+  "openings": 26,
+  "bridge_checks": {
+    "technical": "PASS",
+    "by_status": {
+      "PASS": 932,
+      "WARN": 50
+    },
+    "failed": []
+  },
+  "run_specific_checks": {
+    "passed": 8,
+    "failed": 0,
+    "failed_names": []
+  },
+  "independent_parser": {
+    "status": "PASS",
+    "passed": 95,
+    "failed": 0,
+    "web_ifc_version": "0.0.66",
+    "report": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-03/export_candidate_preview_whole_plan_r05/independent_parser_check.json",
+    "stderr": "",
+    "is_viewer_test": false,
+    "note": "A second IFC engine parsed and tessellated the file. This is not acceptance by any viewer or BIM application."
+  },
+  "plan_contact_pairs": 31,
+  "connection_relationships": {
+    "IfcRelConnectsElements": 0,
+    "IfcRelConnectsPathElements": 0,
+    "IfcRelConnectsWithRealizingElements": 0
+  },
+  "repeat_export_byte_identical": true,
+  "guids_created": 40,
+  "guids_reused": 145,
+  "guids_retired": [],
+  "guid_map_sha256": "2a73bc44e4a12d6f7c000e94739d032d04466603306993ec9c43c21c7d4dcc38",
+  "metric_export": {
+    "status": "BLOCKED",
+    "blockers": [
+      "Plan scale is ASSUMED_FOR_PREVIEW (arbitrary visualization scale).",
+      "No recorded human review."
+    ]
+  },
+  "viewer_inspection": "NOT_RUN",
+  "reports": {
+    "validation_report": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-03/export_candidate_preview_whole_plan_r05/validation_report.json",
+    "validation_report_md": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-03/export_candidate_preview_whole_plan_r05/validation_report.md",
+    "run_specific_checks": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-03/export_candidate_preview_whole_plan_r05/run_specific_checks.json",
+    "independent_parser": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-03/export_candidate_preview_whole_plan_r05/independent_parser_check.json"
+  },
+  "note": "PASS = the preview file matches its input and passes the technical checks. It is not a metric export, not a review and not viewer acceptance."
+}

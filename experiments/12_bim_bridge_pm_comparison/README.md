@@ -35,6 +35,7 @@ For context, the model's mean wall IoU over all 400 CubiCasa test plans is 81.1%
 - On the residential AI plans the masks agree with the draft labels about as well as on CubiCasa; commercial plans are lower.
 - Most of the loss happened between the masks and the IFC walls. On CubiCasa the repair rules narrowed that gap from 15.0 to 8.7 points; on the AI plans the repaired IFC walls now score at or above the masks.
 - Doors: the model finds most doors in the masks, but some are lost when masks become walls.
+- Windows: not exported until revision r05 (2026-10-08), which exports them as apertures with an assumed vertical profile; see [Window apertures](#window-apertures-revision-r05-windows_v1-2026-10-08).
 
 ## Results per plan
 
@@ -75,6 +76,58 @@ which the input contract refused; r03 (`repair_v1.1`) let a short segment's slop
 let extensions compound across rounds, and two plans regressed. **The rules were developed and checked on these same
 15 plans, so their gains are not held-out evidence.**
 
+## Window apertures (revision r05, `windows_v1`, 2026-10-08)
+
+Through r04 the window head's components were recorded in every candidate file and left unexported, because the
+preview profile gave `window_opening` no vertical profile and the bridge invents no heights. That was the largest
+gap between what the model predicts and what reaches the IFC: 175 window components across the 15 plans, none exported.
+
+Revision r05 adds a window entry to the preview profile (sill 0.9 m, height 1.2 m; **assumptions chosen by the AI
+assistant in the working session, confirmed by nobody**, and labelled as assumptions on every exported object like the
+door values) and hosts window components with the same host rule as doors. A window is still a rectangular void
+through the wall; no `IfcWindow` is created. The vectorizer, the repair rules, the core bridge code and the door and
+wall geometry are unchanged: every plan's walls, IFC wall IoU and doors are identical to r04, and every r04 GlobalId is reused.
+
+One new rule was needed. Components of the two heads often abut on the same wall (a window beside a door), and the
+half-pixel padding makes them overlap. Two components of the **same** head that overlap are both left unexported as
+ambiguous, as before. Where a **window overlaps a door**, the door keeps its void and the window is trimmed to stop
+0.5 px short of it, recorded as an automated edit on the object; if the door covers the window or would split it, the
+window is left unexported with that reason. The gap exists because two voids that merely touch fail the input
+contract's 1e-9 m overlap test once offset and width are rounded separately; the first cc-01 export failed that way
+and its report is kept ([results/r05_exports/cc-01/attempt01_FAILED_validation_report.md](results/r05_exports/cc-01/attempt01_FAILED_validation_report.md)).
+
+| Group | Labels | Doors in IFC, r04 | Doors in IFC, r05 | Windows found by masks | Windows found in IFC, r05 |
+| --- | --- | --- | --- | --- | --- |
+| CubiCasa test (3) | dataset | 19/23 | 19/23 | 19/19 | 19/19 |
+| AI residential/mixed (6) | draft, unreviewed | 30/33 | 30/33 | 43/43 | 43/43 |
+| AI commercial (6) | draft, unreviewed | 74/93 | 74/93 | 90/92 | 90/92 |
+
+| Plan | Doors in IFC r04 → r05 | Window components predicted → exported | Windows found: mask | Windows found: IFC r05 | Trimmed |
+| --- | --- | --- | --- | --- | --- |
+| `cc-01` CubiCasa high_quality/4712 | 7 → 7 | 6 → 6 | 4/4 | 4/4 | 3 |
+| `cc-02` CubiCasa high_quality_architectural/4847 | 4 → 4 | 6 → 6 | 6/6 | 6/6 |  |
+| `cc-03` CubiCasa high_quality_architectural/2539 | 10 → 10 | 9 → 9 | 9/9 | 9/9 |  |
+| `img-01` house, ground floor | 7 → 7 | 11 → 11 | 9/9 | 9/9 |  |
+| `img-02` house, upper floor | 8 → 8 | 8 → 8 | 8/8 | 8/8 |  |
+| `img-03` apartment | 10 → 10 | 10 → 8 | 6/6 | 6/6 |  |
+| `img-04` office | 6 → 6 | 6 → 6 | 6/6 | 6/6 |  |
+| `img-05` retail | 3 → 3 | 3 → 3 | 3/3 | 3/3 |  |
+| `img-06` restaurant | 3 → 3 | 11 → 11 | 11/11 | 11/11 |  |
+| `com-01` warehouse | 11 → 11 | 19 → 18 | 12/14 | 12/14 |  |
+| `com-02` hotel | 18 → 18 | 16 → 16 | 16/16 | 16/16 |  |
+| `com-03` clinic | 16 → 16 | 10 → 10 | 10/10 | 10/10 |  |
+| `com-04` school | 14 → 14 | 16 → 16 | 16/16 | 16/16 |  |
+| `com-05` grocery | 17 → 17 | 20 → 19 | 16/16 | 16/16 | 2 |
+| `com-06` manufacturing | 9 → 9 | 24 → 23 | 20/20 | 20/20 | 1 |
+
+170 of 175 predicted window components reached the IFC (4 × no candidate wall hosts this component; 1 × component smaller than min_aperture_component_px (20)). 6 windows were trimmed to yield to a door.
+Windows count as found by the same loose one-pixel rule as doors. All 15 r05 files pass the bridge checks, the 8
+run-specific checks, the independent web-ifc parse and a byte-identical repeat export.
+
+The comparison script now reads each void's `PredictedClass` and scores door and window voids separately, so the door
+counts above cannot be inflated by window voids. Re-scoring the r04 exports with the changed script reproduced every
+pre-existing number exactly ([results/comparison_r04_regression_check_20261008/](results/comparison_r04_regression_check_20261008/)).
+
 ## Why the warehouse (com-01) scores lowest
 
 Its walls are about 4 px wide on the 512 grid. A 1-pixel disagreement on each wall edge would alone cap IoU at about 67%.
@@ -83,14 +136,16 @@ entrance vestibule walls and a stub near the restrooms. IoU understates thin-wal
 
 ## Status of the IFC files
 
-All 30 files (r01 and r04 for 15 plans) pass the bridge checks, 8 run-specific checks, the independent web-ifc parse and
-a byte-identical repeat export. Every file is a **candidate, unreviewed** preview with an assumed scale (0.01 preview
-metres per source pixel). Windows are predicted but not exported. No viewer inspection is recorded. The IFC files are
+All 45 files (r01, r04 and r05 for 15 plans) pass the bridge checks, 8 run-specific checks, the independent web-ifc parse
+and a byte-identical repeat export. Every file is a **candidate, unreviewed** preview with an assumed scale (0.01 preview
+metres per source pixel). Windows are not exported in r01 and r04; r05 exports them as apertures with an assumed vertical
+profile. No viewer inspection is recorded. The IFC files are
 not committed; their paths and hashes are in [metrics.json](metrics.json).
 
 ## Evidence
 
-- Comparison tables and reports: [results/comparison_r04/](results/comparison_r04/), [results/comparison_r01/](results/comparison_r01/)
+- Comparison tables and reports: [results/comparison_r05/](results/comparison_r05/), [results/comparison_r04/](results/comparison_r04/), [results/comparison_r01/](results/comparison_r01/)
+- r05 export checks per plan and the cc-01 candidate file with its trims: [results/r05_exports/](results/r05_exports/); r05 configuration: [results/config/bim_bridge_pm_comparison_v0_windows_v1.yaml](results/config/bim_bridge_pm_comparison_v0_windows_v1.yaml)
 - The label bundle's own evaluator, run at full resolution as a cross-check: `results/comparison_r0x/label_bundle_evaluator/`
 - Inputs and inference contract: [results/subset_manifest.json](results/subset_manifest.json), [results/config/inference_contract.json](results/config/inference_contract.json)
 - Repair configurations: [results/config/](results/config/)
@@ -105,6 +160,6 @@ not committed; their paths and hashes are in [metrics.json](metrics.json).
 
 ## Publication Status
 
-Published on 2026-10-07 after the repository owner asked for this entry.
+Published on 2026-10-07 after the repository owner asked for this entry. Updated on 2026-10-08 with revision r05 (window apertures), after the repository owner asked for the update.
 
 See [config.yaml](config.yaml), [metrics.json](metrics.json), and [provenance.json](provenance.json).

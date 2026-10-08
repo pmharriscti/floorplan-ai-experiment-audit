@@ -1,0 +1,1331 @@
+{
+  "experiment_id": "bim_bridge_pm_comparison_v0",
+  "run_id": "bim_bridge_synth_images_v0_20261002_200115_UTC",
+  "stage": "prepare_candidates",
+  "status": "PASS",
+  "written_utc": "2026-10-08T13:27:18Z",
+  "sample_key": "img-05",
+  "candidates_folder": "candidates_r05",
+  "repair": [
+    {
+      "rule": "R2_extend",
+      "wall": "wall_001",
+      "end": "end",
+      "extension_px": 40
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_001",
+      "after": "R2 extension of end",
+      "offset_px": 0.5,
+      "max_move_px": 0.5
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_001",
+      "end": "start",
+      "extension_px": 37
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_001",
+      "after": "R2 extension of start",
+      "offset_px": -0.5,
+      "max_move_px": 0.5
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_002",
+      "end": "end",
+      "extension_px": 6
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_002",
+      "after": "R2 extension of end",
+      "offset_px": 0.5,
+      "max_move_px": 0.5
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_002",
+      "end": "start",
+      "extension_px": 40
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_002",
+      "after": "R2 extension of start",
+      "offset_px": -0.5,
+      "max_move_px": 0.5
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_003",
+      "end": "end",
+      "extension_px": 4
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_003",
+      "after": "R2 extension of end",
+      "offset_px": 0.5,
+      "max_move_px": 0.759
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_003",
+      "end": "start",
+      "extension_px": 4
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_003",
+      "after": "R2 extension of start",
+      "offset_px": 0.5,
+      "max_move_px": 0.5
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_004",
+      "end": "end",
+      "extension_px": 6
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_004",
+      "end": "start",
+      "extension_px": 27
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_005",
+      "end": "end",
+      "extension_px": 4
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_005",
+      "after": "R2 extension of end",
+      "offset_px": 1.0,
+      "max_move_px": 1.0
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_005",
+      "end": "start",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_006",
+      "end": "end",
+      "extension_px": 29
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_006",
+      "end": "start",
+      "extension_px": 4
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_007",
+      "end": "end",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_007",
+      "end": "start",
+      "extension_px": 40
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_008",
+      "end": "end",
+      "extension_px": 5
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_008",
+      "end": "start",
+      "extension_px": 4
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_009",
+      "end": "end",
+      "extension_px": 4
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_009",
+      "after": "R2 extension of end",
+      "offset_px": 0.5,
+      "max_move_px": 0.5
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_009",
+      "end": "start",
+      "extension_px": 33
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_009",
+      "after": "R2 extension of start",
+      "offset_px": -0.5,
+      "max_move_px": 0.5
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_010",
+      "end": "end",
+      "extension_px": 5
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_010",
+      "after": "R2 extension of end",
+      "offset_px": -0.5,
+      "max_move_px": 0.5
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_010",
+      "end": "start",
+      "extension_px": 4
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_010",
+      "after": "R2 extension of start",
+      "offset_px": 0.5,
+      "max_move_px": 0.5
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_011",
+      "end": "end",
+      "extension_px": 4
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_011",
+      "after": "R2 extension of end",
+      "offset_px": 0.5,
+      "max_move_px": 0.5
+    },
+    {
+      "rule": "R2_extend",
+      "wall": "wall_011",
+      "end": "start",
+      "extension_px": 5
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_001",
+      "after": "R1 merge with wall_002",
+      "offset_px": 0.5,
+      "max_move_px": 0.5
+    },
+    {
+      "rule": "R1_merge",
+      "kept": "wall_001",
+      "merged": "wall_002",
+      "gap_px": -61.0,
+      "gap_support": 1.0,
+      "axis_offset_px": 0.438
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_003",
+      "after": "R1 merge with wall_004",
+      "offset_px": -0.5,
+      "max_move_px": 0.5
+    },
+    {
+      "rule": "R1_merge",
+      "kept": "wall_003",
+      "merged": "wall_004",
+      "gap_px": -7.5,
+      "gap_support": 1.0,
+      "axis_offset_px": 0.259
+    },
+    {
+      "rule": "R3_recentre",
+      "wall": "wall_005",
+      "after": "R1 merge with wall_007",
+      "offset_px": -1.0,
+      "max_move_px": 1.0
+    },
+    {
+      "rule": "R1_merge",
+      "kept": "wall_005",
+      "merged": "wall_007",
+      "gap_px": -14.0,
+      "gap_support": 1.0,
+      "axis_offset_px": 0.625
+    },
+    {
+      "rule": "R1_merge",
+      "kept": "wall_005",
+      "merged": "wall_006",
+      "gap_px": -39.0,
+      "gap_support": 1.0,
+      "axis_offset_px": 0.36
+    }
+  ],
+  "merged_walls": [
+    "wall_002",
+    "wall_004",
+    "wall_007",
+    "wall_006"
+  ],
+  "model_id": "synth-img-05-p01",
+  "outcome": "WALLS_AND_HOSTED_OPENINGS",
+  "scope": "WHOLE_PLAN_ATTEMPT",
+  "upstream_walls": 11,
+  "candidate_walls": 7,
+  "excluded_walls": [],
+  "apertures": 6,
+  "openings_not_exported": 0,
+  "automated_edits": [
+    {
+      "object_id": "wall:synth-img-05-p01:wall_001",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            93.0,
+            70.0
+          ],
+          "end": [
+            149.0,
+            70.0
+          ]
+        },
+        "thickness_px": 10.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            93.0,
+            70.0
+          ],
+          "end": [
+            189.0,
+            70.0
+          ]
+        },
+        "thickness_px": 10.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-05-p01:wall_001",
+      "field": "repair:R3_recentre",
+      "before": {
+        "axis_px": {
+          "start": [
+            93.0,
+            70.0
+          ],
+          "end": [
+            189.0,
+            70.0
+          ]
+        },
+        "thickness_px": 10.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            93.0,
+            70.5
+          ],
+          "end": [
+            189.0,
+            70.5
+          ]
+        },
+        "thickness_px": 10.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-05-p01:wall_001",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            93.0,
+            70.5
+          ],
+          "end": [
+            189.0,
+            70.5
+          ]
+        },
+        "thickness_px": 10.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            56.0,
+            70.5
+          ],
+          "end": [
+            189.0,
+            70.5
+          ]
+        },
+        "thickness_px": 10.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-05-p01:wall_001",
+      "field": "repair:R3_recentre",
+      "before": {
+        "axis_px": {
+          "start": [
+            56.0,
+            70.5
+          ],
+          "end": [
+            189.0,
+            70.5
+          ]
+        },
+        "thickness_px": 10.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            56.0,
+            70.0
+          ],
+          "end": [
+            189.0,
+            70.0
+          ]
+        },
+        "thickness_px": 10.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-05-p01:wall_001",
+      "field": "repair:R1_merge",
+      "before": {
+        "kept": {
+          "id": "wall_001",
+          "axis_px": {
+            "start": [
+              56.0,
+              70.0
+            ],
+            "end": [
+              189.0,
+              70.0
+            ]
+          },
+          "thickness_px": 10.0,
+          "thickness_source": "vectorizer",
+          "thickness_basis": "Vectorizer thickness 10.0 px, consistent with 10.0 px measured on the predicted structural_wall mask."
+        },
+        "merged": {
+          "id": "wall_002",
+          "axis_px": {
+            "start": [
+              128.0,
+              70.4375
+            ],
+            "end": [
+              456.5,
+              70.4375
+            ]
+          },
+          "thickness_px": 10.0,
+          "thickness_source": "vectorizer",
+          "thickness_basis": "Vectorizer thickness 10.0 px, consistent with 10.0 px measured on the predicted structural_wall mask."
+        }
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            56.0,
+            70.31141657638136
+          ],
+          "end": [
+            456.5,
+            70.31141657638136
+          ]
+        },
+        "thickness_px": 10.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-05-p01:wall_001",
+      "field": "repair:R3_recentre",
+      "before": {
+        "axis_px": {
+          "start": [
+            56.0,
+            70.31141657638136
+          ],
+          "end": [
+            456.5,
+            70.31141657638136
+          ]
+        },
+        "thickness_px": 10.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            56.0,
+            70.81141657638136
+          ],
+          "end": [
+            456.5,
+            70.81141657638136
+          ]
+        },
+        "thickness_px": 10.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-05-p01:wall_003",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            262.0,
+            178.0
+          ],
+          "end": [
+            371.5,
+            177.5
+          ]
+        },
+        "thickness_px": 6.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            262.0,
+            178.0
+          ],
+          "end": [
+            375.49995830010374,
+            177.48173535022784
+          ]
+        },
+        "thickness_px": 6.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-05-p01:wall_003",
+      "field": "repair:R3_recentre",
+      "before": {
+        "axis_px": {
+          "start": [
+            262.0,
+            178.0
+          ],
+          "end": [
+            375.49995830010374,
+            177.48173535022784
+          ]
+        },
+        "thickness_px": 6.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            262.0022830812215,
+            178.2408624626269
+          ],
+          "end": [
+            375.50224138132523,
+            178.2408624626269
+          ]
+        },
+        "thickness_px": 6.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-05-p01:wall_003",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            262.0022830812215,
+            178.2408624626269
+          ],
+          "end": [
+            375.50224138132523,
+            178.2408624626269
+          ]
+        },
+        "thickness_px": 6.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            258.0022830812215,
+            178.2408624626269
+          ],
+          "end": [
+            375.50224138132523,
+            178.2408624626269
+          ]
+        },
+        "thickness_px": 6.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-05-p01:wall_003",
+      "field": "repair:R3_recentre",
+      "before": {
+        "axis_px": {
+          "start": [
+            258.0022830812215,
+            178.2408624626269
+          ],
+          "end": [
+            375.50224138132523,
+            178.2408624626269
+          ]
+        },
+        "thickness_px": 6.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            258.0022830812215,
+            178.7408624626269
+          ],
+          "end": [
+            375.50224138132523,
+            178.7408624626269
+          ]
+        },
+        "thickness_px": 6.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-05-p01:wall_003",
+      "field": "repair:R1_merge",
+      "before": {
+        "kept": {
+          "id": "wall_003",
+          "axis_px": {
+            "start": [
+              258.0022830812215,
+              178.7408624626269
+            ],
+            "end": [
+              375.50224138132523,
+              178.7408624626269
+            ]
+          },
+          "thickness_px": 6.0,
+          "thickness_source": "vectorizer",
+          "thickness_basis": "Vectorizer thickness 6.0 px, consistent with 6.0 px measured on the predicted structural_wall mask."
+        },
+        "merged": {
+          "id": "wall_004",
+          "axis_px": {
+            "start": [
+              368.0,
+              179.0
+            ],
+            "end": [
+              456.5,
+              179.0
+            ]
+          },
+          "thickness_px": 7.0,
+          "thickness_source": "vectorizer",
+          "thickness_basis": "Vectorizer thickness 7.0 px, consistent with 7.0 px measured on the predicted structural_wall mask."
+        }
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            258.0022830812215,
+            178.85219099029635
+          ],
+          "end": [
+            456.5,
+            178.85219099029635
+          ]
+        },
+        "thickness_px": 6.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-05-p01:wall_003",
+      "field": "repair:R3_recentre",
+      "before": {
+        "axis_px": {
+          "start": [
+            258.0022830812215,
+            178.85219099029635
+          ],
+          "end": [
+            456.5,
+            178.85219099029635
+          ]
+        },
+        "thickness_px": 6.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            258.0022830812215,
+            178.35219099029635
+          ],
+          "end": [
+            456.5,
+            178.35219099029635
+          ]
+        },
+        "thickness_px": 6.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-05-p01:wall_005",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            323.0,
+            407.375
+          ],
+          "end": [
+            450.5,
+            407.375
+          ]
+        },
+        "thickness_px": 9.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            323.0,
+            407.375
+          ],
+          "end": [
+            454.5,
+            407.375
+          ]
+        },
+        "thickness_px": 9.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-05-p01:wall_005",
+      "field": "repair:R3_recentre",
+      "before": {
+        "axis_px": {
+          "start": [
+            323.0,
+            407.375
+          ],
+          "end": [
+            454.5,
+            407.375
+          ]
+        },
+        "thickness_px": 9.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            323.0,
+            408.375
+          ],
+          "end": [
+            454.5,
+            408.375
+          ]
+        },
+        "thickness_px": 9.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-05-p01:wall_005",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            323.0,
+            408.375
+          ],
+          "end": [
+            454.5,
+            408.375
+          ]
+        },
+        "thickness_px": 9.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            283.0,
+            408.375
+          ],
+          "end": [
+            454.5,
+            408.375
+          ]
+        },
+        "thickness_px": 9.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-05-p01:wall_005",
+      "field": "repair:R1_merge",
+      "before": {
+        "kept": {
+          "id": "wall_005",
+          "axis_px": {
+            "start": [
+              283.0,
+              408.375
+            ],
+            "end": [
+              454.5,
+              408.375
+            ]
+          },
+          "thickness_px": 9.0,
+          "thickness_source": "vectorizer",
+          "thickness_basis": "Vectorizer thickness 9.0 px, consistent with 9.0 px measured on the predicted structural_wall mask."
+        },
+        "merged": {
+          "id": "wall_007",
+          "axis_px": {
+            "start": [
+              171.0,
+              409.0
+            ],
+            "end": [
+              297.0,
+              409.0
+            ]
+          },
+          "thickness_px": 8.0,
+          "thickness_source": "vectorizer",
+          "thickness_basis": "Vectorizer thickness 8.0 px, consistent with 8.0 px measured on the predicted structural_wall mask."
+        }
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            171.0,
+            408.6397058823529
+          ],
+          "end": [
+            454.5,
+            408.6397058823529
+          ]
+        },
+        "thickness_px": 9.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-05-p01:wall_005",
+      "field": "repair:R3_recentre",
+      "before": {
+        "axis_px": {
+          "start": [
+            171.0,
+            408.6397058823529
+          ],
+          "end": [
+            454.5,
+            408.6397058823529
+          ]
+        },
+        "thickness_px": 9.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            171.0,
+            407.6397058823529
+          ],
+          "end": [
+            454.5,
+            407.6397058823529
+          ]
+        },
+        "thickness_px": 9.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-05-p01:wall_005",
+      "field": "repair:R1_merge",
+      "before": {
+        "kept": {
+          "id": "wall_005",
+          "axis_px": {
+            "start": [
+              171.0,
+              407.6397058823529
+            ],
+            "end": [
+              454.5,
+              407.6397058823529
+            ]
+          },
+          "thickness_px": 9.0,
+          "thickness_source": "vectorizer",
+          "thickness_basis": "Vectorizer thickness 9.0 px, consistent with 9.0 px measured on the predicted structural_wall mask."
+        },
+        "merged": {
+          "id": "wall_006",
+          "axis_px": {
+            "start": [
+              56.0,
+              408.0
+            ],
+            "end": [
+              210.0,
+              408.0
+            ]
+          },
+          "thickness_px": 9.5,
+          "thickness_source": "vectorizer",
+          "thickness_basis": "Vectorizer thickness 9.5 px, consistent with 10.0 px measured on the predicted structural_wall mask."
+        }
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            56.0,
+            407.7665294117647
+          ],
+          "end": [
+            454.5,
+            407.7665294117647
+          ]
+        },
+        "thickness_px": 9.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-05-p01:wall_008",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            60.0,
+            408.0
+          ],
+          "end": [
+            60.0,
+            71.0
+          ]
+        },
+        "thickness_px": 9.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            60.0,
+            408.0
+          ],
+          "end": [
+            60.0,
+            66.0
+          ]
+        },
+        "thickness_px": 9.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-05-p01:wall_008",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            60.0,
+            408.0
+          ],
+          "end": [
+            60.0,
+            66.0
+          ]
+        },
+        "thickness_px": 9.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            60.0,
+            412.0
+          ],
+          "end": [
+            60.0,
+            66.0
+          ]
+        },
+        "thickness_px": 9.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-05-p01:wall_009",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            260.0,
+            148.0
+          ],
+          "end": [
+            260.0,
+            70.4375
+          ]
+        },
+        "thickness_px": 6.5
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            260.0,
+            148.0
+          ],
+          "end": [
+            260.0,
+            66.4375
+          ]
+        },
+        "thickness_px": 6.5
+      }
+    },
+    {
+      "object_id": "wall:synth-img-05-p01:wall_009",
+      "field": "repair:R3_recentre",
+      "before": {
+        "axis_px": {
+          "start": [
+            260.0,
+            148.0
+          ],
+          "end": [
+            260.0,
+            66.4375
+          ]
+        },
+        "thickness_px": 6.5
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            260.5,
+            148.0
+          ],
+          "end": [
+            260.5,
+            66.4375
+          ]
+        },
+        "thickness_px": 6.5
+      }
+    },
+    {
+      "object_id": "wall:synth-img-05-p01:wall_009",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            260.5,
+            148.0
+          ],
+          "end": [
+            260.5,
+            66.4375
+          ]
+        },
+        "thickness_px": 6.5
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            260.5,
+            181.0
+          ],
+          "end": [
+            260.5,
+            66.4375
+          ]
+        },
+        "thickness_px": 6.5
+      }
+    },
+    {
+      "object_id": "wall:synth-img-05-p01:wall_009",
+      "field": "repair:R3_recentre",
+      "before": {
+        "axis_px": {
+          "start": [
+            260.5,
+            181.0
+          ],
+          "end": [
+            260.5,
+            66.4375
+          ]
+        },
+        "thickness_px": 6.5
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            260.0,
+            181.0
+          ],
+          "end": [
+            260.0,
+            66.4375
+          ]
+        },
+        "thickness_px": 6.5
+      }
+    },
+    {
+      "object_id": "wall:synth-img-05-p01:wall_010",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            371.5,
+            70.4375
+          ],
+          "end": [
+            371.5,
+            177.5
+          ]
+        },
+        "thickness_px": 6.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            371.5,
+            70.4375
+          ],
+          "end": [
+            371.5,
+            182.5
+          ]
+        },
+        "thickness_px": 6.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-05-p01:wall_010",
+      "field": "repair:R3_recentre",
+      "before": {
+        "axis_px": {
+          "start": [
+            371.5,
+            70.4375
+          ],
+          "end": [
+            371.5,
+            182.5
+          ]
+        },
+        "thickness_px": 6.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            372.0,
+            70.4375
+          ],
+          "end": [
+            372.0,
+            182.5
+          ]
+        },
+        "thickness_px": 6.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-05-p01:wall_010",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            372.0,
+            70.4375
+          ],
+          "end": [
+            372.0,
+            182.5
+          ]
+        },
+        "thickness_px": 6.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            372.0,
+            66.4375
+          ],
+          "end": [
+            372.0,
+            182.5
+          ]
+        },
+        "thickness_px": 6.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-05-p01:wall_010",
+      "field": "repair:R3_recentre",
+      "before": {
+        "axis_px": {
+          "start": [
+            372.0,
+            66.4375
+          ],
+          "end": [
+            372.0,
+            182.5
+          ]
+        },
+        "thickness_px": 6.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            371.5,
+            66.4375
+          ],
+          "end": [
+            371.5,
+            182.5
+          ]
+        },
+        "thickness_px": 6.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-05-p01:wall_011",
+      "field": "repair:R2_extend_end",
+      "before": {
+        "axis_px": {
+          "start": [
+            450.5,
+            407.375
+          ],
+          "end": [
+            450.5,
+            70.4375
+          ]
+        },
+        "thickness_px": 8.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            450.5,
+            407.375
+          ],
+          "end": [
+            450.5,
+            66.4375
+          ]
+        },
+        "thickness_px": 8.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-05-p01:wall_011",
+      "field": "repair:R3_recentre",
+      "before": {
+        "axis_px": {
+          "start": [
+            450.5,
+            407.375
+          ],
+          "end": [
+            450.5,
+            66.4375
+          ]
+        },
+        "thickness_px": 8.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            451.0,
+            407.375
+          ],
+          "end": [
+            451.0,
+            66.4375
+          ]
+        },
+        "thickness_px": 8.0
+      }
+    },
+    {
+      "object_id": "wall:synth-img-05-p01:wall_011",
+      "field": "repair:R2_extend_start",
+      "before": {
+        "axis_px": {
+          "start": [
+            451.0,
+            407.375
+          ],
+          "end": [
+            451.0,
+            66.4375
+          ]
+        },
+        "thickness_px": 8.0
+      },
+      "after": {
+        "axis_px": {
+          "start": [
+            451.0,
+            412.375
+          ],
+          "end": [
+            451.0,
+            66.4375
+          ]
+        },
+        "thickness_px": 8.0
+      }
+    }
+  ],
+  "plan_diagnostics_summary": {
+    "predicted_wall_pixel_coverage_ratio": 0.9676430935163624,
+    "skeleton_coverage_ratio": 1.0,
+    "candidate_pixels_outside_predicted_wall": 1690
+  },
+  "ground_truth_or_annotation_read": false,
+  "sample_333_geometry_or_decisions_used": false,
+  "paths": {
+    "candidate_geometry": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-05/candidates_r05/candidate_geometry.json",
+    "candidate_geometry_sha256": "94e54aac3f0e035787195983d43ca3ab3eec8c366e54c5fefa966109d74be664"
+  },
+  "geometry_status": "CANDIDATE_UNREVIEWED",
+  "scale_status": "ASSUMED_FOR_PREVIEW",
+  "input_checks": {
+    "PASS": 127,
+    "FAIL": 0,
+    "WARN": 14,
+    "INFO": 0
+  },
+  "failed": [],
+  "building_model": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-05/building_model_r05.json"
+}

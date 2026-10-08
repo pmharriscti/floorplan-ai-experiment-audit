@@ -1,0 +1,12 @@
+{
+  "experiment_id": "bim_bridge_pm_comparison_v0",
+  "run_id": "bim_bridge_pm_comparison_v0_20261006_130747_UTC",
+  "stage": "pm_comparison",
+  "status": "PASS",
+  "written_utc": "2026-10-08T13:28:54Z",
+  "folder": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/comparison_20261008_132842_UTC_r05_windows_v1_15plans",
+  "plans": 15,
+  "sheet": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/comparison_20261008_132842_UTC_r05_windows_v1_15plans/COMPARISON_SHEET.png",
+  "is_benchmark": false,
+  "ground_truth_read_after_geometry": true
+}

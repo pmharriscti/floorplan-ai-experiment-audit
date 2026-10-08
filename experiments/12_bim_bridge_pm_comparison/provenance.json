@@ -12,16 +12,17 @@
     "/home/pmharris/dev/bim_bridge_pm_comparison_v0/configs/bim_bridge_pm_comparison_v0_repair_v1_1.yaml": "0ca63dd6f8156d9ebd6645442b979f1b4f2a10ffc6e88b7cb372543a3faf0258",
     "/home/pmharris/dev/bim_bridge_pm_comparison_v0/configs/bim_bridge_pm_comparison_v0_repair_v1_2.yaml": "4547525ad2e6936232e1ac7190d3f2569be62ff05d8d7858eeb4baad75104910",
     "/home/pmharris/dev/bim_bridge_pm_comparison_v0/scripts/apply_review_external.py": "b32955a030ec115c586d5cff6dab6656ed1a24a7aa7b12b33701a64cc0246f04",
-    "/home/pmharris/dev/bim_bridge_pm_comparison_v0/scripts/build_pm_comparison.py": "9f300a6970c7c3422cd03dc4b14f4cde0c0722a0faae564d243e19be20fe1785",
+    "/home/pmharris/dev/bim_bridge_pm_comparison_v0/scripts/build_pm_comparison.py": "31378ac101f53f6009d765ec0c6063c9067172273ee16db5d191dda594e3c2f3",
     "/home/pmharris/dev/bim_bridge_pm_comparison_v0/scripts/build_review_outputs.py": "c566edc8591e93da0e0944dafea0d0dcbd6b86b72c6b75077eb51f17d812fb40",
     "/home/pmharris/dev/bim_bridge_pm_comparison_v0/scripts/export_external.py": "40d0e95b34ebb5ac2dd809ef820a2f7f03ed4a8e9361ee1fd6907db77475a65d",
     "/home/pmharris/dev/bim_bridge_pm_comparison_v0/scripts/finalize_external.py": "db4befa57267b99684b62e9befce97742daa20ad643211d06b9e53a2918ea81c",
-    "/home/pmharris/dev/bim_bridge_pm_comparison_v0/scripts/prepare_candidates_external.py": "988e0fea8a34bb1fcf1ce541645bda90ed92de4960180d8e17e33d46bd6b4262",
+    "/home/pmharris/dev/bim_bridge_pm_comparison_v0/scripts/prepare_candidates_external.py": "477ddd88b232f85f44bd819326cd0f621dcbab083f71e95a8e84529d6aa1a704",
     "/home/pmharris/dev/bim_bridge_pm_comparison_v0/scripts/prepare_inputs.py": "c5c7d6c4ee9485eb77d9f2aa2d27339e43128bc3dfe427b755934cb0f213ccea",
     "/home/pmharris/dev/bim_bridge_pm_comparison_v0/scripts/render_ifc_vs_original.py": "670a5212b3f4d3f33f5185d85b92863aa4a182bcdd913eccedbd4e7f0802e7c3",
     "/home/pmharris/dev/bim_bridge_pm_comparison_v0/scripts/resolve_contract.py": "739984093c7b249403c811d5dc95a4be6d6a61d74dfe75cba1dfa4ed9f4924d0",
     "/home/pmharris/dev/bim_bridge_pm_comparison_v0/scripts/run_frozen_inference.py": "4ed04000bf42e9814216dbc365b1e05af4bbb755b30da5f26378ee7c325bd733",
-    "/home/pmharris/dev/bim_bridge_pm_comparison_v0/scripts/subset_common.py": "cacbc6aec279148df2769536d7f3a9303e2184867a3fe20b01def2c94c5f8334"
+    "/home/pmharris/dev/bim_bridge_pm_comparison_v0/scripts/subset_common.py": "cacbc6aec279148df2769536d7f3a9303e2184867a3fe20b01def2c94c5f8334",
+    "/home/pmharris/dev/bim_bridge_pm_comparison_v0/configs/bim_bridge_pm_comparison_v0_windows_v1.yaml": "b66c3d3f02bdc2d326483ce4a1e52a3522c563d358dc83d9bd971450a4ad1c85"
   },
   "bridge_code_sha256": {
     "/home/pmharris/dev/bim_bridge_v0/src/bim_bridge/__init__.py": "c2c216b599d367be95aa7379447f9be573186d8e347ce0f177a28b444c4bfc24",
@@ -964,6 +965,606 @@
       "identical": true,
       "transformation": "none",
       "size_bytes": 2351
+    },
+    "results/comparison_r05/comparison_table.csv": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/comparison_20261008_132842_UTC_r05_windows_v1_15plans/comparison_table.csv",
+      "source_sha256": "e95b4c33296f45c003c7c47006039e697984a28dc7a77348e2dccad22d16adb7",
+      "audit_copy_sha256": "e95b4c33296f45c003c7c47006039e697984a28dc7a77348e2dccad22d16adb7",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 3943
+    },
+    "results/comparison_r05/comparison.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/comparison_20261008_132842_UTC_r05_windows_v1_15plans/comparison.json",
+      "source_sha256": "43a10a66b7d490cd9009351cd32ba16cb782d45519aba6c2b0e1df4dbd8f5d46",
+      "audit_copy_sha256": "43a10a66b7d490cd9009351cd32ba16cb782d45519aba6c2b0e1df4dbd8f5d46",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 59831
+    },
+    "results/comparison_r05/COMPARISON.md": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/comparison_20261008_132842_UTC_r05_windows_v1_15plans/COMPARISON.md",
+      "source_sha256": "ec5b3a5e1a6be9653950f419ddeaec7b4280c05d84106905a9fd73cb23e45404",
+      "audit_copy_sha256": "ec5b3a5e1a6be9653950f419ddeaec7b4280c05d84106905a9fd73cb23e45404",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 10796
+    },
+    "results/comparison_r04_regression_check_20261008/comparison.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/comparison_20261008_132412_UTC_r04_regression_check_of_windows_v1_script/comparison.json",
+      "source_sha256": "0a5160800f79493f7028d49fe86b685358f40409e37f5ac38f1433639ab11fec",
+      "audit_copy_sha256": "0a5160800f79493f7028d49fe86b685358f40409e37f5ac38f1433639ab11fec",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 48546
+    },
+    "results/comparison_r04_regression_check_20261008/REGRESSION_CHECK_READ_THIS_FIRST.txt": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/comparison_20261008_132412_UTC_r04_regression_check_of_windows_v1_script/REGRESSION_CHECK_READ_THIS_FIRST.txt",
+      "source_sha256": "2d38f1b2facbc01b7bf2e65847072cc5f5cf21e96099f551ede5eadf8af0c797",
+      "audit_copy_sha256": "2d38f1b2facbc01b7bf2e65847072cc5f5cf21e96099f551ede5eadf8af0c797",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 350
+    },
+    "results/comparison_r05_12plans_superseded/SUPERSEDED_READ_THIS_FIRST.txt": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/comparison_20261008_132435_UTC_r05_windows_v1/SUPERSEDED_READ_THIS_FIRST.txt",
+      "source_sha256": "b300f6ba888b104f9cb210313ef42e678d112769fae57469fa635bdfba0b1206",
+      "audit_copy_sha256": "b300f6ba888b104f9cb210313ef42e678d112769fae57469fa635bdfba0b1206",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 351
+    },
+    "results/config/bim_bridge_pm_comparison_v0_windows_v1.yaml": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/config/bim_bridge_pm_comparison_v0_windows_v1.yaml",
+      "source_sha256": "b66c3d3f02bdc2d326483ce4a1e52a3522c563d358dc83d9bd971450a4ad1c85",
+      "audit_copy_sha256": "b66c3d3f02bdc2d326483ce4a1e52a3522c563d358dc83d9bd971450a4ad1c85",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 7610
+    },
+    "results/stages/92_prepare_candidates.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/stages/92_prepare_candidates.json",
+      "source_sha256": "595a22a563141d8c938b82b7afc5398edb89bc947890de57d3feb9f36aaf5be4",
+      "audit_copy_sha256": "595a22a563141d8c938b82b7afc5398edb89bc947890de57d3feb9f36aaf5be4",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 51896
+    },
+    "results/stages/93_prepare_candidates.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/stages/93_prepare_candidates.json",
+      "source_sha256": "f17b44a1ccdf11fc528106ce35e0d6d791e53aa36122eb29499a959ef125ee03",
+      "audit_copy_sha256": "f17b44a1ccdf11fc528106ce35e0d6d791e53aa36122eb29499a959ef125ee03",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 53157
+    },
+    "results/stages/94_export.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/stages/94_export.json",
+      "source_sha256": "e1368dd58f74e039d0db2cc5425d7ad28d6ee2117696a410baf08af392abf274",
+      "audit_copy_sha256": "e1368dd58f74e039d0db2cc5425d7ad28d6ee2117696a410baf08af392abf274",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 858
+    },
+    "results/stages/95_prepare_candidates.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/stages/95_prepare_candidates.json",
+      "source_sha256": "bebf4ba56f3418d6fcb9e9260078a13b7218ab6a7e28e7b7efd021c6efb728a7",
+      "audit_copy_sha256": "bebf4ba56f3418d6fcb9e9260078a13b7218ab6a7e28e7b7efd021c6efb728a7",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 52839
+    },
+    "results/stages/96_export.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/stages/96_export.json",
+      "source_sha256": "66095819a72b93d543d373d666b6dbe8d56911926e037320db087a1370c98727",
+      "audit_copy_sha256": "66095819a72b93d543d373d666b6dbe8d56911926e037320db087a1370c98727",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 3781
+    },
+    "results/stages/97_prepare_candidates.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/stages/97_prepare_candidates.json",
+      "source_sha256": "4b1b0cee402b8d41c93d4d48f71c403ba4e47b9e064fa5a0c74f41abb1779b04",
+      "audit_copy_sha256": "4b1b0cee402b8d41c93d4d48f71c403ba4e47b9e064fa5a0c74f41abb1779b04",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 22215
+    },
+    "results/stages/98_export.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/stages/98_export.json",
+      "source_sha256": "133630505496df9bf669f66b714ba6bacab08ed7d83a6113364ad712037fb719",
+      "audit_copy_sha256": "133630505496df9bf669f66b714ba6bacab08ed7d83a6113364ad712037fb719",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 3821
+    },
+    "results/stages/99_prepare_candidates.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/stages/99_prepare_candidates.json",
+      "source_sha256": "38b25a5b5706a45547033eced0bc359dc377e0336ff8e40d7529ab8da042e4e6",
+      "audit_copy_sha256": "38b25a5b5706a45547033eced0bc359dc377e0336ff8e40d7529ab8da042e4e6",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 40118
+    },
+    "results/stages/100_export.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/stages/100_export.json",
+      "source_sha256": "5bb5f409c63ba1615494f8575d78f652d2a99d4fd22683e199da6805e57a330a",
+      "audit_copy_sha256": "5bb5f409c63ba1615494f8575d78f652d2a99d4fd22683e199da6805e57a330a",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 3824
+    },
+    "results/stages/101_prepare_candidates.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/stages/101_prepare_candidates.json",
+      "source_sha256": "a5efeea16a5cf6df055693ef12e47c0cbd94fc56321a07c3e69cfa3ca42f32ca",
+      "audit_copy_sha256": "a5efeea16a5cf6df055693ef12e47c0cbd94fc56321a07c3e69cfa3ca42f32ca",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 40815
+    },
+    "results/stages/102_export.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/stages/102_export.json",
+      "source_sha256": "91fc75e3637da00e19996258aee871b8c4b87356c69ca25b6749c7156f723b1f",
+      "audit_copy_sha256": "91fc75e3637da00e19996258aee871b8c4b87356c69ca25b6749c7156f723b1f",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 3757
+    },
+    "results/stages/103_prepare_candidates.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/stages/103_prepare_candidates.json",
+      "source_sha256": "998b0489dbdbafbcda5a4a475dd64f7afbfcc9028cf756e4c5e730f068aae4e2",
+      "audit_copy_sha256": "998b0489dbdbafbcda5a4a475dd64f7afbfcc9028cf756e4c5e730f068aae4e2",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 94437
+    },
+    "results/stages/104_export.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/stages/104_export.json",
+      "source_sha256": "1307947717e74a647cbb2caca22502b7d1786f60c3099e9ed7f82538ab68ff45",
+      "audit_copy_sha256": "1307947717e74a647cbb2caca22502b7d1786f60c3099e9ed7f82538ab68ff45",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 3760
+    },
+    "results/stages/105_prepare_candidates.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/stages/105_prepare_candidates.json",
+      "source_sha256": "ce548d042406ae5cbad88a819d8519dea84b017f7aef40ab0a70b987d80d09c1",
+      "audit_copy_sha256": "ce548d042406ae5cbad88a819d8519dea84b017f7aef40ab0a70b987d80d09c1",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 72594
+    },
+    "results/stages/106_export.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/stages/106_export.json",
+      "source_sha256": "32338c1df074bc3a1cd37f28840f2351e059db8d51c3af166ad35f7ef2985d95",
+      "audit_copy_sha256": "32338c1df074bc3a1cd37f28840f2351e059db8d51c3af166ad35f7ef2985d95",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 3758
+    },
+    "results/stages/107_prepare_candidates.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/stages/107_prepare_candidates.json",
+      "source_sha256": "efe5ccf1c98e3b4b957a31e4d5bfaf4a141375b53e2f640e69d48236db2aa1f2",
+      "audit_copy_sha256": "efe5ccf1c98e3b4b957a31e4d5bfaf4a141375b53e2f640e69d48236db2aa1f2",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 45473
+    },
+    "results/stages/108_export.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/stages/108_export.json",
+      "source_sha256": "5836dbe0a3d8fe5fef1fa906a442b74c5640e939bc7a49088c27b81889af5899",
+      "audit_copy_sha256": "5836dbe0a3d8fe5fef1fa906a442b74c5640e939bc7a49088c27b81889af5899",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 3758
+    },
+    "results/stages/109_prepare_candidates.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/stages/109_prepare_candidates.json",
+      "source_sha256": "a3a1fee6670d2b3888bf582a18768f077585c2e1782b34015cc73ab371baed49",
+      "audit_copy_sha256": "a3a1fee6670d2b3888bf582a18768f077585c2e1782b34015cc73ab371baed49",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 40044
+    },
+    "results/stages/110_export.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/stages/110_export.json",
+      "source_sha256": "c963f04970c624a8eb3d11895e9cbb8d01880911cff747c7fa9a7c1280be1356",
+      "audit_copy_sha256": "c963f04970c624a8eb3d11895e9cbb8d01880911cff747c7fa9a7c1280be1356",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 3759
+    },
+    "results/stages/111_prepare_candidates.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/stages/111_prepare_candidates.json",
+      "source_sha256": "f6bce8cefb2295b28c0cf68fc60540c967e29cbfc56822c250b72cf9073c32d4",
+      "audit_copy_sha256": "f6bce8cefb2295b28c0cf68fc60540c967e29cbfc56822c250b72cf9073c32d4",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 37718
+    },
+    "results/stages/112_export.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/stages/112_export.json",
+      "source_sha256": "360e04e305b73f6f6a06329e48337386b724025709b610ff433a01874c9ee144",
+      "audit_copy_sha256": "360e04e305b73f6f6a06329e48337386b724025709b610ff433a01874c9ee144",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 3757
+    },
+    "results/stages/113_pm_comparison.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/stages/113_pm_comparison.json",
+      "source_sha256": "e658f75b5a69ca07e56b5fded22385fc6a26d0545ae41e9b4988510645a9088b",
+      "audit_copy_sha256": "e658f75b5a69ca07e56b5fded22385fc6a26d0545ae41e9b4988510645a9088b",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 707
+    },
+    "results/stages/114_pm_comparison.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/stages/114_pm_comparison.json",
+      "source_sha256": "78865d3f1a677642cb1b20e3ad9ff4e918405a750245c91b6763fbab9f669be3",
+      "audit_copy_sha256": "78865d3f1a677642cb1b20e3ad9ff4e918405a750245c91b6763fbab9f669be3",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 653
+    },
+    "results/stages/115_pm_comparison.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/stages/115_pm_comparison.json",
+      "source_sha256": "b452c76d85eb38a14f2225dfeff2fcaa28c80001bb3ea9c30e45f31f390d3342",
+      "audit_copy_sha256": "b452c76d85eb38a14f2225dfeff2fcaa28c80001bb3ea9c30e45f31f390d3342",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 669
+    },
+    "results/stages_prior_run_r05/59_prepare_candidates.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/stages/59_prepare_candidates.json",
+      "source_sha256": "d59b15417d87428a5bc0fad5414c82f4716161da38148eb3d92a552ae714e461",
+      "audit_copy_sha256": "d59b15417d87428a5bc0fad5414c82f4716161da38148eb3d92a552ae714e461",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 49599
+    },
+    "results/stages_prior_run_r05/60_export.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/stages/60_export.json",
+      "source_sha256": "a2d696405e6d9cf4054483f7f6bf39f1487bc16502224fe2eedeb4ba4a955fa3",
+      "audit_copy_sha256": "a2d696405e6d9cf4054483f7f6bf39f1487bc16502224fe2eedeb4ba4a955fa3",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 3746
+    },
+    "results/stages_prior_run_r05/61_prepare_candidates.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/stages/61_prepare_candidates.json",
+      "source_sha256": "9e2b58b0bacafd4fa56516d23117d37e2c343bccf1b97a60bdb5e333f59b27a5",
+      "audit_copy_sha256": "9e2b58b0bacafd4fa56516d23117d37e2c343bccf1b97a60bdb5e333f59b27a5",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 46833
+    },
+    "results/stages_prior_run_r05/62_export.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/stages/62_export.json",
+      "source_sha256": "0c0fa87d00b7a30dc204ec729f9cbe569e07034fa32eda5588ebe7b0b7a5fb68",
+      "audit_copy_sha256": "0c0fa87d00b7a30dc204ec729f9cbe569e07034fa32eda5588ebe7b0b7a5fb68",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 3747
+    },
+    "results/stages_prior_run_r05/63_prepare_candidates.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/stages/63_prepare_candidates.json",
+      "source_sha256": "cee406c9a2ee13595e6ec701ac9cf44a61997afab3c93f552af9f29cc367a5a5",
+      "audit_copy_sha256": "cee406c9a2ee13595e6ec701ac9cf44a61997afab3c93f552af9f29cc367a5a5",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 45893
+    },
+    "results/stages_prior_run_r05/64_export.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/stages/64_export.json",
+      "source_sha256": "14a966fa4fc0628e02875a5e02b18b0ef5dbc2fbc94a06ce139c10674df7879e",
+      "audit_copy_sha256": "14a966fa4fc0628e02875a5e02b18b0ef5dbc2fbc94a06ce139c10674df7879e",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 3747
+    },
+    "results/stages_prior_run_r05/65_prepare_candidates.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/stages/65_prepare_candidates.json",
+      "source_sha256": "f6917cfec5bc76df41c17034b16a722e110975638fbff270a67370f22236594a",
+      "audit_copy_sha256": "f6917cfec5bc76df41c17034b16a722e110975638fbff270a67370f22236594a",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 41396
+    },
+    "results/stages_prior_run_r05/66_export.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/stages/66_export.json",
+      "source_sha256": "fbdae3b959de83a828ff0198be7085ec5dff69ff3265a09cfd4d0320c82f9dfb",
+      "audit_copy_sha256": "fbdae3b959de83a828ff0198be7085ec5dff69ff3265a09cfd4d0320c82f9dfb",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 3746
+    },
+    "results/stages_prior_run_r05/67_prepare_candidates.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/stages/67_prepare_candidates.json",
+      "source_sha256": "80a0d17029df5305027d08ebe6059b1b31fb0124256fc4bd87a5a19d6cb77d1e",
+      "audit_copy_sha256": "80a0d17029df5305027d08ebe6059b1b31fb0124256fc4bd87a5a19d6cb77d1e",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 27806
+    },
+    "results/stages_prior_run_r05/68_export.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/stages/68_export.json",
+      "source_sha256": "d80f25c65e713fa62e929afbd152164bf182444663282a79ea7317b6a09127f9",
+      "audit_copy_sha256": "d80f25c65e713fa62e929afbd152164bf182444663282a79ea7317b6a09127f9",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 3743
+    },
+    "results/stages_prior_run_r05/69_prepare_candidates.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/stages/69_prepare_candidates.json",
+      "source_sha256": "12abb8ed508b9934553fce75d3395b9531d5c69381a55183fb7fc043d2dcc0e4",
+      "audit_copy_sha256": "12abb8ed508b9934553fce75d3395b9531d5c69381a55183fb7fc043d2dcc0e4",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 41277
+    },
+    "results/stages_prior_run_r05/70_export.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/stages/70_export.json",
+      "source_sha256": "d17892e564768e595a647651269cd7bf78a98f8899b69133821701d7db297cfe",
+      "audit_copy_sha256": "d17892e564768e595a647651269cd7bf78a98f8899b69133821701d7db297cfe",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 3745
+    },
+    "results/r05_exports/cc-01/export_summary.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/cc-01/export_candidate_preview_whole_plan_r05/export_summary.json",
+      "source_sha256": "853dbe1e6a9b284cec11656e07050a95f0c3fa61153ada7f6fd62242868ecbf0",
+      "audit_copy_sha256": "853dbe1e6a9b284cec11656e07050a95f0c3fa61153ada7f6fd62242868ecbf0",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 3431
+    },
+    "results/r05_exports/cc-01/run_specific_checks.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/cc-01/export_candidate_preview_whole_plan_r05/run_specific_checks.json",
+      "source_sha256": "d723eeb90e1d1c454f40099047d0ee510ff1d37d59d35ede93dc821c6c48ad95",
+      "audit_copy_sha256": "d723eeb90e1d1c454f40099047d0ee510ff1d37d59d35ede93dc821c6c48ad95",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 11005
+    },
+    "results/r05_exports/cc-02/export_summary.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/cc-02/export_candidate_preview_whole_plan_r05/export_summary.json",
+      "source_sha256": "f8c340a3fe9b7b1bd244819a86a0b5fe32dd782bf24d842f0dd336af8c2bcb2c",
+      "audit_copy_sha256": "f8c340a3fe9b7b1bd244819a86a0b5fe32dd782bf24d842f0dd336af8c2bcb2c",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 3471
+    },
+    "results/r05_exports/cc-02/run_specific_checks.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/cc-02/export_candidate_preview_whole_plan_r05/run_specific_checks.json",
+      "source_sha256": "0c28ed210a1afbdd50232c18741b18f64f490b1bf350a823a6b8073414e19601",
+      "audit_copy_sha256": "0c28ed210a1afbdd50232c18741b18f64f490b1bf350a823a6b8073414e19601",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 8733
+    },
+    "results/r05_exports/cc-03/export_summary.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/cc-03/export_candidate_preview_whole_plan_r05/export_summary.json",
+      "source_sha256": "19599e52de3a4f6c94a0852543689002d9b41986eb00c6257168bbe9c577047e",
+      "audit_copy_sha256": "19599e52de3a4f6c94a0852543689002d9b41986eb00c6257168bbe9c577047e",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 3474
+    },
+    "results/r05_exports/cc-03/run_specific_checks.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/cc-03/export_candidate_preview_whole_plan_r05/run_specific_checks.json",
+      "source_sha256": "32c877bae5940af8054c6767c5fd46477ccf79270780933fc3fbad5f4e17bb77",
+      "audit_copy_sha256": "32c877bae5940af8054c6767c5fd46477ccf79270780933fc3fbad5f4e17bb77",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 15470
+    },
+    "results/r05_exports/img-01/export_summary.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-01/export_candidate_preview_whole_plan_r05/export_summary.json",
+      "source_sha256": "eb4db2abfe9ead9affb120ecf37d4a14904b82e949ba0dbd1bb34c5bae76ab48",
+      "audit_copy_sha256": "eb4db2abfe9ead9affb120ecf37d4a14904b82e949ba0dbd1bb34c5bae76ab48",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 3397
+    },
+    "results/r05_exports/img-01/run_specific_checks.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-01/export_candidate_preview_whole_plan_r05/run_specific_checks.json",
+      "source_sha256": "cfaff0afae73d33acd763c11c24c491e07eca2f09b2eb70c9066c225a7f292a3",
+      "audit_copy_sha256": "cfaff0afae73d33acd763c11c24c491e07eca2f09b2eb70c9066c225a7f292a3",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 11972
+    },
+    "results/r05_exports/img-02/export_summary.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-02/export_candidate_preview_whole_plan_r05/export_summary.json",
+      "source_sha256": "d3f9ac72b140c2f9598ecd208ba50a2073c0e1d74c68dfeeb9cb9c02fc317d0b",
+      "audit_copy_sha256": "d3f9ac72b140c2f9598ecd208ba50a2073c0e1d74c68dfeeb9cb9c02fc317d0b",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 3398
+    },
+    "results/r05_exports/img-02/run_specific_checks.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-02/export_candidate_preview_whole_plan_r05/run_specific_checks.json",
+      "source_sha256": "0b729653c16df501c9e496fe7336c0dc2ce30c1d9cbf387b5447044a3828ca93",
+      "audit_copy_sha256": "0b729653c16df501c9e496fe7336c0dc2ce30c1d9cbf387b5447044a3828ca93",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 13503
+    },
+    "results/r05_exports/img-03/export_summary.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-03/export_candidate_preview_whole_plan_r05/export_summary.json",
+      "source_sha256": "f8b8b70888337ce071a75163208c87d3b7a597ae3936db2789d867c2cd10dc8f",
+      "audit_copy_sha256": "f8b8b70888337ce071a75163208c87d3b7a597ae3936db2789d867c2cd10dc8f",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 3398
+    },
+    "results/r05_exports/img-03/run_specific_checks.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-03/export_candidate_preview_whole_plan_r05/run_specific_checks.json",
+      "source_sha256": "5bfcf2b66ebec26681e86dbd120c6fffcad875975f1001a0fa11654d6cc94561",
+      "audit_copy_sha256": "5bfcf2b66ebec26681e86dbd120c6fffcad875975f1001a0fa11654d6cc94561",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 13449
+    },
+    "results/r05_exports/img-04/export_summary.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-04/export_candidate_preview_whole_plan_r05/export_summary.json",
+      "source_sha256": "f909d8c535dbbd1537d4f3593fb73a33742ad552b39b19acf29062ef1336d2a3",
+      "audit_copy_sha256": "f909d8c535dbbd1537d4f3593fb73a33742ad552b39b19acf29062ef1336d2a3",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 3397
+    },
+    "results/r05_exports/img-04/run_specific_checks.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-04/export_candidate_preview_whole_plan_r05/run_specific_checks.json",
+      "source_sha256": "419244f3f25fb9879d342af6ba81061beaabb503d2c9ecc27780f09f9e657ee8",
+      "audit_copy_sha256": "419244f3f25fb9879d342af6ba81061beaabb503d2c9ecc27780f09f9e657ee8",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 9539
+    },
+    "results/r05_exports/img-05/export_summary.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-05/export_candidate_preview_whole_plan_r05/export_summary.json",
+      "source_sha256": "b23349db62b05fc721972718ce52181daebe5c864cdad7b0ad59b54f208d5e4a",
+      "audit_copy_sha256": "b23349db62b05fc721972718ce52181daebe5c864cdad7b0ad59b54f208d5e4a",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 3394
+    },
+    "results/r05_exports/img-05/run_specific_checks.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-05/export_candidate_preview_whole_plan_r05/run_specific_checks.json",
+      "source_sha256": "5f1221aa83699e0a069c2dc4bf7b7c7cf8376ca75d6b2aee038ce3c39e3e979c",
+      "audit_copy_sha256": "5f1221aa83699e0a069c2dc4bf7b7c7cf8376ca75d6b2aee038ce3c39e3e979c",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 6873
+    },
+    "results/r05_exports/img-06/export_summary.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-06/export_candidate_preview_whole_plan_r05/export_summary.json",
+      "source_sha256": "c0dda425758c1ac292a72a5cdc022483bbfa8d2270c3ef8517d1397e85cc0002",
+      "audit_copy_sha256": "c0dda425758c1ac292a72a5cdc022483bbfa8d2270c3ef8517d1397e85cc0002",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 3396
+    },
+    "results/r05_exports/img-06/run_specific_checks.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_synth_images_v0/bim_bridge_synth_images_v0_20261002_200115_UTC/samples/img-06/export_candidate_preview_whole_plan_r05/run_specific_checks.json",
+      "source_sha256": "3afbea67c8db36022faca203b380b4dd3402e5c30e8573bd266fe68af00282d1",
+      "audit_copy_sha256": "3afbea67c8db36022faca203b380b4dd3402e5c30e8573bd266fe68af00282d1",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 9713
+    },
+    "results/r05_exports/com-01/export_summary.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-01/export_candidate_preview_whole_plan_r05/export_summary.json",
+      "source_sha256": "e1f1f1034bf0f2be370416bdd43e0461f0434e020caaaba15afed3d1dc0093fc",
+      "audit_copy_sha256": "e1f1f1034bf0f2be370416bdd43e0461f0434e020caaaba15afed3d1dc0093fc",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 3407
+    },
+    "results/r05_exports/com-01/run_specific_checks.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-01/export_candidate_preview_whole_plan_r05/run_specific_checks.json",
+      "source_sha256": "d39585bd1af3eb354501bda08ad484a688ddef4ed0e00ab9aee9a13bec3159ea",
+      "audit_copy_sha256": "d39585bd1af3eb354501bda08ad484a688ddef4ed0e00ab9aee9a13bec3159ea",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 15305
+    },
+    "results/r05_exports/com-02/export_summary.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-02/export_candidate_preview_whole_plan_r05/export_summary.json",
+      "source_sha256": "02a5c83c057844776e2d95ef719410f1defc463ba37f26a2082a15efee547e3c",
+      "audit_copy_sha256": "02a5c83c057844776e2d95ef719410f1defc463ba37f26a2082a15efee547e3c",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 3410
+    },
+    "results/r05_exports/com-02/run_specific_checks.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-02/export_candidate_preview_whole_plan_r05/run_specific_checks.json",
+      "source_sha256": "2a03322b740e8e607d6ba495f79f5a29f1f10d57a7e76a9968f9f4569d90351d",
+      "audit_copy_sha256": "2a03322b740e8e607d6ba495f79f5a29f1f10d57a7e76a9968f9f4569d90351d",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 22927
+    },
+    "results/r05_exports/com-03/export_summary.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-03/export_candidate_preview_whole_plan_r05/export_summary.json",
+      "source_sha256": "bac30e34d49178cacd450708d1de3cad26692f30cdd527763f2e9f11a9019b95",
+      "audit_copy_sha256": "bac30e34d49178cacd450708d1de3cad26692f30cdd527763f2e9f11a9019b95",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 3408
+    },
+    "results/r05_exports/com-03/run_specific_checks.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-03/export_candidate_preview_whole_plan_r05/run_specific_checks.json",
+      "source_sha256": "5e7f58eb0a24e6766aa9f365a3bc59b84afe99f4e6db5130916fa446f27b0f04",
+      "audit_copy_sha256": "5e7f58eb0a24e6766aa9f365a3bc59b84afe99f4e6db5130916fa446f27b0f04",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 17354
+    },
+    "results/r05_exports/com-04/export_summary.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-04/export_candidate_preview_whole_plan_r05/export_summary.json",
+      "source_sha256": "13da4259619120092e42c05507ec6c9d81d098738bbf8cdf1e3625b29ff87040",
+      "audit_copy_sha256": "13da4259619120092e42c05507ec6c9d81d098738bbf8cdf1e3625b29ff87040",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 3408
+    },
+    "results/r05_exports/com-04/run_specific_checks.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-04/export_candidate_preview_whole_plan_r05/run_specific_checks.json",
+      "source_sha256": "f6b462ef594796ee91130b45831962d0c28ac68126d7837fcab1d3bb9db19468",
+      "audit_copy_sha256": "f6b462ef594796ee91130b45831962d0c28ac68126d7837fcab1d3bb9db19468",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 16672
+    },
+    "results/r05_exports/com-05/export_summary.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-05/export_candidate_preview_whole_plan_r05/export_summary.json",
+      "source_sha256": "0a8404c8579e18e38dcae6a21eb4387613dcd2c61b77d08abdaf78bba653fd48",
+      "audit_copy_sha256": "0a8404c8579e18e38dcae6a21eb4387613dcd2c61b77d08abdaf78bba653fd48",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 3409
+    },
+    "results/r05_exports/com-05/run_specific_checks.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-05/export_candidate_preview_whole_plan_r05/run_specific_checks.json",
+      "source_sha256": "abce1773f19220bf1f9ef6a2e1cb24461f37a516340135dda8d9bbee99161fc1",
+      "audit_copy_sha256": "abce1773f19220bf1f9ef6a2e1cb24461f37a516340135dda8d9bbee99161fc1",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 17641
+    },
+    "results/r05_exports/com-06/export_summary.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-06/export_candidate_preview_whole_plan_r05/export_summary.json",
+      "source_sha256": "200575ab5c8fdc997cf2d3261e6c220deab37ed14d30f60a8dd829ffe1ad641c",
+      "audit_copy_sha256": "200575ab5c8fdc997cf2d3261e6c220deab37ed14d30f60a8dd829ffe1ad641c",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 3407
+    },
+    "results/r05_exports/com-06/run_specific_checks.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/com-06/export_candidate_preview_whole_plan_r05/run_specific_checks.json",
+      "source_sha256": "98103123df6dbf1f4c13baf07401e9ef5a127fd62be87af7d91b5bf2dd393511",
+      "audit_copy_sha256": "98103123df6dbf1f4c13baf07401e9ef5a127fd62be87af7d91b5bf2dd393511",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 16623
+    },
+    "results/r05_exports/cc-01/candidate_geometry.json": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/cc-01/candidates_r05/candidate_geometry.json",
+      "source_sha256": "000f3c9e856dda02649266941eebc54ddc0b0c5d65f8042861c31509cfcbae3f",
+      "audit_copy_sha256": "000f3c9e856dda02649266941eebc54ddc0b0c5d65f8042861c31509cfcbae3f",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 262427
+    },
+    "results/r05_exports/cc-01/attempt01_FAILED_validation_report.md": {
+      "source_path": "/mnt/e/AI_Team/mitunet/experiments/bim_bridge_pm_comparison_v0/bim_bridge_pm_comparison_v0_20261006_130747_UTC/samples/cc-01/export_candidate_preview_whole_plan_r05_attempt01_FAILED/validation_report.md",
+      "source_sha256": "10bf4301a124672df115f6894300030b38e68f678be479a9dd0e5dc3d5c3a9dc",
+      "audit_copy_sha256": "10bf4301a124672df115f6894300030b38e68f678be479a9dd0e5dc3d5c3a9dc",
+      "identical": true,
+      "transformation": "none",
+      "size_bytes": 163338
     }
   },
   "audit_copies_verified_identical_to_source": true,
@@ -971,7 +1572,10 @@
     "files": [
       "qa/comparison_sheet_r04_after_repair.jpg",
       "qa/comparison_sheet_r01_before_repair.jpg",
-      "qa/com-03_clinic_r01_vs_r04.jpg"
+      "qa/com-03_clinic_r01_vs_r04.jpg",
+      "qa/comparison_sheet_r05_windows.jpg",
+      "qa/cc-01_r04_vs_r05.jpg",
+      "qa/com-06_r04_vs_r05.jpg"
     ],
     "metadata": "qa/metadata.json"
   },
@@ -989,10 +1593,80 @@
     "comparison_20261006_132944_UTC and _133029_UTC (failed builds)",
     "comparison_20261006_133155_UTC (malformed table row)",
     "candidates_r02 / r03 and their exports",
-    "superseded_attempt01/02 candidate folders"
+    "superseded_attempt01/02 candidate folders",
+    "comparison_20261008_132435_UTC_r05_windows_v1 (r05 comparison over 12 plans; superseded by the 15-plan folder)",
+    "samples/cc-01/candidates_r05_attempt01_SUPERSEDED and _attempt02_SUPERSEDED (the two rule iterations before the yield gap)",
+    "samples/cc-01/export_candidate_preview_whole_plan_r05_attempt01_FAILED (input contract refused touching voids)"
   ],
   "publication": {
     "authorised_by": "repository owner, in the working session of 2026-10-07",
-    "published_utc_date": "2026-10-07"
+    "published_utc_date": "2026-10-07",
+    "updates": [
+      {
+        "date": "2026-10-08",
+        "what": "Revision r05: window apertures exported with an assumed vertical profile on all 15 plans; comparison script scores door and window voids separately; regression check of r04 included.",
+        "authorised_by": "repository owner, in the working session of 2026-10-08",
+        "note": "Doors and walls are unchanged from r04. Every IFC is still CANDIDATE_UNREVIEWED with an assumed scale."
+      }
+    ]
+  },
+  "updated_utc_date": "2026-10-08",
+  "windows_r05_2026_10_08": {
+    "changed_or_new_files_sha256_after": {
+      "/home/pmharris/dev/bim_bridge_pm_comparison_v0/scripts/prepare_candidates_external.py": "477ddd88b232f85f44bd819326cd0f621dcbab083f71e95a8e84529d6aa1a704",
+      "/home/pmharris/dev/bim_bridge_pm_comparison_v0/scripts/build_pm_comparison.py": "31378ac101f53f6009d765ec0c6063c9067172273ee16db5d191dda594e3c2f3",
+      "/home/pmharris/dev/bim_bridge_pm_comparison_v0/configs/bim_bridge_pm_comparison_v0_windows_v1.yaml": "b66c3d3f02bdc2d326483ce4a1e52a3522c563d358dc83d9bd971450a4ad1c85"
+    },
+    "sha256_before_from_this_file": {
+      "/home/pmharris/dev/bim_bridge_pm_comparison_v0/scripts/prepare_candidates_external.py": "988e0fea8a34bb1fcf1ce541645bda90ed92de4960180d8e17e33d46bd6b4262",
+      "/home/pmharris/dev/bim_bridge_pm_comparison_v0/scripts/build_pm_comparison.py": "9f300a6970c7c3422cd03dc4b14f4cde0c0722a0faae564d243e19be20fe1785",
+      "/home/pmharris/dev/bim_bridge_pm_comparison_v0/configs/bim_bridge_pm_comparison_v0_windows_v1.yaml": null
+    },
+    "bridge_code_sha256_unchanged": true,
+    "candidate_folders": "samples/<key>/candidates_r05/ in both run directories",
+    "export_folders": "samples/<key>/export_candidate_preview_whole_plan_r05/ in both run directories",
+    "guid_maps_seeded_from": "each plan's r04 export guid_map.json (all r04 GlobalIds reused; new ones only for the window apertures)",
+    "stage_records": {
+      "pm_run": [
+        "92_prepare_candidates.json",
+        "93_prepare_candidates.json",
+        "94_export.json",
+        "95_prepare_candidates.json",
+        "96_export.json",
+        "97_prepare_candidates.json",
+        "98_export.json",
+        "99_prepare_candidates.json",
+        "100_export.json",
+        "101_prepare_candidates.json",
+        "102_export.json",
+        "103_prepare_candidates.json",
+        "104_export.json",
+        "105_prepare_candidates.json",
+        "106_export.json",
+        "107_prepare_candidates.json",
+        "108_export.json",
+        "109_prepare_candidates.json",
+        "110_export.json",
+        "111_prepare_candidates.json",
+        "112_export.json",
+        "113_pm_comparison.json",
+        "114_pm_comparison.json",
+        "115_pm_comparison.json"
+      ],
+      "prior_run": [
+        "59_prepare_candidates.json",
+        "60_export.json",
+        "61_prepare_candidates.json",
+        "62_export.json",
+        "63_prepare_candidates.json",
+        "64_export.json",
+        "65_prepare_candidates.json",
+        "66_export.json",
+        "67_prepare_candidates.json",
+        "68_export.json",
+        "69_prepare_candidates.json",
+        "70_export.json"
+      ]
+    }
   }
 }

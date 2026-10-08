@@ -40,6 +40,7 @@ One exception: experiment 01 carries a reference snapshot of the baseline model 
 2. Inputs are frozen in `results/subset_manifest.json`; commercial images run through `scripts/run_frozen_inference.py` with the inference contract.
 3. Candidates and IFCs: `scripts/prepare_candidates_external.py` (with `--repair --config <repair yaml> --out-name candidates_r04` for the repaired revision) and `scripts/export_external.py`.
 4. Comparison: `scripts/build_pm_comparison.py --labels <draft label bundle> --export-revision r01|r04`.
+5. Revision r05 (windows): `prepare_candidates_external.py --repair --config <run>/config/bim_bridge_pm_comparison_v0_windows_v1.yaml --out-name candidates_r05`, `export_external.py --revision r05 --guid-map-from <r04 export>/guid_map.json`, then `build_pm_comparison.py --export-revision r05 --candidates-name candidates_r05 --prior-keys img-01,...,img-06`.
 
 ## DVC And MLflow Status
 
