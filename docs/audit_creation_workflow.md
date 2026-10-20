@@ -1,10 +1,12 @@
 # How Experiment Audits Are Created
 
-This document explains how a floor-plan AI experiment, integration, or operational tool is converted into an evidence-backed entry in this repository. It describes the process used for experiments 01-13 as of 2026-10-20.
+This document explains how a floor-plan AI experiment, integration, or operational tool is converted into an evidence-backed entry in this repository. It describes the process used for experiments 01-14 as of 2026-10-20, including experiment 14's explicitly proposed design.
 
 The central rule is simple:
 
 > The audit records persisted evidence, not intentions, recollections, or a newly reconstructed result.
+
+When the user requests a future experiment design, publish it as `PROPOSED`. Separate source-backed parent observations from intended configuration choices, keep the new experiment's measured metrics and checkpoint null, and provide its implementation and measurement protocol. Experiment 14 follows this convention.
 
 An audit is not a new training run. It is a compact, reviewable package that connects claims to source artifacts, preserves the important configuration, metrics or operational controls, adds a small amount of visual evidence, and leaves large datasets and checkpoints in their original storage locations.
 

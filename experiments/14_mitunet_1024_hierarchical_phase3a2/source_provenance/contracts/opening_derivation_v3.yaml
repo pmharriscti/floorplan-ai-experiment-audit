@@ -1,0 +1,39 @@
+version: opening_derivation_v3
+target_generator_version: candidate_v3
+parent_target_generator_version: candidate_v2
+parameters:
+  association_max_distance_px: 3
+  min_wall_overlap_ratio: 0.05
+  local_orientation_radius_px: 24
+  symbol_stroke_width_px: 2
+evidence_order:
+  - explicit_source_opening_geometry
+  - explicit_threshold_or_opening_span_geometry
+  - frame_endpoints_associated_with_wall
+  - leaf_or_panel_attachment_points_associated_with_wall
+  - window_frame_span_associated_with_wall
+  - local_wall_gap_reconstruction
+  - review_required_fallback
+wall_association:
+  component_connectivity: 8
+  accepted_when:
+    - best wall component overlap ratio >= min_wall_overlap_ratio
+    - no competing wall component has a similar score
+  recorded_fields:
+    - associated_wall_component_id
+    - association_score
+    - association_evidence
+    - rejected_candidate_walls
+    - ambiguity_status
+opening_corridor:
+  derivation: opening_seed clipped to associated structural wall component
+  no_wall_support_policy: emit empty opening and mark review_required
+  swing_arc_policy: never primary opening width evidence
+  window_stroke_policy: never primary opening mask evidence
+visible_wall:
+  derivation: structural_wall - door_opening - window_opening
+  validation: visible_wall must be subset of structural_wall
+gates:
+  unexplained_exact_symbol_opening_equality: 0
+  no_training_until_human_review: true
+

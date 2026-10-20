@@ -52,6 +52,10 @@ One exception: experiment 01 carries a reference snapshot of the baseline model 
 5. Run the focused 37-test suite from the source repository with `PYTHONPATH=.` before changing filtering, imagery, persistence, Skip behavior, or v3.2 geometry.
 6. Rebuild the Phase 3A.2 package with `scripts/run_phase3a2_opening_axis_repair.py` when repairing absent v3.1 control masks or adding dedicated control overlays; do not edit human decision sidecars as part of artifact generation.
 
+## Implementing Experiment 14 (1024 Hierarchical Phase 3A.2)
+
+Experiment 14 is a proposed design. Its normalized config requires a source-workspace adapter, new 1024 targets and validation before a combined run can be reproduced. Follow its [integration plan](../experiments/14_mitunet_1024_hierarchical_phase3a2/INTEGRATION_PLAN.md), [labeling improvements](../experiments/14_mitunet_1024_hierarchical_phase3a2/LABELING_IMPROVEMENTS.md) and [evaluation protocol](../experiments/14_mitunet_1024_hierarchical_phase3a2/EVALUATION_PROTOCOL.md). The source inventory pins 76 files across three local workspaces, and copied contracts and repair keys record the labeling inputs. The proposed 1024 wall floor is relative to the reproduced experiment-06 validation result; it must not reuse the old experiment-09 512 floor. A combined launch command, generated target hashes, resource profile and checkpoint are to be recorded when the source integration is implemented.
+
 ## DVC And MLflow Status
 
 Phase 1 recorded DVC targets but did not have DVC installed in the run environment. Phase 2 recorded DVC as available and configured, with full `dvc status` intentionally deferred because it walks large external output trees. DeepLabV3 and the Phase experiments recorded MLflow run IDs; baseline and hybrid MLflow status is `UNKNOWN` in this audit. Phase 5 records an MLflow run ID in the shared `mlflow/mlflow.db` and writes no DVC status. bim_bridge_v0 trains no model and uses neither MLflow nor DVC.

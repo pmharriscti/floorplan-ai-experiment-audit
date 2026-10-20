@@ -1,0 +1,75 @@
+{
+  "experiment_id": "14_mitunet_1024_hierarchical_phase3a2",
+  "created_date": "2026-10-20",
+  "status": "proposed",
+  "evidence_status": "PROPOSED",
+  "basis_evidence_status": "VERIFIED",
+  "github": {
+    "repository": "https://github.com/pmharriscti/floorplan-ai-experiment-audit",
+    "entry": "https://github.com/pmharriscti/floorplan-ai-experiment-audit/tree/main/experiments/14_mitunet_1024_hierarchical_phase3a2",
+    "branch": "main"
+  },
+  "audit_repository_parent_commit": "1def36bb409eeb72a5daa13ac73900a1ee6504cc",
+  "parent_entries": [
+    "01_binary_mitunet",
+    "02_hybrid_tiling",
+    "03_deeplabv3",
+    "04_phase1_wall_structure",
+    "05_phase2_boundary_openings",
+    "06_binary_mitunet_1024",
+    "07_mitunet_512_adamw",
+    "08_mitunet_1024_highres_runpod",
+    "09_phase5_hierarchical_multihead_512",
+    "10_phase3a2_door_opening_v31_vs_v32_512",
+    "11_bim_bridge_v0",
+    "12_bim_bridge_pm_comparison",
+    "13_phase3a_human_review_tool"
+  ],
+  "source_workspaces": {
+    "/home/pmharris/dev/mitunet": {
+      "head": "aebca12e284aa17ddef08d45327e191773e0f07a",
+      "working_tree_clean": false,
+      "identity": "Per-file SHA-256 values recorded for the inspected implementations, including untracked labeling modules."
+    },
+    "/home/pmharris/dev/mitunet_multihead": {
+      "head": null,
+      "git_state": "initialized on master with no commits; source files untracked",
+      "identity": "Per-file SHA-256 values in source inventory."
+    },
+    "/home/pmharris/dev/mitunet_phase3a2_512": {
+      "role": "Matched target materialization and exact per-instance resize reference",
+      "identity": "Inspected resize, constants and target-builder files identified by SHA-256."
+    }
+  },
+  "source_inventory": "source_provenance/source_inventory.json",
+  "copied_contracts": "source_provenance/contracts",
+  "repair_scope": "source_provenance/phase3a2_repair_scope.json",
+  "parent_evidence": "results/parent_evidence.json",
+  "initialization_checkpoint": {
+    "path": "/home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu_1024/best_model.pth",
+    "sha256": "42cad015bf894e6afe11011424b7ed88c49a1512f81593f14df5b228d65a3910",
+    "hash_source": "Existing experiment-06 audit provenance; not recomputed for this documentation entry."
+  },
+  "execution": {
+    "combined_training_executed": false,
+    "combined_inference_executed": false,
+    "combined_targets_materialized": false,
+    "run_directory": null,
+    "combined_checkpoint_sha256": null
+  },
+  "verification": {
+    "source_suite_command": "PYTHONPATH=. PYTHONDONTWRITEBYTECODE=1 NO_ALBUMENTATIONS_UPDATE=1 ./.venv/bin/python -m pytest -q -p no:cacheprovider tests/test_target_contract.py tests/test_source_class_taxonomy.py tests/test_door_symbol_opening_separation.py tests/test_window_symbol_opening_separation.py tests/test_opening_wall_association.py tests/test_opening_derivation_v3.py tests/test_phase3a1_opening_rule_repairs.py tests/test_phase3a2_opening_axis_repair.py tests/test_target_resize_alignment.py tests/test_pixel_preservation.py tests/test_target_determinism.py tests/test_fixture_target_derivation.py tests/test_model_target_compatibility.py tests/test_phase3a_review_core.py tests/test_phase3a_review_skip_guard.py",
+    "working_directory": "/home/pmharris/dev/mitunet",
+    "date": "2026-10-20",
+    "passed": 56,
+    "failed": 0,
+    "warnings": 78,
+    "scope": "Existing local labeling and review helpers; the proposed combined model has not been executed."
+  },
+  "publication_policy": {
+    "large_artifacts_committed": false,
+    "dataset_copied": false,
+    "reviewer_notes_copied": false,
+    "parent_images": "Linked by relative path to the existing audit entries and labeled as parent evidence."
+  }
+}

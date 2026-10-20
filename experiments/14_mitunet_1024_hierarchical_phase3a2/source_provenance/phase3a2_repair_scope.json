@@ -1,0 +1,73 @@
+{
+  "kind": "historical_explicit_repair_scope",
+  "source": {
+    "path": "/mnt/e/AI_Team/mitunet/phase3a2_opening_axis_repair/experiments/mitunet_phase3a2_opening_axis_repair_20260826_142837_UTC/review/candidate_v3_2_family_a_re_review_manifest.csv",
+    "size_bytes": 116838,
+    "sha256": "f149d9cd176dbdfd3773c93be896ab274b881535419e3531bef32246cbf1c57b"
+  },
+  "instance_count": 10,
+  "plan_count": 8,
+  "door_tangent_normal_repair_instances": [
+    {
+      "sample_id": "high_quality_architectural/10543",
+      "source_instance_id": "door_0003",
+      "target_name": "door_opening",
+      "split": "train"
+    },
+    {
+      "sample_id": "high_quality_architectural/10620",
+      "source_instance_id": "door_0005",
+      "target_name": "door_opening",
+      "split": "train"
+    },
+    {
+      "sample_id": "high_quality_architectural/11709",
+      "source_instance_id": "door_0012",
+      "target_name": "door_opening",
+      "split": "train"
+    },
+    {
+      "sample_id": "high_quality_architectural/11709",
+      "source_instance_id": "door_0013",
+      "target_name": "door_opening",
+      "split": "train"
+    },
+    {
+      "sample_id": "high_quality_architectural/11709",
+      "source_instance_id": "door_0014",
+      "target_name": "door_opening",
+      "split": "train"
+    },
+    {
+      "sample_id": "high_quality_architectural/13110",
+      "source_instance_id": "door_0006",
+      "target_name": "door_opening",
+      "split": "train"
+    },
+    {
+      "sample_id": "high_quality_architectural/13827",
+      "source_instance_id": "door_0004",
+      "target_name": "door_opening",
+      "split": "train"
+    },
+    {
+      "sample_id": "high_quality_architectural/14814",
+      "source_instance_id": "door_0007",
+      "target_name": "door_opening",
+      "split": "train"
+    },
+    {
+      "sample_id": "high_quality_architectural/14817",
+      "source_instance_id": "door_0008",
+      "target_name": "door_opening",
+      "split": "train"
+    },
+    {
+      "sample_id": "high_quality_architectural/8690",
+      "source_instance_id": "door_0005",
+      "target_name": "door_opening",
+      "split": "val"
+    }
+  ],
+  "note": "Scope identity only; no reviewer decisions or notes are copied."
+}

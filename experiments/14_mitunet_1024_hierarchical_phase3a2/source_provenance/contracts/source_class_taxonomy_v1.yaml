@@ -1,0 +1,140 @@
+version: source_class_taxonomy_v1
+purpose: >
+  Versioned taxonomy and conservative classification policy for CubiCasa SVG
+  source classes observed during Phase 3A. Runtime inventory preserves raw class
+  strings and writes an observed-class taxonomy snapshot in the run directory.
+actions:
+  - map
+  - ignore
+  - unsupported
+  - review_required
+confidence_values:
+  - high
+  - medium
+  - low
+policies:
+  preserve_raw_class_lineage: true
+  normalize_only_for_analysis: true
+  no_silent_unknown_mapping: true
+  no_bulk_other_fixture_mapping: true
+  no_name_only_classification: true
+  wall_affecting_classes_reviewable: true
+categories:
+  wall_and_structural_geometry:
+    - wall_region
+    - wall_boundary_source
+    - wall_centerline_source
+    - column
+    - railing
+    - structural_other
+  door_related_geometry:
+    - door_explicit_opening
+    - door_leaf
+    - door_panel
+    - door_swing
+    - door_frame
+    - door_jamb
+    - door_threshold
+    - door_sliding_symbol
+    - door_pocket_symbol
+    - door_double_symbol
+    - door_other_symbol
+    - door_ambiguous
+  window_related_geometry:
+    - window_explicit_opening
+    - window_frame
+    - window_glazing
+    - window_sill
+    - window_mullion
+    - window_other_symbol
+    - window_ambiguous
+  fixture_geometry:
+    - cabinetry_storage
+    - appliance
+    - toilet_urinal
+    - sink_tap
+    - sauna_bench
+    - fireplace
+    - bathtub_shower_jacuzzi
+    - chimney
+    - other_fixture_candidate
+    - fixture_ambiguous
+  non_target_drawing_geometry:
+    - room_label
+    - text
+    - dimension
+    - dimension_arrow
+    - grid
+    - hatch
+    - annotation
+    - revision_mark
+    - title_block
+    - scale_marker
+    - furniture_not_in_scope
+    - decorative_geometry
+    - metadata
+    - background
+    - ignore_other
+  unsupported_or_ambiguous:
+    - unsupported_geometry
+    - malformed_geometry
+    - unknown_semantic
+    - review_required
+known_evidence_rules:
+  wall:
+    required_evidence:
+      element_id: Wall
+      geometry_types_any: [polygon]
+    proposed_category: wall_region
+    proposed_action: map
+    proposed_target: structural_wall
+    confidence: high
+  door:
+    required_evidence:
+      element_id: Door
+      parent_group_class_contains: Wall
+      geometry_types_any: [polygon]
+    proposed_category: door_explicit_opening
+    proposed_action: review_required
+    proposed_target: door_opening
+    confidence: high
+  window:
+    required_evidence:
+      element_id: Window
+      parent_group_class_contains: Wall
+      geometry_types_any: [polygon]
+    proposed_category: window_explicit_opening
+    proposed_action: review_required
+    proposed_target: window_opening
+    confidence: high
+  door_panel:
+    required_evidence:
+      element_id: Panel
+      parent_group_class_contains: Door
+    proposed_category: door_panel
+    proposed_action: review_required
+    proposed_target: door_symbol
+    confidence: high
+  window_panel:
+    required_evidence:
+      element_id: Panel
+      parent_group_class_contains: Window
+    proposed_category: window_frame
+    proposed_action: review_required
+    proposed_target: window_symbol
+    confidence: high
+  glass:
+    required_evidence:
+      element_id: Glass
+      parent_group_class_contains: Window
+    proposed_category: window_glazing
+    proposed_action: review_required
+    proposed_target: window_symbol
+    confidence: high
+  known_fixed_furniture:
+    required_evidence:
+      parser_mapping: existing CubiCasa fixed-furniture target
+    proposed_action: map
+    confidence: high
+classes: []
+

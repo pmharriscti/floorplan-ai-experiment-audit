@@ -10,6 +10,8 @@ The audit records evidence, not intentions. A value is included only when it was
 
 `NOT YET VERIFIED` is reserved for claims that look plausible from context but were not checked against an artifact. This initial repo avoids using such values in the scoreboard.
 
+`PROPOSED` identifies an explicitly requested experiment design, introduced with experiment 14. The settings are proposed choices, source-backed parent facts retain their attribution, and the entry's own measured metrics/checkpoint/selected thresholds remain `UNKNOWN` or null until execution. An inspected source helper or a passing unit test does not establish performance of a proposed integrated model.
+
 ## Extraction Rules
 
 - Source experiment directories are read-only evidence sources.
@@ -41,3 +43,4 @@ Outcome categories are short audit labels, not new scientific claims:
 - `positive_gated_hierarchical_expansion`: a completed multi-head expansion that met its declared wall-protection gate (baseline minus a fixed tolerance) on every eligible epoch while adding validated new-head metrics; the small residual wall regression inside the tolerance is recorded, not hidden.
 - `label_repair_partially_confirmed`: a target-version (label) ablation whose repair is confirmed correct on the instances that have been adjudicated, but where adjudication covers only part of the queue, so the corpus-level label claim is not established. The paired model comparison is reported as secondary evidence and may be neutral or mildly negative; when the label delta covers a small fraction of the training set, that comparison measures run-to-run variation rather than the label version, and the entry says so.
 - `partial_downstream_integration`: a downstream integration experiment whose technical chain works end to end, while at least one evidence gate that its milestone depends on (human review, scale evidence, or viewer inspection) is blocked or not run. It reports gates and counts, has no segmentation metric, and is not comparable with segmentation rankings.
+- `proposed_integrated_configuration`: a documented combination of audited components with explicit labeling contracts, implementation work and evaluation rules; combined-model results have not been measured and are left unknown.

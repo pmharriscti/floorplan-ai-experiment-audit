@@ -1,0 +1,667 @@
+contract_version: target_contract_v1
+candidate_generator_version: candidate_v2
+coordinate_system:
+  name: CubiCasa native image pixel coordinates
+  native_image_file: F1_scaled.png
+  native_svg_file: model.svg
+  pixel_center_convention: integer pixel centers after FloorTrans rasterization helpers
+  svg_viewbox_handling: recorded per source SVG; candidate generation uses the existing FloorTrans SVG coordinate helpers
+  transform_handling: source group transforms are delegated to FloorTrans helpers where supported and inventoried separately
+  clipping_path_handling: clipping paths are inventoried and review-required unless the delegated helper supports them
+defaults:
+  polygon_fill_rule: helper-defined non-antialiased polygon fill
+  stroke_handling: strokes are not target-producing unless a target explicitly declares stroke/symbol support
+  antialiasing_policy: prohibited for categorical masks
+  resize_policy: nearest-neighbor masks with recorded letterbox scale and padding
+  crop_policy: crops must be applied identically to image and all targets
+  padding_policy: image padding uses white; mask padding uses background 0
+  empty_target_rule: empty masks are valid only when source support is absent or an explicit ignore/review rule explains the absence
+  morphology_kernel_units: pixels in the raster space named by the target
+targets:
+  - name: background
+    target_type: derived_binary
+    semantic_definition: Pixels not assigned to any positive target in a specific head or target family.
+    source_element_classes: []
+    source_element_attributes: []
+    coordinate_system: native image pixels
+    rasterization_method: complement of target family positives
+    antialiasing_policy: categorical values only
+    binary_or_class_index_value_convention: binary 0/1 or class id 0 depending on head
+    resize_policy: nearest for masks
+    crop_policy: identical geometric crop
+    padding_policy: 0 in masks
+    morphology_operations: none
+    skeletonization_algorithm: none
+    connectivity_convention: none
+    junction_radius: null
+    endpoint_radius: null
+    opening_wall_support_rule: not applicable
+    fixture_instance_rule: not applicable
+    overlap_rules: may overlap no positive target in the same mutually exclusive class-index head
+    sigmoid_compatible: true
+    softmax_compatible: true
+    loss_compatibility: BCE/Tversky for binary complements; cross entropy as class id 0 for exclusive heads
+    derivation_order: after named positive targets
+    validation_invariants: background is zero wherever the represented positive class is one
+    known_ambiguities: background differs by output head
+    review_required_conditions: unexpected all-background samples
+  - name: ignored_geometry
+    target_type: ignore_mask
+    semantic_definition: Supported source geometry intentionally excluded from a target with documented justification.
+    source_element_classes: []
+    source_element_attributes: ["reviewed ignore rules"]
+    coordinate_system: native image pixels
+    rasterization_method: explicit ignore masks or manifest flags
+    antialiasing_policy: categorical values only
+    binary_or_class_index_value_convention: binary 0/1 or ignore index 255
+    resize_policy: nearest for masks
+    crop_policy: identical geometric crop
+    padding_policy: ignored pixels remain ignored only when geometrically present
+    morphology_operations: none unless rule-specific
+    skeletonization_algorithm: none
+    connectivity_convention: none
+    junction_radius: null
+    endpoint_radius: null
+    opening_wall_support_rule: not applicable
+    fixture_instance_rule: not applicable
+    overlap_rules: may overlap candidate targets only as a review flag, not as training supervision
+    sigmoid_compatible: false
+    softmax_compatible: true
+    loss_compatibility: ignore_index-compatible losses only
+    derivation_order: source audit before target generation
+    validation_invariants: ignored reason must be present
+    known_ambiguities: legacy generators may have silently ignored unknown geometry
+    review_required_conditions: any target-producing source class marked ignored
+  - name: unknown_geometry
+    target_type: source_audit_flag
+    semantic_definition: Source geometry with unknown, unmapped, or unsupported class semantics.
+    source_element_classes: ["unmapped SVG classes"]
+    source_element_attributes: ["id", "class", "transform", "clip-path"]
+    coordinate_system: source SVG and native image pixels when rasterizable
+    rasterization_method: inventory first; no automatic training target
+    antialiasing_policy: not applicable
+    binary_or_class_index_value_convention: review flag
+    resize_policy: not applicable
+    crop_policy: not applicable
+    padding_policy: not applicable
+    morphology_operations: none
+    skeletonization_algorithm: none
+    connectivity_convention: none
+    junction_radius: null
+    endpoint_radius: null
+    opening_wall_support_rule: not applicable
+    fixture_instance_rule: unknown classes must not be silently merged into other_fixture
+    overlap_rules: review-required against every generated target
+    sigmoid_compatible: false
+    softmax_compatible: false
+    loss_compatibility: not trainable until adjudicated
+    derivation_order: source audit
+    validation_invariants: every unknown class has count and representative sample IDs
+    known_ambiguities: may include harmless SVG grouping or true missing ontology
+    review_required_conditions: always
+  - name: legacy_wall_region
+    target_type: legacy_binary_mask
+    semantic_definition: Existing binary wall target from the named legacy generator; semantics must be reported with generator lineage.
+    source_element_classes: ["g[id='Wall']"]
+    source_element_attributes: ["id=Wall"]
+    coordinate_system: native or 512 letterbox depending on lineage
+    rasterization_method: legacy_binary, legacy_phase1, legacy_phase2, or legacy_multiclass as recorded
+    antialiasing_policy: categorical values only
+    binary_or_class_index_value_convention: binary 0/1
+    resize_policy: lineage-specific; must be recorded
+    crop_policy: lineage-specific; must be recorded
+    padding_policy: lineage-specific; must be recorded
+    morphology_operations: lineage-specific
+    skeletonization_algorithm: none
+    connectivity_convention: none
+    junction_radius: null
+    endpoint_radius: null
+    opening_wall_support_rule: lineage-specific; baseline and Phase 1/2 configs set subtract_openings false
+    fixture_instance_rule: not applicable
+    overlap_rules: may overlap centerline, boundary, openings, symbols, fixtures as separate heads
+    sigmoid_compatible: true
+    softmax_compatible: false
+    loss_compatibility: binary wall losses
+    derivation_order: legacy generator
+    validation_invariants: binary values, resolved lineage, stable split fingerprint
+    known_ambiguities: ambiguous name wall_region does not state structural or visible semantics
+    review_required_conditions: any mismatch with structural_wall or visible_wall
+  - name: structural_wall
+    target_type: binary_mask
+    semantic_definition: Continuous wall envelope before subtracting wall-supported door and window interruptions.
+    source_element_classes: ["g[id='Wall']"]
+    source_element_attributes: ["id=Wall"]
+    coordinate_system: native image pixels
+    rasterization_method: FloorTrans PolygonWall helper without opening subtraction
+    antialiasing_policy: categorical values only
+    binary_or_class_index_value_convention: binary 0/1
+    resize_policy: nearest-neighbor letterbox when training-resolution target is requested
+    crop_policy: identical geometric crop
+    padding_policy: 0 in masks
+    morphology_operations: none in canonical native target
+    skeletonization_algorithm: none
+    connectivity_convention: 8-connected for component statistics
+    junction_radius: null
+    endpoint_radius: null
+    opening_wall_support_rule: openings may overlap structural_wall and are not subtracted here
+    fixture_instance_rule: not applicable
+    overlap_rules: may overlap visible_wall, boundaries, centerlines, junctions, endpoints, openings, symbols, and fixtures
+    sigmoid_compatible: true
+    softmax_compatible: false
+    loss_compatibility: independent binary region losses
+    derivation_order: first wall target
+    validation_invariants: binary; traceable Wall source elements; no silent missing wall when Wall elements exist
+    known_ambiguities: FloorTrans small-wall skipping must be reported
+    review_required_conditions: empty structural_wall with source Wall elements
+  - name: visible_wall
+    target_type: derived_binary_mask
+    semantic_definition: Wall pixels visibly present after subtracting validated candidate door_opening and window_opening masks from structural_wall.
+    source_element_classes: ["g[id='Wall']", "g[id='Door']", "g[id='Window']"]
+    source_element_attributes: ["id=Wall", "id=Door", "id=Window"]
+    coordinate_system: native image pixels
+    rasterization_method: structural_wall AND NOT (door_opening OR window_opening)
+    antialiasing_policy: categorical values only
+    binary_or_class_index_value_convention: binary 0/1
+    resize_policy: nearest-neighbor letterbox when requested
+    crop_policy: identical geometric crop
+    padding_policy: 0 in masks
+    morphology_operations: none
+    skeletonization_algorithm: none
+    connectivity_convention: 8-connected for component statistics
+    junction_radius: null
+    endpoint_radius: null
+    opening_wall_support_rule: removed pixels must be attributable to opening masks
+    fixture_instance_rule: not applicable
+    overlap_rules: expected subset of structural_wall; may overlap derived visible boundary and centerline
+    sigmoid_compatible: true
+    softmax_compatible: false
+    loss_compatibility: independent binary region losses
+    derivation_order: after structural_wall, door_opening, window_opening
+    validation_invariants: visible_wall subset structural_wall
+    known_ambiguities: source may encode visible strokes differently from wall interruption corridors
+    review_required_conditions: large subtraction or disconnected-wall changes
+  - name: structural_wall_boundary
+    target_type: derived_binary_mask
+    semantic_definition: Boundary pixels on the structural_wall region.
+    source_element_classes: ["structural_wall"]
+    source_element_attributes: []
+    coordinate_system: native image pixels
+    rasterization_method: wall pixel with background neighbor under 8-connectivity
+    antialiasing_policy: categorical values only
+    binary_or_class_index_value_convention: binary 0/1
+    resize_policy: nearest-neighbor; optional training dilation recorded separately
+    crop_policy: identical geometric crop
+    padding_policy: 0 in masks
+    morphology_operations: boundary extraction only
+    skeletonization_algorithm: none
+    connectivity_convention: 8-connected
+    junction_radius: null
+    endpoint_radius: null
+    opening_wall_support_rule: may border openings but is derived before visible subtraction
+    fixture_instance_rule: not applicable
+    overlap_rules: contained in structural_wall
+    sigmoid_compatible: true
+    softmax_compatible: false
+    loss_compatibility: independent binary boundary losses
+    derivation_order: after structural_wall
+    validation_invariants: boundary subset structural_wall
+    known_ambiguities: raw and dilated training boundary have different containment expectations
+    review_required_conditions: boundary outside structural_wall
+  - name: visible_wall_boundary
+    target_type: derived_binary_mask
+    semantic_definition: Boundary pixels on the visible_wall region.
+    source_element_classes: ["visible_wall"]
+    source_element_attributes: []
+    coordinate_system: native image pixels
+    rasterization_method: wall pixel with background neighbor under 8-connectivity
+    antialiasing_policy: categorical values only
+    binary_or_class_index_value_convention: binary 0/1
+    resize_policy: nearest-neighbor
+    crop_policy: identical geometric crop
+    padding_policy: 0 in masks
+    morphology_operations: boundary extraction only
+    skeletonization_algorithm: none
+    connectivity_convention: 8-connected
+    junction_radius: null
+    endpoint_radius: null
+    opening_wall_support_rule: openings create visible-wall boundaries
+    fixture_instance_rule: not applicable
+    overlap_rules: contained in visible_wall
+    sigmoid_compatible: true
+    softmax_compatible: false
+    loss_compatibility: independent binary boundary losses
+    derivation_order: after visible_wall
+    validation_invariants: boundary subset visible_wall
+    known_ambiguities: may differ substantially from structural boundary near openings
+    review_required_conditions: boundary outside visible_wall
+  - name: structural_wall_centerline
+    target_type: derived_binary_mask
+    semantic_definition: One-pixel skeleton derived from structural_wall.
+    source_element_classes: ["structural_wall"]
+    source_element_attributes: []
+    coordinate_system: native image pixels
+    rasterization_method: skimage skeletonize then thin
+    antialiasing_policy: categorical values only
+    binary_or_class_index_value_convention: binary 0/1
+    resize_policy: nearest-neighbor; training dilation recorded separately
+    crop_policy: identical geometric crop
+    padding_policy: 0 in masks
+    morphology_operations: optional training dilation only
+    skeletonization_algorithm: skimage.morphology.skeletonize + thin
+    connectivity_convention: 8-connected
+    junction_radius: null
+    endpoint_radius: null
+    opening_wall_support_rule: derived before opening subtraction
+    fixture_instance_rule: not applicable
+    overlap_rules: expected within dilated structural_wall
+    sigmoid_compatible: true
+    softmax_compatible: false
+    loss_compatibility: BCE, focal, Dice, clDice auxiliary losses
+    derivation_order: after structural_wall
+    validation_invariants: centerline subset dilated structural_wall
+    known_ambiguities: centerline semantics differ if derived from visible_wall
+    review_required_conditions: skeleton fragments outside wall
+  - name: visible_wall_centerline
+    target_type: derived_binary_mask
+    semantic_definition: One-pixel skeleton derived from visible_wall.
+    source_element_classes: ["visible_wall"]
+    source_element_attributes: []
+    coordinate_system: native image pixels
+    rasterization_method: skimage skeletonize then thin
+    antialiasing_policy: categorical values only
+    binary_or_class_index_value_convention: binary 0/1
+    resize_policy: nearest-neighbor
+    crop_policy: identical geometric crop
+    padding_policy: 0 in masks
+    morphology_operations: optional training dilation only
+    skeletonization_algorithm: skimage.morphology.skeletonize + thin
+    connectivity_convention: 8-connected
+    junction_radius: null
+    endpoint_radius: null
+    opening_wall_support_rule: derived after opening subtraction
+    fixture_instance_rule: not applicable
+    overlap_rules: expected within dilated visible_wall
+    sigmoid_compatible: true
+    softmax_compatible: false
+    loss_compatibility: BCE, focal, Dice, clDice auxiliary losses
+    derivation_order: after visible_wall
+    validation_invariants: centerline subset dilated visible_wall
+    known_ambiguities: may split at openings
+    review_required_conditions: unexplained skeleton disappearance
+  - name: junction_points
+    target_type: point_list
+    semantic_definition: Raw structural centerline pixels with graph degree at least three under 8-connectivity.
+    source_element_classes: ["structural_wall_centerline"]
+    source_element_attributes: []
+    coordinate_system: native image pixels
+    rasterization_method: graph-degree calculation on selected centerline
+    antialiasing_policy: not rasterized
+    binary_or_class_index_value_convention: list of x,y,degree
+    resize_policy: transform coordinates with recorded matrix
+    crop_policy: identical geometric crop
+    padding_policy: transformed coordinates only
+    morphology_operations: none
+    skeletonization_algorithm: selected centerline skeleton
+    connectivity_convention: 8-connected
+    junction_radius: raw points have radius 0
+    endpoint_radius: null
+    opening_wall_support_rule: selected centerline must be named
+    fixture_instance_rule: not applicable
+    overlap_rules: point must lie on selected centerline
+    sigmoid_compatible: false
+    softmax_compatible: false
+    loss_compatibility: use supervision mask or point-matching metric, not raw softmax
+    derivation_order: after structural_wall_centerline
+    validation_invariants: each point lies on selected centerline
+    known_ambiguities: adjacent junction pixels may need clustering for supervision
+    review_required_conditions: excessive junction density
+  - name: junction_supervision_mask
+    target_type: derived_binary_mask
+    semantic_definition: Dilated supervision mask around junction_points.
+    source_element_classes: ["junction_points"]
+    source_element_attributes: []
+    coordinate_system: native image pixels
+    rasterization_method: disk/square dilation around raw points, radius recorded
+    antialiasing_policy: categorical values only
+    binary_or_class_index_value_convention: binary 0/1
+    resize_policy: nearest-neighbor when rasterized, point coordinates retained separately
+    crop_policy: identical geometric crop
+    padding_policy: 0 in masks
+    morphology_operations: point dilation
+    skeletonization_algorithm: selected centerline skeleton
+    connectivity_convention: 8-connected
+    junction_radius: 3 by default
+    endpoint_radius: null
+    opening_wall_support_rule: not applicable
+    fixture_instance_rule: not applicable
+    overlap_rules: may overlap wall, centerline, endpoints after dilation
+    sigmoid_compatible: true
+    softmax_compatible: false
+    loss_compatibility: independent sigmoid point-map losses
+    derivation_order: after junction_points
+    validation_invariants: mask intersects selected centerline around each raw point
+    known_ambiguities: radius trades rare-positive visibility against localization
+    review_required_conditions: raw points missing after preprocessing
+  - name: endpoint_points
+    target_type: point_list
+    semantic_definition: Raw structural centerline pixels with graph degree one under 8-connectivity.
+    source_element_classes: ["structural_wall_centerline"]
+    source_element_attributes: []
+    coordinate_system: native image pixels
+    rasterization_method: graph-degree calculation on selected centerline
+    antialiasing_policy: not rasterized
+    binary_or_class_index_value_convention: list of x,y,degree
+    resize_policy: transform coordinates with recorded matrix
+    crop_policy: identical geometric crop
+    padding_policy: transformed coordinates only
+    morphology_operations: none
+    skeletonization_algorithm: selected centerline skeleton
+    connectivity_convention: 8-connected
+    junction_radius: null
+    endpoint_radius: raw points have radius 0
+    opening_wall_support_rule: selected centerline must be named
+    fixture_instance_rule: not applicable
+    overlap_rules: point must lie on selected centerline
+    sigmoid_compatible: false
+    softmax_compatible: false
+    loss_compatibility: use supervision mask or point-matching metric
+    derivation_order: after structural_wall_centerline
+    validation_invariants: each point lies on selected centerline
+    known_ambiguities: spurs create endpoints
+    review_required_conditions: excessive endpoint density
+  - name: endpoint_supervision_mask
+    target_type: derived_binary_mask
+    semantic_definition: Dilated supervision mask around endpoint_points.
+    source_element_classes: ["endpoint_points"]
+    source_element_attributes: []
+    coordinate_system: native image pixels
+    rasterization_method: disk/square dilation around raw points, radius recorded
+    antialiasing_policy: categorical values only
+    binary_or_class_index_value_convention: binary 0/1
+    resize_policy: nearest-neighbor when rasterized, point coordinates retained separately
+    crop_policy: identical geometric crop
+    padding_policy: 0 in masks
+    morphology_operations: point dilation
+    skeletonization_algorithm: selected centerline skeleton
+    connectivity_convention: 8-connected
+    junction_radius: null
+    endpoint_radius: 3 by default
+    opening_wall_support_rule: not applicable
+    fixture_instance_rule: not applicable
+    overlap_rules: may overlap wall, centerline, junction masks after dilation
+    sigmoid_compatible: true
+    softmax_compatible: false
+    loss_compatibility: independent sigmoid point-map losses
+    derivation_order: after endpoint_points
+    validation_invariants: mask intersects selected centerline around each raw point
+    known_ambiguities: radius trades rare-positive visibility against localization
+    review_required_conditions: raw points missing after preprocessing
+  - name: door_opening
+    target_type: binary_mask
+    semantic_definition: Actual candidate wall-interruption corridor occupied by a doorway; not the door leaf, swing arc, panel, threshold stroke, or generic door symbol.
+    source_element_classes: ["g[id='Door']"]
+    source_element_attributes: ["top-level Door polygon"]
+    coordinate_system: native image pixels
+    rasterization_method: FloorTrans get_polygon on top-level Door group
+    antialiasing_policy: categorical values only
+    binary_or_class_index_value_convention: binary 0/1
+    resize_policy: nearest-neighbor
+    crop_policy: identical geometric crop
+    padding_policy: 0 in masks
+    morphology_operations: none in canonical native target
+    skeletonization_algorithm: none
+    connectivity_convention: 8-connected for components
+    junction_radius: null
+    endpoint_radius: null
+    opening_wall_support_rule: must intersect or be near structural_wall corridor
+    fixture_instance_rule: not applicable
+    overlap_rules: may overlap structural_wall; expected removed from visible_wall
+    sigmoid_compatible: true
+    softmax_compatible: false
+    loss_compatibility: independent binary opening losses
+    derivation_order: after structural_wall source parse, before visible_wall
+    validation_invariants: nonempty openings have wall support; source-supported empties are flagged
+    known_ambiguities: CubiCasa Door polygon may represent threshold/opening but requires review
+    review_required_conditions: identical to door_symbol or off-wall
+  - name: window_opening
+    target_type: binary_mask
+    semantic_definition: Candidate wall-interruption corridor associated with a window; not every visible frame, stroke, or marker.
+    source_element_classes: ["g[id='Window']"]
+    source_element_attributes: ["top-level Window polygon"]
+    coordinate_system: native image pixels
+    rasterization_method: FloorTrans get_polygon on top-level Window group
+    antialiasing_policy: categorical values only
+    binary_or_class_index_value_convention: binary 0/1
+    resize_policy: nearest-neighbor
+    crop_policy: identical geometric crop
+    padding_policy: 0 in masks
+    morphology_operations: none in canonical native target
+    skeletonization_algorithm: none
+    connectivity_convention: 8-connected for components
+    junction_radius: null
+    endpoint_radius: null
+    opening_wall_support_rule: must intersect or be near structural_wall corridor
+    fixture_instance_rule: not applicable
+    overlap_rules: may overlap structural_wall; expected removed from visible_wall
+    sigmoid_compatible: true
+    softmax_compatible: false
+    loss_compatibility: independent binary opening losses
+    derivation_order: after structural_wall source parse, before visible_wall
+    validation_invariants: nonempty openings have wall support; source-supported empties are flagged
+    known_ambiguities: source Window polygon may be symbol footprint rather than interruption corridor
+    review_required_conditions: identical to window_symbol or off-wall
+  - name: door_symbol
+    target_type: binary_mask
+    semantic_definition: Door graphical symbol geometry as encoded by the icon parser.
+    source_element_classes: ["g[id='Door']"]
+    source_element_attributes: ["Door icon geometry"]
+    coordinate_system: native image pixels
+    rasterization_method: multiclass icon parser Door channel
+    antialiasing_policy: categorical values only
+    binary_or_class_index_value_convention: binary 0/1
+    resize_policy: nearest-neighbor
+    crop_policy: identical geometric crop
+    padding_policy: 0 in masks
+    morphology_operations: none
+    skeletonization_algorithm: none
+    connectivity_convention: 8-connected for components
+    junction_radius: null
+    endpoint_radius: null
+    opening_wall_support_rule: not automatically used as opening support
+    fixture_instance_rule: not applicable
+    overlap_rules: may overlap door_opening but must be compared separately
+    sigmoid_compatible: true
+    softmax_compatible: false
+    loss_compatibility: independent symbol target if trained
+    derivation_order: source icon parse
+    validation_invariants: not assumed identical to door_opening
+    known_ambiguities: current icon parser also uses top-level Door polygon
+    review_required_conditions: equality with door_opening must be manually reviewed
+  - name: window_symbol
+    target_type: binary_mask
+    semantic_definition: Window graphical symbol geometry as encoded by the icon parser.
+    source_element_classes: ["g[id='Window']"]
+    source_element_attributes: ["Window icon geometry"]
+    coordinate_system: native image pixels
+    rasterization_method: multiclass icon parser Window channel
+    antialiasing_policy: categorical values only
+    binary_or_class_index_value_convention: binary 0/1
+    resize_policy: nearest-neighbor
+    crop_policy: identical geometric crop
+    padding_policy: 0 in masks
+    morphology_operations: none
+    skeletonization_algorithm: none
+    connectivity_convention: 8-connected for components
+    junction_radius: null
+    endpoint_radius: null
+    opening_wall_support_rule: not automatically used as opening support
+    fixture_instance_rule: not applicable
+    overlap_rules: may overlap window_opening but must be compared separately
+    sigmoid_compatible: true
+    softmax_compatible: false
+    loss_compatibility: independent symbol target if trained
+    derivation_order: source icon parse
+    validation_invariants: not assumed identical to window_opening
+    known_ambiguities: current icon parser also uses top-level Window polygon
+    review_required_conditions: equality with window_opening must be manually reviewed
+fixture_defaults: &fixture_defaults
+  target_type: binary_mask
+  coordinate_system: native image pixels
+  rasterization_method: FloorTrans get_icon or fixed-furniture fallback, grouped by explicit ontology
+  antialiasing_policy: categorical values only
+  binary_or_class_index_value_convention: binary 0/1
+  resize_policy: nearest-neighbor
+  crop_policy: identical geometric crop
+  padding_policy: 0 in masks
+  morphology_operations: none
+  skeletonization_algorithm: none
+  connectivity_convention: 8-connected for components
+  junction_radius: null
+  endpoint_radius: null
+  opening_wall_support_rule: not applicable
+  fixture_instance_rule: fixed-furniture grouped object; multi-element groups retained through source metadata
+  overlap_rules: fixture classes are expected mutually exclusive unless source overlap is recorded and reviewed
+  sigmoid_compatible: true
+  softmax_compatible: review_required
+  loss_compatibility: independent binary fixture probes preferred until mappings pass review
+  derivation_order: source icon parse after source audit
+  validation_invariants: every positive pixel maps to declared source class lineage
+  known_ambiguities: grouped classes may merge visually distinct fixture types
+  review_required_conditions: source-supported empty target, overlap with mutually exclusive fixture class, other_fixture use
+fixture_targets:
+  - name: cabinetry_storage
+    semantic_definition: Cabinets, closets, coat racks, countertops, housing, base cabinets, and wall cabinets.
+    source_element_classes: ["Closet", "ClosetRound", "ClosetTriangle", "CoatCloset", "CoatRack", "CounterTop", "Housing", "BaseCabinet", "BaseCabinetRound", "BaseCabinetTriangle", "WallCabinet"]
+    source_element_attributes: ["FixedFurniture class tokens"]
+    <<: *fixture_defaults
+  - name: appliance
+    semantic_definition: Stoves, washing machines, dishwashers, refrigerators, dryers, heaters, fans, and appliance spaces.
+    source_element_classes: ["ElectricalAppliance", "WoodStove", "GasStove", "SaunaStove", "WashingMachine", "IntegratedStove", "Dishwasher", "GeneralAppliance", "Refrigerator", "DoubleRefrigerator", "TumbleDryer", "Heater", "HighHeater", "SpaceForAppliance", "SpaceForAppliance2", "IntegratedStoveSmall", "Fan", "Stove", "GEARound", "SaunaStoveRound", "Round"]
+    source_element_attributes: ["FixedFurniture class tokens"]
+    <<: *fixture_defaults
+  - name: toilet_urinal
+    semantic_definition: Toilet and urinal fixture footprints or symbols.
+    source_element_classes: ["Toilet", "Urinal"]
+    source_element_attributes: ["FixedFurniture class tokens"]
+    <<: *fixture_defaults
+  - name: sink_tap
+    semantic_definition: Sink and water-tap fixture footprints or symbols.
+    source_element_classes: ["SideSink", "Sink", "RoundSink", "CornerSink", "DoubleSink", "DoubleSinkRight", "WaterTap"]
+    source_element_attributes: ["FixedFurniture class tokens"]
+    <<: *fixture_defaults
+  - name: sauna_bench
+    semantic_definition: Sauna bench fixture footprints or symbols.
+    source_element_classes: ["SaunaBench", "SaunaBenchHigh", "SaunaBenchLow", "SaunaBenchMid"]
+    source_element_attributes: ["FixedFurniture class tokens"]
+    <<: *fixture_defaults
+  - name: fireplace
+    semantic_definition: Fireplace and place-for-fireplace footprints or symbols.
+    source_element_classes: ["Fireplace", "FireplaceCorner", "FireplaceRound", "PlaceForFireplace", "PlaceForFireplaceCorner", "PlaceForFireplaceRound"]
+    source_element_attributes: ["FixedFurniture class tokens"]
+    <<: *fixture_defaults
+  - name: bathtub_shower_jacuzzi
+    semantic_definition: Bathtub, shower, shower screen/platform/cabinet, and jacuzzi footprints or symbols.
+    source_element_classes: ["Bathtub", "BathtubRound", "Shower", "ShowerCab", "ShowerPlatform", "ShowerScreen", "ShowerScreenRoundLeft", "ShowerScreenRoundRight", "Jacuzzi"]
+    source_element_attributes: ["FixedFurniture class tokens"]
+    <<: *fixture_defaults
+  - name: chimney
+    semantic_definition: Chimney fixture footprint or symbol.
+    source_element_classes: ["Chimney"]
+    source_element_attributes: ["FixedFurniture class tokens"]
+    <<: *fixture_defaults
+  - name: other_fixture
+    semantic_definition: Explicitly retained mapped fixture geometry not belonging to another declared fixture class.
+    source_element_classes: ["Misc", "unrecognized FixedFurniture token after audit"]
+    source_element_attributes: ["FixedFurniture class tokens with original source lineage"]
+    <<: *fixture_defaults
+relationships:
+  - target_a: visible_wall
+    target_b: structural_wall
+    overlap_allowed: true
+    containment_expected: visible_wall_subset_structural_wall
+    mutual_exclusivity_expected: false
+    derivation_relationship: visible_wall derives from structural_wall minus openings
+    current_model_compatible: true
+    evidence: Phase 2 uses independent sigmoid heads; visible_wall is candidate-only.
+    unresolved: false
+  - target_a: structural_wall_boundary
+    target_b: structural_wall
+    overlap_allowed: true
+    containment_expected: structural_wall_boundary_subset_structural_wall
+    mutual_exclusivity_expected: false
+    derivation_relationship: boundary derives from structural_wall
+    current_model_compatible: true
+    evidence: Phase 2 boundary is independent sigmoid.
+    unresolved: false
+  - target_a: visible_wall_boundary
+    target_b: visible_wall
+    overlap_allowed: true
+    containment_expected: visible_wall_boundary_subset_visible_wall
+    mutual_exclusivity_expected: false
+    derivation_relationship: boundary derives from visible_wall
+    current_model_compatible: true
+    evidence: candidate-only target.
+    unresolved: false
+  - target_a: structural_wall_centerline
+    target_b: structural_wall
+    overlap_allowed: true
+    containment_expected: centerline_inside_dilated_structural_wall
+    mutual_exclusivity_expected: false
+    derivation_relationship: centerline derives from structural_wall
+    current_model_compatible: true
+    evidence: Phase 1/2 centerline is independent sigmoid.
+    unresolved: false
+  - target_a: visible_wall_centerline
+    target_b: visible_wall
+    overlap_allowed: true
+    containment_expected: centerline_inside_dilated_visible_wall
+    mutual_exclusivity_expected: false
+    derivation_relationship: centerline derives from visible_wall
+    current_model_compatible: true
+    evidence: candidate-only target.
+    unresolved: false
+  - target_a: door_opening
+    target_b: structural_wall
+    overlap_allowed: true
+    containment_expected: near_or_intersects_structural_wall_corridor
+    mutual_exclusivity_expected: false
+    derivation_relationship: visible_wall subtracts door_opening
+    current_model_compatible: true
+    evidence: Phase 2 door opening is independent sigmoid.
+    unresolved: true
+  - target_a: window_opening
+    target_b: structural_wall
+    overlap_allowed: true
+    containment_expected: near_or_intersects_structural_wall_corridor
+    mutual_exclusivity_expected: false
+    derivation_relationship: visible_wall subtracts window_opening
+    current_model_compatible: true
+    evidence: window opening is candidate-only in this experiment.
+    unresolved: true
+  - target_a: door_symbol
+    target_b: door_opening
+    overlap_allowed: true
+    containment_expected: no
+    mutual_exclusivity_expected: false
+    derivation_relationship: separate parse products that must be compared
+    current_model_compatible: false
+    evidence: existing multiclass icon head treats door as an icon class, not the Phase 2 door-opening head.
+    unresolved: true
+  - target_a: window_symbol
+    target_b: window_opening
+    overlap_allowed: true
+    containment_expected: no
+    mutual_exclusivity_expected: false
+    derivation_relationship: separate parse products that must be compared
+    current_model_compatible: false
+    evidence: existing multiclass icon head treats window as an icon class, not an opening head.
+    unresolved: true
+  - target_a: fixture_classes
+    target_b: fixture_classes
+    overlap_allowed: review_required
+    containment_expected: no
+    mutual_exclusivity_expected: true
+    derivation_relationship: grouped source icon classes
+    current_model_compatible: review_required
+    evidence: multiclass icon head forces class exclusivity; binary fixture probes avoid that assumption.
+    unresolved: true

@@ -1,0 +1,17 @@
+mapping_version: fixture_target_mapping_v2
+target_generator_version: candidate_v2
+class_groups:
+  cabinetry_storage: [Closet, ClosetRound, ClosetTriangle, CoatCloset, CoatRack, CounterTop, Housing, BaseCabinet, BaseCabinetRound, BaseCabinetTriangle, WallCabinet]
+  appliance: [ElectricalAppliance, WoodStove, GasStove, SaunaStove, WashingMachine, IntegratedStove, Dishwasher, GeneralAppliance, Refrigerator, DoubleRefrigerator, TumbleDryer, Heater, HighHeater, SpaceForAppliance, SpaceForAppliance2, IntegratedStoveSmall, Fan, Stove, GEARound, SaunaStoveRound, Round]
+  toilet_urinal: [Toilet, Urinal]
+  sink_tap: [SideSink, Sink, RoundSink, CornerSink, DoubleSink, DoubleSinkRight, WaterTap]
+  sauna_bench: [SaunaBench, SaunaBenchHigh, SaunaBenchLow, SaunaBenchMid]
+  fireplace: [Fireplace, FireplaceCorner, FireplaceRound, PlaceForFireplace, PlaceForFireplaceCorner, PlaceForFireplaceRound]
+  bathtub_shower_jacuzzi: [Bathtub, BathtubRound, Shower, ShowerCab, ShowerPlatform, ShowerScreen, ShowerScreenRoundLeft, ShowerScreenRoundRight, Jacuzzi]
+  chimney: [Chimney]
+  other_fixture: [Misc]
+rules:
+  unknown_classes: keep source lineage and queue for review; do not silently merge into other_fixture
+  overlap: fixture-class overlap is review-required
+  morphology: none in canonical native targets
+  probes: binary fixture probes only after fixture gates and review coverage pass

@@ -1,0 +1,284 @@
+experiment_id: 14_mitunet_1024_hierarchical_phase3a2
+name: MitUNet 1024 whole-plan with Phase 5 heads and Phase 3A.2 targets
+status: proposed
+evidence_status: PROPOSED
+basis_evidence_status: VERIFIED
+config_role: design_specification
+ready_for_training: false
+created_date: '2026-10-20'
+execution:
+  training_executed: false
+  combined_source_entrypoint: null
+  run_directory: null
+  checkpoint: null
+  selected_thresholds: null
+  adaptation_plan: INTEGRATION_PLAN.md
+parents:
+  wall_initialization: 06_binary_mitunet_1024
+  head_architecture: 09_phase5_hierarchical_multihead_512
+  opening_geometry: 10_phase3a2_door_opening_v31_vs_v32_512
+  human_review_workflow: 13_phase3a_human_review_tool
+  source_workspaces:
+    - /home/pmharris/dev/mitunet
+    - /home/pmharris/dev/mitunet_multihead
+    - /home/pmharris/dev/mitunet_phase3a2_512
+baseline:
+  checkpoint: /home/pmharris/dev/mitunet/experiments/cubicasa5k_mitunet/full_gpu_1024/best_model.pth
+  checkpoint_sha256: 42cad015bf894e6afe11011424b7ed88c49a1512f81593f14df5b228d65a3910
+  validation_reference_threshold: 0.1
+  historical_val_micro_iou_at_reference_threshold: 0.8267843774749646
+  reference_val_micro_iou_reproduced: null
+  proposed_initialization_max_abs_logit_error_float32: 1.0e-6
+  validation_only_reproduction: true
+data:
+  dataset: CubiCasa5K
+  dataset_version: 4
+  source_root: /home/pmharris/dev/cubicasa5k_data
+  image_file: F1_scaled.png
+  nominal_split_counts: {train: 4200, val: 400, test: 400}
+  split_membership: exact official historical sample IDs
+  input_size: 1024
+  resize_mode: letterbox
+  spatial_context: whole_plan
+  normalization:
+    mean: [0.485, 0.456, 0.406]
+    std: [0.229, 0.224, 0.225]
+  image_interpolation: linear
+  mask_interpolation: nearest
+  proposed_transform_implementation: OpenCV native-to-model transform; verify agreement with parent preprocessing
+  resize_rounding: round each scaled dimension; minimum 1 pixel
+  padding_alignment: centered; odd extra pixel on bottom or right
+  image_padding_rgb: [255, 255, 255]
+  mask_padding_value: 0
+  mask_values: [0, 1]
+  mask_storage: lossless PNG
+  augmentation: false
+  augmentation_evidence: conservative transfer of experiment 09's successful fine-tuning recipe
+  subtract_openings: false
+  crop_sampling: false
+  patch_fusion: false
+  transform_record: [original_height, original_width, scaled_height, scaled_width, scale, pad_top, pad_bottom, pad_left, pad_right, rounding_policy, interpolation_implementation]
+model:
+  architecture: HierarchicalMitUNet
+  encoder_name: mit_b4
+  decoder_attention_type: scse
+  initialization: load experiment-06 encoder and wall path; copy its decoder for new groups
+  new_heads_initialization: Phase 5 initialization policy
+  head_kernel_size: 3
+  activation: independent_sigmoid
+  task_head_count: 8
+  scalar_output_channels: 16
+  parameter_count_parent_phase5: 74468332
+  parameter_count_measured: null
+  decoder_groups:
+    wall: [structural_wall]
+    geometry: [wall_boundary, wall_centerline, junction, endpoint]
+    openings: [door_opening, window_opening]
+    fixtures: [fixtures]
+  fixture_class_order:
+    - cabinetry_storage
+    - appliance
+    - toilet_urinal
+    - sink_tap
+    - sauna_bench
+    - fireplace
+    - bathtub_shower_jacuzzi
+    - chimney
+    - other_fixture
+targets:
+  proposed_bundle_version: mitunet-1024-hierarchical-phase3a2-v1
+  config_sha256_at_materialization: null
+  manifest_sha256_at_materialization: null
+  image_size: 1024
+  rebuild_from_native_sources: true
+  reuse_512_mask_paths: false
+  structural_wall:
+    source: native SVG Wall definition matching experiment 06
+    subtract_openings: false
+    require_parent_target_pixel_identity: true
+    global_closing: false
+    local_structural_bridge_repair: false
+  wall_boundary: {source: regenerated 1024 structural wall, raw_and_training_separate: true}
+  wall_centerline: {source: regenerated 1024 structural wall, raw_skeleton_and_training_separate: true, morphological_closing: false, spur_pruning: false}
+  topology:
+    source: selected structural-wall raw centerline
+    connectivity: 8
+    endpoint_degree: 1
+    junction_min_branch_degree: 3
+    include_corners: true
+    include_t_junctions: true
+    include_cross_junctions: true
+    include_multi_branch: true
+    junction_includes_endpoints: false
+    corner_angle_degrees: 45
+    straight_line_tolerance_degrees: 15
+    junction_clustering: preserve Phase 1 algorithm in the regenerated coordinate space
+  door_opening:
+    generator_version: candidate_v3.2
+    source: native source-associated opening masks with scoped axis repair
+    exclude_symbol_geometry: true
+    preserve_source_instance_ids: true
+  window_opening:
+    contract: candidate_target_mapping_v3
+    source: source-associated window openings with inherited source-instance and host-association repairs
+    change_from_phase5: replaces candidate-v2 window definition
+    special_v3_2_door_axis_rule_applies: false
+    exclude_symbol_geometry: true
+  opening_generator:
+    target_generator_version_override: candidate_v3.2
+    repair_door_opening_tangent_normal_semantics: true
+    repair_door_opening_seed_semantics: true
+    repair_source_instance_classification_and_localization: true
+    repair_opening_host_wall_association: true
+    association_max_distance_px: 3
+    min_wall_overlap_ratio: 0.05
+    door_seed_repair_min_wall_overlap_ratio: 0.02
+    door_seed_repair_local_radius_px: 48
+    gap_association_search_radius_px: 36
+    association_parameter_space: native source pixels
+    door_tangent_normal_axis_tolerance_degrees: 15.0
+    door_tangent_normal_repair_instances_file: source_provenance/phase3a2_repair_scope.json
+    resolve_instances_to_generator_list: required
+    reject_missing_or_empty_scope: true
+    source_instance_dispositions: freeze the source runner's SOURCE_INSTANCE_DISPOSITIONS with the resolved config
+    axis_convention: wall tangent is opening long axis; wall normal is opening thickness axis
+    angle_equivalence_degrees: 180
+  model_space_radius_policy:
+    status: proposed scale adaptation
+    reference_size: 512
+    output_size: 1024
+    centerline_training_dilation_radius: 2
+    boundary_training_dilation_radius: 2
+    door_training_dilation_radius: 2
+    window_training_dilation_radius: 2
+    junction_disk_radius: 6
+    junction_cluster_radius: 6
+    endpoint_disk_radius: 6
+    raw_evaluation_targets_dilated: false
+  fixtures:
+    mapping: source_provenance/contracts/fixture_target_mapping_v2.yaml
+    encoding: uint16_bitmask
+    class_order: model.fixture_class_order
+    unknown_policy: preserve source lineage and explicit disposition; no silent other_fixture merge
+    upstream_overlap_resolution_audit: required
+  evidence_masks: [door_symbol, window_symbol]
+  derived_outputs:
+    visible_wall: structural_wall AND NOT raw_door_opening AND NOT raw_window_opening
+    fixture_obstacle_union: OR of nine fixture-class masks; diagnostic only
+  validation:
+    final_loss_tensor_audit: true
+    per_instance_resize_survivability: true
+    pixel_change_scope_check: true
+    split_leakage_and_duplicate_check: true
+    categorical_values_and_bitmask_roundtrip: true
+    visible_wall_formula_check: true
+    opening_host_and_axis_check: true
+    image_mask_point_transform_identity: true
+    source_class_and_unknown_mapping_report: true
+    training_statistics_use_train_only: true
+loss:
+  weighting_method: fixed
+  structural_wall: {name: asymmetric_tversky, alpha: 0.6, beta: 0.4}
+  wall_boundary: {bce_weight: 0.5, dice_weight: 0.5, max_pos_weight: 15.0}
+  wall_centerline: {bce_weight: 0.5, soft_cldice_weight: 0.5, soft_cldice_iterations: 10, max_pos_weight: 20.0}
+  junction: {name: sigmoid_focal_bce, alpha: 0.75, gamma: 2.0, max_pos_weight: 20.0}
+  endpoint: {name: sigmoid_focal_bce, alpha: 0.75, gamma: 2.0, max_pos_weight: 20.0}
+  door_opening: {focal_weight: 0.5, dice_weight: 0.5, alpha: 0.75, gamma: 2.0, max_pos_weight: 20.0}
+  window_opening: {focal_weight: 0.5, dice_weight: 0.5, alpha: 0.75, gamma: 2.0, max_pos_weight: 20.0}
+  fixtures: {focal_weight: 0.5, dice_weight: 0.5, alpha: 0.75, gamma: 2.0, max_pos_weight: 20.0, class_aggregation: mean}
+  task_weights: {structural_wall: 0.40, wall_boundary: 0.08, wall_centerline: 0.12, junction: 0.05, endpoint: 0.03, door_opening: 0.12, window_opening: 0.12, fixtures: 0.08}
+training:
+  total_epochs: 30
+  optimizer: adam
+  weight_decay: 0.0
+  physical_batch_size: 1
+  gradient_accumulation_steps: 4
+  nominal_effective_batch_size: 4
+  full_split_nominal_microbatches_per_epoch: 4200
+  full_split_nominal_optimizer_updates_per_epoch: 1050
+  batch_policy_requires_resource_preflight: true
+  num_workers: 4
+  amp: true
+  seed: 42
+  replication_seeds_proposed: [42, 43, 44]
+  warmup:
+    epochs: 4
+    learning_rate: 0.0001
+    freeze_encoder: true
+    freeze_wall_path: true
+    inherited_modules_mode: eval
+  joint:
+    epochs: 26
+    encoder_lr: 0.00001
+    wall_path_lr: 0.00001
+    new_path_lr: 0.0001
+    inherited_lr_ramp_epochs: 1
+    scheduler: ReduceLROnPlateau
+    scheduler_mode: max
+    scheduler_factor: 0.5
+    scheduler_patience: 3
+    early_stopping_metric: val_gated_hierarchical_score_native_1024
+    early_stopping_patience: 8
+    normalization_policy: retain existing Phase 5 joint train modes; record behavior at physical batch 1
+  paired_label_causal_comparison:
+    require_common_predeclared_lr_timetable_override: true
+    timetable_artifact: null
+    reason: adaptive schedules can diverge between label arms
+selection:
+  wall_protection:
+    split: val
+    threshold: 0.1
+    metric: native_1024_structural_wall_micro_iou
+    reference: reproduced experiment-06 validation result
+    floor_delta: -0.005
+    resolved_floor: null
+    illustrative_floor_if_historical_reference_reproduced: 0.8217843774749646
+  checkpoint_rule: highest native-1024 hierarchical score among wall-gate-eligible checkpoints
+  checkpoints: [best_gated_hierarchical_score, best_structural_wall_iou, best_ungated_hierarchical_score, last]
+  initial_selection_thresholds:
+    policy: fixed diagnostic thresholds before post-selection calibration
+    structural_wall: 0.1
+    all_other_heads_and_fixture_classes: 0.5
+    junction_nms_radius: 6
+    endpoint_nms_radius: 6
+  score_weights: {structural_wall_iou: 0.40, wall_boundary_f1_4px: 0.10, wall_centerline_skeleton_cldice: 0.10, junction_f1_10px: 0.05, endpoint_f1_10px: 0.05, door_object_f1: 0.10, window_object_f1: 0.10, fixtures_macro_iou: 0.10}
+threshold_search:
+  split: val
+  after_checkpoint_selection: true
+  probability_grid: [0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.45, 0.50, 0.55, 0.60, 0.65, 0.70, 0.75, 0.80, 0.85, 0.90, 0.95]
+  boundary_grid: [0.30, 0.50, 0.70, 0.80, 0.90, 0.95, 0.975, 0.99]
+  native_1024_point_nms_radii: [4, 6]
+  common_512_point_nms_radii: [2, 3]
+  objectives:
+    structural_wall: micro_dice; tie-break micro_iou then lower threshold
+    wall_boundary: profile-specific boundary_f1
+    wall_centerline: skeleton_cldice
+    points: profile-specific point_f1
+    openings: object_f1_iou_0_25
+    fixtures: per-class iou
+evaluation:
+  common_reference_bundle_sha256: null
+  profile_native_1024: {space: letterbox_1024, boundary_tolerance_px: 4, point_tolerance_px: 10}
+  profile_common_512: {space: canonical_letterbox_512, boundary_tolerance_px: 2, point_tolerance_px: 5}
+  profile_native_1024_strict: {space: letterbox_1024, boundary_tolerance_px: 2, point_tolerance_px: 5}
+  scoreboard_wall_profile: native_1024
+  scoreboard_boundary_and_point_profile: common_512
+  object_matching_iou_thresholds: [0.25, 0.5]
+  bootstrap: {unit: paired_plan, resamples: 2000, seed: 42}
+  test_policy: evaluate once after freezing model selection, references and calibration
+inference_contract:
+  version_proposed: mitunet-hierarchical-1024-phase3a2-predictions-v1
+  input: RGB image
+  selected_thresholds: null
+  preserve_per_head_probabilities: true
+  prediction_encoding_proposed: uint16
+  binary_bits_0_to_6: [structural_wall, wall_boundary, wall_centerline, junction, endpoint, door_opening, window_opening]
+  fixture_bits_7_to_15: model.fixture_class_order
+  downstream_contract_adapter_required: true
+storage:
+  proposed_run_root: /mnt/e/AI_Team/mitunet/experiments/mitunet_1024_hierarchical_phase3a2
+  proposed_target_root: /mnt/e/AI_Team/mitunet/targets/mitunet_1024_hierarchical_phase3a2
+  timestamped_runs: true
+  checkpoint_cadence: epoch boundary plus explicitly logged recovery interval
+  cloud_hot_path: stage immutable inputs locally; persist checkpoints and audit records durably
+  run_created: false

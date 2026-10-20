@@ -8,7 +8,7 @@ Audit date: 2026-08-31. Updated 2026-09-17 with the RunPod 1024 high-resolution 
 
 ## Scope
 
-The current audit covers thirteen experiments and operational studies:
+The current audit covers fourteen experiments and operational studies, including the proposed integrated configuration in experiment 14:
 
 | ID | Experiment | Status | Read next |
 | --- | --- | --- | --- |
@@ -25,8 +25,15 @@ The current audit covers thirteen experiments and operational studies:
 | 11 | bim_bridge_v0 downstream IFC bridge (integration, not a segmentation experiment) | completed | [experiments/11_bim_bridge_v0/README.md](experiments/11_bim_bridge_v0/README.md) |
 | 12 | bim_bridge PM comparison: CubiCasa test vs AI-generated plans, bridge repair rules (illustration, not a benchmark) | completed | [experiments/12_bim_bridge_pm_comparison/README.md](experiments/12_bim_bridge_pm_comparison/README.md) |
 | 13 | MitUNet Phase 3A Human Review Tool (operational tooling audit) | operational | [experiments/13_phase3a_human_review_tool/README.md](experiments/13_phase3a_human_review_tool/README.md) |
+| 14 | MitUNet 1024 whole-plan + Phase 5 heads + Phase 3A.2 targets and local labeling improvements | proposed | [experiments/14_mitunet_1024_hierarchical_phase3a2/README.md](experiments/14_mitunet_1024_hierarchical_phase3a2/README.md) |
 
 The top-level scorecard is [EXPERIMENT_SCOREBOARD.csv](EXPERIMENT_SCOREBOARD.csv), and the source/evidence index is [EXPERIMENT_INDEX.md](EXPERIMENT_INDEX.md).
+
+## Proposed Integrated Configuration
+
+Added 2026-10-20: [experiment 14](experiments/14_mitunet_1024_hierarchical_phase3a2/README.md) specifies a 1024 whole-plan model initialized from experiment 06, Phase 5's eight heads and four decoder groups, source-associated opening labels and scoped Phase 3A.2 door-axis repair. Its [labeling inventory](experiments/14_mitunet_1024_hierarchical_phase3a2/LABELING_IMPROVEMENTS.md) includes the improvements developed in the local `mitunet`, `mitunet_multihead` and matched-target workspaces. The entry provides a proposed YAML configuration, code integration plan, paired evaluation protocol, 76 source-file identities, five copied labeling contracts and the ten-instance repair scope. Combined-model metrics remain `UNKNOWN` until execution; the inherited images and metrics are identified as parent evidence.
+
+Its [visual comparison index](docs/visual_comparisons/1024_hierarchical_phase3a2.md) links the whole-plan wall, Phase 5 head and Phase 3A.2 geometry images that support the design.
 
 ## Visual Evidence
 
@@ -38,7 +45,7 @@ Start at [docs/visual_comparisons/shared_validation_samples.md](docs/visual_comp
 
 ## Evidence Policy
 
-No metric is included unless it was located in a source artifact. Missing or ambiguous values are recorded as `UNKNOWN` in CSV/Markdown and as `null` in JSON. Historical values that were mentioned in planning notes but were not found in the inspected artifacts are not promoted to verified metrics.
+No measured metric is included unless it was located in a source artifact. Missing or ambiguous values are recorded as `UNKNOWN` in CSV/Markdown and as `null` in JSON. Historical values that were mentioned in planning notes but were not found in the inspected artifacts are not promoted to verified metrics. Proposed configurations are marked `PROPOSED`, with intended settings and parent evidence separated from their own measured results.
 
 ## Verified Takeaways
 

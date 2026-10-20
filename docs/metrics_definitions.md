@@ -88,3 +88,7 @@ Micro metrics aggregate counts across the split before computing the score. Macr
 
 Thresholds are copied from selected-threshold artifacts. A configured threshold and a selected threshold can differ; the scoreboard uses selected thresholds when available.
 
+## Experiment 14 Coordinate Profiles
+
+Experiment 14 proposes native-1024 wall IoU/Dice and a separately named common-512 companion evaluation. Its planned scale-aware native boundary/point tolerances are 4/10 px; the companion retains 2/5 px. Native 4/10 px values must not populate the scoreboard's 2/5 px columns. If executed, those boundary/point columns use the recorded common-512 profile, with native values retained separately in the detailed metrics. All experiment-14 measured results are currently null. See the [evaluation protocol](../experiments/14_mitunet_1024_hierarchical_phase3a2/EVALUATION_PROTOCOL.md).
+

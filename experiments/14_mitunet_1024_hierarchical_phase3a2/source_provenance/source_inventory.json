@@ -1,0 +1,668 @@
+{
+  "inspection_date": "2026-10-20",
+  "purpose": "Evidence identity for the experiment-14 proposal; scientific sources are read-only.",
+  "source_files": [
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "mitunet_cubicasa/hierarchical_model.py",
+      "path": "/home/pmharris/dev/mitunet/mitunet_cubicasa/hierarchical_model.py",
+      "size_bytes": 20662,
+      "sha256": "85da0f809de5c6ad0776c87763abce7b9d752dca557ad7baf00bd2659c00b8b0"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "mitunet_cubicasa/hierarchical_dataset.py",
+      "path": "/home/pmharris/dev/mitunet/mitunet_cubicasa/hierarchical_dataset.py",
+      "size_bytes": 7637,
+      "sha256": "814c297d574d3e9cabfbf1ed2e054e0ebebd1511cfba6ec6889fe33525b6e08c"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "mitunet_cubicasa/hierarchical_targets.py",
+      "path": "/home/pmharris/dev/mitunet/mitunet_cubicasa/hierarchical_targets.py",
+      "size_bytes": 27895,
+      "sha256": "166ca57d47c56b506cdd9e3e2f2be59cf7f70dbd531dbbfb54f416780432ab3a"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "mitunet_cubicasa/hierarchical_evaluation.py",
+      "path": "/home/pmharris/dev/mitunet/mitunet_cubicasa/hierarchical_evaluation.py",
+      "size_bytes": 38210,
+      "sha256": "d7b48c185c4d6b168355fda615d708153fc39d9d440b5914177af07ef90a7265"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "mitunet_cubicasa/hierarchical_losses.py",
+      "path": "/home/pmharris/dev/mitunet/mitunet_cubicasa/hierarchical_losses.py",
+      "size_bytes": 15816,
+      "sha256": "f1dd373a1a408357385e023c62f5d2539927a98409047aa0a8c76b6d972053ea"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "mitunet_cubicasa/hierarchical_label_validation.py",
+      "path": "/home/pmharris/dev/mitunet/mitunet_cubicasa/hierarchical_label_validation.py",
+      "size_bytes": 38688,
+      "sha256": "6954b12e90499493f3bcf0d1a9662d0d689b5d86a0ee56074cad245edbe24184"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "mitunet_cubicasa/cubicasa_parser.py",
+      "path": "/home/pmharris/dev/mitunet/mitunet_cubicasa/cubicasa_parser.py",
+      "size_bytes": 43252,
+      "sha256": "2af70d0e456c992928edba87f077c8387c9f16f189a4514da15d2bdd3617f9d4"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "mitunet_cubicasa/ontology.py",
+      "path": "/home/pmharris/dev/mitunet/mitunet_cubicasa/ontology.py",
+      "size_bytes": 9976,
+      "sha256": "a4038342d1ef4ad8c309b9313edfb8aaa8f2c73ccf10f26c7544d67a4b259d9d"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "mitunet_cubicasa/transforms.py",
+      "path": "/home/pmharris/dev/mitunet/mitunet_cubicasa/transforms.py",
+      "size_bytes": 2299,
+      "sha256": "6b1c0f2233c4fde76010bb2e870bef131a6898df3180f3518b7ac12c563298cf"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "mitunet_cubicasa/wall_structure_targets.py",
+      "path": "/home/pmharris/dev/mitunet/mitunet_cubicasa/wall_structure_targets.py",
+      "size_bytes": 36995,
+      "sha256": "d6690d739d4397201b9ccca4d1ba79b21595d7ad9fc578be52119b33964a3abe"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "mitunet_cubicasa/wall_structure_phase2_targets.py",
+      "path": "/home/pmharris/dev/mitunet/mitunet_cubicasa/wall_structure_phase2_targets.py",
+      "size_bytes": 36061,
+      "sha256": "39243dd43e3239d23c5714e9e26c8df754ba70dad701a6e365c13d6afd1de11f"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "scripts/run_hierarchical_multihead_experiment.py",
+      "path": "/home/pmharris/dev/mitunet/scripts/run_hierarchical_multihead_experiment.py",
+      "size_bytes": 85338,
+      "sha256": "ca04dbabc16a1e240fc279d0f98be6f89c6c8661fb9cc9525fbd57bab12f10f9"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "scripts/run_phase3a1_opening_rule_repair.py",
+      "path": "/home/pmharris/dev/mitunet/scripts/run_phase3a1_opening_rule_repair.py",
+      "size_bytes": 67492,
+      "sha256": "968211ca50b4ccc16462aafa8473401fce0a0e544c469f55d5c1bc20c5890875"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "scripts/run_phase3a2_opening_axis_repair.py",
+      "path": "/home/pmharris/dev/mitunet/scripts/run_phase3a2_opening_axis_repair.py",
+      "size_bytes": 69188,
+      "sha256": "965180a2f5fb78b4749f8b2475a10ca0a24715e9e17dfd04f51166f89ac4fd17"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "scripts/audit_run_labels_to_mlflow.py",
+      "path": "/home/pmharris/dev/mitunet/scripts/audit_run_labels_to_mlflow.py",
+      "size_bytes": 96688,
+      "sha256": "d46a9677748849d80e207d99181744356c34fa3ec52e688a8c2e93f70f40a733"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "scripts/gradio_phase3a_target_review.py",
+      "path": "/home/pmharris/dev/mitunet/scripts/gradio_phase3a_target_review.py",
+      "size_bytes": 61905,
+      "sha256": "f04f2b83beb84815609e0a2fe8043cb7f58732fbedcb8322c5324287d4ec6464"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "configs/experiments/mitunet_hierarchical_multihead_512_noaug.yaml",
+      "path": "/home/pmharris/dev/mitunet/configs/experiments/mitunet_hierarchical_multihead_512_noaug.yaml",
+      "size_bytes": 11583,
+      "sha256": "ea6dda8b54aeba62c86ea2583d1e8392630b55ce341d13ba1292e7ad69f4cc35"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "configs/experiments/mitunet_phase1_wall_region_centerline_junctions.yaml",
+      "path": "/home/pmharris/dev/mitunet/configs/experiments/mitunet_phase1_wall_region_centerline_junctions.yaml",
+      "size_bytes": 3651,
+      "sha256": "e0e38363872f3b42e3bbea110780ed3b3285db1f5128fa8f1b6dab22270353fa"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "configs/experiments/mitunet_phase2_wall_boundary_door_openings.yaml",
+      "path": "/home/pmharris/dev/mitunet/configs/experiments/mitunet_phase2_wall_boundary_door_openings.yaml",
+      "size_bytes": 6148,
+      "sha256": "6a03a600dd9fc408b76c4e63d057c3af6e60488248a7ad72d8d53e147dcc2f65"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "configs/targets/target_contract_v1.yaml",
+      "path": "/home/pmharris/dev/mitunet/configs/targets/target_contract_v1.yaml",
+      "size_bytes": 34913,
+      "sha256": "640d429f5e77f2717b354eee93cc77cea785c2e4b77df67728294df2c21069c2"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "configs/targets/candidate_target_mapping_v3.yaml",
+      "path": "/home/pmharris/dev/mitunet/configs/targets/candidate_target_mapping_v3.yaml",
+      "size_bytes": 2580,
+      "sha256": "f8606929a841311117b4756e831dd1b25b1940b5d246eb894c608c55d27e4cb5"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "configs/targets/opening_derivation_v3.yaml",
+      "path": "/home/pmharris/dev/mitunet/configs/targets/opening_derivation_v3.yaml",
+      "size_bytes": 1412,
+      "sha256": "ab6bcf35336a8a5f707400a0ddccda548ec355fe2c38981fb6b08b212498244a"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "configs/targets/fixture_target_mapping_v2.yaml",
+      "path": "/home/pmharris/dev/mitunet/configs/targets/fixture_target_mapping_v2.yaml",
+      "size_bytes": 1383,
+      "sha256": "00193b292451fd709f7fe5688a594b24cd206896a9387830542787d6fc09ac65"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "configs/targets/source_class_taxonomy_v1.yaml",
+      "path": "/home/pmharris/dev/mitunet/configs/targets/source_class_taxonomy_v1.yaml",
+      "size_bytes": 3537,
+      "sha256": "b27dd860e7b1a79e3db10fd5fba988983bf859c3d89ef121228da35c9bef2911"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "mitunet_cubicasa/target_integrity/contracts.py",
+      "path": "/home/pmharris/dev/mitunet/mitunet_cubicasa/target_integrity/contracts.py",
+      "size_bytes": 5306,
+      "sha256": "d40538bd8e1a1a986da85981b76650df46b232b8a84b2b8eca7d4bbfcacf9b52"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "mitunet_cubicasa/target_integrity/source_mapping.py",
+      "path": "/home/pmharris/dev/mitunet/mitunet_cubicasa/target_integrity/source_mapping.py",
+      "size_bytes": 4304,
+      "sha256": "14ce85e6b50b8fce229df6de91c7e07ce4c340ec13ea3285d21483b38f4b027f"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "mitunet_cubicasa/target_integrity/source_taxonomy.py",
+      "path": "/home/pmharris/dev/mitunet/mitunet_cubicasa/target_integrity/source_taxonomy.py",
+      "size_bytes": 18662,
+      "sha256": "2924e8171778502b0bc2b0f5b154206657215b58f26861c46fb94f6dcdcf3c1e"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "mitunet_cubicasa/target_integrity/source_class_evidence.py",
+      "path": "/home/pmharris/dev/mitunet/mitunet_cubicasa/target_integrity/source_class_evidence.py",
+      "size_bytes": 30745,
+      "sha256": "d2d5b6a9c83a32d485f1173ca471dfb9dfb6c273ae760ec8a9a213bc6067cddc"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "mitunet_cubicasa/target_integrity/opening_derivation_v3.py",
+      "path": "/home/pmharris/dev/mitunet/mitunet_cubicasa/target_integrity/opening_derivation_v3.py",
+      "size_bytes": 53306,
+      "sha256": "b188bc5dea33d546944d3a9bc96147ba21a66aaf1cf2cce52e1d9f2342aee29a"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "mitunet_cubicasa/target_integrity/opening_association.py",
+      "path": "/home/pmharris/dev/mitunet/mitunet_cubicasa/target_integrity/opening_association.py",
+      "size_bytes": 17552,
+      "sha256": "d27a6c2b75170d527fe8d49e69ed533ff01d0b45f23ba7c5c6e2adb65a025f0f"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "mitunet_cubicasa/target_integrity/derive_walls.py",
+      "path": "/home/pmharris/dev/mitunet/mitunet_cubicasa/target_integrity/derive_walls.py",
+      "size_bytes": 1520,
+      "sha256": "94b2e2f5a7cefb9d98ee569c1e8c31a65fc36ec4c3a82b787389a5d4db455f89"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "mitunet_cubicasa/target_integrity/derive_topology.py",
+      "path": "/home/pmharris/dev/mitunet/mitunet_cubicasa/target_integrity/derive_topology.py",
+      "size_bytes": 1507,
+      "sha256": "00d8933a8a4b031af153ecab0e4f6a97c8edcba6ab58b31ab845cdaa1c254205"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "mitunet_cubicasa/target_integrity/derive_fixtures.py",
+      "path": "/home/pmharris/dev/mitunet/mitunet_cubicasa/target_integrity/derive_fixtures.py",
+      "size_bytes": 1060,
+      "sha256": "476fd5551818c889f2fbb270edbdccb5d20a1575ded58b9fc6e5806598fe55b1"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "mitunet_cubicasa/target_integrity/structural_wall_repair.py",
+      "path": "/home/pmharris/dev/mitunet/mitunet_cubicasa/target_integrity/structural_wall_repair.py",
+      "size_bytes": 2391,
+      "sha256": "dc9d706dc478781963fc18438683778b3694257fa1774f907291eaf4b7100e03"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "mitunet_cubicasa/target_integrity/transforms.py",
+      "path": "/home/pmharris/dev/mitunet/mitunet_cubicasa/target_integrity/transforms.py",
+      "size_bytes": 207,
+      "sha256": "8a072899a46b3278684968c104efdf9d11e658c8fd741737ebb0dac833afa571"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "mitunet_cubicasa/target_integrity/geometry.py",
+      "path": "/home/pmharris/dev/mitunet/mitunet_cubicasa/target_integrity/geometry.py",
+      "size_bytes": 4175,
+      "sha256": "184deaa0a0eb70e86fabec738f2695b0efb432b8118b312c7dfb83c17ee1f32f"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "mitunet_cubicasa/target_integrity/validate_pixel_preservation.py",
+      "path": "/home/pmharris/dev/mitunet/mitunet_cubicasa/target_integrity/validate_pixel_preservation.py",
+      "size_bytes": 1245,
+      "sha256": "09b2bfe0391cc2a2cd0589e1d70a0f1c72970f7c20d04b763a5b9e5728c09b97"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "mitunet_cubicasa/target_integrity/validate_mechanical.py",
+      "path": "/home/pmharris/dev/mitunet/mitunet_cubicasa/target_integrity/validate_mechanical.py",
+      "size_bytes": 1672,
+      "sha256": "300c1c925ac1c2a54565ccb06cd6340290861f8db1689ccb952bfa65bd1bd099"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "mitunet_cubicasa/target_integrity/validate_semantic.py",
+      "path": "/home/pmharris/dev/mitunet/mitunet_cubicasa/target_integrity/validate_semantic.py",
+      "size_bytes": 2936,
+      "sha256": "0c782fae082dd418e1bf91ff2c47eb389ccab2a62e9493825899e8c02023dba7"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "mitunet_cubicasa/target_integrity/validate_model_compatibility.py",
+      "path": "/home/pmharris/dev/mitunet/mitunet_cubicasa/target_integrity/validate_model_compatibility.py",
+      "size_bytes": 5295,
+      "sha256": "d2aab2f8287411d7edcc195877c132c7e4dd6eb27852b6cafcbe6b2fa51d03ca"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "mitunet_cubicasa/target_integrity/gold_freeze.py",
+      "path": "/home/pmharris/dev/mitunet/mitunet_cubicasa/target_integrity/gold_freeze.py",
+      "size_bytes": 9284,
+      "sha256": "1b5fba5057915d8aa13f91f67b8ee95559b44f9d5261e14e8ce3fff1d75581bf"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "mitunet_cubicasa/target_integrity/gold_validation.py",
+      "path": "/home/pmharris/dev/mitunet/mitunet_cubicasa/target_integrity/gold_validation.py",
+      "size_bytes": 5473,
+      "sha256": "a5f592ada5343c21056852434c0de13e89954bb0b4a3de5ed27c219f1066e410"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "mitunet_cubicasa/target_integrity/review_adjudication.py",
+      "path": "/home/pmharris/dev/mitunet/mitunet_cubicasa/target_integrity/review_adjudication.py",
+      "size_bytes": 23907,
+      "sha256": "825f1882792e5af6684a6e4a3aea3b319b186e04cace86c4ac38782f89413d1c"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "mitunet_cubicasa/phase3a_review/manifests.py",
+      "path": "/home/pmharris/dev/mitunet/mitunet_cubicasa/phase3a_review/manifests.py",
+      "size_bytes": 10354,
+      "sha256": "136b38045c8fab651d921061c6ffae391a95e9d5857d482589635bb819ddb0d0"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "mitunet_cubicasa/phase3a_review/filtering.py",
+      "path": "/home/pmharris/dev/mitunet/mitunet_cubicasa/phase3a_review/filtering.py",
+      "size_bytes": 17539,
+      "sha256": "dcfd5d049eedf4b0032c6b5f919fe7eaff4d1dc60a4942bc48683ec90479d120"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "mitunet_cubicasa/phase3a_review/images.py",
+      "path": "/home/pmharris/dev/mitunet/mitunet_cubicasa/phase3a_review/images.py",
+      "size_bytes": 10896,
+      "sha256": "55fedf68843af967f24ce02674260465e27115db8f716c10f9ec6c87e8fd369e"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "mitunet_cubicasa/phase3a_review/persistence.py",
+      "path": "/home/pmharris/dev/mitunet/mitunet_cubicasa/phase3a_review/persistence.py",
+      "size_bytes": 14376,
+      "sha256": "757ced4fe2765dc2e1bdd40402a49930fdd1fc63e3ba5b91d56924414fc3dfaa"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "mitunet_cubicasa/phase3a_review/constants.py",
+      "path": "/home/pmharris/dev/mitunet/mitunet_cubicasa/phase3a_review/constants.py",
+      "size_bytes": 3328,
+      "sha256": "acb17c842780282df17359b1457fd52020ffa559eeacc1d44bb9156a51d048e3"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "mitunet_cubicasa/phase3a_review/metrics.py",
+      "path": "/home/pmharris/dev/mitunet/mitunet_cubicasa/phase3a_review/metrics.py",
+      "size_bytes": 13902,
+      "sha256": "cb9866d1327cee91668aacea91bfe68f12cf5cc413a37c271baea99dd14f0b22"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "tests/test_target_contract.py",
+      "path": "/home/pmharris/dev/mitunet/tests/test_target_contract.py",
+      "size_bytes": 475,
+      "sha256": "9ea8a5ca0949af283fec61bd4101dc8d9305051cc5680e3e1e56fc27c6ac03e4"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "tests/test_source_class_taxonomy.py",
+      "path": "/home/pmharris/dev/mitunet/tests/test_source_class_taxonomy.py",
+      "size_bytes": 1626,
+      "sha256": "7793a57781fd362f644d549b16e7f9635c183d407d3d7f688b29497dc6bda226"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "tests/test_door_symbol_opening_separation.py",
+      "path": "/home/pmharris/dev/mitunet/tests/test_door_symbol_opening_separation.py",
+      "size_bytes": 881,
+      "sha256": "fe7e6f9d6205d2af79b2afa8e63e7c5ed67f9b827fe595b24fe507ebc923458f"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "tests/test_window_symbol_opening_separation.py",
+      "path": "/home/pmharris/dev/mitunet/tests/test_window_symbol_opening_separation.py",
+      "size_bytes": 959,
+      "sha256": "6eb2f019e108ac8e70da1e26b53e21469900a16effae53116df8ec2c1a9e07ef"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "tests/test_opening_wall_association.py",
+      "path": "/home/pmharris/dev/mitunet/tests/test_opening_wall_association.py",
+      "size_bytes": 778,
+      "sha256": "c44756772c5ed8fd9f4c2479a8207f397a88dd3985e18f115fecf3979b3f5d04"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "tests/test_opening_derivation_v3.py",
+      "path": "/home/pmharris/dev/mitunet/tests/test_opening_derivation_v3.py",
+      "size_bytes": 823,
+      "sha256": "213d12968836e136b4f338898f134141d42a70f926a04ec56d7d8bfa08506ad9"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "tests/test_phase3a1_opening_rule_repairs.py",
+      "path": "/home/pmharris/dev/mitunet/tests/test_phase3a1_opening_rule_repairs.py",
+      "size_bytes": 3161,
+      "sha256": "1c5c42baa132147bb2a78abfa7baa9d5f4b70d6a6b0b6dc06cc320faf5e230b2"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "tests/test_phase3a2_opening_axis_repair.py",
+      "path": "/home/pmharris/dev/mitunet/tests/test_phase3a2_opening_axis_repair.py",
+      "size_bytes": 12986,
+      "sha256": "0a9153bf9949029458c5e9bcfec63a11a2829e9f2ea94050d04d475f79ec57ab"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "tests/test_target_resize_alignment.py",
+      "path": "/home/pmharris/dev/mitunet/tests/test_target_resize_alignment.py",
+      "size_bytes": 406,
+      "sha256": "87c34cf951a669ad01112c1193817e38a8d20d720e93d517003262ca0315f013"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "tests/test_pixel_preservation.py",
+      "path": "/home/pmharris/dev/mitunet/tests/test_pixel_preservation.py",
+      "size_bytes": 558,
+      "sha256": "076b5459aac9b7b5abfc1033fa1009b0984cdfd2cac95a327b5166febeb00eb5"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "tests/test_target_determinism.py",
+      "path": "/home/pmharris/dev/mitunet/tests/test_target_determinism.py",
+      "size_bytes": 526,
+      "sha256": "3ff0b2ce4012a26296727db5e49d75976e75f5919043341fab16fc49a86bbbc5"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "tests/test_fixture_target_derivation.py",
+      "path": "/home/pmharris/dev/mitunet/tests/test_fixture_target_derivation.py",
+      "size_bytes": 446,
+      "sha256": "d3f14819193008d6f545a07e70e3344f57b97021d48b06061f6009af4a22c4e6"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "tests/test_model_target_compatibility.py",
+      "path": "/home/pmharris/dev/mitunet/tests/test_model_target_compatibility.py",
+      "size_bytes": 526,
+      "sha256": "3278e10e1fcb2ff1f04671a5f15fdad7a4f8f2f8626a5f539d32b9d7afb13c7e"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "tests/test_phase3a_review_core.py",
+      "path": "/home/pmharris/dev/mitunet/tests/test_phase3a_review_core.py",
+      "size_bytes": 14561,
+      "sha256": "21b6ba53b5075f52b8f8a2d72db8225d9b368c91914433ef29278c45915c3b56"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet",
+      "relative_path": "tests/test_phase3a_review_skip_guard.py",
+      "path": "/home/pmharris/dev/mitunet/tests/test_phase3a_review_skip_guard.py",
+      "size_bytes": 4957,
+      "sha256": "3ea525ff1bfd749ebd916cd5e1db99c70f86e11f240c8bd0b34bea38e47805f2"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet_multihead",
+      "relative_path": "README.md",
+      "path": "/home/pmharris/dev/mitunet_multihead/README.md",
+      "size_bytes": 31865,
+      "sha256": "7073129059a5cf2d7830798402ccb525b90760c20bd2138f7767a32188ec3ac0"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet_multihead",
+      "relative_path": "mitunet_multihead/svg_inspection.py",
+      "path": "/home/pmharris/dev/mitunet_multihead/mitunet_multihead/svg_inspection.py",
+      "size_bytes": 33400,
+      "sha256": "43f96f6e87ee6a7bfb83231306147df61a247c0422523bb353b3b3a342ea5dc1"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet_multihead",
+      "relative_path": "mitunet_multihead/wall_extraction.py",
+      "path": "/home/pmharris/dev/mitunet_multihead/mitunet_multihead/wall_extraction.py",
+      "size_bytes": 51853,
+      "sha256": "9535824ecebaf3083fe719ae7fba28c7a07d59e6298e30d74069543dc4b8bdca"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet_multihead",
+      "relative_path": "mitunet_multihead/symbol_extraction.py",
+      "path": "/home/pmharris/dev/mitunet_multihead/mitunet_multihead/symbol_extraction.py",
+      "size_bytes": 46137,
+      "sha256": "813753a91e2f08154b9ecebc90c7849afe60738b9077c3436211a9a8bb49fb98"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet_multihead",
+      "relative_path": "mitunet_multihead/opening_cuts.py",
+      "path": "/home/pmharris/dev/mitunet_multihead/mitunet_multihead/opening_cuts.py",
+      "size_bytes": 59551,
+      "sha256": "54b5d36b1a8121c64c33c0a6fbbcead1b3c9b43af13c204049d7d607da76cb1c"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet_multihead",
+      "relative_path": "mitunet_multihead/final_geometries.py",
+      "path": "/home/pmharris/dev/mitunet_multihead/mitunet_multihead/final_geometries.py",
+      "size_bytes": 47706,
+      "sha256": "2a4fb4d35e7a5cfe7e621bff6f424c35ac75c626e63e11db4411cbe29b03d377"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet_multihead",
+      "relative_path": "mitunet_multihead/rasterize_masks.py",
+      "path": "/home/pmharris/dev/mitunet_multihead/mitunet_multihead/rasterize_masks.py",
+      "size_bytes": 61033,
+      "sha256": "634de104a2236fef906769f0cf46c3a132da40c3582e550886fbdf4a0f8d7172"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet_multihead",
+      "relative_path": "mitunet_multihead/validation/label_validation.py",
+      "path": "/home/pmharris/dev/mitunet_multihead/mitunet_multihead/validation/label_validation.py",
+      "size_bytes": 80435,
+      "sha256": "502942b96fa17ba1cfb40447c88dad2f0b91b1953f2226c4e4b6e6775346ce82"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet_multihead",
+      "relative_path": "mitunet_multihead/data/manifest_builder.py",
+      "path": "/home/pmharris/dev/mitunet_multihead/mitunet_multihead/data/manifest_builder.py",
+      "size_bytes": 67416,
+      "sha256": "bac048def8e958e4df7e02fdd30020112572a87772fbfb49c6639e4604bc4def"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet_phase3a2_512",
+      "relative_path": "phase3a2_512/constants.py",
+      "path": "/home/pmharris/dev/mitunet_phase3a2_512/phase3a2_512/constants.py",
+      "size_bytes": 1276,
+      "sha256": "207da3b40fbf12add0b7f973bbc07064f3d17273968b21e6c6f4e048421cc247"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet_phase3a2_512",
+      "relative_path": "phase3a2_512/resize.py",
+      "path": "/home/pmharris/dev/mitunet_phase3a2_512/phase3a2_512/resize.py",
+      "size_bytes": 3630,
+      "sha256": "6e53d975a3919b4b7d8db5240b49554689e9f61fd4a1ba6f49807ce76ab4ae0e"
+    },
+    {
+      "workspace": "/home/pmharris/dev/mitunet_phase3a2_512",
+      "relative_path": "scripts/build_matched_targets.py",
+      "path": "/home/pmharris/dev/mitunet_phase3a2_512/scripts/build_matched_targets.py",
+      "size_bytes": 29988,
+      "sha256": "d32a59eb37d9692ca670fcca0a22033d358e806e9692c2074bfbdecb741594ac"
+    }
+  ],
+  "copied_contracts": [
+    {
+      "source": "/home/pmharris/dev/mitunet/configs/targets/target_contract_v1.yaml",
+      "copy": "source_provenance/contracts/target_contract_v1.yaml",
+      "path": "/home/pmharris/dev/mitunet/configs/targets/target_contract_v1.yaml",
+      "size_bytes": 34913,
+      "sha256": "640d429f5e77f2717b354eee93cc77cea785c2e4b77df67728294df2c21069c2"
+    },
+    {
+      "source": "/home/pmharris/dev/mitunet/configs/targets/candidate_target_mapping_v3.yaml",
+      "copy": "source_provenance/contracts/candidate_target_mapping_v3.yaml",
+      "path": "/home/pmharris/dev/mitunet/configs/targets/candidate_target_mapping_v3.yaml",
+      "size_bytes": 2580,
+      "sha256": "f8606929a841311117b4756e831dd1b25b1940b5d246eb894c608c55d27e4cb5"
+    },
+    {
+      "source": "/home/pmharris/dev/mitunet/configs/targets/opening_derivation_v3.yaml",
+      "copy": "source_provenance/contracts/opening_derivation_v3.yaml",
+      "path": "/home/pmharris/dev/mitunet/configs/targets/opening_derivation_v3.yaml",
+      "size_bytes": 1412,
+      "sha256": "ab6bcf35336a8a5f707400a0ddccda548ec355fe2c38981fb6b08b212498244a"
+    },
+    {
+      "source": "/home/pmharris/dev/mitunet/configs/targets/fixture_target_mapping_v2.yaml",
+      "copy": "source_provenance/contracts/fixture_target_mapping_v2.yaml",
+      "path": "/home/pmharris/dev/mitunet/configs/targets/fixture_target_mapping_v2.yaml",
+      "size_bytes": 1383,
+      "sha256": "00193b292451fd709f7fe5688a594b24cd206896a9387830542787d6fc09ac65"
+    },
+    {
+      "source": "/home/pmharris/dev/mitunet/configs/targets/source_class_taxonomy_v1.yaml",
+      "copy": "source_provenance/contracts/source_class_taxonomy_v1.yaml",
+      "path": "/home/pmharris/dev/mitunet/configs/targets/source_class_taxonomy_v1.yaml",
+      "size_bytes": 3537,
+      "sha256": "b27dd860e7b1a79e3db10fd5fba988983bf859c3d89ef121228da35c9bef2911"
+    }
+  ],
+  "parent_audit_sources": [
+    {
+      "relative_path": "experiments/01_binary_mitunet/config.yaml",
+      "path": "/home/pmharris/dev/floorplan-ai-experiment-audit/experiments/01_binary_mitunet/config.yaml",
+      "size_bytes": 1202,
+      "sha256": "fb6efc8e2d7248e02340614c1421775dd8138434114e6bd2e00b15e79d473ead"
+    },
+    {
+      "relative_path": "experiments/01_binary_mitunet/metrics.json",
+      "path": "/home/pmharris/dev/floorplan-ai-experiment-audit/experiments/01_binary_mitunet/metrics.json",
+      "size_bytes": 1399,
+      "sha256": "c5a13166461da2da56edf2ffb30d1a74efc40b152efb4d20e22bb79530c94967"
+    },
+    {
+      "relative_path": "experiments/01_binary_mitunet/provenance.json",
+      "path": "/home/pmharris/dev/floorplan-ai-experiment-audit/experiments/01_binary_mitunet/provenance.json",
+      "size_bytes": 13276,
+      "sha256": "77b25b406dbb2168eae3d09e43fbb662eb4ff1a2bc629bfd6381a152244b4078"
+    },
+    {
+      "relative_path": "experiments/06_binary_mitunet_1024/config.yaml",
+      "path": "/home/pmharris/dev/floorplan-ai-experiment-audit/experiments/06_binary_mitunet_1024/config.yaml",
+      "size_bytes": 2232,
+      "sha256": "b5692c0f6988a6e84ccb7c406f0194cb6df3a77a95dd6d34c6edd8e99bdb7e10"
+    },
+    {
+      "relative_path": "experiments/06_binary_mitunet_1024/metrics.json",
+      "path": "/home/pmharris/dev/floorplan-ai-experiment-audit/experiments/06_binary_mitunet_1024/metrics.json",
+      "size_bytes": 2882,
+      "sha256": "2b32d567e4f1772b57ff10fcce082c9bfa60482063bf097a35ab3a0ba181ffc1"
+    },
+    {
+      "relative_path": "experiments/06_binary_mitunet_1024/provenance.json",
+      "path": "/home/pmharris/dev/floorplan-ai-experiment-audit/experiments/06_binary_mitunet_1024/provenance.json",
+      "size_bytes": 4867,
+      "sha256": "941ef552c115d2efe4fec4e454fb1b3e833e9a3094cc36c34ada363e798bb930"
+    },
+    {
+      "relative_path": "experiments/09_phase5_hierarchical_multihead_512/config.yaml",
+      "path": "/home/pmharris/dev/floorplan-ai-experiment-audit/experiments/09_phase5_hierarchical_multihead_512/config.yaml",
+      "size_bytes": 7295,
+      "sha256": "c62f570db140d6073d8751ab93b125b580206e6f72f79d60a41cff5a13e8c0d6"
+    },
+    {
+      "relative_path": "experiments/09_phase5_hierarchical_multihead_512/metrics.json",
+      "path": "/home/pmharris/dev/floorplan-ai-experiment-audit/experiments/09_phase5_hierarchical_multihead_512/metrics.json",
+      "size_bytes": 32715,
+      "sha256": "f242c3a53c8fbdc83af4ffbfb42e73d7f045f3588ffa944e529857085df6ec8b"
+    },
+    {
+      "relative_path": "experiments/09_phase5_hierarchical_multihead_512/provenance.json",
+      "path": "/home/pmharris/dev/floorplan-ai-experiment-audit/experiments/09_phase5_hierarchical_multihead_512/provenance.json",
+      "size_bytes": 20969,
+      "sha256": "ba77f2a2884a8042768b48c6a2bf583540cbd77efd825571da28324453d85c77"
+    },
+    {
+      "relative_path": "experiments/10_phase3a2_door_opening_v31_vs_v32_512/config.yaml",
+      "path": "/home/pmharris/dev/floorplan-ai-experiment-audit/experiments/10_phase3a2_door_opening_v31_vs_v32_512/config.yaml",
+      "size_bytes": 9178,
+      "sha256": "8f67639f87e0fc8ea5ef956957fafd57e83c6ec438ac1df730e0044625054fb1"
+    },
+    {
+      "relative_path": "experiments/10_phase3a2_door_opening_v31_vs_v32_512/metrics.json",
+      "path": "/home/pmharris/dev/floorplan-ai-experiment-audit/experiments/10_phase3a2_door_opening_v31_vs_v32_512/metrics.json",
+      "size_bytes": 36616,
+      "sha256": "adb88a0821bd9a28f30f15d43c9210e094bf3f6e9234cf9290d68ad58aa379bd"
+    },
+    {
+      "relative_path": "experiments/10_phase3a2_door_opening_v31_vs_v32_512/provenance.json",
+      "path": "/home/pmharris/dev/floorplan-ai-experiment-audit/experiments/10_phase3a2_door_opening_v31_vs_v32_512/provenance.json",
+      "size_bytes": 36119,
+      "sha256": "fa80da2a0efbaf37e2b4558ab930f177d1bc6d862fe029495dfd95ba4c836e7c"
+    },
+    {
+      "relative_path": "experiments/13_phase3a_human_review_tool/config.yaml",
+      "path": "/home/pmharris/dev/floorplan-ai-experiment-audit/experiments/13_phase3a_human_review_tool/config.yaml",
+      "size_bytes": 2519,
+      "sha256": "5b99d0f8bd8769755e341ff88bc11907ef6c49a3cec9f88af7d43462dfcb1058"
+    },
+    {
+      "relative_path": "experiments/13_phase3a_human_review_tool/metrics.json",
+      "path": "/home/pmharris/dev/floorplan-ai-experiment-audit/experiments/13_phase3a_human_review_tool/metrics.json",
+      "size_bytes": 1893,
+      "sha256": "3705c704bf9a05fe20e8a67b4a65dfe512e691b1eb93d3080e0cee1bac87d754"
+    },
+    {
+      "relative_path": "experiments/13_phase3a_human_review_tool/provenance.json",
+      "path": "/home/pmharris/dev/floorplan-ai-experiment-audit/experiments/13_phase3a_human_review_tool/provenance.json",
+      "size_bytes": 5387,
+      "sha256": "51375e7010e69fb0ac22e93fad7d7eb83e2fb2b9922c64776c081c5162b024ba"
+    }
+  ],
+  "refresh_command": "python3 scripts/build_experiment14_evidence.py"
+}

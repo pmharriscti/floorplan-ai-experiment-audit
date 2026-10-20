@@ -1,0 +1,64 @@
+mapping_version: candidate_target_mapping_v3
+target_generator_version: candidate_v3
+parent_target_generator_version: candidate_v2
+default: false
+wall_targets:
+  structural_wall:
+    source: g[id='Wall']
+    parser: FloorTrans PolygonWall
+    subtract_openings: false
+    repair_policy: no global closing; local bridge only when an opening seed has wall support
+  visible_wall:
+    source: structural_wall - validated_door_opening - validated_window_opening
+    parser: derived
+opening_targets:
+  door_opening:
+    source: explicit Door opening polygon after wall-component association
+    parser: FloorTrans get_polygon per Door instance
+    derivation_method: explicit_source_opening_polygon_clipped_to_associated_structural_wall
+    excludes:
+      - swing arcs
+      - door leaf/panel strokes
+      - all symbol pixels without wall association
+    review_required_when:
+      - no associated wall component
+      - association score is ambiguous
+      - opening clips to empty structural wall
+      - symbol mask exactly equals opening mask without explicit evidence
+  window_opening:
+    source: explicit Window opening polygon after wall-component association
+    parser: FloorTrans get_polygon per Window instance
+    derivation_method: explicit_source_opening_polygon_clipped_to_associated_structural_wall
+    excludes:
+      - frame strokes
+      - glazing strokes
+      - mullions
+      - all symbol pixels without wall association
+    review_required_when:
+      - no associated wall component
+      - association score is ambiguous
+      - opening clips to empty structural wall
+      - symbol mask exactly equals opening mask without explicit evidence
+symbol_targets:
+  door_symbol:
+    source: Door direct outlines plus nested Threshold/Panel visual strokes
+    parser: Phase 3A SVG symbol rasterizer
+    fill_policy: outlines/strokes only; filled opening polygon is not copied into symbol fill
+  window_symbol:
+    source: Window direct outlines plus nested Glass/Panel visual strokes
+    parser: Phase 3A SVG symbol rasterizer
+    fill_policy: outlines/strokes only; filled opening polygon is not copied into symbol fill
+fixture_targets:
+  source: candidate_v2 fixture grouping is reused for known CubiCasa fixed-furniture classes
+  unknown_policy: no unknown fixture-like class is mapped to other_fixture without explicit parser support
+topology:
+  selected_centerline: structural_wall_centerline
+  connectivity: 8
+  junction_rule: degree >= 3
+  endpoint_rule: degree == 1
+  junction_radius: 3
+  endpoint_radius: 3
+interpolation:
+  image: linear
+  masks: nearest
+
