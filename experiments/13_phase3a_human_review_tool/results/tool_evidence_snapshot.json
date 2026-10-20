@@ -1,0 +1,65 @@
+{
+  "snapshot_date": "2026-10-20",
+  "purpose": "Static, non-personal evidence snapshot for the Phase 3A Human Review Tool audit.",
+  "application": {
+    "title": "MitUNet Phase 3A Human Review",
+    "tabs": [
+      "Opening Review",
+      "Source Class Review",
+      "Plan Target Review",
+      "Progress and Defects",
+      "Validation Summary"
+    ],
+    "default_host": "127.0.0.1",
+    "configured_phase3a2_port": 7894,
+    "public_share_requires_opt_in": true
+  },
+  "phase3a2_manifest": {
+    "opening_rows": 44,
+    "plan_rows": 42,
+    "opening_repair_families": {"A": 10, "control": 34},
+    "opening_split_counts": {"train": 38, "val": 3, "test": 3},
+    "path_coverage": {
+      "source_image_path": {"populated": 44, "existing": 44, "missing_populated": 0},
+      "source_svg_path": {"populated": 44, "existing": 44, "missing_populated": 0},
+      "candidate_target_path": {"populated": 44, "existing": 44, "missing_populated": 0},
+      "candidate_v3_target_path": {"populated": 44, "existing": 44, "missing_populated": 0},
+      "candidate_v3_1_target_path": {"populated": 44, "existing": 30, "missing_populated": 14},
+      "candidate_v3_2_target_path": {"populated": 44, "existing": 44, "missing_populated": 0},
+      "three_way_overlay_path": {"populated": 10, "existing": 10, "missing_populated": 0},
+      "source_instance_audit_path": {"populated": 10, "existing": 10, "missing_populated": 0}
+    }
+  },
+  "geometry": {
+    "candidate_v3": ["source-class inventory", "symbol/opening separation", "host-wall association", "structural-wall clipping"],
+    "candidate_v3_1": ["Family A seed semantics", "Family B source-instance classification/localization", "Family C gap-aware wall association"],
+    "candidate_v3_2": ["source Door threshold polygon", "parent Wall polygon", "PCA/SVD tangent", "explicit normal", "modulo-180 axis comparison", "jamb-to-jamb support", "wrong-nearby-wall rejection"],
+    "family_a_axis_audit": {
+      "instances": 10,
+      "tangent_aligned": 10,
+      "normal_aligned": 0,
+      "ambiguous_wall_orientation": 0,
+      "missing_jamb_evidence": 0,
+      "placed_on_wrong_wall": 0,
+      "placed_outside_architectural_opening": 0
+    }
+  },
+  "persistence_guards": [
+    "exact composite-key matching",
+    "duplicate-key refusal",
+    "exclusive file lock",
+    "concurrent-change fingerprint check",
+    "once-per-session backups",
+    "atomic CSV replacement",
+    "append-only JSONL audit record",
+    "read-only mode",
+    "Skip does not overwrite an existing decision"
+  ],
+  "focused_test_result": {"passed": 37, "failed": 0, "date": "2026-10-20"},
+  "operational_check": {
+    "configured_endpoint_http_status": 200,
+    "read_only_launch_succeeded": true,
+    "automatic_port_fallback_observed": true,
+    "date": "2026-10-20"
+  }
+}

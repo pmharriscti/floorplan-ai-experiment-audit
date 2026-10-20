@@ -1,0 +1,62 @@
+{
+  "experiment_id": "13_phase3a_human_review_tool",
+  "evidence_status": "VERIFIED",
+  "audit_kind": "operational_review_tool",
+  "primary_split": null,
+  "segmentation_metrics": {
+    "wall_iou": null,
+    "wall_dice": null,
+    "boundary_f1_2px": null,
+    "centerline_cldice": null,
+    "junction_f1_5px": null,
+    "door_object_f1": null,
+    "reason": "The tool performs human target review and does not train or evaluate a segmentation model."
+  },
+  "interface": {
+    "review_workflows": 3,
+    "supporting_views": 2,
+    "tabs_total": 5,
+    "local_url_when_running": "http://localhost:7894"
+  },
+  "phase3a2_evidence_inventory": {
+    "opening_records": 44,
+    "plan_records": 42,
+    "repair_family_records": 10,
+    "control_records": 34,
+    "split_records": {
+      "train": 38,
+      "val": 3,
+      "test": 3
+    },
+    "path_coverage": {
+      "source_images": {"populated": 44, "existing": 44},
+      "source_svgs": {"populated": 44, "existing": 44},
+      "candidate_v3_targets": {"populated": 44, "existing": 44},
+      "candidate_v3_1_targets": {"populated": 44, "existing": 30},
+      "candidate_v3_2_targets": {"populated": 44, "existing": 44},
+      "three_way_overlays": {"populated": 10, "existing": 10}
+    }
+  },
+  "phase3a2_geometry_audit": {
+    "family_a_instances": 10,
+    "tangent_aligned": 10,
+    "normal_aligned": 0,
+    "ambiguous_wall_orientation": 0,
+    "missing_jamb_evidence": 0,
+    "placed_on_wrong_wall": 0,
+    "placed_outside_architectural_opening": 0
+  },
+  "focused_source_tests": {
+    "date": "2026-10-20",
+    "passed": 37,
+    "failed": 0,
+    "warnings": 79
+  },
+  "operational_check": {
+    "date": "2026-10-20",
+    "configured_endpoint": "http://127.0.0.1:7894/",
+    "configured_endpoint_http_status": 200,
+    "read_only_launch": true,
+    "port_search_observed": "7894 occupied; temporary verification server selected 7895"
+  }
+}

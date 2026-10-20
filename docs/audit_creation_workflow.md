@@ -1,12 +1,12 @@
 # How Experiment Audits Are Created
 
-This document explains how a completed floor-plan AI experiment is converted into an evidence-backed entry in this repository. It describes the process used for experiments 01-09 as of 2026-09-24.
+This document explains how a floor-plan AI experiment, integration, or operational tool is converted into an evidence-backed entry in this repository. It describes the process used for experiments 01-13 as of 2026-10-20.
 
 The central rule is simple:
 
 > The audit records persisted evidence, not intentions, recollections, or a newly reconstructed result.
 
-An audit is not a new training run. It is a compact, reviewable package that connects claims to source artifacts, preserves the important configuration and metrics, adds a small amount of visual evidence, and leaves large datasets and checkpoints in their original storage locations.
+An audit is not a new training run. It is a compact, reviewable package that connects claims to source artifacts, preserves the important configuration, metrics or operational controls, adds a small amount of visual evidence, and leaves large datasets and checkpoints in their original storage locations.
 
 ## End-to-End Flow
 

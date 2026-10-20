@@ -1,0 +1,94 @@
+{
+  "experiment_id": "13_phase3a_human_review_tool",
+  "audit_date": "2026-10-20",
+  "evidence_status": "VERIFIED",
+  "github": {
+    "repository_name": "Floor Plan AI Experiment Audit",
+    "repository_url": "https://github.com/pmharriscti/floorplan-ai-experiment-audit",
+    "entry_url": "https://github.com/pmharriscti/floorplan-ai-experiment-audit/tree/main/experiments/13_phase3a_human_review_tool"
+  },
+  "source": {
+    "repository": "/home/pmharris/dev/mitunet",
+    "remote": "https://github.com/aliasstudio/mitunet.git",
+    "branch": "master",
+    "commit": "aebca12e284aa17ddef08d45327e191773e0f07a",
+    "commit_subject": "Add Phase 3A review tool; fix Skip destroying saved verdicts",
+    "working_tree_clean": false,
+    "identity_note": "The repository contained unrelated modified and untracked files; audited source modules are pinned individually below."
+  },
+  "source_file_sha256": {
+    "scripts/gradio_phase3a_target_review.py": "f04f2b83beb84815609e0a2fe8043cb7f58732fbedcb8322c5324287d4ec6464",
+    "mitunet_cubicasa/phase3a_review/manifests.py": "136b38045c8fab651d921061c6ffae391a95e9d5857d482589635bb819ddb0d0",
+    "mitunet_cubicasa/phase3a_review/filtering.py": "dcfd5d049eedf4b0032c6b5f919fe7eaff4d1dc60a4942bc48683ec90479d120",
+    "mitunet_cubicasa/phase3a_review/images.py": "55fedf68843af967f24ce02674260465e27115db8f716c10f9ec6c87e8fd369e",
+    "mitunet_cubicasa/phase3a_review/persistence.py": "757ced4fe2765dc2e1bdd40402a49930fdd1fc63e3ba5b91d56924414fc3dfaa",
+    "mitunet_cubicasa/phase3a_review/constants.py": "acb17c842780282df17359b1457fd52020ffa559eeacc1d44bb9156a51d048e3",
+    "mitunet_cubicasa/phase3a_review/metrics.py": "cb9866d1327cee91668aacea91bfe68f12cf5cc413a37c271baea99dd14f0b22",
+    "scripts/run_phase3a2_opening_axis_repair.py": "965180a2f5fb78b4749f8b2475a10ca0a24715e9e17dfd04f51166f89ac4fd17"
+  },
+  "artifact_roots": {
+    "phase3a": "/mnt/e/AI_Team/mitunet/phase3a_opening_source_class_repair/experiments/mitunet_phase3a_opening_source_class_repair_20260812_224352_UTC",
+    "phase3a1": "/mnt/e/AI_Team/mitunet/phase3a1_opening_rule_repair/experiments/mitunet_phase3a1_opening_rule_repair_20260824_144755_UTC",
+    "phase3a2": "/mnt/e/AI_Team/mitunet/phase3a2_opening_axis_repair/experiments/mitunet_phase3a2_opening_axis_repair_20260826_142837_UTC",
+    "review": "/mnt/e/AI_Team/mitunet/phase3a2_opening_axis_repair/experiments/mitunet_phase3a2_opening_axis_repair_20260826_142837_UTC/review"
+  },
+  "live_artifacts": {
+    "candidate_v3_2_family_a_re_review_manifest.csv": {
+      "size_bytes": 116838,
+      "sha256": "c2321caca315f16e7d180897fc0eec8dbbc0fc7d5a3425953796f6c8e47ca850"
+    },
+    "candidate_v3_2_plan_review_manifest.csv": {
+      "size_bytes": 28706,
+      "sha256": "4cececdaaf6652cfc981f82a1b0f361b2a3bcf3c3b3e1c44331939009a063328"
+    },
+    "opening_human_decisions_v3_2.csv": {
+      "size_bytes": 2373,
+      "sha256": "b0e1163dacd8557ccecf7fb249cad143fc98cd488157b7b47ade4f72ee935637",
+      "content_copied": false
+    },
+    "human_review_audit_log_v3_2.jsonl": {
+      "size_bytes": 75893,
+      "sha256": "f66685cc512645d4c6f94dc8d81d6de8881bdcf7dd3c0420d38732dab245cafc",
+      "content_copied": false
+    },
+    "backup_files_observed": 22
+  },
+  "visual_evidence": [
+    {
+      "sample_id": "high_quality_architectural/10543",
+      "source_instance_id": "door_0003",
+      "target_name": "door_opening",
+      "kind": "historical_phase3a2_three_way_geometry_sheet",
+      "source": "/mnt/e/AI_Team/mitunet/phase3a2_opening_axis_repair/experiments/mitunet_phase3a2_opening_axis_repair_20260826_142837_UTC/overlays/family_a_three_way/high_quality_architectural__10543__door_0003__door_opening.png",
+      "sha256": "7bde651c793fdb03d877495b1643eea621e96770d5a5b1a92ccd5015dbf72ed8"
+    },
+    {
+      "sample_id": "high_quality_architectural/11709",
+      "source_instance_id": "door_0012",
+      "target_name": "door_opening",
+      "kind": "historical_phase3a2_three_way_geometry_sheet",
+      "source": "/mnt/e/AI_Team/mitunet/phase3a2_opening_axis_repair/experiments/mitunet_phase3a2_opening_axis_repair_20260826_142837_UTC/overlays/family_a_three_way/high_quality_architectural__11709__door_0012__door_opening.png",
+      "sha256": "3b93f75bbf92fd0290b7f89d123a3e1758408f631e56ab0b955148d831024637"
+    },
+    {
+      "sample_id": "high_quality_architectural/8690",
+      "source_instance_id": "door_0005",
+      "target_name": "door_opening",
+      "kind": "historical_phase3a2_three_way_geometry_sheet",
+      "source": "/mnt/e/AI_Team/mitunet/phase3a2_opening_axis_repair/experiments/mitunet_phase3a2_opening_axis_repair_20260826_142837_UTC/overlays/family_a_three_way/high_quality_architectural__8690__door_0005__door_opening.png",
+      "sha256": "10f50ec756ea801e4d7df51757d24949b05365ea6be97666febe1aed6f3783c3"
+    }
+  ],
+  "privacy": {
+    "decision_rows_committed": false,
+    "audit_log_events_committed": false,
+    "reviewer_notes_committed": false,
+    "policy": "Record identity and aggregate tool evidence without republishing mutable reviewer content."
+  },
+  "operational_verification": {
+    "date": "2026-10-20",
+    "configured_endpoint": "http://127.0.0.1:7894/",
+    "configured_endpoint_http_status": 200,
+    "temporary_read_only_launch": "Started successfully and selected 127.0.0.1:7895 because 7894 was occupied; temporary server was then stopped."
+  }
+}

@@ -1,0 +1,69 @@
+experiment_id: 13_phase3a_human_review_tool
+name: MitUNet Phase 3A Human Review Tool
+evidence_status: VERIFIED
+status: operational
+audit_kind: operational_review_tool
+comparable_to_segmentation_rankings: false
+local_url: http://localhost:7894
+source_repository: /home/pmharris/dev/mitunet
+source_commit: aebca12e284aa17ddef08d45327e191773e0f07a
+source_tree_state: dirty; audited modules identified by SHA-256 in provenance.json
+main_app: scripts/gradio_phase3a_target_review.py
+review_modules:
+  - mitunet_cubicasa/phase3a_review/manifests.py
+  - mitunet_cubicasa/phase3a_review/filtering.py
+  - mitunet_cubicasa/phase3a_review/images.py
+  - mitunet_cubicasa/phase3a_review/persistence.py
+  - mitunet_cubicasa/phase3a_review/constants.py
+  - mitunet_cubicasa/phase3a_review/metrics.py
+workflows:
+  - opening_review
+  - source_class_review
+  - plan_target_review
+supporting_views:
+  - progress_and_defects
+  - validation_summary
+launch_policy:
+  host: 127.0.0.1
+  port: 7894
+  default_share: false
+  read_only_supported: true
+  port_search_count: 20
+persistence:
+  exact_composite_keys: true
+  sidecar_decision_csvs: true
+  file_lock: fcntl_exclusive
+  concurrent_change_detection: file_fingerprint
+  backup_once_per_session: true
+  atomic_csv_write: true
+  append_only_jsonl_audit: true
+  skip_existing_decision_protection: true
+geometry_lineage:
+  candidate_v3:
+    - source_class_inventory
+    - symbol_opening_separation
+    - host_wall_association
+    - structural_wall_clipping
+  candidate_v3_1:
+    family_a: opening_seed_semantics
+    family_b: source_instance_classification_and_localization
+    family_c: gap_aware_wall_association
+  candidate_v3_2:
+    source_evidence: Door threshold polygon and parent Wall polygon
+    tangent_estimator: PCA/SVD
+    angle_equivalence: modulo 180 degrees
+    opening_support: jamb_to_jamb
+    nearby_wall_policy: reject mismatch instead of speculating
+live_phase3a2_package:
+  run_directory: /mnt/e/AI_Team/mitunet/phase3a2_opening_axis_repair/experiments/mitunet_phase3a2_opening_axis_repair_20260826_142837_UTC
+  opening_manifest: review/candidate_v3_2_family_a_re_review_manifest.csv
+  plan_manifest: review/candidate_v3_2_plan_review_manifest.csv
+  decision_sidecar: review/opening_human_decisions_v3_2.csv
+  audit_log: review/human_review_audit_log_v3_2.jsonl
+  backups: review/backups
+protections:
+  trains_model: false
+  runs_inference: false
+  selects_threshold: false
+  copies_live_decision_content_into_audit: false
+  source_artifacts_read_only_during_audit: true

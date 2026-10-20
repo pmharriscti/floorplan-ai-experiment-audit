@@ -13,6 +13,7 @@ One exception: experiment 01 carries a reference snapshot of the baseline model 
 - Reused by bim_bridge_v0, read-only: floorplan-synth vectorizer at `/home/pmharris/dev/synth_gen_door_window/floorplan-synth`
 - CubiCasa5K v4 paths appear in source configs and manifests under `/home/pmharris/dev/cubicasa5k_data/...`
 - Phase 5 layout under `/mnt/e/AI_Team/mitunet`: runs in `experiments/mitunet_hierarchical_multihead_512/<run_id>/{checkpoints,logs,metrics,predictions,masks,overlays,label_validation,audit,artifacts}`, generated targets in `targets/mitunet_hierarchical_multihead_512`, split manifests in `derived_data/mitunet_hierarchical_multihead_512/manifests/<run_id>`, MLflow in `mlflow/mlflow.db`; Phase 1 and Phase 2 caches are reused by reference.
+- Phase 3A Human Review Tool source: `/home/pmharris/dev/mitunet`; Phase 3A.2 review package: `/mnt/e/AI_Team/mitunet/phase3a2_opening_axis_repair/experiments/mitunet_phase3a2_opening_axis_repair_20260826_142837_UTC/review`.
 
 ## Reproduction Handoff
 
@@ -41,6 +42,15 @@ One exception: experiment 01 carries a reference snapshot of the baseline model 
 3. Candidates and IFCs: `scripts/prepare_candidates_external.py` (with `--repair --config <repair yaml> --out-name candidates_r04` for the repaired revision) and `scripts/export_external.py`.
 4. Comparison: `scripts/build_pm_comparison.py --labels <draft label bundle> --export-revision r01|r04`.
 5. Revision r05 (windows): `prepare_candidates_external.py --repair --config <run>/config/bim_bridge_pm_comparison_v0_windows_v1.yaml --out-name candidates_r05`, `export_external.py --revision r05 --guid-map-from <r04 export>/guid_map.json`, then `build_pm_comparison.py --export-revision r05 --candidates-name candidates_r05 --prior-keys img-01,...,img-06`.
+
+## Reproducing Experiment 13 (Phase 3A Human Review Tool)
+
+1. Verify the app, review modules, and Phase 3A.2 generator against the SHA-256 values in `experiments/13_phase3a_human_review_tool/provenance.json`.
+2. Mount the Phase 3A, Phase 3A.1, Phase 3A.2, and CubiCasa paths referenced by the manifests. The manifests contain absolute evidence paths.
+3. Launch with the command in the experiment README. Add `--read-only` when demonstrating or validating the interface without recording decisions.
+4. Keep `--host 127.0.0.1` and omit `--share` unless public exposure of the floorplan evidence is explicitly intended.
+5. Run the focused 37-test suite from the source repository with `PYTHONPATH=.` before changing filtering, imagery, persistence, Skip behavior, or v3.2 geometry.
+6. Rebuild the Phase 3A.2 package with `scripts/run_phase3a2_opening_axis_repair.py` when repairing absent v3.1 control masks or adding dedicated control overlays; do not edit human decision sidecars as part of artifact generation.
 
 ## DVC And MLflow Status
 
